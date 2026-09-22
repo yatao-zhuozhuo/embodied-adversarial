@@ -21,7 +21,6 @@ import torch
 from PIL import Image
 from transformers import AutoProcessor, Qwen3_5ForConditionalGeneration
 
-from adapter.dummy_sim import DummySimulatorAdapter
 from adapter.protocol import EnvAction
 
 
@@ -84,19 +83,69 @@ def _decide(processor: Any, model: Any, observation: Any, instruction: str) -> t
     return action, reason, raw
 
 
-def run(model_path: str, output_path: Path, instruction: str) -> dict[str, Any]:
+def run(
+    model_path: str,
+    output_path: Path,
+    instruction: str,
+    *,
+    backend: str = "dummy",
+    env_id: str = "PickCube-v1",
+    max_steps: int = 1,
+) -> dict[str, Any]:
     processor, model = _load_model(model_path)
-    env = DummySimulatorAdapter()
+    if backend == "maniskill":
+        from adapter.maniskill_sim import ManiSkillSimulatorAdapter
+
+        env = ManiSkillSimulatorAdapter(env_id=env_id, camera_resolution=128)
+    elif backend == "dummy":
+        from adapter.dummy_sim import DummySimulatorAdapter
+
+        env = DummySimulatorAdapter()
+    else:
+        raise ValueError(f"unsupported backend: {backend}")
+
     observation = env.reset(task=instruction, seed=0)
-    action, reason, raw = _decide(processor, model, observation, instruction)
-    result = env.step(EnvAction(action_type=action, code=action))
+    initial_observation = observation
+    snapshot = env.capture_snapshot() if backend == "maniskill" else None
+    alice_steps: list[dict[str, Any]] = []
+    for _ in range(max(1, int(max_steps))):
+        action, reason, raw = _decide(processor, model, observation, instruction)
+        result = env.step(EnvAction(action_type=action, code=action))
+        alice_steps.append({
+            "action": action,
+            "reason": reason,
+            "raw": raw,
+            "result": result.to_mcp_dict(),
+        })
+        if result.terminated or result.truncated or action == "DONE":
+            break
+        observation = result.observation
+
+    bob_steps: list[dict[str, Any]] = []
+    replay_equal = None
+    if snapshot is not None:
+        env.restore_snapshot(snapshot)
+        replay_observation = env.observe()
+        replay_equal = (
+            replay_observation.robot.joint_positions == initial_observation.robot.joint_positions
+        )
+        bob_action, bob_reason, bob_raw = _decide(processor, model, replay_observation, instruction)
+        bob_result = env.step(EnvAction(action_type=bob_action, code=bob_action))
+        bob_steps.append({
+            "action": bob_action,
+            "reason": bob_reason,
+            "raw": bob_raw,
+            "result": bob_result.to_mcp_dict(),
+        })
     payload = {
         "model": model_path,
-        "backend": "openeta.dummy_sim-v0",
+        "backend": f"openeta/{backend}_{env_id}" if backend == "maniskill" else "openeta.dummy_sim-v0",
         "instruction": instruction,
-        "observation": observation.to_mcp_dict(),
-        "action": {"action": action, "reason": reason, "raw": raw},
-        "result": result.to_mcp_dict(),
+        "observation": initial_observation.to_mcp_dict(),
+        "snapshot": snapshot.to_dict() if snapshot is not None else None,
+        "snapshot_replay_equal": replay_equal,
+        "alice_steps": alice_steps,
+        "bob_steps": bob_steps,
     }
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -108,13 +157,26 @@ def main() -> None:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--output", type=Path, default=Path("runs/qwen_embodied_rollout.json"))
     parser.add_argument("--instruction", default="Move the dummy robot toward the cube.")
+    parser.add_argument("--backend", choices=("dummy", "maniskill"), default="dummy")
+    parser.add_argument("--env-id", default="PickCube-v1")
+    parser.add_argument("--max-steps", type=int, default=1)
     args = parser.parse_args()
-    payload = run(args.model, args.output, args.instruction)
+    payload = run(
+        args.model,
+        args.output,
+        args.instruction,
+        backend=args.backend,
+        env_id=args.env_id,
+        max_steps=args.max_steps,
+    )
+    alice_action = payload["alice_steps"][0]["action"] if payload["alice_steps"] else None
+    bob_action = payload["bob_steps"][0]["action"] if payload["bob_steps"] else None
     print(json.dumps({
         "model": payload["model"],
         "backend": payload["backend"],
-        "action": payload["action"],
-        "terminated": payload["result"]["terminated"],
+        "alice_action": alice_action,
+        "bob_action": bob_action,
+        "snapshot_replay_equal": payload["snapshot_replay_equal"],
         "output": str(args.output),
     }, ensure_ascii=False))
 
