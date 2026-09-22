@@ -61,7 +61,11 @@ def run_round(
 ) -> dict[str, Any]:
     output_dir.mkdir(parents=True, exist_ok=True)
     processor, model = _load_model(model_path)
-    env = ManiSkillSimulatorAdapter(env_id=env_id, camera_resolution=128)
+    env = ManiSkillSimulatorAdapter(
+        env_id=env_id,
+        camera_resolution=128,
+        snapshot_dir=output_dir / "snapshots",
+    )
     try:
         initial_observation = env.reset(seed=seed)
         snapshot = env.capture_snapshot()
@@ -198,7 +202,7 @@ def run_round(
         # its next round can consume the score without importing OpenETA.
         if adversarial_src.is_dir():
             curriculum_dir = (
-                adversarial_src.parent.parent
+                adversarial_src.parent
                 / "runs"
                 / "embodied"
                 / task["task_id"]
