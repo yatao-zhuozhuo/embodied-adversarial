@@ -35,6 +35,7 @@ from typing import Any
 import gymnasium as gym
 import numpy as np
 
+from agent.runtime.embodied_snapshot import SnapshotRef
 from sim.camera_conventions import normalise_camera_to_world_opencv
 
 
@@ -1698,6 +1699,29 @@ class UnifiedEnv(gym.Env):
                 frame = np.flipud(frame)
             return frame
         return None
+
+    def capture_snapshot(self) -> SnapshotRef:
+        """Delegate strict Alice/Bob snapshot capture to the backend adapter."""
+
+        target = self._unwrap()
+        if not hasattr(target, "capture_snapshot"):
+            raise NotImplementedError(
+                f"{type(target).__name__} does not support embodied snapshots"
+            )
+        snapshot = target.capture_snapshot()
+        if not isinstance(snapshot, SnapshotRef):
+            raise TypeError("capture_snapshot() must return SnapshotRef")
+        return snapshot
+
+    def restore_snapshot(self, snapshot: SnapshotRef) -> None:
+        """Delegate strict Alice/Bob snapshot restore to the backend adapter."""
+
+        target = self._unwrap()
+        if not hasattr(target, "restore_snapshot"):
+            raise NotImplementedError(
+                f"{type(target).__name__} does not support embodied snapshots"
+            )
+        target.restore_snapshot(snapshot)
 
     def close(self) -> None:
         self._env.close()
