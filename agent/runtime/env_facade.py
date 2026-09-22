@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from adapter.protocol import JsonDict
+from agent.runtime.embodied_snapshot import SnapshotRef
 
 
 @dataclass(slots=True)
@@ -85,6 +86,27 @@ class RlinfEnvFacade:
             raise AttributeError(f"{type(self.env).__name__} does not support chunk_step")
         return _normalize_step_result(self.env.chunk_step(chunk_actions, **kwargs))
 
+    def capture_snapshot(self) -> SnapshotRef:
+        """Capture a host-owned Alice/Bob replay snapshot when supported."""
+
+        if not hasattr(self.env, "capture_snapshot"):
+            raise NotImplementedError(
+                f"{type(self.env).__name__} does not support embodied snapshots"
+            )
+        snapshot = self.env.capture_snapshot()
+        if not isinstance(snapshot, SnapshotRef):
+            raise TypeError("capture_snapshot() must return SnapshotRef")
+        return snapshot
+
+    def restore_snapshot(self, snapshot: SnapshotRef) -> None:
+        """Restore a host-owned Alice/Bob replay snapshot."""
+
+        if not hasattr(self.env, "restore_snapshot"):
+            raise NotImplementedError(
+                f"{type(self.env).__name__} does not support embodied snapshots"
+            )
+        self.env.restore_snapshot(snapshot)
+
     def close(self) -> None:
         if hasattr(self.env, "close"):
             self.env.close()
@@ -98,6 +120,8 @@ class RlinfEnvFacade:
                 "reset": hasattr(self.env, "reset"),
                 "step": hasattr(self.env, "step"),
                 "chunk_step": hasattr(self.env, "chunk_step"),
+                "capture_snapshot": hasattr(self.env, "capture_snapshot"),
+                "restore_snapshot": hasattr(self.env, "restore_snapshot"),
                 "close": hasattr(self.env, "close"),
             },
         }
