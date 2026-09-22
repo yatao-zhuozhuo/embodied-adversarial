@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
+
 from adapter.protocol import CameraFrame, EnvAction, EnvObservation, RobotState, StepResult
 from adapter.sim import SimulatorAdapter
+from agent.runtime.embodied_snapshot import SnapshotRef
 
 
 class DummySimulatorAdapter(SimulatorAdapter):
@@ -13,6 +17,7 @@ class DummySimulatorAdapter(SimulatorAdapter):
         self._task = "move the dummy robot"
         self._step_idx = 0
         self._last_action: EnvAction | None = None
+        self._snapshots: dict[str, dict] = {}
 
     def reset(self, *, task: str | None = None, seed: int | None = None) -> EnvObservation:
         del seed
@@ -62,3 +67,35 @@ class DummySimulatorAdapter(SimulatorAdapter):
             info={"accepted_action_type": action.action_type},
         )
 
+    def capture_snapshot(self) -> SnapshotRef:
+        payload = {
+            "task": self._task,
+            "step_idx": self._step_idx,
+            "last_action": self._last_action.to_dict() if self._last_action else None,
+        }
+        encoded = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+        digest = hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+        snapshot_id = f"dummy-{digest[:16]}"
+        self._snapshots[snapshot_id] = payload
+        return SnapshotRef(
+            snapshot_id=snapshot_id,
+            env_id="openeta/dummy_sim-v0",
+            state_uri=f"memory://dummy/{snapshot_id}",
+            state_sha256=digest,
+            metadata={"backend": "dummy", "format": "json-v1"},
+        )
+
+    def restore_snapshot(self, snapshot: SnapshotRef) -> None:
+        if snapshot.env_id != "openeta/dummy_sim-v0":
+            raise ValueError(f"snapshot belongs to {snapshot.env_id!r}, not dummy simulator")
+        payload = self._snapshots.get(snapshot.snapshot_id)
+        if payload is None:
+            raise FileNotFoundError(f"unknown in-memory snapshot: {snapshot.snapshot_id}")
+        encoded = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+        digest = hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+        if digest != snapshot.state_sha256:
+            raise ValueError("snapshot hash mismatch")
+        self._task = str(payload["task"])
+        self._step_idx = int(payload["step_idx"])
+        action = payload.get("last_action")
+        self._last_action = EnvAction.from_dict(action) if isinstance(action, dict) else None
