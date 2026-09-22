@@ -8,6 +8,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -65,6 +66,7 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         control_mode: str = "pd_ee_delta_pose",
         render_mode: str = "rgb_array",
         camera_resolution: int = 128,
+        snapshot_dir: str | Path | None = None,
     ) -> None:
         import gymnasium as gym
         import mani_skill.envs  # noqa: F401 - registers ManiSkill tasks
@@ -81,6 +83,8 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         self._last_raw_obs: dict[str, Any] | None = None
         self._last_info: dict[str, Any] = {}
         self._snapshots: dict[str, dict[str, Any]] = {}
+        self._snapshot_dir = Path(snapshot_dir or "runs/maniskill_snapshots").resolve()
+        self._snapshot_dir.mkdir(parents=True, exist_ok=True)
 
     @property
     def action_dim(self) -> int:
@@ -118,16 +122,30 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         digest = _state_digest(payload)
         snapshot_id = f"maniskill-{digest[:16]}"
         self._snapshots[snapshot_id] = payload
+        state_path = self._snapshot_dir / f"{snapshot_id}.pt"
+        import torch
+
+        torch.save(payload, state_path)
         return SnapshotRef(
             snapshot_id=snapshot_id,
             env_id=f"openeta/maniskill_{self.env_id}-v0",
-            state_uri=f"memory://maniskill/{snapshot_id}",
+            state_uri=str(state_path),
             state_sha256=digest,
             metadata={"backend": "maniskill", "env_id": self.env_id, "format": "state_dict-v1"},
         )
 
     def restore_snapshot(self, snapshot: SnapshotRef) -> None:
         payload = self._snapshots.get(snapshot.snapshot_id)
+        if payload is None:
+            state_path = Path(snapshot.state_uri)
+            if not state_path.is_file():
+                raise FileNotFoundError(f"snapshot state not found: {state_path}")
+            import torch
+
+            payload = torch.load(state_path, map_location="cpu", weights_only=False)
+            if not isinstance(payload, dict) or "state" not in payload:
+                raise ValueError("invalid ManiSkill snapshot payload")
+            self._snapshots[snapshot.snapshot_id] = payload
         if payload is None:
             raise FileNotFoundError(f"unknown in-memory snapshot: {snapshot.snapshot_id}")
         digest = _state_digest(payload)
