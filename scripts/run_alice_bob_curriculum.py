@@ -194,6 +194,24 @@ def run_round(
         (output_dir / "curriculum_feedback.json").write_text(
             json.dumps(feedback, ensure_ascii=False, indent=2), encoding="utf-8"
         )
+        # Materialize the public curriculum handoff in the adversarial repo so
+        # its next round can consume the score without importing OpenETA.
+        if adversarial_src.is_dir():
+            curriculum_dir = (
+                adversarial_src.parent.parent
+                / "runs"
+                / "embodied"
+                / task["task_id"]
+            )
+            curriculum_dir.mkdir(parents=True, exist_ok=True)
+            for name in ("task.json", "bob_scores.json", "curriculum_feedback.json"):
+                (curriculum_dir / name).write_text(
+                    (output_dir / name).read_text(encoding="utf-8"), encoding="utf-8"
+                )
+            feedback["adversarial_curriculum_dir"] = str(curriculum_dir)
+            (output_dir / "curriculum_feedback.json").write_text(
+                json.dumps(feedback, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
         return {
             "task": task,
             "alice": alice_trajectory,
