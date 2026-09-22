@@ -40,3 +40,32 @@ class GoalChecker(Protocol):
         predicate: Mapping[str, Any],
     ) -> GoalEvaluation:
         """Evaluate a predicate against trusted simulator state."""
+
+
+class InfoGoalChecker:
+    """Small trusted checker for simulator ``info`` receipts.
+
+    ManiSkill's PickCube task exposes ``is_obj_placed`` in ``info``.  The
+    agent cannot set this field; the host passes the environment receipt here
+    after each step.
+    """
+
+    def evaluate(
+        self,
+        *,
+        state: Mapping[str, Any],
+        predicate: Mapping[str, Any],
+    ) -> GoalEvaluation:
+        predicate_type = str(predicate.get("type", ""))
+        if predicate_type != "is_obj_placed":
+            raise ValueError(f"unsupported info predicate: {predicate_type!r}")
+        raw = state.get("is_obj_placed", state.get("success", False))
+        if isinstance(raw, (list, tuple)):
+            raw = raw[0] if raw else False
+        success = bool(raw)
+        return GoalEvaluation(
+            success=success,
+            score=1.0 if success else 0.0,
+            predicate_type=predicate_type,
+            details={"source": predicate.get("source", "environment_info")},
+        )

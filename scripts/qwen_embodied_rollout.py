@@ -25,7 +25,10 @@ from adapter.protocol import EnvAction
 
 
 DEFAULT_MODEL = "/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B"
-ALLOWED_ACTIONS = ("MOVE", "GRASP", "RELEASE", "DONE")
+ALLOWED_ACTIONS = (
+    "MOVE", "MOVE_X_POS", "MOVE_X_NEG", "MOVE_Y_POS", "MOVE_Y_NEG",
+    "MOVE_Z_POS", "MOVE_Z_NEG", "GRASP", "RELEASE", "DONE",
+)
 
 
 def _parse_action(text: str) -> tuple[str, str]:
@@ -61,7 +64,7 @@ def _decide(processor: Any, model: Any, observation: Any, instruction: str) -> t
         "You are the Bob embodied agent. Observe the image and follow the task.\n"
         f"Task: {instruction}\n"
         "Choose exactly one action. Return JSON only: "
-        '{"action":"MOVE|GRASP|RELEASE|DONE","reason":"short reason"}'
+        '{"action":"MOVE|MOVE_X_POS|MOVE_X_NEG|MOVE_Y_POS|MOVE_Y_NEG|MOVE_Z_POS|MOVE_Z_NEG|GRASP|RELEASE|DONE","reason":"short reason"}'
     )
     messages = [{"role": "user", "content": [
         {"type": "image", "image": image},

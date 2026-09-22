@@ -146,8 +146,23 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         code = str(action.code or action.action_type or "DONE").upper()
         result = np.zeros(self.action_dim, dtype=np.float32)
         # ManiSkill pd_ee_delta_pose: xyz delta, rotation delta, gripper.
-        if code == "MOVE":
+        if code in {"MOVE", "MOVE_Z_POS"}:
             result[2] = 0.02
+            result[-1] = -1.0
+        elif code == "MOVE_Z_NEG":
+            result[2] = -0.02
+            result[-1] = -1.0
+        elif code == "MOVE_X_POS":
+            result[0] = 0.02
+            result[-1] = -1.0
+        elif code == "MOVE_X_NEG":
+            result[0] = -0.02
+            result[-1] = -1.0
+        elif code == "MOVE_Y_POS":
+            result[1] = 0.02
+            result[-1] = -1.0
+        elif code == "MOVE_Y_NEG":
+            result[1] = -0.02
             result[-1] = -1.0
         elif code == "GRASP":
             result[-1] = 1.0
