@@ -1,0 +1,17 @@
+# Swift staged runtime validated on Linux x86_64, Python 3.12 and NVIDIA GPUs.
+# Keep this environment separate from `uv sync --extra grpo`: that project extra
+# currently requests peft>=0.21, while ms-swift 4.4.2 requires peft<0.20.
+ms-swift==4.4.2
+vllm==0.19.1
+torch==2.10.0
+triton==3.6.0
+transformers==5.12.1
+accelerate==1.15.0
+peft==0.19.1
+mani-skill==3.0.1
+qwen-vl-utils==0.0.14
+aiohttp==3.14.3
+flash-linear-attention==0.5.2
+fla-core==0.5.2
+# 官方预编译轮子；与 vLLM 0.19.1 固定的 Torch 2.10、Python 3.12 和 CXX11 ABI 匹配。
+causal-conv1d @ https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.7.0/causal_conv1d-1.7.0%2Bcu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl

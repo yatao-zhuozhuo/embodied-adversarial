@@ -8,6 +8,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,11 @@ def _array(value: Any) -> np.ndarray:
 def _first(value: Any) -> np.ndarray:
     arr = _array(value)
     return arr[0] if arr.ndim > 1 else arr
+
+
+def _bool_scalar(value: Any) -> bool:
+    arr = _array(value)
+    return bool(arr.reshape(-1)[0]) if arr.size else False
 
 
 def _state_digest(value: Any) -> str:
@@ -65,21 +71,58 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         *,
         control_mode: str = "pd_ee_delta_pose",
         render_mode: str = "rgb_array",
+        render_backend: str | None = None,
         camera_resolution: int = 128,
+        translation_step_m: float = 0.05,
+        fine_translation_step_m: float = 0.01,
+        max_episode_steps: int = 120,
         snapshot_dir: str | Path | None = None,
     ) -> None:
         import gymnasium as gym
         import mani_skill.envs  # noqa: F401 - registers ManiSkill tasks
 
         self.env_id = env_id
-        self._env = gym.make(
-            env_id,
-            obs_mode="rgbd",
-            control_mode=control_mode,
-            render_mode=render_mode,
-            num_envs=1,
-            sensor_configs={"base_camera": {"width": camera_resolution, "height": camera_resolution}},
-        )
+        if not 0.0 < float(translation_step_m) <= 0.1:
+            raise ValueError("translation_step_m must be in (0, 0.1]")
+        if not 0.0 < float(fine_translation_step_m) <= float(translation_step_m):
+            raise ValueError("fine_translation_step_m must be in (0, translation_step_m]")
+        self.translation_step_m = float(translation_step_m)
+        self.fine_translation_step_m = float(fine_translation_step_m)
+        # ManiSkill normalizes pd_ee_delta_pose translation: 1.0 means 0.1 m.
+        self._translation_action = self.translation_step_m / 0.1
+        self._fine_translation_action = self.fine_translation_step_m / 0.1
+        # Panda's normalized mimic controller uses +1=open and -1=closed.
+        self._gripper_command = 1.0
+        self._last_seed: int | None = None
+        # ``sapien_cpu`` changes the image transfer path but SAPIEN still owns
+        # a Vulkan renderer.  Colocated training therefore uses the separate
+        # process proxy in ``adapter.maniskill_process``; this direct adapter
+        # remains useful for dataset creation and standalone simulation.
+        self.render_backend = (
+            render_backend
+            or os.environ.get("OPENETA_MANISKILL_RENDER_BACKEND")
+            or "sapien_cpu"
+        ).strip()
+        # A caller can still opt into a CUDA renderer.  Constructing one on a
+        # different device changes PyTorch's process-wide current device, so
+        # always preserve the DDP rank's compute device around gym.make().
+        import torch
+
+        compute_device = torch.cuda.current_device() if torch.cuda.is_available() else None
+        try:
+            self._env = gym.make(
+                env_id,
+                obs_mode="rgbd",
+                control_mode=control_mode,
+                render_mode=render_mode,
+                render_backend=self.render_backend,
+                num_envs=1,
+                max_episode_steps=int(max_episode_steps),
+                sensor_configs={"base_camera": {"width": camera_resolution, "height": camera_resolution}},
+            )
+        finally:
+            if compute_device is not None:
+                torch.cuda.set_device(compute_device)
         self._last_raw_obs: dict[str, Any] | None = None
         self._last_info: dict[str, Any] = {}
         self._snapshots: dict[str, dict[str, Any]] = {}
@@ -93,6 +136,8 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
     def reset(self, *, task: str | None = None, seed: int | None = None) -> EnvObservation:
         del task
         raw, info = self._env.reset(seed=seed)
+        self._gripper_command = 1.0
+        self._last_seed = seed
         self._last_raw_obs = raw
         self._last_info = info
         return self._observation(raw, info)
@@ -118,7 +163,11 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
     def capture_snapshot(self) -> SnapshotRef:
         state = copy.deepcopy(self._env.unwrapped.get_state_dict())
         elapsed_steps = copy.deepcopy(getattr(self._env.unwrapped, "_elapsed_steps", None))
-        payload = {"state": state, "elapsed_steps": elapsed_steps}
+        payload = {
+            "state": state,
+            "elapsed_steps": elapsed_steps,
+            "adapter_state": {"gripper_command": self._gripper_command},
+        }
         digest = _state_digest(payload)
         snapshot_id = f"maniskill-{digest[:16]}"
         self._snapshots[snapshot_id] = payload
@@ -131,7 +180,8 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
             env_id=f"openeta/maniskill_{self.env_id}-v0",
             state_uri=str(state_path),
             state_sha256=digest,
-            metadata={"backend": "maniskill", "env_id": self.env_id, "format": "state_dict-v1"},
+            seed=self._last_seed,
+            metadata={"backend": "maniskill", "env_id": self.env_id, "format": "state_dict-v2"},
         )
 
     def restore_snapshot(self, snapshot: SnapshotRef) -> None:
@@ -151,43 +201,91 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         digest = _state_digest(payload)
         if digest != snapshot.state_sha256:
             raise ValueError("snapshot hash mismatch")
+        adapter_state = payload.get("adapter_state") or {}
+        self._gripper_command = float(adapter_state.get("gripper_command", 1.0))
+        self._env.unwrapped.set_state_dict(copy.deepcopy(payload["state"]))
+        # SAPIEN contact impulses are not part of get_state_dict().  Without a
+        # physics step, restoring a pre-grasp snapshot after a successful
+        # episode leaves agent.is_grasping() stale for the first observation.
+        # Refresh contacts at the restored geometry, then write the exact
+        # snapshot state and episode counter back for the caller.
+        contact_refresh = np.zeros(self.action_dim, dtype=np.float32)
+        contact_refresh[-1] = self._gripper_command
+        self._env.step(contact_refresh[None, :])
         self._env.unwrapped.set_state_dict(copy.deepcopy(payload["state"]))
         if payload["elapsed_steps"] is not None:
             self._env.unwrapped._elapsed_steps = copy.deepcopy(payload["elapsed_steps"])
         self._last_raw_obs = self._env.unwrapped.get_obs()
-        self._last_info = {}
+        self._last_info = self._plain_info(self._env.unwrapped.evaluate())
 
     def close(self) -> None:
         self._env.close()
 
+    def render_rgb(self) -> np.ndarray:
+        """Return the simulator's third-person RGB render for video export."""
+
+        frame = _first(self._env.render())
+        return np.asarray(frame, dtype=np.uint8)
+
+    def task_state(self) -> dict[str, Any]:
+        """Return trusted PickCube state used by task compilation/checking."""
+
+        unwrapped = self._env.unwrapped
+        cube = _first(unwrapped.cube.pose.p).astype(float)
+        goal = _first(unwrapped.goal_site.pose.p).astype(float)
+        evaluation = self._plain_info(unwrapped.evaluate())
+        return {
+            "cube_position": cube.tolist(),
+            "goal_position": goal.tolist(),
+            "gripper_command": self._gripper_command,
+            "is_grasped": _bool_scalar(evaluation.get("is_grasped", False)),
+            "is_obj_placed": _bool_scalar(evaluation.get("is_obj_placed", False)),
+        }
+
+    def set_goal_position(self, position: list[float] | tuple[float, float, float]) -> None:
+        """Set the trusted PickCube goal marker without changing the cube state."""
+
+        if len(position) != 3:
+            raise ValueError("goal position must contain xyz")
+        import torch
+        from mani_skill.utils.structs.pose import Pose
+
+        xyz = torch.tensor(
+            [list(map(float, position))],
+            dtype=torch.float32,
+            device=self._env.unwrapped.device,
+        )
+        self._env.unwrapped.goal_site.set_pose(Pose.create_from_pq(xyz))
+        self._last_raw_obs = self._env.unwrapped.get_obs()
+        self._last_info = self._plain_info(self._env.unwrapped.evaluate())
+
     def _encode_action(self, action: EnvAction) -> np.ndarray:
         code = str(action.code or action.action_type or "DONE").upper()
         result = np.zeros(self.action_dim, dtype=np.float32)
-        # ManiSkill pd_ee_delta_pose: xyz delta, rotation delta, gripper.
-        if code in {"MOVE", "MOVE_Z_POS"}:
-            result[2] = 0.02
-            result[-1] = -1.0
-        elif code == "MOVE_Z_NEG":
-            result[2] = -0.02
-            result[-1] = -1.0
-        elif code == "MOVE_X_POS":
-            result[0] = 0.02
-            result[-1] = -1.0
-        elif code == "MOVE_X_NEG":
-            result[0] = -0.02
-            result[-1] = -1.0
-        elif code == "MOVE_Y_POS":
-            result[1] = 0.02
-            result[-1] = -1.0
-        elif code == "MOVE_Y_NEG":
-            result[1] = -0.02
-            result[-1] = -1.0
+        # ManiSkill pd_ee_delta_pose: normalized xyz/rotation delta + gripper.
+        result[-1] = self._gripper_command
+        magnitude = self._fine_translation_action if code.endswith("_FINE") else self._translation_action
+        direction_code = code.removesuffix("_FINE")
+        if direction_code in {"MOVE", "MOVE_Z_POS"}:
+            result[2] = magnitude
+        elif direction_code == "MOVE_Z_NEG":
+            result[2] = -magnitude
+        elif direction_code == "MOVE_X_POS":
+            result[0] = magnitude
+        elif direction_code == "MOVE_X_NEG":
+            result[0] = -magnitude
+        elif direction_code == "MOVE_Y_POS":
+            result[1] = magnitude
+        elif direction_code == "MOVE_Y_NEG":
+            result[1] = -magnitude
         elif code == "GRASP":
-            result[-1] = 1.0
+            self._gripper_command = -1.0
+            result[-1] = self._gripper_command
         elif code == "RELEASE":
-            result[-1] = -1.0
+            self._gripper_command = 1.0
+            result[-1] = self._gripper_command
         elif code == "DONE":
-            result[-1] = -1.0
+            pass
         else:
             raise ValueError(f"unsupported embodied action: {code}")
         return result
@@ -204,6 +302,12 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
         qvel = _first(agent.get("qvel", []))
         tcp = _first(extra.get("tcp_pose", []))
         goal = _first(extra.get("goal_pos", []))
+        try:
+            cube = _first(self._env.unwrapped.cube.pose.p)
+        except Exception:
+            cube = np.asarray([])
+        trusted = self._plain_info(self._env.unwrapped.evaluate())
+        fallback = self._plain_info(info)
         return EnvObservation(
             task=f"ManiSkill task: {self.env_id}",
             cameras=[CameraFrame(
@@ -216,12 +320,24 @@ class ManiSkillSimulatorAdapter(SimulatorAdapter):
                 joint_positions=qpos.astype(float).tolist(),
                 joint_velocities=qvel.astype(float).tolist(),
                 end_effector_pose={"xyz": tcp[:3].astype(float).tolist()} if tcp.size >= 3 else {},
-                gripper_state={"open": bool(qpos[-1] < 0.02) if qpos.size else True},
+                gripper_state={
+                    "open": bool(qpos[-1] > 0.02) if qpos.size else True,
+                    "command": self._gripper_command,
+                },
             ),
-            objects=[
-                {"name": "cube", "position": goal.astype(float).tolist(), "role": "goal"}
-            ] if goal.size >= 3 else [],
-            metadata={"env_id": self.env_id, "success": self._plain_info(info).get("success")},
+            objects=(
+                [{"name": "cube", "position": cube.astype(float).tolist(), "role": "object"}]
+                if cube.size >= 3 else []
+            ) + (
+                [{"name": "goal", "position": goal.astype(float).tolist(), "role": "goal"}]
+                if goal.size >= 3 else []
+            ),
+            metadata={
+                "env_id": self.env_id,
+                "success": _bool_scalar(trusted.get("success", fallback.get("success", False))),
+                "is_grasped": _bool_scalar(trusted.get("is_grasped", False)),
+                "is_obj_placed": _bool_scalar(trusted.get("is_obj_placed", False)),
+            },
         )
 
     @staticmethod

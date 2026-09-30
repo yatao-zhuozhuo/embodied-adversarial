@@ -7,6 +7,7 @@ the result schema and never accepts an agent-declared success as truth.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+import math
 from typing import Any, Mapping, Protocol
 
 
@@ -68,4 +69,34 @@ class InfoGoalChecker:
             score=1.0 if success else 0.0,
             predicate_type=predicate_type,
             details={"source": predicate.get("source", "environment_info")},
+        )
+
+
+class PositionGoalChecker:
+    """Check a compiled object-position predicate against trusted task state."""
+
+    def evaluate(
+        self,
+        *,
+        state: Mapping[str, Any],
+        predicate: Mapping[str, Any],
+    ) -> GoalEvaluation:
+        predicate_type = str(predicate.get("type", ""))
+        if predicate_type != "cube_at_position":
+            raise ValueError(f"unsupported position predicate: {predicate_type!r}")
+        actual = list(state.get("cube_position") or [])
+        target = list(predicate.get("position") or [])
+        if len(actual) != 3 or len(target) != 3:
+            raise ValueError("cube_at_position requires actual and target xyz")
+        tolerance = float(predicate.get("tolerance", 0.025))
+        if tolerance <= 0:
+            raise ValueError("position tolerance must be positive")
+        distance = math.sqrt(sum((float(a) - float(b)) ** 2 for a, b in zip(actual, target)))
+        success = distance <= tolerance
+        score = max(0.0, min(1.0, 1.0 - distance / max(tolerance * 4.0, 1e-9)))
+        return GoalEvaluation(
+            success=success,
+            score=score,
+            predicate_type=predicate_type,
+            details={"distance": distance, "tolerance": tolerance},
         )
