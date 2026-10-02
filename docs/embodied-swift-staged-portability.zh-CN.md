@@ -111,3 +111,17 @@ DRY_RUN=true ./scripts/run_embodied_swift_staged_formal5.sh
 通过路径检查后，再在目标 GPU 节点运行 `scripts/run_embodied_swift_staged_job.sh` 做 FLA 与 ManiSkill 原生后端检查，或直接运行 `scripts/run_embodied_swift_staged_formal5.sh`。`RUN_NAME`、`RUN_ROOT`、GPU 编号、端口和显存参数都可用环境变量覆盖。训练入口默认值中的 `/inspire/...`、`/opt/openeta-swift` 是原集群配置；示例环境文件覆盖这些值。TileLang 安装脚本现在默认使用公开 PyPI，也可用 `INDEX_URL` 覆盖。
 
 已有 `RUN_ROOT` 的 `summary.json` 记录绝对 checkpoint 路径。迁移续跑时需重写这些路径并校验 checkpoint；新平台首次运行建议使用新的 `RUN_NAME`。
+
+## Bounded GRPO 公共入口（2026-10）
+
+同步 colocate 训练现在由 `scripts/run_embodied_bounded_colocate.py` 统一启动。`OPENETA_TRAIN_ROLE=alice` 注册 `StagedEmbodiedGRPOTrainer`，仍执行 Alice → 冻结 Bob → Alice reward；`OPENETA_TRAIN_ROLE=bob` 注册 `BoundedEmbodiedGRPOTrainer`，只执行 Bob 单策略 rollout。两者共同使用请求级每-turn/累计 token 预算、输出对齐、vLLM wake/sync/sleep 和阶段日志。旧的 `run_embodied_staged_colocate.py` 仅保留为 Alice 兼容 wrapper。
+
+第一阶段固定 `OPENETA_HISTORY_MODE=full`，默认 `OPENETA_THINKING_MAX_TOKENS=1024`、`OPENETA_TRAJECTORY_MAX_TOKENS=24576`、`OPENETA_CONTEXT_MAX_TOKENS=32768`。每个 episode 的 artifact 会记录逐 turn token 数、累计 token 与预算终止原因；每个 rank 的 `phase_timing.rank-NN.jsonl` 会记录 wake、权重同步、rollout、sleep 以及分阶段 allocator 显存。可在独立 canary 完成后执行：
+
+```bash
+python scripts/probe_embodied_bounded_grpo.py \
+  --artifact-root /path/to/canary-round \
+  --output /path/to/canary-round/bounded-probe.json
+```
+
+当前仓库默认使用共享目录旁的 `.venv_selfplay_embodied`。原模型冷启动使用 `OPENETA_COLD_START=true` 和 `__base_model__`，不要求预先存在 Alice/Bob LoRA；已有 LoRA 模式仍校验 `adapter_config.json`。正式恢复前先以新的 `RUN_ROOT` 做至少两个 Bob optimizer step 和一个完整 Alice 三阶段更新，不能把 CPU helper 测试视为 GPU 验收。

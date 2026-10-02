@@ -21,7 +21,10 @@ from typing import Any
 import torch
 from accelerate.utils import gather_object
 from swift.infer_engine.protocol import RequestConfig, RolloutInferRequest, RolloutOutput
-from swift.rlhf_trainers import GRPOTrainer
+from agent.training.embodied_bounded_grpo import (
+    BoundedEmbodiedGRPOTrainer,
+    register_bounded_trainer,
+)
 from swift.rlhf_trainers.utils import aggressive_empty_cache, set_expandable_segments
 from swift.rl_core.data import OnPolicySample
 from swift.rollout import invoke_async_hook, run_multi_turn
@@ -72,32 +75,14 @@ def register_staged_trainer() -> None:
         "1", "true", "yes", "on",
     }:
         return
-    from swift.infer_engine import grpo_vllm_engine
-    from swift.rlhf_trainers import rollout_mixin
-    from swift.trainers.trainer_factory import TrainerFactory
-
-    # Swift's online trainable adapter uses module-level constants.  Staged
-    # mode reserves ID 1 for it and ID 2 for the immutable Bob checkpoint.
-    rollout_mixin.VLLM_LORA_INT_ID = ALICE_LORA_ID
-    rollout_mixin.VLLM_LORA_NAME = ALICE_LORA_NAME
-    grpo_vllm_engine.VLLM_LORA_INT_ID = ALICE_LORA_ID
-    grpo_vllm_engine.VLLM_LORA_NAME = ALICE_LORA_NAME
-    TrainerFactory.TRAINER_MAPPING["grpo"] = (
-        "agent.training.embodied_staged_colocate.StagedEmbodiedGRPOTrainer"
-    )
+    register_bounded_trainer("alice")
 
 
-class StagedEmbodiedGRPOTrainer(GRPOTrainer):
+class StagedEmbodiedGRPOTrainer(BoundedEmbodiedGRPOTrainer):
     """Use all data-parallel ranks for Alice, Bob, then unchanged GRPO."""
 
     def _prepare_scheduler(self) -> None:
         super()._prepare_scheduler()
-        if self.args.vllm_mode != "colocate":
-            raise ValueError("staged embodied training requires --vllm_mode colocate")
-        if self.args.vllm_tensor_parallel_size != 1:
-            raise ValueError("staged embodied training requires --vllm_tensor_parallel_size 1")
-        if getattr(self.args, "async_generate", False):
-            raise ValueError("staged phase collectives are incompatible with --async_generate")
         # Swift may import an external plugin under a generated module name,
         # so class identity is not stable even though the registered scheduler
         # implements the same protocol.  The explicit role is the invariant.
@@ -112,24 +97,33 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             tokenizer=tokenizer,
         )
         self._staged_group_index = 0
-        self._train_forward_seconds = 0.0
-        self._optimizer_window: list[dict[str, float]] = []
-        self._bob_adapter_path = Path(
-            os.environ.get("OPENETA_FROZEN_BOB_ADAPTER", "")
-        ).expanduser().resolve()
-        if not self._bob_adapter_path.is_dir():
-            raise ValueError(
-                "OPENETA_FROZEN_BOB_ADAPTER must point to a frozen LoRA checkpoint directory"
-            )
-        if not (self._bob_adapter_path / "adapter_config.json").is_file():
-            raise ValueError("frozen Bob adapter has no adapter_config.json")
+        self._bob_uses_base_model = os.environ.get(
+            "OPENETA_FROZEN_BOB_BASE", "false"
+        ).strip().lower() in {"1", "true", "yes", "on"}
+        self._bob_adapter_path: Path | None = None
+        if not self._bob_uses_base_model:
+            self._bob_adapter_path = Path(
+                os.environ.get("OPENETA_FROZEN_BOB_ADAPTER", "")
+            ).expanduser().resolve()
+            if not self._bob_adapter_path.is_dir():
+                raise ValueError(
+                    "OPENETA_FROZEN_BOB_ADAPTER must point to a frozen LoRA checkpoint directory"
+                )
+            if not (self._bob_adapter_path / "adapter_config.json").is_file():
+                raise ValueError("frozen Bob adapter has no adapter_config.json")
+        default_bob_version = (
+            "base_model"
+            if self._bob_uses_base_model
+            else str(self._bob_adapter_path)
+        )
         self._bob_policy_version = os.environ.get(
-            "OPENETA_BOB_POLICY_VERSION", str(self._bob_adapter_path)
+            "OPENETA_BOB_POLICY_VERSION", default_bob_version
         )
         configured_root = os.environ.get("OPENETA_STAGED_ARTIFACT_ROOT")
         self._staged_artifact_root = Path(
             configured_root or Path(self.args.output_dir).resolve().parent
         ).resolve()
+        self._bounded_artifact_root = self._staged_artifact_root
 
     @contextmanager
     def multi_turn_completion_length_context(self):
@@ -313,7 +307,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             raise ValueError("staged Alice/Bob routing requires --vllm_enable_lora true")
         return engine
 
-    def _lora_requests(self) -> tuple[Any, Any]:
+    def _lora_requests(self) -> tuple[Any, Any | None]:
         from vllm.lora.request import LoRARequest
         from swift.rlhf_trainers import rollout_mixin
 
@@ -322,14 +316,18 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             lora_int_id=ALICE_LORA_ID,
             lora_path=rollout_mixin.VLLM_LORA_PATH,
         )
-        bob = LoRARequest(
-            lora_name=BOB_LORA_NAME,
-            lora_int_id=BOB_LORA_ID,
-            lora_path=str(self._bob_adapter_path),
-        )
+        bob = None
+        if self._bob_adapter_path is not None:
+            bob = LoRARequest(
+                lora_name=BOB_LORA_NAME,
+                lora_int_id=BOB_LORA_ID,
+                lora_path=str(self._bob_adapter_path),
+            )
         return alice, bob
 
-    def _ensure_bob_adapter(self, bob_request: Any) -> None:
+    def _ensure_bob_adapter(self, bob_request: Any | None) -> None:
+        if bob_request is None:
+            return
         loaded = set(self.engine.engine.list_loras())
         if BOB_LORA_ID not in loaded:
             self.engine.engine.add_lora(bob_request)
@@ -366,27 +364,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
         scheduler: EmbodiedAliceScheduler | EmbodiedBobScheduler,
         adapter_request: Any,
     ) -> list[OnPolicySample]:
-        requests = self.samples2requests(samples)
-        invoke_async_hook(scheduler.on_trajectory_start(requests))
-        for request, sample in zip(requests, samples):
-            sample.messages = request.messages
-        request_config = scheduler.prepare_request_config(self._get_request_config())
-        # Use the exact requests initialized by the scheduler.  Rebuilding
-        # them from OnPolicySample here would discard the first observation
-        # image and the scheduler's chat-template overrides.
-        first_outputs = self._rollout_with_adapter(requests, request_config, adapter_request)
-        rollout_outputs = run_multi_turn(
-            requests=requests,
-            first_turn_outputs=first_outputs,
-            scheduler=scheduler,
-            rollout_fn=lambda reqs, cfg: self._rollout_with_adapter(
-                reqs, cfg, adapter_request
-            ),
-            request_config=request_config,
-            max_turns=self.args.max_turns,
-            gather_fn=gather_object,
-        )
-        return self._postprocess_rollout_outputs(samples, rollout_outputs)
+        return self._run_bounded_scheduler_phase(samples, scheduler, adapter_request)
 
     def _assign_proposal_ids(self, samples: list[OnPolicySample]) -> None:
         rank = self.accelerator.process_index
@@ -616,41 +594,13 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
     def _fast_infer(self, samples: list[OnPolicySample]) -> list[OnPolicySample]:
         """Run Alice -> frozen Bob -> finalize before returning to Swift GRPO."""
 
-        args = self.args
-        if torch.cuda.is_available():
-            torch.cuda.reset_peak_memory_stats(self.accelerator.device)
-        phase_start = time.monotonic()
-        if args.sleep_level > 0 and self.engine.inner_model_executor.is_sleeping:
-            wake_kwargs = {}
-            if "tags" in inspect.signature(self.engine.engine.wake_up).parameters:
-                wake_kwargs = {"tags": ["weights"]}
-            aggressive_empty_cache()
-            self.engine.engine.wake_up(**wake_kwargs)
-        wake_seconds = time.monotonic() - phase_start
-
-        sync_start = time.monotonic()
-        if self.state.global_step != self._last_loaded_step or args.sleep_level == 2:
-            self._move_model_to_vllm()
-            self._last_loaded_step = self.state.global_step
-        weight_sync_seconds = time.monotonic() - sync_start
         alice_adapter, bob_adapter = self._lora_requests()
-
-        context = self.offload_context if self.enable_offload else nullcontext
-        with context():
-            if (
-                self.engine.inner_model_executor.is_sleeping
-                and "tags" in inspect.signature(self.engine.engine.wake_up).parameters
-            ):
-                aggressive_empty_cache()
-                set_expandable_segments(False)
-                self.engine.engine.wake_up(tags=["kv_cache"])
-
+        with self._rollout_engine_session() as common_timing:
             self._assign_proposal_ids(samples)
             alice_start = time.monotonic()
-            with self.multi_turn_completion_length_context():
-                alice_outputs = self._run_scheduler_phase(
-                    samples, self.alice_scheduler, alice_adapter
-                )
+            alice_outputs = self._run_scheduler_phase(
+                samples, self.alice_scheduler, alice_adapter
+            )
             alice_seconds = time.monotonic() - alice_start
             local_proposals = self._extract_local_proposals(alice_outputs)
             all_proposal_dicts = gather_object(
@@ -689,10 +639,9 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                         for request in pending_requests
                     ]
                     if bob_samples:
-                        with self.multi_turn_completion_length_context():
-                            bob_outputs = self._run_scheduler_phase(
-                                bob_samples, self.bob_scheduler, bob_adapter
-                            )
+                        bob_outputs = self._run_scheduler_phase(
+                            bob_samples, self.bob_scheduler, bob_adapter
+                        )
                     else:
                         # Ranks with no local shard must still enter run_multi_turn
                         # collectives while peers work.  Swift's length context
@@ -743,17 +692,11 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                 final_info["proposal"] = proposal.to_dict()
                 sample.rollout_infos = final_info
 
-            sleep_start = time.monotonic()
-            if args.sleep_level > 0:
-                self.engine.engine.reset_prefix_cache()
-                self.engine.engine.sleep(level=args.sleep_level)
-                aggressive_empty_cache()
-                set_expandable_segments(True)
-            sleep_seconds = time.monotonic() - sleep_start
-
         successful_receipts = [receipt for receipt in all_receipts if not receipt.infrastructure_error]
         timing = {
+            **common_timing,
             "event": "rollout",
+            "role": "alice",
             "global_step": self.state.global_step,
             "group_index": self._staged_group_index,
             "rank": self.accelerator.process_index,
@@ -768,9 +711,6 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                 if successful_receipts else None
             ),
             "adapter_switch_seconds": adapter_switch_seconds,
-            "weight_sync_seconds": weight_sync_seconds,
-            "vllm_wake_seconds": wake_seconds,
-            "vllm_sleep_seconds": sleep_seconds,
             "gpu_peak_memory_bytes": (
                 torch.cuda.max_memory_allocated(self.accelerator.device)
                 if torch.cuda.is_available() else 0
@@ -789,4 +729,5 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
         self._persist_group(local_proposals, local_receipts, timing)
         self._write_manifest(all_proposals, all_receipts)
         self._staged_group_index += 1
+        self._bounded_group_index += 1
         return alice_outputs

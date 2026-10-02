@@ -6,7 +6,7 @@ set -euo pipefail
 # then adapter ID 2 (the frozen Bob) through the same local vLLM engine.
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SWIFT_VENV="${SWIFT_VENV:-/opt/openeta-swift}"
+SWIFT_VENV="${SWIFT_VENV:-${REPO_ROOT}/../.venv_selfplay_embodied}"
 PYTHON="${SWIFT_VENV}/bin/python"
 SWIFT_BIN="${SWIFT_VENV}/bin/swift"
 MODEL_PATH="${MODEL_PATH:-/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B}"
@@ -30,12 +30,26 @@ if [[ -z "${DATASET_PATH}" || ! -f "${DATASET_PATH}" ]]; then
   exit 2
 fi
 IFS=',' read -r -a OPENETA_VISIBLE_GPU_LIST <<<"${CUDA_VISIBLE_DEVICES}"
-if [[ "${#OPENETA_VISIBLE_GPU_LIST[@]}" -ne 8 || "${NPROC_PER_NODE}" -ne 8 ]]; then
-  echo "staged entry requires exactly 8 visible GPUs and NPROC_PER_NODE=8" >&2
+if [[ "${OPENETA_ALLOW_SINGLE_GPU_CANARY:-false}" =~ ^(1|true|yes|on)$ ]]; then
+  EXPECTED_GPU_COUNT=1
+else
+  EXPECTED_GPU_COUNT=8
+fi
+if [[ "${#OPENETA_VISIBLE_GPU_LIST[@]}" -ne "${EXPECTED_GPU_COUNT}" || \
+      "${NPROC_PER_NODE}" -ne "${EXPECTED_GPU_COUNT}" ]]; then
+  echo "staged entry requires ${EXPECTED_GPU_COUNT} visible GPU(s) and matching NPROC_PER_NODE" >&2
+  echo "set OPENETA_ALLOW_SINGLE_GPU_CANARY=true only for an isolated diagnostic run" >&2
   exit 2
 fi
 
 export CUDA_VISIBLE_DEVICES NPROC_PER_NODE
+if [[ -d /usr/local/nvidia/lib64 ]]; then
+  export LD_LIBRARY_PATH="/usr/local/nvidia/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+fi
+export OPENETA_TRAIN_ROLE="${ROLE}"
+export OPENETA_HISTORY_MODE="${OPENETA_HISTORY_MODE:-full}"
+export OPENETA_TRAJECTORY_MAX_TOKENS="${OPENETA_TRAJECTORY_MAX_TOKENS:-${MAX_COMPLETION_LENGTH:-24576}}"
+export OPENETA_CONTEXT_MAX_TOKENS="${OPENETA_CONTEXT_MAX_TOKENS:-${MAX_LENGTH:-32768}}"
 export SWIFT_SINGLE_DEVICE_MODE=1
 if [[ -n "${OPENETA_TILELANG_OVERLAY:-}" ]]; then
   if [[ ! -d "${OPENETA_TILELANG_OVERLAY}" ]]; then
@@ -63,7 +77,8 @@ elif [[ -n "${TRAIN_ADAPTER_PATH}" ]]; then
 fi
 
 if [[ "${ROLE}" == "alice" ]]; then
-  if [[ -z "${OPENETA_FROZEN_BOB_ADAPTER:-}" || ! -d "${OPENETA_FROZEN_BOB_ADAPTER}" ]]; then
+  if [[ ! "${OPENETA_FROZEN_BOB_BASE:-false}" =~ ^(1|true|yes|on)$ && \
+        ( -z "${OPENETA_FROZEN_BOB_ADAPTER:-}" || ! -d "${OPENETA_FROZEN_BOB_ADAPTER}" ) ]]; then
     echo "Alice staged training requires OPENETA_FROZEN_BOB_ADAPTER" >&2
     exit 2
   fi
@@ -72,20 +87,23 @@ if [[ "${ROLE}" == "alice" ]]; then
   export OPENETA_BOB_POLICY_VERSION="${OPENETA_BOB_POLICY_VERSION:-${OPENETA_FROZEN_BOB_ADAPTER}}"
   SCHEDULER="embodied_alice_scheduler"
   REWARD_FUNC="embodied_alice_reward"
-  ENTRY=(
-    "${PYTHON}" -m torch.distributed.run
-    --nproc_per_node "${NPROC_PER_NODE}"
-    "${REPO_ROOT}/scripts/run_embodied_staged_colocate.py"
-  )
 elif [[ "${ROLE}" == "bob" ]]; then
   export OPENETA_STAGED_COLOCATE=false
   SCHEDULER="embodied_bob_scheduler"
   REWARD_FUNC="embodied_bob_reward"
-  ENTRY=("${SWIFT_BIN}" rlhf)
 else
   echo "ROLE must be alice or bob" >&2
   exit 2
 fi
+
+ENTRY=(
+  "${PYTHON}" -m torch.distributed.run
+  --nproc_per_node "${NPROC_PER_NODE}"
+  "${REPO_ROOT}/scripts/run_embodied_bounded_colocate.py"
+)
+
+echo "Bounded embodied GRPO: role=${ROLE} trainer_entry=run_embodied_bounded_colocate.py" >&2
+echo "  per_turn=${OPENETA_THINKING_MAX_TOKENS:-1024} trajectory=${OPENETA_TRAJECTORY_MAX_TOKENS} context=${OPENETA_CONTEXT_MAX_TOKENS} history=${OPENETA_HISTORY_MODE}" >&2
 
 exec "${ENTRY[@]}" \
   --rlhf_type grpo \
@@ -94,6 +112,7 @@ exec "${ENTRY[@]}" \
   --external_plugins "${REPO_ROOT}/plugins/embodied_swift_grpo.py" \
   --reward_funcs "${REWARD_FUNC}" \
   --dataset "${DATASET_PATH}" \
+  --check_model false \
   --load_from_cache_file false \
   --dataset_num_proc 1 \
   --use_vllm true \
@@ -127,7 +146,9 @@ exec "${ENTRY[@]}" \
   --tuner_type lora \
   --lora_rank "${LORA_RANK:-8}" \
   --lora_alpha "${LORA_ALPHA:-16}" \
-  --target_modules all-linear \
+  --target_modules \
+    down_proj gate_proj in_proj_a in_proj_b in_proj_qkv in_proj_z \
+    k_proj o_proj out_proj q_proj up_proj v_proj \
   --gradient_checkpointing true \
   --use_liger_kernel "${USE_LIGER_KERNEL:-true}" \
   --bf16 true \
@@ -142,4 +163,5 @@ exec "${ENTRY[@]}" \
   --save_total_limit 2 \
   --output_dir "${OUTPUT_DIR}" \
   --log_completions true \
-  --report_to none
+  --report_to "${REPORT_TO:-tensorboard}" \
+  --logging_dir "${TENSORBOARD_LOGGING_DIR:-${OUTPUT_DIR}/tensorboard}"

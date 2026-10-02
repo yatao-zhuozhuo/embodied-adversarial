@@ -49,6 +49,19 @@ def _alice_infos(root: Path) -> list[dict[str, Any]]:
     return list(infos_by_id.values())
 
 
+def _phase_timings(root: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for path in sorted(root.glob("phase_timing.rank-*.jsonl")):
+        try:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                value = json.loads(line)
+                if isinstance(value, dict):
+                    rows.append(value)
+        except (OSError, json.JSONDecodeError):
+            continue
+    return rows
+
+
 def main() -> None:
     args = parse_args()
     infos = _alice_infos(args.alice_rollouts)
@@ -64,6 +77,13 @@ def main() -> None:
         float((info.get("feasibility_metrics") or {}).get("approach_progress", 0.0))
         for info in infos
     ]
+    budgets = [
+        info["rollout_budget"]
+        for info in infos
+        if isinstance(info.get("rollout_budget"), dict)
+    ]
+    generated_tokens = [int(item.get("generated_tokens_total", 0)) for item in budgets]
+    timings = _phase_timings(args.alice_rollouts.parent)
     bob_eval = json.loads(args.bob_eval.read_text(encoding="utf-8"))
     result = {
         "schema_version": "openeta.embodied_formal_round.v1",
@@ -77,6 +97,11 @@ def main() -> None:
             "mean_approach_progress": statistics.fmean(approach) if approach else 0.0,
             "mean_displacement": statistics.fmean(displacements) if displacements else 0.0,
             "mean_reward": statistics.fmean(rewards) if rewards else 0.0,
+            "budget_observations": len(budgets),
+            "mean_generated_tokens": (
+                statistics.fmean(generated_tokens) if generated_tokens else None
+            ),
+            "max_generated_tokens": max(generated_tokens) if generated_tokens else None,
         },
         "bob": {
             "holdout_episodes": int(bob_eval["episodes"]),
@@ -84,6 +109,22 @@ def main() -> None:
             "holdout_mean_reward": float(bob_eval["mean_reward"]),
         },
         "curriculum": {"bob_dataset_mode": args.bob_dataset_mode},
+        "timing": {
+            "records": len(timings),
+            "mean_rollout_seconds": (
+                statistics.fmean(
+                    float(row.get("rollout_seconds", 0.0)) for row in timings
+                )
+                if timings else None
+            ),
+            "max_gpu_peak_bytes": max(
+                (
+                    int(row.get("gpu_after_rollout_peak_bytes", row.get("gpu_peak_memory_bytes", 0)))
+                    for row in timings
+                ),
+                default=None,
+            ),
+        },
         "checkpoints": {
             "alice": str(args.alice_adapter.resolve()),
             "bob": str(args.bob_adapter.resolve()),

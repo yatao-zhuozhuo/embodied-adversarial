@@ -6,6 +6,23 @@ reaches Alice's final state independently; Alice's trajectory is never exposed
 to Bob.
 """
 
+# ============================ 中文总览 ============================
+# 本文件是 ms-swift 框架的外部插件（external plugin），通过 --external_plugins 加载，
+# 为具身 Alice/Bob 非对称 self-play 的 GRPO 训练提供两类注册组件：
+#   1) multi-turn scheduler（注册名 embodied_alice_scheduler / embodied_bob_scheduler）：
+#      在 rollout 阶段托管 ManiSkill 环境（PickCube-v1 机械臂抓方块），负责快照恢复、
+#      逐轮执行模型输出的动作、目标判定、artifact 落盘，以及 Alice 出题后的"冻结 Bob"
+#      嵌套评估（走外部 Bob server，或 staged colocate 模式下交给同 engine 的冻结 Bob LoRA）。
+#   2) reward function（注册名 embodied_alice_reward / embodied_bob_reward）：
+#      训练阶段从 scheduler 写入的 rollout_infos 中取出"宿主侧可信 reward"，喂给 GRPO。
+# 数据流向：dataset 的 env_request（含快照/目标谓词等）→ on_trajectory_start 建环境
+#   → 模型每轮输出一个动作 → on_turn_end 执行动作并追加观测图像/prompt → episode 结束
+#   时 _finalize 计算 reward 并写 rollout_infos → reward function 读取该 reward → GRPO
+#   按 num_generations 分组算组内相对优势更新策略。
+# 此外文件头部还安装了两个显存优化 monkey-patch（分块 log-softmax、bf16 logits），
+# 只对齐数值语义、不改变训练算法。
+# ==================================================================
+
 from __future__ import annotations
 
 import base64
@@ -44,6 +61,7 @@ from agent.runtime.embodied_selfplay_prompt import ALICE_TASK, BOB_TASK, build_e
 from agent.runtime.embodied_snapshot import SnapshotRef
 from agent.runtime.embodied_task_compiler import CompiledTask, compile_cube_position_task
 from agent.training.embodied_grpo import ALLOWED_ACTIONS, parse_action
+from agent.training.embodied_rollout_budget import RolloutBudget
 from agent.training.embodied_staged_contracts import (
     AliceProposal,
     BobEvalReceipt,
@@ -54,6 +72,8 @@ from agent.training.embodied_staged_contracts import (
 
 # Put longer alternatives first so a regex backend never accepts MOVE as the
 # prefix of MOVE_X_POS.  vLLM structured output applies full grammar matching.
+# 中文说明：按动作名长度从长到短排列后再拼正则，保证 MOVE_X_POS 这类长动作
+# 优先于 MOVE 被匹配，避免 vLLM 结构化输出把长动作错误截断成短前缀。
 ACTION_REGEX = "(?:" + "|".join(
     re.escape(action) for action in sorted(ALLOWED_ACTIONS, key=len, reverse=True)
 ) + ")"
@@ -80,6 +100,9 @@ def _chunked_selective_log_softmax(
     policy-loss path.
     """
 
+    # 中文说明：把 (token 数 × 词表) 的 log_softmax 按 token 行分块计算，
+    # 数学上与一次性计算完全等价，但避免为整条长轨迹一次性分配
+    # token数×248320 词表的巨型临时张量（可省 9+ GiB 显存）。
     squeeze = index.ndim == logits.ndim - 1
     if squeeze:
         index = index.unsqueeze(-1)
@@ -114,6 +137,8 @@ def _chunked_selective_log_softmax(
 def _install_chunked_logps_patch() -> None:
     """Patch both TRL and ms-swift's imported alias in this process."""
 
+    # 中文说明：TRL 与 ms-swift 各自持有 selective_log_softmax 的引用，
+    # 两处都必须替换，否则 ms-swift 模块内早已导入的别名仍指向旧实现。
     if not _env_bool("OPENETA_CHUNK_LOGPS", True):
         return
     from trl.trainer import utils as trl_utils
@@ -139,6 +164,10 @@ def _install_bf16_logit_forward_patch() -> None:
     and removes only the redundant conversion, not any trajectory token.
     """
 
+    # 中文说明：替换 GRPOTrainer 的本地 forward，让 no-grad 的 old/reference
+    # 策略前向保留 bf16 logits，绕过 Accelerate 默认的 fp32 输出转换；
+    # 否则一条 2 万多 token 的轨迹会凭空多出约 22 GiB 的 fp32 张量。
+    # 这些前向本来就不回传梯度，跳过 fp32 转换不影响数值正确性。
     if not _env_bool("OPENETA_KEEP_LOGITS_BF16", True):
         return
 
@@ -232,6 +261,9 @@ def _parsed_model_action(text: str) -> Any:
     shaping.  An unclosed thinking block is never recovered.
     """
 
+    # 中文说明：宽松解析路径——先取 </think> 之后的答案段；解析失败时
+    # 从答案段最后一行"找回"一个白名单内的合法动作以保证执行安全；
+    # 但未闭合 <think> 的输出绝不找回（防止把被截断的思考当动作执行）。
     raw = str(text or "").strip()
     if "<think>" in raw:
         if "</think>" not in raw:
@@ -256,6 +288,8 @@ def _parsed_model_action(text: str) -> Any:
 def _strict_action_format(text: str) -> bool:
     """Whether the answer channel contains exactly one allow-listed action."""
 
+    # 中文说明：严格格式判定——要求 </think> 之后"恰好只有一个白名单动作"，
+    # 与上面的宽松解析分离：宽松解析保证执行安全，严格判定用于 reward 罚分。
     raw = str(text or "").strip()
     if "<think>" in raw:
         if "</think>" not in raw:
@@ -269,6 +303,8 @@ def _strict_action_format(text: str) -> bool:
 def _format_adherence(steps: list[dict[str, Any]]) -> tuple[float, float]:
     """Return strict-format fraction and its separately reported penalty."""
 
+    # 中文说明：统计整条 episode 中严格合规轮次占比，并据此线性折算格式罚分
+    # （罚分上限为 OPENETA_FORMAT_PENALTY，默认 0.10）；空轨迹按全罚处理。
     if not steps:
         return 0.0, _format_penalty_weight()
     strict_fraction = sum(bool(step.get("strict_action_format")) for step in steps) / len(steps)
@@ -276,6 +312,8 @@ def _format_adherence(steps: list[dict[str, Any]]) -> tuple[float, float]:
 
 
 def _format_penalty_weight() -> float:
+    # 中文说明：格式罚分权重取自环境变量 OPENETA_FORMAT_PENALTY（默认 0.10），
+    # 限定在 [0,1] 区间内，越界直接报错以免静默产生异常 reward。
     value = float(os.environ.get("OPENETA_FORMAT_PENALTY", "0.10"))
     if not 0.0 <= value <= 1.0:
         raise ValueError("OPENETA_FORMAT_PENALTY must be in [0, 1]")
@@ -292,6 +330,9 @@ def _completion_loss_mask(token_ids: list[int]) -> list[int]:
     action.  Formatting remains an independent host-computed reward penalty.
     """
 
+    # 中文说明：loss mask 全置 1——response_token_ids 里本来就只有 assistant
+    # 生成的 token（不含用户观测与模板前缀），因此包括 </think> 前的推理段
+    # 在内的每个生成 token 都要参与 GRPO 策略损失；格式问题另由 reward 罚分处理。
     return [1] * len(token_ids)
 
 
@@ -341,6 +382,11 @@ _install_bf16_logit_forward_patch()
 
 
 def _bob_reward(steps: list[dict[str, Any]]) -> float:
+    # 中文说明：Bob（复现方）的 episode 级 reward，由宿主侧可信信号合成：
+    #   成功 +1.0（任一回合达成 goal）；曾抓起方块 +0.15（部分完成的塑形信号）；
+    #   环境稠密奖励截断到 [0, 0.2]；goal_score 进展 ×0.30（失败 rollout 也有梯度信号，
+    #   且 goal_score 由宿主的 PositionGoalChecker 计算，模型无法自我虚报成功）；
+    #   再按非法动作比例与格式违规分别扣分，最终裁剪到 [-1, 1]。
     if not steps:
         return -1.0
     success = any(bool(step["goal_success"]) for step in steps)
@@ -370,6 +416,10 @@ def _alice_feasibility_reward(
 ) -> tuple[float, dict[str, float | bool]]:
     """Dense pre-validity reward; it never turns an invalid task into a task."""
 
+    # 中文说明：Alice 出题"无效"时的稠密塑形 reward（最高只能到 0，永远不会
+    # 把无效题目变成有效题目）：从 -1 起步，按合法动作比例、接近方块进度、
+    # 是否抓起过、方块位移进度、回放一致性逐项加分，引导 Alice 学会产出
+    # "真实改变方块位置且可复现"的候选题目。
     if not state.steps:
         return -1.0, {
             "valid_action_fraction": 0.0,
@@ -418,10 +468,15 @@ def _alice_feasibility_reward(
 def _boundary_score(success_rate: float, target_success_rate: float) -> float:
     """Score tasks highest near Bob's configured competence boundary."""
 
+    # 中文说明：Alice 的出题质量分——冻结 Bob 的复现成功率越接近目标值
+    # （OPENETA_TARGET_SUCCESS_RATE，默认 0.45，即"难度卡在 Bob 能力边界上"）
+    # 得分越高；太简单（成功率≈1）或太难（成功率≈0）的题目都得低分。
     return boundary_score(success_rate, target_success_rate)
 
 
 def _find_rollout_info(value: Any) -> dict[str, Any] | None:
+    # 中文说明：在任意嵌套结构中递归查找带 openeta.embodied_rollout.v1 标记的
+    # rollout 记录；列表从尾部倒序查找，优先取最新（最终）一条回执。
     if isinstance(value, dict):
         if value.get("schema_version") == "openeta.embodied_rollout.v1":
             return value
@@ -437,6 +492,9 @@ def _find_rollout_info(value: Any) -> dict[str, Any] | None:
     return None
 
 
+# 中文说明：单条 episode 的全部宿主侧状态。每个 rollout 请求（按 request_id 索引）
+# 对应一个实例，持有仿真环境句柄、初始快照、目标谓词、逐轮 step 记录以及
+# Bob 评估相关配置；Alice 与 Bob 两个角色共用同一结构，由 role 字段区分语义。
 @dataclass(slots=True)
 class _EpisodeState:
     request_id: str
@@ -466,10 +524,66 @@ class _EpisodeState:
     steps: list[dict[str, Any]] = field(default_factory=list)
     image_hashes: list[str] = field(default_factory=list)
     pending_prompt: str | None = None
+    generated_tokens_total: int = 0
+    turn_token_counts: list[int] = field(default_factory=list)
+    last_allowed_tokens: int = 0
+    budget_termination_reason: str | None = None
+    budget: RolloutBudget | None = None
     done: bool = False
     final_info: dict[str, Any] = field(default_factory=dict)
 
 
+def _align_rollout_output(scheduler: Any, item: RolloutOutput) -> RolloutOutput:
+    """Idempotently align final-turn IDs, masks and sampled log probabilities."""
+
+    assistant_turns = sum(
+        message.get("role") == "assistant" for message in (item.messages or [])
+    )
+    if len(item.response_token_ids) < assistant_turns:
+        choice = item.response.choices[0]
+        final_ids = list(choice.token_ids or [])
+        item.response_token_ids.append(final_ids)
+        item.response_loss_mask.append([1] * len(final_ids))
+        final_logprobs = scheduler._extract_logprobs_from_choice(choice)
+        if final_logprobs:
+            item.rollout_logprobs.append(final_logprobs)
+    if len(item.response_token_ids) > assistant_turns:
+        raise RuntimeError("rollout contains more token turns than assistant messages")
+    while len(item.response_loss_mask) < len(item.response_token_ids):
+        item.response_loss_mask.append([])
+    assistant_messages = [
+        str(message.get("content") or "")
+        for message in (item.messages or [])
+        if message.get("role") == "assistant"
+    ]
+    for index, token_ids in enumerate(item.response_token_ids):
+        if index >= len(assistant_messages):
+            item.response_loss_mask[index] = [0] * len(token_ids)
+            if index < len(item.rollout_logprobs):
+                item.rollout_logprobs[index] = []
+            continue
+        item.response_loss_mask[index] = _completion_loss_mask(token_ids)
+        if index < len(item.rollout_logprobs):
+            logprobs = item.rollout_logprobs[index]
+            if len(logprobs) == len(token_ids):
+                item.rollout_logprobs[index] = [
+                    value
+                    for value, include in zip(logprobs, item.response_loss_mask[index])
+                    if include
+                ]
+    if item.rollout_logprobs:
+        trained_tokens = sum(sum(mask) for mask in item.response_loss_mask)
+        logprob_tokens = sum(len(values) for values in item.rollout_logprobs)
+        if trained_tokens != logprob_tokens:
+            item.rollout_logprobs = []
+    return item
+
+
+# 中文说明：Alice/Bob 共用的 multi-turn scheduler 基类。它架在 ms-swift 的
+# MultiTurnScheduler 之上，把"模型每轮输出一个动作"接到真实 ManiSkill 仿真上：
+# on_trajectory_start 建环境并恢复快照，on_turn_end 执行动作并判定回合结束，
+# step 把新观测（图像+文本 prompt）喂回模型，episode 结束时 _finalize 算 reward。
+# 子类仅以 role 类属性区分 alice / bob。
 class _EmbodiedScheduler(MultiTurnScheduler):
     role = ""
 
@@ -477,13 +591,28 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         super().__init__(*args, **kwargs)
         self._episodes: dict[str, _EpisodeState] = {}
         self._finished: set[str] = set()
+        self._active_request_configs: dict[str, RequestConfig] = {}
         self._checker = PositionGoalChecker()
+        # 中文说明：运行模式开关全部来自环境变量——是否启用思考模板、是否走
+        # staged colocate 三阶段调度、是否把 ManiSkill 放到独立 spawn 子进程
+        # （进程隔离可避免 SAPIEN 的 CUDA/Vulkan 上下文与 vLLM sleep 模式的
+        # CuMem 分配器在同一进程内互相干扰）。
         self._thinking_enabled = _env_bool("OPENETA_ENABLE_THINKING", False)
         self._staged_colocate = _env_bool("OPENETA_STAGED_COLOCATE", False)
         self._isolate_maniskill = _env_bool("OPENETA_MANISKILL_PROCESS_ISOLATION", False)
         self._thinking_max_tokens = int(os.environ.get("OPENETA_THINKING_MAX_TOKENS", "1024"))
         if self._thinking_max_tokens < 16:
             raise ValueError("OPENETA_THINKING_MAX_TOKENS must be at least 16")
+        self._trajectory_max_tokens = int(
+            os.environ.get("OPENETA_TRAJECTORY_MAX_TOKENS", "24576")
+        )
+        self._context_max_tokens = int(
+            os.environ.get("OPENETA_CONTEXT_MAX_TOKENS", "32768")
+        )
+        if self._trajectory_max_tokens < 1:
+            raise ValueError("OPENETA_TRAJECTORY_MAX_TOKENS must be positive")
+        if self._context_max_tokens < 1:
+            raise ValueError("OPENETA_CONTEXT_MAX_TOKENS must be positive")
         self._artifact_root = Path(
             os.environ.get("OPENETA_SWIFT_ARTIFACT_ROOT", str(REPO_ROOT / "runs/swift_rollouts"))
         ).resolve()
@@ -496,56 +625,51 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         **kwargs: Any,
     ) -> RolloutOutput | list[RolloutOutput]:
         bounded = self.prepare_request_config(request_config)
-        output = await super().run(infer_request, bounded, **kwargs)
+        request_id = _request_id(infer_request)
+        self._active_request_configs[request_id] = bounded
+        try:
+            output = await super().run(infer_request, bounded, **kwargs)
+        finally:
+            self._active_request_configs.pop(request_id, None)
         outputs = output if isinstance(output, list) else [output]
         for item in outputs:
             # ms-swift 4.4.2's base scheduler omits the final turn IDs when a
             # non-continuation multi-turn rollout already has earlier IDs.
             # Repair that locally so every assistant action participates in
             # the policy loss and rollout-importance correction.
-            assistant_turns = sum(
-                message.get("role") == "assistant" for message in (item.messages or [])
-            )
-            if len(item.response_token_ids) < assistant_turns:
-                choice = item.response.choices[0]
-                final_ids = list(choice.token_ids or [])
-                item.response_token_ids.append(final_ids)
-                item.response_loss_mask.append([1] * len(final_ids))
-                final_logprobs = self._extract_logprobs_from_choice(choice)
-                if final_logprobs:
-                    item.rollout_logprobs.append(final_logprobs)
-            assistant_messages = [
-                str(message.get("content") or "")
-                for message in (item.messages or [])
-                if message.get("role") == "assistant"
-            ]
-            for index, token_ids in enumerate(item.response_token_ids):
-                if index >= len(assistant_messages):
-                    item.response_loss_mask[index] = [0] * len(token_ids)
-                    if index < len(item.rollout_logprobs):
-                        item.rollout_logprobs[index] = []
-                    continue
-                item.response_loss_mask[index] = _completion_loss_mask(token_ids)
-                if index < len(item.rollout_logprobs):
-                    logprobs = item.rollout_logprobs[index]
-                    if len(logprobs) == len(token_ids):
-                        item.rollout_logprobs[index] = [
-                            value
-                            for value, include in zip(logprobs, item.response_loss_mask[index])
-                            if include
-                        ]
-            if item.rollout_logprobs:
-                trained_tokens = sum(sum(mask) for mask in item.response_loss_mask)
-                logprob_tokens = sum(len(values) for values in item.rollout_logprobs)
-                if trained_tokens != logprob_tokens:
-                    item.rollout_logprobs = []
+            # 中文说明：此处修复上游 ms-swift 4.4.2 的一个遗漏——多轮 rollout 的
+            # 最后一轮 token ids 可能没写入 response_token_ids，导致该轮动作
+            # 不参与策略损失与 rollout importance 修正；本地补齐 token ids、
+            # loss mask 和对应的 rollout logprobs。
+            _align_rollout_output(self, item)
         return output
+
+    def remaining_generation_tokens(self, infer_request: RolloutInferRequest) -> int:
+        """Return the request-local cumulative generation budget."""
+
+        state = self._episodes.get(_request_id(infer_request))
+        if state is None or state.budget is None:
+            return self._trajectory_max_tokens
+        return state.budget.remaining_generation_tokens
+
+    @property
+    def per_turn_token_limit(self) -> int:
+        return self._thinking_max_tokens if self._thinking_enabled else 12
+
+    def note_generation_allowance(
+        self, infer_request: RolloutInferRequest, allowed_tokens: int
+    ) -> None:
+        state = self._episodes.get(_request_id(infer_request))
+        if state is not None:
+            state.last_allowed_tokens = int(allowed_tokens)
 
     def prepare_request_config(self, request_config: RequestConfig) -> RequestConfig:
         """Apply identical per-turn bounds in server and colocate paths."""
 
         # Copy per request: mutating a trainer-shared RequestConfig would create
         # cross-request races under async rollout.
+        # 中文说明：RequestConfig 在 trainer 内是跨请求共享的，必须 deepcopy 后再改，
+        # 否则异步并发 rollout 之间会互相污染采样参数。
         bounded = deepcopy(request_config)
         if self._thinking_enabled:
             # Qwen's thinking template must be free to emit its reasoning and
@@ -555,6 +679,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             bounded.max_tokens = self._thinking_max_tokens
             bounded.structured_outputs_regex = None
         else:
+            # 中文说明：非思考模式下把每轮生成上限压到 12 token，并用 ACTION_REGEX
+            # 结构化输出约束，使模型只能吐出白名单内的单个动作码。
             bounded.max_tokens = min(int(bounded.max_tokens or 12), 12)
             bounded.structured_outputs_regex = ACTION_REGEX
         bounded.return_details = True
@@ -568,6 +694,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             self._finished.discard(request_id)
             data = dict(getattr(infer_request, "data_dict", None) or {})
             config = dict(data.get("env_request") or {})
+            # 中文说明：环境配置必须随数据集经 env_request 传入（需要
+            # --vllm_server_pass_dataset true），否则无法确定要恢复哪份快照。
             if not config:
                 raise ValueError("env_request is required; enable --vllm_server_pass_dataset true")
             configured_role = str(data.get("role") or config.get("role") or self.role).lower()
@@ -578,6 +706,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 raise TypeError("env_request.snapshot must contain the full SnapshotRef mapping")
             snapshot = _snapshot_from_mapping(snapshot_payload)
             env_id = str(config.get("env_id") or snapshot.metadata.get("env_id") or "PickCube-v1")
+            # 中文说明：按 OPENETA_MANISKILL_PROCESS_ISOLATION 选择适配器——
+            # 隔离模式把仿真放到独立 spawn 子进程跑，非隔离模式则与 vLLM 同进程。
             adapter_cls = (
                 IsolatedManiSkillSimulatorAdapter
                 if self._isolate_maniskill
@@ -592,6 +722,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 snapshot_dir=self._artifact_root / "snapshots",
             )
             try:
+                # 中文说明：先 reset 再 restore_snapshot，把环境精确恢复到数据集
+                # 指定的初始状态（含随机种子），保证 Alice/Bob/评估 Bob 看到的
+                # 起点完全一致、可复现。
                 env.reset(seed=snapshot.seed if snapshot.seed is not None else config.get("seed"))
                 env.restore_snapshot(snapshot)
                 initial_state = env.task_state()
@@ -600,6 +733,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                     # Alice creates the goal.  Hide the original PickCube marker
                     # so it cannot silently turn proposal generation into the
                     # stock environment task.
+                    # 中文说明：Alice 是"出题方"，不需要预设目标；把原生 PickCube 的
+                    # 绿色 goal marker 藏到远处，防止她把原生任务当成自己出的题。
                     env.set_goal_position(HIDDEN_ALICE_GOAL)
                     instruction = str(config.get("instruction") or ALICE_TASK)
                     predicate = None
@@ -614,6 +749,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                         }
                     if not isinstance(predicate.get("position"), list):
                         raise ValueError("Bob requires goal_predicate.position")
+                    # 中文说明：Bob 是"复现方"，把绿色 goal marker 摆到 Alice 题目
+                    # 指定的目标位置，让 Bob 看着 marker 与指令去复现方块状态。
                     env.set_goal_position(predicate["position"])
                     instruction = str(config.get("instruction") or BOB_TASK)
                 observation = env.observe()
@@ -677,6 +814,11 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                     or os.environ.get("OPENETA_ALICE_POLICY_VERSION", "unknown")
                 ),
             )
+            state.budget = RolloutBudget(
+                per_turn_limit=self.per_turn_token_limit,
+                trajectory_limit=self._trajectory_max_tokens,
+                context_limit=self._context_max_tokens,
+            )
             if state.role == "alice":
                 if state.bob_evaluations < 1:
                     raise ValueError("bob_evaluations must be positive")
@@ -686,6 +828,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                     raise ValueError("target_success_rate must be in (0, 1)")
             image, image_hash = _image_base64(observation)
             state.image_hashes.append(image_hash)
+            # 中文说明：首帧观测编码为 base64 图像 + 文本 prompt 一起作为第一条
+            # user 消息；图像哈希同时记录下来，供 artifact 追溯与去重。
             prompt = build_embodied_prompt(
                 self.role,
                 observation,
@@ -716,6 +860,32 @@ class _EmbodiedScheduler(MultiTurnScheduler):
 
         raw_completion = _choice_content(response_choice)
         parsed = _parsed_model_action(raw_completion)
+        generated_token_ids = list(getattr(response_choice, "token_ids", None) or [])
+        if not generated_token_ids and self.tokenizer is not None:
+            generated_token_ids = self.tokenizer.encode(
+                raw_completion, add_special_tokens=False
+            )
+        generated_tokens = len(generated_token_ids)
+        allowed_tokens = state.last_allowed_tokens or min(
+            self.per_turn_token_limit,
+            self._trajectory_max_tokens - state.generated_tokens_total,
+        )
+        if generated_tokens > allowed_tokens:
+            raise RuntimeError(
+                f"engine generated {generated_tokens} tokens with allowance {allowed_tokens}"
+            )
+        if state.budget is None:
+            raise RuntimeError("rollout budget was not initialized")
+        state.budget.consume(generated_tokens, allowed_tokens=allowed_tokens)
+        state.generated_tokens_total = state.budget.generated_tokens_total
+        state.turn_token_counts.append(generated_tokens)
+        state.budget_termination_reason = state.budget.termination_reason
+        active_config = self._active_request_configs.get(request_id)
+        if active_config is not None and state.budget.remaining_generation_tokens > 0:
+            active_config.max_tokens = min(
+                self.per_turn_token_limit,
+                state.budget.remaining_generation_tokens,
+            )
         try:
             result = state.env.step(EnvAction(action_type=parsed.action, code=parsed.action))
             task_state = state.env.task_state()
@@ -737,9 +907,15 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 goal_success = evaluation.success
                 goal_score = evaluation.score
                 goal_details = evaluation.details
+            # 中文说明：把本轮的原始输出、解析后的动作、环境奖励、goal 判定、
+            # 方块/夹爪位置等全部记入 step 日志，是后续 reward 计算与 artifact
+            # 落盘的唯一事实来源；goal 判定仅 Bob 角色做（Alice 没有预设目标）。
             state.steps.append({
                 "turn": current_turn,
                 "completion": raw_completion,
+                "allowed_max_tokens": allowed_tokens,
+                "generated_tokens": generated_tokens,
+                "generated_tokens_total": state.generated_tokens_total,
                 "action": parsed.action,
                 "valid_action": parsed.valid,
                 "strict_action_format": _strict_action_format(raw_completion),
@@ -754,6 +930,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 "is_grasped": _plain_bool(task_state.get("is_grasped", False)),
                 "terminated": bool(result.terminated),
                 "truncated": bool(result.truncated),
+                "source_image_width": state.camera_resolution,
+                "source_image_height": state.camera_resolution,
             })
             # ``parse_action`` deliberately maps malformed model output to the
             # inert DONE action so it can never execute an untrusted command.
@@ -761,12 +939,16 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             # end the trajectory.  Treat only a *valid* DONE as terminal;
             # otherwise one token-limit truncation would turn every remaining
             # environment step into a one-turn episode.
+            # 中文说明：parse_action 会把非法/被截断的输出映射成惰性 DONE 以保证
+            # 执行安全，但那并不代表模型真的想结束 episode；因此只有"合法解析出
+            # 的 DONE"才算主动结束，否则一次 token 截断就会让后续每轮都立刻终止。
             done = bool(
                 goal_success
                 or (parsed.valid and parsed.action == "DONE")
                 or result.terminated
                 or result.truncated
                 or current_turn >= state.max_steps
+                or state.budget_termination_reason is not None
             )
             if done:
                 state.done = True
@@ -789,6 +971,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 enable_thinking=state.thinking_enabled,
             )
             if not parsed.valid:
+                # 中文说明：动作非法时在下一轮 prompt 里追加纠错提示，明确告知
+                # 上一轮的输出没有产生任何物理动作，引导模型回到规定格式。
                 state.pending_prompt += (
                     " Your previous response was invalid or truncated and no physical action "
                     "was applied. Keep the next reasoning brief, close </think>, then put exactly "
@@ -801,6 +985,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         # The scheduler is an infrastructure boundary: a simulator exception
         # must close this request and become an explicit receipt instead of
         # crashing every concurrent rollout.
+        # 中文说明：scheduler 是基础设施边界——仿真异常只终止当前这一条请求，
+        # 生成一条带 infrastructure_error 的失败回执，绝不让异常扩散到
+        # 同批并发的其它 rollout。
         except Exception as exc:  # noqa: BLE001
             info = self._failure_info(request_id, f"{type(exc).__name__}: {exc}")
             state.final_info = info
@@ -817,6 +1004,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         state = self._episodes.get(_request_id(infer_request))
         if state is None or state.pending_prompt is None:
             return {"infer_request": infer_request}
+        # 中文说明：把 on_turn_end 准备好的下一轮观测（新图像 + 文本 prompt）
+        # 追加为 user 消息，驱动模型继续下一轮交互；同时回传本轮生成的
+        # token ids 与全 1 loss mask，供训练侧使用。
         infer_request.messages.append({
             "role": "user",
             "content": f"<image>\n{state.pending_prompt}",
@@ -849,10 +1039,19 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             "request_id": state.request_id,
             "snapshot_sha256": state.snapshot.state_sha256,
             "step_count": len(state.steps),
+            "generated_tokens_total": state.generated_tokens_total,
+            "turn_token_counts": list(state.turn_token_counts),
+            "trajectory_token_limit": self._trajectory_max_tokens,
+            "per_turn_token_limit": self.per_turn_token_limit,
+            "camera_resolution": state.camera_resolution,
+            "budget_termination_reason": state.budget_termination_reason,
             "done": False,
         }
 
     async def _finalize(self, state: _EpisodeState) -> dict[str, Any]:
+        # 中文说明：episode 结束时的汇总入口。Bob 直接用宿主侧信号算最终 reward；
+        # Alice 则先编译/校验她出的题目，无效题给塑形 reward，有效题还需要
+        # 冻结 Bob 的复现评估结果才能定分。
         if state.role == "bob":
             success = any(bool(step["goal_success"]) for step in state.steps)
             strict_format_fraction, format_penalty = _format_adherence(state.steps)
@@ -877,6 +1076,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         proposal = self._finalize_alice_proposal(state)
         if not proposal.compiled_valid:
             return proposal.alice_rollout_info
+        # 中文说明：staged colocate 模式下不在这里调用 Bob，而是把可序列化的
+        # proposal 随 rollout_info 一并传出，由编排层在同一 vLLM engine 内
+        # 切到冻结 Bob LoRA 完成评估后再补算 Alice 的最终 reward。
         if self._staged_colocate:
             return {
                 **proposal.alice_rollout_info,
@@ -886,6 +1088,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         evaluator_error: str | None = None
         receipts: list[BobEvalReceipt] = []
         try:
+            # 中文说明：server 模式下，在这里同步嵌套调用外部"冻结 Bob"评估服务，
+            # 对 Alice 的题目做 K 次独立复现，收集回执后折算 Alice 最终 reward。
             receipts = await self._evaluate_alice_task_with_bob(state, proposal)
         except Exception as exc:  # noqa: BLE001
             evaluator_error = f"{type(exc).__name__}: {exc}"
@@ -902,6 +1106,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         across the Alice/Bob phase boundary in staged-colocate mode.
         """
 
+        # 中文说明：先把 Alice 的轨迹编译成候选题目（含回放一致性校验），
+        # 再按题目是否有效分流：无效题走稠密塑形 reward 并叠加格式罚分；
+        # 有效题此阶段 reward 暂记 0、标记 reward_pending，等待冻结 Bob 评估。
         compiled, final_state, replay_equal = self._compile_alice(state)
         repeated = compiled.goal_cell in state.seen_goal_cells if compiled.goal_cell else False
         feasibility_metrics: dict[str, float | bool] | None = None
@@ -978,6 +1185,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
     ) -> dict[str, Any]:
         """Pure receipt validation/reward path shared by server and staged modes."""
 
+        # 中文说明：纯函数式的最终定分路径（server 与 staged 两种模式共用）——
+        # 汇总 K 份 Bob 回执算出复现成功率，再按目标成功率折算 Alice 最终 reward。
         return finalize_alice_reward(
             proposal,
             receipts,
@@ -996,6 +1205,10 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 "OPENETA_BOB_EVALUATOR_URL (or env_request.bob_evaluator_url) is required "
                 "for valid Alice proposals"
             )
+        # 中文说明：Bob 嵌套评估——把 Alice 的快照与目标谓词原样转发给独立的
+        # 冻结 Bob server，让它从同一初始状态出发、用不同随机种子独立复现 K 次
+        # （OPENETA_BOB_EVALUATIONS）；Alice 完全看不到自己的轨迹被如何复现，
+        # 评估的独立性是 Alice reward 可信的前提。
         base_url = state.bob_evaluator_url.rstrip("/")
         endpoint = base_url if base_url.endswith("/infer") else f"{base_url}/infer"
         endpoint += "/"
@@ -1050,6 +1263,10 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 f"outputs for {state.bob_evaluations} requests"
             )
         receipts: list[BobEvalReceipt] = []
+        # 中文说明：对每条 Bob 回执做严格的防伪造校验——必须带有可信的 bob 角色
+        # rollout_info、恢复快照哈希一致、目标谓词逐字段一致（位置距离 < 1e-9、
+        # 容差一致）、且无基础设施错误；任何一项不符都直接判本次评估失败，
+        # 防止评估方用不同的初始状态或不同的题目"替考"。
         for bob_request, output in zip(bob_requests, outputs):
             info = _find_rollout_info(output.get("rollout_infos") if isinstance(output, dict) else output)
             if not info or info.get("role") != "bob":
@@ -1090,6 +1307,11 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         self,
         state: _EpisodeState,
     ) -> tuple[CompiledTask, dict[str, Any], bool]:
+        # 中文说明：编译 Alice 题目的核心校验——先记录轨迹产生的终态，然后把
+        # 环境恢复到初始快照、逐步回放整条动作序列得到"回放终态"。只有两者
+        # 方块位置一致（误差 ≤ replay_tolerance）才说明仿真确定、题目可复现；
+        # 之后由 compile_cube_position_task 检查位移量是否达到最小出题门槛，
+        # 并额外排除"全程没有真实操作"的无效轨迹。
         generated_final = state.env.task_state()
         state.env.restore_snapshot(state.snapshot)
         state.env.set_goal_position(HIDDEN_ALICE_GOAL)
@@ -1121,6 +1343,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
     def _termination_reason(state: _EpisodeState, *, success: bool) -> str:
         if success:
             return "goal_success" if state.role == "bob" else "valid_proposal"
+        if state.budget_termination_reason:
+            return state.budget_termination_reason
         if not state.steps:
             return "empty_trajectory"
         last = state.steps[-1]
@@ -1162,11 +1386,17 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             "image_hashes": state.image_hashes,
             "final_info": state.final_info,
         }
+        # 中文说明：artifact 落盘到 OPENETA_SWIFT_ARTIFACT_ROOT/<role>/<id>.json；
+        # 采用"先写临时文件再原子 rename"的方式，避免进程中断留下半个 JSON
+        # 被下游误读。
         temporary = path.with_suffix(".json.tmp")
         temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         temporary.replace(path)
 
     async def _close(self, request_id: str, *, mark_finished: bool = False) -> None:
+        # 中文说明：释放 episode 资源——关闭仿真环境（隔离模式下同时终止 spawn
+        # 子进程），关闭异常用 suppress 吞掉以避免影响其它请求；mark_finished
+        # 用于让 check_finished 识别该请求已彻底结束。
         state = self._episodes.pop(request_id, None)
         if state is not None:
             with suppress(Exception):
@@ -1183,6 +1413,10 @@ class EmbodiedAliceScheduler(_EmbodiedScheduler):
     role = "alice"
 
 
+# 中文说明：GRPO 训练侧的 reward 基类。它不自己打分，而是从 scheduler 写入的
+# rollout_infos 里递归找出可信的 rollout 记录（schema 标记为
+# openeta.embodied_rollout.v1），校验角色匹配后取其 reward 字段；
+# 找不到可信记录或角色不符的一律给 0 分，防止模型输出伪造 reward。
 class _TrustedRolloutReward(ORM):
     expected_role = ""
 
@@ -1209,6 +1443,9 @@ class EmbodiedAliceReward(_TrustedRolloutReward):
     expected_role = "alice"
 
 
+# 中文说明：注册入口——ms-swift 通过 --multi_turn_scheduler 与 --reward_funcs
+# 按下面的名字查表实例化组件。embodied_alice_proposal_reward 是兼容旧配置的
+# 别名，与 embodied_alice_reward 指向同一个类。
 multi_turns["embodied_bob_scheduler"] = EmbodiedBobScheduler
 multi_turns["embodied_alice_scheduler"] = EmbodiedAliceScheduler
 orms["embodied_bob_reward"] = EmbodiedBobReward

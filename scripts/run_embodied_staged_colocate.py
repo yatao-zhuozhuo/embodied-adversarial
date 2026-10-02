@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Process entry that installs OpenETA's staged trainer before Swift starts."""
+"""Backward-compatible Alice wrapper for the bounded colocate entry."""
 
 from __future__ import annotations
 
@@ -12,21 +12,10 @@ def main() -> None:
     }:
         raise RuntimeError("set OPENETA_STAGED_COLOCATE=true for this entry point")
 
-    # In TP=1 colocate each DDP worker must expose only its assigned physical
-    # GPU to vLLM and ManiSkill.  Do this before importing either subsystem.
-    from swift.cli.utils import try_use_single_device_mode
+    os.environ.setdefault("OPENETA_TRAIN_ROLE", "alice")
+    from scripts.run_embodied_bounded_colocate import main as bounded_main
 
-    try_use_single_device_mode()
-
-    # Importing the plugin registers the two schedulers and trusted reward
-    # functions.  TrainerFactory is changed only in this process and only when
-    # the staged feature flag above is present.
-    import plugins.embodied_swift_grpo  # noqa: F401
-    from agent.training.embodied_staged_colocate import register_staged_trainer
-    from swift.pipelines import rlhf_main
-
-    register_staged_trainer()
-    rlhf_main()
+    bounded_main()
 
 
 if __name__ == "__main__":

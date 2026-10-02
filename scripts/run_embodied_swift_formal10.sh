@@ -55,7 +55,7 @@ fi
 # 环境变量会覆盖这里的默认值，所以判断某次已运行实验时还应查看 args.json
 # 或进程环境，而不能只看本文件的默认值。
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SWIFT_VENV="${SWIFT_VENV:-/opt/openeta-swift}"
+SWIFT_VENV="${SWIFT_VENV:-${REPO_ROOT}/../.venv_selfplay_embodied}"
 PYTHON="${SWIFT_VENV}/bin/python"
 # 所有数据集、轨迹、checkpoint 和 summary 都写到 RUN_ROOT。
 RUN_ROOT="${RUN_ROOT:-${REPO_ROOT}/runs/swift_formal10}"
@@ -161,6 +161,7 @@ OPENETA_ENABLE_THINKING="${OPENETA_ENABLE_THINKING:-true}"
 # thinking 开启时，scheduler 会用这个值覆盖 rollout CLI 的短默认上限；
 # 它是“每个环境 turn”的最大生成 token 数。
 OPENETA_THINKING_MAX_TOKENS="${OPENETA_THINKING_MAX_TOKENS:-1024}"
+OPENETA_HISTORY_MODE="${OPENETA_HISTORY_MODE:-full}"
 # 输出不是严格的 `</think>\n合法动作` 时单独扣除的最大格式罚分。
 OPENETA_FORMAT_PENALTY="${OPENETA_FORMAT_PENALTY:-0.10}"
 # Avoid Accelerate materializing a second, fp32 copy of sequence-sized logits
@@ -191,6 +192,9 @@ VLLM_SERVER_TIMEOUT="${VLLM_SERVER_TIMEOUT:-4200}"
 MAX_COMPLETION_LENGTH="${MAX_COMPLETION_LENGTH:-24576}"
 MAX_LENGTH="${MAX_LENGTH:-32768}"
 VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-32768}"
+OPENETA_TRAJECTORY_MAX_TOKENS="${OPENETA_TRAJECTORY_MAX_TOKENS:-${MAX_COMPLETION_LENGTH}}"
+OPENETA_CONTEXT_MAX_TOKENS="${OPENETA_CONTEXT_MAX_TOKENS:-${MAX_LENGTH}}"
+export OPENETA_HISTORY_MODE OPENETA_TRAJECTORY_MAX_TOKENS OPENETA_CONTEXT_MAX_TOKENS
 # 每个 vLLM engine 同时处理的序列数。设为 1 可降低长序列峰值显存。
 VLLM_MAX_NUM_SEQS="${VLLM_MAX_NUM_SEQS:-1}"
 VLLM_GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.28}"
@@ -212,7 +216,10 @@ fi
 # 新生成的 checkpoint。
 INITIAL_ALICE_ADAPTER="${INITIAL_ALICE_ADAPTER:-${REPO_ROOT}/runs/alice_dagger_curriculum/round-0007/alice_adapter}"
 INITIAL_BOB_ADAPTER="${INITIAL_BOB_ADAPTER:-${REPO_ROOT}/runs/embodied_selfplay_grpo16/round-0001/bob_adapter}"
+OPENETA_BASE_MODEL_POLICY="${OPENETA_BASE_MODEL_POLICY:-__base_model__}"
 # 当本轮 Alice 没有足够有效题目时，Bob 数据集会回退到这个历史 run。
+
+# ***** 这里需要修改 ****************************
 BOOTSTRAP_ALICE_RUN="${BOOTSTRAP_ALICE_RUN:-${REPO_ROOT}/runs/embodied_selfplay_grpo16}"
 DATASET_DIR="${RUN_ROOT}/datasets"
 LOG_DIR="${RUN_ROOT}/logs"
@@ -457,6 +464,16 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
   if [[ -n "${alice_checkpoint}" ]]; then
     echo "${round_name} resuming Alice from ${alice_checkpoint}"
   fi
+  ALICE_TRAIN_ADAPTER="${CURRENT_ALICE_ADAPTER}"
+  FROZEN_BOB_ADAPTER="${CURRENT_BOB_ADAPTER}"
+  FROZEN_BOB_BASE=false
+  if [[ "${ALICE_TRAIN_ADAPTER}" == "${OPENETA_BASE_MODEL_POLICY}" ]]; then
+    ALICE_TRAIN_ADAPTER=""
+  fi
+  if [[ "${FROZEN_BOB_ADAPTER}" == "${OPENETA_BASE_MODEL_POLICY}" ]]; then
+    FROZEN_BOB_ADAPTER=""
+    FROZEN_BOB_BASE=true
+  fi
   (
     cd "${REPO_ROOT}"
     ROLE=alice TRAIN_GPU="${TRAIN_GPU}" CUDA_VISIBLE_DEVICES="${TRAIN_GPU}" \
@@ -466,8 +483,9 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
       OPENETA_SWIFT_ARTIFACT_ROOT="${round_dir}/alice_rollout/rollouts" \
       OPENETA_STAGED_ARTIFACT_ROOT="${round_dir}" OPENETA_ROUND_ID="${round_name}" \
       OPENETA_ALICE_POLICY_VERSION="${CURRENT_ALICE_ADAPTER}" \
-      OPENETA_FROZEN_BOB_ADAPTER="${CURRENT_BOB_ADAPTER}" \
-      TRAIN_ADAPTER_PATH="${CURRENT_ALICE_ADAPTER}" \
+      OPENETA_FROZEN_BOB_ADAPTER="${FROZEN_BOB_ADAPTER}" \
+      OPENETA_FROZEN_BOB_BASE="${FROZEN_BOB_BASE}" \
+      TRAIN_ADAPTER_PATH="${ALICE_TRAIN_ADAPTER}" \
       RESUME_FROM_CHECKPOINT="${alice_checkpoint}" \
       OPENETA_BOB_EVALUATOR_URL="http://127.0.0.1:${BOB_SERVER_PORT:-${BOB_PORT}}" \
       OPENETA_BOB_EVALUATIONS="${OPENETA_BOB_EVALUATIONS}" OPENETA_BOB_MAX_STEPS="${MAX_TURNS}" \
@@ -563,6 +581,10 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
   if [[ -n "${bob_checkpoint}" ]]; then
     echo "${round_name} resuming Bob from ${bob_checkpoint}"
   fi
+  BOB_TRAIN_ADAPTER="${CURRENT_BOB_ADAPTER}"
+  if [[ "${BOB_TRAIN_ADAPTER}" == "${OPENETA_BASE_MODEL_POLICY}" ]]; then
+    BOB_TRAIN_ADAPTER=""
+  fi
   (
     cd "${REPO_ROOT}"
     ROLE=bob TRAIN_GPU="${TRAIN_GPU}" CUDA_VISIBLE_DEVICES="${TRAIN_GPU}" \
@@ -570,7 +592,7 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
       ROLLOUT_PORT="${BOB_SERVER_PORT:-${BOB_PORT}}" MAX_TURNS="${MAX_TURNS}" \
       DATASET_PATH="${bob_dataset}" OUTPUT_DIR="${round_dir}/bob_train" \
       OPENETA_SWIFT_ARTIFACT_ROOT="${round_dir}/bob_rollout/rollouts" \
-      TRAIN_ADAPTER_PATH="${CURRENT_BOB_ADAPTER}" \
+      TRAIN_ADAPTER_PATH="${BOB_TRAIN_ADAPTER}" \
       RESUME_FROM_CHECKPOINT="${bob_checkpoint}" \
       OPENETA_ENABLE_THINKING="${OPENETA_ENABLE_THINKING}" \
       OPENETA_THINKING_MAX_TOKENS="${OPENETA_THINKING_MAX_TOKENS}" \
