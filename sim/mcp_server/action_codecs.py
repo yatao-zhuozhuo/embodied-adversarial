@@ -201,7 +201,12 @@ def cartesian_scales(meta: dict[str, Any], backend: str) -> tuple[float, float]:
     return {
         "metaworld": (0.005, 0.05),
         "libero": (0.05, 0.5),
-        "maniskill": (0.003, 0.05),
+        # ManiSkill's Panda pd_ee_delta_pose controller normalizes translation
+        # and axis-angle commands onto [-0.1, 0.1].  Using the empirically
+        # observed per-physics-step displacement (the old 0.003 m value) as
+        # this codec scale saturated every command and produced a limit cycle
+        # around the goal instead of closed-loop convergence.
+        "maniskill": (0.1, 0.1),
         "robocasa": (0.05, 0.05),
         "dummy": (0.005, 0.05),
     }.get(backend, (0.0, 0.0))
@@ -303,6 +308,11 @@ def make_gripper_action(meta: dict[str, Any], *, open_gripper: bool, backend: st
         action[6] = -1.0 if open_gripper else 1.0
         if dim == 12:
             action[11] = -1.0
+    elif backend == "maniskill":
+        # ManiSkill Panda's normalized PD gripper controller maps +1 to the
+        # upper joint limit (0.04 m, open) and -1 to 0.0 m (closed).  This is
+        # the opposite of the robosuite/LIBERO convention used below.
+        action[-1] = 1.0 if open_gripper else -1.0
     else:
         action[-1] = -1.0 if open_gripper else 1.0
     return action

@@ -379,13 +379,22 @@ class OpenAICompatiblePlannerBackendConfig:
             max_attempts=config.max_attempts,
             retry_backoff_s=config.retry_backoff_s,
             context_window_tokens=config.context_window_tokens,
-            enable_thinking=_metadata_optional_bool(metadata, "enable_thinking"),
+            max_tokens=(config.max_tokens or REASONING_SUBAGENT_MAX_OUTPUT_TOKENS),
+            enable_thinking=(
+                config.enable_thinking
+                if config.enable_thinking is not None
+                else _metadata_optional_bool(metadata, "enable_thinking")
+            ),
             collapse_leading_system_messages=_metadata_bool(
                 metadata,
                 "collapse_leading_system_messages",
                 default=True,
             ),
-            enable_vision=_metadata_bool(metadata, "enable_vision", default=True),
+            enable_vision=(
+                config.enable_vision
+                if config.enable_vision is not None
+                else _metadata_bool(metadata, "enable_vision", default=True)
+            ),
             max_vision_images=_metadata_positive_int(
                 metadata,
                 "max_vision_images",

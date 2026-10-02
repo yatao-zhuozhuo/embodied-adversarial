@@ -522,6 +522,17 @@ def test_behavior_worker_resolves_nested_conda_runtime(tmp_path, monkeypatch):
     assert worker_mgr._venv_python("behavior") == str(python)
 
 
+def test_worker_python_can_be_overridden_per_bench(tmp_path, monkeypatch):
+    from sim.mcp_server import worker_mgr
+
+    python = tmp_path / "python"
+    python.write_text("#!/bin/sh\n")
+    python.chmod(0o755)
+    monkeypatch.setenv("OPENETA_MANISKILL_PYTHON", str(python))
+
+    assert worker_mgr._venv_python("maniskill") == str(python)
+
+
 def test_behavior_main_thread_executor_runs_on_owner_thread():
     import threading
 

@@ -2958,6 +2958,8 @@ def test_provider_config_roundtrips_context_window_tokens_and_retry_policy(
             max_attempts=4,
             retry_backoff_s=0.25,
             context_window_tokens=128000,
+            max_tokens=4096,
+            enable_thinking=False,
         ),
         env_path,
     )
@@ -2970,6 +2972,8 @@ def test_provider_config_roundtrips_context_window_tokens_and_retry_policy(
     assert loaded.context_window_tokens == 128000
     assert loaded.max_attempts == 4
     assert loaded.retry_backoff_s == 0.25
+    assert loaded.max_tokens == 4096
+    assert loaded.enable_thinking is False
     assert loaded.redacted()["context_window_tokens"] == 128000
 
 

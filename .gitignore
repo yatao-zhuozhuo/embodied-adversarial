@@ -52,6 +52,8 @@ SFT_data/accepted/
 SFT_data/exported/
 SFT_data/reports/
 SFT_data/manifests/
+SFT_data/previews/
+SFT_data/viewer/
 
 # Local Claude config
 .claude/

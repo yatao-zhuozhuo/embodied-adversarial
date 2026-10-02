@@ -451,6 +451,7 @@ def classify_episode_result(
     if _episode_has_objective_success(
         episode,
         require_official_reward=official_reward_required,
+        require_explicit_task_success="maniskill" in env_id.lower(),
     ):
         return "success"
     if episode.terminated and episode.metadata.get("stop_reason") == "task_complete":
@@ -468,13 +469,15 @@ def classify_episode_result(
 def _requires_official_reward(*, env_id: str, explicit: object) -> bool:
     if isinstance(explicit, bool):
         return explicit
-    return "libero" in env_id.lower()
+    normalized = env_id.lower()
+    return "libero" in normalized or "maniskill" in normalized
 
 
 def _episode_has_objective_success(
     episode: EpisodeResult,
     *,
     require_official_reward: bool,
+    require_explicit_task_success: bool = False,
 ) -> bool:
     expected_execution_id = str(episode.metadata.get("execution_id") or "")
     for step in episode.steps:
@@ -488,10 +491,20 @@ def _episode_has_objective_success(
         if require_official_reward:
             info = step.step_result.info
             receipt = info.get("environment_receipt") if isinstance(info, dict) else None
+            task_success = bool(
+                isinstance(info, dict)
+                and (
+                    info.get("environment_success") is True
+                    or info.get("task_success") is True
+                )
+            ) or bool(isinstance(receipt, dict) and receipt.get("task_success") is True)
             if (
-                reward_positive
+                (task_success if require_explicit_task_success else reward_positive)
                 and info.get("environment_receipt_trusted") is True
-                and info.get("official_reward") is True
+                and (
+                    task_success
+                    or info.get("official_reward") is True
+                )
                 and isinstance(receipt, dict)
                 and receipt.get("schema_version") == "openeta.environment_receipt.v1"
                 and (

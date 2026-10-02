@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import numpy as np
+
 from sim import bench_worker
 
 
@@ -91,5 +93,32 @@ def test_reset_clears_terminal_result_and_allows_a_new_real_step() -> None:
         assert env.step_calls == 2
         assert second["info"]["step_calls"] == 2
         assert "terminal_result_replayed" not in second["info"]
+    finally:
+        _clear_handle(handle)
+
+
+def test_tensor_like_official_success_remains_typed_in_step_info() -> None:
+    class TensorLike:
+        def detach(self):
+            return self
+
+        def cpu(self):
+            return self
+
+        def numpy(self):
+            return np.asarray([True])
+
+    class TensorInfoEnv(_TerminalEnv):
+        def step(self, _action):
+            self.step_calls += 1
+            return {}, 1.0, True, False, {"success": TensorLike()}
+
+    handle = "terminal-tensor-success-probe"
+    env = TensorInfoEnv()
+    _clear_handle(handle)
+    bench_worker._envs[handle] = env
+    try:
+        result = bench_worker._step_with_image(env, [0.0], handle=handle, render=False)
+        assert result["info"]["success"] == [True]
     finally:
         _clear_handle(handle)

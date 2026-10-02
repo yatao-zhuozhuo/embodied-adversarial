@@ -1031,6 +1031,28 @@ def ik_preview_check(
                     }
                 )
                 result.setdefault("suggestions", []).append("select_collision_free_target")
+            elif (
+                not collision_info.get("available")
+                and str(meta.get("backend") or "") == "maniskill"
+            ):
+                # ManiSkill's native Pinocchio check above is still valid
+                # kinematic evidence.  The optional cuRobo endpoint checker is
+                # not installed in the collection environment, so preserve the
+                # reachable classification while accurately recording that no
+                # collision claim was made.  Execution remains a short,
+                # receipt-bound controller move whose result must be inspected.
+                result["collision"].update(
+                    {
+                        "checked": False,
+                        "detected": False,
+                        "deferred_to_motion_receipt": True,
+                    }
+                )
+                result["message"] = (
+                    f"{result.get('message', '').rstrip()} Endpoint collision "
+                    "checking was unavailable; use only a short receipt-bound "
+                    "move and inspect its execution result."
+                ).strip()
             elif not collision_info.get("available"):
                 result.update(
                     {
@@ -1559,6 +1581,27 @@ def move_to(handle: str, x: float, y: float, z: float, *,
         "terminated": final_terminated,
         "reward": final_reward,
     }
+    # Preserve only the benchmark's explicit terminal/success evidence from
+    # the worker step.  The episode harness deliberately does not infer
+    # ManiSkill success from dense reward or termination, so dropping this
+    # small part of ``info`` would turn a genuine successful episode into a
+    # failed batch outcome.  Keep the projection narrow: controller callers
+    # need the official flags, not arbitrary worker-private diagnostics.
+    final_info = final_result.get("info") if isinstance(final_result, dict) else None
+    if isinstance(final_info, dict):
+        benchmark_info = {
+            key: final_info[key]
+            for key in (
+                "success",
+                "task_success",
+                "environment_success",
+                "checker_success",
+                "benchmark_success",
+            )
+            if key in final_info
+        }
+        if benchmark_info:
+            result["info"] = benchmark_info
     final_position_error = (
         _math.sqrt(
             (x - final_xyz[0]) ** 2

@@ -136,6 +136,17 @@ def test_calibration_registry_matches_libero_panda_and_rejects_unknown_robot() -
         resolve_grasp_calibration_profile(environment_id="openeta/test-v0")
         == selected
     )
+    assert (
+        resolve_grasp_calibration_profile(
+            environment_id="openeta/maniskill_PickCube-v1-v0",
+            fingerprint={
+                "robot_model": "Panda",
+                "gripper_model": "PandaGripper",
+                "grasp_frame": "graspnet",
+            },
+        )
+        == selected
+    )
 
     assert (
         resolve_grasp_calibration_profile(

@@ -2278,15 +2278,30 @@ def _validate_official_reward_completion(
         reward = float(receipt.get("reward")) if isinstance(receipt, dict) else 0.0
     except (TypeError, ValueError):
         reward = 0.0
+    env_id = str(metadata.get("env_id") or "").lower()
+    task_success_required = "maniskill" in env_id
+    environment_receipt = (
+        info.get("environment_receipt") if isinstance(info, dict) else None
+    )
+    task_success = bool(
+        isinstance(info, dict)
+        and (
+            info.get("environment_success") is True
+            or info.get("task_success") is True
+        )
+    ) or bool(
+        isinstance(environment_receipt, dict)
+        and environment_receipt.get("task_success") is True
+    )
     if (
-        reward > 0
+        (task_success if task_success_required else reward > 0)
         and isinstance(info, dict)
         and info.get("environment_receipt_trusted") is True
-        and info.get("official_reward") is True
+        and (task_success or info.get("official_reward") is True)
     ):
         return []
     return [
-        "LIBERO batch completion requires an official positive reward from the same "
+        "Benchmark completion requires trusted objective-success evidence from the same "
         "episode. Continue with settle/retreat/observe instead of declaring task_complete."
     ]
 

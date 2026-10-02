@@ -24,6 +24,14 @@ _CALIBRATION_RULES = (
         "gripper_models": ("pandagripper", "panda"),
         "grasp_frames": ("graspnet",),
     },
+    {
+        "calibration_id": "graspnet-eef-panda-p8",
+        "profile_path": DEFAULT_GRASP_CALIBRATION_PROFILE,
+        "environment_contains": ("maniskill",),
+        "robot_models": ("panda", "franka panda"),
+        "gripper_models": ("pandagripper", "panda"),
+        "grasp_frames": ("graspnet",),
+    },
 )
 
 

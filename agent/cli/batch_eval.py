@@ -172,6 +172,9 @@ def build_mcp_episode_worker_factory(
         )
 
     def factory(spec: ParallelEpisodeSpec, batch_id: str) -> ParallelEpisodeWorker:
+        include_objects = spec.metadata.get("include_objects", False)
+        if not isinstance(include_objects, bool):
+            raise ValueError("metadata.include_objects must be a boolean")
         requested_session_id = str(spec.metadata.get("agent_session_id") or "").strip()
         agent_session_id = requested_session_id or str(uuid4())
         requested_workspace_root = str(spec.metadata.get("workspace_root") or "").strip()
@@ -264,6 +267,7 @@ def build_mcp_episode_worker_factory(
                 seed=spec.seed,
                 timeout_s=max(DEFAULT_SIM_MCP_TIMEOUT_S, provider.timeout_s),
                 image_output_root=artifact_root / "images",
+                include_objects=include_objects,
             ),
             tool_proxy_config=proxy_config,
         )
@@ -381,7 +385,11 @@ def _new_batch_backend(
 ) -> PlannerBackend:
     config = OpenAICompatiblePlannerBackendConfig.from_provider_config(provider)
     if max_tokens is not None:
-        config.max_tokens = max_tokens
+        config.max_tokens = (
+            min(max_tokens, provider.max_tokens)
+            if provider.max_tokens is not None
+            else max_tokens
+        )
     if max_vision_images is not None:
         config.max_vision_images = max(config.max_vision_images, max_vision_images)
     if enable_thinking is not None:

@@ -1,0 +1,146 @@
+{
+  "schema_version": "openeta.maniskill_sft_task_catalog.v1",
+  "dataset_split": "train",
+  "tasks": [
+    {
+      "task_slug": "pick_cube",
+      "env_id": "openeta/maniskill_PickCube-v1-v0",
+      "instruction": "Pick up the cube and move it to the goal region. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "stack_cube",
+      "env_id": "openeta/maniskill_StackCube-v1-v0",
+      "instruction": "Stack the movable cube stably on top of the target cube. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "place_sphere",
+      "env_id": "openeta/maniskill_PlaceSphere-v1-v0",
+      "instruction": "Place the sphere in its target location without leaving it unstable. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "push_cube",
+      "env_id": "openeta/maniskill_PushCube-v1-v0",
+      "instruction": "Push the cube into the goal region using controlled contact. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "pull_cube",
+      "env_id": "openeta/maniskill_PullCube-v1-v0",
+      "instruction": "Pull the cube into its goal region using controlled contact. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "poke_cube",
+      "env_id": "openeta/maniskill_PokeCube-v1-v0",
+      "instruction": "Use the robot to poke the cube so it reaches the required goal state. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "lift_peg_upright",
+      "env_id": "openeta/maniskill_LiftPegUpright-v1-v0",
+      "instruction": "Grasp and lift the peg into the required upright state. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "roll_ball",
+      "env_id": "openeta/maniskill_RollBall-v1-v0",
+      "instruction": "Roll the ball into its goal region with controlled robot contact. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "pick_single_ycb",
+      "env_id": "openeta/maniskill_PickSingleYCB-v1-v0",
+      "instruction": "Pick the designated YCB object and complete the environment's target placement. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "turn_faucet",
+      "env_id": "openeta/maniskill_TurnFaucet-v1-v0",
+      "instruction": "Manipulate the target faucet handle until it reaches the required open angle. Finish only after the ManiSkill success condition is true.",
+      "tier": "A",
+      "quota": 35
+    },
+    {
+      "task_slug": "pull_cube_tool",
+      "env_id": "openeta/maniskill_PullCubeTool-v1-v0",
+      "instruction": "Use the available tool to pull the cube into its goal region. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "pick_clutter_ycb",
+      "env_id": "openeta/maniskill_PickClutterYCB-v1-v0",
+      "instruction": "Identify and pick the designated YCB target from clutter. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "peg_insertion_side",
+      "env_id": "openeta/maniskill_PegInsertionSide-v1-v0",
+      "instruction": "Align the peg with the side hole and insert it to the required depth. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "plug_charger",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "instruction": "Align the charger plug with the receptacle and insert it correctly. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "assembling_kits",
+      "env_id": "openeta/maniskill_AssemblingKits-v1-v0",
+      "instruction": "Place the target piece into the matching kit slot with the correct alignment. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "stack_pyramid",
+      "env_id": "openeta/maniskill_StackPyramid-v1-v0",
+      "instruction": "Arrange and stack the cubes into the required stable pyramid. Finish only after the ManiSkill success condition is true.",
+      "tier": "B",
+      "quota": 20
+    },
+    {
+      "task_slug": "fmb_assembly_1_easy",
+      "env_id": "openeta/maniskill_FMBAssembly1Easy-v1-v0",
+      "instruction": "Complete the FMBAssembly1Easy insertion and alignment task. Finish only after the ManiSkill success condition is true.",
+      "tier": "C",
+      "quota": 8
+    },
+    {
+      "task_slug": "open_cabinet_door",
+      "env_id": "openeta/maniskill_OpenCabinetDoor-v1-v0",
+      "instruction": "Open the designated cabinet door to the required joint position. Finish only after the ManiSkill success condition is true.",
+      "tier": "C",
+      "quota": 8
+    },
+    {
+      "task_slug": "open_cabinet_drawer",
+      "env_id": "openeta/maniskill_OpenCabinetDrawer-v1-v0",
+      "instruction": "Open the designated cabinet drawer to the required joint position. Finish only after the ManiSkill success condition is true.",
+      "tier": "C",
+      "quota": 7
+    },
+    {
+      "task_slug": "push_t",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "instruction": "Use the robot stick to push the T-shaped object into its target pose. Finish only after the ManiSkill success condition is true.",
+      "tier": "C",
+      "quota": 7
+    }
+  ]
+}

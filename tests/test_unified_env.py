@@ -93,6 +93,32 @@ def test_libero_identity_eef_quaternion_uses_unified_xyzw_contract() -> None:
     np.testing.assert_allclose(pose[3:], [0.0, 0.0, 0.0, 1.0])
 
 
+def test_maniskill_ee_pose_uses_tcp_not_robot_base(monkeypatch) -> None:
+    env = object.__new__(UnifiedEnv)
+    env._include_objects = False
+    tcp_pose = SimpleNamespace(
+        p=np.asarray([[0.1, 0.2, 0.3]]),
+        q=np.asarray([[0.5, 0.1, 0.2, 0.3]]),
+    )
+    robot = SimpleNamespace(
+        get_pose=lambda: SimpleNamespace(
+            p=np.asarray([[-0.615, 0.0, 0.0]]),
+            q=np.asarray([[1.0, 0.0, 0.0, 0.0]]),
+        )
+    )
+    inner = SimpleNamespace(
+        agent=SimpleNamespace(tcp=SimpleNamespace(pose=tcp_pose), robot=robot)
+    )
+    monkeypatch.setattr(env, "_unwrap", lambda: inner)
+
+    normalized = env._normalise_maniskill({"agent": {}, "sensor_data": {}})
+
+    np.testing.assert_allclose(
+        normalized["proprio"]["ee_pose"],
+        [0.1, 0.2, 0.3, 0.1, 0.2, 0.3, 0.5],
+    )
+
+
 def test_libero_camera_contract_remains_role_free(monkeypatch) -> None:
     env = object.__new__(UnifiedEnv)
     env._include_objects = False

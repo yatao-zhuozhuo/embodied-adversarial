@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ManiSkill SFT 轨迹查看器</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header id="topbar">
+  <span class="brand">SFT 轨迹查看器</span>
+  <span id="teacher-progress" class="badges"></span>
+  <input id="f-q" type="search" placeholder="搜索 episode / session id">
+  <select id="f-teacher"><option value="">全部教师</option></select>
+  <select id="f-task"><option value="">全部任务</option></select>
+  <select id="f-status">
+    <option value="">全部状态</option>
+    <option value="accepted">已验收</option>
+    <option value="rejected">导出拒绝</option>
+    <option value="other">未验收</option>
+    <option value="failed">失败(拒绝+未验收)</option>
+  </select>
+  <select id="f-preset">
+    <option value="">预设筛选…</option>
+    <option value="long-success">成功但很长 (≥30 turn)</option>
+    <option value="ik-fail">重复 IK 失败</option>
+    <option value="token-limit">token / 资源超限</option>
+    <option value="no-frames">无 turn 数据</option>
+  </select>
+  <button id="btn-reindex" title="重新扫描 SFT_data 增量更新索引">刷新索引</button>
+  <a id="link-overview" href="#/">总览</a>
+</header>
+
+<main id="layout">
+  <aside id="list-pane">
+    <div id="list-meta"></div>
+    <div id="episode-list"></div>
+    <div id="list-pager">
+      <button id="pg-prev">‹ 上一页</button>
+      <span id="pg-info"></span>
+      <button id="pg-next">下一页 ›</button>
+    </div>
+  </aside>
+
+  <section id="center-pane">
+    <div id="overview"></div>
+    <div id="viewer" hidden>
+      <div id="ep-header"></div>
+      <div id="ep-warnings"></div>
+      <div id="cam-tabs"></div>
+      <div id="stage-wrap">
+        <div id="stage">
+          <img id="stage-img" alt="turn frame" draggable="false">
+          <div id="stage-empty" hidden>该 turn 无此相机帧</div>
+        </div>
+        <div id="stage-bar">
+          <span id="side-toggle" class="seg">
+            <button data-side="before">动作前</button><button data-side="after" class="on">动作后</button><button data-side="split">对比</button><button data-side="blink">差分闪烁</button>
+          </span>
+          <span class="hint">滚轮缩放 · 拖拽平移 · 双击复位 · B 切换前/后</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside id="detail-pane" hidden>
+    <section class="card" id="d-decision"><h3>决策与理由</h3><div class="body"></div></section>
+    <section class="card" id="d-tools"><h3>工具参数 / 回执</h3><div class="body"></div></section>
+    <section class="card" id="d-state"><h3>reward / 状态变化</h3><div class="body"></div></section>
+    <section class="card" id="d-sft"><h3>SFT 训练样本</h3><div class="body"></div></section>
+    <section class="card" id="d-audit"><h3>审计</h3><div class="body"></div></section>
+  </aside>
+</main>
+
+<footer id="timeline-bar" hidden>
+  <div id="play-controls">
+    <button id="btn-play" title="Space">▶</button>
+    <button id="btn-prev" title="←">‹</button>
+    <button id="btn-next" title="→">›</button>
+    <button id="btn-prev-key" title="Shift+←">|‹ 事件</button>
+    <button id="btn-next-key" title="Shift+→">事件 ›|</button>
+    <span id="speed-seg" class="seg">
+      <button data-speed="0.5">0.5×</button><button data-speed="1" class="on">1×</button><button data-speed="2">2×</button>
+    </span>
+    <span id="turn-indicator"></span>
+    <span class="hint" id="snapshot-note"></span>
+  </div>
+  <canvas id="timeline"></canvas>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

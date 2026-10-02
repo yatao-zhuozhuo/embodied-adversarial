@@ -180,6 +180,7 @@ class SimulatorMcpEpisodeConfig:
     seed: int = 0
     image_width: int | None = DEFAULT_SIMULATOR_IMAGE_WIDTH
     image_height: int | None = DEFAULT_SIMULATOR_IMAGE_HEIGHT
+    include_objects: bool = False
     session_id: str = ""
     artifact_session_id: str = ""
     handle: str = ""
@@ -268,6 +269,8 @@ class SimulatorMcpEpisodeEnvironment:
             create_args["image_width"] = self.config.image_width
         if self.config.image_height is not None:
             create_args["image_height"] = self.config.image_height
+        if self.config.include_objects:
+            create_args["include_objects"] = True
         if self.config.session_id:
             create_args["session_id"] = self.config.session_id
         self.create_result = self.transport.call_tool(
@@ -330,6 +333,7 @@ class SimulatorMcpEpisodeEnvironment:
                 }
             )
         reward = _latest_action_reward(action, payload)
+        task_success = _latest_action_task_success(action, payload)
         terminated = _latest_action_flag(action, payload, "terminated") or bool(
             remote_termination_reason
         )
@@ -351,6 +355,8 @@ class SimulatorMcpEpisodeEnvironment:
             "truncated": truncated,
             "observation_fresh": True,
         }
+        if task_success is not None:
+            receipt["task_success"] = task_success
         info.update(
             {
                 "environment_receipt_trusted": True,
@@ -358,6 +364,8 @@ class SimulatorMcpEpisodeEnvironment:
                 "environment_receipt": receipt,
             }
         )
+        if task_success is not None:
+            info["environment_success"] = task_success
         return StepResult(
             observation=observation,
             reward=reward,
@@ -3148,6 +3156,21 @@ def _post_motion_evidence_handoff(
 def _ik_preview_receipt(parameters: JsonDict, reachability: JsonDict) -> JsonDict:
     target_pose = parameters.get("target_pose")
     target_pose = dict(target_pose) if isinstance(target_pose, dict) else {}
+    # ``position`` is a documented/accepted pose alias at the tool boundary.
+    # Canonicalize it before persisting the host-owned receipt so downstream
+    # motion-reference validation sees the same executable ``xyz`` shape no
+    # matter which valid spelling the planner used.
+    target_xyz = target_pose.get("xyz")
+    if target_xyz is None:
+        target_xyz = target_pose.get("position")
+    if target_xyz is None:
+        target_xyz = target_pose.get("translation_xyz")
+    if isinstance(target_xyz, (list, tuple)) and len(target_xyz) >= 3:
+        target_pose["xyz"] = [
+            float(target_xyz[0]),
+            float(target_xyz[1]),
+            float(target_xyz[2]),
+        ]
     orientation = {
         key: target_pose.get(key)
         for key in (
@@ -3165,7 +3188,7 @@ def _ik_preview_receipt(parameters: JsonDict, reachability: JsonDict) -> JsonDic
     if preserve_current is None:
         preserve_current = not orientation
     canonical = {
-        "target_xyz": target_pose.get("xyz", target_pose.get("translation_xyz")),
+        "target_xyz": target_pose.get("xyz"),
         "orientation_policy": (
             "preserve_current" if preserve_current is True else "explicit_orientation"
         ),
@@ -3691,6 +3714,9 @@ def _build_environment_receipt(
     for key in ("reward", "terminated", "truncated", "scene_epoch"):
         if key in response:
             receipt[key] = response.get(key)
+    task_success = _response_task_success(response)
+    if task_success is not None:
+        receipt["task_success"] = task_success
     if _response_reports_remote_episode_terminated(response):
         # A worker can discover the horizon boundary only when the next action
         # is attempted.  The explicit remote error is authoritative evidence
@@ -3961,6 +3987,14 @@ def _latest_action_receipt_has_reward(action: EnvAction) -> bool:
     return _latest_trusted_action_environment_receipt(action).get("reward_present") is True
 
 
+def _latest_action_task_success(action: EnvAction, payload: JsonDict) -> bool | None:
+    receipt = _latest_trusted_action_environment_receipt(action)
+    value = receipt.get("task_success")
+    if isinstance(value, bool):
+        return value
+    return _response_task_success(payload)
+
+
 def _latest_trusted_action_environment_receipt(action: EnvAction) -> JsonDict:
     calls = action.command.get("tool_calls")
     if not isinstance(calls, list):
@@ -4012,6 +4046,39 @@ def _latest_action_termination_reason(action: EnvAction) -> str:
         if any(marker in str(message or "").lower() for marker in markers for message in messages):
             return "remote_episode_terminated"
     return ""
+
+
+def _response_task_success(response: Mapping[str, object]) -> bool | None:
+    """Return an explicit benchmark success flag without inferring from reward."""
+
+    candidates: list[object] = []
+    info = response.get("info")
+    if isinstance(info, Mapping):
+        candidates.extend(
+            info.get(key)
+            for key in (
+                "success",
+                "task_success",
+                "environment_success",
+                "checker_success",
+                "benchmark_success",
+            )
+            if key in info
+        )
+    for key in (
+        "task_success",
+        "environment_success",
+        "checker_success",
+        "benchmark_success",
+    ):
+        if key in response:
+            candidates.append(response.get(key))
+    for value in candidates:
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, list) and len(value) == 1 and isinstance(value[0], bool):
+            return value[0]
+    return None
 
 
 def _response_reports_remote_episode_terminated(response: Mapping[str, object]) -> bool:

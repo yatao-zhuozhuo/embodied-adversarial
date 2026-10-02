@@ -65,6 +65,9 @@ class PlannerProviderConfig:
     max_attempts: int = 3
     retry_backoff_s: float = 0.5
     context_window_tokens: int | None = DEFAULT_CONTEXT_WINDOW_TOKENS
+    max_tokens: int | None = None
+    enable_thinking: bool | None = None
+    enable_vision: bool | None = None
     fallback: ProviderEndpointConfig | None = None
     metadata: JsonDict = field(default_factory=dict)
 
@@ -92,6 +95,9 @@ class PlannerProviderConfig:
             "max_attempts": self.max_attempts,
             "retry_backoff_s": self.retry_backoff_s,
             "context_window_tokens": self.context_window_tokens,
+            "max_tokens": self.max_tokens,
+            "enable_thinking": self.enable_thinking,
+            "enable_vision": self.enable_vision,
             "fallback": self.fallback.redacted() if self.fallback is not None else None,
             "metadata": dict(self.metadata),
         }
@@ -108,6 +114,18 @@ class PlannerProviderConfig:
         ]
         if self.context_window_tokens is not None:
             lines.append(f"OPENETA_LLM_CONTEXT_WINDOW_TOKENS={self.context_window_tokens}")
+        if self.max_tokens is not None:
+            lines.append(f"OPENETA_LLM_MAX_TOKENS={self.max_tokens}")
+        if self.enable_thinking is not None:
+            lines.append(
+                "OPENETA_LLM_ENABLE_THINKING="
+                + ("true" if self.enable_thinking else "false")
+            )
+        if self.enable_vision is not None:
+            lines.append(
+                "OPENETA_LLM_ENABLE_VISION="
+                + ("true" if self.enable_vision else "false")
+            )
         if self.fallback is not None:
             lines.extend(
                 [
@@ -183,6 +201,18 @@ def load_planner_provider_config(
         dotenv.get("OPENETA_LLM_CONTEXT_WINDOW_TOKENS"),
         str(DEFAULT_CONTEXT_WINDOW_TOKENS),
     )
+    max_tokens = _first_positive_int(
+        source_env.get("OPENETA_LLM_MAX_TOKENS"),
+        dotenv.get("OPENETA_LLM_MAX_TOKENS"),
+    )
+    enable_thinking = _first_optional_bool(
+        source_env.get("OPENETA_LLM_ENABLE_THINKING"),
+        dotenv.get("OPENETA_LLM_ENABLE_THINKING"),
+    )
+    enable_vision = _first_optional_bool(
+        source_env.get("OPENETA_LLM_ENABLE_VISION"),
+        dotenv.get("OPENETA_LLM_ENABLE_VISION"),
+    )
     fallback_provider = _first_present(
         source_env.get("OPENETA_LLM_FALLBACK_PROVIDER"),
         dotenv.get("OPENETA_LLM_FALLBACK_PROVIDER"),
@@ -227,6 +257,9 @@ def load_planner_provider_config(
         max_attempts=max_attempts or 3,
         retry_backoff_s=retry_backoff_s,
         context_window_tokens=context_window_tokens,
+        max_tokens=max_tokens,
+        enable_thinking=enable_thinking,
+        enable_vision=enable_vision,
         fallback=fallback,
         metadata={"sources": {"dotenv_path": str(dotenv_path), "apikey_path": str(apikey_path)}},
     )
@@ -317,6 +350,18 @@ def _first_non_negative_float(*values: str | None) -> float:
         if parsed >= 0:
             return parsed
     return 0.5
+
+
+def _first_optional_bool(*values: str | None) -> bool | None:
+    for value in values:
+        if value is None or value == "":
+            continue
+        normalized = value.strip().lower()
+        if normalized in {"1", "true", "yes", "on"}:
+            return True
+        if normalized in {"0", "false", "no", "off"}:
+            return False
+    return None
 
 
 def _redact_secret(value: str) -> str:

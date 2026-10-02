@@ -806,15 +806,18 @@ class UnifiedEnv(gym.Env):
                 jp = state[..., :9] if state.shape[-1] >= 9 else state
                 obs.setdefault("proprio", {})["joint_positions"] = jp
 
-        # ── EE pose from robot FK ──────────────────────────────────
+        # ── EE pose from the controller TCP ─────────────────────────────
         try:
             inner = self._unwrap()
-            if hasattr(inner, "agent") and hasattr(inner.agent, "robot"):
-                tcp = inner.agent.robot.get_pose()
-                if tcp is not None:
-                    pos = self._np(tcp.p).flatten()[:3]
-                    quat = self._np(tcp.q).flatten()[:4]
-                    obs.setdefault("proprio", {})["ee_pose"] = np.concatenate([pos, quat])
+            agent = getattr(inner, "agent", None)
+            tcp_link = getattr(agent, "tcp", None)
+            tcp_pose = getattr(tcp_link, "pose", None)
+            if tcp_pose is not None:
+                pos = self._np(tcp_pose.p).flatten()[:3]
+                # SAPIEN pose quaternions are wxyz; OpenETA publishes xyzw.
+                quat_wxyz = self._np(tcp_pose.q).flatten()[:4]
+                quat = quat_wxyz[[1, 2, 3, 0]]
+                obs.setdefault("proprio", {})["ee_pose"] = np.concatenate([pos, quat])
         except Exception:
             pass
 

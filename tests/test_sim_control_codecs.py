@@ -92,6 +92,16 @@ def test_libero_cartesian_scales_match_robosuite_osc_pose_contract() -> None:
     assert cartesian_scales({}, "libero") == (0.05, 0.5)
 
 
+def test_maniskill_cartesian_scales_match_pd_ee_delta_pose_contract() -> None:
+    assert cartesian_scales({}, "maniskill") == (0.1, 0.1)
+
+
+def test_maniskill_gripper_sign_matches_normalized_pd_joint_position() -> None:
+    meta = {"action_dim": 7}
+    assert make_gripper_action(meta, open_gripper=True, backend="maniskill")[-1] == 1.0
+    assert make_gripper_action(meta, open_gripper=False, backend="maniskill")[-1] == -1.0
+
+
 def test_mink_penetration_escape_requires_monotonic_progress_without_new_collision() -> None:
     current = {(1, 2): -0.012, (3, 4): 0.01}
 
@@ -942,6 +952,45 @@ def test_move_to_stops_on_worker_error_and_preserves_last_pose(monkeypatch) -> N
     assert "terminated episode" in result["error"]
 
 
+def test_move_to_preserves_explicit_worker_task_success(monkeypatch) -> None:
+    meta = _libero_meta()
+    start = [0.0, 0.0, 0.0]
+    target = [0.1, 0.0, 0.0]
+
+    monkeypatch.setattr(server, "_session_envs", {"sid": {"handle": meta}})
+    monkeypatch.setattr(server, "_touch_session", lambda *_args, **_kwargs: None)
+    monkeypatch.setattr(
+        server,
+        "_proxy_observe",
+        lambda *_args, **_kwargs: {
+            "observation": {"robot": {"end_effector_pose": {"xyz": start}}}
+        },
+    )
+    monkeypatch.setattr(server, "_proxy_render", lambda *_args, **_kwargs: {})
+    monkeypatch.setattr(
+        server,
+        "_proxy_step",
+        lambda *_args, **_kwargs: {
+            "observation": {"robot": {"end_effector_pose": {"xyz": target}}},
+            "reward": 1.0,
+            "terminated": True,
+            "truncated": False,
+            "info": {
+                "success": [True],
+                "private_worker_diagnostic": "must not cross the boundary",
+            },
+        },
+    )
+
+    result = server.move_to.__wrapped__(
+        "handle", *target, num_steps=10, session_id="sid"
+    )
+
+    assert result["terminated"] is True
+    assert result["reward"] == pytest.approx(1.0)
+    assert result["info"] == {"success": [True]}
+
+
 def test_move_to_receipt_reports_controller_residual_and_iteration_limit(
     monkeypatch,
 ) -> None:
@@ -1058,6 +1107,53 @@ def test_ik_preview_unknown_does_not_become_a_false_rejection(monkeypatch) -> No
     assert result["success"] is True
     assert result["status"] == "unknown"
     assert result["feasible"] is None
+
+
+def test_maniskill_ik_preserves_reachable_when_optional_collision_backend_missing(
+    monkeypatch,
+) -> None:
+    meta = {"backend": "maniskill", "remote_handle": "remote"}
+    monkeypatch.setattr(server, "_session_envs", {"sid": {"handle": meta}})
+    monkeypatch.setattr(server, "_touch_session", lambda *_args, **_kwargs: None)
+    monkeypatch.setattr(
+        server,
+        "_proxy_reachability",
+        lambda *_args, **_kwargs: {
+            "status": "reachable",
+            "kinematic_status": "reachable",
+            "feasible": True,
+            "reason_code": "ik_solution_found",
+            "message": "ManiSkill Pinocchio IK found a solution.",
+            "best_candidate": {
+                "joint_positions": [0.0] * 7,
+                "joint_margin_min_rad": 0.2,
+            },
+            "suggestions": [],
+        },
+    )
+
+    class MissingChecker:
+        def check(self, *_args, **_kwargs):
+            return False, {"available": False, "reason": "cuRobo unavailable"}
+
+    monkeypatch.setattr(server, "get_checker", lambda *_args, **_kwargs: MissingChecker())
+
+    result = server.ik_preview_check.__wrapped__(
+        "handle",
+        0.1,
+        0.2,
+        0.3,
+        check_endpoint_collision=True,
+        session_id="sid",
+    )
+
+    assert result["status"] == "reachable"
+    assert result["feasible"] is True
+    assert result["reason_code"] == "ik_solution_found"
+    assert result["collision"]["checked"] is False
+    assert result["collision"]["detected"] is False
+    assert result["collision"]["deferred_to_motion_receipt"] is True
+    assert "inspect its execution result" in result["message"]
 
 
 def test_ik_preview_reports_fragile_joint_limit_margin_without_rejecting(

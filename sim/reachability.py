@@ -50,6 +50,22 @@ def check_endpoint_reachability(
     """
 
     backend = str(getattr(env, "_backend", "") or "")
+    if backend == "maniskill":
+        try:
+            return _maniskill_reachability(
+                env,
+                target_xyz=target_xyz,
+                target_quat_xyzw=target_quat_xyzw,
+                preserve_current_orientation=preserve_current_orientation,
+                position_tolerance_m=position_tolerance_m,
+                orientation_tolerance_rad=orientation_tolerance_rad,
+            )
+        except Exception as exc:  # noqa: BLE001 - uncertainty must remain explicit.
+            return _unknown(
+                "ik_solver_error",
+                f"ManiSkill reachability solver failed: {type(exc).__name__}: {exc}",
+                backend=backend,
+            )
     if backend != "libero":
         return _unknown(
             "backend_unsupported",
@@ -82,6 +98,172 @@ def check_endpoint_reachability(
             f"Reachability solver failed: {type(exc).__name__}: {exc}",
             backend=backend,
         )
+
+
+def _maniskill_reachability(
+    env: object,
+    *,
+    target_xyz: list[float],
+    target_quat_xyzw: list[float] | None,
+    preserve_current_orientation: bool,
+    position_tolerance_m: float,
+    orientation_tolerance_rad: float,
+) -> dict[str, Any]:
+    """Run ManiSkill's Pinocchio IK without stepping or changing live qpos.
+
+    ManiSkill's ``PDEEPosController`` owns a Pinocchio model whose target pose
+    is expressed in the arm root-link frame.  The public OpenETA target is a
+    world-frame pose, so convert it explicitly before solving.  ``compute_ik``
+    is read-only: it operates on the supplied qpos tensor and returns a new arm
+    configuration (or ``None``).
+    """
+
+    import torch
+    from mani_skill.utils.structs.pose import Pose
+
+    started = time.monotonic()
+    target = _finite_vector(target_xyz, 3, "target_xyz")
+    if not math.isfinite(position_tolerance_m) or position_tolerance_m <= 0:
+        raise ValueError("position_tolerance_m must be positive and finite")
+    if not math.isfinite(orientation_tolerance_rad) or orientation_tolerance_rad <= 0:
+        raise ValueError("orientation_tolerance_rad must be positive and finite")
+
+    inner = env._unwrap()  # type: ignore[attr-defined]
+    agent = getattr(inner, "agent", None)
+    controller = getattr(agent, "controller", None)
+    controllers = getattr(controller, "controllers", {})
+    arm = controllers.get("arm") if isinstance(controllers, dict) else None
+    if arm is None or not hasattr(arm, "kinematics"):
+        raise RuntimeError("ManiSkill arm Pinocchio kinematics are unavailable")
+
+    qpos_full = agent.robot.get_qpos().clone()
+    tcp_pose = agent.tcp.pose
+    current_quat_wxyz = np.asarray(
+        tcp_pose.q.detach().cpu().numpy(), dtype=np.float64
+    ).reshape(-1, 4)[0]
+    orientation_mode = (
+        "explicit"
+        if target_quat_xyzw is not None
+        else "preserve_current"
+        if preserve_current_orientation
+        else "unconstrained"
+    )
+    if target_quat_xyzw is not None:
+        target_quat = _normalised_quaternion(target_quat_xyzw)
+        quat_wxyz = target_quat[[3, 0, 1, 2]]
+    else:
+        # Pinocchio solves full poses.  Holding the current TCP orientation is
+        # the deterministic conservative representative for a position-only
+        # request; the response records that approximation explicitly.
+        quat_wxyz = current_quat_wxyz / np.linalg.norm(current_quat_wxyz)
+        target_quat = quat_wxyz[[1, 2, 3, 0]]
+
+    device = qpos_full.device
+    dtype = qpos_full.dtype
+    target_p = torch.as_tensor(target, device=device, dtype=dtype).reshape(1, 3)
+    target_q = torch.as_tensor(quat_wxyz, device=device, dtype=dtype).reshape(1, 4)
+    target_world_pose = Pose.create_from_pq(p=target_p, q=target_q)
+    target_root_pose = arm.root_link.pose.inv() * target_world_pose
+    solved = arm.kinematics.compute_ik(
+        target_root_pose,
+        qpos_full,
+        is_delta_pose=False,
+    )
+    elapsed = time.monotonic() - started
+
+    common = {
+        "backend": "maniskill",
+        "target": _target_payload(target, target_quat),
+        "orientation_mode": orientation_mode,
+        "tolerances": _tolerance_payload(
+            position_tolerance_m, orientation_tolerance_rad
+        ),
+        "solver": {
+            "method": "maniskill_pinocchio_compute_inverse_kinematics",
+            "attempts_completed": 1,
+            "function_evaluations": None,
+            "elapsed_s": elapsed,
+            "timed_out": False,
+            "target_frame_conversion": "world_to_arm_root_link",
+            "position_only_orientation_strategy": (
+                "current_tcp_orientation"
+                if target_quat_xyzw is None and not preserve_current_orientation
+                else None
+            ),
+        },
+    }
+    if solved is None:
+        return {
+            "status": "unreachable",
+            "kinematic_status": "unreachable",
+            "feasible": False,
+            "reason_code": "ik_solution_not_found",
+            "message": "ManiSkill Pinocchio IK did not find a joint solution.",
+            **common,
+            "position_only_reachable": None,
+            "orientation_only_reachable": None,
+            "best_candidate": None,
+            "suggestions": [
+                "move_target_toward_workspace",
+                "select_another_grasp_candidate",
+            ],
+        }
+
+    solution = np.asarray(solved.detach().cpu().numpy(), dtype=np.float64).reshape(-1)
+    if solution.size != 7 or not np.all(np.isfinite(solution)):
+        raise RuntimeError(f"expected 7 finite IK joints, got shape {solution.shape}")
+    current_arm = np.asarray(
+        arm.qpos.detach().cpu().numpy(), dtype=np.float64
+    ).reshape(-1)[:7]
+    joint_limits = []
+    for joint in arm.joints:
+        limits = np.asarray(
+            joint.get_limits().detach().cpu().numpy(), dtype=np.float64
+        ).reshape(-1, 2)
+        joint_limits.append(limits[0])
+    limits_array = np.asarray(joint_limits, dtype=np.float64)
+    if limits_array.shape != (7, 2):
+        raise RuntimeError(f"expected 7 arm joint limits, got {limits_array.shape}")
+    lower = limits_array[:, 0]
+    upper = limits_array[:, 1]
+    margins = np.minimum(solution - lower, upper - solution)
+    nearest_index = int(np.argmin(margins))
+    nearest_boundary = (
+        "lower"
+        if solution[nearest_index] - lower[nearest_index]
+        < upper[nearest_index] - solution[nearest_index]
+        else "upper"
+    )
+    delta = solution - current_arm
+    candidate = {
+        "joint_positions": solution.tolist(),
+        "position_error_m": None,
+        "max_axis_position_error_m": None,
+        "orientation_error_rad": None,
+        "normalized_worst_constraint": None,
+        "joint_margin_min_rad": float(margins[nearest_index]),
+        "joint_travel_l2_rad": float(np.linalg.norm(delta)),
+        "joint_travel_max_rad": float(np.max(np.abs(delta))),
+        "nearest_joint_limit": {
+            "joint_index": nearest_index,
+            "boundary": nearest_boundary,
+            "position_rad": float(solution[nearest_index]),
+            "lower_rad": float(lower[nearest_index]),
+            "upper_rad": float(upper[nearest_index]),
+        },
+    }
+    return {
+        "status": "reachable",
+        "kinematic_status": "reachable",
+        "feasible": True,
+        "reason_code": "ik_solution_found",
+        "message": "ManiSkill Pinocchio IK found a joint-limit-respecting solution.",
+        **common,
+        "position_only_reachable": True,
+        "orientation_only_reachable": True,
+        "best_candidate": candidate,
+        "suggestions": [],
+    }
 
 
 def _libero_problem(env: object) -> dict[str, Any]:

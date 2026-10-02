@@ -221,6 +221,15 @@ def _sanitize_json_payload(payload: object) -> tuple[object, list[str]]:
     warnings_found: list[str] = []
 
     def visit(value: object, path: str) -> object:
+        # Torch tensors appear in ManiSkill's official ``info`` dictionary
+        # (for example ``success=tensor([True])``).  Stringifying them destroys
+        # the typed benchmark verdict, so normalize tensor-like values before
+        # the ordinary NumPy/JSON traversal without importing torch here.
+        if all(hasattr(value, name) for name in ("detach", "cpu", "numpy")):
+            try:
+                return visit(value.detach().cpu().numpy(), path)  # type: ignore[union-attr]
+            except Exception:
+                pass
         if isinstance(value, np.ndarray):
             return visit(value.tolist(), path)
         if isinstance(value, np.generic):
@@ -497,12 +506,8 @@ def _step_with_image(env, act, handle: str = "", render: bool = True) -> dict:
         # without the other.
         safe_info: dict = {}
         if isinstance(info, dict):
-            for k, v in info.items():
-                try:
-                    json.dumps({k: v})
-                    safe_info[k] = v
-                except (TypeError, ValueError):
-                    safe_info[k] = str(v)
+            normalized_info, _warning_paths = _sanitize_json_payload(info)
+            safe_info = normalized_info if isinstance(normalized_info, dict) else {}
         else:
             safe_info = {"raw_info": str(info)}
         result = StepResult(

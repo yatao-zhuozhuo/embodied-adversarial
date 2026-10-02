@@ -244,6 +244,14 @@ def _cuda_to_egl_index(bench_python: str) -> dict[int, int]:
 def _venv_python(bench: str) -> str | None:
     """Return the venv Python interpreter for *bench*, or None if not found."""
     import sys as _sys
+    override_name = f"OPENETA_{bench.upper()}_PYTHON"
+    override = os.environ.get(override_name, "").strip()
+    if override:
+        if os.path.isfile(override) and os.access(override, os.X_OK):
+            return override
+        raise RuntimeError(
+            f"{override_name} does not point to an executable Python: {override}"
+        )
     venv_dir = os.path.join(str(_SIM_DIR), "venvs", bench)
     candidates = [
         os.path.join(venv_dir, "runtime", "bin", "python3.11"),

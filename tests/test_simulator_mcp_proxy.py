@@ -953,6 +953,46 @@ def test_ik_preview_proxy_preserves_execution_seed_quality_for_agent() -> None:
     assert "execution-fragile" in result.content
 
 
+def test_ik_preview_receipt_canonicalizes_position_alias_to_xyz() -> None:
+    transport = FakeSimulatorMcpTransport(
+        {
+            "ok": True,
+            "success": True,
+            "status": "reachable",
+            "kinematic_status": "reachable",
+            "feasible": True,
+            "reason_code": "ik_solution_found",
+            "message": "Endpoint feasible.",
+            "target": {"frame": "world", "xyz": [0.1, 0.2, 0.3]},
+            "best_candidate": {"joint_positions": [0.0] * 7},
+            "collision": {"checked": True},
+            "path": {"checked": False},
+        }
+    )
+    tools = bind_simulator_mcp_tool_handlers(
+        build_default_tool_registry(),
+        transport=transport,
+        config=SimulatorMcpToolProxyConfig(session_id="session-1", handle="env-1"),
+        tool_names=("ik_preview_check",),
+    )
+
+    result = tools.call(
+        "ik_preview_check",
+        {
+            "target_pose": {"frame": "world", "position": [0.1, 0.2, 0.3]},
+            "preserve_current_orientation": True,
+        },
+    )
+
+    receipt = result.details["outputs"]["ik_preview_receipt"]
+    assert result.success is True
+    assert receipt["target_pose"]["xyz"] == [0.1, 0.2, 0.3]
+    assert receipt["target_pose"]["position"] == [0.1, 0.2, 0.3]
+    assert result.details["outputs"]["execution_authorization"][
+        "authorized_for_move_to"
+    ] is True
+
+
 def test_ik_preview_collision_backend_gap_returns_exact_downgrade_recovery() -> None:
     transport = FakeSimulatorMcpTransport(
         {
@@ -2260,6 +2300,48 @@ def test_mcp_episode_keeps_first_terminal_receipt_reward() -> None:
     assert step.info["official_reward"] is True
 
 
+def test_mcp_episode_propagates_trusted_maniskill_task_success() -> None:
+    transport = FakeSimulatorMcpTransport(
+        {"cameras": [], "robot": {}, "objects": [], "reward": 0.0}
+    )
+    env = SimulatorMcpEpisodeEnvironment(
+        transport=transport,
+        config=SimulatorMcpEpisodeConfig(
+            env_id="openeta/maniskill_PickCube-v1-v0",
+            session_id="sim-session",
+            handle="env-1",
+        ),
+    )
+    action = EnvAction(
+        action_type="tool_call",
+        command={
+            "request": {"kind": "tool_call", "name": "move_to"},
+            "tool_calls": [
+                {
+                    "name": "move_to",
+                    "result": {
+                        "success": True,
+                        "details": {
+                            "host_provenance": {"authority": "environment"},
+                            "environment_receipt": {
+                                "schema_version": "openeta.environment_receipt.v1",
+                                "reward_present": True,
+                                "reward": 1.0,
+                                "task_success": True,
+                            },
+                        },
+                    },
+                }
+            ],
+        },
+    )
+
+    step = env.step(action)
+
+    assert step.info["environment_success"] is True
+    assert step.info["environment_receipt"]["task_success"] is True
+
+
 def test_mcp_episode_does_not_treat_regular_tool_failure_as_termination() -> None:
     transport = FakeSimulatorMcpTransport({"cameras": [], "robot": {}, "reward": 0.0})
     env = SimulatorMcpEpisodeEnvironment(
@@ -2419,6 +2501,31 @@ def test_mcp_episode_create_env_defaults_to_high_resolution() -> None:
     assert transport.calls[0]["arguments"]["image_width"] == 512
     assert transport.calls[0]["arguments"]["image_height"] == 512
     assert transport.calls[1]["name"] == "reset_env"
+
+
+def test_mcp_episode_can_expose_structured_objects_to_text_only_planner() -> None:
+    transport = FakeSimulatorMcpTransport(
+        {
+            "success": True,
+            "handle": "env-objects",
+            "session_id": "session-objects",
+            "cameras": [],
+            "robot": {},
+            "objects": [{"name": "cube", "position": [0.1, 0.2, 0.02]}],
+        }
+    )
+    env = SimulatorMcpEpisodeEnvironment(
+        transport=transport,
+        config=SimulatorMcpEpisodeConfig(
+            env_id="openeta/maniskill_PickCube-v1-v0",
+            include_objects=True,
+        ),
+    )
+
+    observation = env.reset(task="pick the cube")
+
+    assert transport.calls[0]["arguments"]["include_objects"] is True
+    assert observation.objects[0]["name"] == "cube"
 
 
 def test_mcp_episode_prefers_simulator_assigned_task_over_manifest_task() -> None:

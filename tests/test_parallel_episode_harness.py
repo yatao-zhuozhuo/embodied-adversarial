@@ -163,6 +163,48 @@ def test_libero_task_complete_without_official_reward_is_failure() -> None:
     assert classify_episode_result(episode, env_id="openeta/test-v0") == "success"
 
 
+def test_maniskill_dense_reward_requires_explicit_task_success() -> None:
+    def episode(success: bool | None) -> EpisodeResult:
+        receipt = {
+            "schema_version": "openeta.environment_receipt.v1",
+            "execution_id": "execution-1",
+        }
+        info = {
+            "environment_receipt_trusted": True,
+            "official_reward": True,
+            "environment_receipt": receipt,
+        }
+        if success is not None:
+            receipt["task_success"] = success
+            info["environment_success"] = success
+        return EpisodeResult(
+            task="pick cube",
+            session_id="session-maniskill",
+            steps=[
+                EpisodeStep(
+                    turn_index=1,
+                    observation=EnvObservation(
+                        task="pick cube", cameras=[], robot=RobotState()
+                    ),
+                    action=EnvAction(action_type="tool_call", command={}),
+                    step_result=StepResult(
+                        observation=EnvObservation(
+                            task="pick cube", cameras=[], robot=RobotState()
+                        ),
+                        reward=0.75,
+                        info=info,
+                    ),
+                )
+            ],
+            metadata={"execution_id": "execution-1"},
+        )
+
+    env_id = "openeta/maniskill_PickCube-v1-v0"
+    assert classify_episode_result(episode(None), env_id=env_id) == "fail"
+    assert classify_episode_result(episode(False), env_id=env_id) == "fail"
+    assert classify_episode_result(episode(True), env_id=env_id) == "success"
+
+
 def test_unattended_need_human_fails_without_persisting_pause() -> None:
     pauses: list[str] = []
 

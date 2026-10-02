@@ -394,7 +394,13 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
     # obs_mode='rgbd' gives camera RGB + depth + agent.qpos (joint positions)
     kwargs: dict[str, Any] = {"obs_mode": "rgbd",
                                "control_mode": "pd_ee_delta_pose",
-                               "render_mode": rm, "num_envs": 1}
+                               "render_mode": rm, "num_envs": 1,
+                               # ManiSkill's task specs commonly default to a
+                               # 50-step TimeLimit.  One OpenETA move_to may
+                               # legitimately consume that many low-level
+                               # controller steps, so the inner wrapper must
+                               # not terminate a multi-waypoint manipulation.
+                               "max_episode_steps": 2000}
     if image_width is not None or image_height is not None:
         hr_cfg: dict[str, Any] = {}
         sensor_cfg: dict[str, Any] = {}
@@ -1050,7 +1056,7 @@ def _register_maniskill_envs() -> None:
                 env_type="maniskill",
                 task_slug=task_id,
                 task_description=f"ManiSkill task: {task_id}",
-                max_episode_steps=200,
+                max_episode_steps=2000,
                 requires_gpu=True,
                 requires_sim_install=True,
             ),

@@ -11,8 +11,8 @@
   "max_gripper_width_m": 0.08,
   "execution_reference_point": "translation_xyz",
   "compatibility": {
-    "environment_families": ["libero"],
-    "controllers": ["OSC_POSE"],
+    "environment_families": ["libero", "maniskill"],
+    "controllers": ["OSC_POSE", "pd_ee_delta_pose"],
     "camera_calibration_ids": ["libero-agentview-panda-v1"],
     "grasp_backend_families": ["graspnet"]
   },

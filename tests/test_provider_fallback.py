@@ -109,6 +109,7 @@ def test_provider_config_roundtrips_fallback_endpoint(tmp_path: Path) -> None:
             timeout_s=5.0,
             max_attempts=4,
             retry_backoff_s=0.25,
+            enable_vision=False,
             fallback=_fallback(),
         ),
         env_path,
@@ -126,6 +127,10 @@ def test_provider_config_roundtrips_fallback_endpoint(tmp_path: Path) -> None:
     assert loaded.fallback.api_base == "https://fallback.example.test/v1"
     assert loaded.fallback.api_key == "fallback-key"
     assert loaded.fallback.timeout_s == 9.0
+    assert loaded.enable_vision is False
+    assert OpenAICompatiblePlannerBackendConfig.from_provider_config(
+        loaded
+    ).enable_vision is False
     redacted_fallback = loaded.redacted()["fallback"]
     assert isinstance(redacted_fallback, dict)
     assert redacted_fallback["api_key"] != "fallback-key"
