@@ -1,0 +1,282 @@
+{
+  "selection": {
+    "algorithm": "sha256(seed:native_task) ascending, 5 atomic + 5 composite",
+    "seed": 20261002,
+    "scope": "official target50",
+    "ranked_pools": {
+      "atomic": [
+        "TurnOffStove",
+        "PickPlaceCounterToCabinet",
+        "OpenDrawer",
+        "OpenCabinet",
+        "NavigateKitchen",
+        "PickPlaceSinkToCounter",
+        "CoffeeSetupMug",
+        "TurnOnElectricKettle",
+        "SlideDishwasherRack",
+        "PickPlaceCounterToStove",
+        "CloseFridge",
+        "PickPlaceToasterToCounter",
+        "PickPlaceDrawerToCounter",
+        "CloseBlenderLid",
+        "CloseToasterOvenDoor",
+        "TurnOnSinkFaucet",
+        "TurnOnMicrowave",
+        "OpenStandMixerHead"
+      ],
+      "composite": [
+        "MakeIceLemonade",
+        "RinseSinkBasin",
+        "GetToastedBread",
+        "LoadDishwasher",
+        "RecycleBottlesByType",
+        "StoreLeftoversInBowl",
+        "WeighIngredients",
+        "PortionHotDogs",
+        "SearingMeat",
+        "HeatKebabSandwich",
+        "StackBowlsCabinet",
+        "WashLettuce",
+        "PrepareCoffee",
+        "ScrubCuttingBoard",
+        "PanTransfer",
+        "PreSoakPan",
+        "CategorizeCondiments",
+        "ArrangeBreadBasket",
+        "DeliverStraw",
+        "SteamInMicrowave",
+        "StirVegetables",
+        "PackIdenticalLunches",
+        "ArrangeTea",
+        "KettleBoiling",
+        "WashFruitColander",
+        "BreadSelection",
+        "SetUpCuttingStation",
+        "WaffleReheat",
+        "SeparateFreezerRack",
+        "GatherTableware",
+        "GarnishPancake",
+        "CuttingToolSelection"
+      ]
+    },
+    "exclusions": {
+      "RinseSinkBasin": {
+        "replacement": "StoreLeftoversInBowl",
+        "criterion": "reset reproducibility; selection independent of model scores"
+      }
+    }
+  },
+  "episodes": [
+    {
+      "episode_id": "baseline-robocasa-00",
+      "env_id": "openeta/robocasa_target_TurnOffStove-v0",
+      "task": "Turn off the rear left burner of the stove.",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "TurnOffStove",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-01",
+      "env_id": "openeta/robocasa_target_PickPlaceCounterToCabinet-v0",
+      "task": "Pick the jug from the counter and place it in the cabinet.",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PickPlaceCounterToCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-02",
+      "env_id": "openeta/robocasa_target_OpenDrawer-v0",
+      "task": "Open the left drawer.",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "OpenDrawer",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-03",
+      "env_id": "openeta/robocasa_target_OpenCabinet-v0",
+      "task": "Open the cabinet doors.",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "OpenCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 1050,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-04",
+      "env_id": "openeta/robocasa_target_NavigateKitchen-v0",
+      "task": "Navigate to the toaster.",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "NavigateKitchen",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-05",
+      "env_id": "openeta/robocasa_target_MakeIceLemonade-v0",
+      "task": "Grab a lemon wedge from the fridge and one ice cube from the ice bowl, and put them in the glass of lemonade.",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "MakeIceLemonade",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-06",
+      "env_id": "openeta/robocasa_target_StoreLeftoversInBowl-v0",
+      "task": "Pick the chicken drumstick and avocado from their plates and place them in the bowl. Then put the bowl in the fridge.",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StoreLeftoversInBowl",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2550,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "replaces": "RinseSinkBasin",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-07",
+      "env_id": "openeta/robocasa_target_GetToastedBread-v0",
+      "task": "Start the toaster. Once the lever pops up, take the bread to the plate on the dining counter.",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "GetToastedBread",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-08",
+      "env_id": "openeta/robocasa_target_LoadDishwasher-v0",
+      "task": "Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "LoadDishwasher",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 1800,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-09",
+      "env_id": "openeta/robocasa_target_RecycleBottlesByType-v0",
+      "task": "Move the plastic bottles in the middle to the plastics group, and the glass bottles in the middle to the glass group.",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "RecycleBottlesByType",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2850,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
+      }
+    }
+  ]
+}

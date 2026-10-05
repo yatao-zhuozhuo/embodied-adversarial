@@ -1,0 +1,44 @@
+{
+  "generative_textures": {
+    "shared_link": "https://utexas.box.com/s/ebaad09k82tmfmlq6ohdkmrh8izl9vn5",
+    "file_id": "2142173908633",
+    "size": 1184675536,
+    "sha256": "bc05095af306222d9a799a9b0b5b16662aa546998622ee8fd3072566ea4c31ec",
+    "destination": "generative_textures"
+  },
+  "objaverse": {
+    "shared_link": "https://utexas.box.com/s/03eionyo8fk3a9dsksq9jb8du5lqfw8h",
+    "file_id": "2142171478819",
+    "size": 2163884721,
+    "sha256": "66a7eebef3bac855301964d35d905fc2cb44d691f007f97af08d96e83db5cc08",
+    "destination": "objects/objaverse"
+  },
+  "aigen_objs": {
+    "shared_link": "https://utexas.box.com/s/nwi1vrn5pgbo95kushkasa3nx1i012ff",
+    "file_id": "2142175597223",
+    "size": 5773223039,
+    "sha256": "1f88792322ccce79f775e88482626c324c6e07d002adf23320a124b72764dd19",
+    "destination": "objects/aigen_objs"
+  },
+  "textures": {
+    "shared_link": "https://utexas.box.com/s/4i85ileasdvstmlln5sbvzptz7keuoy1",
+    "file_id": "2142172962996",
+    "size": 543180421,
+    "sha256": "ba3a4dcef96e199cbd601c7cdb7eb46077fb6672611b7ac74c25a191bf0be392",
+    "destination": "textures"
+  },
+  "objects_lightwheel": {
+    "shared_link": "https://utexas.box.com/s/vckqvvkh1z8t69k8qcpcmee6k66stii4",
+    "file_id": "2142133987027",
+    "size": 791939656,
+    "sha256": "a1db739b0e80fc4d56d4be27d89dba3aa60000e9648c5607874700e0f14b7955",
+    "destination": "objects/lightwheel"
+  },
+  "fixtures_lightwheel": {
+    "shared_link": "https://utexas.box.com/s/idbncsadpnaz1jfl4i6m8qejawk7p9pi",
+    "file_id": "2142142643876",
+    "size": 529745465,
+    "sha256": "62c1c87776edda9b7c42dda7b00781a1e5a7f90acc3e49d06c39c9545cbd6c3e",
+    "destination": "fixtures"
+  }
+}

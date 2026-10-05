@@ -2270,6 +2270,14 @@ def _validate_official_reward_completion(
     metadata = memory.get("metadata") if isinstance(memory, dict) else None
     if not isinstance(metadata, dict) or metadata.get("source") != "ParallelEpisodeHarness":
         return []
+    if metadata.get("scoring_protocol") == "native_success_v1":
+        from adapter.native_success import trusted_native_success
+        latest = tool_context.get("latest_environment_receipt") or {}
+        if trusted_native_success(latest.get("info")) is True:
+            return []
+        if decision.parameters.get("success") is False:
+            return []
+        return ["Task completion requires the environment native success checker; positive reward alone is insufficient."]
     if metadata.get("require_official_reward") is False:
         return []
     receipt = tool_context.get("latest_environment_receipt")

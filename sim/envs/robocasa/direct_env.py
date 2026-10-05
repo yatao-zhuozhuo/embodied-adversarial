@@ -183,6 +183,11 @@ class RoboCasaDirectEnv(gym.Env):
                 "robot0_eye_in_hand",
             ]
         self._camera_names = camera_names
+        # This is an offscreen environment. With Kitchen's "mjviewer"
+        # default, robosuite skips _destroy_sim() on hard reset and stale GL
+        # resources can corrupt subsequent camera frames. The "mujoco"
+        # renderer owns and releases those resources on every hard reset.
+        env_kwargs.setdefault("renderer", "mujoco")
         self._env = create_env(
             env_name=task_name,
             robots=robot,

@@ -1,0 +1,8 @@
+{
+  "robocasa": {
+    "RinseSinkBasin": {
+      "replacement": "StoreLeftoversInBowl",
+      "criterion": "reset reproducibility; selection independent of model scores"
+    }
+  }
+}

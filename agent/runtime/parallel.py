@@ -442,6 +442,11 @@ def classify_episode_result(
     env_id: str = "",
     require_official_reward: object = None,
 ) -> str:
+    if episode.metadata.get("scoring_protocol") == "native_success_v1":
+        from adapter.native_success import trusted_native_success
+        success = any(trusted_native_success(step.step_result.info,
+            str(episode.metadata.get("execution_id") or "")) is True for step in episode.steps)
+        return "success" if success else "fail"
     if episode.metadata.get("waiting_for_human"):
         return "need_human"
     official_reward_required = _requires_official_reward(

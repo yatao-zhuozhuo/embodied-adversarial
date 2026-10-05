@@ -1,0 +1,201 @@
+{
+  "schema_version": "openeta.evaluation_plan.v1",
+  "plan_id": "baseline-metaworld-10-v1",
+  "episodes": [
+    {
+      "episode_id": "baseline-metaworld-00",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "task": "Open a drawer",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "drawer-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "5cb4634f428cdaafd30587f300fadbe3444df4a31afcca5a77df302665e5e622"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-01",
+      "env_id": "openeta/metaworld_50_coffee-button-v3-v0",
+      "task": "Push a button on the coffee machine",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "coffee-button-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "3342d4aa720b4606c5faf5536ab2261504e73674a16e83c17796eae6f03340d0"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-02",
+      "env_id": "openeta/metaworld_50_door-open-v3-v0",
+      "task": "Open a door with a revolving joint",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "door-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "0b1303e0546db9824adc32ecdb71395636df6af920d7a31445cc74979404ec6e"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-03",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "task": "Grasp a stick and push a box using the stick",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "stick-push-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "301946172dc25f17ee0a6e9dd0eeec24348c2ba19a51e4e820de75b64da38b61"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-04",
+      "env_id": "openeta/metaworld_50_pick-out-of-hole-v3-v0",
+      "task": "Pick up a puck from a hole",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "pick-out-of-hole-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "1a6e43dec78f116f0cbc9bf798040222ca183796f6fd309a8b9932e0259e61b8"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-05",
+      "env_id": "openeta/metaworld_50_window-close-v3-v0",
+      "task": "Push and close a window",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "window-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "4ac6286346f2795d430e5a599b44f736461790aa1ad9f6faf1587d44763e491d"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-06",
+      "env_id": "openeta/metaworld_50_reach-wall-v3-v0",
+      "task": "Bypass a wall and reach a goal",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "reach-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "1fc7ed4988edf3fa6020775a82a6f67c4ef04c8907b1bac6baf20d74139f1f74"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-07",
+      "env_id": "openeta/metaworld_50_faucet-close-v3-v0",
+      "task": "Rotate the faucet clockwise",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "faucet-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "c172b3dd3a10471905be05d4036a6a0c0524a62b1ce1b8cf565abd0cd3dc1146"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-08",
+      "env_id": "openeta/metaworld_50_pick-place-wall-v3-v0",
+      "task": "Pick a puck, bypass a wall and place the puck",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "pick-place-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "e1b52ebe4ae7f23a8b8e33cb70d7795c6c4579bca2f0c3749a611ef3129afafb"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-09",
+      "env_id": "openeta/metaworld_50_coffee-pull-v3-v0",
+      "task": "Pull a mug from a coffee machine",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "coffee-pull-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "6c80bd4b2cc407a0a9a1728425b0c0faa0284d8adb8cfe770015e14f977cfe72"
+      }
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "baseline",
+      "runtime": {
+        "visual_history": {
+          "enabled": true,
+          "recent_main_turns": 1,
+          "include_initial_main": false,
+          "include_current_wrist": true,
+          "include_vdm": false
+        }
+      }
+    }
+  ],
+  "repeats": 1,
+  "schedule": {
+    "shuffle_seed": 20261002
+  },
+  "execution": {
+    "concurrency": 1,
+    "provider_concurrency": 1,
+    "provider_queue_timeout_s": 180,
+    "supervision_profile": "standard",
+    "max_attempts": 2
+  }
+}

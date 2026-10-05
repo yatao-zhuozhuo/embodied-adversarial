@@ -266,17 +266,21 @@ def create_env(env_id: str, *, render_mode: str = "rgb_array", seed: int = 0,
         "robot": result.get("robot") or robot,
         "control_spec": result.get("control_spec", {}),
         "action_hint": result.get("action_hint", ""),
+        "action_low": result.get("action_low", []),
+        "action_high": result.get("action_high", []),
+        "action_desc": result.get("action_desc", ""),
     }
 
 
 @_blocking_tool
 @_serialized_env_control
-def reset_env(handle: str, *, seed: int | None = None, session_id: str = "") -> dict:
+def reset_env(handle: str, *, seed: int | None = None, session_id: str = "", settle: bool = True) -> dict:
     """Reset an environment and return the initial observation.
 
     Args:
         handle: Environment handle from create_env.
         seed: Optional random seed.
+        settle: Apply the usual post-reset settling steps; false preserves the native reset state.
         session_id: Optional session id to reuse an existing session.
 
     Returns:
@@ -403,6 +407,8 @@ def reset_env(handle: str, *, seed: int | None = None, session_id: str = "") -> 
     meta["_gripper_cmd"] = -1.0
     meta.pop("_attachment_proxy", None)
     reset_obs = _proxy_reset(meta, seed=seed)
+    if not settle:
+        return reset_obs
     # Let physics settle before returning — objects can spawn hovering /
     # jittering right after reset; a few hold steps bring them to rest.
     settled = _settle_env(meta, meta.get("backend", ""))
@@ -1558,6 +1564,7 @@ def move_to(handle: str, x: float, y: float, z: float, *,
         "steps_executed": total_steps,
         "terminated": final_terminated,
         "reward": final_reward,
+        "info": final_result.get("info", {}),
     }
     final_position_error = (
         _math.sqrt(
@@ -2071,6 +2078,7 @@ def follow_eef_trajectory(
         "terminated": bool(final.get("terminated")),
         "truncated": bool(final.get("truncated")),
         "reward": final.get("reward", 0.0),
+        "info": final.get("info", {}),
         "stop_reason": final.get("stop_reason"),
         "code": final.get("code"),
         "collision": final.get("collision"),

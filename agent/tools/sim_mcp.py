@@ -351,6 +351,9 @@ class SimulatorMcpEpisodeEnvironment:
             "truncated": truncated,
             "observation_fresh": True,
         }
+        native = _latest_trusted_action_environment_receipt(action).get("native_success")
+        if isinstance(native, dict):
+            receipt["native_success"] = dict(native)
         info.update(
             {
                 "environment_receipt_trusted": True,
@@ -3697,6 +3700,9 @@ def _build_environment_receipt(
         # that this environment can no longer accept world-mutating actions,
         # even when the failing response omitted a boolean terminal field.
         receipt["terminated"] = True
+    native = (response.get("info") or {}).get("native_success")
+    if isinstance(native, dict):
+        receipt["native_success"] = dict(native)
     motion = build_motion_summary(response)
     if motion:
         receipt["motion"] = motion

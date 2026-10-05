@@ -1,0 +1,9 @@
+logs/
+results/
+reports/
+jobs/
+.runtime/
+__pycache__/
+manifests/reset_evidence.json
+*.receipt.json
+*.brainctl-receipt.json

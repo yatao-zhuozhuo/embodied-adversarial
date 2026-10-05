@@ -1,0 +1,6 @@
+{
+  "libero": "OSC_POSE: [dx,dy,dz,rx,ry,rz,gripper]. Normalized Cartesian delta pose in world frame. Translation scale 0.05 m, rotation scale 0.5 rad before controller dynamics. Gripper -1 opens, +1 closes.",
+  "metaworld": "Sawyer: [dx,dy,dz,gripper]. Cartesian delta translation in world frame. Gripper -1 opens, +1 closes. Use small actions near objects.",
+  "maniskill3": "Panda pd_ee_delta_pose: [dx,dy,dz,rx,ry,rz,gripper]. Normalized delta end-effector pose; rotation is an axis-angle delta, not absolute Euler angles. Gripper +1 opens, -1 closes.",
+  "robocasa": "PandaOmron 12D: [dx,dy,dz,rx,ry,rz,gripper,base_x,base_y,base_yaw,torso,mode]. Gripper -1 opens, +1 closes. Set mode=-1 for arm mode, mode=+1 for base mode. Keep unused dimensions zero. The native composite controller determines the active frame. Inspect visual feedback before committing large motions."
+}

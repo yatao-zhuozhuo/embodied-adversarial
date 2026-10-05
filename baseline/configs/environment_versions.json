@@ -1,0 +1,53 @@
+{
+  "sources": {
+    "libero": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "robocasa": "b4684e6ee37d377cc392e98302a6b916d588b415",
+    "robosuite_robocasa": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c"
+  },
+  "environments": {
+    "libero": {
+      "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+      "packages": {
+        "libero": "0.1.0",
+        "robosuite": "1.4.1",
+        "mujoco": "3.3.0",
+        "gymnasium": "1.3.0",
+        "torch": "2.7.1+cpu",
+        "numpy": "1.26.4"
+      }
+    },
+    "metaworld": {
+      "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+      "packages": {
+        "numpy": "2.4.6",
+        "mujoco": "3.3.0",
+        "gymnasium": "1.3.0",
+        "metaworld": "3.1.1"
+      }
+    },
+    "maniskill3": {
+      "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "packages": {
+        "sapien": "3.0.3",
+        "gymnasium": "1.3.0",
+        "numpy": "2.2.6",
+        "torch": "2.10.0"
+      }
+    },
+    "robocasa": {
+      "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+      "packages": {
+        "mujoco": "3.3.1",
+        "robosuite": "1.5.2",
+        "numpy": "2.2.5",
+        "gymnasium": "0.29.1",
+        "torch": "2.7.1+cpu",
+        "robocasa": "1.0.1"
+      }
+    }
+  },
+  "mesa_vulkan_drivers": "25.2.8-0ubuntu0.24.04.2",
+  "libllvm20": "1:20.1.2-0ubuntu1~24.04.3",
+  "nvidia_gpucomp": "580.159.04",
+  "nvidia_gpucomp_source": "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/libnvidia-gpucomp-580_580.159.04-1ubuntu1_amd64.deb"
+}

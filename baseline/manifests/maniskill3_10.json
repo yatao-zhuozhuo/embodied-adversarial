@@ -1,0 +1,212 @@
+{
+  "selection": {
+    "algorithm": "sha256(seed:native_task) ascending",
+    "seed": 20261002,
+    "ranked_pool": [
+      "RollBall-v1",
+      "PlaceSphere-v1",
+      "StackCube-v1",
+      "PlugCharger-v1",
+      "StackPyramid-v1",
+      "PullCubeTool-v1",
+      "PushCube-v1",
+      "PushT-v1",
+      "PickCube-v1",
+      "PegInsertionSide-v1",
+      "PullCube-v1"
+    ],
+    "scope": "single-Panda procedural tabletop compatibility subset"
+  },
+  "episodes": [
+    {
+      "episode_id": "baseline-maniskill3-00",
+      "env_id": "openeta/maniskill_RollBall-v1-v0",
+      "task": "Roll the ball into the goal region.",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "RollBall-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "dd9769f375d8a4ec11ce1e971b976b6c50376275a3c0480eaccb46c46d63bcc6"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-01",
+      "env_id": "openeta/maniskill_PlaceSphere-v1-v0",
+      "task": "Place the sphere into the shallow bin and release it; keep the robot still at the end.",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PlaceSphere-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "98cbe3f93c0255e9b2bc66127680e4e531919bba842387bcc5f02dc9a9a067d8"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-02",
+      "env_id": "openeta/maniskill_StackCube-v1-v0",
+      "task": "Stack the red cube on the green cube and release it.",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StackCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "7ecd084c7470e2997b856c274109cf9e34cf521a7cddf21ff01a3d3bb37048cd"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-03",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "task": "Insert the charger into the receptacle.",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PlugCharger-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "8b918dc937cad35c4de4236c7e9e8a5a366c42a1277d2fac9f8fb468b63ad024"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-04",
+      "env_id": "openeta/maniskill_StackPyramid-v1-v0",
+      "task": "Stack the cubes into a pyramid: two cubes below and one cube on top.",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StackPyramid-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "269e3baccf78a3f86f5febbbbf977eba5426df263b07a0083041e4ce90eabe4e"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-05",
+      "env_id": "openeta/maniskill_PullCubeTool-v1-v0",
+      "task": "Use the L-shaped tool to pull the cube into the goal region.",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PullCubeTool-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "8c07cb4acddf24ca4dd216d100674658e5a1fa30af3d8dffe647093c0eb878ef"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-06",
+      "env_id": "openeta/maniskill_PushCube-v1-v0",
+      "task": "Push the cube onto the goal region.",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PushCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "f3436ac4f8c63240836ad1f1f4035902dc5a8bdc439979644f8fd4150d23af8a"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-07",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "task": "Push the T-shaped block to align with the target T-shaped region.",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PushT-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "759866ca291d6b5cd6fa5adaa15190e5ac5978a75f7de0736ebcd0c1e134af8a"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-08",
+      "env_id": "openeta/maniskill_PickCube-v1-v0",
+      "task": "Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PickCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "b7f0f7b05ca8e5a5bf3b0c2a339c688a67e80f09de42ba6481c97b5b90885a3e"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-09",
+      "env_id": "openeta/maniskill_PegInsertionSide-v1-v0",
+      "task": "Insert the peg into the side hole of the box.",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PegInsertionSide-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "initial_frame_sha256": "0bfb303adf32f1ab97fdd5c18fe111c4d2e602cbdca16c0d8c87ec87e2a6f78c"
+      }
+    }
+  ]
+}

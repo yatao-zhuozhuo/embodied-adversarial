@@ -1,0 +1,211 @@
+{
+  "schema_version": "openeta.evaluation_plan.v1",
+  "plan_id": "baseline-libero-10-v1",
+  "episodes": [
+    {
+      "episode_id": "baseline-libero-00",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-01",
+      "env_id": "openeta/libero_libero_spatial_task9-v0",
+      "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 9,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-02",
+      "env_id": "openeta/libero_libero_spatial_task5-v0",
+      "task": "pick up the black bowl on the ramekin and place it on the plate",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 5,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-03",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "task": "pick up the butter and place it in the basket",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 6,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-04",
+      "env_id": "openeta/libero_libero_object_task8-v0",
+      "task": "pick up the chocolate pudding and place it in the basket",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 8,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-05",
+      "env_id": "openeta/libero_libero_object_task0-v0",
+      "task": "pick up the alphabet soup and place it in the basket",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 0,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-06",
+      "env_id": "openeta/libero_libero_goal_task1-v0",
+      "task": "put the bowl on the stove",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-07",
+      "env_id": "openeta/libero_libero_goal_task4-v0",
+      "task": "put the bowl on top of the cabinet",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 4,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-08",
+      "env_id": "openeta/libero_libero_10_task2-v0",
+      "task": "turn on the stove and put the moka pot on it",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 2,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-09",
+      "env_id": "openeta/libero_libero_10_task3-v0",
+      "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 3,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
+      }
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "baseline",
+      "runtime": {
+        "visual_history": {
+          "enabled": true,
+          "recent_main_turns": 1,
+          "include_initial_main": false,
+          "include_current_wrist": true,
+          "include_vdm": false
+        }
+      }
+    }
+  ],
+  "repeats": 1,
+  "schedule": {
+    "shuffle_seed": 20261002
+  },
+  "execution": {
+    "concurrency": 1,
+    "provider_concurrency": 1,
+    "provider_queue_timeout_s": 180,
+    "supervision_profile": "standard",
+    "max_attempts": 2
+  }
+}

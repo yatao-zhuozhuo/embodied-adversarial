@@ -107,6 +107,7 @@ _done_handles: set[str] = set()
 # idempotent reads of this result: they must never replace an official positive
 # terminal reward with a newly synthesized zero.
 _terminal_step_results: dict[str, dict] = {}
+_native_success_seen: dict[str, bool] = {}
 
 
 def _obs_lock_for(handle: str) -> threading.Lock:
@@ -505,6 +506,16 @@ def _step_with_image(env, act, handle: str = "", render: bool = True) -> dict:
                     safe_info[k] = str(v)
         else:
             safe_info = {"raw_info": str(info)}
+        from adapter.native_success import scalar_success
+        native = scalar_success(info.get("success")) if isinstance(info, dict) else None
+        if native is not None:
+            ever = _native_success_seen.get(handle, False) or native
+            if handle:
+                _native_success_seen[handle] = ever
+            safe_info["native_success"] = {
+                "source": "environment.info.success", "success": native,
+                "ever_success": ever,
+            }
         result = StepResult(
             observation=env_obs,
             reward=float(rew),
@@ -533,6 +544,7 @@ def _reset_with_image(env, seed=None, handle: str = "") -> dict:
             _last_obs[handle] = obs
             _done_handles.discard(handle)  # fresh episode — stepping allowed again
             _terminal_step_results.pop(handle, None)
+            _native_success_seen.pop(handle, None)
         return EnvObservation.from_dict(obs).to_mcp_dict()
 
 
@@ -663,6 +675,11 @@ class SafeJSONResponse(JSONResponse):
 # step/reset/render (see _gl_lock), so a create can't race an in-flight render.
 def _make_env_locked(*args, **kwargs):
     with _gl_lock:
+        import random
+        seed = kwargs.get("seed", 0)
+        if seed is not None:
+            random.seed(int(seed))
+            np.random.seed(int(seed))
         return _make_env(*args, **kwargs)
 
 
@@ -729,8 +746,8 @@ async def create_env(request):
         s = env.action_space
         adim = int(s.shape[0]) if hasattr(s, "shape") and s.shape else None
         if hasattr(s, "low"):
-            alo = [float(x) for x in s.low[:min(7, len(s.low))]]
-            ahi = [float(x) for x in s.high[:min(7, len(s.high))]]
+            alo = [float(x) for x in s.low]
+            ahi = [float(x) for x in s.high]
     except Exception:
         pass
     be = getattr(env, "_backend", "")
@@ -804,6 +821,7 @@ async def close_env(request):
         _last_obs.pop(h, None)
         _done_handles.discard(h)
         _terminal_step_results.pop(h, None)
+        _native_success_seen.pop(h, None)
         if env:
             if request.app.state.bench == "behavior":
                 # Sending og.shutdown() from inside this HTTP handler closes Kit's

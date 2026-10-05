@@ -451,6 +451,9 @@ def _has_objective_success(outcome: JsonDict) -> bool:
     episode = outcome.get("episode")
     if not isinstance(episode, dict):
         return False
+    if (episode.get("metadata") or {}).get("scoring_protocol") == "native_success_v1":
+        from adapter.native_success import native_episode_success
+        return native_episode_success(episode)
     for step in episode.get("steps") or []:
         if not isinstance(step, dict):
             continue

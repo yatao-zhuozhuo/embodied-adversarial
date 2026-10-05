@@ -265,7 +265,8 @@ def make_env(
     # These envs bypass the RLinf wrapper for direct gym.make()
     if env_type == "metaworld":
         raw = _make_metaworld_direct(task_name, render_mode=render_mode,
-                                     image_width=image_width, image_height=image_height)
+                                     image_width=image_width, image_height=image_height,
+                                     seed=seed)
         ue = UnifiedEnv(raw, render_mode=render_mode)
         ue._include_objects = include_objects
         return ue
@@ -342,7 +343,8 @@ def make_env(
 
 
 def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
-                            image_width: int | None = None, image_height: int | None = None) -> gym.Env:
+                            image_width: int | None = None, image_height: int | None = None,
+                            seed: int | None = None) -> gym.Env:
     """Create a MetaWorld gym env directly (bypasses MetaWorldEnv vectorisation).
 
     Note: Requires mujoco_py (MuJoCo 210) to be installed with working
@@ -363,6 +365,7 @@ def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
     env = gym.make(
         "Meta-World/MT1",
         env_name=env_name,
+        seed=seed,
         render_mode=rm,
         camera_id=2,
         disable_env_checker=True,
@@ -395,6 +398,12 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
     kwargs: dict[str, Any] = {"obs_mode": "rgbd",
                                "control_mode": "pd_ee_delta_pose",
                                "render_mode": rm, "num_envs": 1}
+    # Match the direct training adapter's explicit renderer selection. This
+    # matters on headless multi-GPU hosts where CUDA/Vulkan interop differs.
+    import os
+    render_backend = os.environ.get("OPENETA_MANISKILL_RENDER_BACKEND", "").strip()
+    if render_backend:
+        kwargs["render_backend"] = render_backend
     if image_width is not None or image_height is not None:
         hr_cfg: dict[str, Any] = {}
         sensor_cfg: dict[str, Any] = {}
@@ -575,6 +584,11 @@ class _LibEnvWrapper(gym.Env):
         }
 
     def reset(self, *, seed=None, options=None):
+        # LIBERO exposes the legacy seed() API rather than reset(seed=...).
+        # Without forwarding it, paired evaluation episodes silently receive
+        # different randomized object placements despite identical manifests.
+        if seed is not None:
+            self._env.seed(int(seed))
         obs = self._env.reset()
 
         self._last_frame = obs.get("agentview_image") if isinstance(obs, dict) else None
@@ -584,6 +598,8 @@ class _LibEnvWrapper(gym.Env):
         ret = self._env.step(action)
         if len(ret) == 4:
             obs, rew, done, info = ret
+            info = dict(info or {})
+            info["success"] = bool(self._env.check_success())
             self._last_frame = obs.get("agentview_image") if isinstance(obs, dict) else None
             return obs, rew, done, done, info
         self._last_frame = ret[0].get("agentview_image") if isinstance(ret[0], dict) else None

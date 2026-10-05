@@ -1,0 +1,3 @@
+# vLLM 0.19.1 + prometheus-fastapi-instrumentator 7.1.0 cannot traverse
+# FastAPI >=0.137's lazy _IncludedRouter objects. Pure-Python API-only overlay.
+fastapi==0.136.1

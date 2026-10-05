@@ -352,9 +352,11 @@ class OpenAICompatiblePlannerBackendConfig:
     # Structured JSON mode remains useful for isolated reviewers, which keep
     # their existing JSON contracts. The main embodied planner uses XML.
     use_json_response_format: bool = True
-    # Optional Qwen-style provider switch. None omits the provider-specific
+    # Optional provider thinking switch. None omits the provider-specific
     # field; isolated roles such as VDM may explicitly disable hidden thinking.
     enable_thinking: bool | None = None
+    # DeepSeek uses a top-level thinking.type instead of Qwen chat_template_kwargs.
+    thinking_format: str = "chat_template_kwargs"
     # Some chat templates permit only one leading system message. Collapsing
     # retains the exact system -> stable context -> summary byte order, so the
     # cache-stable prefix stays before all growing conversation history.
@@ -364,6 +366,17 @@ class OpenAICompatiblePlannerBackendConfig:
     max_vision_image_bytes: int = 8 * 1024 * 1024
     fallback: ProviderEndpointConfig | None = None
     metadata: JsonDict = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.thinking_format not in {"chat_template_kwargs", "thinking"}:
+            raise ValueError(f"Unsupported thinking_format: {self.thinking_format}")
+
+    def thinking_request_fields(self) -> JsonDict:
+        if self.enable_thinking is None:
+            return {}
+        if self.thinking_format == "thinking":
+            return {"thinking": {"type": "enabled" if self.enable_thinking else "disabled"}}
+        return {"chat_template_kwargs": {"enable_thinking": self.enable_thinking}}
 
     @classmethod
     def from_provider_config(
@@ -380,6 +393,7 @@ class OpenAICompatiblePlannerBackendConfig:
             retry_backoff_s=config.retry_backoff_s,
             context_window_tokens=config.context_window_tokens,
             enable_thinking=_metadata_optional_bool(metadata, "enable_thinking"),
+            thinking_format=str(metadata.get("thinking_format", "chat_template_kwargs")),
             collapse_leading_system_messages=_metadata_bool(
                 metadata,
                 "collapse_leading_system_messages",
@@ -426,6 +440,7 @@ class OpenAICompatiblePlannerBackendConfig:
             "context_window_tokens": self.context_window_tokens,
             "use_json_response_format": self.use_json_response_format,
             "enable_thinking": self.enable_thinking,
+            "thinking_format": self.thinking_format,
             "collapse_leading_system_messages": self.collapse_leading_system_messages,
             "enable_vision": self.enable_vision,
             "max_vision_images": self.max_vision_images,
@@ -526,10 +541,7 @@ class OpenAICompatiblePlannerBackend(PlannerBackend):
         isolated_role = request.metadata.get("isolated_context") is True
         if self.config.use_json_response_format and isolated_role:
             body["response_format"] = {"type": "json_object"}
-        if self.config.enable_thinking is not None:
-            body["chat_template_kwargs"] = {
-                "enable_thinking": self.config.enable_thinking
-            }
+        body.update(self.config.thinking_request_fields())
 
         (
             response,
