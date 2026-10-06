@@ -47,6 +47,20 @@ GPU 空间离线，启动脚本使用本地权重并设置 `--check_model false`
 
 ## 完整二十题训练
 
-预定正式运行目录为本轮根目录下 `formal/`，使用独立的 `formal_service/` MCP 服务。后台提交使用 `scripts/submit_single_model_rl.py`，运行后的 PID、主机、日志和退出码分别保存在 `train.submission.json`、`train.log`、`train.exit`。
+正式运行目录为本轮根目录下 `formal/`，使用独立的 `formal_service/` MCP 服务。后台提交使用 `scripts/submit_single_model_rl.py`，运行后的 PID、主机、日志和退出码分别保存在 `train.submission.json`、`train.log`、`train.exit`。
 
-完整训练的提交状态与首批采样检查在交付时记录；完整 epoch 结果不由 canary 推断。
+2026-10-06 已提交到 `embodied-selfplay-copy`，后台 PID 为 `1101289`，使用 GPU 0–7。训练源码提交为 `b28a3a7`，冻结数据位于 `formal/tasks.jsonl`，模型从 base 初始化，计划 20 次更新。提交回执位于 `formal/train.submission.json`；进程是否仍运行应以 Notebook 实时状态和日志为准。
+
+`input_acceptance.json` 汇总两次 canary 的全部 56 次决策：采样 prompt、生成 token/logprob/mask 全部一致；四环境 canary 中有 3 次真实历史滑窗，均通过训练条件校验。
+
+读取运行结果：
+
+```bash
+cd /inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/rl
+python scripts/summarize_single_model_rl.py \
+  /inspire/hdd/project/exploration-topic/ky26060/outputs/OpenETA/single_model_rl_20261006/formal/trainer
+```
+
+停止操作只应在该 Notebook 上通过本轮回执执行 `scripts/stop_single_model_rl.py <formal/train.submission.json>`。检查训练完成与否使用退出码和完整 checkpoint；当前提交不代表整个 epoch 已完成，也不代表成功率改善。
+
+启动检查已确认八张 H200 均被本轮训练使用，正式任务已产生真实 rollout 和通过校验的 prompt；检查时训练仍运行。机器可读交付回执为运行根目录 `acceptance.json`，完整解析后的 Swift 参数保存在 trainer 的 `args.json`。
