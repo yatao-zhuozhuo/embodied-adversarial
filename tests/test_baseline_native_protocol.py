@@ -45,7 +45,7 @@ def test_explicit_provider_settings(model, thinking, monkeypatch):
     c = build_backend(model).config
     assert (c.max_tokens, c.temperature, c.context_window_tokens) == (1024, 0.0, 32768)
     assert c.enable_thinking is False and c.thinking_format == thinking
-    assert c.fallback is None and c.max_attempts == 1 and c.max_vision_images == 2
+    assert c.fallback is None and c.max_attempts == 1 and c.max_vision_images == 5
 
 
 @pytest.mark.parametrize('action,steps', [([2]*4, 1), ([0]*3, 1), ([True]*4, 1), ([float('nan')]*4, 1), ([0]*4, 11), ([0]*4, True)])
@@ -55,7 +55,7 @@ def test_no_action_padding_clipping_or_invalid_repeats(action, steps):
 
 
 def test_native_action_valid():
-    assert validate_action({'action': '[0,0,0,-1]', 'num_steps': 5},
+    assert validate_action({'action': [0,0,0,-1], 'num_steps': 5},
         {'action_dim': 4, 'action_low': [-1]*4, 'action_high': [1]*4}) == ([0,0,0,-1], 5)
 
 
@@ -65,8 +65,8 @@ def test_observation_projection_does_not_leak_objects_or_rewards(tmp_path):
     a = np.zeros((512,512,3), dtype=np.uint8); a[100:200] = 255
     b = io.BytesIO(); Image.fromarray(a).save(b, format='PNG')
     output = project_observation({'robot': {'joint_positions':[0]}, 'objects': [{'goal':[1,2,3]}],
-        'reward': 5, 'metadata': {'privileged':True}, 'cameras':[{'frame_id':'main', 'rgb_base64':base64.b64encode(b.getvalue()).decode()}]}, tmp_path, 0)
-    assert set(output) == {'robot','cameras','vision_image_paths'}
+        'reward': 5, 'metadata': {'privileged':True}, 'cameras':[{'frame_id':'main', 'rgb_base64':base64.b64encode(b.getvalue()).decode()}]}, tmp_path, 0, {'cameras':[{'id':'main','role':'primary','size':[512,512]}]})
+    assert set(output) == {'robot','cameras','vision_image_paths','observation_id','turn'}
 
 
 def test_native_evidence_survives_mcp_receipt():
@@ -112,7 +112,7 @@ def test_metaworld_selects_render_not_black_placeholder(tmp_path):
         if name=='render': a[50:200]=255
         b=io.BytesIO();Image.fromarray(a).save(b,format='PNG')
         cameras.append({'frame_id':name,'rgb_base64':base64.b64encode(b.getvalue()).decode()})
-    out=project_observation({'cameras':cameras},tmp_path,0)
+    out=project_observation({'cameras':cameras},tmp_path,0,{'cameras':[{'id':'render','role':'primary','size':[512,512]}]})
     assert out['cameras'][0]['frame_id']=='render'
 
 

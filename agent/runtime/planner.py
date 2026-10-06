@@ -663,6 +663,11 @@ _XML_OPEN_TAG_PATTERN = re.compile(r"<\s*([A-Za-z_][\w.:-]*)\b[^>]*>", re.DOTALL
 _XML_CLOSE_TAG_PATTERN = re.compile(r"</\s*([A-Za-z_][\w.:-]*)\s*>")
 
 
+def parse_xml_decision(payload: str) -> tuple[JsonDict, list[str]]:
+    """Public generic XML parser; domain callers impose their own restrictions."""
+    return _parse_xml_decision(payload)
+
+
 def _parse_xml_decision(payload: str) -> tuple[JsonDict, list[str]]:
     """Parse one main-planner ``<decision>`` into the existing decision shape.
 

@@ -17,7 +17,7 @@
         "task_index": 1,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
+        "legacy_rgb512_initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
       }
     },
     {
@@ -35,7 +35,7 @@
         "task_index": 9,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
+        "legacy_rgb512_initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
       }
     },
     {
@@ -53,7 +53,7 @@
         "task_index": 5,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
+        "legacy_rgb512_initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
       }
     },
     {
@@ -71,7 +71,7 @@
         "task_index": 6,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
+        "legacy_rgb512_initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
       }
     },
     {
@@ -89,7 +89,7 @@
         "task_index": 8,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
+        "legacy_rgb512_initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
       }
     },
     {
@@ -107,7 +107,7 @@
         "task_index": 0,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
+        "legacy_rgb512_initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
       }
     },
     {
@@ -125,7 +125,7 @@
         "task_index": 1,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
+        "legacy_rgb512_initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
       }
     },
     {
@@ -143,7 +143,7 @@
         "task_index": 4,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
+        "legacy_rgb512_initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
       }
     },
     {
@@ -161,7 +161,7 @@
         "task_index": 2,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
+        "legacy_rgb512_initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
       }
     },
     {
@@ -179,7 +179,7 @@
         "task_index": 3,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
+        "legacy_rgb512_initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
       }
     }
   ],

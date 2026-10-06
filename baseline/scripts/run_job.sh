@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Self-contained one-model task. Uses the prepared shared environments.
 set -euo pipefail
-REPO=/mnt/shared-storage-user/self-evolve/embodied-adversarial
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO"
 MODEL="${1:?model required}"
 : "${BASELINE_RUN_ROOT:?shared campaign output directory required}"
@@ -10,15 +10,7 @@ export OPENETA_WORKER_GPUS=0
 export PYTHONPATH="$REPO${PYTHONPATH:+:$PYTHONPATH}"
 export PYTHONHASHSEED=20261002
 COORD="$REPO/baseline/.runtime/coordinator/bin/python"
-export SWIFT_VENV=/mnt/shared-storage-user/self-evolve/.venv_selfplay_embodied.shared-symlink
-# Restore only the machine-local interpreter alias expected by the formal5 venv.
-PY312=/home/yangyongzhuo/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python3.12
-if [[ ! -x "$PY312" ]]; then
-  command -v python3 >/dev/null
-  python3 -c 'import sys; assert sys.version_info[:2] == (3,12), "job image must supply Python 3.12"'
-  mkdir -p "$(dirname "$PY312")"
-  ln -s "$(command -v python3)" "$PY312"
-fi
+export SWIFT_VENV="${SWIFT_VENV:-$REPO/baseline/.runtime/swift}"
 "$COORD" - <<'PY'
 import hashlib, os
 from baseline.runtime.run import SNAPSHOT, verify_snapshot
@@ -34,7 +26,7 @@ cleanup() {
 trap cleanup EXIT INT TERM
 if [[ "$MODEL" == deepseek ]]; then
   # Existing user-designated credential file; credentials never enter the spec/log.
-  export BASELINE_DEEPSEEK_ENV_FILE="${BASELINE_DEEPSEEK_ENV_FILE:-/mnt/shared-storage-user/self-evolve/auto-train-pipline/runs/_evaluation_api_bridge/deepseek.env}"
+  export BASELINE_DEEPSEEK_ENV_FILE="${BASELINE_DEEPSEEK_ENV_FILE:-$REPO/baseline/.runtime/secrets/deepseek.env}"
 else
   CUDA_VISIBLE_DEVICES=0 bash baseline/scripts/serve_vllm.sh "$MODEL" >"$BASELINE_RUN_ROOT/job-logs/$MODEL-vllm.log" 2>&1 &
   VLLM_PID=$!

@@ -3,8 +3,8 @@
 set -euo pipefail
 ulimit -c 0 2>/dev/null || true
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SWIFT_VENV="${SWIFT_VENV:-${REPO_ROOT}/../.venv_selfplay_embodied}"
-MODEL_ROOT="${MODEL_ROOT:-/mnt/shared-storage-user/self-evolve/model}"
+SWIFT_VENV="${SWIFT_VENV:-${REPO_ROOT}/baseline/.runtime/swift}"
+MODEL_ROOT="${MODEL_ROOT:-${REPO_ROOT}/baseline/.runtime/models}"
 case "${1:-}" in
   qwen38_27b) MODEL_NAME=Qwen3.8-27B; DEFAULT_PORT=8101 ;;
   qwen35_9b) MODEL_NAME=Qwen3.5-9B; DEFAULT_PORT=8102 ;;
@@ -54,7 +54,7 @@ exec "$PYTHON" -m vllm.entrypoints.openai.api_server \
   --max-num-seqs "${VLLM_MAX_NUM_SEQS:-1}" \
   --gpu-memory-utilization "${VLLM_GPU_MEMORY_UTILIZATION:-0.65}" \
   --kv-cache-memory-bytes "${VLLM_KV_CACHE_MEMORY_BYTES:-4294967296}" \
-  --mm-processor-cache-gb 0 --limit-mm-per-prompt '{"image":2,"video":0}' \
+  --mm-processor-cache-gb 0 --limit-mm-per-prompt '{"image":5,"video":0}' \
   --mm-processor-kwargs '{"size":{"shortest_edge":4096,"longest_edge":262144}}' \
   --gdn-prefill-backend triton \
   --reasoning-parser qwen3 --generation-config vllm --enforce-eager

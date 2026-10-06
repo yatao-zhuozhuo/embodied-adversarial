@@ -15,7 +15,7 @@
         "task_index": 1,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
+        "legacy_rgb512_initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
       }
     },
     {
@@ -33,7 +33,7 @@
         "task_index": 9,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
+        "legacy_rgb512_initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
       }
     },
     {
@@ -51,7 +51,7 @@
         "task_index": 5,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
+        "legacy_rgb512_initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
       }
     },
     {
@@ -69,7 +69,7 @@
         "task_index": 6,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
+        "legacy_rgb512_initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
       }
     },
     {
@@ -87,7 +87,7 @@
         "task_index": 8,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
+        "legacy_rgb512_initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
       }
     },
     {
@@ -105,7 +105,7 @@
         "task_index": 0,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
+        "legacy_rgb512_initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
       }
     },
     {
@@ -123,7 +123,7 @@
         "task_index": 1,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
+        "legacy_rgb512_initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
       }
     },
     {
@@ -141,7 +141,7 @@
         "task_index": 4,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
+        "legacy_rgb512_initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
       }
     },
     {
@@ -159,7 +159,7 @@
         "task_index": 2,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
+        "legacy_rgb512_initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
       }
     },
     {
@@ -177,7 +177,7 @@
         "task_index": 3,
         "pass_at_k": 1,
         "native_success_checker": "libero.check_success",
-        "initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
+        "legacy_rgb512_initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
       }
     },
     {
@@ -194,7 +194,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "5cb4634f428cdaafd30587f300fadbe3444df4a31afcca5a77df302665e5e622"
+        "legacy_rgb512_initial_frame_sha256": "e61084aac7e1fa106661d76db083c6e2a0992a1911a5900566ccf0ec4c4842e9"
       }
     },
     {
@@ -211,7 +211,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "3342d4aa720b4606c5faf5536ab2261504e73674a16e83c17796eae6f03340d0"
+        "legacy_rgb512_initial_frame_sha256": "ed5bb0acd01607057dc5b4c8a021c35b7ef322a47c19e8f8e7e1ab21cacd9890"
       }
     },
     {
@@ -228,7 +228,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0b1303e0546db9824adc32ecdb71395636df6af920d7a31445cc74979404ec6e"
+        "legacy_rgb512_initial_frame_sha256": "4dc40ddb2190ce1ce6fa7807395ea5d3100a9855116bb3c6f6e9b548acb9a2c3"
       }
     },
     {
@@ -245,7 +245,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "301946172dc25f17ee0a6e9dd0eeec24348c2ba19a51e4e820de75b64da38b61"
+        "legacy_rgb512_initial_frame_sha256": "63f767aacdd5a74f7cdb2d99d463dafdbfdfcf2869a85fb2bd9f5ddeb63eccd1"
       }
     },
     {
@@ -262,7 +262,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "1a6e43dec78f116f0cbc9bf798040222ca183796f6fd309a8b9932e0259e61b8"
+        "legacy_rgb512_initial_frame_sha256": "1c4cf67e3833734d38fb5e46395f0f9af3239a5e10497bcdc61d48437be65601"
       }
     },
     {
@@ -279,7 +279,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "4ac6286346f2795d430e5a599b44f736461790aa1ad9f6faf1587d44763e491d"
+        "legacy_rgb512_initial_frame_sha256": "0eadfde6792afa5abb86ef709f5c5d8db956985ba106a961e79564f291d1268a"
       }
     },
     {
@@ -296,7 +296,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "1fc7ed4988edf3fa6020775a82a6f67c4ef04c8907b1bac6baf20d74139f1f74"
+        "legacy_rgb512_initial_frame_sha256": "6380ac655594dfc51f176c7f8a52b3d6ec4bd390dfc07c913382aa9f1ff4138d"
       }
     },
     {
@@ -313,7 +313,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "c172b3dd3a10471905be05d4036a6a0c0524a62b1ce1b8cf565abd0cd3dc1146"
+        "legacy_rgb512_initial_frame_sha256": "76857ebfa90b9d3703e01ff1117ef8322637ef1a32b2a90d6b3596f7e46b9f80"
       }
     },
     {
@@ -330,7 +330,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "e1b52ebe4ae7f23a8b8e33cb70d7795c6c4579bca2f0c3749a611ef3129afafb"
+        "legacy_rgb512_initial_frame_sha256": "f065adf462d84269c6912dc280d78b3cc1b22b0eb45e7bdb799ab8d33dfa4600"
       }
     },
     {
@@ -347,7 +347,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "6c80bd4b2cc407a0a9a1728425b0c0faa0284d8adb8cfe770015e14f977cfe72"
+        "legacy_rgb512_initial_frame_sha256": "407905f1778bd1b10333d62183de7e78003d97c45835f89e3c8c0d06bcc1e4f6"
       }
     },
     {
@@ -366,7 +366,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "dd9769f375d8a4ec11ce1e971b976b6c50376275a3c0480eaccb46c46d63bcc6"
+        "legacy_rgb512_initial_frame_sha256": "0d1718c8f3df95431dc0d88c1e4aa3b57d36a586ae0d4202c0fdf27ff759fc7e"
       }
     },
     {
@@ -385,7 +385,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "98cbe3f93c0255e9b2bc66127680e4e531919bba842387bcc5f02dc9a9a067d8"
+        "legacy_rgb512_initial_frame_sha256": "12c83e0282483fd2ce3aefdf504279bfae6418a421b4f2a6eb07df43d5d6a78b"
       }
     },
     {
@@ -400,11 +400,11 @@
       "metadata": {
         "native_task": "StackCube-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "7ecd084c7470e2997b856c274109cf9e34cf521a7cddf21ff01a3d3bb37048cd"
+        "legacy_rgb512_initial_frame_sha256": "742c3c93ffe7511b12b76332890b089ad041bf8eed81da6203c584a37bae5952"
       }
     },
     {
@@ -419,11 +419,11 @@
       "metadata": {
         "native_task": "PlugCharger-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "8b918dc937cad35c4de4236c7e9e8a5a366c42a1277d2fac9f8fb468b63ad024"
+        "legacy_rgb512_initial_frame_sha256": "900d968e42f1bd42e68e83ad60a218f4982a3ac51ebaf8b6f105298b574c0667"
       }
     },
     {
@@ -438,11 +438,11 @@
       "metadata": {
         "native_task": "StackPyramid-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "269e3baccf78a3f86f5febbbbf977eba5426df263b07a0083041e4ce90eabe4e"
+        "legacy_rgb512_initial_frame_sha256": "b2881679e1615f8db71f1ddcb1d948718dd3d687fa606121b6c0676ddd39b6f6"
       }
     },
     {
@@ -461,7 +461,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "8c07cb4acddf24ca4dd216d100674658e5a1fa30af3d8dffe647093c0eb878ef"
+        "legacy_rgb512_initial_frame_sha256": "241fa3673f86225cb82de9b06e8ac9dcc95a1f188b0b999f069b37a22a7e4bea"
       }
     },
     {
@@ -480,7 +480,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "f3436ac4f8c63240836ad1f1f4035902dc5a8bdc439979644f8fd4150d23af8a"
+        "legacy_rgb512_initial_frame_sha256": "f6d7bcf376b6ff65aa8bfd0e3c1dd2dff21668ed9eb71d04d8e325e5144467dd"
       }
     },
     {
@@ -495,11 +495,11 @@
       "metadata": {
         "native_task": "PushT-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_stick",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "759866ca291d6b5cd6fa5adaa15190e5ac5978a75f7de0736ebcd0c1e134af8a"
+        "legacy_rgb512_initial_frame_sha256": "03bab87b6ac033998023d22367d24f564cd3d26bebf1e4391162ca7933d473df"
       }
     },
     {
@@ -518,7 +518,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "b7f0f7b05ca8e5a5bf3b0c2a339c688a67e80f09de42ba6481c97b5b90885a3e"
+        "legacy_rgb512_initial_frame_sha256": "bcd2de43dac4ccd5aae4843281a413a717e7dd24c222fff6408eced8f918c82a"
       }
     },
     {
@@ -533,11 +533,11 @@
       "metadata": {
         "native_task": "PegInsertionSide-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0bfb303adf32f1ab97fdd5c18fe111c4d2e602cbdca16c0d8c87ec87e2a6f78c"
+        "legacy_rgb512_initial_frame_sha256": "6a6695ae31f8bea8224ad16b123cffffe7c4fd75d6f57857b4df331f60ea476c"
       }
     },
     {
@@ -558,7 +558,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
+        "legacy_rgb512_initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
       }
     },
     {
@@ -579,7 +579,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
+        "legacy_rgb512_initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
       }
     },
     {
@@ -600,7 +600,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
+        "legacy_rgb512_initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
       }
     },
     {
@@ -621,7 +621,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
+        "legacy_rgb512_initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
       }
     },
     {
@@ -642,7 +642,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
+        "legacy_rgb512_initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
       }
     },
     {
@@ -663,7 +663,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
+        "legacy_rgb512_initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
       }
     },
     {
@@ -685,7 +685,7 @@
         "replaces": "RinseSinkBasin",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
+        "legacy_rgb512_initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
       }
     },
     {
@@ -706,7 +706,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
+        "legacy_rgb512_initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
       }
     },
     {
@@ -727,7 +727,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
+        "legacy_rgb512_initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
       }
     },
     {
@@ -748,7 +748,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
+        "legacy_rgb512_initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
       }
     }
   ]

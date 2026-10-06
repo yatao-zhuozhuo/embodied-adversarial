@@ -34,7 +34,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "dd9769f375d8a4ec11ce1e971b976b6c50376275a3c0480eaccb46c46d63bcc6"
+        "legacy_rgb512_initial_frame_sha256": "0d1718c8f3df95431dc0d88c1e4aa3b57d36a586ae0d4202c0fdf27ff759fc7e"
       }
     },
     {
@@ -53,7 +53,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "98cbe3f93c0255e9b2bc66127680e4e531919bba842387bcc5f02dc9a9a067d8"
+        "legacy_rgb512_initial_frame_sha256": "12c83e0282483fd2ce3aefdf504279bfae6418a421b4f2a6eb07df43d5d6a78b"
       }
     },
     {
@@ -68,11 +68,11 @@
       "metadata": {
         "native_task": "StackCube-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "7ecd084c7470e2997b856c274109cf9e34cf521a7cddf21ff01a3d3bb37048cd"
+        "legacy_rgb512_initial_frame_sha256": "742c3c93ffe7511b12b76332890b089ad041bf8eed81da6203c584a37bae5952"
       }
     },
     {
@@ -87,11 +87,11 @@
       "metadata": {
         "native_task": "PlugCharger-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "8b918dc937cad35c4de4236c7e9e8a5a366c42a1277d2fac9f8fb468b63ad024"
+        "legacy_rgb512_initial_frame_sha256": "900d968e42f1bd42e68e83ad60a218f4982a3ac51ebaf8b6f105298b574c0667"
       }
     },
     {
@@ -106,11 +106,11 @@
       "metadata": {
         "native_task": "StackPyramid-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "269e3baccf78a3f86f5febbbbf977eba5426df263b07a0083041e4ce90eabe4e"
+        "legacy_rgb512_initial_frame_sha256": "b2881679e1615f8db71f1ddcb1d948718dd3d687fa606121b6c0676ddd39b6f6"
       }
     },
     {
@@ -129,7 +129,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "8c07cb4acddf24ca4dd216d100674658e5a1fa30af3d8dffe647093c0eb878ef"
+        "legacy_rgb512_initial_frame_sha256": "241fa3673f86225cb82de9b06e8ac9dcc95a1f188b0b999f069b37a22a7e4bea"
       }
     },
     {
@@ -148,7 +148,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "f3436ac4f8c63240836ad1f1f4035902dc5a8bdc439979644f8fd4150d23af8a"
+        "legacy_rgb512_initial_frame_sha256": "f6d7bcf376b6ff65aa8bfd0e3c1dd2dff21668ed9eb71d04d8e325e5144467dd"
       }
     },
     {
@@ -163,11 +163,11 @@
       "metadata": {
         "native_task": "PushT-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_stick",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "759866ca291d6b5cd6fa5adaa15190e5ac5978a75f7de0736ebcd0c1e134af8a"
+        "legacy_rgb512_initial_frame_sha256": "03bab87b6ac033998023d22367d24f564cd3d26bebf1e4391162ca7933d473df"
       }
     },
     {
@@ -186,7 +186,7 @@
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "b7f0f7b05ca8e5a5bf3b0c2a339c688a67e80f09de42ba6481c97b5b90885a3e"
+        "legacy_rgb512_initial_frame_sha256": "bcd2de43dac4ccd5aae4843281a413a717e7dd24c222fff6408eced8f918c82a"
       }
     },
     {
@@ -201,11 +201,11 @@
       "metadata": {
         "native_task": "PegInsertionSide-v1",
         "benchmark_version": "ManiSkill3 3.0.1",
-        "robot": "panda",
+        "robot": "panda_wristcam",
         "control_mode": "pd_ee_delta_pose",
         "benchmark": "maniskill3",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0bfb303adf32f1ab97fdd5c18fe111c4d2e602cbdca16c0d8c87ec87e2a6f78c"
+        "legacy_rgb512_initial_frame_sha256": "6a6695ae31f8bea8224ad16b123cffffe7c4fd75d6f57857b4df331f60ea476c"
       }
     }
   ]

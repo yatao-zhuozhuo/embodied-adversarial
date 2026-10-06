@@ -493,45 +493,58 @@ class OpenAICompatiblePlannerBackend(PlannerBackend):
                 details={"missing_fields": missing},
             )
 
-        stable_context, dynamic_context = _partition_planner_tool_context(request)
-        prompt_dynamic_context = (
-            _planner_visible_main_agent_context(dynamic_context)
-            if request.tool_context.get("schema_version")
-            == _MAIN_AGENT_CONTEXT_SCHEMA_VERSION
-            else dynamic_context
-        )
-        stable_context_prompt = (
-            _stable_planner_context_prompt(stable_context) if stable_context else ""
-        )
-        prompt_layout = _planner_prompt_layout_summary(
-            stable_context=stable_context,
-            stable_context_prompt=stable_context_prompt,
-            dynamic_context=prompt_dynamic_context,
-        )
-        user_content, vision_attachments = _planner_user_content(
-            request,
-            self.config,
-            prompt_tool_context=prompt_dynamic_context,
-        )
-        system_segments: list[str] = [request.system_prompt]
-        if stable_context_prompt:
-            system_segments.append(stable_context_prompt)
-        if request.conversation_summary.strip():
-            system_segments.append(
-                "Earlier OpenETA execution summary from the current session:\n"
-                + request.conversation_summary.strip()
-            )
-        if self.config.collapse_leading_system_messages:
-            messages: list[JsonDict] = [
-                {"role": "system", "content": "\n\n".join(system_segments)}
-            ]
+        if request.tool_context.get("input_protocol") == "openeta.two_tool_input.v1":
+            from agent.runtime.two_tool_input import render_messages
+            package = request.tool_context["input_package"]
+            if len(package["images"]) > self.config.max_vision_images:
+                raise ValueError("Unified input images exceed provider capacity")
+            messages = render_messages(package)
+            vision_attachments = [{"path": e["path"], "attached": True,
+                                   "image_id": e["image_id"], "sha256": e["sha256"]}
+                                  for e in package["images"]]
+            prompt_layout = {"schema_version": "openeta.two_tool_input.v1",
+                             "profile_id": package["profile_id"],
+                             "history_decision_ids": package["history_decision_ids"]}
         else:
-            messages = [
-                {"role": "system", "content": segment}
-                for segment in system_segments
-            ]
-        messages.extend(_validated_conversation_messages(request.conversation_messages))
-        messages.append({"role": "user", "content": user_content})
+            stable_context, dynamic_context = _partition_planner_tool_context(request)
+            prompt_dynamic_context = (
+                _planner_visible_main_agent_context(dynamic_context)
+                if request.tool_context.get("schema_version")
+                == _MAIN_AGENT_CONTEXT_SCHEMA_VERSION
+                else dynamic_context
+            )
+            stable_context_prompt = (
+                _stable_planner_context_prompt(stable_context) if stable_context else ""
+            )
+            prompt_layout = _planner_prompt_layout_summary(
+                stable_context=stable_context,
+                stable_context_prompt=stable_context_prompt,
+                dynamic_context=prompt_dynamic_context,
+            )
+            user_content, vision_attachments = _planner_user_content(
+                request,
+                self.config,
+                prompt_tool_context=prompt_dynamic_context,
+            )
+            system_segments: list[str] = [request.system_prompt]
+            if stable_context_prompt:
+                system_segments.append(stable_context_prompt)
+            if request.conversation_summary.strip():
+                system_segments.append(
+                    "Earlier OpenETA execution summary from the current session:\n"
+                    + request.conversation_summary.strip()
+                )
+            if self.config.collapse_leading_system_messages:
+                messages: list[JsonDict] = [
+                    {"role": "system", "content": "\n\n".join(system_segments)}
+                ]
+            else:
+                messages = [
+                    {"role": "system", "content": segment}
+                    for segment in system_segments
+                ]
+            messages.extend(_validated_conversation_messages(request.conversation_messages))
+            messages.append({"role": "user", "content": user_content})
         body: JsonDict = {
             "model": self.config.model,
             "messages": messages,

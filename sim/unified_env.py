@@ -810,10 +810,12 @@ class UnifiedEnv(gym.Env):
         try:
             inner = self._unwrap()
             if hasattr(inner, "agent") and hasattr(inner.agent, "robot"):
-                tcp = inner.agent.robot.get_pose()
+                tcp_link = getattr(inner.agent, "tcp", None)
+                tcp = getattr(tcp_link, "pose", None)
                 if tcp is not None:
                     pos = self._np(tcp.p).flatten()[:3]
-                    quat = self._np(tcp.q).flatten()[:4]
+                    quat_wxyz = self._np(tcp.q).flatten()[:4]
+                    quat = quat_wxyz[[1, 2, 3, 0]]
                     obs.setdefault("proprio", {})["ee_pose"] = np.concatenate([pos, quat])
         except Exception:
             pass

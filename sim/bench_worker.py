@@ -756,7 +756,7 @@ async def create_env(request):
     elif be == "libero":
         adesc = "xyz+rpy+gripper (OSC_POSE 7D)"
     elif be == "maniskill":
-        adesc = "xyz+rot+gripper delta (7D)" if adim and adim <= 7 else f"{adim}D"
+        adesc = {6: "xyz+axis-angle delta (6D, no gripper)", 7: "xyz+axis-angle+gripper delta (7D)"}.get(adim, f"{adim}D")
     elif be == "robocasa":
         adesc = (
             "fixed Panda: xyz+rpy+gripper (7D)"
@@ -805,7 +805,13 @@ async def create_env(request):
             f"{controller.get('goal_executor', '<unknown>')}"
         )
 
+    from sim.input_contract import input_capabilities
+    try:
+        input_caps = input_capabilities(env, be)
+    except Exception as exc:
+        input_caps = {"error": f"{type(exc).__name__}: {exc}"}
     return _json_response({
+        "input_capabilities": input_caps,
         "handle": h, "env_id": eid, "action_dim": adim, "action_desc": adesc,
         "action_low": alo, "action_high": ahi, "backend": be, "action_hint": hints,
         "robot": body.get("robot"), "control_spec": control_spec,
@@ -907,13 +913,18 @@ async def step_env(request):
 
         def _run_steps():
             res = None
+            executed = 0
             for _ in range(num_steps):
+                already_done = h in _done_handles
                 res = _step_with_image(env, act, handle=h, render=render)
+                if not already_done:
+                    executed += 1
                 if res.get("terminated") or res.get("truncated"):
                     break
             if res is None:
                 res = _observe_with_image(env, handle=h)  # fallback: try observe
-            return res
+            # Copy: an idempotent terminal read must not mutate cached evidence.
+            return {**res, "steps_executed": executed, "steps_requested": num_steps}
 
         # Offload the blocking sim/render loop so the event loop stays free.
         result = await _run_sim_call(_run_steps)

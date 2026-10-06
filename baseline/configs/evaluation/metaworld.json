@@ -16,7 +16,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "5cb4634f428cdaafd30587f300fadbe3444df4a31afcca5a77df302665e5e622"
+        "legacy_rgb512_initial_frame_sha256": "e61084aac7e1fa106661d76db083c6e2a0992a1911a5900566ccf0ec4c4842e9"
       }
     },
     {
@@ -33,7 +33,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "3342d4aa720b4606c5faf5536ab2261504e73674a16e83c17796eae6f03340d0"
+        "legacy_rgb512_initial_frame_sha256": "ed5bb0acd01607057dc5b4c8a021c35b7ef322a47c19e8f8e7e1ab21cacd9890"
       }
     },
     {
@@ -50,7 +50,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0b1303e0546db9824adc32ecdb71395636df6af920d7a31445cc74979404ec6e"
+        "legacy_rgb512_initial_frame_sha256": "4dc40ddb2190ce1ce6fa7807395ea5d3100a9855116bb3c6f6e9b548acb9a2c3"
       }
     },
     {
@@ -67,7 +67,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "301946172dc25f17ee0a6e9dd0eeec24348c2ba19a51e4e820de75b64da38b61"
+        "legacy_rgb512_initial_frame_sha256": "63f767aacdd5a74f7cdb2d99d463dafdbfdfcf2869a85fb2bd9f5ddeb63eccd1"
       }
     },
     {
@@ -84,7 +84,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "1a6e43dec78f116f0cbc9bf798040222ca183796f6fd309a8b9932e0259e61b8"
+        "legacy_rgb512_initial_frame_sha256": "1c4cf67e3833734d38fb5e46395f0f9af3239a5e10497bcdc61d48437be65601"
       }
     },
     {
@@ -101,7 +101,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "4ac6286346f2795d430e5a599b44f736461790aa1ad9f6faf1587d44763e491d"
+        "legacy_rgb512_initial_frame_sha256": "0eadfde6792afa5abb86ef709f5c5d8db956985ba106a961e79564f291d1268a"
       }
     },
     {
@@ -118,7 +118,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "1fc7ed4988edf3fa6020775a82a6f67c4ef04c8907b1bac6baf20d74139f1f74"
+        "legacy_rgb512_initial_frame_sha256": "6380ac655594dfc51f176c7f8a52b3d6ec4bd390dfc07c913382aa9f1ff4138d"
       }
     },
     {
@@ -135,7 +135,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "c172b3dd3a10471905be05d4036a6a0c0524a62b1ce1b8cf565abd0cd3dc1146"
+        "legacy_rgb512_initial_frame_sha256": "76857ebfa90b9d3703e01ff1117ef8322637ef1a32b2a90d6b3596f7e46b9f80"
       }
     },
     {
@@ -152,7 +152,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "e1b52ebe4ae7f23a8b8e33cb70d7795c6c4579bca2f0c3749a611ef3129afafb"
+        "legacy_rgb512_initial_frame_sha256": "f065adf462d84269c6912dc280d78b3cc1b22b0eb45e7bdb799ab8d33dfa4600"
       }
     },
     {
@@ -169,7 +169,7 @@
         "suite": "metaworld_50",
         "benchmark": "metaworld",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "6c80bd4b2cc407a0a9a1728425b0c0faa0284d8adb8cfe770015e14f977cfe72"
+        "legacy_rgb512_initial_frame_sha256": "407905f1778bd1b10333d62183de7e78003d97c45835f89e3c8c0d06bcc1e4f6"
       }
     }
   ],

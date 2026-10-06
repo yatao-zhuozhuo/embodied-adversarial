@@ -11,7 +11,7 @@ for bench in "${@:-libero metaworld maniskill3 robocasa}"; do
     for pass in environment-preflight environment-repeat; do
       mkdir -p "baseline/results/$pass"
       for index in {0..9}; do
-        if ! CUDA_VISIBLE_DEVICES=3 timeout 300 "sim/venvs/$worker/bin/python" \
+        if ! CUDA_VISIBLE_DEVICES="${OPENETA_WORKER_GPUS}" timeout 300 "sim/venvs/$worker/bin/python" \
           baseline/scripts/environment_probe.py \
           --manifest "baseline/manifests/${name}_10.json" --index "$index" \
           --output "baseline/results/$pass/${name}-${index}.json"; then

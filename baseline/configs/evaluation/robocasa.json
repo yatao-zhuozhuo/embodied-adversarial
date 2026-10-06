@@ -20,7 +20,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
+        "legacy_rgb512_initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
       }
     },
     {
@@ -41,7 +41,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
+        "legacy_rgb512_initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
       }
     },
     {
@@ -62,7 +62,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
+        "legacy_rgb512_initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
       }
     },
     {
@@ -83,7 +83,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
+        "legacy_rgb512_initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
       }
     },
     {
@@ -104,7 +104,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
+        "legacy_rgb512_initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
       }
     },
     {
@@ -125,7 +125,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
+        "legacy_rgb512_initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
       }
     },
     {
@@ -147,7 +147,7 @@
         "replaces": "RinseSinkBasin",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
+        "legacy_rgb512_initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
       }
     },
     {
@@ -168,7 +168,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
+        "legacy_rgb512_initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
       }
     },
     {
@@ -189,7 +189,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
+        "legacy_rgb512_initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
       }
     },
     {
@@ -210,7 +210,7 @@
         "instruction_source": "official get_ep_meta().lang at fixed reset seed",
         "benchmark": "robocasa",
         "native_success_checker": "step.info.success",
-        "initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
+        "legacy_rgb512_initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
       }
     }
   ],

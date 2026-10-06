@@ -8,7 +8,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--models", nargs="+", choices=["Qwen3.8-27B", "Qwen3.5-9B", "Qwen3.5-4B"],
                         default=["Qwen3.5-9B"])
-    parser.add_argument("--model-root", type=Path, default=Path("/mnt/shared-storage-user/self-evolve/model"))
+    parser.add_argument("--model-root", type=Path, default=Path(__file__).resolve().parents[1] / ".runtime/models")
     parser.add_argument("--revision", default="master")
     args = parser.parse_args()
     from modelscope import snapshot_download

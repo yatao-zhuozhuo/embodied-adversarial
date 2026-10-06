@@ -269,6 +269,7 @@ def create_env(env_id: str, *, render_mode: str = "rgb_array", seed: int = 0,
         "action_low": result.get("action_low", []),
         "action_high": result.get("action_high", []),
         "action_desc": result.get("action_desc", ""),
+        "input_capabilities": result.get("input_capabilities", {}),
     }
 
 
