@@ -54,7 +54,7 @@ def test_sequential_backward_preserves_episode_gradient_and_handles_dummy_turns(
         args=SimpleNamespace(async_generate=False,loss_type='grpo'),
         accelerator=SimpleNamespace(distributed_type=SimpleNamespace(value='NO'),device='cpu',
             no_sync=lambda model:nullcontext(),backward=backward),
-        optimizer=SimpleNamespace(),current_gradient_accumulation_steps=1,
+        optimizer=SimpleNamespace(param_groups=[]),current_gradient_accumulation_steps=1,
         _prepare_inputs=lambda inputs:{'model_inputs':{},'grpo_batch':None,'_origin_data':samples},
         get_chunked_inputs=lambda mi,gb,a,b,origin:({'i':a},None),
         compute_loss_context_manager=nullcontext,_compute_loss_and_metrics=compute,
@@ -65,3 +65,21 @@ def test_sequential_backward_preserves_episode_gradient_and_handles_dummy_turns(
     assert parameter.grad.item() == pytest.approx(6.75)
     assert len(backwards) == remote_count
     assert obj._step == 1
+
+
+def test_restored_adam_moments_follow_parameter_dtype_without_resetting_step():
+    import torch
+    from agent.training.conditional_turns import align_adam_moments
+    parameter = torch.nn.Parameter(torch.tensor([1., 2.], dtype=torch.bfloat16))
+    optimizer = torch.optim.AdamW([parameter])
+    step = torch.tensor(5., dtype=torch.float32)
+    optimizer.state[parameter] = {'step': step,
+        'exp_avg': torch.tensor([.25, .5]), 'exp_avg_sq': torch.tensor([.125, .25])}
+    assert align_adam_moments(optimizer) == 2
+    assert optimizer.state[parameter]['step'] is step
+    assert optimizer.state[parameter]['exp_avg'].tolist() == [.25, .5]
+    assert optimizer.state[parameter]['exp_avg_sq'].dtype == parameter.dtype
+    assert align_adam_moments(optimizer) == 0
+    parameter.grad = torch.ones_like(parameter)
+    optimizer.step()
+    assert step.item() == 6

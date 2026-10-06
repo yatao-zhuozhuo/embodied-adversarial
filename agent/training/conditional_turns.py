@@ -223,6 +223,12 @@ class ConditionalTurnsMixin:
             if real:
                 metrics.append((metric, weight))
             del loss, weighted
+        aligned = align_adam_moments(self.optimizer)
+        if aligned:
+            path = Path(self.args.output_dir) / 'optimizer_resume_alignment.jsonl'
+            with path.open('a') as stream:
+                stream.write(json.dumps({'step': self.state.global_step,
+                    'rank': self.accelerator.process_index, 'aligned_moments': aligned})+'\n')
         self._aggregate_and_update_metrics(metrics, 'train')
         self._step += 1
         self._current_train_step_time += time.perf_counter() - started
@@ -265,3 +271,25 @@ def episode_token_weights(samples):
     if any(value <= 0 for value in totals.values()):
         raise ValueError('episode has no generated target tokens')
     return [count/totals[sample.request_id] for sample,count in zip(samples,counts)]
+
+
+def align_adam_moments(optimizer):
+    """Match restored Adam moments to parameters after colocate dtype changes.
+
+    Adam's scalar step counters retain their original dtype/device. Moment
+    values and optimizer progress are preserved; only dtype/device are aligned.
+    """
+    changed = 0
+    for group in optimizer.param_groups:
+        for parameter in group['params']:
+            state = optimizer.state.get(parameter, {})
+            for key in ('exp_avg', 'exp_avg_sq', 'max_exp_avg_sq'):
+                moment = state.get(key)
+                if moment is None:
+                    continue
+                if moment.shape != parameter.shape:
+                    raise ValueError('restored Adam moment shape differs from parameter')
+                if moment.dtype != parameter.dtype or moment.device != parameter.device:
+                    state[key] = moment.to(device=parameter.device, dtype=parameter.dtype)
+                    changed += 1
+    return changed
