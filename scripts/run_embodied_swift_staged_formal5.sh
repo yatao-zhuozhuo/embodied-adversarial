@@ -13,6 +13,7 @@
 # Reusing RUN_NAME/RUN_ROOT resumes completed rounds from summary.json and
 # lets Swift resume the active round from its latest checkpoint.
 set -euo pipefail
+export PYTHONDONTWRITEBYTECODE=1
 
 ulimit -c 0 2>/dev/null || true
 
@@ -40,11 +41,22 @@ fi
 # ---------------------------------------------------------------------------
 # 1. Experiment identity and scale
 # ---------------------------------------------------------------------------
-RUN_NAME="${RUN_NAME:-staged_colocate_5round}"
-RUN_ROOT="${RUN_ROOT:-${REPO_ROOT}/runs/${RUN_NAME}}"
+RUN_NAME="${RUN_NAME:-staged_two_tool_xml_5round}"
+# The project QB mount is close to its quota; keep checkpoints and frame
+# artifacts on the project's persistent HDD storage by default.
+OPENETA_RUNS_BASE="${OPENETA_RUNS_BASE:-/inspire/hdd/project/exploration-topic/ky26060/outputs/OpenETA}"
+RUN_ROOT="${RUN_ROOT:-${OPENETA_RUNS_BASE}/${RUN_NAME}}"
 DRY_RUN="${DRY_RUN:-false}"
 ROUNDS="${ROUNDS:-5}"
 TASKS_PER_ROUND="${TASKS_PER_ROUND:-4}"
+OPENETA_EMBODIED_PROTOCOL="${OPENETA_EMBODIED_PROTOCOL:-two_tool_xml_v1}"
+OPENETA_MAX_CONTROL_STEPS="${OPENETA_MAX_CONTROL_STEPS:-96}"
+OPENETA_MCP_PORT="${OPENETA_MCP_PORT:-18765}"
+OPENETA_MCP_PYTHON="${OPENETA_MCP_PYTHON:-${REPO_ROOT}/.venv/bin/python}"
+OPENETA_MANISKILL_PYTHON="${OPENETA_MANISKILL_PYTHON:-${REPO_ROOT}/sim/venvs/maniskill312/bin/python}"
+# The available initial LoRAs were trained on action codes. This run explicitly
+# records their use as a protocol-migration initialization experiment.
+OPENETA_INITIAL_POLICY_ORIGIN="${OPENETA_INITIAL_POLICY_ORIGIN:-legacy_action_codes_migration}"
 
 # ---------------------------------------------------------------------------
 # 2. Eight-rank staged execution
@@ -85,11 +97,14 @@ OPENETA_FORMAT_PENALTY="${OPENETA_FORMAT_PENALTY:-0.10}"
 # ---------------------------------------------------------------------------
 # 4. Generation and context lengths
 # ---------------------------------------------------------------------------
-OPENETA_ENABLE_THINKING="${OPENETA_ENABLE_THINKING:-true}"
+OPENETA_ENABLE_THINKING="${OPENETA_ENABLE_THINKING:-false}"
 OPENETA_THINKING_MAX_TOKENS="${OPENETA_THINKING_MAX_TOKENS:-1024}"
-MAX_COMPLETION_LENGTH="${MAX_COMPLETION_LENGTH:-24576}"
-MAX_LENGTH="${MAX_LENGTH:-32768}"
-VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-32768}"
+# Bob's 24,576-token training sequence hit 139-GiB H200 OOM during backward.
+# Reduce only the sequence ceilings by 12.5%; keep 32 environment turns,
+# eight generations, accumulation, and the model/training algorithm intact.
+MAX_COMPLETION_LENGTH="${MAX_COMPLETION_LENGTH:-21504}"
+MAX_LENGTH="${MAX_LENGTH:-28672}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-28672}"
 MAX_PIXELS="${MAX_PIXELS:-4096}"
 
 # ---------------------------------------------------------------------------
@@ -119,6 +134,14 @@ MODEL_PATH="${MODEL_PATH:-/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-
 INITIAL_ALICE_ADAPTER="${INITIAL_ALICE_ADAPTER:-${REPO_ROOT}/runs/alice_dagger_curriculum/round-0007/alice_adapter}"
 INITIAL_BOB_ADAPTER="${INITIAL_BOB_ADAPTER:-${REPO_ROOT}/runs/embodied_selfplay_grpo16/round-0001/bob_adapter}"
 BOOTSTRAP_ALICE_RUN="${BOOTSTRAP_ALICE_RUN:-${REPO_ROOT}/runs/embodied_selfplay_grpo16}"
+OPENETA_INITIALIZE_FROM_BASE="${OPENETA_INITIALIZE_FROM_BASE:-false}"
+if [[ "${OPENETA_INITIALIZE_FROM_BASE}" == true ]]; then
+  INITIAL_ALICE_ADAPTER=""
+  INITIAL_BOB_ADAPTER=""
+  OPENETA_INITIAL_POLICY_ORIGIN=base_model_fresh_lora
+fi
+export OPENETA_INITIALIZE_FROM_BASE
+
 
 # Holdout evaluation still uses one temporary Bob server after each round.
 BOB_ROLLOUT_GPU="${BOB_ROLLOUT_GPU:-0}"
@@ -133,11 +156,11 @@ if [[ "${#OPENETA_GPU_LIST[@]}" -ne 8 ]]; then
   echo "TRAIN_GPU must contain exactly eight comma-separated GPU IDs" >&2
   exit 2
 fi
-if [[ ! -f "${INITIAL_ALICE_ADAPTER}/adapter_config.json" ]]; then
+if [[ "${OPENETA_INITIALIZE_FROM_BASE}" != true && ! -f "${INITIAL_ALICE_ADAPTER}/adapter_config.json" ]]; then
   echo "Alice adapter is missing: ${INITIAL_ALICE_ADAPTER}" >&2
   exit 2
 fi
-if [[ ! -f "${INITIAL_BOB_ADAPTER}/adapter_config.json" ]]; then
+if [[ "${OPENETA_INITIALIZE_FROM_BASE}" != true && ! -f "${INITIAL_BOB_ADAPTER}/adapter_config.json" ]]; then
   echo "Bob adapter is missing: ${INITIAL_BOB_ADAPTER}" >&2
   exit 2
 fi
@@ -155,6 +178,22 @@ if [[ "${ROUNDS}" -lt 1 || "${MAX_TURNS}" -lt 1 ]]; then
   echo "ROUNDS and MAX_TURNS must be positive" >&2
   exit 2
 fi
+if [[ "${OPENETA_EMBODIED_PROTOCOL}" != "two_tool_xml_v1" ]]; then
+  echo "formal5 two-tool launcher requires OPENETA_EMBODIED_PROTOCOL=two_tool_xml_v1" >&2
+  exit 2
+fi
+if [[ ! -x "${OPENETA_MANISKILL_PYTHON}" ]]; then
+  echo "ManiSkill worker Python is missing: ${OPENETA_MANISKILL_PYTHON}" >&2
+  exit 2
+fi
+if [[ ! -x "${OPENETA_MCP_PYTHON}" ]]; then
+  echo "MCP server Python is missing: ${OPENETA_MCP_PYTHON}" >&2
+  exit 2
+fi
+if [[ "${OPENETA_MAX_CONTROL_STEPS}" -lt 1 ]]; then
+  echo "OPENETA_MAX_CONTROL_STEPS must be positive" >&2
+  exit 2
+fi
 EXPECTED_GENERATION_BATCH_SIZE=$((
   PER_DEVICE_TRAIN_BATCH_SIZE * 8 * STEPS_PER_GENERATION
 ))
@@ -166,6 +205,9 @@ fi
 
 echo "Starting staged embodied self-play"
 echo "  run_root:       ${RUN_ROOT}"
+echo "  protocol:       ${OPENETA_EMBODIED_PROTOCOL}"
+echo "  initial_policy: ${OPENETA_INITIAL_POLICY_ORIGIN}"
+echo "  control_budget: ${OPENETA_MAX_CONTROL_STEPS}"
 echo "  rounds:         ${ROUNDS}"
 echo "  train_gpus:     ${TRAIN_GPU}"
 echo "  dataset_gpu:    ${DATASET_GPU}"
@@ -176,6 +218,10 @@ echo "  tilelang:       ${OPENETA_TILELANG_OVERLAY}"
 echo "  vulkan_icd:     ${VK_ICD_FILENAMES:-auto-detect}"
 echo "  vulkan_loader:  ${OPENETA_VULKAN_LOADER}"
 echo "  max_turns:      ${MAX_TURNS}"
+echo "  thinking:       ${OPENETA_ENABLE_THINKING}"
+echo "  max_completion_length: ${MAX_COMPLETION_LENGTH}"
+echo "  max_length:    ${MAX_LENGTH}"
+echo "  vllm_max_model_len: ${VLLM_MAX_MODEL_LEN}"
 echo "  generations:    ${NUM_GENERATIONS}"
 echo "  alice_adapter:  ${INITIAL_ALICE_ADAPTER}"
 echo "  bob_adapter:    ${INITIAL_BOB_ADAPTER}"
@@ -185,7 +231,57 @@ if [[ "${DRY_RUN,,}" =~ ^(1|true|yes|on)$ ]]; then
   exit 0
 fi
 
+export OPENETA_ENABLE_THINKING OPENETA_THINKING_MAX_TOKENS MAX_TURNS OPENETA_MAX_CONTROL_STEPS
+export MAX_LENGTH MAX_COMPLETION_LENGTH VLLM_MAX_MODEL_LEN MAX_PIXELS ROUNDS TASKS_PER_ROUND
+export TRAIN_EPOCHS TRAIN_STEPS LR TEMPERATURE TOP_P INITIAL_ALICE_ADAPTER INITIAL_BOB_ADAPTER
+export OPENETA_INITIAL_POLICY_ORIGIN
+export MODEL_PATH TRAIN_GPU NUM_GENERATIONS GENERATION_BATCH_SIZE LORA_RANK LORA_ALPHA OPENETA_BOB_EVALUATIONS
+"${SWIFT_VENV:-/opt/openeta-swift}/bin/python" scripts/record_embodied_xml_run.py "${RUN_ROOT}"
 mkdir -p "${RUN_ROOT}"
+
+if curl --noproxy '*' --connect-timeout 1 -fsS \
+    "http://127.0.0.1:${OPENETA_MCP_PORT}/session/readiness/envs" >/dev/null 2>&1; then
+  echo "MCP port ${OPENETA_MCP_PORT} is already in use" >&2
+  exit 2
+fi
+
+if [[ -z "${OPENETA_HOST_STATE_TOKEN:-}" ]]; then
+  OPENETA_HOST_STATE_TOKEN="$("${SWIFT_VENV:-/opt/openeta-swift}/bin/python" -c 'import secrets; print(secrets.token_urlsafe(32))')"
+fi
+OPENETA_EMBODIED_MCP_URL="http://127.0.0.1:${OPENETA_MCP_PORT}"
+export OPENETA_EMBODIED_PROTOCOL OPENETA_MAX_CONTROL_STEPS
+export OPENETA_INITIAL_POLICY_ORIGIN OPENETA_HOST_STATE_TOKEN OPENETA_EMBODIED_MCP_URL
+export OPENETA_MANISKILL_PYTHON OPENETA_WORKER_GPUS="${OPENETA_WORKER_GPUS:-0}"
+export OPENETA_WORKER_POOL_MAX="${OPENETA_WORKER_POOL_MAX:-1}"
+mkdir -p "${RUN_ROOT}/logs"
+export OPENETA_WORKER_LOG_DIR="${OPENETA_WORKER_LOG_DIR:-${RUN_ROOT}/logs/workers}"
+mkdir -p "${OPENETA_WORKER_LOG_DIR}"
+setsid "${OPENETA_MCP_PYTHON}" -m sim.mcp_server --host 127.0.0.1 --port "${OPENETA_MCP_PORT}" \
+  >"${RUN_ROOT}/logs/simulator-mcp.log" 2>&1 &
+OPENETA_MCP_PID=$!
+printf '%s\n' "${OPENETA_MCP_PID}" >"${RUN_ROOT}/logs/simulator-mcp.pid"
+cleanup_mcp() {
+  echo "Stopping simulator MCP pid ${OPENETA_MCP_PID} at $(date -u +%Y-%m-%dT%H:%M:%SZ)" >>"${RUN_ROOT}/logs/simulator-mcp.log"
+  kill "${OPENETA_MCP_PID}" 2>/dev/null || true
+  wait "${OPENETA_MCP_PID}" 2>/dev/null || true
+}
+trap cleanup_mcp EXIT INT TERM
+OPENETA_MCP_READY=false
+for _ in $(seq 1 60); do
+  if curl --noproxy '*' -fsS "${OPENETA_EMBODIED_MCP_URL}/session/readiness/envs" >/dev/null 2>&1; then
+    OPENETA_MCP_READY=true
+    break
+  fi
+  if ! kill -0 "${OPENETA_MCP_PID}" 2>/dev/null; then break; fi
+  sleep 1
+done
+if [[ "${OPENETA_MCP_READY}" != "true" ]]; then
+  echo "Simulator MCP did not become ready; see ${RUN_ROOT}/logs/simulator-mcp.log" >&2
+  exit 3
+fi
+"${SWIFT_VENV:-/opt/openeta-swift}/bin/python" \
+  "${REPO_ROOT}/scripts/validate_embodied_two_tool_mcp.py" \
+  --output "${RUN_ROOT}/mcp_preflight.json"
 
 export RUN_ROOT ROUNDS TASKS_PER_ROUND
 export TRAIN_GPU DATASET_GPU OPENETA_MANISKILL_RENDER_BACKEND
@@ -207,4 +303,4 @@ export LORA_RANK LORA_ALPHA MODEL_PATH
 export INITIAL_ALICE_ADAPTER INITIAL_BOB_ADAPTER BOOTSTRAP_ALICE_RUN
 export BOB_ROLLOUT_GPU BOB_PORT ALICE_PORT
 
-exec "${REPO_ROOT}/scripts/run_embodied_swift_formal10.sh"
+"${REPO_ROOT}/scripts/run_embodied_swift_formal10.sh"

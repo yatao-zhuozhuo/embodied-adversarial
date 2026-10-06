@@ -3,7 +3,8 @@ set -euo pipefail
 
 # Eight-rank colocate entry for staged Alice training and ordinary Bob GRPO.
 # Alice uses one base model per GPU and routes adapter ID 1 (current Alice),
-# then adapter ID 2 (the frozen Bob) through the same local vLLM engine.
+# then adapter ID 2 (frozen Bob), or base weights for the first fresh round,
+# through the same local vLLM engine.
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SWIFT_VENV="${SWIFT_VENV:-/opt/openeta-swift}"
@@ -63,13 +64,13 @@ elif [[ -n "${TRAIN_ADAPTER_PATH}" ]]; then
 fi
 
 if [[ "${ROLE}" == "alice" ]]; then
-  if [[ -z "${OPENETA_FROZEN_BOB_ADAPTER:-}" || ! -d "${OPENETA_FROZEN_BOB_ADAPTER}" ]]; then
+  if [[ "${OPENETA_INITIALIZE_FROM_BASE:-false}" != true && ( -z "${OPENETA_FROZEN_BOB_ADAPTER:-}" || ! -d "${OPENETA_FROZEN_BOB_ADAPTER}" ) ]]; then
     echo "Alice staged training requires OPENETA_FROZEN_BOB_ADAPTER" >&2
     exit 2
   fi
   export OPENETA_STAGED_COLOCATE=true
   export OPENETA_BOB_EVALUATIONS="${OPENETA_BOB_EVALUATIONS:-2}"
-  export OPENETA_BOB_POLICY_VERSION="${OPENETA_BOB_POLICY_VERSION:-${OPENETA_FROZEN_BOB_ADAPTER}}"
+  export OPENETA_BOB_POLICY_VERSION="${OPENETA_BOB_POLICY_VERSION:-${OPENETA_FROZEN_BOB_ADAPTER:-base_model}}"
   SCHEDULER="embodied_alice_scheduler"
   REWARD_FUNC="embodied_alice_reward"
   ENTRY=(
@@ -86,8 +87,19 @@ else
   echo "ROLE must be alice or bob" >&2
   exit 2
 fi
+if [[ "${OPENETA_EMBODIED_PROTOCOL:-legacy}" == "two_tool_xml_v1" ]]; then
+  SCHEDULER="embodied_two_tool_${ROLE}_scheduler"
+elif [[ "${OPENETA_EMBODIED_PROTOCOL:-legacy}" != "legacy" ]]; then
+  echo "Unsupported model protocol: ${OPENETA_EMBODIED_PROTOCOL}; select two_tool_xml_v1 explicitly" >&2
+  exit 2
+fi
 
-exec "${ENTRY[@]}" \
+INPUT_ARGS=()
+if [[ "${OPENETA_INPUT_PROTOCOL:-}" == "openeta.two_tool_input.v1" ]]; then
+  INPUT_ARGS+=(--loss_scale last_round)
+fi
+
+exec "${ENTRY[@]}" "${INPUT_ARGS[@]}" \
   --rlhf_type grpo \
   --model "${MODEL_PATH}" \
   "${INIT_ARGS[@]}" \
@@ -100,7 +112,7 @@ exec "${ENTRY[@]}" \
   --vllm_mode colocate \
   --multi_turn_scheduler "${SCHEDULER}" \
   --max_turns "${MAX_TURNS}" \
-  --completion_length_limit_scope total \
+  --completion_length_limit_scope "${OPENETA_COMPLETION_SCOPE:-total}" \
   --vllm_tensor_parallel_size 1 \
   --vllm_max_model_len "${VLLM_MAX_MODEL_LEN:-32768}" \
   --vllm_max_num_seqs "${VLLM_MAX_NUM_SEQS:-1}" \

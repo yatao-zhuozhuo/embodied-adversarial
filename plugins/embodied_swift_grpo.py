@@ -16,6 +16,7 @@ import math
 import os
 import re
 import sys
+import uuid
 from contextlib import suppress
 from copy import deepcopy
 from dataclasses import dataclass, field, replace
@@ -38,9 +39,19 @@ from swift.rollout.multi_turn import MultiTurnScheduler, multi_turns
 
 from adapter.maniskill_sim import ManiSkillSimulatorAdapter
 from adapter.maniskill_process import IsolatedManiSkillSimulatorAdapter
+from adapter.maniskill_mcp import McpPickCubeAdapter
 from adapter.protocol import EnvAction
 from agent.runtime.embodied_goal import PositionGoalChecker
 from agent.runtime.embodied_selfplay_prompt import ALICE_TASK, BOB_TASK, build_embodied_prompt
+from agent.runtime.embodied_two_tool import (
+    ALICE_TASK as XML_ALICE_TASK, BOB_TASK as XML_BOB_TASK,
+    PROTOCOL_VERSION, build_prompt as build_two_tool_prompt,
+    parse_command, project_observation,
+)
+from agent.runtime.two_tool_xml import parse_decision, PROMPT_VERSION, INVALID_POLICY
+from agent.runtime.two_tool_input import INPUT_PROTOCOL, make_profile
+from agent.training.grpo_input import InputBuilder, execution_receipt
+from agent.training.conditional_turns import enabled as input_v1_enabled, make_input_encoder, persist_input_record
 from agent.runtime.embodied_snapshot import SnapshotRef
 from agent.runtime.embodied_task_compiler import CompiledTask, compile_cube_position_task
 from agent.training.embodied_grpo import ALLOWED_ACTIONS, parse_action
@@ -441,7 +452,7 @@ def _find_rollout_info(value: Any) -> dict[str, Any] | None:
 class _EpisodeState:
     request_id: str
     role: str
-    env: ManiSkillSimulatorAdapter | IsolatedManiSkillSimulatorAdapter
+    env: ManiSkillSimulatorAdapter | IsolatedManiSkillSimulatorAdapter | McpPickCubeAdapter
     snapshot: SnapshotRef
     instruction: str
     max_steps: int
@@ -468,10 +479,21 @@ class _EpisodeState:
     pending_prompt: str | None = None
     done: bool = False
     final_info: dict[str, Any] = field(default_factory=dict)
+    max_control_steps: int = 96
+    control_steps: int = 0
+    invalid_streak: int = 0
+    observe_streak: int = 0
+    feedback: dict[str, Any] = field(default_factory=dict)
+    visible_inputs: list[dict[str, Any]] = field(default_factory=list)
+    input_builder: Any = None
+    pending_input: Any = None
+    last_observation: Any = None
+    last_task_state: dict[str, Any] = field(default_factory=dict)
 
 
 class _EmbodiedScheduler(MultiTurnScheduler):
     role = ""
+    two_tool = False
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -488,6 +510,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             os.environ.get("OPENETA_SWIFT_ARTIFACT_ROOT", str(REPO_ROOT / "runs/swift_rollouts"))
         ).resolve()
         self._artifact_root.mkdir(parents=True, exist_ok=True)
+        self.input_records = {}
+        self.input_encoder = None
 
     async def run(
         self,
@@ -496,6 +520,31 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         **kwargs: Any,
     ) -> RolloutOutput | list[RolloutOutput]:
         bounded = self.prepare_request_config(request_config)
+        if input_v1_enabled():
+            self.input_encoder = make_input_encoder(self.infer_engine.template)
+            await self.on_trajectory_start([infer_request])
+            infos = {}
+            for turn in range(1, self.max_turns + 1):
+                response = await self.infer_engine.infer_async(infer_request, bounded, **kwargs)
+                record = self._episodes[_request_id(infer_request)].visible_inputs[-1]
+                if list(response.prompt_token_ids or []) != record['prompt_token_ids']:
+                    raise ValueError('provider prompt differs from input snapshot')
+                record['prompt_verified'] = True
+                record['actual_prompt_token_ids'] = list(response.prompt_token_ids)
+                persist_input_record(record)
+                choice = response.choices[0]
+                infer_request.messages.append({'role':'assistant','content':_choice_content(choice)})
+                ret = await self.on_turn_end(infer_request, choice, turn)
+                infos.update(ret.get('rollout_infos') or {})
+                if ret.get('done'):
+                    break
+                self.step(infer_request, choice, turn)
+            records = self.input_records.pop(_request_id(infer_request))
+            return RolloutOutput(response=response, messages=infer_request.messages,
+                response_token_ids=[r['response_token_ids'] for r in records],
+                response_loss_mask=[r['response_loss_mask'] for r in records],
+                rollout_logprobs=[r['rollout_logprobs'] for r in records],
+                rollout_infos={**infos,'num_turns':len(records)})
         output = await super().run(infer_request, bounded, **kwargs)
         outputs = output if isinstance(output, list) else [output]
         for item in outputs:
@@ -547,6 +596,12 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         # Copy per request: mutating a trainer-shared RequestConfig would create
         # cross-request races under async rollout.
         bounded = deepcopy(request_config)
+        if self.two_tool:
+            bounded.max_tokens = self._thinking_max_tokens if self._thinking_enabled else 768
+            bounded.structured_outputs_regex = None
+            bounded.return_details = True
+            bounded.logprobs = True
+            return bounded
         if self._thinking_enabled:
             # Qwen's thinking template must be free to emit its reasoning and
             # closing </think> before the final bounded action.  Execution is
@@ -578,11 +633,11 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 raise TypeError("env_request.snapshot must contain the full SnapshotRef mapping")
             snapshot = _snapshot_from_mapping(snapshot_payload)
             env_id = str(config.get("env_id") or snapshot.metadata.get("env_id") or "PickCube-v1")
-            adapter_cls = (
-                IsolatedManiSkillSimulatorAdapter
-                if self._isolate_maniskill
-                else ManiSkillSimulatorAdapter
-            )
+            adapter_cls = (McpPickCubeAdapter if self.two_tool else
+                IsolatedManiSkillSimulatorAdapter if self._isolate_maniskill else
+                ManiSkillSimulatorAdapter)
+            if self.two_tool and env_id != "PickCube-v1":
+                raise ValueError("two-tool protocol supports only PickCube-v1")
             env = adapter_cls(
                 env_id=env_id,
                 camera_resolution=int(config.get("camera_resolution", 128)),
@@ -621,6 +676,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 env.close()
                 raise
 
+            if self.two_tool:
+                instruction = XML_ALICE_TASK if self.role == "alice" else XML_BOB_TASK
+
             configured_max_steps = int(config.get("max_steps") or self.max_turns or 40)
             if self.max_turns:
                 configured_max_steps = min(configured_max_steps, int(self.max_turns))
@@ -641,6 +699,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                 goal_tolerance=float(config.get("goal_tolerance", 0.025)),
                 replay_tolerance=float(config.get("replay_tolerance", 0.005)),
                 thinking_enabled=self._thinking_enabled,
+                last_observation=observation, last_task_state=dict(initial_state),
+                max_control_steps=int(config.get("max_control_steps") or os.environ.get("OPENETA_MAX_CONTROL_STEPS", "96")),
                 camera_resolution=int(config.get("camera_resolution", 128)),
                 seen_goal_cells=set(map(str, config.get("seen_goal_cells") or [])),
                 bob_evaluator_url=(
@@ -684,17 +744,33 @@ class _EmbodiedScheduler(MultiTurnScheduler):
                     raise ValueError("bob_max_steps must be positive")
                 if not 0.0 < state.target_success_rate < 1.0:
                     raise ValueError("target_success_rate must be in (0, 1)")
+            if input_v1_enabled():
+                profile = make_profile('maniskill', 'PickCube-v1', state.env.created,
+                    {'action_dim':7,'action_low':state.env.action_low,'action_high':state.env.action_high})
+                if state.camera_resolution != 256:
+                    raise ValueError('input v1 requires native 256px profile')
+                state.input_builder = InputBuilder(profile, role=self.role, task=instruction,
+                    directory=self._artifact_root/'input_frames')
+                self._episodes[request_id] = state
+                self._set_unified_input(state, infer_request, observation, 0, new_observation=True)
+                continue
             image, image_hash = _image_base64(observation)
             state.image_hashes.append(image_hash)
-            prompt = build_embodied_prompt(
-                self.role,
-                observation,
-                step_index=0,
-                max_steps=state.max_steps,
+            if self.two_tool:
+                self._save_two_tool_frame(image_hash, image)
+                state.visible_inputs.append({"turn": 0,
+                    "image_sha256": image_hash,
+                    "observation": project_observation(observation.to_dict()),
+                    "feedback": {}})
+            prompt = (build_two_tool_prompt(
+                self.role, project_observation(observation.to_mcp_dict()),
+                turn=0, max_turns=state.max_steps,
+                remaining_control_steps=state.max_control_steps,
+            ) if self.two_tool else build_embodied_prompt(
+                self.role, observation, step_index=0, max_steps=state.max_steps,
                 initial_cube_position=list(initial_state["cube_position"]),
-                instruction=instruction,
-                enable_thinking=state.thinking_enabled,
-            )
+                instruction=instruction, enable_thinking=state.thinking_enabled,
+            ))
             infer_request.messages = [{"role": "user", "content": f"<image>\n{prompt}"}]
             infer_request.images = [image]
             infer_request.chat_template_kwargs = {
@@ -713,6 +789,9 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         state = self._episodes.get(request_id)
         if state is None:
             return {"done": True, "rollout_infos": self._failure_info(request_id, "missing session")}
+
+        if self.two_tool:
+            return await self._two_tool_turn(infer_request, response_choice, current_turn, state)
 
         raw_completion = _choice_content(response_choice)
         parsed = _parsed_model_action(raw_completion)
@@ -808,6 +887,196 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             await self._close(request_id, mark_finished=True)
             return {"done": True, "rollout_infos": info | {"images": list(infer_request.images)}}
 
+    async def _two_tool_turn(
+        self, infer_request: RolloutInferRequest, response_choice: Any,
+        current_turn: int, state: _EpisodeState,
+    ) -> dict[str, Any]:
+        raw = _choice_content(response_choice)
+        if state.input_builder is not None:
+            record = state.visible_inputs[-1]
+            ids = list(getattr(response_choice, 'token_ids', None) or [])
+            lps = self._extract_logprobs_from_choice(response_choice)
+            if not ids or len(ids) != len(lps):
+                raise ValueError('input v1 requires complete generated IDs and logprobs')
+            record.update(answer=raw, response_token_ids=ids, response_loss_mask=[1]*len(ids),
+                          rollout_logprobs=lps, finish_reason=response_choice.finish_reason,
+                          episode_id=state.request_id, turn=current_turn)
+            persist_input_record(record)
+        command: dict[str, Any] | None = None
+        validation = None
+        error: str | None = None
+        receipt: dict[str, Any] = {}
+        executed = 0
+        terminated = False
+        truncated = False
+        environment_reward = 0.0
+        try:
+            try:
+                validation = parse_decision(raw, action_low=state.env.action_low,
+                    action_high=state.env.action_high,
+                    remaining_control_steps=state.max_control_steps - state.control_steps,
+                    finish_reason=getattr(response_choice, "finish_reason", None))
+                decision = validation["decision"]
+                command = ({"response": "finish"} if decision["kind"] == "response"
+                           else {"tool": decision["name"], **decision["parameters"]})
+                if command.get("tool") == "step_env" and command["num_steps"] > state.max_control_steps - state.control_steps:
+                    raise ValueError("step exceeds remaining control-step budget")
+            except ValueError as exc:
+                error = str(exc)
+                state.invalid_streak += 1
+
+            if command == {"tool": "observe_env"} and error is None:
+                state.observe_streak += 1
+                if state.observe_streak > 3:
+                    error = "too many consecutive observations without progress"
+                    state.invalid_streak += 1
+                    observation = state.last_observation
+                else:
+                    observation = state.env.observe()
+                    receipt = {"tool": "observe_env", "executed": True}
+            elif command and command.get("tool") == "step_env" and error is None:
+                state.observe_streak = 0
+                # A transport loss after sending this call has an unknown
+                # physical outcome. Never retry the vector blindly.
+                result, raw_receipt = state.env.step_vector(command["action"], command["num_steps"])
+                executed = int(raw_receipt["executed_control_steps"])
+                state.control_steps += executed
+                observation = result.observation
+                terminated, truncated = bool(result.terminated), bool(result.truncated)
+                environment_reward = float(result.reward)
+                receipt = {k: v for k, v in raw_receipt.items() if k != "observation"}
+                receipt["tool"] = "step_env"
+                receipt["executed"] = True
+            else:
+                observation = state.last_observation
+                if command == {"response": "finish"}:
+                    state.observe_streak = 0
+
+            if error is None:
+                state.invalid_streak = 0
+            elif validation is not None:
+                validation = {**validation, "valid": False, "error": error}
+            task_state = state.env.task_state() if executed else state.last_task_state
+            state.last_observation, state.last_task_state = observation, dict(task_state)
+            tcp = list(observation.robot.end_effector_pose.get("xyz") or [])
+            distance = (_distance(list(task_state["cube_position"]), tcp)
+                        if len(tcp) == 3 else state.initial_tcp_distance)
+            goal_success, goal_score, goal_details = False, 0.0, {}
+            if state.role == "bob" and state.goal_predicate is not None:
+                evaluation = self._checker.evaluate(state=task_state, predicate=state.goal_predicate)
+                goal_success, goal_score, goal_details = (
+                    evaluation.success, evaluation.score, evaluation.details
+                )
+            state.steps.append({
+                "turn": current_turn, "completion": raw, "command": command,
+                "validation": validation or {"valid": False, "repaired": False, "error": error},
+                "action": (command.get("tool") or command.get("response")) if command else "invalid",
+                "valid_action": error is None, "strict_action_format": error is None,
+                "invalid_reason": error, "mcp_receipt": receipt,
+                "executed_control_steps": executed, "reward_scope": "last_control_step",
+                "environment_reward": environment_reward, "goal_success": goal_success,
+                "goal_score": goal_score, "goal_details": goal_details,
+                "cube_position": list(task_state["cube_position"]), "tcp_position": tcp,
+                "cube_tcp_distance": distance,
+                "is_grasped": _plain_bool(task_state.get("is_grasped", False)),
+                "terminated": terminated, "truncated": truncated,
+            })
+            done = bool(goal_success or command == {"response": "finish"} or terminated or
+                        truncated or current_turn >= state.max_steps or
+                        state.control_steps >= state.max_control_steps or state.invalid_streak >= 3)
+            if state.input_builder is not None:
+                used_tokens = sum(len(r.get('response_token_ids',[])) for r in state.visible_inputs)
+                per_turn = self._thinking_max_tokens if state.thinking_enabled else 768
+                done = done or used_tokens + per_turn > int(os.environ.get('MAX_COMPLETION_LENGTH','21504'))
+                receipt_v1 = execution_receipt(decision_id=current_turn,
+                    command=command if error is None else None, executed_steps=executed,
+                    error=error, terminated=terminated, truncated=truncated)
+                state.input_builder.record(raw, receipt_v1)
+                state.steps[-1]['input_execution'] = receipt_v1
+            if done:
+                final_image, final_digest = _image_base64(observation)
+                state.image_hashes.append(final_digest)
+                self._save_two_tool_frame(final_digest, final_image)
+                state.done = True
+                final_info = await self._finalize(state)
+                state.final_info = final_info
+                self._write_artifact(state)
+                await self._close(state.request_id, mark_finished=True)
+                return {"done": True, "rollout_infos": final_info | {"images": list(infer_request.images)}}
+
+            if state.input_builder is not None:
+                self._set_unified_input(state, infer_request, observation, current_turn,
+                    new_observation=error is None and command != {'response':'finish'})
+                return {'done':False, 'rollout_infos':self._progress_info(state)}
+            next_image, digest = _image_base64(observation)
+            state.image_hashes.append(digest)
+            self._save_two_tool_frame(digest, next_image)
+            infer_request.images.append(next_image)
+            state.feedback = {"tool": receipt.get("tool"), "executed_control_steps": executed,
+                              "terminated": terminated, "truncated": truncated, "error": error}
+            state.visible_inputs.append({"turn": current_turn,
+                "image_sha256": digest,
+                "observation": project_observation(observation.to_dict()),
+                "feedback": dict(state.feedback)})
+            state.pending_prompt = build_two_tool_prompt(
+                state.role, project_observation(observation.to_dict()), turn=current_turn,
+                max_turns=state.max_steps,
+                remaining_control_steps=state.max_control_steps - state.control_steps,
+                feedback=state.feedback,
+            )
+            return {"done": False,
+                    "rollout_infos": self._progress_info(state) | {"images": list(infer_request.images)}}
+        except Exception as exc:  # noqa: BLE001
+            info = self._failure_info(state.request_id, f"{type(exc).__name__}: {exc}")
+            if command and command.get("tool") == "step_env" and not receipt:
+                info["termination_reason"] = "outcome_unknown"
+                if state.input_builder is not None:
+                    state.visible_inputs[-1]['execution'] = execution_receipt(
+                        decision_id=current_turn, command=command, executed_steps=None,
+                        outcome_unknown=True, error=f'{type(exc).__name__}: {exc}')
+            state.final_info = info
+            self._write_artifact(state)
+            await self._close(state.request_id, mark_finished=True)
+            return {"done": True, "rollout_infos": info | {"images": list(infer_request.images)}}
+
+    def _set_unified_input(self, state, request, observation, turn, *, new_observation):
+        if self.input_encoder is None:
+            raise ValueError('input v1 requires exact Swift multimodal encoder')
+        builder = state.input_builder
+        obs_id = f'{state.request_id}:obs:{turn}' if new_observation else builder.current['observation_id']
+        builder.observe(observation.to_dict(), observation_id=obs_id, turn=turn,
+                        new_observation=new_observation)
+        built = builder.build(remaining_turns=state.max_steps-turn,
+            remaining_control_steps=state.max_control_steps-state.control_steps,
+            generation_budget=self._thinking_max_tokens if state.thinking_enabled else 768,
+            context_limit=int(os.environ.get('VLLM_MAX_MODEL_LEN','28672')),
+            encode=self.input_encoder, enable_thinking=state.thinking_enabled)
+        safe_id = re.sub(r'[^A-Za-z0-9_.-]+','-',state.request_id)[:160]
+        built['audit_path'] = str(self._artifact_root/'inputs'/f'{safe_id}.turn-{turn+1:04d}.json')
+        persist_input_record(built)
+        state.visible_inputs.append(built)
+        self.input_records[state.request_id] = state.visible_inputs
+        # Requests are replaced only by step(), after Swift records the old response.
+        if turn == 0:
+            request.messages = deepcopy(built['request']['messages'])
+            request.images = list(built['request']['images'])
+            request.chat_template_kwargs = deepcopy(built['request']['chat_template_kwargs'])
+        else:
+            state.pending_input = built['request']
+
+    def _save_two_tool_frame(self, digest: str, encoded: str) -> None:
+        directory = self._artifact_root / "frames"
+        directory.mkdir(parents=True, exist_ok=True)
+        path = directory / f"{digest}.png"
+        if path.is_file() and path.stat().st_size > 0:
+            return
+        temporary = directory / f"{digest}.{os.getpid()}.{uuid.uuid4().hex}.tmp"
+        try:
+            temporary.write_bytes(base64.b64decode(encoded))
+            temporary.replace(path)
+        finally:
+            temporary.unlink(missing_ok=True)
+
     def step(
         self,
         infer_request: RolloutInferRequest,
@@ -815,6 +1084,15 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         current_turn: int,
     ) -> dict[str, Any]:
         state = self._episodes.get(_request_id(infer_request))
+        if state is not None and state.pending_input is not None:
+            request = state.pending_input
+            infer_request.messages = deepcopy(request['messages'])
+            infer_request.images = list(request['images'])
+            infer_request.chat_template_kwargs = deepcopy(request['chat_template_kwargs'])
+            state.pending_input = None
+            ids = list(response_choice.token_ids)
+            return {'infer_request':infer_request, 'response_token_ids':ids,
+                    'response_loss_mask':[1]*len(ids)}
         if state is None or state.pending_prompt is None:
             return {"infer_request": infer_request}
         infer_request.messages.append({
@@ -845,10 +1123,12 @@ class _EmbodiedScheduler(MultiTurnScheduler):
     def _progress_info(self, state: _EpisodeState) -> dict[str, Any]:
         return {
             "schema_version": "openeta.embodied_rollout.v1",
+            "protocol_version": PROTOCOL_VERSION if self.two_tool else "openeta.embodied_action_code.v1",
             "role": state.role,
             "request_id": state.request_id,
             "snapshot_sha256": state.snapshot.state_sha256,
             "step_count": len(state.steps),
+            "control_step_count": state.control_steps,
             "done": False,
         }
 
@@ -1094,7 +1374,12 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         state.env.restore_snapshot(state.snapshot)
         state.env.set_goal_position(HIDDEN_ALICE_GOAL)
         for step in state.steps:
-            state.env.step(EnvAction(action_type=step["action"], code=step["action"]))
+            if self.two_tool:
+                command = step.get("command") or {}
+                if command.get("tool") == "step_env" and step.get("valid_action"):
+                    state.env.step_vector(command["action"], command["num_steps"])
+            else:
+                state.env.step(EnvAction(action_type=step["action"], code=step["action"]))
         replay_final = state.env.task_state()
         replay_equal = _distance(
             list(generated_final["cube_position"]),
@@ -1108,7 +1393,8 @@ class _EmbodiedScheduler(MultiTurnScheduler):
             tolerance=state.goal_tolerance,
         )
         has_real_operation = any(
-            step["valid_action"] and step["action"] not in {"DONE"}
+            step["valid_action"] and
+            (step["action"] == "step_env" if self.two_tool else step["action"] != "DONE")
             for step in state.steps
         )
         if not has_real_operation:
@@ -1124,6 +1410,12 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         if not state.steps:
             return "empty_trajectory"
         last = state.steps[-1]
+        if last.get("command") == {"response": "finish"}:
+            return "model_finish"
+        if state.control_steps >= state.max_control_steps:
+            return "max_control_steps"
+        if state.invalid_streak >= 3:
+            return "invalid_command_limit"
         if last["valid_action"] and last["action"] == "DONE":
             return "model_done"
         if last["terminated"]:
@@ -1152,14 +1444,26 @@ class _EmbodiedScheduler(MultiTurnScheduler):
         path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
             "schema_version": "openeta.embodied_rollout.v1",
+            "protocol_version": PROTOCOL_VERSION if self.two_tool else "openeta.embodied_action_code.v1",
             "request_id": state.request_id,
             "role": state.role,
             "thinking_enabled": state.thinking_enabled,
+            "prompt_version": PROMPT_VERSION if self.two_tool else None,
+            "observation_config": {"initial": "host", "camera_resolution": state.camera_resolution, "projection": "rgb_robot_only"},
+            "invalid_policy": INVALID_POLICY if self.two_tool else None,
+            "generation_config": {"per_turn_max_tokens": self._thinking_max_tokens if self._thinking_enabled else 768,
+                                  "supervision": "generated_thinking_and_answer_only"},
             "snapshot": state.snapshot.to_dict(),
             "instruction": state.instruction,
             "initial_state": state.initial_state,
             "steps": state.steps,
             "image_hashes": state.image_hashes,
+            "visible_inputs": state.visible_inputs,
+            "input_protocol": INPUT_PROTOCOL if state.input_builder is not None else None,
+            "input_profile": state.input_builder.profile if state.input_builder is not None else None,
+            "initial_policy_origin": os.environ.get("OPENETA_INITIAL_POLICY_ORIGIN", "native"),
+            "visual_goal_marker": "calibrated_rgb_overlay" if self.two_tool and state.role == "bob" else None,
+            "restore_receipts": list(state.env.restore_receipts) if self.two_tool else [],
             "final_info": state.final_info,
         }
         temporary = path.with_suffix(".json.tmp")
@@ -1181,6 +1485,14 @@ class EmbodiedBobScheduler(_EmbodiedScheduler):
 
 class EmbodiedAliceScheduler(_EmbodiedScheduler):
     role = "alice"
+
+
+class EmbodiedTwoToolBobScheduler(EmbodiedBobScheduler):
+    two_tool = True
+
+
+class EmbodiedTwoToolAliceScheduler(EmbodiedAliceScheduler):
+    two_tool = True
 
 
 class _TrustedRolloutReward(ORM):
@@ -1211,8 +1523,15 @@ class EmbodiedAliceReward(_TrustedRolloutReward):
 
 multi_turns["embodied_bob_scheduler"] = EmbodiedBobScheduler
 multi_turns["embodied_alice_scheduler"] = EmbodiedAliceScheduler
+multi_turns["embodied_two_tool_bob_scheduler"] = EmbodiedTwoToolBobScheduler
+multi_turns["embodied_two_tool_alice_scheduler"] = EmbodiedTwoToolAliceScheduler
 orms["embodied_bob_reward"] = EmbodiedBobReward
 orms["embodied_alice_reward"] = EmbodiedAliceReward
 # Compatibility alias for datasets/configs produced before frozen-Bob
 # evaluation was connected.  It resolves to the same final reward now.
 orms["embodied_alice_proposal_reward"] = EmbodiedAliceReward
+
+# New input mode uses per-decision training samples, including ordinary Bob GRPO.
+if input_v1_enabled() and not _env_bool("OPENETA_STAGED_COLOCATE", False):
+    from swift.trainers.trainer_factory import TrainerFactory
+    TrainerFactory.TRAINER_MAPPING['grpo'] = 'agent.training.input_grpo_trainer.InputGRPOTrainer'

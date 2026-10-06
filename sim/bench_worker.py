@@ -24,9 +24,10 @@ The worker exposes a subset of the REST API:
 
 from __future__ import annotations
 
-import argparse, asyncio, base64, copy, io, json, math, os, queue, sys, threading, uuid, warnings
+import argparse, asyncio, base64, copy, io, json, math, os, queue, sys, threading, time, uuid, warnings
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 import contextlib
+from pathlib import Path
 
 warnings.filterwarnings("ignore")
 os.environ.setdefault("MUJOCO_GL", "egl")
@@ -94,7 +95,7 @@ _env_errors: dict[str, str] = {}  # handle → last error message
 # (1) is serialising, producing the "handle matches but scene doesn't"
 # garbling.  ``_gl_lock`` only guards the GPU call, not this shared dict, so
 # we need a separate per-handle lock that spans "mutate/read obs + serialise".
-_obs_locks: dict[str, threading.Lock] = {}
+_obs_locks: dict[str, threading.RLock] = {}
 _obs_locks_guard = threading.Lock()
 
 # Handles whose episode has already terminated/truncated.  robosuite raises
@@ -109,12 +110,12 @@ _done_handles: set[str] = set()
 _terminal_step_results: dict[str, dict] = {}
 
 
-def _obs_lock_for(handle: str) -> threading.Lock:
+def _obs_lock_for(handle: str) -> threading.RLock:
     """Return (creating if needed) the per-handle observation lock."""
     with _obs_locks_guard:
         lock = _obs_locks.get(handle)
         if lock is None:
-            lock = threading.Lock()
+            lock = threading.RLock()
             _obs_locks[handle] = lock
         return lock
 
@@ -541,6 +542,10 @@ def _reset_with_image(env, seed=None, handle: str = "") -> dict:
         return EnvObservation.from_dict(obs).to_mcp_dict()
 
 
+
+
+
+
 def _observe_with_image(env, handle: str = "") -> dict:
     """Return the last cached observation as MCP dict.
 
@@ -734,8 +739,8 @@ async def create_env(request):
         s = env.action_space
         adim = int(s.shape[0]) if hasattr(s, "shape") and s.shape else None
         if hasattr(s, "low"):
-            alo = [float(x) for x in s.low[:min(7, len(s.low))]]
-            ahi = [float(x) for x in s.high[:min(7, len(s.high))]]
+            alo = [float(x) for x in s.low]
+            ahi = [float(x) for x in s.high]
     except Exception:
         pass
     be = getattr(env, "_backend", "")
@@ -779,8 +784,10 @@ async def create_env(request):
     }.get(be, "")
 
     control_spec: dict = {}
+    control_mode = ""
     try:
         direct_env = getattr(env, "_env", env)
+        control_mode = str(getattr(env._unwrap(), "control_mode", ""))
         candidate = getattr(direct_env, "openeta_control_spec", {})
         if isinstance(candidate, dict):
             control_spec = candidate
@@ -793,10 +800,18 @@ async def create_env(request):
             f"{controller.get('goal_executor', '<unknown>')}"
         )
 
+    input_control_contract = {}
+    if be in {"metaworld", "libero", "maniskill", "robocasa"}:
+        from sim.two_tool_contract import controller_contract
+        try:
+            input_control_contract = controller_contract(env, be)
+        except Exception as error:
+            input_control_contract = {"error": f"{type(error).__name__}: {error}"}
     return _json_response({
         "handle": h, "env_id": eid, "action_dim": adim, "action_desc": adesc,
         "action_low": alo, "action_high": ahi, "backend": be, "action_hint": hints,
         "robot": body.get("robot"), "control_spec": control_spec,
+        "control_mode": control_mode, "input_control_contract": input_control_contract,
     })
 
 
@@ -871,7 +886,21 @@ async def step_env(request):
 
     body = _safe_json_body(await request.body()) if request.method == "POST" else {}
     act = body.get("action")
-    num_steps = max(1, int(body.get("num_steps", 1)))
+    strict = body.get("strict", False) is True
+    if strict:
+        steps_value = body.get("num_steps")
+        if isinstance(steps_value, bool) or not isinstance(steps_value, int) or not 1 <= steps_value <= 10:
+            return _json_response({"error": "num_steps must be an integer in [1, 10]"}, 400)
+        aspace = env.action_space
+        if not isinstance(aspace, gym.spaces.Box) or len(aspace.shape) != 1:
+            return _json_response({"error": "unexpected action space"}, 400)
+        if not isinstance(act, list) or len(act) != aspace.shape[0]:
+            return _json_response({"error": "action dimension differs from environment contract"}, 400)
+        if any(isinstance(x, bool) or not isinstance(x, (int, float)) or not math.isfinite(x) for x in act):
+            return _json_response({"error": "action must contain finite numbers"}, 400)
+        if any(not float(aspace.low[i]) <= x <= float(aspace.high[i]) for i, x in enumerate(act)):
+            return _json_response({"error": "action outside environment bounds"}, 400)
+    num_steps = body["num_steps"] if strict else max(1, int(body.get("num_steps", 1)))
     render = bool(body.get("render", True))
 
     try:
@@ -882,7 +911,7 @@ async def step_env(request):
             act = np.array(act, dtype=np.float32)
 
         aspace = env.action_space
-        if isinstance(aspace, gym.spaces.Box) and act.ndim == 1:
+        if not strict and isinstance(aspace, gym.spaces.Box) and act.ndim == 1:
             exp = int(aspace.shape[0])
             if exp != act.shape[0]:
                 if act.shape[0] > exp:
@@ -893,14 +922,23 @@ async def step_env(request):
                 act = np.clip(act, aspace.low[:len(act)], aspace.high[:len(act)])
 
         def _run_steps():
-            res = None
-            for _ in range(num_steps):
-                res = _step_with_image(env, act, handle=h, render=render)
-                if res.get("terminated") or res.get("truncated"):
-                    break
-            if res is None:
-                res = _observe_with_image(env, handle=h)  # fallback: try observe
-            return res
+            with _obs_lock_for(h):
+                res = None
+                executed = 0
+                for _ in range(num_steps):
+                    res = _step_with_image(env, act, handle=h, render=render)
+                    if res.get("error"):
+                        break
+                    if not (isinstance(res.get("info"), dict) and
+                            res["info"].get("terminal_result_replayed")):
+                        executed += 1
+                    if res.get("terminated") or res.get("truncated"):
+                        break
+                if res is None:
+                    res = _observe_with_image(env, handle=h)  # fallback: try observe
+                res["executed_control_steps"] = executed
+                res["reward_scope"] = "last_control_step"
+                return res
 
         # Offload the blocking sim/render loop so the event loop stays free.
         result = await _run_sim_call(_run_steps)
@@ -919,6 +957,108 @@ async def observe_env(request):
     if env is None:
         return _json_response({"error": f"Unknown handle: {h}"}, 400)
     return _json_response(await _run_sim_call(_observe_with_image, env, handle=h))
+
+
+async def host_state_env(request):
+    """Private worker operation; the MCP server exposes it only via host auth."""
+    h = request.path_params.get("handle", "")
+    env = _envs.get(h)
+    if env is None:
+        return _json_response({"error": f"Unknown handle: {h}"}, 400)
+    if request.app.state.bench != "maniskill" or getattr(env, "_env_id", "") != "openeta/maniskill_PickCube-v1-v0":
+        return _json_response({"error": "host state supports only ManiSkill PickCube-v1"}, 400)
+    body = _safe_json_body(await request.body())
+    operation = body.get("operation")
+
+    def _operate():
+        import torch
+        from adapter.maniskill_sim import _state_digest
+        from adapter.protocol import EnvObservation
+        from mani_skill.utils.structs.pose import Pose
+
+        with _obs_lock_for(h), _gl_lock:
+            inner = env._unwrap()
+            if operation == "task_state":
+                evaluation = inner.evaluate()
+                def flag(name):
+                    value = evaluation.get(name, False)
+                    if hasattr(value, "detach"):
+                        value = value.detach().cpu()
+                    return bool(np.asarray(value).reshape(-1)[0])
+                return {
+                    "cube_position": np.asarray(inner.cube.pose.p.detach().cpu()).reshape(-1)[:3].tolist(),
+                    "goal_position": np.asarray(inner.goal_site.pose.p.detach().cpu()).reshape(-1)[:3].tolist(),
+                    "is_grasped": flag("is_grasped"),
+                    "is_obj_placed": flag("is_obj_placed"),
+                }
+            if operation == "capture":
+                directory = Path(str(body.get("snapshot_dir") or ""))
+                if not directory.is_absolute():
+                    raise ValueError("snapshot_dir must be absolute")
+                payload = {
+                    "state": copy.deepcopy(inner.get_state_dict()),
+                    "elapsed_steps": copy.deepcopy(getattr(inner, "_elapsed_steps", None)),
+                    "adapter_state": {"gripper_command": 1.0},
+                }
+                digest = _state_digest(payload)
+                snapshot_id = f"maniskill-{digest[:16]}"
+                directory.mkdir(parents=True, exist_ok=True)
+                path = directory / f"{snapshot_id}.pt"
+                torch.save(payload, path)
+                return {"snapshot_id": snapshot_id, "env_id": "openeta/maniskill_PickCube-v1-v0",
+                        "state_uri": str(path), "state_sha256": digest, "seed": body.get("seed"),
+                        "metadata": {"backend": "maniskill", "env_id": "PickCube-v1", "format": "state_dict-v2"}}
+            if operation == "restore":
+                reference = body.get("snapshot") or {}
+                path = Path(str(reference.get("state_uri") or ""))
+                if not path.is_file():
+                    raise FileNotFoundError(path)
+                payload = torch.load(path, map_location="cpu", weights_only=False)
+                digest = _state_digest(payload)
+                if digest != reference.get("state_sha256"):
+                    raise ValueError("snapshot hash mismatch")
+                inner.set_state_dict(copy.deepcopy(payload["state"]))
+                # Contact refresh mirrors the direct ManiSkill adapter.
+                hold = np.zeros(7, dtype=np.float32)
+                hold[-1] = float((payload.get("adapter_state") or {}).get("gripper_command", 1.0))
+                env.step(hold)
+                inner.set_state_dict(copy.deepcopy(payload["state"]))
+                if payload.get("elapsed_steps") is not None:
+                    inner._elapsed_steps = copy.deepcopy(payload["elapsed_steps"])
+                _done_handles.discard(h)
+                _terminal_step_results.pop(h, None)
+                state_hash = _state_digest({"state": inner.get_state_dict(),
+                                            "elapsed_steps": getattr(inner, "_elapsed_steps", None),
+                                            "adapter_state": payload.get("adapter_state")})
+                # ManiSkill may refresh controller/contact bookkeeping while
+                # applying set_state_dict. Preserve both hashes for replay
+                # comparison; the source payload was verified above.
+            elif operation == "set_goal":
+                position = body.get("position")
+                if not isinstance(position, list) or len(position) != 3 or any(
+                    isinstance(x, bool) or not isinstance(x, (int, float)) or not math.isfinite(x)
+                    for x in position
+                ):
+                    raise ValueError("goal must be three finite coordinates")
+                xyz = torch.tensor([position], dtype=torch.float32, device=inner.device)
+                inner.goal_site.set_pose(Pose.create_from_pq(xyz))
+                state_hash = None
+            else:
+                raise ValueError("unknown host operation")
+            raw = inner.get_obs()
+            obs = env._normalise_obs(raw)
+            _inject_render_frame(env, obs)
+            _last_obs[h] = obs
+            return {"ok": True, "state_sha256": digest if operation == "restore" else state_hash,
+                    "restored_state_sha256": state_hash if operation == "restore" else None,
+                    "observation": EnvObservation.from_dict(obs).to_mcp_dict()}
+
+    try:
+        return _json_response(await _run_sim_call(_operate))
+    except Exception as exc:
+        return _json_response({"error": f"{type(exc).__name__}: {exc}"}, 400)
+
+
 
 
 async def reachability_env(request):
@@ -1130,6 +1270,7 @@ app = Starlette(routes=[
     Route("/env/{handle}/reset", reset_env, methods=["POST"]),
     Route("/env/{handle}/step", step_env, methods=["POST"]),
     Route("/env/{handle}/observe", observe_env, methods=["POST"]),
+    Route("/env/{handle}/host-state", host_state_env, methods=["POST"]),
     Route("/env/{handle}/render", render_env, methods=["POST"]),
     Route("/env/{handle}/reachability", reachability_env, methods=["POST"]),
     Route("/env/{handle}/controller-goal", controller_goal_env, methods=["POST"]),
@@ -1142,6 +1283,17 @@ app = Starlette(routes=[
 # ══════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
+    parent_pid = int(os.environ.get("OPENETA_WORKER_PARENT_PID", "0"))
+    if parent_pid:
+        def _watch_parent() -> None:
+            # A subprocess spawned in an AnyIO thread must watch the process,
+            # not use Linux PDEATHSIG, which follows the spawning thread.
+            while os.getppid() == parent_pid:
+                time.sleep(2)
+            os._exit(0)
+
+        threading.Thread(target=_watch_parent, name="mcp-parent-watch", daemon=True).start()
+
     p = argparse.ArgumentParser(description="OpenETA Bench Worker")
     p.add_argument("--bench", required=True, help="Bench name (libero, metaworld, maniskill, etc.)")
     p.add_argument("--port", type=int, default=0, help="Port (0 = random)")

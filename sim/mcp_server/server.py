@@ -14,6 +14,7 @@ import functools
 import hashlib
 import math
 import os
+import secrets
 import sys
 import threading
 import uuid
@@ -22,6 +23,7 @@ import anyio.to_thread
 
 from starlette.applications import Starlette
 from starlette.routing import Route
+from starlette.responses import JSONResponse
 
 from sim.mcp_server.session import (
     _current_session,
@@ -251,6 +253,7 @@ def create_env(env_id: str, *, render_mode: str = "rgb_array", seed: int = 0,
         "action_dim": result.get("action_dim"),
         "robot": result.get("robot") or robot,
         "control_spec": result.get("control_spec", {}),
+        "control_mode": result.get("control_mode"),
         "_expose_objects": bool(include_objects),
         "_collision_objects": [],
         "_sid": sid,
@@ -263,9 +266,12 @@ def create_env(env_id: str, *, render_mode: str = "rgb_array", seed: int = 0,
     return {
         "session_id": sid, "handle": h, "env_id": env_id,
         "action_dim": result.get("action_dim"), "backend": result.get("backend"),
+        "action_low": result.get("action_low"), "action_high": result.get("action_high"),
         "robot": result.get("robot") or robot,
         "control_spec": result.get("control_spec", {}),
+        "input_control_contract": result.get("input_control_contract", {}),
         "action_hint": result.get("action_hint", ""),
+        "control_mode": result.get("control_mode", ""),
     }
 
 
@@ -412,7 +418,8 @@ def reset_env(handle: str, *, seed: int | None = None, session_id: str = "") -> 
 
 @_blocking_tool
 @_serialized_env_control
-def step_env(handle: str, action: list | None = None, *, num_steps: int = 1, session_id: str = "") -> dict:
+def step_env(handle: str, action: list | None = None, *, num_steps: int = 1,
+             session_id: str = "", strict: bool = False) -> dict:
     """Execute one or more environment steps.
 
     Args:
@@ -442,7 +449,7 @@ def step_env(handle: str, action: list | None = None, *, num_steps: int = 1, ses
     meta = _session_envs.get(sid, {}).get(handle)
     if not meta:
         return {"error": f"Unknown: {handle}"}
-    result = _proxy_step(meta, action, num_steps=num_steps)
+    result = _proxy_step(meta, action, num_steps=num_steps, strict=strict)
     attachment_receipt = _refresh_attachment_proxy(meta, result)
     if attachment_receipt is not None:
         result["attachment_proxy_receipt"] = attachment_receipt
@@ -2685,6 +2692,8 @@ def observe_env(handle: str, *, session_id: str = "") -> dict:
     return _proxy_observe(meta)
 
 
+
+
 @_blocking_tool
 def render_env(handle: str, *, session_id: str = "") -> dict:
     """Return a fresh render of the environment.
@@ -2782,6 +2791,39 @@ def list_active_envs(*, session_id: str = "") -> dict:
 # Starlette app + ASGI combined
 # ══════════════════════════════════════════════════════════════════════
 
+async def _host_state_endpoint(request):
+    """Authenticated host management plane; absent from the MCP tool catalog."""
+    token = os.environ.get("OPENETA_HOST_STATE_TOKEN", "")
+    supplied = request.headers.get("x-openeta-host-token", "")
+    if not token or not secrets.compare_digest(token, supplied):
+        return JSONResponse({"error": "unauthorized"}, status_code=403)
+    sid = request.path_params["sid"]
+    handle = request.path_params["handle"]
+    meta = _session_envs.get(sid, {}).get(handle)
+    if not meta or meta.get("backend") != "maniskill":
+        return JSONResponse({"error": "unknown PickCube handle"}, status_code=404)
+    try:
+        body = await request.json()
+    except Exception:
+        return JSONResponse({"error": "invalid JSON"}, status_code=400)
+    if not isinstance(body, dict) or body.get("operation") not in {
+        "capture", "restore", "set_goal", "task_state"
+    }:
+        return JSONResponse({"error": "invalid host operation"}, status_code=400)
+
+    def _run():
+        with _env_control_lock(sid, handle):
+            result = _get_mgr().proxy_handle_op(
+                meta, f"/env/{meta['remote_handle']}/host-state", method="POST", body=body
+            )
+            if body["operation"] in {"restore", "set_goal"} and not result.get("error"):
+                _proxy_observe(meta)
+            return result
+
+    result = await anyio.to_thread.run_sync(_run)
+    return JSONResponse(result, status_code=400 if result.get("error") else 200)
+
+
 def _build_dashboard_app() -> Starlette:
     """Build the Starlette app for the live camera view.
 
@@ -2793,6 +2835,7 @@ def _build_dashboard_app() -> Starlette:
     (``/api/...``) were removed.
     """
     return Starlette(routes=[
+        Route("/host-state/{sid}/{handle}", _host_state_endpoint, methods=["POST"]),
         Route("/session/{sid}", session_dashboard, methods=["GET"]),
         Route("/session/{sid}/envs", session_envs, methods=["GET"]),
         Route("/session/{sid}/stream", session_stream, methods=["GET"]),
@@ -2916,9 +2959,12 @@ def main() -> None:
     # server that spawned it -- for BEHAVIOR that is a ~6.5 GB VRAM process per
     # env with no owner left to close it.  uvicorn installs its own
     # SIGINT/SIGTERM handling and returns from run(), so ``finally`` covers the
-    # ordinary paths and atexit covers exits that bypass it.  A SIGKILLed
-    # server can run neither, which is why workers also carry PR_SET_PDEATHSIG.
+    # ordinary paths and atexit covers exits that bypass it. A SIGKILLed
+    # server can run neither, so workers also watch the server process PID.
     def _reap_workers() -> None:
+        from datetime import datetime, timezone
+        print(f"[mcp_server] reaping workers pid={os.getpid()} at "
+              f"{datetime.now(timezone.utc).isoformat()}", flush=True)
         try:
             _get_mgr().stop_all()
         except Exception:

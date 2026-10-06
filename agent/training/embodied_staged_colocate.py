@@ -38,6 +38,7 @@ from plugins.embodied_swift_grpo import (
     BOB_TASK,
     EmbodiedAliceScheduler,
     EmbodiedBobScheduler,
+    EmbodiedTwoToolBobScheduler,
     _find_rollout_info,
 )
 
@@ -87,7 +88,10 @@ def register_staged_trainer() -> None:
     )
 
 
-class StagedEmbodiedGRPOTrainer(GRPOTrainer):
+from agent.training.conditional_turns import ConditionalTurnsMixin
+
+
+class StagedEmbodiedGRPOTrainer(ConditionalTurnsMixin, GRPOTrainer):
     """Use all data-parallel ranks for Alice, Bob, then unchanged GRPO."""
 
     def _prepare_scheduler(self) -> None:
@@ -107,25 +111,25 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             )
         self.alice_scheduler = self.multi_turn_scheduler
         tokenizer = getattr(self, "processing_class", None)
-        self.bob_scheduler = EmbodiedBobScheduler(
+        bob_scheduler_cls = (EmbodiedTwoToolBobScheduler if getattr(self.alice_scheduler, "two_tool", False)
+                             else EmbodiedBobScheduler)
+        self.bob_scheduler = bob_scheduler_cls(
             max_turns=self.args.max_turns,
             tokenizer=tokenizer,
         )
         self._staged_group_index = 0
         self._train_forward_seconds = 0.0
         self._optimizer_window: list[dict[str, float]] = []
-        self._bob_adapter_path = Path(
-            os.environ.get("OPENETA_FROZEN_BOB_ADAPTER", "")
-        ).expanduser().resolve()
-        if not self._bob_adapter_path.is_dir():
-            raise ValueError(
-                "OPENETA_FROZEN_BOB_ADAPTER must point to a frozen LoRA checkpoint directory"
-            )
-        if not (self._bob_adapter_path / "adapter_config.json").is_file():
+        bob_path = os.environ.get("OPENETA_FROZEN_BOB_ADAPTER", "").strip()
+        self._bob_adapter_path = Path(bob_path).expanduser().resolve() if bob_path else None
+        if self._bob_adapter_path is None:
+            if os.environ.get("OPENETA_INITIALIZE_FROM_BASE") != "true":
+                raise ValueError("Frozen Bob requires a checkpoint or explicit base initialization")
+        elif not (self._bob_adapter_path / "adapter_config.json").is_file():
             raise ValueError("frozen Bob adapter has no adapter_config.json")
-        self._bob_policy_version = os.environ.get(
-            "OPENETA_BOB_POLICY_VERSION", str(self._bob_adapter_path)
-        )
+        self._bob_policy_version = (os.environ.get("OPENETA_BOB_POLICY_VERSION") or
+                                    str(self._bob_adapter_path or "base_model"))
+        self._bob_adapter_name = BOB_LORA_NAME if self._bob_adapter_path else "base_model"
         configured_root = os.environ.get("OPENETA_STAGED_ARTIFACT_ROOT")
         self._staged_artifact_root = Path(
             configured_root or Path(self.args.output_dir).resolve().parent
@@ -322,7 +326,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             lora_int_id=ALICE_LORA_ID,
             lora_path=rollout_mixin.VLLM_LORA_PATH,
         )
-        bob = LoRARequest(
+        bob = None if self._bob_adapter_path is None else LoRARequest(
             lora_name=BOB_LORA_NAME,
             lora_int_id=BOB_LORA_ID,
             lora_path=str(self._bob_adapter_path),
@@ -330,6 +334,8 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
         return alice, bob
 
     def _ensure_bob_adapter(self, bob_request: Any) -> None:
+        if bob_request is None:
+            return
         loaded = set(self.engine.engine.list_loras())
         if BOB_LORA_ID not in loaded:
             self.engine.engine.add_lora(bob_request)
@@ -342,13 +348,13 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
         request_config: RequestConfig,
         adapter_request: Any,
     ) -> list[RolloutOutput]:
-        with self._disable_sp_context():
-            return self.engine.infer(
-                infer_requests,
-                request_config,
-                use_tqdm=False,
+        from agent.training.base_model_routing import base_model_inference
+        with self._disable_sp_context(), base_model_inference(self.engine, adapter_request is None):
+            outputs = self.engine.infer(
+                infer_requests, request_config, use_tqdm=False,
                 adapter_request=adapter_request,
             )
+            return self._verify_prompts(infer_requests, outputs)
 
     def _rollout_with_adapter(
         self,
@@ -480,8 +486,40 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             proposals.append(proposal)
         return proposals
 
-    @staticmethod
-    def _bob_sample(request: BobEvalRequest, proposal: AliceProposal) -> OnPolicySample:
+    def _raise_on_two_tool_infrastructure_errors(
+        self, samples: list[OnPolicySample], *, phase: str,
+    ) -> None:
+        """Abort every rank before GRPO can optimize failed simulator receipts."""
+        if not getattr(self.alice_scheduler, "two_tool", False):
+            return
+        local_errors = []
+        for sample in samples:
+            info = _find_rollout_info(sample.rollout_infos) or {}
+            if info.get("infrastructure_error") or info.get("termination_reason") == "outcome_unknown":
+                local_errors.append({
+                    "rank": self.accelerator.process_index,
+                    "request_id": sample.request_id,
+                    "reason": info.get("termination_reason"),
+                    "error": info.get("infrastructure_error"),
+                })
+        errors = gather_object(local_errors)
+        if errors:
+            raise RuntimeError(
+                f"two-tool {phase} phase has simulator infrastructure errors; "
+                f"GRPO group aborted: {errors[:4]}"
+            )
+        local_control_steps = [
+            int((_find_rollout_info(sample.rollout_infos) or {}).get("control_step_count") or 0)
+            for sample in samples
+        ]
+        group_control_steps = gather_object(local_control_steps)
+        if not any(count > 0 for count in group_control_steps):
+            raise RuntimeError(
+                f"two-tool {phase} phase executed zero control steps across the GRPO group; "
+                "fix the policy output format before optimizing"
+            )
+
+    def _bob_sample(self, request: BobEvalRequest, proposal: AliceProposal) -> OnPolicySample:
         source_info = proposal.alice_rollout_info
         env_request = {
             "role": "bob",
@@ -507,7 +545,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                     "enable_thinking": bool(source_info.get("thinking_enabled", False))
                 },
                 "phase": "bob_evaluation",
-                "adapter_name": BOB_LORA_NAME,
+                "adapter_name": self._bob_adapter_name,
                 "policy_version": request.bob_policy_version,
             },
         )
@@ -597,7 +635,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
             "global_step": self.state.global_step,
             "group_index": self._staged_group_index,
             "alice_adapter": ALICE_LORA_NAME,
-            "bob_adapter": BOB_LORA_NAME,
+            "bob_adapter": self._bob_adapter_name,
             "bob_policy_version": self._bob_policy_version,
             "proposals": [
                 {
@@ -651,6 +689,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                 alice_outputs = self._run_scheduler_phase(
                     samples, self.alice_scheduler, alice_adapter
                 )
+            self._raise_on_two_tool_infrastructure_errors(alice_outputs, phase="alice")
             alice_seconds = time.monotonic() - alice_start
             local_proposals = self._extract_local_proposals(alice_outputs)
             all_proposal_dicts = gather_object(
@@ -701,6 +740,7 @@ class StagedEmbodiedGRPOTrainer(GRPOTrainer):
                         bob_outputs = self._run_scheduler_phase(
                             bob_samples, self.bob_scheduler, bob_adapter
                         )
+                    self._raise_on_two_tool_infrastructure_errors(bob_outputs, phase="bob")
                     attempt_receipts = [
                         self._receipt_from_sample(request, output)
                         for request, output in zip(pending_requests, bob_outputs)

@@ -40,6 +40,12 @@ else
   echo "ROLE must be alice or bob" >&2
   exit 2
 fi
+if [[ "${OPENETA_EMBODIED_PROTOCOL:-legacy}" == "two_tool_xml_v1" ]]; then
+  SCHEDULER="embodied_two_tool_${ROLE}_scheduler"
+elif [[ "${OPENETA_EMBODIED_PROTOCOL:-legacy}" != "legacy" ]]; then
+  echo "Unsupported model protocol: ${OPENETA_EMBODIED_PROTOCOL}; select two_tool_xml_v1 explicitly" >&2
+  exit 2
+fi
 
 export PYTHONPATH="${REPO_ROOT}${PYTHONPATH:+:${PYTHONPATH}}"
 export OPENETA_SWIFT_ARTIFACT_ROOT="${OPENETA_SWIFT_ARTIFACT_ROOT:-${OUTPUT_DIR}/rollouts}"
@@ -103,6 +109,9 @@ else
   export NPROC_PER_NODE="${#OPENETA_TRAIN_GPU_LIST[@]}"
 fi
 TRAIN_INIT_ARGS=()
+if [[ "${OPENETA_INPUT_PROTOCOL:-}" == "openeta.two_tool_input.v1" ]]; then
+  TRAIN_INIT_ARGS+=(--loss_scale last_round)
+fi
 if [[ -n "${RESUME_FROM_CHECKPOINT}" ]]; then
   TRAIN_INIT_ARGS+=(--resume_from_checkpoint "${RESUME_FROM_CHECKPOINT}")
 elif [[ -n "${TRAIN_ADAPTER_PATH}" ]]; then
@@ -123,7 +132,7 @@ elif [[ "${VLLM_MODE}" == "colocate" ]]; then
   VLLM_TRAIN_ARGS+=(
     --multi_turn_scheduler "${SCHEDULER}"
     --max_turns "${MAX_TURNS}"
-    --completion_length_limit_scope total
+    --completion_length_limit_scope "${OPENETA_COMPLETION_SCOPE:-total}"
     --vllm_tensor_parallel_size "${VLLM_TENSOR_PARALLEL_SIZE:-1}"
     --vllm_max_model_len "${VLLM_MAX_MODEL_LEN:-65536}"
     --vllm_max_num_seqs "${VLLM_MAX_NUM_SEQS:-1}"

@@ -4128,9 +4128,13 @@ def _extract_xyz(
     return float(xyz[0]), float(xyz[1]), float(xyz[2])
 
 
-def _timeout_delta(timeout_s: float | None) -> timedelta | None:
+def _timeout_delta(timeout_s: float | None) -> timedelta | float | None:
     if timeout_s is None:
         return None
+    # MCP SDK 2 expects seconds as float; SDK 1 expects timedelta.
+    from importlib.metadata import version
+    if int(version("mcp").split(".", 1)[0]) >= 2:
+        return float(timeout_s)
     return timedelta(seconds=timeout_s)
 
 

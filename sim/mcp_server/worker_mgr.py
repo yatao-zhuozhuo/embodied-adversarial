@@ -50,39 +50,6 @@ def _bench_for_env_id(env_id: str) -> str:
 
 
 # ══════════════════════════════════════════════════════════════════════
-# Orphan protection
-# ══════════════════════════════════════════════════════════════════════
-
-def _die_with_parent() -> None:  # pragma: no cover - runs in the forked child
-    """Ask the kernel to SIGTERM this child when its parent dies (Linux).
-
-    Cleanup driven from the parent (``atexit``, signal handlers, the TTL
-    sweeper) cannot run when the parent is SIGKILLed or dies hard, and Isaac
-    Sim's own shutdown path hard-exits.  A BEHAVIOR worker orphaned that way
-    keeps ~6.5 GB of VRAM with nothing left holding a reference to it.
-    ``PR_SET_PDEATHSIG`` is enforced by the kernel, so it survives cases no
-    userspace hook can cover.
-
-    Best-effort: unavailable on non-Linux, where the parent-side hooks remain
-    the only defence.  Also re-checks that the parent is still alive, closing
-    the race where it exits between fork and prctl.
-    """
-    try:
-        import ctypes
-        import signal as _signal
-
-        PR_SET_PDEATHSIG = 1
-        libc = ctypes.CDLL("libc.so.6", use_errno=True)
-        libc.prctl(PR_SET_PDEATHSIG, _signal.SIGTERM, 0, 0, 0)
-        # If the parent died before prctl was installed, the signal will never
-        # arrive -- getppid()==1 means we are already reparented to init.
-        if os.getppid() == 1:
-            os._exit(1)
-    except Exception:
-        pass
-
-
-# ══════════════════════════════════════════════════════════════════════
 # Worker-pool configuration
 # ══════════════════════════════════════════════════════════════════════
 
@@ -327,6 +294,12 @@ def _start_pipe_drainers(proc: "subprocess.Popen") -> None:
             pass
         finally:
             if sink is not None:
+                if tag == "err":
+                    try:
+                        code = proc.wait(timeout=1)
+                        sink.write(f"[worker_mgr] worker {proc.pid} exited with code {code}\n")
+                    except subprocess.TimeoutExpired:
+                        sink.write(f"[worker_mgr] worker {proc.pid} stderr closed while alive\n")
                 sink.close()
 
     for stream, tag in ((proc.stdout, "out"), (proc.stderr, "err")):
@@ -422,6 +395,10 @@ class BenchWorkerManager:
         gpu = self._gpus[self._next_gpu % len(self._gpus)]
         self._next_gpu += 1
         child_env = dict(os.environ)
+        # Popen runs on a short-lived AnyIO worker thread. Linux PDEATHSIG is
+        # tied to the creating *thread*, so it kills a healthy simulator when
+        # that thread retires. The worker instead watches the MCP process PID.
+        child_env["OPENETA_WORKER_PARENT_PID"] = str(os.getpid())
 
         # Pin BOTH compute and rendering to the same physical GPU.
         #   * CUDA (torch) honours CUDA_VISIBLE_DEVICES → the pinned GPU becomes
@@ -508,7 +485,6 @@ class BenchWorkerManager:
             stderr=subprocess.PIPE,
             text=True,
             env=child_env,
-            preexec_fn=_die_with_parent,
         )
         # Read the port line from stdout (first non-empty digit-only line)
         port_str = ""
@@ -747,7 +723,8 @@ class BenchWorkerManager:
 # Proxy helpers (used by REST API and MCP tools)
 # ══════════════════════════════════════════════════════════════════════
 
-def _proxy_step(meta: dict, action, num_steps: int = 1, render: bool = True) -> dict:
+def _proxy_step(meta: dict, action, num_steps: int = 1, render: bool = True,
+                strict: bool = False) -> dict:
     """Proxy a step request to the worker and cache the observation.
 
     When ``render`` is ``False`` the worker skips its inline camera render,
@@ -765,6 +742,8 @@ def _proxy_step(meta: dict, action, num_steps: int = 1, render: bool = True) -> 
         else:
             body["action"] = action
     body["num_steps"] = num_steps
+    if strict:
+        body["strict"] = True
     if not render:
         body["render"] = False
     result = mgr.proxy_handle_op(meta, f"/env/{meta['remote_handle']}/step", method="POST", body=body)

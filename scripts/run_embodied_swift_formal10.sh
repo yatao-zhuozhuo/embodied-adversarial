@@ -210,8 +210,8 @@ fi
 # ---------------------------------------------------------------------------
 # Round 0 从已有 Alice/Bob LoRA adapter 起步；后续 round 会自动使用上一轮
 # 新生成的 checkpoint。
-INITIAL_ALICE_ADAPTER="${INITIAL_ALICE_ADAPTER:-${REPO_ROOT}/runs/alice_dagger_curriculum/round-0007/alice_adapter}"
-INITIAL_BOB_ADAPTER="${INITIAL_BOB_ADAPTER:-${REPO_ROOT}/runs/embodied_selfplay_grpo16/round-0001/bob_adapter}"
+INITIAL_ALICE_ADAPTER="${INITIAL_ALICE_ADAPTER-${REPO_ROOT}/runs/alice_dagger_curriculum/round-0007/alice_adapter}"
+INITIAL_BOB_ADAPTER="${INITIAL_BOB_ADAPTER-${REPO_ROOT}/runs/embodied_selfplay_grpo16/round-0001/bob_adapter}"
 # 当本轮 Alice 没有足够有效题目时，Bob 数据集会回退到这个历史 run。
 BOOTSTRAP_ALICE_RUN="${BOOTSTRAP_ALICE_RUN:-${REPO_ROOT}/runs/embodied_selfplay_grpo16}"
 DATASET_DIR="${RUN_ROOT}/datasets"
@@ -359,21 +359,21 @@ if [[ ! -s "${BOOTSTRAP_BOB_DATASET}" ]]; then
   CUDA_VISIBLE_DEVICES="${DATASET_GPU}" \
   "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
     --role bob --source-run "${BOOTSTRAP_ALICE_RUN}" --output "${BOOTSTRAP_BOB_DATASET}" \
-    --count 4 --skip 0 --max-steps "${MAX_TURNS}" --camera-resolution 64 \
+    --count 4 --skip 0 --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" \
     "${THINKING_DATASET_FLAG}"
 fi
 if [[ ! -s "${BOB_HOLDOUT_DATASET}" ]]; then
   CUDA_VISIBLE_DEVICES="${DATASET_GPU}" \
   "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
     --role bob --source-run "${BOOTSTRAP_ALICE_RUN}" --output "${BOB_HOLDOUT_DATASET}" \
-    --count 4 --skip 4 --max-steps "${MAX_TURNS}" --camera-resolution 64 \
+    --count 4 --skip 4 --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" \
     "${THINKING_DATASET_FLAG}"
 fi
 if [[ ! -s "${ALICE_FIXED_DATASET}" ]]; then
   CUDA_VISIBLE_DEVICES="${DATASET_GPU}" \
   "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
     --role alice --output "${ALICE_FIXED_DATASET}" --count 4 --seed-start 30000 \
-    --max-steps "${MAX_TURNS}" --camera-resolution 64 "${THINKING_DATASET_FLAG}"
+    --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" "${THINKING_DATASET_FLAG}"
 fi
 
 # Round 0 使用初始 adapter；每轮结束后这两个变量会更新为新 checkpoint。
@@ -410,7 +410,7 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
     "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
       --role alice --output "${alice_dataset}" --count "${TASKS_PER_ROUND}" \
       --seed-start $((31000 + round_index * TASKS_PER_ROUND)) \
-      --max-steps "${MAX_TURNS}" --camera-resolution 64 "${THINKING_DATASET_FLAG}"
+      --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" "${THINKING_DATASET_FLAG}"
   fi
 
   IFS=$'\t' read -r alice_checkpoint alice_complete < <(
@@ -530,13 +530,13 @@ for round_index in $(seq 0 $((ROUNDS - 1))); do
   else
     if "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
         --role bob --source-run "${round_dir}/alice_rollout" --output "${bob_dataset}" \
-        --count "${TASKS_PER_ROUND}" --max-steps "${MAX_TURNS}" --camera-resolution 64 \
+        --count "${TASKS_PER_ROUND}" --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" \
         "${THINKING_DATASET_FLAG}"; then
       bob_dataset_mode="new_alice"
     else
       "${PYTHON}" "${REPO_ROOT}/scripts/create_embodied_swift_dataset.py" \
         --role bob --source-run "${BOOTSTRAP_ALICE_RUN}" --output "${bob_dataset}" \
-        --count 4 --skip 0 --max-steps "${MAX_TURNS}" --camera-resolution 64 \
+        --count 4 --skip 0 --max-steps "${MAX_TURNS}" --camera-resolution "${OPENETA_CAMERA_RESOLUTION:-64}" \
         "${THINKING_DATASET_FLAG}"
       bob_dataset_mode="bootstrap_fallback"
     fi

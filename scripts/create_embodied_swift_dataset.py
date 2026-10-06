@@ -13,8 +13,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from agent.runtime.two_tool_xml import PROTOCOL_VERSION
 from adapter.maniskill_sim import ManiSkillSimulatorAdapter
-from agent.runtime.embodied_selfplay_prompt import ALICE_TASK, BOB_TASK
+from agent.runtime.embodied_two_tool import ALICE_TASK, BOB_TASK
 
 
 def parse_args() -> argparse.Namespace:
@@ -47,6 +48,7 @@ def _row(role: str, env_request: dict[str, Any], *, row_id: str) -> dict[str, An
         # The scheduler replaces this bootstrap message after restoring the
         # authoritative snapshot and rendering the first observation.
         "messages": [{"role": "user", "content": "Environment bootstrap pending."}],
+        "protocol_version": PROTOCOL_VERSION,
         "role": role,
         "row_id": row_id,
         "env_request": env_request,
