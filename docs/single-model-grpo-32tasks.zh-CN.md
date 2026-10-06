@@ -18,3 +18,13 @@
 输出根目录：`/inspire/hdd/project/exploration-topic/ky26060/outputs/OpenETA/single_model_rl_32g32_20261006`。
 
 验证：32/32 真实任务 preflight 通过（`preflight_v3/results/summary.json`）；47 项单元/回归测试通过（`unit-tests.log`）。32 个 profile 共 224 个多轮编码检查通过（`encoding.json`）。group 32 双臂 canary 已完成 1 次更新并退出 0：32 条轨迹、91 次决策、6 次有效 XML、3 个控制步、0 个环境错误，8 个 rank 均通过真实训练输入校验；checkpoint 和 TensorBoard 的 train/loss 等标量已确认写入。该 canary 成功奖励为 0，不能据此宣称任务学习有效。正式提交信息见后文。
+
+## 正式提交
+
+2026-10-06 UTC，已通过 Inspire notebook exec 在 `embodied-selfplay-copy` 提交。代码提交 `9e9a043`，分支 `feat/rl`，工作树 `.worktrees/rl`。启动进程 PID `14889`；完整进程身份保存在 `formal/train.submission.json`（含 hostname 和 start_ticks）。
+
+- 训练日志：输出根目录下 `formal/train.log`。
+- 冻结数据：`formal/tasks.jsonl`，32 行。
+- Swift 参数/事件/checkpoint：`formal/trainer/`。
+- TensorBoard：`openeta-rl-32g32-20261006`，工作空间 `分布式训练空间`，项目 `前沿课题探索`，读取 `formal/trainer`，最长运行 72 小时。第一组正式曲线在首个更新完成后出现。
+- 服务：`service_final/mcp.submission.json`；预检、短跑及正式任务彼此有独立目录，旧 20 题实验未被覆盖。
