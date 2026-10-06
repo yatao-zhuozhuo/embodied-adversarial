@@ -38,6 +38,38 @@ ROBOCASA_FIXED_ACTION_LAYOUT: dict[str, tuple[int, int]] = {
 }
 
 
+def _canonical_counter_regions(regions: dict) -> dict:
+    """Give geometrically identical region pools identical sampling indices.
+
+    RoboCasa 1.0.1 deduplicates XML elements with a set, then assigns geom_N
+    identifiers in object-address order. A seeded RNG therefore selects a
+    different surface across processes. Region labels are generated indices;
+    sort the actual geometry before assigning those indices.
+    """
+    if not regions:
+        return regions
+    if set(regions) != {f"geom_{i}" for i in range(len(regions))}:
+        raise ValueError("Unexpected RoboCasa counter region identifiers")
+    ordered = sorted(regions.values(), key=lambda r: (
+        tuple(float(v) for v in r["offset"]), tuple(float(v) for v in r["size"])))
+    return {f"geom_{i}": region for i, region in enumerate(ordered)}
+
+
+def _install_deterministic_counter_regions() -> None:
+    from functools import wraps
+    from robocasa.models.fixtures.counter import Counter
+    if getattr(Counter.get_reset_regions, "_openeta_deterministic_regions", False):
+        return
+    original = Counter.get_reset_regions
+
+    @wraps(original)
+    def get_reset_regions(self, *args, **kwargs):
+        return _canonical_counter_regions(original(self, *args, **kwargs))
+
+    get_reset_regions._openeta_deterministic_regions = True
+    Counter.get_reset_regions = get_reset_regions
+
+
 def _install_fixed_panda_compat() -> None:
     """Teach RoboCasa 1.0.1's kitchen reset how to place a fixed Panda.
 
@@ -148,6 +180,7 @@ class RoboCasaDirectEnv(gym.Env):
         from sim.envs.robocasa.rendering import install_egl_cleanup
 
         install_egl_cleanup()
+        _install_deterministic_counter_regions()
 
         registered_tasks = set(TASK_SET_REGISTRY["all_tasks"])
         if task_name not in registered_tasks:

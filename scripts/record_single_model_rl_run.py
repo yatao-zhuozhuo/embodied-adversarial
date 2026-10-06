@@ -20,7 +20,7 @@ paths=[config_path,a.dataset,ROOT/'docs/baseline-40-tasks.json']
 paths.append(ROOT/json.loads(config_path.read_text())['task_manifest'])
 for pattern in ['agent/training/*.py','agent/runtime/two_tool*.py','plugins/*grpo.py','sim/bench_worker.py',
                 'sim/native_state_fingerprint.py','sim/two_tool_contract.py','sim/unified_env.py','sim/env_registry.py','sim/mcp_server/*.py',
-                'scripts/*single_model*.py','scripts/*single_model*.sh']:
+                'sim/envs/robocasa/*.py','scripts/*single_model*.py','scripts/*single_model*.sh']:
     paths.extend(ROOT.glob(pattern))
 versions={}
 for name in ['torch','ms-swift','vllm','transformers','peft','tensorboard']:
