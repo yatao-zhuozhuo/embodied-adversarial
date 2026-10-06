@@ -17,4 +17,4 @@
 
 输出根目录：`/inspire/hdd/project/exploration-topic/ky26060/outputs/OpenETA/single_model_rl_32g32_20261006`。
 
-验证：32/32 真实任务 preflight 通过（`preflight_v3/results/summary.json`）；47 项单元/回归测试通过（`unit-tests.log`）。group 32 实际训练、编码验收、正式提交和 TensorBoard 曲线证据在提交后补充。
+验证：32/32 真实任务 preflight 通过（`preflight_v3/results/summary.json`）；47 项单元/回归测试通过（`unit-tests.log`）。32 个 profile 共 224 个多轮编码检查通过（`encoding.json`）。group 32 双臂 canary 已完成 1 次更新并退出 0：32 条轨迹、91 次决策、6 次有效 XML、3 个控制步、0 个环境错误，8 个 rank 均通过真实训练输入校验；checkpoint 和 TensorBoard 的 train/loss 等标量已确认写入。该 canary 成功奖励为 0，不能据此宣称任务学习有效。正式提交信息见后文。

@@ -1,6 +1,6 @@
 {
   "schema_version": "openeta.single_model_rl_tasks.v2",
-  "purpose": "Five distinct tasks per bench, preserve all attempts and images for inspection",
+  "purpose": "Preserve the original 20 SFT tasks and add 12 distinct ManiSkill tasks outside baseline-40; single-policy GRPO.",
   "tasks": [
     {
       "bench": "metaworld",
