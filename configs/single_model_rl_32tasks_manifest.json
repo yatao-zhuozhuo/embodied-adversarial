@@ -1,0 +1,237 @@
+{
+  "schema_version": "openeta.single_model_rl_tasks.v2",
+  "purpose": "Five distinct tasks per bench, preserve all attempts and images for inspection",
+  "tasks": [
+    {
+      "bench": "metaworld",
+      "task_id": "reach-v3",
+      "env_id": "openeta/metaworld_50_reach-v3-v0",
+      "task": "Reach a goal position",
+      "expected_action_dim": 4
+    },
+    {
+      "bench": "metaworld",
+      "task_id": "bin-picking-v3",
+      "env_id": "openeta/metaworld_50_bin-picking-v3-v0",
+      "task": "Grasp the puck from one bin and place it into another bin",
+      "expected_action_dim": 4
+    },
+    {
+      "bench": "metaworld",
+      "task_id": "assembly-v3",
+      "env_id": "openeta/metaworld_50_assembly-v3-v0",
+      "task": "Pick up a nut and place it onto a peg",
+      "expected_action_dim": 4
+    },
+    {
+      "bench": "metaworld",
+      "task_id": "lever-pull-v3",
+      "env_id": "openeta/metaworld_50_lever-pull-v3-v0",
+      "task": "Pull a lever down 90 degrees",
+      "expected_action_dim": 4
+    },
+    {
+      "bench": "metaworld",
+      "task_id": "disassemble-v3",
+      "env_id": "openeta/metaworld_50_disassemble-v3-v0",
+      "task": "Pick a nut out of a peg",
+      "expected_action_dim": 4
+    },
+    {
+      "bench": "libero",
+      "task_id": "libero_spatial_task6",
+      "env_id": "openeta/libero_libero_spatial_task6-v0",
+      "task": "pick up the black bowl next to the cookie box and place it on the plate",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "libero",
+      "task_id": "libero_10_task5",
+      "env_id": "openeta/libero_libero_10_task5-v0",
+      "task": "pick up the book and place it in the back compartment of the caddy",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "libero",
+      "task_id": "libero_90_task70",
+      "env_id": "openeta/libero_libero_90_task70-v0",
+      "task": "put the chocolate pudding to the right of the plate",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "libero",
+      "task_id": "libero_10_task0",
+      "env_id": "openeta/libero_libero_10_task0-v0",
+      "task": "put both the alphabet soup and the tomato sauce in the basket",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "libero",
+      "task_id": "libero_90_task35",
+      "env_id": "openeta/libero_libero_90_task35-v0",
+      "task": "open the microwave",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "robocasa",
+      "task_id": "CoffeeSetupMug",
+      "env_id": "openeta/robocasa_pretrain_CoffeeSetupMug-v0",
+      "task": "Pick the mug from the counter and place it under the coffee machine dispenser.",
+      "expected_action_dim": 12
+    },
+    {
+      "bench": "robocasa",
+      "task_id": "CloseBlenderLid",
+      "env_id": "openeta/robocasa_pretrain_CloseBlenderLid-v0",
+      "task": "RoboCasa365 pretrain task: close blender lid",
+      "expected_action_dim": 12
+    },
+    {
+      "bench": "robocasa",
+      "task_id": "MoveToFreezerDrawer",
+      "env_id": "openeta/robocasa_pretrain_MoveToFreezerDrawer-v0",
+      "task": "RoboCasa365 pretrain task: move to freezer drawer",
+      "expected_action_dim": 12
+    },
+    {
+      "bench": "robocasa",
+      "task_id": "ArrangeDrinkware",
+      "env_id": "openeta/robocasa_pretrain_ArrangeDrinkware-v0",
+      "task": "RoboCasa365 pretrain task: arrange drinkware",
+      "expected_action_dim": 12
+    },
+    {
+      "bench": "robocasa",
+      "task_id": "ScrubCuttingBoard",
+      "env_id": "openeta/robocasa_pretrain_ScrubCuttingBoard-v0",
+      "task": "RoboCasa365 pretrain task: scrub cutting board",
+      "expected_action_dim": 12
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "PullCube-v1",
+      "env_id": "openeta/maniskill_PullCube-v1-v0",
+      "task": "Pull the cube onto the target region",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "PokeCube-v1",
+      "env_id": "openeta/maniskill_PokeCube-v1-v0",
+      "task": "Use the peg to poke the red cube onto the red-and-white target region, then keep the robot still.",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "LiftPegUpright-v1",
+      "env_id": "openeta/maniskill_LiftPegUpright-v1-v0",
+      "task": "Move the peg lying on the table into an upright position standing on the table.",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "FMBAssembly1Easy-v1",
+      "env_id": "openeta/maniskill_FMBAssembly1Easy-v1-v0",
+      "task": "ManiSkill task: FMBAssembly1Easy-v1",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "PickSingleYCB-v1",
+      "env_id": "openeta/maniskill_PickSingleYCB-v1-v0",
+      "task": "ManiSkill task: PickSingleYCB-v1",
+      "expected_action_dim": 7
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateSingleObjectInHandLevel0-v1",
+      "env_id": "openeta/maniskill_RotateSingleObjectInHandLevel0-v1-v0",
+      "task": "Rotate the object in the hand through more than two full turns around the vertical axis.",
+      "expected_action_dim": 16
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateSingleObjectInHandLevel1-v1",
+      "env_id": "openeta/maniskill_RotateSingleObjectInHandLevel1-v1-v0",
+      "task": "Rotate the object in the hand through more than two full turns around the vertical axis.",
+      "expected_action_dim": 16
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "DrawTriangle-v1",
+      "env_id": "openeta/maniskill_DrawTriangle-v1-v0",
+      "task": "Trace the outlined target triangle on the canvas with the red brush.",
+      "expected_action_dim": 6
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "DrawSVG-v1",
+      "env_id": "openeta/maniskill_DrawSVG-v1-v0",
+      "task": "Trace the outlined target shape on the canvas with the red brush.",
+      "expected_action_dim": 6
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateSingleObjectInHandLevel2-v1",
+      "env_id": "openeta/maniskill_RotateSingleObjectInHandLevel2-v1-v0",
+      "task": "Rotate the object in the hand through more than two full turns around the vertical axis.",
+      "expected_action_dim": 16
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "TwoRobotPickCube-v1",
+      "env_id": "openeta/maniskill_TwoRobotPickCube-v1-v0",
+      "task": "Use both robot arms to transfer the red cube to the green goal sphere.",
+      "expected_action_dim": 14
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "TwoRobotStackCube-v1",
+      "env_id": "openeta/maniskill_TwoRobotStackCube-v1-v0",
+      "task": "Use both robot arms to place the green cube on the red-and-white target region, stack the blue cube on the green cube, and release both cubes.",
+      "expected_action_dim": 14
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateValveLevel0-v1",
+      "env_id": "openeta/maniskill_RotateValveLevel0-v1-v0",
+      "task": "Rotate the valve counterclockwise by at least 90 degrees.",
+      "expected_action_dim": 9
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateValveLevel1-v1",
+      "env_id": "openeta/maniskill_RotateValveLevel1-v1-v0",
+      "task": "Rotate the valve counterclockwise by at least 180 degrees.",
+      "expected_action_dim": 9
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateValveLevel2-v1",
+      "env_id": "openeta/maniskill_RotateValveLevel2-v1-v0",
+      "task": "Rotate the valve counterclockwise by at least 180 degrees.",
+      "expected_action_dim": 9
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateValveLevel3-v1",
+      "env_id": "openeta/maniskill_RotateValveLevel3-v1-v0",
+      "task": "Rotate the valve counterclockwise by at least 180 degrees.",
+      "expected_action_dim": 9
+    },
+    {
+      "bench": "maniskill",
+      "task_id": "RotateValveLevel4-v1",
+      "env_id": "openeta/maniskill_RotateValveLevel4-v1-v0",
+      "task": "Rotate the valve by more than one full turn in the direction specified by the reset task instruction.",
+      "expected_action_dim": 9
+    }
+  ],
+  "counts": {
+    "metaworld": 5,
+    "libero": 5,
+    "robocasa": 5,
+    "maniskill": 17
+  },
+  "baseline_exclusion": "docs/baseline-40-tasks.json"
+}

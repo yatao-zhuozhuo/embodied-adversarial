@@ -22,6 +22,7 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--preflight-dir',type=Path,required=True)
 p.add_argument('--ycb-dir',type=Path,required=True)
 p.add_argument('--output',type=Path,required=True)
+p.add_argument('--all-profiles',action='store_true')
 a=p.parse_args()
 _,processor=get_model_processor('/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B',load_model=False)
 infer=get_template(processor,template_type='qwen3_5',enable_thinking=False)
@@ -32,6 +33,7 @@ reports=[]
 paths=[a.preflight_dir/bench/task/'reset-0.json' for bench,task in [
  ('metaworld','reach-v3'),('libero','libero_spatial_task6'),('maniskill','PokeCube-v1'),('robocasa','CoffeeSetupMug')]]
 paths.append(a.ycb_dir/'maniskill/PickSingleYCB-v1/reset-0.json')
+if a.all_profiles: paths=sorted(a.preflight_dir.glob('*/*/reset-0.json'))
 for path in paths:
  d=json.loads(path.read_text());profile=d['profile'];history=[]
  response=serialize_decision('step_env',{'action':[0.]*profile['action_contract']['action_dim'],'num_steps':1})
@@ -53,4 +55,4 @@ for path in paths:
   history.append({**execution_receipt(decision_id=turn,command={'tool':'step_env','action':[0.]*profile['action_contract']['action_dim'],'num_steps':1},executed_steps=1),
                   'model_message':{'content':response}})
 write_json(a.output,{'kind':'real_images_with_fixture_decisions_encoding_only','reports':reports})
-print(json.dumps({'passed':len(reports),'profiles':5,'output':str(a.output)}))
+print(json.dumps({'passed':len(reports),'profiles':len(paths),'output':str(a.output)}))

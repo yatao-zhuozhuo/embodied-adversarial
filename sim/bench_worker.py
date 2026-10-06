@@ -47,6 +47,9 @@ _REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 while _REPO in sys.path:
     sys.path.remove(_REPO)
 sys.path.insert(0, _REPO)
+# Explicit host-owned optional dependencies, isolated from shared simulator venvs.
+if os.environ.get("OPENETA_MANISKILL_EXTRA_PATH"):
+    sys.path.insert(1, os.environ["OPENETA_MANISKILL_EXTRA_PATH"])
 
 # The manager intentionally strips inherited PYTHONPATH to protect package
 # resolution. A host-selected experimental Mink profile may instead expose one

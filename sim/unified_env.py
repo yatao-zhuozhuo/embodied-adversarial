@@ -791,8 +791,12 @@ class UnifiedEnv(gym.Env):
         agent = raw.get("agent", {})
         if isinstance(agent, dict) and "qpos" in agent:
             state = self._np(agent["qpos"])
-            joint_positions = state[..., :9] if state.shape[-1] >= 9 else state
+            joint_positions = state
             obs.setdefault("proprio", {})["joint_positions"] = joint_positions
+        elif isinstance(agent, dict) and agent and all(isinstance(v, dict) and "qpos" in v for v in agent.values()):
+            # Multiple robots: preserve all measured joints in the native action robot order.
+            obs.setdefault("proprio", {})["joint_positions"] = np.concatenate([
+                self._np(agent[key]["qpos"]).reshape(-1) for key in sorted(agent)])
         # state mode: flat tensor
         _raw = raw.get("_raw")
         if not obs.get("proprio"):
@@ -845,6 +849,15 @@ class UnifiedEnv(gym.Env):
                     cameras[cam_name] = cam
             if cameras:
                 obs["cameras"] = cameras
+
+        # Rotation direction is the task instruction, not privileged object state.
+        # Level 4 samples it at reset; never tell the model a fixed direction.
+        inner = self._unwrap()
+        if type(inner).__module__.endswith("rotate_valve"):
+            direction = float(self._np(inner.rotate_direction).reshape(-1)[0])
+            degrees = round(float(inner.success_threshold) * 180 / np.pi)
+            word = "counterclockwise" if direction > 0 else "clockwise"
+            obs["task_description"] = f"Rotate the valve {word} by more than {degrees} degrees from its initial angle, viewed from above."
 
         # Objects (privileged info)
         if self._include_objects:
@@ -1618,6 +1631,8 @@ class UnifiedEnv(gym.Env):
 
     @property
     def action_space(self) -> gym.spaces.Space:
+        if self._backend == "maniskill":
+            return self._env.action_space
         import inspect
         try:
             sig = inspect.signature(self._unwrap().step)

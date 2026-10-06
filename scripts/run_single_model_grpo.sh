@@ -66,4 +66,4 @@ exec "$SWIFT_VENV/bin/swift" rlhf \
  --gradient_checkpointing true --use_liger_kernel true --bf16 true --beta "${BETA:-0.01}" \
  --epsilon 0.2 --loss_type grpo --loss_scale last_round --importance_sampling_level token \
  --temperature "${TEMPERATURE:-1.0}" --top_p 0.9 --logging_steps 1 --save_steps 1 \
- --save_total_limit 2 --output_dir "$OUTPUT_DIR" --log_completions true --report_to none
+ --save_total_limit 2 --output_dir "$OUTPUT_DIR" --log_completions true --report_to "${REPORT_TO:-tensorboard}"

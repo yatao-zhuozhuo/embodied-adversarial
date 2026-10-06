@@ -21,6 +21,11 @@ CAMERAS = {
 }
 MANISKILL_WRIST = {"PullCube-v1": False, "PokeCube-v1": False, "LiftPegUpright-v1": False,
                    "FMBAssembly1Easy-v1": False, "PickSingleYCB-v1": True, "PickCube-v1": False}
+MANISKILL_WRIST.update({"DrawTriangle-v1": False, "DrawSVG-v1": False,
+    "TwoRobotPickCube-v1": False, "TwoRobotStackCube-v1": False,
+    **{f"RotateValveLevel{i}-v1": False for i in range(5)},
+    **{f"RotateSingleObjectInHandLevel{i}-v1": False for i in range(3)}})
+MANISKILL_DUAL = {"TwoRobotPickCube-v1", "TwoRobotStackCube-v1"}
 TASK_TEXT = {
     "FMBAssembly1Easy-v1": "Assemble the parts onto the red board using the reorientation fixture.",
     "PickSingleYCB-v1": "Pick up the object on the table and move it to the task's goal position, then keep the robot still.",
@@ -52,14 +57,18 @@ def make_profile(bench, task_id, created, contract):
         if task_id not in MANISKILL_WRIST:
             raise ValueError("ManiSkill task needs an audited camera subprofile")
         primary, wrist = ["base_camera"], ["hand_camera"] if MANISKILL_WRIST[task_id] else []
-        if native.get("mode") != "pd_ee_delta_pose":
+        if task_id in MANISKILL_DUAL:
+            wrist = ["panda_wristcam-0-hand_camera", "panda_wristcam-1-hand_camera"]
+        expected_mode = ("pd_joint_delta_pos" if task_id.startswith(("RotateValveLevel", "RotateSingleObjectInHandLevel"))
+                         else "pd_ee_delta_pose")
+        if native.get("mode") != expected_mode:
             raise ValueError("ManiSkill controller mode changed")
     else:
         primary, wrist = CAMERAS[bench]
     profile = {"id": f"{bench}.{task_id}.rgb256.v1", "version": 1,
                "primary": primary, "wrist": wrist, "image_limit": 2 * len(primary) + len(wrist),
                "history_groups": 4, "native_control": native, "action_contract": contract,
-               "camera_dimensions": {camera: [128, 128] if camera == "hand_camera" else [256, 256]
+               "camera_dimensions": {camera: [128, 128] if camera.endswith("hand_camera") else [256, 256]
                                      for camera in primary + wrist},
                "metaworld_view_alias": bench == "metaworld",
                "image_transform": "native RGB; no crop, resize, or camera substitution"}

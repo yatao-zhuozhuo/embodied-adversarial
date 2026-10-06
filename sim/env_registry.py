@@ -402,6 +402,10 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
                                # controller steps, so the inner wrapper must
                                # not terminate a multi-waypoint manipulation.
                                "max_episode_steps": 2000}
+    if task_id.startswith(("RotateValveLevel", "RotateSingleObjectInHandLevel")):
+        kwargs["control_mode"] = "pd_joint_delta_pos"
+    if task_id in {"DrawTriangle-v1", "DrawSVG-v1"}:
+        kwargs["reward_mode"] = "sparse"
     if image_width is not None or image_height is not None:
         hr_cfg: dict[str, Any] = {}
         sensor_cfg: dict[str, Any] = {}
@@ -415,6 +419,9 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
         kwargs["sensor_configs"] = {"base_camera": sensor_cfg}
     try:
         env = gym.make(task_id, **kwargs)
+        if isinstance(env.unwrapped.single_action_space, gym.spaces.Dict):
+            from mani_skill.utils.wrappers.flatten import FlattenActionSpaceWrapper
+            env = FlattenActionSpaceWrapper(env)
         return env
     except Exception:
         kwargs.pop("human_render_camera_configs", None)

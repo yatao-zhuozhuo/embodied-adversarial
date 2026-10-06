@@ -8,14 +8,17 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 
-def build_rows(manifest, holdout, *, seed=20320000, max_turns=60, max_control_steps=400, tasks=None):
+def build_rows(manifest, holdout, *, seed=20320000, max_turns=60, max_control_steps=400, tasks=None, baseline=None):
     source = manifest['tasks']
-    if len(source) != 20 or len({(r['bench'], r['task_id']) for r in source}) != 20:
-        raise ValueError('Expected exactly twenty distinct tasks')
+    if not source or len({(r['bench'], r['task_id']) for r in source}) != len(source):
+        raise ValueError('Expected nonempty distinct tasks')
+    excluded_envs = {r['env_id'] for r in (baseline or {}).get('episodes', [])}
     rows = []
     for i, task in enumerate(source):
         if tasks and task['task_id'] not in tasks:
             continue
+        if task['env_id'] in excluded_envs:
+            raise ValueError('Baseline task cannot train')
         excluded = holdout['canonical_excluded_task_keys'].get(task['bench'], [])
         if task['task_id'] in excluded or task['task'] in holdout['tasks'].get(task['bench'], []):
             raise ValueError('Holdout task cannot train')
@@ -40,11 +43,14 @@ def main():
     p.add_argument('--max-turns', type=int, default=60)
     p.add_argument('--max-control-steps', type=int, default=400)
     p.add_argument('--tasks', nargs='+')
+    p.add_argument('--manifest', type=Path, default=ROOT/'SFT_data/configs/deepseek_xml_debug5.v1.json')
+    p.add_argument('--baseline', type=Path, default=ROOT/'docs/baseline-40-tasks.json')
     a=p.parse_args()
-    manifest=json.loads((ROOT/'SFT_data/configs/deepseek_xml_debug5.v1.json').read_text())
+    manifest=json.loads(a.manifest.read_text())
+    baseline=json.loads(a.baseline.read_text())
     holdout=json.loads((ROOT/'SFT_data/configs/two_tool_test_holdout.v1.json').read_text())
     rows=build_rows(manifest,holdout,seed=a.seed,max_turns=a.max_turns,
-                    max_control_steps=a.max_control_steps,tasks=a.tasks)
+                    max_control_steps=a.max_control_steps,tasks=a.tasks,baseline=baseline)
     a.output.parent.mkdir(parents=True,exist_ok=True)
     a.output.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in rows))
     print(json.dumps({'dataset':str(a.output),'tasks':len(rows)}))

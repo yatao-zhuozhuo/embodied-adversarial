@@ -5,6 +5,7 @@ export PYTHONPATH="$REPO_ROOT${PYTHONPATH:+:$PYTHONPATH}"
 export PYTHONDONTWRITEBYTECODE=1
 export NO_PROXY="${NO_PROXY:+${NO_PROXY},}127.0.0.1,localhost"
 export no_proxy="$NO_PROXY"
+export OPENETA_MANISKILL_EXTRA_PATH="/inspire/qb-ilm/project/exploration-topic/ky26060/openeta-runtime/rl-maniskill-extra"
 export OPENETA_MANISKILL_PYTHON="$REPO_ROOT/sim/venvs/maniskill312/bin/python"
 export OPENETA_LIBERO_PYTHON="$REPO_ROOT/sim/venvs/libero/bin/python"
 export OPENETA_METAWORLD_PYTHON="$REPO_ROOT/sim/venvs/metaworld/bin/python"

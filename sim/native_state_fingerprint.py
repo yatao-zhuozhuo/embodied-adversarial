@@ -25,8 +25,9 @@ def native_fingerprint(env):
     inner = env._unwrap()
     if backend == 'maniskill':
         state = {'state_dict': inner.get_state_dict(), 'elapsed_steps': inner._elapsed_steps,
-                 'evaluation': inner.evaluate()}
-        scope = 'ManiSkill state_dict, elapsed steps and task evaluation'
+                 'task_state': {name: value for name, value in vars(inner).items()
+                                if hasattr(value, 'detach') and name not in {'_last_obs', '_init_raw_obs', '_init_raw_state'}}}
+        scope = 'ManiSkill state_dict, elapsed steps and task tensors; no evaluate side effects'
     else:
         # Direct wrappers for robosuite/LIBERO retain their simulator under _env/env.
         obj = inner

@@ -23,14 +23,55 @@ def controller_contract(env, backend):
                       slots=["dx", "dy", "dz", "gripper"], position_scale_m=float(raw.action_scale),
                       rotation="not controlled", gripper={"open_value": -1, "close_value": 1})
     elif backend == "maniskill":
-        controller = raw.agent.controller.controllers["arm"]
-        config = controller.config
-        result.update(controller=type(controller).__name__, mode=raw.control_mode,
-                      slots=["dx", "dy", "dz", "rx", "ry", "rz", "gripper"], frame=config.frame,
-                      rotation="XYZ Euler delta; normalized rotation vector norm-clipped to 1, multiplied by rot_lower",
-                      position_low_m=values(config.pos_lower), position_high_m=values(config.pos_upper),
-                      rotation_multiplier_rad=values(config.rot_lower), use_delta=config.use_delta,
-                      gripper={"open_value": 1, "close_value": -1, "semantics": "finger joint position"})
+        agent = raw.agent
+        agents = getattr(agent, "agents_dict", {"robot": agent})
+        # Flatten in the same ordered keys as ManiSkill's FlattenActionSpaceWrapper.
+        agents = {key: agents[key] for key in raw.single_action_space.spaces} if isinstance(agent.controller, dict) else agents
+        blocks, slots, neutral = [], [], []
+        mode = None
+        for agent_name, robot in agents.items():
+            if mode is not None and mode != robot.control_mode:
+                raise ValueError("Mixed robot controller modes require a separate profile")
+            mode = robot.control_mode
+            combined = robot.controller
+            controllers = getattr(combined, "controllers", {"joint": combined})
+            for part, controller in controllers.items():
+                config = controller.config
+                prefix = agent_name + "." if len(agents) > 1 else ""
+                offset = len(slots)
+                if hasattr(config, "pos_lower"):
+                    names = ["dx", "dy", "dz", "rx", "ry", "rz"]
+                    block = dict(controller=type(controller).__name__, frame=config.frame,
+                        rotation="XYZ Euler delta; normalized rotation vector norm-clipped to 1, multiplied by rot_lower",
+                        position_low_m=values(config.pos_lower), position_high_m=values(config.pos_upper),
+                        rotation_multiplier_rad=values(config.rot_lower), use_delta=config.use_delta)
+                elif part == "gripper":
+                    names = ["gripper"]
+                    block = dict(controller=type(controller).__name__, gripper={"open_value": 1, "close_value": -1,
+                        "semantics": "finger joint position"})
+                else:
+                    names = ["delta_" + name for name in config.joint_names]
+                    if not config.use_delta or not config.normalize_action:
+                        raise ValueError("Unaudited ManiSkill joint mode")
+                    block = dict(controller=type(controller).__name__, frame="robot joints",
+                        joint_names=list(config.joint_names), joint_delta_low_rad=values(config.lower),
+                        joint_delta_high_rad=values(config.upper), use_delta=True,
+                        use_target=bool(config.use_target), semantics="normalized joint position delta in listed joint order")
+                dimension = controller.single_action_space.shape[0]
+                if len(names) != dimension:
+                    raise ValueError("Controller metadata does not match action dimension")
+                slots.extend(prefix + name for name in names)
+                neutral.extend([1.] if part == "gripper" else [0.] * dimension)
+                controller_source = Path(inspect.getfile(type(controller)))
+                block['source'] = {'class': type(controller).__module__ + '.' + type(controller).__name__,
+                                   'sha256': hashlib.sha256(controller_source.read_bytes()).hexdigest()}
+                blocks.append(dict(agent=agent_name, part=part, offset=offset, length=dimension, **block))
+        result.update(controller="ManiSkill native controller", mode=mode, slots=slots,
+                      components=blocks, neutral_action=neutral)
+        if len(agents) == 1 and len(blocks) == 2 and blocks[0]['part'] == 'arm' and blocks[1]['part'] == 'gripper':
+            # Preserve the established Panda profile fields for existing consumers.
+            result.update({k:v for k,v in blocks[0].items() if k not in ('agent','part','offset','length')})
+            result['gripper'] = blocks[1]['gripper']
     elif backend == "libero":
         spec = direct.openeta_control_spec
         cartesian = spec["cartesian_delta"]

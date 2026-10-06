@@ -26,7 +26,11 @@ def check(config, root):
                 builder.observe(env.observation,observation_id='initial',turn=0)
                 before=builder.current
                 action=[0.]*env.contract['action_dim']
-                action[3 if config['bench']=='metaworld' else 6]=env.profile['native_control']['gripper']['open_value']
+                native=env.profile['native_control']
+                if 'neutral_action' in native:
+                    action=native['neutral_action']
+                else:
+                    action[3 if config['bench']=='metaworld' else 6]=native['gripper']['open_value']
                 if config['bench']=='robocasa': action[-1]=-1.
                 xml=serialize_decision('step_env',{'action':action,'num_steps':1})
                 decision=parse_decision(xml,contract=env.contract,remaining_steps=400)['decision']

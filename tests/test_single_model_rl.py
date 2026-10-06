@@ -142,3 +142,53 @@ def test_native_fingerprint_tracks_physics_and_target():
     assert moved!=initial
     native._target_pos[0]=2.
     assert native_fingerprint(env)!=moved
+
+
+def test_expanded_tasks_keep_original_and_exclude_baseline():
+    root=Path(__file__).resolve().parents[1]
+    original=json.loads((root/'SFT_data/configs/deepseek_xml_debug5.v1.json').read_text())
+    manifest=json.loads((root/'configs/single_model_rl_32tasks_manifest.json').read_text())
+    holdout=json.loads((root/'SFT_data/configs/two_tool_test_holdout.v1.json').read_text())
+    baseline=json.loads((root/'docs/baseline-40-tasks.json').read_text())
+    assert manifest['tasks'][:20]==original['tasks']
+    assert len(manifest['tasks'][20:])==12
+    assert all(t['bench']=='maniskill' for t in manifest['tasks'][20:])
+    rows=build_rows(manifest,holdout,baseline=baseline)
+    assert len(rows)==32
+    assert {t['env_request']['env_id'] for t in rows}.isdisjoint({t['env_id'] for t in baseline['episodes']})
+    contaminated=deepcopy(baseline)
+    contaminated['episodes'].append({'env_id':manifest['tasks'][-1]['env_id']})
+    with pytest.raises(ValueError,match='Baseline task'):
+        build_rows(manifest,holdout,baseline=contaminated)
+
+
+def test_fingerprint_does_not_call_stateful_success_evaluator():
+    from sim.native_state_fingerprint import native_fingerprint
+    class Tensor:
+        def detach(self): return self
+        def cpu(self): return self
+        def numpy(self): return np.array([2.])
+    class Native:
+        _elapsed_steps=0
+        def __init__(self): self.cum_rotation_angle=Tensor()
+        def get_state_dict(self): return {'qpos':[0.,1.]}
+        def evaluate(self): raise AssertionError('evaluate may change cumulative task state')
+    env=SimpleNamespace(_backend='maniskill',_unwrap=lambda:Native())
+    assert native_fingerprint(env)==native_fingerprint(env)
+
+
+@pytest.mark.parametrize('task,dimension,mode,wrist_count',[
+    ('DrawSVG-v1',6,'pd_ee_delta_pose',0),
+    ('TwoRobotPickCube-v1',14,'pd_ee_delta_pose',2),
+    ('RotateValveLevel4-v1',9,'pd_joint_delta_pos',0),
+    ('RotateSingleObjectInHandLevel2-v1',16,'pd_joint_delta_pos',0),
+])
+def test_new_task_profiles_fail_closed(task,dimension,mode,wrist_count):
+    from agent.runtime.two_tool_input import make_profile
+    native={'slots':['slot']*dimension,'mode':mode}
+    contract={'action_dim':dimension,'action_low':[-1]*dimension,'action_high':[1]*dimension}
+    profile=make_profile('maniskill',task,{'input_control_contract':native},contract)
+    assert len(profile['wrist'])==wrist_count
+    assert profile['image_limit']<=5
+    with pytest.raises(ValueError,match='controller mode'):
+        make_profile('maniskill',task,{'input_control_contract':{**native,'mode':'unknown'}},contract)
