@@ -11,6 +11,6 @@
 - 修复前四个独立进程显示不同 qpos/qvel/ctrl/求解器状态。
 - 修复后四个独立进程（不同 hash seed）导出的完整 MuJoCo 状态逐字段完全一致。
 - 相关测试 30 项通过，1 项需要特殊运行环境的条件测试跳过。
-- 五个 RoboCasa 训练任务通过真实 MCP 验证；其余四题各 8 个独立环境，ScrubCuttingBoard 使用 32 个环境；完整结果写入 `group_acceptance.json`。
+- 其余四个 RoboCasa 训练任务各 8 个独立环境、ScrubCuttingBoard 的 32 个独立环境均通过真实 MCP 验证，组内初始状态完全一致，单步执行和关闭正常。完整结果见 `group_acceptance.json`，验证进程退出码为 0。
 
 续训继续使用原来的 32 道题、group 32、每卡 batch 4、5 个 epoch，总共 160 次更新，从 checkpoint-5 恢复。模型输入与 XML 协议沿用原实现；TensorBoard 沿用 `openeta-rl-32g32-20261006`。
