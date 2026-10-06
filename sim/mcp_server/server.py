@@ -2800,14 +2800,14 @@ async def _host_state_endpoint(request):
     sid = request.path_params["sid"]
     handle = request.path_params["handle"]
     meta = _session_envs.get(sid, {}).get(handle)
-    if not meta or meta.get("backend") != "maniskill":
-        return JSONResponse({"error": "unknown PickCube handle"}, status_code=404)
+    if not meta:
+        return JSONResponse({"error": "unknown environment handle"}, status_code=404)
     try:
         body = await request.json()
     except Exception:
         return JSONResponse({"error": "invalid JSON"}, status_code=400)
     if not isinstance(body, dict) or body.get("operation") not in {
-        "capture", "restore", "set_goal", "task_state"
+        "capture", "restore", "set_goal", "task_state", "fingerprint"
     }:
         return JSONResponse({"error": "invalid host operation"}, status_code=400)
 

@@ -1,0 +1,72 @@
+{
+  "schema_version": "openeta.two_tool_sft_holdout.v1",
+  "purpose": "Task-level test holdout: exclude each task at every seed, and never use reserved seeds 20261002-20261011 for training.",
+  "reserved_seeds": [20261002, 20261003, 20261004, 20261005, 20261006, 20261007, 20261008, 20261009, 20261010, 20261011],
+  "tasks": {
+    "libero": [
+      "pick up the black bowl next to the ramekin and place it on the plate",
+      "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "pick up the black bowl on the ramekin and place it on the plate",
+      "pick up the butter and place it in the basket",
+      "pick up the chocolate pudding and place it in the basket",
+      "pick up the alphabet soup and place it in the basket",
+      "put the bowl on the stove",
+      "put the bowl on top of the cabinet",
+      "turn on the stove and put the moka pot on it",
+      "put the black bowl in the bottom drawer of the cabinet and close it"
+    ],
+    "metaworld": [
+      "Open a drawer",
+      "Push a button on the coffee machine",
+      "Open a door with a revolving joint",
+      "Grasp a stick and push a box using the stick",
+      "Pick up a puck from a hole",
+      "Push and close a window",
+      "Bypass a wall and reach a goal",
+      "Rotate the faucet clockwise",
+      "Pick a puck, bypass a wall and place the puck",
+      "Pull a mug from a coffee machine"
+    ],
+    "maniskill": [
+      "Roll the ball into the goal region.",
+      "Place the sphere into the shallow bin and release it; keep the robot still at the end.",
+      "Stack the red cube on the green cube and release it.",
+      "Insert the charger into the receptacle.",
+      "Stack the cubes into a pyramid: two cubes below and one cube on top.",
+      "Use the L-shaped tool to pull the cube into the goal region.",
+      "Push the cube onto the goal region.",
+      "Push the T-shaped block to align with the target T-shaped region.",
+      "Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.",
+      "Insert the peg into the side hole of the box."
+    ],
+    "robocasa": [
+      "Turn off the rear left burner of the stove.",
+      "Pick the jug from the counter and place it in the cabinet.",
+      "Open the left drawer.",
+      "Open the cabinet doors.",
+      "Navigate to the toaster.",
+      "Grab a lemon wedge from the fridge and one ice cube from the ice bowl, and put them in the glass of lemonade.",
+      "Pick the chicken drumstick and avocado from their plates and place them in the bowl. Then put the bowl in the fridge.",
+      "Start the toaster. Once the lever pops up, take the bread to the plate on the dining counter.",
+      "Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",
+      "Move the plastic bottles in the middle to the plastics group, and the glass bottles in the middle to the glass group."
+    ]
+  },
+  "canonical_excluded_task_keys": {
+    "metaworld": [
+      "drawer-open-v3", "coffee-button-v3", "door-open-v3", "stick-push-v3",
+      "pick-out-of-hole-v3", "window-close-v3", "reach-wall-v3", "faucet-close-v3",
+      "pick-place-wall-v3", "coffee-pull-v3"
+    ],
+    "maniskill": [
+      "RollBall-v1", "PlaceSphere-v1", "StackCube-v1", "PlugCharger-v1",
+      "StackPyramid-v1", "PullCubeTool-v1", "PushCube-v1", "PushT-v1",
+      "PickCube-v1", "PegInsertionSide-v1"
+    ],
+    "robocasa": [
+      "TurnOffStove", "PickPlaceCounterToCabinet", "OpenDrawer", "OpenCabinet",
+      "NavigateKitchen", "MakeIceLemonade", "StoreLeftoversInBowl",
+      "GetToastedBread", "LoadDishwasher", "RecycleBottlesByType"
+    ]
+  }
+}

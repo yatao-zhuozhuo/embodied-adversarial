@@ -202,7 +202,7 @@ class _MainThreadExecutor:
 
 
 async def _run_sim_call(fn, *args, **kwargs):
-    """Run on BEHAVIOR's main-thread executor, otherwise Starlette's pool."""
+    """Use the simulator's thread-affine executor when one is configured."""
     executor = getattr(app.state, "sim_executor", None)
     if executor is not None:
         return await asyncio.wrap_future(executor.submit(fn, *args, **kwargs))
@@ -965,6 +965,16 @@ async def host_state_env(request):
     env = _envs.get(h)
     if env is None:
         return _json_response({"error": f"Unknown handle: {h}"}, 400)
+    body = _safe_json_body(await request.body())
+    if body.get("operation") == "fingerprint":
+        from sim.native_state_fingerprint import native_fingerprint
+        def fingerprint():
+            with _obs_lock_for(h), _gl_lock:
+                return native_fingerprint(env)
+        try:
+            return _json_response(await _run_sim_call(fingerprint))
+        except Exception as exc:
+            return _json_response({"error": f"Native fingerprint failed: {exc}"}, 400)
     if request.app.state.bench != "maniskill" or getattr(env, "_env_id", "") != "openeta/maniskill_PickCube-v1-v0":
         return _json_response({"error": "host state supports only ManiSkill PickCube-v1"}, 400)
     body = _safe_json_body(await request.body())
@@ -1336,7 +1346,7 @@ if __name__ == "__main__":
     import uvicorn
     config = uvicorn.Config(app, fd=sock.fileno(), log_level="warning")
     server = uvicorn.Server(config)
-    if args.bench == "behavior":
+    if args.bench in {"behavior", "robocasa"}:
         # Isaac Kit / OmniGibson requires the process main thread (signal
         # handlers, render loop, and teardown). Keep HTTP responsive in a
         # server thread and execute every simulator operation here via queue.

@@ -1,0 +1,51 @@
+{
+  "base_commit": "a97439f",
+  "source_worktree": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA",
+  "files": [
+    {
+      "path": "sim/bench_worker.py",
+      "sha256": "97a49a6ca886cdbfb52023018553c184c3af8e7f936f6e889bb16e74fedf6bff"
+    },
+    {
+      "path": "sim/env_registry.py",
+      "sha256": "2286b5f0c50a64921a0d791b9cdb84c41bf0c07e3ec5ca201815826a1800b735"
+    },
+    {
+      "path": "sim/envs/robocasa/direct_env.py",
+      "sha256": "97dd2f512469538bd9fd2d5e2891116945f437e20a904961a890fb6bd0ae9df4"
+    },
+    {
+      "path": "sim/envs/robocasa/rendering.py",
+      "sha256": "a21bb585282223825a34cb3f751c8ec3b16e69a171c11a34e7435ba79506d8f7"
+    },
+    {
+      "path": "sim/mcp_server/server.py",
+      "sha256": "7f52f39421ed848303ed3e20aa73448d02b609dd2e0e039441aac55b1aeb4869"
+    },
+    {
+      "path": "SFT_data/configs/deepseek_xml_debug5.v1.json",
+      "sha256": "f1666fd97e873f6d36ac30a5e0280679db4448a954db377f02e2b867f64ed187"
+    },
+    {
+      "path": "SFT_data/configs/two_tool_test_holdout.v1.json",
+      "sha256": "5a0c28ef8b951c8ef00ca19c64630804ed71c21811135eacad8dcf3b85850db8"
+    },
+    {
+      "path": "tests/test_robocasa_render_cleanup.py",
+      "sha256": "0b16c52005dda88842e2e47edd7c3ebe271f575782636b9ca13925052329c350"
+    },
+    {
+      "path": "docs/single-model-multiturn-grpo-plan.zh-CN.md",
+      "sha256": "99d2c6ccc5913b7c9d48ecbf71a50fadd0be5796bcbee5fd003c0a3ef301664c"
+    },
+    {
+      "path": "INSPIRE.md",
+      "sha256": "a18da5dbac16229cee0ea5d237b290fcf90171b95bb96a396363f9c6152c7e6d"
+    },
+    {
+      "path": "SFT_data/configs/libero/config.yaml",
+      "sha256": "3821c16477a506a4dd5dec2649a559da5b7dc2921a0588a3e7d40d1237749eaa"
+    }
+  ],
+  "note": "Source workspace hashes identify reviewed inputs, not final edited files. SFT expert/demo-only code was excluded from the RL checkout."
+}

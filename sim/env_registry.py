@@ -264,7 +264,7 @@ def make_env(
     # ── Direct gym.make path (MetaWorld / ManiSkill / LIBERO) ──
     # These envs bypass the RLinf wrapper for direct gym.make()
     if env_type == "metaworld":
-        raw = _make_metaworld_direct(task_name, render_mode=render_mode,
+        raw = _make_metaworld_direct(task_name, render_mode=render_mode, seed=seed,
                                      image_width=image_width, image_height=image_height)
         ue = UnifiedEnv(raw, render_mode=render_mode)
         ue._include_objects = include_objects
@@ -342,7 +342,7 @@ def make_env(
 
 
 def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
-                            image_width: int | None = None, image_height: int | None = None) -> gym.Env:
+                            seed: int = 0, image_width: int | None = None, image_height: int | None = None) -> gym.Env:
     """Create a MetaWorld gym env directly (bypasses MetaWorldEnv vectorisation).
 
     Note: Requires mujoco_py (MuJoCo 210) to be installed with working
@@ -363,6 +363,7 @@ def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
     env = gym.make(
         "Meta-World/MT1",
         env_name=env_name,
+        seed=seed,
         render_mode=rm,
         camera_id=2,
         disable_env_checker=True,
@@ -581,6 +582,8 @@ class _LibEnvWrapper(gym.Env):
         }
 
     def reset(self, *, seed=None, options=None):
+        if seed is not None:
+            self._env.seed(int(seed))
         obs = self._env.reset()
 
         self._last_frame = obs.get("agentview_image") if isinstance(obs, dict) else None
@@ -590,10 +593,14 @@ class _LibEnvWrapper(gym.Env):
         ret = self._env.step(action)
         if len(ret) == 4:
             obs, rew, done, info = ret
+            info = dict(info or {})
+            info["success"] = bool(self._env.check_success())
             self._last_frame = obs.get("agentview_image") if isinstance(obs, dict) else None
             return obs, rew, done, done, info
+        info = dict(ret[4] or {})
+        info["success"] = bool(self._env.check_success())
         self._last_frame = ret[0].get("agentview_image") if isinstance(ret[0], dict) else None
-        return ret
+        return ret[0], ret[1], ret[2], ret[3], info
 
     def render(self):
         return self._last_frame
