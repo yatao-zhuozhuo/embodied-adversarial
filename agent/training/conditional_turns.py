@@ -174,6 +174,63 @@ class ConditionalTurnsMixin:
             batch.advantages=expand_advantage_to_per_token(
                 torch.stack([s.advantages.to(self.accelerator.device) for s in chunk]),batch.completion_mask)
 
+    def training_step(self, model, inputs, num_items_in_batch=None):
+        if not enabled():
+            return super().training_step(model, inputs, num_items_in_batch)
+        # A generation batch contains episodes; expanding it into decisions can
+        # produce hundreds of rows. Liger's fused dispatch bypasses our chunk
+        # hook, and accumulating chunk graphs also retains all activations.
+        # Backpropagate each immutable decision before computing the next one.
+        import time
+        import torch
+        from contextlib import nullcontext
+        from accelerate.utils import gather_object
+        if self.args.async_generate or self.args.loss_type != 'grpo':
+            raise ValueError('conditional backward requires synchronous GRPO')
+        if self.accelerator.distributed_type.value not in ('NO', 'MULTI_GPU'):
+            raise ValueError('conditional backward supports plain/DDP training only')
+        started = time.perf_counter()
+        model.train()
+        if hasattr(self.optimizer, 'train'):
+            self.optimizer.train()
+        prepared = self._prepare_inputs(inputs)
+        if isinstance(prepared, list):
+            if len(prepared) != 1:
+                raise ValueError('conditional backward requires one generation microbatch')
+            prepared = prepared[0]
+        samples = prepared['_origin_data']
+        weights = episode_token_weights(samples)
+        denominator = sum(weights)
+        max_chunks = max(gather_object([len(samples)]))
+        total = torch.zeros((), device=self.accelerator.device)
+        metrics = []
+        chunk_inputs = chunk_batch = None
+        for i in range(max_chunks):
+            real = i < len(samples)
+            if real:
+                chunk_inputs, chunk_batch = self.get_chunked_inputs(
+                    prepared['model_inputs'], prepared['grpo_batch'], i, i+1, samples)
+            # Every rank runs the same number of forwards (Swift metrics use
+            # collectives). Dummy decisions contribute zero loss. Synchronize
+            # accumulated DDP gradients only on the final common backward.
+            context = self.accelerator.no_sync(model) if i+1 < max_chunks else nullcontext()
+            with context, self.compute_loss_context_manager():
+                loss, metric = self._compute_loss_and_metrics(model, chunk_inputs, chunk_batch)
+                weight = weights[i] if real else 0.
+                weighted = loss * (weight / denominator / self.current_gradient_accumulation_steps)
+                self.accelerator.backward(weighted)
+            total += weighted.detach()
+            if real:
+                metrics.append((metric, weight))
+            del loss, weighted
+        self._aggregate_and_update_metrics(metrics, 'train')
+        self._step += 1
+        self._current_train_step_time += time.perf_counter() - started
+        if self._step % self.current_gradient_accumulation_steps == 0:
+            self._metrics['train']['step_time'].append(self._current_train_step_time)
+            self._current_train_step_time = 0.
+        return total
+
     def _compute_loss_chunked(self, model, model_inputs, grpo_batch, origin_data=None):
         if not enabled():
             return super()._compute_loss_chunked(model,model_inputs,grpo_batch,origin_data)

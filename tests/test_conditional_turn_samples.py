@@ -27,3 +27,41 @@ def test_loss_weights_preserve_mean_tokens_per_episode():
     samples=[SimpleNamespace(request_id=rid,response_loss_mask=[[1]*count])
              for rid,count in [('a',2),('a',6),('b',3)]]
     assert episode_token_weights(samples)==[.25,.75,1.]
+
+@pytest.mark.parametrize('remote_count', [3, 6])
+def test_sequential_backward_preserves_episode_gradient_and_handles_dummy_turns(monkeypatch, remote_count):
+    import torch
+    from collections import defaultdict
+    from contextlib import nullcontext
+    from agent.training.conditional_turns import ConditionalTurnsMixin
+    monkeypatch.setenv('OPENETA_INPUT_PROTOCOL', 'openeta.two_tool_input.v1')
+    monkeypatch.setattr('accelerate.utils.gather_object', lambda values: [values[0], remote_count])
+    parameter = torch.nn.Parameter(torch.tensor(1.))
+    values = [2., 4., 10.]
+    samples = [SimpleNamespace(request_id=rid, response_loss_mask=[[1]*n])
+               for rid,n in [('a',2),('a',6),('b',3)]]
+    backwards = []
+    syncs = []
+    def backward(loss):
+        loss.backward()
+        backwards.append(float(parameter.grad))
+    def compute(model, inputs, batch):
+        # No second decision forward can occur before the preceding backward.
+        assert len(backwards) == len(syncs)
+        syncs.append(inputs['i'])
+        return parameter * values[inputs['i']], {}
+    obj = SimpleNamespace(
+        args=SimpleNamespace(async_generate=False,loss_type='grpo'),
+        accelerator=SimpleNamespace(distributed_type=SimpleNamespace(value='NO'),device='cpu',
+            no_sync=lambda model:nullcontext(),backward=backward),
+        optimizer=SimpleNamespace(),current_gradient_accumulation_steps=1,
+        _prepare_inputs=lambda inputs:{'model_inputs':{},'grpo_batch':None,'_origin_data':samples},
+        get_chunked_inputs=lambda mi,gb,a,b,origin:({'i':a},None),
+        compute_loss_context_manager=nullcontext,_compute_loss_and_metrics=compute,
+        _aggregate_and_update_metrics=lambda *args:None,
+        _step=0,_current_train_step_time=0.,_metrics={'train':defaultdict(list)})
+    loss = ConditionalTurnsMixin.training_step(obj, torch.nn.Linear(1,1), None)
+    assert loss.item() == pytest.approx(6.75)
+    assert parameter.grad.item() == pytest.approx(6.75)
+    assert len(backwards) == remote_count
+    assert obj._step == 1
