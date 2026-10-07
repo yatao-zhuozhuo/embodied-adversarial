@@ -28,3 +28,5 @@
 最终验证通过：`resume_ckpt5_fixed_04` 的首组 32 条真实轨迹最长 60 轮，成功完成 `global_step=6/160`、`epoch=0.1875`。`checkpoint-6` 包含 adapter、optimizer、scheduler、8 个 rank RNG 状态及 trainer_state；恢复后的 optimizer moment 对齐记录为每 rank 992 个 moment，原 step 连续递增。TensorBoard 已显示本次 run 的 `train/reward` step 6。训练继续运行。
 
 本次 update 用时约 21 分钟，记录显存 30.78 GiB。reward=0，表明本组尚未完成任务；此前模型 XML 错误较多的问题仍然存在。修复目标是恢复环境和训练链路，奖励仍保持原生任务完成的二值判定。
+
+2026-10-07 更新：上述续训随后完成至 checkpoint-21，02:20 UTC 在第 22 次更新前触发前缀输入对齐错误。该问题已修复并从 checkpoint-21 继续，当前已成功保存 checkpoint-22；详见 [条件前缀对齐修复](conditional-prefix-alignment.zh-CN.md)。
