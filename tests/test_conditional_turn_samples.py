@@ -83,3 +83,51 @@ def test_restored_adam_moments_follow_parameter_dtype_without_resetting_step():
     parameter.grad = torch.ones_like(parameter)
     optimizer.step()
     assert step.item() == 6
+
+@pytest.mark.parametrize('generated', [[7,8], [90,91,7,8]])
+def test_generated_prefix_is_never_confused_with_zero_loss_prompt_prefix(generated):
+    template=SimpleNamespace(enable_thinking=False,
+        template_meta=SimpleNamespace(non_thinking_prefix='prefix'),
+        tokenizer=SimpleNamespace(encode=lambda *args,**kwargs:[90,91]))
+    sample=SimpleNamespace(request_id='episode',extra={})
+    record={'prompt_verified':True,'request':{'messages':[], 'images':[],
+        'chat_template_kwargs':{'enable_thinking':False}},'answer':'text',
+        'response_token_ids':generated,'response_loss_mask':[1]*len(generated),
+        'rollout_logprobs':[-.1]*len(generated),'finish_reason':'stop',
+        'prompt_token_ids':[1,90,91],'turn':1,'episode_id':'episode'}
+    result=split_turn_samples([sample],{'episode':[record]},template)[0]
+    assert result.response_token_ids==[[90,91]+generated]
+    assert result.response_loss_mask==[[0,0]+[1]*len(generated)]
+    assert result.extra['input_audit']['response_token_ids']==generated
+    assert record['response_token_ids']==generated
+
+
+def test_multimodal_chunk_uses_audited_token_encoder(monkeypatch):
+    import torch
+    from contextlib import nullcontext
+    from agent.training.conditional_turns import ConditionalTurnsMixin
+    monkeypatch.setenv('OPENETA_INPUT_PROTOCOL','openeta.two_tool_input.v1')
+    seen=[]
+    sample=SimpleNamespace()
+    def encode(s,template):
+        assert s is sample
+        return {'input_ids':[4,5], '_extra_kwargs':{}}
+    monkeypatch.setattr('swift.rlhf_trainers.utils.encode_sample',encode)
+    class Parent:
+        def get_chunked_inputs(self,mi,gb,start,end,origin):
+            assert origin is None
+            return {'attention_mask':torch.ones(1,8)},gb
+    class Harness(ConditionalTurnsMixin,Parent):
+        pass
+    obj=Harness()
+    obj.model=SimpleNamespace(device='cpu')
+    obj._template_context=lambda template:nullcontext()
+    def collate(rows,padding_to):
+        seen.append((rows,padding_to))
+        return {'input_ids':torch.tensor([[4,5]]),'labels':torch.tensor([[4,5]])}
+    obj.template=SimpleNamespace(data_collator=collate)
+    batch=object()
+    inputs,result=obj.get_chunked_inputs({'input_ids':torch.zeros(1,8)},batch,0,1,[sample])
+    assert result is batch and 'labels' not in inputs
+    assert inputs['input_ids'].tolist()==[[4,5]]
+    assert seen==[([{'input_ids':[4,5]}],8)]

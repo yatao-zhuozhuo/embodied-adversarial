@@ -33,7 +33,7 @@ def persist_input_record(record):
         temporary.replace(target)
 
 
-def split_turn_samples(samples, records):
+def split_turn_samples(samples, records, template=None):
     result = []
     for sample in samples:
         turns = records.pop(sample.request_id)
@@ -45,12 +45,21 @@ def split_turn_samples(samples, records):
             s = deepcopy(sample)
             s.messages = deepcopy(turn['request']['messages']) + [{'role':'assistant','content':turn['answer']}]
             s.images = list(turn['request']['images'])
-            s.response_token_ids = [turn['response_token_ids']]
-            s.response_loss_mask = [turn['response_loss_mask']]
+            # The template prefix belongs to the sampled prompt, even if the
+            # model independently emits identical tokens. Give Swift an
+            # explicit zero-loss prefix so its prefix deduplication cannot
+            # mistake generated tokens for conditioning tokens.
+            prefix = []
+            if template is not None:
+                from swift.rlhf_trainers.utils import get_response_prefix_ids
+                prefix = get_response_prefix_ids(template,
+                    sample_enable_thinking=turn['request']['chat_template_kwargs'].get('enable_thinking')) or []
+            s.response_token_ids = [list(prefix) + list(turn['response_token_ids'])]
+            s.response_loss_mask = [[0]*len(prefix) + list(turn['response_loss_mask'])]
             s.rollout_logprobs = [turn['rollout_logprobs']]
             s.finish_reason = turn['finish_reason']
             s.extra['chat_template_kwargs'] = deepcopy(turn['request']['chat_template_kwargs'])
-            s.extra['input_audit'] = {k:deepcopy(turn[k]) for k in ('prompt_token_ids','turn','episode_id')}
+            s.extra['input_audit'] = {k:deepcopy(turn[k]) for k in ('prompt_token_ids','turn','episode_id','response_token_ids','response_loss_mask')}
             result.append(s)
     return result
 
@@ -86,7 +95,7 @@ class ConditionalTurnsMixin:
         episodes = super()._generate_completions(samples)
         if getattr(self, "bob_scheduler", None) is not None:
             self.bob_scheduler.input_records.clear()
-        turns = split_turn_samples(episodes, self.multi_turn_scheduler.input_records)
+        turns = split_turn_samples(episodes, self.multi_turn_scheduler.input_records, self.template)
         self.dynamic_num_samples = True
         return turns
 
@@ -134,7 +143,7 @@ class ConditionalTurnsMixin:
                     targets = [ids[i] for i in indices]
                     if prompt != s.extra['input_audit']['prompt_token_ids']:
                         raise ValueError('training condition differs from sampled prompt')
-                    if targets != s.response_token_ids[0]:
+                    if targets != s.extra['input_audit']['response_token_ids']:
                         raise ValueError('loss mask does not select exactly the generated tokens')
                     if len(targets) != len(s.rollout_logprobs[0]):
                         raise ValueError('rollout logprob count mismatch')
@@ -143,6 +152,24 @@ class ConditionalTurnsMixin:
                 stream.write(json.dumps({'step':self.state.global_step,'rank':self.accelerator.process_index,
                     'turns':len(samples),'prompt_and_loss_verified':True})+'\n')
         return super()._prepare_batch_inputs(samples)
+
+    def get_chunked_inputs(self, model_inputs, grpo_batch, start_idx, end_idx, origin_data=None):
+        if not enabled() or origin_data is None:
+            return super().get_chunked_inputs(model_inputs, grpo_batch, start_idx, end_idx, origin_data)
+        # Swift's multimodal chunk path otherwise re-tokenizes display text.
+        # Reuse exactly the same raw token IDs and loss mask as initial encoding.
+        from swift.rlhf_trainers.utils import encode_sample
+        from swift.utils import to_device
+        chunk_inputs, chunk_batch = super().get_chunked_inputs(
+            model_inputs, grpo_batch, start_idx, end_idx, None)
+        with self._template_context(self.template):
+            encoded = [encode_sample(s, self.template) for s in origin_data[start_idx:end_idx]]
+            for item in encoded:
+                item.pop('_extra_kwargs', None)
+            chunk_inputs.update(to_device(self.template.data_collator(
+                encoded, padding_to=model_inputs['input_ids'].shape[1]), self.model.device))
+            chunk_inputs.pop('labels', None)
+        return chunk_inputs, chunk_batch
 
     def _postprocess_batch(self, samples, batch_encoded_inputs):
         if not enabled():
