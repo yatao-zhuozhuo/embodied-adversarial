@@ -3,18 +3,24 @@ from types import SimpleNamespace
 from agent.training.rollout_cpu_sync import gather_rollout_flags,CpuRolloutControlMixin
 
 
-def test_control_collective_is_cpu_and_preserves_rank_order(monkeypatch):
+def test_control_store_is_tensor_free_and_preserves_rank_order(monkeypatch):
     import torch.distributed as dist
-    group=object()
-    monkeypatch.setattr(dist,'get_backend',lambda g:'gloo')
-    monkeypatch.setattr(dist,'get_world_size',lambda g:3)
-    def gather(output,values,group=None):
-        assert values==[True]
-        output[:]=[[True],[],[False,True]]
-    monkeypatch.setattr(dist,'all_gather_object',gather)
-    assert gather_rollout_flags([True],group)==[True,False,True]
-    monkeypatch.setattr(dist,'get_backend',lambda g:'nccl')
-    with pytest.raises(ValueError,match='CUDA collective'):gather_rollout_flags([True],group)
+    from agent.training.rollout_cpu_sync import RolloutCpuStore
+    import json
+    class Store:
+        def __init__(self):self.values={}
+        def set(self,k,v):self.values[k]=v
+        def wait(self,keys,timeout):
+            self.values['0/1']=json.dumps([])
+            self.values['0/2']=json.dumps([False,True])
+        def get(self,k):return self.values[k]
+    def forbidden(*args,**kwargs):raise AssertionError('CUDA/tensor collective must not run')
+    monkeypatch.setattr(dist,'all_gather_object',forbidden)
+    monkeypatch.setattr(dist,'all_gather',forbidden)
+    control=RolloutCpuStore(Store(),0,3)
+    assert gather_rollout_flags([True],control)==[True,False,True]
+    with pytest.raises(ValueError,match='tensor-free CPU store'):
+        gather_rollout_flags([True],object())
 
 
 def test_no_distributed_group_cannot_fall_back_to_nccl(monkeypatch):
@@ -23,7 +29,7 @@ def test_no_distributed_group_cannot_fall_back_to_nccl(monkeypatch):
     assert gather_rollout_flags([True],None)==[True]
     monkeypatch.setattr(dist,'is_initialized',lambda:True)
     monkeypatch.setattr(dist,'get_world_size',lambda:8)
-    with pytest.raises(ValueError,match='explicit CPU group'):gather_rollout_flags([True],None)
+    with pytest.raises(ValueError,match='explicit CPU store'):gather_rollout_flags([True],None)
 
 
 def test_cpu_barrier_precedes_next_inference(monkeypatch):

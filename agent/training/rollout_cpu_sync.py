@@ -1,29 +1,54 @@
 """CPU collectives for rollout control; NCCL remains the gradient backend.
 
 A rank reaching an NCCL object gather early can occupy a GPU needed by a
-slower rank's simulator renderer. Gloo avoids that circular resource wait.
+slower rank's simulator renderer. A tensor-free CPU store avoids that circular resource wait.
 """
 from datetime import timedelta
+
+
+class RolloutCpuStore:
+    """A tensor-free rendezvous for the tiny rollout control messages.
+
+    Avoid object collectives altogether: framework/device binding can make
+    an apparently CPU process group touch CUDA in a colocated engine.
+    """
+    def __init__(self,store,rank,world_size):
+        self.store=store
+        self.rank=rank
+        self.world_size=world_size
+        self.sequence=0
+
+    def gather(self,values):
+        import json
+        if any(type(value) is not bool for value in values):
+            raise ValueError('Rollout control only supports boolean flags')
+        sequence=self.sequence
+        self.sequence+=1
+        keys=[f'{sequence}/{rank}' for rank in range(self.world_size)]
+        self.store.set(keys[self.rank],json.dumps(list(values)))
+        self.store.wait(keys,timedelta(minutes=15))
+        return [value for key in keys for value in json.loads(self.store.get(key))]
 
 
 def create_rollout_cpu_group():
     import torch.distributed as dist
     if not dist.is_available() or not dist.is_initialized() or dist.get_world_size()==1:
         return None
-    return dist.new_group(backend='gloo',timeout=timedelta(minutes=15))
+    # This PyTorch-pinned runtime exposes its rendezvous store through c10d.
+    # Prefixing isolates our keys from DDP/vLLM; no group/device is modified.
+    store=dist.PrefixStore('openeta.rollout.control.v1/',dist.distributed_c10d._get_default_store())
+    return RolloutCpuStore(store,dist.get_rank(),dist.get_world_size())
 
 
 def gather_rollout_flags(values,group):
     import torch.distributed as dist
     if group is None:
         if dist.is_available() and dist.is_initialized() and dist.get_world_size()>1:
-            raise ValueError('Distributed rollout requires an explicit CPU group')
+            raise ValueError('Distributed rollout requires an explicit CPU store')
         return list(values)
-    if dist.get_backend(group)!='gloo':
-        raise ValueError('Rollout control must not use a CUDA collective')
-    gathered=[None]*dist.get_world_size(group)
-    dist.all_gather_object(gathered,list(values),group=group)
-    return [value for rank_values in gathered for value in rank_values]
+    if not isinstance(group,RolloutCpuStore):
+        raise ValueError('Rollout control requires a tensor-free CPU store')
+    return group.gather(values)
 
 
 class CpuRolloutControlMixin:
