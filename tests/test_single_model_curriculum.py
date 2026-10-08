@@ -54,3 +54,39 @@ def test_zero_reward_callback_stops_without_duplicate_log_count(tmp_path,monkeyp
     callback.on_log(args,state,control,{'reward':0.})
     assert control.should_training_stop and control.should_save
     assert json.loads((tmp_path/'curriculum_zero_reward_stop.json').read_text())['step']==4
+
+
+def test_supervisor_carries_checkpoint_between_stages_and_holds_on_zero(tmp_path,monkeypatch):
+    import os
+    import scripts.run_single_model_curriculum as module
+    for stop_early in (False,True):
+        root=tmp_path/str(stop_early)
+        plan=prepare(ROOT/'configs/single_model_rl_curriculum_mixed.json',root)
+        launched=[]
+        monkeypatch.setattr(module.subprocess,'run',lambda *args,**kwargs:SimpleNamespace(returncode=0))
+        class Child:
+            pid=os.getpid()
+            def __init__(self,env):self.env=env
+            def wait(self):
+                step=4 if stop_early else int(self.env['TRAIN_STEPS'])
+                path=Path(self.env['OUTPUT_DIR'])/'v-test'/f'checkpoint-{step}'
+                path.mkdir(parents=True)
+                (path/'trainer_state.json').write_text(json.dumps({'global_step':step,
+                    'log_history':[{'step':step,'reward':0. if stop_early else .25}]}))
+                return 0
+        def spawn(*args,**kwargs):
+            env=kwargs['env'];launched.append(env.copy());return Child(env)
+        monkeypatch.setattr(module.subprocess,'Popen',spawn)
+        monkeypatch.setattr(module,'successful_tasks',lambda output:0 if stop_early else 2)
+        module.run(plan,root)
+        status=json.loads((root/'curriculum_status.json').read_text())
+        if stop_early:
+            assert status['status']=='needs_reward_signal' and len(launched)==1
+        else:
+            assert status['status']=='complete' and status['step']==96 and len(launched)==3
+            assert 'RESUME_FROM_CHECKPOINT' not in launched[0]
+            assert launched[1]['RESUME_FROM_CHECKPOINT'].endswith('checkpoint-32')
+            assert launched[2]['RESUME_FROM_CHECKPOINT'].endswith('checkpoint-64')
+            assert [e['IGNORE_DATA_SKIP'] for e in launched]==['false','true','true']
+        assert all(e['MODEL_PATH'].endswith('Qwen3.5-4B-embodied-mixed') for e in launched)
+        assert all(e['DATASET_SHUFFLE']=='false' and e['MAX_TURNS']=='48' for e in launched)
