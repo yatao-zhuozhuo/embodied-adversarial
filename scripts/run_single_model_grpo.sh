@@ -61,6 +61,8 @@ exec "$SWIFT_VENV/bin/swift" rlhf \
  --per_device_train_batch_size "$PER_DEVICE_TRAIN_BATCH_SIZE" \
  --gradient_accumulation_steps "${GRADIENT_ACCUMULATION_STEPS:-1}" \
  --num_generations "$NUM_GENERATIONS" --generation_batch_size "$GENERATION_BATCH_SIZE" \
+ --dataset_shuffle "${DATASET_SHUFFLE:-true}" --train_dataloader_shuffle "${DATASET_SHUFFLE:-true}" \
+ --ignore_data_skip "${IGNORE_DATA_SKIP:-false}" \
  --steps_per_generation 1 --learning_rate "${LR:-5e-6}" --lr_scheduler_type constant \
  --tuner_type lora --lora_rank 8 --lora_alpha 16 --target_modules all-linear \
  --gradient_checkpointing true --use_liger_kernel true --bf16 true --beta "${BETA:-0.01}" \
