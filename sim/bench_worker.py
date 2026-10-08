@@ -181,6 +181,9 @@ def _patch_robosuite_render_context() -> None:
     bu.MjRenderContext._openeta_ctx_patched = True
 
 
+_THREAD_AFFINE_BENCHES = frozenset({"behavior", "robocasa", "metaworld", "libero"})
+
+
 class _MainThreadExecutor:
     """Marshal simulator calls from uvicorn's thread onto the process main thread."""
 
@@ -1349,10 +1352,12 @@ if __name__ == "__main__":
     import uvicorn
     config = uvicorn.Config(app, fd=sock.fileno(), log_level="warning")
     server = uvicorn.Server(config)
-    if args.bench in {"behavior", "robocasa"}:
-        # Isaac Kit / OmniGibson requires the process main thread (signal
-        # handlers, render loop, and teardown). Keep HTTP responsive in a
-        # server thread and execute every simulator operation here via queue.
+    if args.bench in _THREAD_AFFINE_BENCHES:
+        # Isaac Kit and MuJoCo EGL contexts have thread affinity. MetaWorld
+        # and LIBERO must create, step, render and close on the same thread:
+        # a GL lock alone cannot transfer a current context between AnyIO
+        # workers. Keep HTTP responsive in a server thread, and serialize
+        # simulator operations on their owning main thread.
         executor = _MainThreadExecutor()
         app.state.sim_executor = executor
         server_thread = threading.Thread(target=server.run, daemon=True)
