@@ -64,9 +64,10 @@ def latest_checkpoint(output):
     return max(candidates,key=lambda item:item[0])
 
 
-def successful_tasks(output):
+def successful_tasks(output, history_outputs=()):
     tasks=set()
-    for path in (Path(output)/'rollouts/episodes').glob('*.json'):
+    paths=[path for directory in [output,*history_outputs] for path in (Path(directory)/'rollouts/episodes').glob('*.json')]
+    for path in paths:
         with path.open('rb') as stream:
             stream.seek(max(0,path.stat().st_size-8192))
             tail=stream.read().decode()
@@ -78,9 +79,14 @@ def successful_tasks(output):
 
 
 def run(plan,root):
-    checkpoint=None
+    checkpoint=Path(plan['initial_checkpoint']) if plan.get('initial_checkpoint') else None
+    initial_step=json.loads((checkpoint/'trainer_state.json').read_text())['global_step'] if checkpoint else 0
+    first_resumed_stage=True
     prefix='source scripts/single_model_rl_env.sh\nexport OPENETA_HOST_STATE_TOKEN="$(cat "$OPENETA_HOST_TOKEN_FILE")"\n'
     for stage in plan['stages']:
+        if checkpoint and initial_step >= stage['target_step']:
+            continue
+        same_stage_resume=bool(checkpoint and first_resumed_stage and initial_step>stage['start_step'])
         directory=Path(stage['directory'])
         env=os.environ.copy()
         env.update(RUN_ROOT=str(directory),OPENETA_RL_CONFIG=str(directory/'config.json'),
@@ -88,7 +94,7 @@ def run(plan,root):
             TRAIN_STEPS=str(stage['target_step']),TRAIN_EPOCHS='5',MAX_TURNS=str(plan['max_turns']),
             OPENETA_RL_TURN_TOKENS=str(plan['per_turn_tokens']),
             OPENETA_RL_EPISODE_TOKENS=str(plan['episode_tokens']),VLLM_MAX_MODEL_LEN=str(plan['context_length']),
-            DATASET_SHUFFLE='false',IGNORE_DATA_SKIP='true' if checkpoint else 'false',
+            DATASET_SHUFFLE='false',IGNORE_DATA_SKIP='false' if same_stage_resume or not checkpoint else 'true',
             OPENETA_CURRICULUM_ZERO_LIMIT=str(plan['zero_limit']))
         env.pop('TRAIN_ADAPTER_PATH',None)
         env.pop('RESUME_FROM_CHECKPOINT',None)
@@ -115,7 +121,9 @@ def run(plan,root):
         step,checkpoint,state=latest_checkpoint(stage['output'])
         summary=summarize_groups(state['log_history'],stage['start_step'])
         report={**summary,'stage':stage['name'],'step':step,'checkpoint':str(checkpoint),
-            'successful_tasks':successful_tasks(stage['output'])}
+            'successful_tasks':successful_tasks(stage['output'],plan.get('history_outputs',{}).get(stage['name'],[]))
+                if plan.get('history_outputs',{}).get(stage['name']) else successful_tasks(stage['output'])}
+        first_resumed_stage=False
         write(directory/'stage_result.json',report)
         if step!=stage['target_step'] or (stage['promotion'] and not gate_result(summary,report['successful_tasks'],stage['promotion'])):
             write(root/'curriculum_status.json',{'status':'needs_reward_signal','detail':report,
@@ -130,6 +138,8 @@ def main():
     parser.add_argument('--run-root',type=Path,required=True)
     parser.add_argument('--prepare-only',action='store_true')
     parser.add_argument('--worker',action='store_true')
+    parser.add_argument('--resume-checkpoint',type=Path)
+    parser.add_argument('--history-plan',type=Path)
     args=parser.parse_args();root=args.run_root.resolve()
     if args.worker:
         try:
@@ -143,6 +153,19 @@ def main():
     if (root/'curriculum.submission.json').exists():
         parser.error('Existing submission; inspect its state and use a fresh directory')
     plan=prepare(args.config.resolve(),root)
+    if args.resume_checkpoint:
+        checkpoint=args.resume_checkpoint.resolve()
+        state=json.loads((checkpoint/'trainer_state.json').read_text())
+        for filename in ['adapter_model.safetensors','optimizer.pt','scheduler.pt']:
+            if not (checkpoint/filename).is_file():parser.error('Incomplete resume checkpoint')
+        step=state['global_step']
+        if not 0 < step < plan['total_updates']:parser.error('Checkpoint step is outside curriculum')
+        plan['initial_checkpoint']=str(checkpoint)
+        if args.history_plan:
+            old=json.loads(args.history_plan.read_text())
+            if old['config_sha256']!=plan['config_sha256']:parser.error('Curriculum config differs from saved run')
+            plan['history_outputs']={stage['name']:[stage['output']] for stage in old['stages']}
+        write(root/'curriculum_plan.json',plan)
     if args.prepare_only:
         print(json.dumps({'plan':str(root/'curriculum_plan.json'),'updates':plan['total_updates']}));return
     env=os.environ.copy();env['RUN_ROOT']=str(root)

@@ -90,3 +90,30 @@ def test_supervisor_carries_checkpoint_between_stages_and_holds_on_zero(tmp_path
             assert [e['IGNORE_DATA_SKIP'] for e in launched]==['false','true','true']
         assert all(e['MODEL_PATH'].endswith('Qwen3.5-4B-embodied-mixed') for e in launched)
         assert all(e['DATASET_SHUFFLE']=='false' and e['MAX_TURNS']=='48' for e in launched)
+
+
+def test_partial_stage_resume_preserves_dataloader_offset(tmp_path,monkeypatch):
+    import os
+    import scripts.run_single_model_curriculum as module
+    plan=prepare(ROOT/'configs/single_model_rl_curriculum_mixed.json',tmp_path/'run')
+    checkpoint=tmp_path/'checkpoint-5';checkpoint.mkdir()
+    (checkpoint/'trainer_state.json').write_text(json.dumps({'global_step':5}))
+    plan['initial_checkpoint']=str(checkpoint)
+    launched=[]
+    monkeypatch.setattr(module.subprocess,'run',lambda *a,**kw:SimpleNamespace(returncode=0))
+    class Child:
+        pid=os.getpid()
+        def __init__(self,env):self.env=env
+        def wait(self):
+            # Stop after this stage, so no harder stage is launched in this test.
+            p=Path(self.env['OUTPUT_DIR'])/'v-test/checkpoint-6';p.mkdir(parents=True)
+            (p/'trainer_state.json').write_text(json.dumps({'global_step':6,'log_history':[{'step':6,'reward':0.}]}))
+            return 0
+    def spawn(*a,**kw):launched.append(kw['env']);return Child(kw['env'])
+    monkeypatch.setattr(module.subprocess,'Popen',spawn)
+    monkeypatch.setattr(module,'successful_tasks',lambda output:0)
+    module.run(plan,tmp_path/'run')
+    assert len(launched)==1
+    assert launched[0]['RESUME_FROM_CHECKPOINT']==str(checkpoint)
+    assert launched[0]['IGNORE_DATA_SKIP']=='false'
+    assert launched[0]['TRAIN_STEPS']=='32'
