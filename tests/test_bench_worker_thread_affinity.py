@@ -30,3 +30,12 @@ def test_http_calls_share_simulator_owner_thread(monkeypatch):
     finally:stop.set();thread.join(timeout=2)
     assert len({tid for _,tid in seen})==1
     assert owner[0]!=threading.get_ident()
+
+
+def test_mujoco_worker_cap_does_not_reduce_episode_group(monkeypatch):
+    from sim.mcp_server.worker_mgr import _pool_max
+    monkeypatch.setenv('OPENETA_WORKER_POOL_MAX','32')
+    monkeypatch.setenv('OPENETA_WORKER_POOL_MAX_METAWORLD','8')
+    assert _pool_max('metaworld')==8
+    assert _pool_max('maniskill')==32
+    assert _pool_max()==32

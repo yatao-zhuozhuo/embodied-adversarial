@@ -53,10 +53,12 @@ def _bench_for_env_id(env_id: str) -> str:
 # Worker-pool configuration
 # ══════════════════════════════════════════════════════════════════════
 
-def _pool_max() -> int:
-    """Max workers per bench.  Override with ``OPENETA_WORKER_POOL_MAX``."""
+def _pool_max(bench: str | None = None) -> int:
+    """Per-benchmark process cap, falling back to the shared pool cap."""
+    default = os.environ.get("OPENETA_WORKER_POOL_MAX", "8")
+    value = os.environ.get(f"OPENETA_WORKER_POOL_MAX_{bench.upper()}", default) if bench else default
     try:
-        return max(1, int(os.environ.get("OPENETA_WORKER_POOL_MAX", "8")))
+        return max(1, int(value))
     except ValueError:
         return 8
 
@@ -569,7 +571,7 @@ class BenchWorkerManager:
                     w.stop(wait=True)
                     pool.remove(w)
 
-            pool_max = _pool_max()
+            pool_max = _pool_max(bench)
             if not pool:
                 chosen = self._spawn_worker(bench)
                 pool.append(chosen)
