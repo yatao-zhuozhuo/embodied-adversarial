@@ -192,3 +192,25 @@ def test_new_task_profiles_fail_closed(task,dimension,mode,wrist_count):
     assert profile['image_limit']<=5
     with pytest.raises(ValueError,match='controller mode'):
         make_profile('maniskill',task,{'input_control_contract':{**native,'mode':'unknown'}},contract)
+
+
+def test_independent_environment_calls_overlap(scheduler):
+    import threading,time
+    obj,req,plugin,env=scheduler
+    req2=deepcopy(req);req2.uuid='episode-2'
+    barrier=threading.Barrier(2,timeout=3)
+    original=env.step
+    def blocked_step(self,action,num_steps):
+        # Serial execution would break this barrier instead of completing.
+        barrier.wait()
+        return original(self,action,num_steps)
+    env.step=blocked_step
+    async def run():
+        await obj.on_trajectory_start([req,req2])
+        c=choice(serialize_decision('step_env',{'action':[0.]*4,'num_steps':1}))
+        results=await asyncio.gather(obj.on_turn_end(req,c,1),obj.on_turn_end(req2,c,1))
+        assert all(not r['done'] for r in results)
+        assert all(s.control_steps==1 for s in obj._episodes.values())
+        for rid in list(obj._episodes):await obj._close(rid)
+    try:asyncio.run(run())
+    finally:env.step=original

@@ -1,6 +1,8 @@
 """Single trainable policy, native benchmark tasks, terminal binary rewards."""
 from __future__ import annotations
 
+import asyncio
+import time
 import faulthandler
 import signal
 faulthandler.register(signal.SIGUSR2, all_threads=True)
@@ -150,6 +152,7 @@ class SingleModelScheduler(_EmbodiedScheduler):
         except ValueError as exc:
             error = str(exc)
         executed = 0
+        environment_seconds = 0.
         native_receipt = {}
         terminated = truncated = False
         new_observation = False
@@ -162,7 +165,10 @@ class SingleModelScheduler(_EmbodiedScheduler):
             state.invalid_streak = 0
             if command.get('tool') == 'step_env':
                 state.observe_streak = 0
-                _, native_receipt, state.success = state.env.step(command['action'], command['num_steps'])
+                started = time.perf_counter()
+                _, native_receipt, state.success = await asyncio.to_thread(
+                    state.env.step, command['action'], command['num_steps'])
+                environment_seconds = time.perf_counter() - started
                 executed = native_receipt['executed_control_steps']
                 state.control_steps += executed
                 terminated = bool(native_receipt.get('terminated'))
@@ -170,7 +176,9 @@ class SingleModelScheduler(_EmbodiedScheduler):
                 new_observation = True
             elif command.get('tool') == 'observe_env':
                 state.observe_streak += 1
-                state.env.observe()
+                started = time.perf_counter()
+                await asyncio.to_thread(state.env.observe)
+                environment_seconds = time.perf_counter() - started
                 new_observation = True
             else:
                 reason = 'model_finish'
@@ -179,7 +187,8 @@ class SingleModelScheduler(_EmbodiedScheduler):
         state.input_builder.record(raw, feedback)
         state.steps.append({'turn': turn, 'completion': raw, 'validation': validation,
             'invalid_reason': error, 'command': command, 'input_execution': feedback,
-            'native_receipt': native_receipt, 'official_success': state.success})
+            'native_receipt': native_receipt, 'official_success': state.success,
+            'environment_call_seconds': environment_seconds})
         used_tokens = sum(len(r.get('response_token_ids', [])) for r in state.visible_inputs)
         if state.success: reason = 'official_success'
         elif terminated or truncated: reason = 'environment_ended'
@@ -198,7 +207,9 @@ class SingleModelScheduler(_EmbodiedScheduler):
             self._save(state, info)
             await self._close(state.request_id, mark_finished=True)
             return {'done': True, 'rollout_infos': info}
+        started = time.perf_counter()
         self._build(state, request, turn, new_observation)
+        state.steps[-1]['input_build_seconds'] = time.perf_counter() - started
         return {'done': False, 'rollout_infos': {'role': self.role, 'done': False}}
 
     def _save(self, state, info):

@@ -77,6 +77,9 @@ class ConditionalTurnsMixin:
             sample.messages = deepcopy(request.messages)
             sample.images = list(request.images)
             sample.extra['chat_template_kwargs'] = deepcopy(request.chat_template_kwargs)
+        before_rollout = getattr(self, '_rollout_cpu_ready', None)
+        if before_rollout is not None:
+            before_rollout()
         outputs = self._rollout(samples,request_config,is_global_inputs)
         return self._colocate_multi_turn_infer(samples,outputs,request_config,requests)
 
