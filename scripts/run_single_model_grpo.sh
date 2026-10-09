@@ -31,7 +31,7 @@ SWIFT_VENV="${SWIFT_VENV:-/opt/openeta-swift}"
 export OPENETA_SWIFT_ARTIFACT_ROOT="${OPENETA_SWIFT_ARTIFACT_ROOT:-${OUTPUT_DIR}/rollouts}"
 NUM_GENERATIONS="${NUM_GENERATIONS:-8}"
 PER_DEVICE_TRAIN_BATCH_SIZE="${PER_DEVICE_TRAIN_BATCH_SIZE:-1}"
-GENERATION_BATCH_SIZE=$((NPROC_PER_NODE * PER_DEVICE_TRAIN_BATCH_SIZE))
+GENERATION_BATCH_SIZE=$((${NNODES:-1} * NPROC_PER_NODE * PER_DEVICE_TRAIN_BATCH_SIZE))
 if (( GENERATION_BATCH_SIZE % NUM_GENERATIONS != 0 || NUM_GENERATIONS < 2 )); then
   echo 'generation batch must contain complete groups with G >= 2' >&2; exit 2
 fi
@@ -45,10 +45,12 @@ elif [[ -n "${TRAIN_ADAPTER_PATH:-}" ]]; then
   INIT_ARGS+=(--adapters "$TRAIN_ADAPTER_PATH")
 fi
 export NUM_GENERATIONS PER_DEVICE_TRAIN_BATCH_SIZE GENERATION_BATCH_SIZE
-if [[ -n "${OPENETA_TENSORBOARD_SERIES_ROOT:-}" ]]; then
+if [[ "${NODE_RANK:-0}" == 0 && -n "${OPENETA_TENSORBOARD_SERIES_ROOT:-}" ]]; then
   "$SWIFT_VENV/bin/python" scripts/single_model_tensorboard_series.py --source-root "$OPENETA_TENSORBOARD_SERIES_ROOT" --start
 fi
-"$SWIFT_VENV/bin/python" scripts/record_single_model_rl_run.py --output "$OUTPUT_DIR/run_manifest.json" --dataset "$DATASET_PATH"
+if [[ "${NODE_RANK:-0}" == 0 ]]; then
+  "$SWIFT_VENV/bin/python" scripts/record_single_model_rl_run.py --output "$OUTPUT_DIR/run_manifest.json" --dataset "$DATASET_PATH"
+fi
 "$SWIFT_VENV/bin/python" -c 'import tilelang'
 exec "$SWIFT_VENV/bin/python" "$SWIFT_VENV/bin/swift" rlhf \
  --rlhf_type grpo --check_model false --model "${MODEL_PATH:-/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B}" \

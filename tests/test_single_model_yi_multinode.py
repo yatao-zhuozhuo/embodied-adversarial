@@ -1,0 +1,62 @@
+"""Batch accounting and native-task holdout guarantees for the 2-node run."""
+from collections import Counter
+import json
+from pathlib import Path
+import pytest
+from scripts.create_single_model_rl_dataset import canonical_task, build_rows
+from scripts.run_single_model_curriculum import prepare
+from scripts.submit_single_model_rl_yi_jobs import request
+
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def test_curriculum_has_48_disjoint_tasks_and_36_updates(tmp_path):
+    cfg=json.loads((ROOT/'configs/single_model_rl_curriculum_mixed_yi_2n16.json').read_text())
+    original=json.loads((ROOT/'configs/single_model_rl_curriculum_mixed_yi.json').read_text())
+    for key in ('input_protocol','model_protocol','reward','model','max_turns','max_control_steps',
+                'per_turn_tokens','episode_tokens','context_length','history_groups','learning_rate',
+                'lora_rank','lora_alpha','beta','loss_scale','vllm_mode','initialization'):
+        assert cfg[key]==original[key]
+    plan=prepare(ROOT/'configs/single_model_rl_curriculum_mixed_yi_2n16.json',tmp_path)
+    assert [(s['rows'],s['start_step'],s['target_step']) for s in plan['stages']]==[(16,0,12),(32,12,36)]
+    tasks=[t for s in cfg['curriculum'] for t in s['tasks']]
+    assert len({canonical_task(t) for t in tasks})==48
+    assert {t['bench'] for t in tasks}=={'metaworld','libero','robocasa','maniskill'}
+    baseline=json.loads((ROOT/cfg['baseline_exclusion']).read_text())
+    assert len(baseline['tasks'])==69
+    assert not {canonical_task(t) for t in tasks}&{canonical_task(t) for t in baseline['tasks']}
+    assert all(s['epochs']==3 and s['seeds_per_task']==1 for s in cfg['curriculum'])
+
+
+def test_native_alias_cannot_bypass_baseline():
+    a={'env_id':'openeta/robocasa_target_CloseFridge-v0','task':'Close fridge'}
+    b={'bench':'robocasa','task_id':'CloseFridge','env_id':'openeta/robocasa_pretrain_CloseFridge-v0','task':'different description'}
+    with pytest.raises(ValueError,match='Baseline'):
+        build_rows({'tasks':[b]}, {}, baseline={'tasks':[a]})
+    assert canonical_task({'env_id':'openeta/metaworld_45_ind_reach-v3-v0'})==canonical_task({'env_id':'openeta/metaworld_50_reach-v3-v0'})
+
+
+def test_actual_grpo_sampler_has_four_tasks_sixteen_rollouts_each():
+    from trl.trainer.utils import RepeatSampler
+    for count in (16,32):
+        samples=list(RepeatSampler(range(count),mini_repeat_count=16,batch_size=4,repeat_count=1,shuffle=False))
+        assert len(samples)==count*16
+        for start in range(0,len(samples),64):
+            batch=samples[start:start+64]
+            assert sorted(Counter(batch).values())==[16]*4
+            # Accelerate distributes consecutive per-device batches to global ranks.
+            ranks=[batch[i*4:(i+1)*4] for i in range(16)]
+            assert all(len(set(rows))==1 for rows in ranks)
+            assert len({r[0] for r in ranks[:8]})==2
+            assert len({r[0] for r in ranks[8:]})==2
+
+
+def test_job_requests_two_nodes_eight_cards(tmp_path):
+    for rank in range(2):
+        r=request(f'test-{rank}',rank,tmp_path,tmp_path/'acceptance.json')
+        task=r['spec']['taskSpecs']['task1']
+        c=task['template']['spec']['containers'][0]
+        assert task['replicas']==1 and c['resources']['limits']['nvidia.com/gpu']=='8'
+        env={v['name']:v['value'] for v in c['env']}
+        assert env['NNODES']=='2' and env['NODE_RANK']==str(rank)
+        assert not any('TOKEN' in k or 'SECRET' in k for k in env)

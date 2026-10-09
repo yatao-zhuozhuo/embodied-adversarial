@@ -41,7 +41,10 @@ def prepare(config_path, root):
         phase_cfg={k:v for k,v in cfg.items() if k not in ('curriculum','consecutive_zero_group_limit')}
         phase_cfg.update(task_manifest=str(manifest_path),epochs=stage['epochs'])
         write(directory/'config.json',phase_cfg)
-        updates=len(rows)*stage['epochs']
+        tasks_per_batch=cfg.get('tasks_per_batch', 1)
+        if len(rows) % tasks_per_batch:
+            raise ValueError('Stage must contain complete task batches')
+        updates=len(rows)*stage['epochs']//tasks_per_batch
         stages.append({**stage,'directory':str(directory),'dataset':str(dataset),
             'output':str(root/'formal/trainer'/stage['name']),
             'start_step':cumulative,'target_step':cumulative+updates,'rows':len(rows)})
@@ -49,7 +52,8 @@ def prepare(config_path, root):
     plan={'source_config':str(config_path),'config_sha256':hashlib.sha256(config_path.read_bytes()).hexdigest(),
         'model':cfg['model'],'max_turns':cfg['max_turns'],'per_turn_tokens':cfg['per_turn_tokens'],
         'episode_tokens':cfg['episode_tokens'],'context_length':cfg['context_length'],
-        'zero_limit':cfg['consecutive_zero_group_limit'],'total_updates':cumulative,'stages':stages}
+        'zero_limit':cfg['consecutive_zero_group_limit'],'total_updates':cumulative,'stages':stages,
+        'batch':{key:cfg[key] for key in ('num_generations','per_device_train_batch_size','generation_batch_size','tasks_per_batch','nnodes') if key in cfg}}
     write(root/'curriculum_plan.json',plan)
     return plan
 

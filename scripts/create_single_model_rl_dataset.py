@@ -1,6 +1,7 @@
 """Build native-task GRPO prompts without teacher answers or trajectory reuse."""
 import argparse
 import json
+import re
 from pathlib import Path
 import sys
 
@@ -8,16 +9,30 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 
+def canonical_task(task):
+    """Compare native tasks across benchmark splits and manifest versions."""
+    env = task['env_id'].removeprefix('openeta/').removesuffix('-v0')
+    if env.startswith('robocasa_'):
+        return 'robocasa:' + re.sub(r'^(pretrain|target)_', '', env[len('robocasa_'):])
+    if env.startswith('metaworld_'):
+        return 'metaworld:' + re.sub(r'^(50|45_ind|45_ood)_', '', env[len('metaworld_'):])
+    if env.startswith('libero_'):
+        return 'libero:' + re.sub(r'[^a-z0-9]+', '_', task['task'].lower()).strip('_')
+    return env
+
+
 def build_rows(manifest, holdout, *, seed=20320000, max_turns=60, max_control_steps=400, tasks=None, baseline=None):
     source = manifest['tasks']
     if not source or len({(r['bench'], r['task_id']) for r in source}) != len(source):
         raise ValueError('Expected nonempty distinct tasks')
-    excluded_envs = {r['env_id'] for r in (baseline or {}).get('episodes', [])}
+    baseline_rows = (baseline or {}).get('tasks', (baseline or {}).get('episodes', []))
+    excluded_envs = {r['env_id'] for r in baseline_rows}
+    excluded_keys = {canonical_task(r) for r in baseline_rows}
     rows = []
     for i, task in enumerate(source):
         if tasks and task['task_id'] not in tasks:
             continue
-        if task['env_id'] in excluded_envs:
+        if task['env_id'] in excluded_envs or canonical_task(task) in excluded_keys:
             raise ValueError('Baseline task cannot train')
         excluded = holdout['canonical_excluded_task_keys'].get(task['bench'], [])
         if task['task_id'] in excluded or task['task'] in holdout['tasks'].get(task['bench'], []):

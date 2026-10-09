@@ -17,6 +17,8 @@ p.add_argument('--dataset',type=Path,required=True)
 a=p.parse_args()
 config_path=Path(os.environ.get('OPENETA_RL_CONFIG', ROOT/'configs/single_model_rl_20tasks.json'))
 paths=[config_path,a.dataset,ROOT/'docs/baseline-40-tasks.json']
+baseline_path=json.loads(config_path.read_text()).get('baseline_exclusion')
+if baseline_path: paths.append(ROOT/baseline_path)
 paths.append(ROOT/json.loads(config_path.read_text())['task_manifest'])
 for pattern in ['agent/training/*.py','agent/runtime/two_tool*.py','plugins/*grpo.py','sim/bench_worker.py',
                 'sim/native_state_fingerprint.py','sim/two_tool_contract.py','sim/unified_env.py','sim/env_registry.py','sim/mcp_server/*.py',
@@ -34,7 +36,7 @@ payload={'schema':'openeta.single_model_rl.run.v1',
     'source_sha256':{str(path.relative_to(ROOT) if path.is_relative_to(ROOT) else path):
                      hashlib.sha256(path.read_bytes()).hexdigest() for path in paths},
     'resolved_environment':{key:os.environ.get(key) for key in [
-        'TRAIN_GPU','NPROC_PER_NODE','MAX_TURNS','OPENETA_RL_TURN_TOKENS','OPENETA_RL_EPISODE_TOKENS',
+        'TRAIN_GPU','NPROC_PER_NODE','NNODES','NODE_RANK','MASTER_ADDR','MASTER_PORT','MAX_TURNS','OPENETA_RL_TURN_TOKENS','OPENETA_RL_EPISODE_TOKENS',
         'VLLM_MAX_MODEL_LEN','MODEL_PATH','TRAIN_ADAPTER_PATH','RESUME_FROM_CHECKPOINT','NUM_GENERATIONS',
         'PER_DEVICE_TRAIN_BATCH_SIZE','GENERATION_BATCH_SIZE','REPORT_TO','TRAIN_STEPS','TRAIN_EPOCHS','BETA','TEMPERATURE','OPENETA_EMBODIED_MCP_URL']}}
 if a.output.exists():
