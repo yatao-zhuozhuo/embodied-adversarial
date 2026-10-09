@@ -37,9 +37,7 @@ def request(name, rank, root, acceptance):
                 'spec':{'hostNetwork':True,'dnsPolicy':'ClusterFirstWithHostNet','containers':[{
                     'name':'task1','image':'registry.lg.shzhisuan.com/library/sglang:v0.5.12.post1-cu130',
                     'command':['bash','-lc',command],'env':[{'name':k,'value':v} for k,v in env.items()],
-                    'resources':{'limits':resources,'requests':resources},
-                    'volumeMounts':[{'name':'shm','mountPath':'/dev/shm'}]}],
-                    'volumes':[{'name':'shm','emptyDir':{'medium':'Memory','sizeLimit':'64Gi'}}],
+                    'resources':{'limits':resources,'requests':resources}}],
                     'imagePullSecrets':[{'name':labels['kubebrain.brainpp.cn/creator-id']}],
                     'restartPolicy':'Never','terminationGracePeriodSeconds':120}}}}}}
 
