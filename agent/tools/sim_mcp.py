@@ -1924,10 +1924,19 @@ async def _call_sse_mcp_tool(
 
     async with sse_client(
         url,
+        # Every call already owns a short-lived session. Close message POST
+        # connections instead of reusing an idle connection after a long step.
+        headers={"Connection": "close"},
         sse_read_timeout=_sse_read_timeout_s(timeout_s),
     ) as (read, write):
         async with ClientSession(read, write) as session:
             await session.initialize()
+            # The SDK otherwise fetches output schemas AFTER the action has
+            # executed. A failed tools/list POST then hides a successful step
+            # behind a transport timeout. Populate the SDK validation cache
+            # first, retaining its normal output validation and never replaying
+            # a potentially state-changing tool call.
+            await session.list_tools()
             result = await session.call_tool(
                 tool_name,
                 arguments,
@@ -1947,6 +1956,7 @@ async def _list_sse_mcp_tools(
 
     async with sse_client(
         url,
+        headers={"Connection": "close"},
         sse_read_timeout=_sse_read_timeout_s(timeout_s),
     ) as (read, write):
         async with ClientSession(read, write) as session:

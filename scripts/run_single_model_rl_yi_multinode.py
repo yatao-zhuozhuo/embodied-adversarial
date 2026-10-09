@@ -88,7 +88,8 @@ def main():
         if rank == 0:
             command([sys.executable, '-m', 'pytest', '-q',
                      'tests/test_single_model_yi_multinode.py', 'tests/test_single_model_yi_config.py',
-                     'tests/test_single_model_curriculum.py', 'tests/test_worker_gpu_assignment.py'],
+                     'tests/test_single_model_curriculum.py', 'tests/test_worker_gpu_assignment.py',
+                     'tests/test_simulator_mcp_sse_order.py'],
                     os.environ.copy(), local/'contract_tests.log')
         barrier('contract-tests')
         plan = json.loads((root / 'curriculum_plan.json').read_text())
