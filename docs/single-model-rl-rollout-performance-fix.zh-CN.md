@@ -47,3 +47,5 @@ MuJoCo worker 的 EGL/OpenGL 操作需要稳定的线程所有权；固定线程
 已重建环境服务、通过四道简单任务 preflight，从原 checkpoint-5 完整恢复模型、optimizer、scheduler、RNG 和 dataloader 位置（resume_only_model=false，ignore_data_skip=false）。当前监督进程根目录为原运行的 `formal/trainer/resume_ckpt5_01`，实际首组初始化为 `metaworld:button-press-v3:20490100`，对应原数据集第 6 组，确认没有从头重跑。旧阶段成功记录保留用于课程升阶判定，后续阶段继续自动接续。TensorBoard 沿用原名称和监控根目录。恢复入口提交 `250cf6f`，5 项课程测试通过。
 
 此次按用户要求确认恢复采样后交回，不持续主动轮询，也不声称第 6 次 update 已完成。原 worker 底层 -11 崩溃原因尚未彻底修复，当前使用重建后的干净环境服务。
+
+2026-10-09：Notebook 再次重启，上一续训已完整保存 checkpoint-6。已从该 checkpoint 在新实例恢复，当前监督根目录为原运行的 `formal/trainer/resume_ckpt6_02`，环境服务为 `resume_service_02`（端口 19777），仍沿用原 TensorBoard。模型、优化器、调度器、RNG 和数据跳过位置完整恢复；保留所有前序运行的成功证据用于课程升阶。相关恢复测试 6 项通过，实现提交 `ac9b8ec`。当前已通过四道简单任务的环境检查，并确认实际恢复参数；新一轮 optimizer 更新尚未完成。
