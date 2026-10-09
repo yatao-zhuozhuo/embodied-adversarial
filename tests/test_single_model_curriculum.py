@@ -117,3 +117,10 @@ def test_partial_stage_resume_preserves_dataloader_offset(tmp_path,monkeypatch):
     assert launched[0]['RESUME_FROM_CHECKPOINT']==str(checkpoint)
     assert launched[0]['IGNORE_DATA_SKIP']=='false'
     assert launched[0]['TRAIN_STEPS']=='32'
+
+
+def test_repeated_resume_preserves_all_past_stage_evidence():
+    from scripts.run_single_model_curriculum import history_sources
+    plan={'stages':[{'name':'01_easy','output':'resume1'}],
+        'history_outputs':{'01_easy':['original','resume1']}}
+    assert history_sources(plan)=={'01_easy':['resume1','original']}

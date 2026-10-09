@@ -54,6 +54,12 @@ def prepare(config_path, root):
     return plan
 
 
+def history_sources(plan):
+    inherited=plan.get('history_outputs',{})
+    return {stage['name']:list(dict.fromkeys([stage['output'],*inherited.get(stage['name'],[])]))
+        for stage in plan['stages']}
+
+
 def latest_checkpoint(output):
     candidates=[]
     for path in Path(output).glob('v*/checkpoint-*/trainer_state.json'):
@@ -164,7 +170,7 @@ def main():
         if args.history_plan:
             old=json.loads(args.history_plan.read_text())
             if old['config_sha256']!=plan['config_sha256']:parser.error('Curriculum config differs from saved run')
-            plan['history_outputs']={stage['name']:[stage['output']] for stage in old['stages']}
+            plan['history_outputs']=history_sources(old)
         write(root/'curriculum_plan.json',plan)
     if args.prepare_only:
         print(json.dumps({'plan':str(root/'curriculum_plan.json'),'updates':plan['total_updates']}));return
