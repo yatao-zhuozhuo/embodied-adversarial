@@ -60,3 +60,30 @@ def test_job_requests_two_nodes_eight_cards(tmp_path):
         env={v['name']:v['value'] for v in c['env']}
         assert env['NNODES']=='2' and env['NODE_RANK']==str(rank)
         assert not any('TOKEN' in k or 'SECRET' in k for k in env)
+
+
+def test_preflight_reuse_requires_all_nodes_and_exact_data(tmp_path,monkeypatch):
+    from scripts.single_model_rl_preflight_history import validate_history
+    monkeypatch.setattr('scripts.single_model_rl_preflight_history.subprocess.run',lambda *a,**k:None)
+    old=tmp_path/'old';new=tmp_path/'new';old.mkdir();new.mkdir()
+    rows=[{'env_request':{'bench':b,'task_id':'task','seed':20480000}} for b in ['metaworld','libero','maniskill','robocasa']]
+    for root in (old,new):
+        (root/'tasks.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
+    original={'config_sha256':'abc','stages':[{'name':'easy','dataset':str(old/'tasks.jsonl')}]}
+    (old/'curriculum_plan.json').write_text(json.dumps(original))
+    reports=[{'bench':r['env_request']['bench'],'task_id':'task','status':'passed'} for r in rows]
+    for rank in range(2):
+        p=old/f'nodes/{rank}/easy/preflight';p.mkdir(parents=True)
+        (p/'summary.json').write_text(json.dumps(reports))
+    plan={**original,'stages':[{'name':'easy','dataset':str(new/'tasks.jsonl')}],
+          'batch':{'nnodes':2},'preflight_history':str(old),'preflight_source_revision':'HEAD'}
+    assert len(validate_history(plan))==4
+    bad=old/'nodes/1/easy/preflight/summary.json'
+    reports[0]['status']='failed';bad.write_text(json.dumps(reports))
+    with pytest.raises(ValueError,match='incomplete'):
+        validate_history(plan)
+    reports[0]['status']='passed';bad.write_text(json.dumps(reports))
+    rows[0]['env_request']['seed']+=1
+    (new/'tasks.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
+    with pytest.raises(ValueError,match='seeds changed'):
+        validate_history(plan)

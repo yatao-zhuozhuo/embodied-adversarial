@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.run_single_model_curriculum import write, latest_checkpoint, successful_tasks
 from agent.training.curriculum import summarize_groups, gate_result
+from scripts.single_model_rl_preflight_history import validate_history
 
 
 def main():
@@ -84,8 +85,20 @@ def main():
         batch = plan['batch']
         assert world == batch['nnodes'] == 2
         assert batch['num_generations'] * batch['tasks_per_batch'] == batch['generation_batch_size'] == 64
+        reuse=bool(plan.get('preflight_history'))
+        if reuse:
+            canaries=validate_history(plan)
+            dataset=local/'native_canaries.jsonl'
+            dataset.write_text(''.join(json.dumps(row)+'\n' for row in canaries))
+            if rank == 0:
+                write(root/'curriculum_status.json', {'status':'preflight_canary','history':plan['preflight_history']})
+            command([sys.executable,'scripts/preflight_single_model_rl.py','--dataset',str(dataset),
+                     '--output',str(local/'native_canaries')],os.environ.copy(),local/'canary.log')
+            write(local/'preflight_reuse.json', {'status':'passed','history':plan['preflight_history'],
+                'source_revision':plan['preflight_source_revision'],'canary_benchmarks':4})
+            barrier('native-canaries')
         # Validate both difficulty stages before spending time on any updates.
-        for stage in plan['stages']:
+        for stage in ([] if reuse else plan['stages']):
             node_stage = local / stage['name']
             node_stage.mkdir(parents=True, exist_ok=True)
             if rank == 0:

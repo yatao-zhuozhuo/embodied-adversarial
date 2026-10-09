@@ -28,9 +28,10 @@ versions={}
 for name in ['torch','ms-swift','vllm','transformers','peft','tensorboard']:
     try:versions[name]=importlib.metadata.version(name)
     except importlib.metadata.PackageNotFoundError:versions[name]=None
+git=['git','-c',f'safe.directory={ROOT}']
 payload={'schema':'openeta.single_model_rl.run.v1',
-    'code_revision':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
-    'branch':subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip(),
+    'code_revision':subprocess.check_output([*git,'rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+    'branch':subprocess.check_output([*git,'branch','--show-current'],cwd=ROOT,text=True).strip(),
     'config':json.loads(config_path.read_text()),
     'dataset':str(a.dataset.resolve()),'versions':versions,
     'source_sha256':{str(path.relative_to(ROOT) if path.is_relative_to(ROOT) else path):
