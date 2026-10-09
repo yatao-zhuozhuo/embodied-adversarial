@@ -10,6 +10,16 @@ from scripts.submit_single_model_rl_yi_jobs import request
 ROOT=Path(__file__).resolve().parents[1]
 
 
+@pytest.mark.parametrize('step,expected', [(0,[(0,False),(12,False)]),
+    (3,[(0,True),(12,False)]),(12,[(12,False)]),(15,[(12,True)])])
+def test_resume_skips_completed_stages_and_preserves_batch_position(tmp_path,step,expected):
+    from scripts.run_single_model_rl_yi_multinode import remaining_stages
+    (tmp_path/'trainer_state.json').write_text(json.dumps({'global_step':step}))
+    plan={'initial_checkpoint':str(tmp_path),'total_updates':36,
+          'stages':[{'start_step':0,'target_step':12},{'start_step':12,'target_step':36}]}
+    assert [(s['start_step'],same) for s,same in remaining_stages(plan)]==expected
+
+
 def test_curriculum_has_48_disjoint_tasks_and_36_updates(tmp_path):
     cfg=json.loads((ROOT/'configs/single_model_rl_curriculum_mixed_yi_2n16.json').read_text())
     original=json.loads((ROOT/'configs/single_model_rl_curriculum_mixed_yi.json').read_text())

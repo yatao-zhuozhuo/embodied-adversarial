@@ -15,6 +15,16 @@ from agent.training.curriculum import summarize_groups, gate_result
 from scripts.single_model_rl_preflight_history import validate_history
 
 
+def remaining_stages(plan):
+    checkpoint = plan.get('initial_checkpoint')
+    step = json.loads((Path(checkpoint)/'trainer_state.json').read_text())['global_step'] if checkpoint else 0
+    if not 0 <= step < plan['total_updates']:
+        raise ValueError('Resume checkpoint is outside the unfinished curriculum')
+    for stage in plan['stages']:
+        if step < stage['target_step']:
+            yield stage, step > stage['start_step']
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--run-root', type=Path, required=True)
@@ -109,8 +119,8 @@ def main():
             barrier(stage['name']+'-preflight')
         # New training starts only after the original configuration saved a real update.
         wait(args.original_acceptance)
-        checkpoint = None
-        for stage in plan['stages']:
+        checkpoint = Path(plan['initial_checkpoint']) if plan.get('initial_checkpoint') else None
+        for stage, same_stage_resume in remaining_stages(plan):
             directory = Path(stage['directory'])
             node_stage = local / stage['name']
             node_stage.mkdir(parents=True, exist_ok=True)
@@ -121,7 +131,7 @@ def main():
                 MAX_TURNS=str(plan['max_turns']), OPENETA_RL_TURN_TOKENS=str(plan['per_turn_tokens']),
                 OPENETA_RL_EPISODE_TOKENS=str(plan['episode_tokens']), VLLM_MAX_MODEL_LEN=str(plan['context_length']),
                 NUM_GENERATIONS=str(batch['num_generations']), PER_DEVICE_TRAIN_BATCH_SIZE=str(batch['per_device_train_batch_size']),
-                GRADIENT_ACCUMULATION_STEPS='1', DATASET_SHUFFLE='false', IGNORE_DATA_SKIP='true' if checkpoint else 'false',
+                GRADIENT_ACCUMULATION_STEPS='1', DATASET_SHUFFLE='false', IGNORE_DATA_SKIP='false' if same_stage_resume or not checkpoint else 'true',
                 OPENETA_CURRICULUM_ZERO_LIMIT=str(plan['zero_limit']))
             env.pop('TRAIN_ADAPTER_PATH', None)
             env.pop('RESUME_FROM_CHECKPOINT', None)
@@ -139,7 +149,7 @@ def main():
                 step, checkpoint, state = latest_checkpoint(stage['output'])
                 summary = summarize_groups(state['log_history'],stage['start_step'])
                 report = {**summary,'stage':stage['name'],'step':step,'checkpoint':str(checkpoint),
-                          'successful_tasks':successful_tasks(stage['output'])}
+                          'successful_tasks':successful_tasks(stage['output'], plan.get('history_outputs',{}).get(stage['name'],[]))}
                 report['promoted'] = step == stage['target_step'] and (not stage['promotion'] or gate_result(summary, report['successful_tasks'], stage['promotion']))
                 write(result_path, report)
             report = wait(result_path)
