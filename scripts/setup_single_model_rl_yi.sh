@@ -7,6 +7,12 @@ cd "$REPO_ROOT"
 UV_BIN="${UV_BIN:-uv}"
 PYTHON_BIN="${PYTHON_BIN:-$SWIFT_VENV/bin/python}"
 mkdir -p "$REPO_ROOT/.runtime/yi"
+# Persist the base interpreter for GPU workspaces whose home directory differs.
+if [[ ! -x "$REPO_ROOT/.runtime/yi/python/cpython-3.12.11-linux-x86_64-gnu/bin/python3.12" ]]; then
+  mkdir -p "$REPO_ROOT/.runtime/yi/python"
+  cp -a "$(readlink -f "$PYTHON_BIN" | xargs dirname | xargs dirname)" \
+    "$REPO_ROOT/.runtime/yi/python/cpython-3.12.11-linux-x86_64-gnu"
+fi
 "$UV_BIN" pip install --python "$PYTHON_BIN" --target "$OPENETA_TILELANG_OVERLAY" \
   --no-deps 'tilelang==0.1.14' 'apache-tvm-ffi==0.1.12' 'ml-dtypes==0.6.0' 'z3-solver==4.15.4.0'
 "$UV_BIN" pip install --python "$PYTHON_BIN" --target "$OPENETA_MANISKILL_EXTRA_PATH" \
@@ -24,3 +30,12 @@ hf download YangYongzhuo/Qwen3.5-4B-embodied-mixed \
   --revision 8fd40ae02ce8fae67c90b85dc0a8d3c24069a16d --local-dir "$MODEL_PATH"
 hf cache verify YangYongzhuo/Qwen3.5-4B-embodied-mixed \
   --revision 8fd40ae02ce8fae67c90b85dc0a8d3c24069a16d --local-dir "$MODEL_PATH"
+hf download haosulab/ManiSkill2 data/mani_skill2_ycb.zip --repo-type dataset \
+  --local-dir "$REPO_ROOT/.runtime/yi/maniskill-downloads"
+"$PYTHON_BIN" - <<'PY'
+import zipfile
+from pathlib import Path
+root = Path('.runtime/yi')
+with zipfile.ZipFile(root / 'maniskill-downloads/data/mani_skill2_ycb.zip') as archive:
+    archive.extractall(root / 'maniskill-assets')
+PY
