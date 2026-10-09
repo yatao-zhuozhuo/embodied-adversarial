@@ -1,0 +1,1262 @@
+{
+  "episode": {
+    "episode_id": "v2-robocasa-067-s2",
+    "env_id": "openeta/robocasa_target_TurnOnElectricKettle-v0",
+    "task": "Complete TurnOnElectricKettle; the official per-seed instruction must be frozen after reset.",
+    "seed": 2026101472,
+    "max_turns": 100,
+    "max_control_steps": 1000,
+    "max_tool_calls": 200,
+    "timeout_s": 3600,
+    "max_total_tokens": 5000000,
+    "metadata": {
+      "native_task": "TurnOnElectricKettle",
+      "split": "target",
+      "task_family": "atomic",
+      "native_horizon": 450,
+      "benchmark": "robocasa",
+      "task_id": "v2-robocasa-067",
+      "difficulty": "easy",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "selection_source": "new",
+      "seed_index": 2
+    }
+  },
+  "passed": false,
+  "checks": {
+    "reset": true,
+    "images": true,
+    "control_contract": true,
+    "step": true,
+    "native_success_negative": true,
+    "input_render": true,
+    "xml_roundtrip": true,
+    "close": true
+  },
+  "created": {
+    "session_id": "v2-accept-f0d1f1b3b8e34ce39ac3284e4941a0d9",
+    "handle": "a3dc7772-9d1",
+    "env_id": "openeta/robocasa_target_TurnOnElectricKettle-v0",
+    "action_dim": 12,
+    "backend": "robocasa",
+    "robot": "",
+    "control_spec": {},
+    "action_hint": "PandaOmron: arm 0:6, gripper 6, base 7:10, torso 10, mode 11",
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "action_desc": "PandaOmron: xyz+rpy+gripper+base_xyz+torso+base_mode (12D)",
+    "input_capabilities": {
+      "backend": "robocasa",
+      "control_mode": "HYBRID_MOBILE_BASE",
+      "action_slices": {
+        "right": [
+          0,
+          6
+        ],
+        "right_gripper": [
+          6,
+          7
+        ],
+        "base": [
+          7,
+          10
+        ],
+        "torso": [
+          10,
+          11
+        ]
+      },
+      "parts": {
+        "right": {
+          "controller": "OperationalSpaceController",
+          "input_ref_frame": "base",
+          "input_type": "delta"
+        },
+        "right_gripper": {
+          "controller": "SimpleGripController",
+          "input_ref_frame": "unknown",
+          "input_type": "unknown"
+        },
+        "base": {
+          "controller": "LegacyMobileBaseJointVelocityController",
+          "input_ref_frame": "unknown",
+          "input_type": "unknown"
+        },
+        "torso": {
+          "controller": "JointPositionController",
+          "input_ref_frame": "unknown",
+          "input_type": "delta"
+        }
+      }
+    }
+  },
+  "profile": {
+    "id": "openeta/robocasa_target_TurnOnElectricKettle-v0.v2.rgb256",
+    "version": 1,
+    "benchmark": "robocasa",
+    "source_versions": {
+      "nvidia-cufile-cu12": "1.11.1.6",
+      "PyJWT": "2.15.1",
+      "triton": "3.3.1",
+      "annotated-types": "0.8.0",
+      "attrs": "26.1.0",
+      "cryptography": "50.0.2",
+      "etils": "1.14.0",
+      "mujoco": "3.3.1",
+      "pydantic": "2.13.5",
+      "pluggy": "1.6.0",
+      "nvidia-cuda-runtime-cu12": "12.6.77",
+      "sympy": "1.14.0",
+      "h5py": "3.16.0",
+      "httpcore": "1.0.9",
+      "ImageIO": "2.38.0",
+      "evdev": "2.0.0",
+      "certifi": "2026.7.22",
+      "jsonschema-specifications": "2025.9.1",
+      "Jinja2": "3.1.6",
+      "mcp": "2.3.0",
+      "nvidia-cusparse-cu12": "12.5.4.2",
+      "gitdb": "4.0.12",
+      "aiosignal": "1.4.0",
+      "pynput": "1.8.2",
+      "hidapi": "0.15.0",
+      "tensorboard": "2.20.0",
+      "frozenlist": "1.8.0",
+      "jsonlines": "4.0.0",
+      "requests": "2.34.2",
+      "multiprocess": "0.70.16",
+      "pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "uvicorn": "0.54.0",
+      "iniconfig": "2.3.0",
+      "sentry-sdk": "2.71.0",
+      "nvidia-nvjitlink-cu12": "12.6.85",
+      "nvidia-cublas-cu12": "12.6.4.1",
+      "pyarrow": "25.0.1",
+      "Markdown": "3.11",
+      "yarl": "1.25.1",
+      "typing-inspect": "0.9.0",
+      "propcache": "0.5.4",
+      "importlib_metadata": "9.0.1",
+      "nvidia-cuda-cupti-cu12": "12.6.80",
+      "tensorboard-data-server": "0.7.2",
+      "six": "1.17.0",
+      "aiohttp": "3.14.3",
+      "h11": "0.16.0",
+      "xxhash": "4.0.1",
+      "robosuite": "1.5.2",
+      "mcp-types": "2.3.0",
+      "torchcodec": "0.5",
+      "numpy": "2.2.5",
+      "lxml": "6.1.3",
+      "Farama-Notifications": "0.0.6",
+      "packaging": "26.3",
+      "pydantic_core": "2.46.5",
+      "python-xlib": "0.33",
+      "opentelemetry-api": "1.45.0",
+      "regex": "2026.9.29",
+      "scipy": "1.15.3",
+      "nvidia-nccl-cu12": "2.26.2",
+      "filelock": "4.0.9",
+      "numba": "0.61.2",
+      "av": "18.1.0",
+      "gym-notices": "0.1.0",
+      "diffusers": "0.40.0",
+      "zipp": "4.1.0",
+      "pandas": "3.0.6",
+      "gymnasium": "0.29.1",
+      "charset-normalizer": "3.5.2",
+      "nvidia-curand-cu12": "10.3.7.77",
+      "urllib3": "2.8.0",
+      "aiohappyeyeballs": "2.7.1",
+      "hf-xet": "1.6.0",
+      "anyio": "4.15.1",
+      "multidict": "6.9.1",
+      "httpcore2": "2.13.1",
+      "datasets": "3.6.0",
+      "nvidia-cusolver-cu12": "11.7.1.2",
+      "pytest": "9.1.1",
+      "mypy_extensions": "1.1.0",
+      "cmake": "4.4.3",
+      "lerobot": "0.3.3",
+      "wandb": "0.25.0",
+      "cffi": "2.1.1",
+      "jsonschema": "4.26.0",
+      "imageio-ffmpeg": "0.6.0",
+      "einops": "0.8.2",
+      "tqdm": "4.70.1",
+      "Werkzeug": "3.1.9",
+      "blinker": "1.9.0",
+      "absl-py": "2.5.0",
+      "tianshou": "0.4.10",
+      "glfw": "2.10.2",
+      "Pygments": "2.21.0",
+      "termcolor": "3.3.0",
+      "fsspec": "2025.3.0",
+      "python-multipart": "0.0.32",
+      "dill": "0.3.8",
+      "httpx2": "2.13.1",
+      "PyYAML": "6.0.3",
+      "grpcio": "1.84.0",
+      "quadprog": "0.1.13",
+      "nvidia-nvtx-cu12": "12.6.77",
+      "setuptools": "84.0.0",
+      "nvidia-cusparselt-cu12": "0.6.3",
+      "Flask": "3.1.3",
+      "deepdiff": "8.6.2",
+      "sse-starlette": "3.5.0",
+      "mpmath": "1.3.0",
+      "truststore": "0.10.4",
+      "opencv-python-headless": "5.0.0.93",
+      "networkx": "3.6.1",
+      "starlette": "1.7.0",
+      "referencing": "0.37.0",
+      "protobuf": "3.19.6",
+      "rerun-sdk": "0.22.1",
+      "rpds-py": "2026.6.3",
+      "torchvision": "0.22.1",
+      "idna": "3.20",
+      "platformdirs": "4.12.2",
+      "cloudpickle": "3.1.2",
+      "pyyaml-include": "1.4.1",
+      "GitPython": "3.2.0",
+      "typing_extensions": "4.16.0",
+      "smmap": "5.0.3",
+      "nvidia-cufft-cu12": "11.3.0.4",
+      "PyOpenGL": "3.1.10",
+      "nvidia-cuda-nvrtc-cu12": "12.6.77",
+      "pyserial": "3.5",
+      "MarkupSafe": "3.0.4",
+      "pygame": "2.6.1",
+      "robocasa": "1.0.1",
+      "qpsolvers": "4.13.0",
+      "gym": "0.26.2",
+      "draccus": "0.10.0",
+      "mergedeep": "1.3.4",
+      "huggingface_hub": "1.33.0",
+      "typing-inspection": "0.4.4",
+      "python-dateutil": "2.9.0.post0",
+      "itsdangerous": "2.2.0",
+      "torch": "2.7.1",
+      "toml": "0.10.2",
+      "httpx": "0.28.1",
+      "pycparser": "3.0",
+      "safetensors": "0.8.0",
+      "opencv-python": "5.0.0.93",
+      "orderly-set": "5.5.0",
+      "click": "8.5.0",
+      "nvidia-cudnn-cu12": "9.5.1.17",
+      "llvmlite": "0.44.0"
+    },
+    "source": "environment-preflight plus installed controller source; live capability check required",
+    "cameras": [
+      {
+        "id": "agentview_left",
+        "role": "primary",
+        "size": [
+          256,
+          256
+        ]
+      },
+      {
+        "id": "agentview_right",
+        "role": "primary",
+        "size": [
+          256,
+          256
+        ]
+      },
+      {
+        "id": "wrist",
+        "role": "wrist",
+        "size": [
+          256,
+          256
+        ]
+      }
+    ],
+    "image_limit": 5,
+    "action_dim": 12,
+    "control_mode": "HYBRID_MOBILE_BASE",
+    "expected_capabilities": {
+      "backend": "robocasa",
+      "control_mode": "HYBRID_MOBILE_BASE",
+      "action_slices": {
+        "right": [
+          0,
+          6
+        ],
+        "right_gripper": [
+          6,
+          7
+        ],
+        "base": [
+          7,
+          10
+        ],
+        "torso": [
+          10,
+          11
+        ]
+      },
+      "parts": {
+        "right": {
+          "controller": "OperationalSpaceController",
+          "input_ref_frame": "base",
+          "input_type": "delta"
+        },
+        "right_gripper": {
+          "controller": "SimpleGripController",
+          "input_ref_frame": "unknown",
+          "input_type": "unknown"
+        },
+        "base": {
+          "controller": "LegacyMobileBaseJointVelocityController",
+          "input_ref_frame": "unknown",
+          "input_type": "unknown"
+        },
+        "torso": {
+          "controller": "JointPositionController",
+          "input_ref_frame": "unknown",
+          "input_type": "delta"
+        }
+      }
+    },
+    "image_policy": {
+      "resize": "none",
+      "crop": "none",
+      "main_native_resolution": [
+        256,
+        256
+      ],
+      "calibration": "unknown for ManiSkill placeholder calibration; otherwise native environment calibration"
+    }
+  },
+  "contract": {
+    "version": "openeta.two_tool_control.v1",
+    "controller": "HYBRID_MOBILE_BASE",
+    "control_mode": "HYBRID_MOBILE_BASE",
+    "action_dim": 12,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "slots": [
+      {
+        "index": 0,
+        "semantic": "dx",
+        "normalized": true
+      },
+      {
+        "index": 1,
+        "semantic": "dy",
+        "normalized": true
+      },
+      {
+        "index": 2,
+        "semantic": "dz",
+        "normalized": true
+      },
+      {
+        "index": 3,
+        "semantic": "axis_angle_x",
+        "normalized": true
+      },
+      {
+        "index": 4,
+        "semantic": "axis_angle_y",
+        "normalized": true
+      },
+      {
+        "index": 5,
+        "semantic": "axis_angle_z",
+        "normalized": true
+      },
+      {
+        "index": 6,
+        "semantic": "gripper",
+        "normalized": true
+      },
+      {
+        "index": 7,
+        "semantic": "base_x_velocity",
+        "normalized": true
+      },
+      {
+        "index": 8,
+        "semantic": "base_y_velocity",
+        "normalized": true
+      },
+      {
+        "index": 9,
+        "semantic": "base_yaw_velocity",
+        "normalized": true
+      },
+      {
+        "index": 10,
+        "semantic": "torso_position",
+        "normalized": true
+      },
+      {
+        "index": 11,
+        "semantic": "goal_update_mode",
+        "normalized": true
+      }
+    ],
+    "translation": {
+      "frame": "robot_base",
+      "scale_m": 0.05,
+      "semantics": "command delta, not guaranteed measured displacement"
+    },
+    "rotation": {
+      "representation": "axis_angle_delta",
+      "frame": "robot_base",
+      "scale_rad": 0.5
+    },
+    "gripper": {
+      "supported": true,
+      "open": -1,
+      "close": 1,
+      "semantics": "command; measured state is reported separately"
+    },
+    "tcp": {
+      "frame": "world",
+      "position_unit": "meter",
+      "quaternion_order": "xyzw"
+    },
+    "num_steps": {
+      "min": 1,
+      "max": 10,
+      "meaning": "repeat environment control steps; actual count may be smaller on termination"
+    },
+    "observe_env": "Only observes. Does not move cameras, change viewpoints or increase resolution.",
+    "source_versions": {
+      "nvidia-cufile-cu12": "1.11.1.6",
+      "PyJWT": "2.15.1",
+      "triton": "3.3.1",
+      "annotated-types": "0.8.0",
+      "attrs": "26.1.0",
+      "cryptography": "50.0.2",
+      "etils": "1.14.0",
+      "mujoco": "3.3.1",
+      "pydantic": "2.13.5",
+      "pluggy": "1.6.0",
+      "nvidia-cuda-runtime-cu12": "12.6.77",
+      "sympy": "1.14.0",
+      "h5py": "3.16.0",
+      "httpcore": "1.0.9",
+      "ImageIO": "2.38.0",
+      "evdev": "2.0.0",
+      "certifi": "2026.7.22",
+      "jsonschema-specifications": "2025.9.1",
+      "Jinja2": "3.1.6",
+      "mcp": "2.3.0",
+      "nvidia-cusparse-cu12": "12.5.4.2",
+      "gitdb": "4.0.12",
+      "aiosignal": "1.4.0",
+      "pynput": "1.8.2",
+      "hidapi": "0.15.0",
+      "tensorboard": "2.20.0",
+      "frozenlist": "1.8.0",
+      "jsonlines": "4.0.0",
+      "requests": "2.34.2",
+      "multiprocess": "0.70.16",
+      "pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "uvicorn": "0.54.0",
+      "iniconfig": "2.3.0",
+      "sentry-sdk": "2.71.0",
+      "nvidia-nvjitlink-cu12": "12.6.85",
+      "nvidia-cublas-cu12": "12.6.4.1",
+      "pyarrow": "25.0.1",
+      "Markdown": "3.11",
+      "yarl": "1.25.1",
+      "typing-inspect": "0.9.0",
+      "propcache": "0.5.4",
+      "importlib_metadata": "9.0.1",
+      "nvidia-cuda-cupti-cu12": "12.6.80",
+      "tensorboard-data-server": "0.7.2",
+      "six": "1.17.0",
+      "aiohttp": "3.14.3",
+      "h11": "0.16.0",
+      "xxhash": "4.0.1",
+      "robosuite": "1.5.2",
+      "mcp-types": "2.3.0",
+      "torchcodec": "0.5",
+      "numpy": "2.2.5",
+      "lxml": "6.1.3",
+      "Farama-Notifications": "0.0.6",
+      "packaging": "26.3",
+      "pydantic_core": "2.46.5",
+      "python-xlib": "0.33",
+      "opentelemetry-api": "1.45.0",
+      "regex": "2026.9.29",
+      "scipy": "1.15.3",
+      "nvidia-nccl-cu12": "2.26.2",
+      "filelock": "4.0.9",
+      "numba": "0.61.2",
+      "av": "18.1.0",
+      "gym-notices": "0.1.0",
+      "diffusers": "0.40.0",
+      "zipp": "4.1.0",
+      "pandas": "3.0.6",
+      "gymnasium": "0.29.1",
+      "charset-normalizer": "3.5.2",
+      "nvidia-curand-cu12": "10.3.7.77",
+      "urllib3": "2.8.0",
+      "aiohappyeyeballs": "2.7.1",
+      "hf-xet": "1.6.0",
+      "anyio": "4.15.1",
+      "multidict": "6.9.1",
+      "httpcore2": "2.13.1",
+      "datasets": "3.6.0",
+      "nvidia-cusolver-cu12": "11.7.1.2",
+      "pytest": "9.1.1",
+      "mypy_extensions": "1.1.0",
+      "cmake": "4.4.3",
+      "lerobot": "0.3.3",
+      "wandb": "0.25.0",
+      "cffi": "2.1.1",
+      "jsonschema": "4.26.0",
+      "imageio-ffmpeg": "0.6.0",
+      "einops": "0.8.2",
+      "tqdm": "4.70.1",
+      "Werkzeug": "3.1.9",
+      "blinker": "1.9.0",
+      "absl-py": "2.5.0",
+      "tianshou": "0.4.10",
+      "glfw": "2.10.2",
+      "Pygments": "2.21.0",
+      "termcolor": "3.3.0",
+      "fsspec": "2025.3.0",
+      "python-multipart": "0.0.32",
+      "dill": "0.3.8",
+      "httpx2": "2.13.1",
+      "PyYAML": "6.0.3",
+      "grpcio": "1.84.0",
+      "quadprog": "0.1.13",
+      "nvidia-nvtx-cu12": "12.6.77",
+      "setuptools": "84.0.0",
+      "nvidia-cusparselt-cu12": "0.6.3",
+      "Flask": "3.1.3",
+      "deepdiff": "8.6.2",
+      "sse-starlette": "3.5.0",
+      "mpmath": "1.3.0",
+      "truststore": "0.10.4",
+      "opencv-python-headless": "5.0.0.93",
+      "networkx": "3.6.1",
+      "starlette": "1.7.0",
+      "referencing": "0.37.0",
+      "protobuf": "3.19.6",
+      "rerun-sdk": "0.22.1",
+      "rpds-py": "2026.6.3",
+      "torchvision": "0.22.1",
+      "idna": "3.20",
+      "platformdirs": "4.12.2",
+      "cloudpickle": "3.1.2",
+      "pyyaml-include": "1.4.1",
+      "GitPython": "3.2.0",
+      "typing_extensions": "4.16.0",
+      "smmap": "5.0.3",
+      "nvidia-cufft-cu12": "11.3.0.4",
+      "PyOpenGL": "3.1.10",
+      "nvidia-cuda-nvrtc-cu12": "12.6.77",
+      "pyserial": "3.5",
+      "MarkupSafe": "3.0.4",
+      "pygame": "2.6.1",
+      "robocasa": "1.0.1",
+      "qpsolvers": "4.13.0",
+      "gym": "0.26.2",
+      "draccus": "0.10.0",
+      "mergedeep": "1.3.4",
+      "huggingface_hub": "1.33.0",
+      "typing-inspection": "0.4.4",
+      "python-dateutil": "2.9.0.post0",
+      "itsdangerous": "2.2.0",
+      "torch": "2.7.1",
+      "toml": "0.10.2",
+      "httpx": "0.28.1",
+      "pycparser": "3.0",
+      "safetensors": "0.8.0",
+      "opencv-python": "5.0.0.93",
+      "orderly-set": "5.5.0",
+      "click": "8.5.0",
+      "nvidia-cudnn-cu12": "9.5.1.17",
+      "llvmlite": "0.44.0"
+    },
+    "verified_parts": {
+      "right": {
+        "controller": "OperationalSpaceController",
+        "input_ref_frame": "base",
+        "input_type": "delta"
+      },
+      "right_gripper": {
+        "controller": "SimpleGripController",
+        "input_ref_frame": "unknown",
+        "input_type": "unknown"
+      },
+      "base": {
+        "controller": "LegacyMobileBaseJointVelocityController",
+        "input_ref_frame": "unknown",
+        "input_type": "unknown"
+      },
+      "torso": {
+        "controller": "JointPositionController",
+        "input_ref_frame": "unknown",
+        "input_type": "delta"
+      }
+    },
+    "verified_action_slices": {
+      "right": [
+        0,
+        6
+      ],
+      "right_gripper": [
+        6,
+        7
+      ],
+      "base": [
+        7,
+        10
+      ],
+      "torso": [
+        10,
+        11
+      ]
+    },
+    "mobile": {
+      "mode_positive": "update arm goal from desired goal (base tracking)",
+      "mode_nonpositive": "update arm goal from achieved pose",
+      "unused_dimensions": "zero",
+      "base_velocity_units": "unknown",
+      "torso_scale": "unknown",
+      "base_reference_frame": "unknown"
+    }
+  },
+  "initial": {
+    "observation_id": "obs-0",
+    "turn": 0,
+    "robot": {
+      "joint_positions": [
+        0.012495770294367338,
+        -0.9993051919063666,
+        -0.026942111889975664,
+        -2.2709057658754492,
+        0.0522736594291899,
+        1.5207119524666104,
+        0.7061332550877637
+      ],
+      "joint_velocities": [
+        -9.546799124434085e-06,
+        0.0005621351276764117,
+        -0.0006687724434670921,
+        -2.692039552929834e-05,
+        -0.0007224488468075937,
+        9.379622879634988e-05,
+        -0.00011646203176091958
+      ],
+      "end_effector_pose": {
+        "xyz": [
+          0.9571787313085772,
+          -0.5331202983820758,
+          1.2902160629968789
+        ],
+        "quat_xyzw": [
+          0.6710921522374457,
+          0.7299687166317876,
+          0.06625437924464325,
+          -0.11131645509609114
+        ]
+      },
+      "gripper_state": {
+        "openness": 0.5133319381860828,
+        "open": true
+      },
+      "base_pose": {
+        "xyz": [
+          0.9616676064172327,
+          -0.7900044761476802,
+          0.7000000258034602
+        ],
+        "quat_xyzw": [
+          0.0,
+          0.0,
+          0.7071068286895752,
+          0.7071066498756409
+        ]
+      }
+    },
+    "cameras": [
+      {
+        "frame_id": "agentview_left",
+        "camera_role": "primary",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-agentview_left.png",
+        "sha256": "f33631b9ec68312a7943e51e7bede474bd3df0354464380c3cdecaf73cb70976",
+        "pixel_sha256": "2d5be8486b411ed030f6d86d4ff7dd0711736dc2b752f2d830ce1cc52e5d2f04",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 221.7025033688163,
+          "fy": 221.7025033688163,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            0.6116677313655589,
+            -1.2900045636114852,
+            1.7500000258034603
+          ],
+          "mat": [
+            0.9792974349285892,
+            -0.097261026302068,
+            0.17752979103506517,
+            -0.20197338420362398,
+            -0.5281293219578811,
+            0.8247946237468113,
+            0.013538316572630382,
+            -0.8435755520704575,
+            -0.5368398289372742
+          ],
+          "camera_to_world": [
+            [
+              0.9792974349285892,
+              -0.097261026302068,
+              0.17752979103506517,
+              0.6116677313655589
+            ],
+            [
+              -0.20197338420362398,
+              -0.5281293219578811,
+              0.8247946237468113,
+              -1.2900045636114852
+            ],
+            [
+              0.013538316572630382,
+              -0.8435755520704575,
+              -0.5368398289372742,
+              1.7500000258034603
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      },
+      {
+        "frame_id": "agentview_right",
+        "camera_role": "primary",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-agentview_right.png",
+        "sha256": "aba0ae65047b6cf23d309f66ce5779c38e460319a08cfc44d37e7a4191c9412d",
+        "pixel_sha256": "9ca921c48fe1b51bdf10af01b9d9e317cc1012977a78dc2cbad54471e08c4d18",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 221.7025033688163,
+          "fy": 221.7025033688163,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            1.311667731365537,
+            -1.290004388683844,
+            1.7500000258034603
+          ],
+          "mat": [
+            0.9792973531797816,
+            0.09726119139725853,
+            -0.17753015153223953,
+            0.2019737773254523,
+            -0.5281292589286947,
+            0.8247945678387537,
+            -0.013538365040236394,
+            -0.8435755724956796,
+            -0.5368397956193484
+          ],
+          "camera_to_world": [
+            [
+              0.9792973531797816,
+              0.09726119139725853,
+              -0.17753015153223953,
+              1.311667731365537
+            ],
+            [
+              0.2019737773254523,
+              -0.5281292589286947,
+              0.8247945678387537,
+              -1.290004388683844
+            ],
+            [
+              -0.013538365040236394,
+              -0.8435755724956796,
+              -0.5368397956193484,
+              1.7500000258034603
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      },
+      {
+        "frame_id": "wrist",
+        "camera_role": "wrist",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-wrist.png",
+        "sha256": "c545e8a3e00556401e8f064a8e1ccea999de7da1d648747896687613bc65f6d9",
+        "pixel_sha256": "a7aaf173ccd2b576bdaafe92645c383d8911d1c98be6fdb264fad683aa1e2746",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 166.81284772367434,
+          "fy": 166.81284772367434,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            0.9605925130709476,
+            -0.5087452323161985,
+            1.3965325821665875
+          ],
+          "mat": [
+            0.9945029594850762,
+            0.07448794006030493,
+            -0.07358947180810012,
+            0.09049136087243906,
+            -0.9650021489566535,
+            0.24613444723665345,
+            -0.0526799504828616,
+            -0.25144064765787444,
+            -0.9664380081114928
+          ],
+          "camera_to_world": [
+            [
+              0.9945029594850762,
+              0.07448794006030493,
+              -0.07358947180810012,
+              0.9605925130709476
+            ],
+            [
+              0.09049136087243906,
+              -0.9650021489566535,
+              0.24613444723665345,
+              -0.5087452323161985
+            ],
+            [
+              -0.0526799504828616,
+              -0.25144064765787444,
+              -0.9664380081114928,
+              1.3965325821665875
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      }
+    ],
+    "vision_image_paths": [
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-agentview_left.png",
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-agentview_right.png",
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-robocasa-067-s2/000-wrist.png"
+    ]
+  },
+  "reset_task": "Press down the lever to turn on the electric kettle.",
+  "native_success": {
+    "source": "environment.info.success",
+    "success": false,
+    "ever_success": false
+  },
+  "step_info": {
+    "success": false,
+    "task": "TurnOnElectricKettle",
+    "split": "target",
+    "scenario_seed": 2026101472,
+    "horizon": 450,
+    "elapsed_steps": 2,
+    "native_success": {
+      "source": "environment.info.success",
+      "success": false,
+      "ever_success": false
+    }
+  },
+  "actual_steps": 2,
+  "image_count": 5,
+  "tcp_delta": {
+    "tcp_displacement_m": [
+      2.401359074444276e-05,
+      0.0016392862149035015,
+      -0.00022984966321071276
+    ],
+    "tcp_distance_m": 0.0016554959421850506,
+    "gripper_openness_change": -0.0011192370600945356,
+    "frame": "world",
+    "reason": null
+  },
+  "repeat_initial": {
+    "observation_id": "obs-0",
+    "turn": 0,
+    "robot": {
+      "joint_positions": [
+        0.012495765008767193,
+        -0.999305204285123,
+        -0.026942111518175146,
+        -2.270905781526425,
+        0.052273662796135587,
+        1.5207119613258084,
+        0.7061332498644164
+      ],
+      "joint_velocities": [
+        -9.54554415638218e-06,
+        0.0005621175417530855,
+        -0.0006687205597546266,
+        -2.6827048999257467e-05,
+        -0.0007224466085028057,
+        9.319354338965135e-05,
+        -0.00011630618089908126
+      ],
+      "end_effector_pose": {
+        "xyz": [
+          2.8205962360124657,
+          -0.5331202996810158,
+          1.2902160591828675
+        ],
+        "quat_xyzw": [
+          0.6710921525602529,
+          0.72996871578214,
+          0.06625438087307,
+          -0.11131645775240928
+        ]
+      },
+      "gripper_state": {
+        "openness": 0.513331935059274,
+        "open": true
+      },
+      "base_pose": {
+        "xyz": [
+          2.825085110067401,
+          -0.7900044761025184,
+          0.7000000250402386
+        ],
+        "quat_xyzw": [
+          0.0,
+          0.0,
+          0.7071068286895752,
+          0.7071066498756409
+        ]
+      }
+    },
+    "cameras": [
+      {
+        "frame_id": "agentview_left",
+        "camera_role": "primary",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-agentview_left.png",
+        "sha256": "efadd6fcdec706dd0d75b40a51b46385f8f0eb9b7c45d7ae4388d33832405c0c",
+        "pixel_sha256": "316160fcb13d57e3abfa6e8d428e5690f9738815c79c2c639bb041c2fcf681aa",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 221.7025033688163,
+          "fy": 221.7025033688163,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            2.4750852338710696,
+            -1.2900045627650634,
+            1.7500000250402383
+          ],
+          "mat": [
+            0.9792974344662082,
+            -0.09726102751112242,
+            0.17752979292327986,
+            -0.2019733864455443,
+            -0.5281293217352196,
+            0.8247946233403896,
+            0.013538316572630299,
+            -0.8435755520704573,
+            -0.536839828937274
+          ],
+          "camera_to_world": [
+            [
+              0.9792974344662082,
+              -0.09726102751112242,
+              0.17752979292327986,
+              2.4750852338710696
+            ],
+            [
+              -0.2019733864455443,
+              -0.5281293217352196,
+              0.8247946233403896,
+              -1.2900045627650634
+            ],
+            [
+              0.013538316572630299,
+              -0.8435755520704573,
+              -0.536839828937274,
+              1.7500000250402383
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      },
+      {
+        "frame_id": "agentview_right",
+        "camera_role": "primary",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-agentview_right.png",
+        "sha256": "ceb90ce7fcf661cdd9d3bc7f61a5a4c978a401e7d1def534fc65ee16cd3b8d4c",
+        "pixel_sha256": "96a3348b6098c08e30694edc67c0dc2f3211d4379e6d1afd91aa33f6ba82477f",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 221.7025033688163,
+          "fy": 221.7025033688163,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            3.175085233871048,
+            -1.2900043894399427,
+            1.7500000250402383
+          ],
+          "mat": [
+            0.9792973536421632,
+            0.09726119018820434,
+            -0.17753014964402483,
+            0.2019737750835321,
+            -0.5281292591513562,
+            0.824794568245176,
+            -0.013538365040236311,
+            -0.8435755724956795,
+            -0.5368397956193485
+          ],
+          "camera_to_world": [
+            [
+              0.9792973536421632,
+              0.09726119018820434,
+              -0.17753014964402483,
+              3.175085233871048
+            ],
+            [
+              0.2019737750835321,
+              -0.5281292591513562,
+              0.824794568245176,
+              -1.2900043894399427
+            ],
+            [
+              -0.013538365040236311,
+              -0.8435755724956795,
+              -0.5368397956193485,
+              1.7500000250402383
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      },
+      {
+        "frame_id": "wrist",
+        "camera_role": "wrist",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-wrist.png",
+        "sha256": "b588a5273fa2c147f1c7201bfcfb3fcda98c5f3ce975323994eea8b2318c5de7",
+        "pixel_sha256": "067942023634cf12dfe389ff9c7f26c7a0390e292c9592255dbbecfa769943d3",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 166.81284772367434,
+          "fy": 166.81284772367434,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.027570530272021103,
+          "zfar": 1378.5264481245622,
+          "depth_unit": "meter"
+        },
+        "extrinsics": {
+          "pos": [
+            2.824010018018967,
+            -0.5087452342568094,
+            1.3965325784918523
+          ],
+          "mat": [
+            0.9945029595304977,
+            0.07448793801100262,
+            -0.07358947326857525,
+            0.09049135957434282,
+            -0.965002147573021,
+            0.2461344531386049,
+            -0.05267995185518222,
+            -0.2514406535751968,
+            -0.9664380064971625
+          ],
+          "camera_to_world": [
+            [
+              0.9945029595304977,
+              0.07448793801100262,
+              -0.07358947326857525,
+              2.824010018018967
+            ],
+            [
+              0.09049135957434282,
+              -0.965002147573021,
+              0.2461344531386049,
+              -0.5087452342568094
+            ],
+            [
+              -0.05267995185518222,
+              -0.2514406535751968,
+              -0.9664380064971625,
+              1.3965325784918523
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opencv",
+          "image_origin": "top_left",
+          "raw_camera_convention": "opengl",
+          "normalized_from": "mujoco_opengl"
+        }
+      }
+    ],
+    "vision_image_paths": [
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-agentview_left.png",
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-agentview_right.png",
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/repeat_images/v2-robocasa-067-s2/000-wrist.png"
+    ]
+  },
+  "error": "AssertionError: robot reset changed beyond 1e-7 absolute tolerance",
+  "elapsed_s": 32.52
+}

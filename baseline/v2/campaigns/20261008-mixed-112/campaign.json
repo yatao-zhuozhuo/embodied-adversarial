@@ -1,0 +1,14 @@
+{
+  "notebook": "embodied-selfplay-baseline",
+  "workspace": "分布式训练空间",
+  "gpu_allocation": "1+1+2",
+  "v2_snapshot_sha256": "0539aed73f279ec3d5e0f39b0861a32591393fe8c334393c63311954691c7cf7",
+  "tasks_per_model": 69,
+  "episodes_per_model": 207,
+  "planned_episodes_total": 621,
+  "thinking_enabled": false,
+  "temperature": 0,
+  "max_tokens": 1024,
+  "output_root": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/campaigns/20261008-mixed-112/formal",
+  "model_key_note": "short IDs retained for evaluator compatibility; generation.model and models.json identify the mixed checkpoints"
+}

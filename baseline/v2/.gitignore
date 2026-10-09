@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+assets/
+logs/
+results/
+acceptance/images/
+acceptance/repeat_images/
+
+# Campaign source/config is staged explicitly; runtime artifacts stay local
+campaigns/
+acceptance/**/*.png
+acceptance/**/*.jpg
+acceptance/**/*.npy
+acceptance/**/*.npz

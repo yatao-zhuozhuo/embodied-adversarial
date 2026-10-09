@@ -1,0 +1,43 @@
+{
+  "tasks": [
+    {
+      "task_id": "v2-maniskill3-060",
+      "env_id": "openeta/maniskill_TurnFaucet-v1-v0",
+      "failures": [
+        {
+          "episode_id": "v2-maniskill3-060-s0",
+          "error": "RuntimeError: create_env failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+        },
+        {
+          "episode_id": "v2-maniskill3-060-s1",
+          "error": "RuntimeError: create_env failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+        },
+        {
+          "episode_id": "v2-maniskill3-060-s2",
+          "error": "RuntimeError: create_env failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+        }
+      ]
+    },
+    {
+      "task_id": "v2-robocasa-065",
+      "env_id": "openeta/robocasa_target_OpenStandMixerHead-v0",
+      "failures": [
+        {
+          "episode_id": "v2-robocasa-065-s2",
+          "error": "AssertionError: robot reset changed beyond 1e-7 absolute tolerance"
+        }
+      ]
+    },
+    {
+      "task_id": "v2-robocasa-067",
+      "env_id": "openeta/robocasa_target_TurnOnElectricKettle-v0",
+      "failures": [
+        {
+          "episode_id": "v2-robocasa-067-s2",
+          "error": "AssertionError: robot reset changed beyond 1e-7 absolute tolerance"
+        }
+      ]
+    }
+  ],
+  "selection_independent_of_model_outputs": true
+}

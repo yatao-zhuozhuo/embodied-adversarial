@@ -26,7 +26,7 @@ from agent.runtime.two_tool_input import (INPUT_PROTOCOL, project_observation, c
     build_input, fit_budget, execution_record, robot_delta)
 from baseline.scripts.inference_smoke import redact
 
-SNAPSHOT = BASELINE / 'snapshots/two-tool-input-v1'
+SNAPSHOT = Path(os.environ.get('BASELINE_SNAPSHOT', str(BASELINE / 'snapshots/two-tool-input-v1')))
 
 
 def write_json(path, value):
@@ -251,7 +251,7 @@ async def run_episode(args, row, attempt):
 
 async def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--model', required=True, choices=['deepseek', 'qwen38_27b', 'qwen35_9b', 'qwen35_4b'])
+    p.add_argument('--model', required=True, choices=sorted(json.loads((BASELINE / 'configs/models.json').read_text())))
     p.add_argument('--root', required=True)
     p.add_argument('--sim-url', default='http://127.0.0.1:8200/mcp')
     p.add_argument('--benchmark', choices=['libero', 'metaworld', 'maniskill3', 'robocasa'])

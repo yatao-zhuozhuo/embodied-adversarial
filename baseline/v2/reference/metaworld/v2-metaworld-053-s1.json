@@ -1,0 +1,10 @@
+{
+  "episode_id": "v2-metaworld-053-s1",
+  "seed": 2026101331,
+  "success": true,
+  "reference": "official MetaWorld scripted policy with privileged state",
+  "same_native_action_interface": true,
+  "model_input_equivalence": false,
+  "control_steps": 75,
+  "elapsed_s": 0.89
+}

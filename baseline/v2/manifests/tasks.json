@@ -1,0 +1,1235 @@
+{
+  "tasks": [
+    {
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
+      },
+      "task_id": "v2-libero-000",
+      "canonical_key": "libero:pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_spatial_task9-v0",
+      "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 9,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
+      },
+      "task_id": "v2-libero-001",
+      "canonical_key": "libero:pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_spatial_task5-v0",
+      "task": "pick up the black bowl on the ramekin and place it on the plate",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 5,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
+      },
+      "task_id": "v2-libero-002",
+      "canonical_key": "libero:pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "task": "pick up the butter and place it in the basket",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 6,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
+      },
+      "task_id": "v2-libero-003",
+      "canonical_key": "libero:pick_up_the_butter_and_place_it_in_the_basket",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_object_task8-v0",
+      "task": "pick up the chocolate pudding and place it in the basket",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 8,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
+      },
+      "task_id": "v2-libero-004",
+      "canonical_key": "libero:pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_object_task0-v0",
+      "task": "pick up the alphabet soup and place it in the basket",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 0,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
+      },
+      "task_id": "v2-libero-005",
+      "canonical_key": "libero:pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task1-v0",
+      "task": "put the bowl on the stove",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
+      },
+      "task_id": "v2-libero-006",
+      "canonical_key": "libero:put_the_bowl_on_the_stove",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task4-v0",
+      "task": "put the bowl on top of the cabinet",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 4,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
+      },
+      "task_id": "v2-libero-007",
+      "canonical_key": "libero:put_the_bowl_on_top_of_the_cabinet",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_10_task2-v0",
+      "task": "turn on the stove and put the moka pot on it",
+      "benchmark": "libero",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 2,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
+      },
+      "task_id": "v2-libero-008",
+      "canonical_key": "libero:KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/libero_libero_10_task3-v0",
+      "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "benchmark": "libero",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 3,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
+      },
+      "task_id": "v2-libero-009",
+      "canonical_key": "libero:KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "task": "Open a drawer",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "drawer-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "e61084aac7e1fa106661d76db083c6e2a0992a1911a5900566ccf0ec4c4842e9"
+      },
+      "task_id": "v2-metaworld-010",
+      "canonical_key": "openeta/metaworld_50_drawer-open-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_coffee-button-v3-v0",
+      "task": "Push a button on the coffee machine",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "coffee-button-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "ed5bb0acd01607057dc5b4c8a021c35b7ef322a47c19e8f8e7e1ab21cacd9890"
+      },
+      "task_id": "v2-metaworld-011",
+      "canonical_key": "openeta/metaworld_50_coffee-button-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_door-open-v3-v0",
+      "task": "Open a door with a revolving joint",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "door-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "4dc40ddb2190ce1ce6fa7807395ea5d3100a9855116bb3c6f6e9b548acb9a2c3"
+      },
+      "task_id": "v2-metaworld-012",
+      "canonical_key": "openeta/metaworld_50_door-open-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "task": "Grasp a stick and push a box using the stick",
+      "benchmark": "metaworld",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "stick-push-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "63f767aacdd5a74f7cdb2d99d463dafdbfdfcf2869a85fb2bd9f5ddeb63eccd1"
+      },
+      "task_id": "v2-metaworld-013",
+      "canonical_key": "openeta/metaworld_50_stick-push-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/metaworld_50_pick-out-of-hole-v3-v0",
+      "task": "Pick up a puck from a hole",
+      "benchmark": "metaworld",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "pick-out-of-hole-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "1c4cf67e3833734d38fb5e46395f0f9af3239a5e10497bcdc61d48437be65601"
+      },
+      "task_id": "v2-metaworld-014",
+      "canonical_key": "openeta/metaworld_50_pick-out-of-hole-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/metaworld_50_window-close-v3-v0",
+      "task": "Push and close a window",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "window-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0eadfde6792afa5abb86ef709f5c5d8db956985ba106a961e79564f291d1268a"
+      },
+      "task_id": "v2-metaworld-015",
+      "canonical_key": "openeta/metaworld_50_window-close-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_reach-wall-v3-v0",
+      "task": "Bypass a wall and reach a goal",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "reach-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "6380ac655594dfc51f176c7f8a52b3d6ec4bd390dfc07c913382aa9f1ff4138d"
+      },
+      "task_id": "v2-metaworld-016",
+      "canonical_key": "openeta/metaworld_50_reach-wall-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_faucet-close-v3-v0",
+      "task": "Rotate the faucet clockwise",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "faucet-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "76857ebfa90b9d3703e01ff1117ef8322637ef1a32b2a90d6b3596f7e46b9f80"
+      },
+      "task_id": "v2-metaworld-017",
+      "canonical_key": "openeta/metaworld_50_faucet-close-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_pick-place-wall-v3-v0",
+      "task": "Pick a puck, bypass a wall and place the puck",
+      "benchmark": "metaworld",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "pick-place-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "f065adf462d84269c6912dc280d78b3cc1b22b0eb45e7bdb799ab8d33dfa4600"
+      },
+      "task_id": "v2-metaworld-018",
+      "canonical_key": "openeta/metaworld_50_pick-place-wall-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/metaworld_50_coffee-pull-v3-v0",
+      "task": "Pull a mug from a coffee machine",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "coffee-pull-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "407905f1778bd1b10333d62183de7e78003d97c45835f89e3c8c0d06bcc1e4f6"
+      },
+      "task_id": "v2-metaworld-019",
+      "canonical_key": "openeta/metaworld_50_coffee-pull-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_RollBall-v1-v0",
+      "task": "Roll the ball into the goal region.",
+      "benchmark": "maniskill3",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "RollBall-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0d1718c8f3df95431dc0d88c1e4aa3b57d36a586ae0d4202c0fdf27ff759fc7e"
+      },
+      "task_id": "v2-maniskill3-020",
+      "canonical_key": "openeta/maniskill_RollBall-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PlaceSphere-v1-v0",
+      "task": "Place the sphere into the shallow bin and release it; keep the robot still at the end.",
+      "benchmark": "maniskill3",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PlaceSphere-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "12c83e0282483fd2ce3aefdf504279bfae6418a421b4f2a6eb07df43d5d6a78b"
+      },
+      "task_id": "v2-maniskill3-021",
+      "canonical_key": "openeta/maniskill_PlaceSphere-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_StackCube-v1-v0",
+      "task": "Stack the red cube on the green cube and release it.",
+      "benchmark": "maniskill3",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "StackCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "742c3c93ffe7511b12b76332890b089ad041bf8eed81da6203c584a37bae5952"
+      },
+      "task_id": "v2-maniskill3-022",
+      "canonical_key": "openeta/maniskill_StackCube-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "task": "Insert the charger into the receptacle.",
+      "benchmark": "maniskill3",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PlugCharger-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "900d968e42f1bd42e68e83ad60a218f4982a3ac51ebaf8b6f105298b574c0667"
+      },
+      "task_id": "v2-maniskill3-023",
+      "canonical_key": "openeta/maniskill_PlugCharger-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/maniskill_StackPyramid-v1-v0",
+      "task": "Stack the cubes into a pyramid: two cubes below and one cube on top.",
+      "benchmark": "maniskill3",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "StackPyramid-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "b2881679e1615f8db71f1ddcb1d948718dd3d687fa606121b6c0676ddd39b6f6"
+      },
+      "task_id": "v2-maniskill3-024",
+      "canonical_key": "openeta/maniskill_StackPyramid-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/maniskill_PullCubeTool-v1-v0",
+      "task": "Use the L-shaped tool to pull the cube into the goal region.",
+      "benchmark": "maniskill3",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PullCubeTool-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "241fa3673f86225cb82de9b06e8ac9dcc95a1f188b0b999f069b37a22a7e4bea"
+      },
+      "task_id": "v2-maniskill3-025",
+      "canonical_key": "openeta/maniskill_PullCubeTool-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/maniskill_PushCube-v1-v0",
+      "task": "Push the cube onto the goal region.",
+      "benchmark": "maniskill3",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PushCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "f6d7bcf376b6ff65aa8bfd0e3c1dd2dff21668ed9eb71d04d8e325e5144467dd"
+      },
+      "task_id": "v2-maniskill3-026",
+      "canonical_key": "openeta/maniskill_PushCube-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "task": "Push the T-shaped block to align with the target T-shaped region.",
+      "benchmark": "maniskill3",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PushT-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_stick",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "03bab87b6ac033998023d22367d24f564cd3d26bebf1e4391162ca7933d473df"
+      },
+      "task_id": "v2-maniskill3-027",
+      "canonical_key": "openeta/maniskill_PushT-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PickCube-v1-v0",
+      "task": "Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.",
+      "benchmark": "maniskill3",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PickCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "bcd2de43dac4ccd5aae4843281a413a717e7dd24c222fff6408eced8f918c82a"
+      },
+      "task_id": "v2-maniskill3-028",
+      "canonical_key": "openeta/maniskill_PickCube-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PegInsertionSide-v1-v0",
+      "task": "Insert the peg into the side hole of the box.",
+      "benchmark": "maniskill3",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PegInsertionSide-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "6a6695ae31f8bea8224ad16b123cffffe7c4fd75d6f57857b4df331f60ea476c"
+      },
+      "task_id": "v2-maniskill3-029",
+      "canonical_key": "openeta/maniskill_PegInsertionSide-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/robocasa_target_TurnOffStove-v0",
+      "task": "Turn off the rear left burner of the stove.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "TurnOffStove",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
+      },
+      "task_id": "v2-robocasa-030",
+      "canonical_key": "robocasa:TurnOffStove-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_PickPlaceCounterToCabinet-v0",
+      "task": "Pick the jug from the counter and place it in the cabinet.",
+      "benchmark": "robocasa",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "PickPlaceCounterToCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
+      },
+      "task_id": "v2-robocasa-031",
+      "canonical_key": "robocasa:PickPlaceCounterToCabinet-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_OpenDrawer-v0",
+      "task": "Open the left drawer.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "OpenDrawer",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
+      },
+      "task_id": "v2-robocasa-032",
+      "canonical_key": "robocasa:OpenDrawer-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_OpenCabinet-v0",
+      "task": "Open the cabinet doors.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "OpenCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 1050,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
+      },
+      "task_id": "v2-robocasa-033",
+      "canonical_key": "robocasa:OpenCabinet-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_NavigateKitchen-v0",
+      "task": "Navigate to the toaster.",
+      "benchmark": "robocasa",
+      "difficulty": "medium",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "NavigateKitchen",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
+      },
+      "task_id": "v2-robocasa-034",
+      "canonical_key": "robocasa:NavigateKitchen-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_MakeIceLemonade-v0",
+      "task": "Grab a lemon wedge from the fridge and one ice cube from the ice bowl, and put them in the glass of lemonade.",
+      "benchmark": "robocasa",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "MakeIceLemonade",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
+      },
+      "task_id": "v2-robocasa-035",
+      "canonical_key": "robocasa:MakeIceLemonade-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/robocasa_target_StoreLeftoversInBowl-v0",
+      "task": "Pick the chicken drumstick and avocado from their plates and place them in the bowl. Then put the bowl in the fridge.",
+      "benchmark": "robocasa",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "StoreLeftoversInBowl",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2550,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "replaces": "RinseSinkBasin",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
+      },
+      "task_id": "v2-robocasa-036",
+      "canonical_key": "robocasa:StoreLeftoversInBowl-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/robocasa_target_GetToastedBread-v0",
+      "task": "Start the toaster. Once the lever pops up, take the bread to the plate on the dining counter.",
+      "benchmark": "robocasa",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "GetToastedBread",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
+      },
+      "task_id": "v2-robocasa-037",
+      "canonical_key": "robocasa:GetToastedBread-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/robocasa_target_LoadDishwasher-v0",
+      "task": "Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",
+      "benchmark": "robocasa",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "LoadDishwasher",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 1800,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
+      },
+      "task_id": "v2-robocasa-038",
+      "canonical_key": "robocasa:LoadDishwasher-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/robocasa_target_RecycleBottlesByType-v0",
+      "task": "Move the plastic bottles in the middle to the plastics group, and the glass bottles in the middle to the glass group.",
+      "benchmark": "robocasa",
+      "difficulty": "hard",
+      "source": "legacy",
+      "metadata": {
+        "native_task": "RecycleBottlesByType",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2850,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
+      },
+      "task_id": "v2-robocasa-039",
+      "canonical_key": "robocasa:RecycleBottlesByType-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "精密插入、工具、复杂堆叠或长流程组合"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task0-v0",
+      "task": "open the middle drawer of the cabinet",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_goal",
+        "task_index": 0
+      },
+      "task_id": "v2-libero-040",
+      "canonical_key": "libero:open_the_middle_drawer_of_the_cabinet",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task5-v0",
+      "task": "push the plate to the front of the stove",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_goal",
+        "task_index": 5
+      },
+      "task_id": "v2-libero-041",
+      "canonical_key": "libero:push_the_plate_to_the_front_of_the_stove",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task7-v0",
+      "task": "turn on the stove",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_goal",
+        "task_index": 7
+      },
+      "task_id": "v2-libero-042",
+      "canonical_key": "libero:turn_on_the_stove",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task6-v0",
+      "task": "put the cream cheese in the bowl",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_goal",
+        "task_index": 6
+      },
+      "task_id": "v2-libero-043",
+      "canonical_key": "libero:put_the_cream_cheese_in_the_bowl",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task0-v0",
+      "task": "close the top drawer of the cabinet",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_90",
+        "task_index": 0
+      },
+      "task_id": "v2-libero-044",
+      "canonical_key": "libero:KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task6-v0",
+      "task": "open the bottom drawer of the cabinet",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_90",
+        "task_index": 6
+      },
+      "task_id": "v2-libero-045",
+      "canonical_key": "libero:KITCHEN_SCENE1_open_the_bottom_drawer_of_the_cabinet",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task22-v0",
+      "task": "close the bottom drawer of the cabinet",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_90",
+        "task_index": 22
+      },
+      "task_id": "v2-libero-046",
+      "canonical_key": "libero:KITCHEN_SCENE4_close_the_bottom_drawer_of_the_cabinet",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task33-v0",
+      "task": "close the microwave",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_90",
+        "task_index": 33
+      },
+      "task_id": "v2-libero-047",
+      "canonical_key": "libero:KITCHEN_SCENE6_close_the_microwave",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task39-v0",
+      "task": "turn off the stove",
+      "benchmark": "libero",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_90",
+        "task_index": 39
+      },
+      "task_id": "v2-libero-048",
+      "canonical_key": "libero:KITCHEN_SCENE8_turn_off_the_stove",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/libero_libero_object_task7-v0",
+      "task": "pick up the milk and place it in the basket",
+      "benchmark": "libero",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "suite": "libero_object",
+        "task_index": 7
+      },
+      "task_id": "v2-libero-049",
+      "canonical_key": "libero:pick_up_the_milk_and_place_it_in_the_basket",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_push-v3-v0",
+      "task": "Push the puck to a goal",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "push-v3"
+      },
+      "task_id": "v2-metaworld-050",
+      "canonical_key": "openeta/metaworld_50_push-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_drawer-close-v3-v0",
+      "task": "Push and close a drawer",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "drawer-close-v3"
+      },
+      "task_id": "v2-metaworld-051",
+      "canonical_key": "openeta/metaworld_50_drawer-close-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_button-press-v3-v0",
+      "task": "Press a button",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "button-press-v3"
+      },
+      "task_id": "v2-metaworld-052",
+      "canonical_key": "openeta/metaworld_50_button-press-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_button-press-topdown-v3-v0",
+      "task": "Press a button from the top",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "button-press-topdown-v3"
+      },
+      "task_id": "v2-metaworld-053",
+      "canonical_key": "openeta/metaworld_50_button-press-topdown-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_button-press-wall-v3-v0",
+      "task": "Bypass a wall and press a button",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "button-press-wall-v3"
+      },
+      "task_id": "v2-metaworld-054",
+      "canonical_key": "openeta/metaworld_50_button-press-wall-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_button-press-topdown-wall-v3-v0",
+      "task": "Bypass a wall and press a button from the top",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "button-press-topdown-wall-v3"
+      },
+      "task_id": "v2-metaworld-055",
+      "canonical_key": "openeta/metaworld_50_button-press-topdown-wall-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_door-close-v3-v0",
+      "task": "Close a door with a revolving joint",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "door-close-v3"
+      },
+      "task_id": "v2-metaworld-056",
+      "canonical_key": "openeta/metaworld_50_door-close-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_handle-press-v3-v0",
+      "task": "Press a handle down",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "handle-press-v3"
+      },
+      "task_id": "v2-metaworld-057",
+      "canonical_key": "openeta/metaworld_50_handle-press-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_handle-press-side-v3-v0",
+      "task": "Press a handle down sideways",
+      "benchmark": "metaworld",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "handle-press-side-v3"
+      },
+      "task_id": "v2-metaworld-058",
+      "canonical_key": "openeta/metaworld_50_handle-press-side-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/metaworld_50_handle-pull-v3-v0",
+      "task": "Pull a handle up",
+      "benchmark": "metaworld",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "handle-pull-v3"
+      },
+      "task_id": "v2-metaworld-059",
+      "canonical_key": "openeta/metaworld_50_handle-pull-v3-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/maniskill_PickSingleYCB-v1-v0",
+      "task": "Pick up the object and move it to the goal marked by the green sphere; keep the robot still at the end.",
+      "benchmark": "maniskill3",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "PickSingleYCB-v1"
+      },
+      "task_id": "v2-maniskill3-061",
+      "canonical_key": "openeta/maniskill_PickSingleYCB-v1-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_CloseBlenderLid-v0",
+      "task": "Complete CloseBlenderLid; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "CloseBlenderLid",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 900
+      },
+      "task_id": "v2-robocasa-062",
+      "canonical_key": "robocasa:CloseBlenderLid-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_CloseFridge-v0",
+      "task": "Complete CloseFridge; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "CloseFridge",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 900
+      },
+      "task_id": "v2-robocasa-063",
+      "canonical_key": "robocasa:CloseFridge-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_CloseToasterOvenDoor-v0",
+      "task": "Complete CloseToasterOvenDoor; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "CloseToasterOvenDoor",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450
+      },
+      "task_id": "v2-robocasa-064",
+      "canonical_key": "robocasa:CloseToasterOvenDoor-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_SlideDishwasherRack-v0",
+      "task": "Complete SlideDishwasherRack; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "SlideDishwasherRack",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450
+      },
+      "task_id": "v2-robocasa-066",
+      "canonical_key": "robocasa:SlideDishwasherRack-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_TurnOnMicrowave-v0",
+      "task": "Complete TurnOnMicrowave; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "TurnOnMicrowave",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450
+      },
+      "task_id": "v2-robocasa-068",
+      "canonical_key": "robocasa:TurnOnMicrowave-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_TurnOnSinkFaucet-v0",
+      "task": "Complete TurnOnSinkFaucet; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "easy",
+      "source": "new",
+      "metadata": {
+        "native_task": "TurnOnSinkFaucet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 600
+      },
+      "task_id": "v2-robocasa-069",
+      "canonical_key": "robocasa:TurnOnSinkFaucet-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "短流程、相对宽容的接触或移动操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_PickPlaceCounterToStove-v0",
+      "task": "Complete PickPlaceCounterToStove; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "PickPlaceCounterToStove",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 600
+      },
+      "task_id": "v2-robocasa-070",
+      "canonical_key": "robocasa:PickPlaceCounterToStove-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    },
+    {
+      "env_id": "openeta/robocasa_target_PickPlaceDrawerToCounter-v0",
+      "task": "Complete PickPlaceDrawerToCounter; the official per-seed instruction must be frozen after reset.",
+      "benchmark": "robocasa",
+      "difficulty": "medium",
+      "source": "new",
+      "metadata": {
+        "native_task": "PickPlaceDrawerToCounter",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750
+      },
+      "task_id": "v2-robocasa-071",
+      "canonical_key": "robocasa:PickPlaceDrawerToCounter-v0",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "difficulty_reason": "抓取放置、空间定位、障碍或多阶段操作"
+    }
+  ]
+}

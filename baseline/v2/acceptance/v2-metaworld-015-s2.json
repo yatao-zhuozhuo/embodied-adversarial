@@ -1,0 +1,443 @@
+{
+  "episode": {
+    "episode_id": "v2-metaworld-015-s2",
+    "env_id": "openeta/metaworld_50_window-close-v3-v0",
+    "task": "Push and close a window",
+    "seed": 2026100952,
+    "max_turns": 100,
+    "max_control_steps": 1000,
+    "max_tool_calls": 200,
+    "timeout_s": 3600,
+    "max_total_tokens": 5000000,
+    "metadata": {
+      "native_task": "window-close-v3",
+      "suite": "metaworld_50",
+      "benchmark": "metaworld",
+      "native_success_checker": "step.info.success",
+      "legacy_rgb512_initial_frame_sha256": "0eadfde6792afa5abb86ef709f5c5d8db956985ba106a961e79564f291d1268a",
+      "task_id": "v2-metaworld-015",
+      "difficulty": "easy",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "selection_source": "legacy",
+      "seed_index": 2
+    }
+  },
+  "passed": true,
+  "checks": {
+    "reset": true,
+    "images": true,
+    "control_contract": true,
+    "step": true,
+    "native_success_negative": true,
+    "input_render": true,
+    "xml_roundtrip": true,
+    "fresh_instance_reproducibility": true,
+    "close": true
+  },
+  "created": {
+    "session_id": "v2-accept-10e9a7daf08a4cfa8c37b3c6245ce846",
+    "handle": "33eed59d-c1e",
+    "env_id": "openeta/metaworld_50_window-close-v3-v0",
+    "action_dim": 4,
+    "backend": "metaworld",
+    "robot": "",
+    "control_spec": {},
+    "action_hint": "raw step_env only: ~6mm/step at action=1.0; use 5-10 raw steps for visible motion. For goal-directed move_to, omit num_steps or provide a sufficient closed-loop iteration budget.",
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "action_desc": "xyz+gripper delta (4D)",
+    "input_capabilities": {
+      "backend": "metaworld",
+      "control_mode": "mocap_delta",
+      "position_scale_m": 0.01
+    }
+  },
+  "profile": {
+    "id": "openeta/metaworld_50_window-close-v3-v0.v2.rgb256",
+    "version": 1,
+    "benchmark": "metaworld",
+    "source_versions": {
+      "PyJWT": "2.15.1",
+      "pydantic-settings": "2.15.0",
+      "annotated-types": "0.8.0",
+      "attrs": "26.1.0",
+      "cryptography": "50.0.2",
+      "nvidia-cublas": "13.1.1.3",
+      "fsspec": "2026.9.0",
+      "rpds-py": "0.30.0",
+      "pydantic": "2.13.5",
+      "sympy": "1.14.0",
+      "httpcore": "1.0.9",
+      "nvidia-cuda-runtime": "13.0.96",
+      "ImageIO": "2.38.0",
+      "certifi": "2026.7.22",
+      "jsonschema-specifications": "2025.9.1",
+      "Jinja2": "3.1.6",
+      "exceptiongroup": "1.3.1",
+      "requests": "2.34.2",
+      "openeta": "0.1.0",
+      "pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "uvicorn": "0.54.0",
+      "nvidia-cufile": "1.15.1.6",
+      "nvidia-cuda-nvrtc": "13.0.88",
+      "h11": "0.16.0",
+      "nvidia-cuda-cupti": "13.0.85",
+      "nvidia-cusparse": "12.6.3.3",
+      "nvidia-nvjitlink": "13.4.92",
+      "nvidia-cufft": "12.0.0.61",
+      "Farama-Notifications": "0.0.6",
+      "packaging": "26.3",
+      "pydantic_core": "2.46.5",
+      "python-dotenv": "1.2.4",
+      "cuda-pathfinder": "1.8.3",
+      "regex": "2026.9.29",
+      "torch": "2.14.1",
+      "scipy": "1.15.3",
+      "filelock": "4.0.9",
+      "networkx": "3.4.2",
+      "zipp": "4.1.0",
+      "nvidia-nvtx": "13.0.85",
+      "importlib_resources": "7.1.0",
+      "charset-normalizer": "3.5.2",
+      "urllib3": "2.8.0",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "anyio": "4.15.1",
+      "nvidia-cusolver": "12.0.4.66",
+      "prompt_toolkit": "3.0.53",
+      "nvidia-curand": "10.4.0.35",
+      "cffi": "2.1.1",
+      "jsonschema": "4.26.0",
+      "imageio-ffmpeg": "0.6.0",
+      "mujoco": "3.3.0",
+      "mcp": "1.30.0",
+      "absl-py": "2.5.0",
+      "glfw": "2.10.2",
+      "gymnasium": "1.3.0",
+      "python-multipart": "0.0.32",
+      "setuptools": "84.0.0",
+      "sse-starlette": "3.5.0",
+      "numpy": "2.2.6",
+      "mpmath": "1.3.0",
+      "etils": "1.13.0",
+      "starlette": "1.7.0",
+      "referencing": "0.37.0",
+      "metaworld": "3.1.1",
+      "cuda-bindings": "13.4.3",
+      "idna": "3.20",
+      "cloudpickle": "3.1.2",
+      "cuda-toolkit": "13.0.3.0",
+      "nvidia-cudnn-cu13": "9.24.0.43",
+      "typing_extensions": "4.16.0",
+      "PyOpenGL": "3.1.10",
+      "MarkupSafe": "3.0.4",
+      "tiktoken": "0.14.0",
+      "httpx-sse": "0.4.3",
+      "nvidia-cusparselt-cu13": "0.8.1",
+      "wcwidth": "0.9.1",
+      "triton": "3.8.0",
+      "typing-inspection": "0.4.4",
+      "nvidia-nccl-cu13": "2.30.7",
+      "httpx": "0.28.1",
+      "pycparser": "3.0",
+      "click": "8.5.0"
+    },
+    "source": "environment-preflight plus installed controller source; live capability check required",
+    "cameras": [
+      {
+        "id": "render",
+        "role": "primary",
+        "size": [
+          256,
+          256
+        ]
+      }
+    ],
+    "image_limit": 2,
+    "action_dim": 4,
+    "control_mode": "mocap_delta",
+    "expected_capabilities": {
+      "backend": "metaworld",
+      "control_mode": "mocap_delta",
+      "position_scale_m": 0.01
+    },
+    "image_policy": {
+      "resize": "none",
+      "crop": "none",
+      "main_native_resolution": [
+        256,
+        256
+      ],
+      "calibration": "unknown for ManiSkill placeholder calibration; otherwise native environment calibration"
+    }
+  },
+  "contract": {
+    "version": "openeta.two_tool_control.v1",
+    "controller": "mocap_delta",
+    "control_mode": "mocap_delta",
+    "action_dim": 4,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "slots": [
+      {
+        "index": 0,
+        "semantic": "dx",
+        "normalized": true
+      },
+      {
+        "index": 1,
+        "semantic": "dy",
+        "normalized": true
+      },
+      {
+        "index": 2,
+        "semantic": "dz",
+        "normalized": true
+      },
+      {
+        "index": 3,
+        "semantic": "gripper",
+        "normalized": true
+      }
+    ],
+    "translation": {
+      "frame": "world",
+      "scale_m": 0.01,
+      "semantics": "command delta, not guaranteed measured displacement"
+    },
+    "rotation": {
+      "representation": "not_controlled",
+      "frame": "world",
+      "scale_rad": null
+    },
+    "gripper": {
+      "supported": true,
+      "open": -1,
+      "close": 1,
+      "semantics": "command; measured state is reported separately"
+    },
+    "tcp": {
+      "frame": "world",
+      "position_unit": "meter",
+      "quaternion_order": "xyzw"
+    },
+    "num_steps": {
+      "min": 1,
+      "max": 10,
+      "meaning": "repeat environment control steps; actual count may be smaller on termination"
+    },
+    "observe_env": "Only observes. Does not move cameras, change viewpoints or increase resolution.",
+    "source_versions": {
+      "PyJWT": "2.15.1",
+      "pydantic-settings": "2.15.0",
+      "annotated-types": "0.8.0",
+      "attrs": "26.1.0",
+      "cryptography": "50.0.2",
+      "nvidia-cublas": "13.1.1.3",
+      "fsspec": "2026.9.0",
+      "rpds-py": "0.30.0",
+      "pydantic": "2.13.5",
+      "sympy": "1.14.0",
+      "httpcore": "1.0.9",
+      "nvidia-cuda-runtime": "13.0.96",
+      "ImageIO": "2.38.0",
+      "certifi": "2026.7.22",
+      "jsonschema-specifications": "2025.9.1",
+      "Jinja2": "3.1.6",
+      "exceptiongroup": "1.3.1",
+      "requests": "2.34.2",
+      "openeta": "0.1.0",
+      "pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "uvicorn": "0.54.0",
+      "nvidia-cufile": "1.15.1.6",
+      "nvidia-cuda-nvrtc": "13.0.88",
+      "h11": "0.16.0",
+      "nvidia-cuda-cupti": "13.0.85",
+      "nvidia-cusparse": "12.6.3.3",
+      "nvidia-nvjitlink": "13.4.92",
+      "nvidia-cufft": "12.0.0.61",
+      "Farama-Notifications": "0.0.6",
+      "packaging": "26.3",
+      "pydantic_core": "2.46.5",
+      "python-dotenv": "1.2.4",
+      "cuda-pathfinder": "1.8.3",
+      "regex": "2026.9.29",
+      "torch": "2.14.1",
+      "scipy": "1.15.3",
+      "filelock": "4.0.9",
+      "networkx": "3.4.2",
+      "zipp": "4.1.0",
+      "nvidia-nvtx": "13.0.85",
+      "importlib_resources": "7.1.0",
+      "charset-normalizer": "3.5.2",
+      "urllib3": "2.8.0",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "anyio": "4.15.1",
+      "nvidia-cusolver": "12.0.4.66",
+      "prompt_toolkit": "3.0.53",
+      "nvidia-curand": "10.4.0.35",
+      "cffi": "2.1.1",
+      "jsonschema": "4.26.0",
+      "imageio-ffmpeg": "0.6.0",
+      "mujoco": "3.3.0",
+      "mcp": "1.30.0",
+      "absl-py": "2.5.0",
+      "glfw": "2.10.2",
+      "gymnasium": "1.3.0",
+      "python-multipart": "0.0.32",
+      "setuptools": "84.0.0",
+      "sse-starlette": "3.5.0",
+      "numpy": "2.2.6",
+      "mpmath": "1.3.0",
+      "etils": "1.13.0",
+      "starlette": "1.7.0",
+      "referencing": "0.37.0",
+      "metaworld": "3.1.1",
+      "cuda-bindings": "13.4.3",
+      "idna": "3.20",
+      "cloudpickle": "3.1.2",
+      "cuda-toolkit": "13.0.3.0",
+      "nvidia-cudnn-cu13": "9.24.0.43",
+      "typing_extensions": "4.16.0",
+      "PyOpenGL": "3.1.10",
+      "MarkupSafe": "3.0.4",
+      "tiktoken": "0.14.0",
+      "httpx-sse": "0.4.3",
+      "nvidia-cusparselt-cu13": "0.8.1",
+      "wcwidth": "0.9.1",
+      "triton": "3.8.0",
+      "typing-inspection": "0.4.4",
+      "nvidia-nccl-cu13": "2.30.7",
+      "httpx": "0.28.1",
+      "pycparser": "3.0",
+      "click": "8.5.0"
+    }
+  },
+  "initial": {
+    "observation_id": "obs-0",
+    "turn": 0,
+    "robot": {
+      "joint_positions": [],
+      "joint_velocities": [],
+      "end_effector_pose": {
+        "xyz": [
+          0.004504232234804309,
+          0.40032992542112483,
+          0.1957403486001742
+        ],
+        "quat_xyzw": null
+      },
+      "gripper_state": {
+        "openness": 1.0,
+        "open": true
+      },
+      "base_pose": {
+        "xyz": null,
+        "quat_xyzw": null
+      }
+    },
+    "cameras": [
+      {
+        "frame_id": "render",
+        "camera_role": "primary",
+        "image_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-metaworld-015-s2/000-render.png",
+        "sha256": "24f3c31fd67a9946a456c5540067315a6db13d4ffe24b86891b6910d861044cb",
+        "pixel_sha256": "5a64f13a4e91da2fc1295025d145d5c1f0959641857a8adc7e6acff616d6a10c",
+        "width": 256,
+        "height": 256,
+        "intrinsics": {
+          "fx": 221.7025033688163,
+          "fy": 221.7025033688163,
+          "cx": 128.0,
+          "cy": 128.0,
+          "width": 256,
+          "height": 256,
+          "znear": 0.11289334832942563,
+          "zfar": 6.77360079883102
+        },
+        "extrinsics": {
+          "pos": [
+            1.3,
+            -0.2,
+            1.1
+          ],
+          "mat": [
+            -0.5499013297225573,
+            0.3762077406192429,
+            0.7457052121767203,
+            -0.8331827568227445,
+            -0.30954914217001317,
+            -0.45824210011200406,
+            0.058438183601257465,
+            -0.8732966646449378,
+            0.48367128736096404
+          ],
+          "matrix_layout": "row_major",
+          "frame_transform": "camera_to_world",
+          "camera_frame": "opengl"
+        }
+      }
+    ],
+    "vision_image_paths": [
+      "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/v2/acceptance/images/v2-metaworld-015-s2/000-render.png"
+    ]
+  },
+  "reset_task": "Push and close a window",
+  "native_success": {
+    "source": "environment.info.success",
+    "success": false,
+    "ever_success": false
+  },
+  "step_info": {
+    "success": 0.0,
+    "near_object": 0.0,
+    "grasp_success": 1.0,
+    "grasp_reward": 0.09988258892362209,
+    "in_place_reward": 0.1,
+    "obj_to_target": 0.21000000000000002,
+    "unscaled_reward": 0.5259903700504365,
+    "native_success": {
+      "source": "environment.info.success",
+      "success": false,
+      "ever_success": false
+    }
+  },
+  "actual_steps": 2,
+  "image_count": 2,
+  "tcp_delta": {
+    "tcp_displacement_m": [
+      0.00023352442247345263,
+      -0.0002275320363890887,
+      -0.00045998845066586025
+    ],
+    "tcp_distance_m": 0.0005638207678162482,
+    "gripper_openness_change": 0.0,
+    "frame": "world",
+    "reason": null
+  },
+  "repeat_pixel_mae": [
+    0.0
+  ],
+  "elapsed_s": 3.77
+}

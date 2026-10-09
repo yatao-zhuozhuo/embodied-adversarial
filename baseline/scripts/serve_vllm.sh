@@ -9,7 +9,8 @@ case "${1:-}" in
   qwen38_27b) MODEL_NAME=Qwen3.8-27B; DEFAULT_PORT=8101 ;;
   qwen35_9b) MODEL_NAME=Qwen3.5-9B; DEFAULT_PORT=8102 ;;
   qwen35_4b) MODEL_NAME=Qwen3.5-4B; DEFAULT_PORT=8103 ;;
-  *) echo "Usage: CUDA_VISIBLE_DEVICES=0 bash $0 {qwen38_27b|qwen35_9b|qwen35_4b}" >&2; exit 2 ;;
+  qwen35_4b_embodied) MODEL_NAME=Qwen3.5-4B-embodied; DEFAULT_PORT=8104 ;;
+  *) echo "Usage: CUDA_VISIBLE_DEVICES=0 bash $0 {qwen38_27b|qwen35_9b|qwen35_4b|qwen35_4b_embodied}" >&2; exit 2 ;;
 esac
 PYTHON="${SWIFT_VENV}/bin/python"
 if [[ ! -x "$PYTHON" ]]; then

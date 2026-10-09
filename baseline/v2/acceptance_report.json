@@ -1,0 +1,728 @@
+{
+  "status": "ready_for_evaluation",
+  "task_count": 69,
+  "episode_count": 207,
+  "added_task_count": 29,
+  "by_benchmark": {
+    "libero": 20,
+    "metaworld": 20,
+    "maniskill3": 11,
+    "robocasa": 18
+  },
+  "by_difficulty": {
+    "medium": 26,
+    "hard": 14,
+    "easy": 29
+  },
+  "difficulty_by_benchmark": {
+    "libero": {
+      "medium": 10,
+      "hard": 2,
+      "easy": 8
+    },
+    "maniskill3": {
+      "medium": 5,
+      "hard": 4,
+      "easy": 2
+    },
+    "metaworld": {
+      "easy": 11,
+      "medium": 6,
+      "hard": 3
+    },
+    "robocasa": {
+      "easy": 8,
+      "medium": 5,
+      "hard": 5
+    }
+  },
+  "excluded_task_count": 3,
+  "training_task_overlap": 0,
+  "acceptance": {
+    "all_episodes_live_mcp": true,
+    "reset_step_close": true,
+    "xml_and_input_render": true,
+    "native_success_negative_check": true,
+    "fresh_instance_reset_comparison": true,
+    "distinct_initial_image_states_per_task": 3,
+    "official_metaworld_reference_successes": 60
+  },
+  "reset_tolerances": {
+    "robot_absolute": 1e-07,
+    "metaworld_pixel_mae_255": 1.0,
+    "other_pixel_mae_255": 0.001,
+    "other_pixel_max_error_255": 1.0
+  },
+  "goal_visibility_fix": [
+    "PickCube-v1 and PickSingleYCB-v1 use native render camera with goal sphere visible"
+  ],
+  "limitations": [
+    "Difficulty labels are requirement-based; expert calibration across all four benchmarks is not complete.",
+    "Positive end-to-end scripted success was checked for MetaWorld; other benchmarks have live negative checks and native-checker/source audit, not a successful expert rollout for every task.",
+    "Reset comparison covers model-visible robot and RGB, not a byte-identical dump of all hidden simulator state.",
+    "No model inference performed during this acceptance; endpoint token/image smoke is required when starting a model.",
+    "Original native ManiSkill horizons remain unchanged and can be short; report horizon exhaustion separately."
+  ],
+  "official_reference": [
+    {
+      "episode_id": "v2-metaworld-010-s0",
+      "sha256": "3058b0b559f088fbd6b06f707717b24a43da42dfad0a9edd8b8f56f624929745",
+      "seed": 2026100900,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 88,
+      "elapsed_s": 1.09
+    },
+    {
+      "episode_id": "v2-metaworld-010-s1",
+      "sha256": "656d526b9f5ceeaea19d18bc4ce99c0fdc34a5ff488848d72b45cc8714e663e7",
+      "seed": 2026100901,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 86,
+      "elapsed_s": 0.99
+    },
+    {
+      "episode_id": "v2-metaworld-010-s2",
+      "sha256": "5d6738d4f583854ac469b64f17b95d260540f5849bb636fd89493b6ca11b6031",
+      "seed": 2026100902,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 89,
+      "elapsed_s": 0.97
+    },
+    {
+      "episode_id": "v2-metaworld-011-s0",
+      "sha256": "9d4613d88b372ec3ae75e6f6c6cc32e110037200adeaf0e3d0c944609a7087f5",
+      "seed": 2026100910,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 32,
+      "elapsed_s": 1.03
+    },
+    {
+      "episode_id": "v2-metaworld-011-s1",
+      "sha256": "c8564f8860dd07718910da0516394c778a28dfc771dff13c4f01812d1c8cfec4",
+      "seed": 2026100911,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 35,
+      "elapsed_s": 1.01
+    },
+    {
+      "episode_id": "v2-metaworld-011-s2",
+      "sha256": "977d4d287dd65608619d7bbdd1f3c5e33bbf772ed9245629003190bc7ec69fee",
+      "seed": 2026100912,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 40,
+      "elapsed_s": 1.02
+    },
+    {
+      "episode_id": "v2-metaworld-012-s0",
+      "sha256": "a4c6bd24c46ddeff86e9a035e0e292d31dd4b6b7481d5b151f9c85ea111849d3",
+      "seed": 2026100920,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 76,
+      "elapsed_s": 1.0
+    },
+    {
+      "episode_id": "v2-metaworld-012-s1",
+      "sha256": "50791a5c33aae4035804d32fcdfa5010f9d9468dd97402d522801a6079f4febe",
+      "seed": 2026100921,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 108,
+      "elapsed_s": 1.0
+    },
+    {
+      "episode_id": "v2-metaworld-012-s2",
+      "sha256": "49c8abafb65a88bd006880d38697ec343b2469d08681748250978dd4d0e497ca",
+      "seed": 2026100922,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 75,
+      "elapsed_s": 0.97
+    },
+    {
+      "episode_id": "v2-metaworld-013-s0",
+      "sha256": "910dde109e17637f3eb568714a82d3a78f3db685fc72c8104a9755f23a148e2b",
+      "seed": 2026100930,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 76,
+      "elapsed_s": 1.21
+    },
+    {
+      "episode_id": "v2-metaworld-013-s1",
+      "sha256": "af6676d54fc2cc56b9e50ae781fed7a41cbfa156b46605b6325cb78467a609d2",
+      "seed": 2026100931,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 70,
+      "elapsed_s": 1.19
+    },
+    {
+      "episode_id": "v2-metaworld-013-s2",
+      "sha256": "35a336cf787bbb59ef8657de5713bd783e5e1a31cfdbf04bce7270b17dcdaff4",
+      "seed": 2026100932,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 73,
+      "elapsed_s": 1.2
+    },
+    {
+      "episode_id": "v2-metaworld-014-s0",
+      "sha256": "19b844b985046ba2c2e2ba76a22d2e24ed841c7fd23d9bc40cf523ef045a6ad1",
+      "seed": 2026100940,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 109,
+      "elapsed_s": 1.02
+    },
+    {
+      "episode_id": "v2-metaworld-014-s1",
+      "sha256": "1cfc78fb2b9c926a6934b9a394fd95fa7d0b29e1859fc64bf6d33eed432fe960",
+      "seed": 2026100941,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 110,
+      "elapsed_s": 1.03
+    },
+    {
+      "episode_id": "v2-metaworld-014-s2",
+      "sha256": "e84350e0cacb48a181c7f14a8858ce7eb7d43d6defadc0126767303423b5ab32",
+      "seed": 2026100942,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 121,
+      "elapsed_s": 1.01
+    },
+    {
+      "episode_id": "v2-metaworld-015-s0",
+      "sha256": "46a43fd735a88ea9950f744136932ee9755c2a2b1d0594bc4b16e35673109e06",
+      "seed": 2026100950,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 82,
+      "elapsed_s": 0.95
+    },
+    {
+      "episode_id": "v2-metaworld-015-s1",
+      "sha256": "e1906e33c1935ba3a8667888434af8e0693cf3c2099fc5fac1b8d5340338340e",
+      "seed": 2026100951,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 81,
+      "elapsed_s": 0.94
+    },
+    {
+      "episode_id": "v2-metaworld-015-s2",
+      "sha256": "9da3eb6596e1f0c1d925c000309e69cb0aec580dd80d6f82b0ca3890c7f9acb3",
+      "seed": 2026100952,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 76,
+      "elapsed_s": 0.96
+    },
+    {
+      "episode_id": "v2-metaworld-016-s0",
+      "sha256": "2775f2bd9bf69452a9d4eefbd4e4584d45fcf56482fc8f762ab246c81db1bb12",
+      "seed": 2026100960,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 46,
+      "elapsed_s": 1.03
+    },
+    {
+      "episode_id": "v2-metaworld-016-s1",
+      "sha256": "bf70b930367a0212caaa1a03fc3948a33fcc660550a7394197df722481ba3f73",
+      "seed": 2026100961,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 44,
+      "elapsed_s": 0.99
+    },
+    {
+      "episode_id": "v2-metaworld-016-s2",
+      "sha256": "99d445556a777c5fc6c045c2603ddfdea988b13fd38207942c2b8cda8841b25c",
+      "seed": 2026100962,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 52,
+      "elapsed_s": 0.98
+    },
+    {
+      "episode_id": "v2-metaworld-017-s0",
+      "sha256": "a38ead1e781f554f0a65bdb7fc785f7494851961b0a48b3055dfdb48134a00d6",
+      "seed": 2026100970,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 62,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-017-s1",
+      "sha256": "a8059b1363a58feb6816cc6de807eadedfbcc1131e377713d6d3d2b83175046b",
+      "seed": 2026100971,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 65,
+      "elapsed_s": 0.87
+    },
+    {
+      "episode_id": "v2-metaworld-017-s2",
+      "sha256": "3b60ac4b075f5570c7888baa0927a0765f2bef65f6b0d55ecb7122ac67fd2d4c",
+      "seed": 2026100972,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 65,
+      "elapsed_s": 0.88
+    },
+    {
+      "episode_id": "v2-metaworld-018-s0",
+      "sha256": "bf6b47100137ede93c409a9e80ee92da7293e95c52690d206a48089a33a96e29",
+      "seed": 2026100980,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 111,
+      "elapsed_s": 1.09
+    },
+    {
+      "episode_id": "v2-metaworld-018-s1",
+      "sha256": "eced7934a59fb0706bc1a0cb0bd58f1c726154350ae3f64dc59f0578b8ccba41",
+      "seed": 2026100981,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 87,
+      "elapsed_s": 1.06
+    },
+    {
+      "episode_id": "v2-metaworld-018-s2",
+      "sha256": "704abdcf938bee1abbb856935e4fb8133de0ef29c81f59b0e21851f2ef5907ab",
+      "seed": 2026100982,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 76,
+      "elapsed_s": 1.11
+    },
+    {
+      "episode_id": "v2-metaworld-019-s0",
+      "sha256": "55f5cc66dcaf4245bb1c3b8df97b6911702898f8971191e50600d745dfd6937d",
+      "seed": 2026100990,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 84,
+      "elapsed_s": 1.13
+    },
+    {
+      "episode_id": "v2-metaworld-019-s1",
+      "sha256": "fac4098f113d3b8a0098f989bc8c6029418853b80d83593a2d7d517678e717a5",
+      "seed": 2026100991,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 87,
+      "elapsed_s": 1.12
+    },
+    {
+      "episode_id": "v2-metaworld-019-s2",
+      "sha256": "d96fab4fcab529bea30efb36e08e883aa0bf8ce050e0b3e446930fe53d311542",
+      "seed": 2026100992,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 82,
+      "elapsed_s": 1.1
+    },
+    {
+      "episode_id": "v2-metaworld-050-s0",
+      "sha256": "e327efa8ba29f0d1a10ad008d5585d45d4e005f1ce6cadc8f27ae19c71c6d9f4",
+      "seed": 2026101300,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 54,
+      "elapsed_s": 0.99
+    },
+    {
+      "episode_id": "v2-metaworld-050-s1",
+      "sha256": "21165de9acf55186c4a9e98c6cc9791f9cb106c0b35fab649f915a735936a114",
+      "seed": 2026101301,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 65,
+      "elapsed_s": 1.0
+    },
+    {
+      "episode_id": "v2-metaworld-050-s2",
+      "sha256": "cb619d6b372592a23b340d374bbeee8b0a859b6caf8f920411491fa95ebd7272",
+      "seed": 2026101302,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 61,
+      "elapsed_s": 1.01
+    },
+    {
+      "episode_id": "v2-metaworld-051-s0",
+      "sha256": "f0d5e1c8d8798b63adfcbb085a488fdc90e8c864180724fa039f6627025452cb",
+      "seed": 2026101310,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 79,
+      "elapsed_s": 0.98
+    },
+    {
+      "episode_id": "v2-metaworld-051-s1",
+      "sha256": "332b55563249ef2101c55097bfe4f4a5e810032f83aa12d0c86670d2e80ecea0",
+      "seed": 2026101311,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 78,
+      "elapsed_s": 0.97
+    },
+    {
+      "episode_id": "v2-metaworld-051-s2",
+      "sha256": "cde9b9e98451e08ea48897eddc80fb3aa30be5cb90c00cf1586726a0283506c9",
+      "seed": 2026101312,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 78,
+      "elapsed_s": 0.98
+    },
+    {
+      "episode_id": "v2-metaworld-052-s0",
+      "sha256": "bd05ff78a6ddcb82831f3c4775edacc51346f6b9f463190044ba90ef9818fad0",
+      "seed": 2026101320,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 59,
+      "elapsed_s": 0.92
+    },
+    {
+      "episode_id": "v2-metaworld-052-s1",
+      "sha256": "efa16bbda3e94e364d6b2bffb79b23c81a1eb44679e1810f46920e4fc6ca26f8",
+      "seed": 2026101321,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 60,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-052-s2",
+      "sha256": "2db07955639b22b6246f7990bdde38a7f2bb4dcd97ad83e85852f7c1908db9c0",
+      "seed": 2026101322,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 57,
+      "elapsed_s": 0.93
+    },
+    {
+      "episode_id": "v2-metaworld-053-s0",
+      "sha256": "0df6313defe820b5c55c372a1f83079f53617e7772693fe73250fb4226e9ef27",
+      "seed": 2026101330,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 75,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-053-s1",
+      "sha256": "8c6b1f019d9dd5a36c71c3044ec1ac4f62e6df4c307b84df77525ca27fe9220d",
+      "seed": 2026101331,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 75,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-053-s2",
+      "sha256": "59f2ffcf3e6dba8c014623058c5bdd27c93d808596d48c69aa6450b68ba8051a",
+      "seed": 2026101332,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 60,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-054-s0",
+      "sha256": "77a8ceacd83b6d1301712d9f00208c8cd45e137c1f760b2adbef80d6e5f80eaa",
+      "seed": 2026101340,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 70,
+      "elapsed_s": 0.92
+    },
+    {
+      "episode_id": "v2-metaworld-054-s1",
+      "sha256": "f9ce5a9f2eb923154d9e971f69fa663fd6c72718245adedc0006672d04d67f8e",
+      "seed": 2026101341,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 60,
+      "elapsed_s": 0.91
+    },
+    {
+      "episode_id": "v2-metaworld-054-s2",
+      "sha256": "6b5104eda54f7e2ec283fdadb9b1df2c857f7329269c52b74e96aae0973c932b",
+      "seed": 2026101342,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 64,
+      "elapsed_s": 0.91
+    },
+    {
+      "episode_id": "v2-metaworld-055-s0",
+      "sha256": "1a91acd1a04e165948552af41239ee205e71e445b145a49f372471d3fbbc91e5",
+      "seed": 2026101350,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 54,
+      "elapsed_s": 0.89
+    },
+    {
+      "episode_id": "v2-metaworld-055-s1",
+      "sha256": "39165df08d713b8158bd6acf1d8f6fd88721999fd0992ea80664f8934d2ce5cb",
+      "seed": 2026101351,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 59,
+      "elapsed_s": 0.9
+    },
+    {
+      "episode_id": "v2-metaworld-055-s2",
+      "sha256": "d18b0a16c7c8d36f8d53110cd184c84b51f4c2d9d484112a8ab4a22be67aeac6",
+      "seed": 2026101352,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 54,
+      "elapsed_s": 0.9
+    },
+    {
+      "episode_id": "v2-metaworld-056-s0",
+      "sha256": "bde84a647d84f014c38eb1f365cc78d91c01c0f1df3c2dbebf4541f22fbd12b9",
+      "seed": 2026101360,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 71,
+      "elapsed_s": 0.94
+    },
+    {
+      "episode_id": "v2-metaworld-056-s1",
+      "sha256": "da2291667c3638dc333fa344192fd2bad1561425c99a9a37bf49e8dc1d5e8b0a",
+      "seed": 2026101361,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 60,
+      "elapsed_s": 0.92
+    },
+    {
+      "episode_id": "v2-metaworld-056-s2",
+      "sha256": "65c7a0741aaddefe25e94993c69f57044f349dbc91cba07eba0b279379c6c5d7",
+      "seed": 2026101362,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 74,
+      "elapsed_s": 0.93
+    },
+    {
+      "episode_id": "v2-metaworld-057-s0",
+      "sha256": "306322bbb48ddae99ae4099b5191cad0aa721b3601231f75fb4b2c2ac978a3d5",
+      "seed": 2026101370,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 32,
+      "elapsed_s": 1.01
+    },
+    {
+      "episode_id": "v2-metaworld-057-s1",
+      "sha256": "a5162ac33c16fffe42c35f98dcfa1e5c354e8bdc741ef4ca6db3a5c7a6f8e91f",
+      "seed": 2026101371,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 31,
+      "elapsed_s": 1.02
+    },
+    {
+      "episode_id": "v2-metaworld-057-s2",
+      "sha256": "04e1acb6b365a090b5f3918c1723ab5bc94d169e93593e599e7c4afadd2961bc",
+      "seed": 2026101372,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 25,
+      "elapsed_s": 1.04
+    },
+    {
+      "episode_id": "v2-metaworld-058-s0",
+      "sha256": "e015a3522f19e5066eb138c7d027726bafb6a13e3aa9a4d91b24e7baf78b9c9a",
+      "seed": 2026101380,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 28,
+      "elapsed_s": 0.92
+    },
+    {
+      "episode_id": "v2-metaworld-058-s1",
+      "sha256": "c15b330442a695031c7e79e3ca806b165be6afc42b86fa18fde8034baa48638f",
+      "seed": 2026101381,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 44,
+      "elapsed_s": 0.88
+    },
+    {
+      "episode_id": "v2-metaworld-058-s2",
+      "sha256": "748dc8d21c7cd6d5f80a146d89f370854132c5ae5111f74b6ad15b31fc2bc999",
+      "seed": 2026101382,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 32,
+      "elapsed_s": 0.88
+    },
+    {
+      "episode_id": "v2-metaworld-059-s0",
+      "sha256": "e713a414839f35431ac7639da955f3310b6a48259a4f5306c37b8d1c39a16c35",
+      "seed": 2026101390,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 104,
+      "elapsed_s": 1.0
+    },
+    {
+      "episode_id": "v2-metaworld-059-s1",
+      "sha256": "3cda4faad2600f7d4e1fb09d2a01eb8241e70b24f019ae837a9356af0a95b5de",
+      "seed": 2026101391,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 120,
+      "elapsed_s": 0.98
+    },
+    {
+      "episode_id": "v2-metaworld-059-s2",
+      "sha256": "bbaf1ceb2d0e0fb99082ac009d92fa0eb6a7aecfcc43057da72273707804ab81",
+      "seed": 2026101392,
+      "success": true,
+      "reference": "official MetaWorld scripted policy with privileged state",
+      "same_native_action_interface": true,
+      "model_input_equivalence": false,
+      "control_steps": 102,
+      "elapsed_s": 0.97
+    }
+  ]
+}

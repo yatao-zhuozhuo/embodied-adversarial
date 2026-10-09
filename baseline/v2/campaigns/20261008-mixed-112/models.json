@@ -1,0 +1,111 @@
+{
+  "qwen35_4b": {
+    "model": "Qwen3.5-4B-embodied-mixed",
+    "model_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/model/Qwen3.5-4B-embodied-mixed",
+    "api_base": "http://127.0.0.1:8130/v1",
+    "port": 8130,
+    "sim_port": 8230,
+    "gpus": [
+      0
+    ],
+    "tensor_parallel_size": 1,
+    "sim_gpu": 0,
+    "provenance": {
+      "base_model": "/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B",
+      "adapter_checkpoint": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT-train/mixed-runs/Qwen3.5-4B/checkpoints/v2-20261008-032142/checkpoint-1320",
+      "global_step": 1320,
+      "training_samples": 3521,
+      "training_episodes": 74,
+      "torch_dtype": "bfloat16",
+      "merged": true,
+      "tensors": 723,
+      "shards": 2,
+      "verified_projection": "model.language_model.layers.0.linear_attn.in_proj_b.weight",
+      "model_type": "qwen3_5",
+      "processor": "Qwen3VLProcessor"
+    },
+    "provenance_sha256": "fc91feff43f56d317d628d510381604d1dcd9a687191686a53c6297336dcfd1f",
+    "index_sha256": "df59e0e8f68ce1841a11ec0ba05e468a1413a7c5df5d1fa1e8b29a911a1b29d1",
+    "shards": {
+      "model-00001-of-00002.safetensors": 4972947968,
+      "model-00002-of-00002.safetensors": 4105672464
+    }
+  },
+  "qwen35_9b": {
+    "model": "Qwen3.5-9B-embodied-mixed",
+    "model_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/model/Qwen3.5-9B-embodied-mixed",
+    "api_base": "http://127.0.0.1:8131/v1",
+    "port": 8131,
+    "sim_port": 8231,
+    "gpus": [
+      1
+    ],
+    "tensor_parallel_size": 1,
+    "sim_gpu": 1,
+    "provenance": {
+      "base_model": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/.runtime/models/Qwen3.5-9B",
+      "adapter_checkpoint": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT-train/mixed-runs/Qwen3.5-9B/checkpoints/v2-20261008-032142/checkpoint-1320",
+      "global_step": 1320,
+      "training_samples": 3521,
+      "training_episodes": 74,
+      "torch_dtype": "bfloat16",
+      "merged": true,
+      "tensors": 760,
+      "shards": 4,
+      "verified_projection": "model.language_model.layers.0.linear_attn.in_proj_b.weight",
+      "model_type": "qwen3_5",
+      "processor": "Qwen3VLProcessor"
+    },
+    "provenance_sha256": "7e5eea6ef498f942978f4bb629121c58feb1b5e223525daec6a172ddc2876d9c",
+    "index_sha256": "941305ff9f77551e145a6cea976ef456cd5cb208cbece99f168376c752fcf96c",
+    "shards": {
+      "model-00001-of-00004.safetensors": 4942706120,
+      "model-00002-of-00004.safetensors": 4987757928,
+      "model-00003-of-00004.safetensors": 4954810240,
+      "model-00004-of-00004.safetensors": 3934446832
+    }
+  },
+  "qwen38_27b": {
+    "model": "Qwen3.8-27B-embodied-mixed",
+    "model_path": "/inspire/qb-ilm/project/exploration-topic/ky26060/model/Qwen3.8-27B-embodied-mixed",
+    "api_base": "http://127.0.0.1:8132/v1",
+    "port": 8132,
+    "sim_port": 8226,
+    "gpus": [
+      2,
+      3
+    ],
+    "tensor_parallel_size": 2,
+    "sim_gpu": 2,
+    "provenance": {
+      "base_model": "/inspire/hdd/global_public/public_models/Qwen/Qwen3.8-27B",
+      "adapter_checkpoint": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT-train/mixed-runs/Qwen3.8-27B/checkpoints/v2-20261008-032141/checkpoint-1320",
+      "global_step": 1320,
+      "training_samples": 3521,
+      "training_episodes": 74,
+      "torch_dtype": "bfloat16",
+      "merged": true,
+      "tensors": 1184,
+      "shards": 12,
+      "verified_projection": "model.language_model.layers.0.linear_attn.in_proj_b.weight",
+      "model_type": "qwen3_5",
+      "processor": "Qwen3VLProcessor"
+    },
+    "provenance_sha256": "d85a6bb9c4b294903568fab64e1165baece5d1606f5ef71af94d4452387f400b",
+    "index_sha256": "a600c6626eb1eb653a3f078ab3dd1c7a8fab2e71185c7ef3aa923a39aaa637be",
+    "shards": {
+      "model-00001-of-00012.safetensors": 2542796928,
+      "model-00002-of-00012.safetensors": 4842451920,
+      "model-00003-of-00012.safetensors": 4965227944,
+      "model-00004-of-00012.safetensors": 4912819264,
+      "model-00005-of-00012.safetensors": 4986198544,
+      "model-00006-of-00012.safetensors": 4912819320,
+      "model-00007-of-00012.safetensors": 4932703272,
+      "model-00008-of-00012.safetensors": 4966314576,
+      "model-00009-of-00012.safetensors": 4964162248,
+      "model-00010-of-00012.safetensors": 4933789824,
+      "model-00011-of-00012.safetensors": 4965228032,
+      "model-00012-of-00012.safetensors": 2789094896
+    }
+  }
+}

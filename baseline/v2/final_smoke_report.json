@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "snapshot_sha256": "0539aed73f279ec3d5e0f39b0861a32591393fe8c334393c63311954691c7cf7",
+  "records": [
+    {
+      "episode_id": "v2-libero-000-s0",
+      "passed": true,
+      "images": 2
+    },
+    {
+      "episode_id": "v2-metaworld-010-s0",
+      "passed": true,
+      "images": 1
+    },
+    {
+      "episode_id": "v2-maniskill3-020-s0",
+      "passed": true,
+      "images": 1
+    },
+    {
+      "episode_id": "v2-robocasa-030-s0",
+      "passed": true,
+      "images": 3
+    },
+    {
+      "episode_id": "v2-maniskill3-028-s0",
+      "passed": true,
+      "images": 1
+    },
+    {
+      "episode_id": "v2-maniskill3-061-s0",
+      "passed": true,
+      "images": 2
+    }
+  ]
+}

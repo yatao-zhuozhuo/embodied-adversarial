@@ -22,5 +22,11 @@
     "api_base": "http://127.0.0.1:8103/v1",
     "api_key_env": "BASELINE_LOCAL_API_KEY",
     "local": true
+  },
+  "qwen35_4b_embodied": {
+    "model": "Qwen3.5-4B-embodied",
+    "api_base": "http://127.0.0.1:8104/v1",
+    "api_key_env": "BASELINE_LOCAL_API_KEY",
+    "local": true
   }
 }

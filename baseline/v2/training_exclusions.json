@@ -1,0 +1,381 @@
+{
+  "schema_version": "openeta.baseline.v2.training_exclusions.v1",
+  "provenance": {
+    "generated_at_utc": "2026-10-08T05:06:29.349247+00:00",
+    "training_file": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT-train/mixed-data/train.jsonl",
+    "training_sha256": "ad73ca8d68b7e935aa237ae1d42bf69c1475570409339e1be22c5fb68bbb8545",
+    "legacy_file": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/docs/baseline-40-tasks.json",
+    "legacy_sha256": "a4617ad885a386199cd2c1fba577a71bffafdfee332989f38cc5b484f6ec6715",
+    "libero_mapping_file": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline/baseline/.runtime/sources/LIBERO/libero/libero/benchmark/libero_suite_task_map.py",
+    "libero_mapping_sha256": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d"
+  },
+  "scope": "当前 mixed-data/train.jsonl；正式冻结前须合并所有参评 checkpoint 的训练任务清单",
+  "episode_count": 74,
+  "decision_sample_count": 3521,
+  "task_count": 18,
+  "tasks": [
+    {
+      "env_id": "openeta/libero_libero_10_task5-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+      "episode_count": 5,
+      "decision_sample_count": 418,
+      "seeds": [
+        32060002,
+        32060003,
+        32060005,
+        32060006,
+        32060007
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_10_task5/seed-32060002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_10_task5/seed-32060003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_10_task5/seed-32060005",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_10_task5/seed-32060006",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_10_task5/seed-32060007"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task14-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:KITCHEN_SCENE2_put_the_middle_black_bowl_on_the_plate",
+      "episode_count": 1,
+      "decision_sample_count": 36,
+      "seeds": [
+        20310000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_flash_expanded_20261006_single100/libero/libero_90_task14/attempt-0000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task35-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:KITCHEN_SCENE7_open_the_microwave",
+      "episode_count": 4,
+      "decision_sample_count": 255,
+      "seeds": [
+        32090000,
+        32090001,
+        32090002,
+        32090004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task35/seed-32090000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task35/seed-32090001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task35/seed-32090002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task35/seed-32090004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task41-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet",
+      "episode_count": 1,
+      "decision_sample_count": 21,
+      "seeds": [
+        20310000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_flash_expanded_20261006_single100/libero/libero_90_task41/attempt-0000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task69-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_left_of_the_plate",
+      "episode_count": 1,
+      "decision_sample_count": 45,
+      "seeds": [
+        20310000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_flash_expanded_20261006_single100/libero/libero_90_task69/attempt-0000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_90_task70-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_right_of_the_plate",
+      "episode_count": 9,
+      "decision_sample_count": 472,
+      "seeds": [
+        32000000,
+        32070000,
+        32070001,
+        32070002,
+        32070003,
+        32070004,
+        32070005,
+        32070006,
+        32070007
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32000000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070004",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070005",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070006",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_90_task70/seed-32070007"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_goal_task8-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:put_the_bowl_on_the_plate",
+      "episode_count": 1,
+      "decision_sample_count": 14,
+      "seeds": [
+        20310000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_flash_expanded_20261006_single100/libero/libero_goal_task8/attempt-0000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/libero_libero_spatial_task6-v0",
+      "benchmark": "libero",
+      "canonical_key": "libero:pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+      "episode_count": 8,
+      "decision_sample_count": 594,
+      "seeds": [
+        32050000,
+        32050001,
+        32050002,
+        32050003,
+        32050004,
+        32050005,
+        32050006,
+        32050007
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050004",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050005",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050006",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/libero/libero_spatial_task6/seed-32050007"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/maniskill_LiftPegUpright-v1-v0",
+      "benchmark": "maniskill",
+      "canonical_key": "maniskill_LiftPegUpright-v1-v0",
+      "episode_count": 4,
+      "decision_sample_count": 44,
+      "seeds": [
+        34120000,
+        34120001,
+        34120002,
+        34120003
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/LiftPegUpright-v1/seed-34120000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/LiftPegUpright-v1/seed-34120001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/LiftPegUpright-v1/seed-34120002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/LiftPegUpright-v1/seed-34120003"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/maniskill_PokeCube-v1-v0",
+      "benchmark": "maniskill",
+      "canonical_key": "maniskill_PokeCube-v1-v0",
+      "episode_count": 5,
+      "decision_sample_count": 118,
+      "seeds": [
+        20320001,
+        34110000,
+        34110002,
+        34110004,
+        34110005
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PokeCube-v1/seed-34110000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PokeCube-v1/seed-34110002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PokeCube-v1/seed-34110004",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PokeCube-v1/seed-34110005",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_input_v1_gemini-3.1-pro-preview_20261006_114135/maniskill/PokeCube-v1/attempt-0001"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/maniskill_PullCube-v1-v0",
+      "benchmark": "maniskill",
+      "canonical_key": "maniskill_PullCube-v1-v0",
+      "episode_count": 8,
+      "decision_sample_count": 164,
+      "seeds": [
+        20310000,
+        20310001,
+        20310002,
+        34100000,
+        34100001,
+        34100002,
+        34100003
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PullCube-v1/seed-34100000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PullCube-v1/seed-34100001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PullCube-v1/seed-34100002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/maniskill/PullCube-v1/seed-34100003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_input_v1_gemini-3.1-pro-preview_20261006_114135/maniskill/PullCube-v1/attempt-0000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_input_v1_gemini-3.6-flash_20261006_114135/maniskill/PullCube-v1/attempt-0000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_input_v1_gemini-3.6-flash_20261006_114135/maniskill/PullCube-v1/attempt-0001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_input_v1_gemini-3.6-flash_20261006_114135/maniskill/PullCube-v1/attempt-0002"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_assembly-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_assembly-v3-v0",
+      "episode_count": 5,
+      "decision_sample_count": 282,
+      "seeds": [
+        31020000,
+        31020001,
+        31020002,
+        31020003,
+        31020004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/assembly-v3/seed-31020000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/assembly-v3/seed-31020001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/assembly-v3/seed-31020002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/assembly-v3/seed-31020003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/assembly-v3/seed-31020004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_bin-picking-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_bin-picking-v3-v0",
+      "episode_count": 5,
+      "decision_sample_count": 339,
+      "seeds": [
+        31010000,
+        31010001,
+        31010002,
+        31010003,
+        31010004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/bin-picking-v3/seed-31010000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/bin-picking-v3/seed-31010001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/bin-picking-v3/seed-31010002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/bin-picking-v3/seed-31010003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/bin-picking-v3/seed-31010004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_disassemble-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_disassemble-v3-v0",
+      "episode_count": 5,
+      "decision_sample_count": 231,
+      "seeds": [
+        31040000,
+        31040001,
+        31040002,
+        31040003,
+        31040004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/disassemble-v3/seed-31040000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/disassemble-v3/seed-31040001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/disassemble-v3/seed-31040002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/disassemble-v3/seed-31040003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/disassemble-v3/seed-31040004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_lever-pull-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_lever-pull-v3-v0",
+      "episode_count": 5,
+      "decision_sample_count": 304,
+      "seeds": [
+        31030000,
+        31030001,
+        31030002,
+        31030003,
+        31030004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/lever-pull-v3/seed-31030000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/lever-pull-v3/seed-31030001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/lever-pull-v3/seed-31030002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/lever-pull-v3/seed-31030003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/lever-pull-v3/seed-31030004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_reach-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_reach-v3-v0",
+      "episode_count": 5,
+      "decision_sample_count": 69,
+      "seeds": [
+        31000000,
+        31000001,
+        31000002,
+        31000003,
+        31000004
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/reach-v3/seed-31000000",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/reach-v3/seed-31000001",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/reach-v3/seed-31000002",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/reach-v3/seed-31000003",
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/metaworld/reach-v3/seed-31000004"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/metaworld_50_window-open-v3-v0",
+      "benchmark": "metaworld",
+      "canonical_key": "metaworld_50_window-open-v3-v0",
+      "episode_count": 1,
+      "decision_sample_count": 17,
+      "seeds": [
+        20310000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/gemini_flash_expanded_20261006_single100/metaworld/window-open-v3/attempt-0000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    },
+    {
+      "env_id": "openeta/robocasa_pretrain_CoffeeSetupMug-v0",
+      "benchmark": "robocasa",
+      "canonical_key": "robocasa_pretrain_CoffeeSetupMug-v0",
+      "episode_count": 1,
+      "decision_sample_count": 98,
+      "seeds": [
+        33000000
+      ],
+      "source_episodes": [
+        "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/SFT_data/expert_replay_compressed_v1/episodes/robocasa/CoffeeSetupMug/seed-33000000"
+      ],
+      "exclusion_scope": "all_initial_states_of_this_task"
+    }
+  ]
+}

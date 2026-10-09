@@ -1,0 +1,26 @@
+{
+  "episode": {
+    "episode_id": "v2-maniskill3-060-s0",
+    "env_id": "openeta/maniskill_TurnFaucet-v1-v0",
+    "task": "Turn the faucet handle to open the faucet.",
+    "seed": 2026101400,
+    "max_turns": 100,
+    "max_control_steps": 1000,
+    "max_tool_calls": 200,
+    "timeout_s": 3600,
+    "max_total_tokens": 5000000,
+    "metadata": {
+      "native_task": "TurnFaucet-v1",
+      "benchmark": "maniskill3",
+      "task_id": "v2-maniskill3-060",
+      "difficulty": "medium",
+      "difficulty_source": "OpenETA requirement-based provisional v1",
+      "selection_source": "new",
+      "seed_index": 0
+    }
+  },
+  "passed": false,
+  "checks": {},
+  "error": "RuntimeError: create_env failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+  "elapsed_s": 25.53
+}

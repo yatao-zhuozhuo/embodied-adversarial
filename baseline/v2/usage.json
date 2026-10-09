@@ -1,0 +1,17 @@
+{
+  "formal_manifest": "manifests/all.json",
+  "acceptance_report": "acceptance_report.json",
+  "task_list": "manifests/tasks.json",
+  "excluded": "rejected_tasks.json",
+  "input_profiles": "configs/input_profiles.json",
+  "snapshot": "snapshot/lock.json",
+  "working_directory": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/.worktrees/baseline",
+  "commands": {
+    "verify": "baseline/.runtime/coordinator/bin/python -c \"from baseline.v2.runtime import verify_snapshot; print(verify_snapshot())\"",
+    "simulator": "bash baseline/v2/serve_simulator.sh",
+    "evaluate": "bash baseline/v2/run.sh MODEL_ID"
+  },
+  "model_requirement": "Start the intended model inference API first; configs/models.json defines known model IDs. Do not confuse the older five-trajectory embodied checkpoint with a 74-trajectory checkpoint.",
+  "results": "results/formal",
+  "note": "Environment acceptance is complete; per-model API/tokenizer/image smoke is performed at model launch."
+}
