@@ -163,9 +163,9 @@
         },
         {
           "bench": "metaworld",
-          "task_id": "basketball-v3",
-          "env_id": "openeta/metaworld_50_basketball-v3-v0",
-          "task": "Dunk the basketball into the basket",
+          "task_id": "sweep-into-v3",
+          "env_id": "openeta/metaworld_50_sweep-into-v3-v0",
+          "task": "Sweep a puck into a hole",
           "expected_action_dim": 4
         },
         {
