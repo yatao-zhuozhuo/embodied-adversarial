@@ -387,6 +387,19 @@ class BenchWorkerManager:
         self._next_gpu = 0  # round-robin cursor for GPU binding
 
     # ── low-level spawn (no locking; callers hold _lock) ───────────────
+    def _select_worker_gpu(self, bench: str) -> int:
+        """Keep a benchmark's graphics workers evenly spread on Yicloud."""
+        offset = self._next_gpu % len(self._gpus)
+        candidates = self._gpus[offset:] + self._gpus[:offset]
+        self._next_gpu += 1
+        if os.environ.get("OPENETA_WORKER_GPU_ASSIGNMENT") != "per_bench":
+            return candidates[0]
+        counts = {gpu: 0 for gpu in candidates}
+        for worker in self._pools.get(bench, []):
+            if worker.gpu in counts:
+                counts[worker.gpu] += 1
+        return min(candidates, key=counts.get)
+
     def _spawn_worker(self, bench: str) -> BenchWorkerHandle:
         """Start one worker subprocess for *bench*, bound to the next GPU."""
         python_exe = _venv_python(bench)
@@ -394,8 +407,7 @@ class BenchWorkerManager:
             raise RuntimeError(f"No Python interpreter found for bench '{bench}'")
 
         # Round-robin GPU assignment across detected devices (CUDA ordinals).
-        gpu = self._gpus[self._next_gpu % len(self._gpus)]
-        self._next_gpu += 1
+        gpu = self._select_worker_gpu(bench)
         child_env = dict(os.environ)
         # Popen runs on a short-lived AnyIO worker thread. Linux PDEATHSIG is
         # tied to the creating *thread*, so it kills a healthy simulator when
