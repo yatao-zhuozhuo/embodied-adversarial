@@ -107,7 +107,7 @@ def run(plan,root):
         if checkpoint:
             env['RESUME_FROM_CHECKPOINT']=str(checkpoint)
         write(root/'curriculum_status.json',{'status':'preflight','stage':stage['name']})
-        preflight=prefix+('/opt/openeta-swift/bin/python scripts/preflight_single_model_rl.py '
+        preflight=prefix+('"${SWIFT_VENV:-/opt/openeta-swift}/bin/python" scripts/preflight_single_model_rl.py '
             '--dataset "$RUN_ROOT/preflight_tasks.jsonl" --output "$RUN_ROOT/preflight"\n')
         with (directory/'preflight.log').open('a') as log:
             result=subprocess.run(['bash','-c',preflight],cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)

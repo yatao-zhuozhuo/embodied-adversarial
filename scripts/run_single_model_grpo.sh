@@ -47,7 +47,7 @@ if [[ -n "${OPENETA_TENSORBOARD_SERIES_ROOT:-}" ]]; then
 fi
 "$SWIFT_VENV/bin/python" scripts/record_single_model_rl_run.py --output "$OUTPUT_DIR/run_manifest.json" --dataset "$DATASET_PATH"
 "$SWIFT_VENV/bin/python" -c 'import tilelang'
-exec "$SWIFT_VENV/bin/swift" rlhf \
+exec "$SWIFT_VENV/bin/python" "$SWIFT_VENV/bin/swift" rlhf \
  --rlhf_type grpo --check_model false --model "${MODEL_PATH:-/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B}" \
  "${INIT_ARGS[@]}" --external_plugins "$REPO_ROOT/plugins/single_model_swift_grpo.py" \
  --reward_funcs single_model_success --dataset "$DATASET_PATH" --load_from_cache_file false \

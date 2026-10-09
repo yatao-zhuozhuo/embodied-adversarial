@@ -29,7 +29,7 @@ def main():
         prefix='source scripts/single_model_rl_env.sh\nexport OPENETA_HOST_STATE_TOKEN="$(cat "${OPENETA_HOST_TOKEN_FILE:-$RUN_ROOT/.host_token}")"\n'
         if a.kind=='preflight':
             env['PREFLIGHT_OUTPUT']=str(a.output)
-            script=prefix+'/opt/openeta-swift/bin/python scripts/preflight_single_model_rl.py --dataset "$DATASET_PATH" --output "$PREFLIGHT_OUTPUT"\n'
+            script=prefix+'"${SWIFT_VENV:-/opt/openeta-swift}/bin/python" scripts/preflight_single_model_rl.py --dataset "$DATASET_PATH" --output "$PREFLIGHT_OUTPUT"\n'
         else: script=prefix+'bash scripts/run_single_model_grpo.sh\n'
         script+='status=$?\nprintf "%s\\n" "$status" > "$RUN_ROOT/'+a.kind+'.exit"\nexit "$status"\n'
         command=['bash','-c',script]
