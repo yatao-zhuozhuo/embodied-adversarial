@@ -69,6 +69,11 @@ def main():
         if len({node['ip'] for node in nodes}) != world:
             raise RuntimeError('Expected distinct hosts for the two 8-GPU jobs')
         os.environ['MASTER_ADDR'] = nodes[0]['ip']
+        command([sys.executable, '-m', 'torch.distributed.run', '--nnodes', str(world),
+                 '--node_rank', str(rank), '--nproc_per_node', '8', '--master_addr', nodes[0]['ip'],
+                 '--master_port', os.environ['MASTER_PORT'],
+                 'scripts/probe_single_model_rl_yi_distributed.py'], os.environ.copy(), local/'distributed_probe.log')
+        barrier('distributed-probe')
         plan = json.loads((root / 'curriculum_plan.json').read_text())
         batch = plan['batch']
         assert world == batch['nnodes'] == 2
