@@ -74,6 +74,12 @@ def main():
                  '--master_port', os.environ['MASTER_PORT'],
                  'scripts/probe_single_model_rl_yi_distributed.py'], os.environ.copy(), local/'distributed_probe.log')
         barrier('distributed-probe')
+        if rank == 0:
+            command([sys.executable, '-m', 'pytest', '-q',
+                     'tests/test_single_model_yi_multinode.py', 'tests/test_single_model_yi_config.py',
+                     'tests/test_single_model_curriculum.py', 'tests/test_worker_gpu_assignment.py'],
+                    os.environ.copy(), local/'contract_tests.log')
+        barrier('contract-tests')
         plan = json.loads((root / 'curriculum_plan.json').read_text())
         batch = plan['batch']
         assert world == batch['nnodes'] == 2
