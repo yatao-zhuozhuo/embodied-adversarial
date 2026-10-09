@@ -4,17 +4,26 @@ set -euo pipefail
 mkdir -p "$RUN_ROOT/nodes/$NODE_RANK" "$RUN_ROOT/coordination"
 exec > >(tee -a "$RUN_ROOT/nodes/$NODE_RANK/job.log") 2>&1
 service_pid=''
+artifact_owner_pid=''
 finish() {
   status=$?
   if [[ "$status" != 0 ]]; then
     printf '{"node_rank":%s,"error":"job shell exited %s; inspect node job.log"}\n' "$NODE_RANK" "$status" > "$RUN_ROOT/coordination/failed-$NODE_RANK.json"
   fi
   if [[ -n "$service_pid" ]]; then kill -- -"$service_pid" 2>/dev/null || true; fi
+  if [[ -n "$artifact_owner_pid" ]]; then
+    kill "$artifact_owner_pid" 2>/dev/null || true
+    "$OPENETA_MCP_PYTHON" scripts/single_model_rl_artifact_owner.py --run-root "$RUN_ROOT" || true
+  fi
 }
 trap finish EXIT
 source "$(dirname "${BASH_SOURCE[0]}")/single_model_rl_yi_env.sh"
 cd "$REPO_ROOT"
 bash scripts/bootstrap_single_model_rl_yi_gpu.sh
+if [[ "$NODE_RANK" == 0 ]]; then
+  "$OPENETA_MCP_PYTHON" scripts/single_model_rl_artifact_owner.py --run-root "$RUN_ROOT" --watch &
+  artifact_owner_pid=$!
+fi
 export OPENETA_TENSORBOARD_SERIES_ROOT="$RUN_ROOT"
 export OPENETA_HOST_TOKEN_FILE="$RUN_ROOT/nodes/$NODE_RANK/service/.host_token"
 export OPENETA_EMBODIED_MCP_URL="http://127.0.0.1:${OPENETA_RL_MCP_PORT:-19785}"
