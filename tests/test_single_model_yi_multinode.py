@@ -72,6 +72,17 @@ def test_job_requests_two_nodes_eight_cards(tmp_path):
         assert not any('TOKEN' in k or 'SECRET' in k for k in env)
 
 
+def test_render_failure_nodes_are_excluded_without_changing_resources(tmp_path):
+    old = request('test', 0, tmp_path, tmp_path/'acceptance.json')
+    new = request('test', 0, tmp_path, tmp_path/'acceptance.json', ['gpu-bad-1', 'gpu-bad-2'])
+    spec = new['spec']['taskSpecs']['task1']['template']['spec']
+    affinity = spec.pop('affinity')
+    assert new == old
+    assert affinity['nodeAffinity']['requiredDuringSchedulingIgnoredDuringExecution']['nodeSelectorTerms'] == [
+        {'matchExpressions': [{'key': 'kubernetes.io/hostname', 'operator': 'NotIn',
+                               'values': ['gpu-bad-1', 'gpu-bad-2']}]}]
+
+
 def test_preflight_reuse_requires_all_nodes_and_exact_data(tmp_path,monkeypatch):
     from scripts.single_model_rl_preflight_history import validate_history
     monkeypatch.setattr('scripts.single_model_rl_preflight_history.subprocess.run',lambda *a,**k:None)

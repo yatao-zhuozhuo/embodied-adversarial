@@ -9,7 +9,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def request(name, rank, root, acceptance):
+def request(name, rank, root, acceptance, excluded_nodes=()):
     namespace, quota = 'fdj-infra', 'fdj_gpu_task'
     labels = {'brainpp-log-collector':'fluent-bit', 'kubebrain.brainpp.cn/creator':'yangyongzhuo',
         'kubebrain.brainpp.cn/creator-id':'e344b3ff5628d23c1f4ad3d234d89309',
@@ -27,7 +27,7 @@ def request(name, rank, root, acceptance):
            'OPENETA_RL_MCP_PORT':'19785','ORIGINAL_ACCEPTANCE':str(acceptance),
            'NCCL_DEBUG':'WARN','PYTHONUNBUFFERED':'1'}
     command = 'cd '+shlex.quote(str(ROOT))+' && bash scripts/run_single_model_rl_yi_job.sh'
-    return {'apiVersion':'rjob.brainpp.cn/v1alpha1','kind':'RJob',
+    body = {'apiVersion':'rjob.brainpp.cn/v1alpha1','kind':'RJob',
         'metadata':{'name':name,'namespace':namespace,'labels':labels,'annotations':annotations},
         'spec':{'autoDeleteDuration':'720h','backoffLimit':1,'failurePolicy':'None','taskSpecs':{'task1':{
             'maxRunningDuration':'72h','maxWaitDuration':'24h','positiveTags':['feature/gpfs=yes'],
@@ -40,6 +40,12 @@ def request(name, rank, root, acceptance):
                     'resources':{'limits':resources,'requests':resources}}],
                     'imagePullSecrets':[{'name':labels['kubebrain.brainpp.cn/creator-id']}],
                     'restartPolicy':'Never','terminationGracePeriodSeconds':120}}}}}}
+    if excluded_nodes:
+        body['spec']['taskSpecs']['task1']['template']['spec']['affinity'] = {
+            'nodeAffinity': {'requiredDuringSchedulingIgnoredDuringExecution': {'nodeSelectorTerms': [
+                {'matchExpressions': [{'key': 'kubernetes.io/hostname', 'operator': 'NotIn',
+                                       'values': list(excluded_nodes)}]}]}}}
+    return body
 
 
 def main():
@@ -48,6 +54,7 @@ def main():
     parser.add_argument('--name',required=True)
     parser.add_argument('--original-acceptance',type=Path,required=True)
     parser.add_argument('--prepare-only',action='store_true')
+    parser.add_argument('--exclude-node',action='append',default=[])
     args=parser.parse_args()
     root=args.run_root.resolve()
     if not (root/'curriculum_plan.json').is_file():parser.error('Prepare the curriculum first')
@@ -56,7 +63,7 @@ def main():
     for rank in range(2):
         name=f'{args.name}-{rank}'
         path=directory/f'{name}.json'
-        body=request(name,rank,root,args.original_acceptance.resolve())
+        body=request(name,rank,root,args.original_acceptance.resolve(),args.exclude_node)
         path.write_text(json.dumps(body,indent=2)+'\n')
         if args.prepare_only:
             print(path);continue
