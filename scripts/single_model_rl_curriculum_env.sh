@@ -8,3 +8,6 @@ unset RESUME_FROM_CHECKPOINT TRAIN_ADAPTER_PATH
 
 # One MuJoCo graphics process per GPU; it can host several independent envs.
 export OPENETA_WORKER_POOL_MAX_METAWORLD=8 OPENETA_WORKER_POOL_MAX_LIBERO=8 OPENETA_WORKER_POOL_MAX_ROBOCASA=8
+
+# Keep the same timeline across all resumes of this experiment.
+export OPENETA_TENSORBOARD_SERIES_ROOT="${OPENETA_TENSORBOARD_SERIES_ROOT:-/inspire/hdd/project/exploration-topic/ky26060/outputs/OpenETA/single_model_rl_curriculum_mixed_fast3_20261008}"

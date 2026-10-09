@@ -42,6 +42,9 @@ elif [[ -n "${TRAIN_ADAPTER_PATH:-}" ]]; then
   INIT_ARGS+=(--adapters "$TRAIN_ADAPTER_PATH")
 fi
 export NUM_GENERATIONS PER_DEVICE_TRAIN_BATCH_SIZE GENERATION_BATCH_SIZE
+if [[ -n "${OPENETA_TENSORBOARD_SERIES_ROOT:-}" ]]; then
+  "$SWIFT_VENV/bin/python" scripts/single_model_tensorboard_series.py --source-root "$OPENETA_TENSORBOARD_SERIES_ROOT" --start
+fi
 "$SWIFT_VENV/bin/python" scripts/record_single_model_rl_run.py --output "$OUTPUT_DIR/run_manifest.json" --dataset "$DATASET_PATH"
 "$SWIFT_VENV/bin/python" -c 'import tilelang'
 exec "$SWIFT_VENV/bin/swift" rlhf \

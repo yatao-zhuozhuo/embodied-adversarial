@@ -183,6 +183,13 @@ def main():
         'start_ticks':Path(f'/proc/{child.pid}/stat').read_text().rsplit(')',1)[1].split()[19],
         'log':str(root/'curriculum.log'),'plan':str(root/'curriculum_plan.json')}
     write(root/'curriculum.submission.json',receipt)
+    series_root=os.environ.get('OPENETA_TENSORBOARD_SERIES_ROOT')
+    if series_root:
+        checkpoint=plan.get('initial_checkpoint')
+        step=json.loads((Path(checkpoint)/'trainer_state.json').read_text())['global_step'] if checkpoint else 0
+        write(Path(series_root)/'current_run.json',{'run_root':str(root),
+            'resume_checkpoint':checkpoint,'resumed_global_step':step,
+            'tensorboard':'openeta-rl-curriculum-continuous-20261009'})
     print(json.dumps(receipt))
 
 if __name__=='__main__':main()
