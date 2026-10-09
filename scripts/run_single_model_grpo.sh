@@ -36,6 +36,9 @@ if (( GENERATION_BATCH_SIZE % NUM_GENERATIONS != 0 || NUM_GENERATIONS < 2 )); th
   echo 'generation batch must contain complete groups with G >= 2' >&2; exit 2
 fi
 INIT_ARGS=()
+if [[ -n "${MODEL_TYPE:-}" ]]; then
+  INIT_ARGS+=(--model_type "$MODEL_TYPE")
+fi
 if [[ -n "${RESUME_FROM_CHECKPOINT:-}" ]]; then
   INIT_ARGS+=(--resume_from_checkpoint "$RESUME_FROM_CHECKPOINT")
 elif [[ -n "${TRAIN_ADAPTER_PATH:-}" ]]; then

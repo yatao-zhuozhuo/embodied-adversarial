@@ -5,6 +5,7 @@ export OPENETA_TENSORBOARD_SERIES_ROOT="${OPENETA_TENSORBOARD_SERIES_ROOT:-$REPO
 source "$REPO_ROOT/scripts/single_model_rl_curriculum_env.sh"
 export OPENETA_RL_CONFIG="$REPO_ROOT/configs/single_model_rl_curriculum_mixed_yi.json"
 export MODEL_PATH="/mnt/shared-storage-user/self-evolve/model/Qwen3.5-4B-embodied-mixed"
+export MODEL_TYPE=qwen3_5
 export SWIFT_VENV="/mnt/shared-storage-user/self-evolve/.venv_selfplay_embodied.shared-symlink"
 export OPENETA_MCP_PYTHON="$REPO_ROOT/baseline/.runtime/coordinator/bin/python"
 export OPENETA_MANISKILL_PYTHON="$REPO_ROOT/sim/venvs/maniskill/bin/python"
