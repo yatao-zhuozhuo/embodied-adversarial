@@ -145,6 +145,9 @@ class RoboCasaDirectEnv(gym.Env):
         from robocasa.utils.dataset_registry import TASK_SET_REGISTRY
         from robocasa.utils.dataset_registry_utils import get_task_horizon
         from robocasa.utils.env_utils import create_env
+        from sim.envs.robocasa.rendering import install_egl_cleanup
+
+        install_egl_cleanup()
 
         registered_tasks = set(TASK_SET_REGISTRY["all_tasks"])
         if task_name not in registered_tasks:

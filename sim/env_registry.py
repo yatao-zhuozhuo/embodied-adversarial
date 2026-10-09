@@ -19,6 +19,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from typing import Any
+import os
 
 import gymnasium as gym
 import numpy as np
@@ -401,6 +402,14 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
                                # controller steps, so the inner wrapper must
                                # not terminate a multi-waypoint manipulation.
                                "max_episode_steps": 2000}
+    # Official RL demonstrations may have been recorded with PhysX CUDA.
+    # Keep the interactive default unchanged; a dedicated replay worker can
+    # opt into the matching backend before it starts.
+    requested_backend = os.environ.get("OPENETA_MANISKILL_SIM_BACKEND", "").strip()
+    if requested_backend:
+        if requested_backend not in {"physx_cpu", "physx_cuda"}:
+            raise ValueError("OPENETA_MANISKILL_SIM_BACKEND must be physx_cpu or physx_cuda")
+        kwargs["sim_backend"] = requested_backend
     if image_width is not None or image_height is not None:
         hr_cfg: dict[str, Any] = {}
         sensor_cfg: dict[str, Any] = {}
@@ -590,10 +599,14 @@ class _LibEnvWrapper(gym.Env):
         ret = self._env.step(action)
         if len(ret) == 4:
             obs, rew, done, info = ret
+            info = dict(info or {})
+            info["success"] = bool(self._env.check_success())
             self._last_frame = obs.get("agentview_image") if isinstance(obs, dict) else None
             return obs, rew, done, done, info
+        info = dict(ret[4] or {})
+        info["success"] = bool(self._env.check_success())
         self._last_frame = ret[0].get("agentview_image") if isinstance(ret[0], dict) else None
-        return ret
+        return ret[0], ret[1], ret[2], ret[3], info
 
     def render(self):
         return self._last_frame

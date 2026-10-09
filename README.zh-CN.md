@@ -19,6 +19,8 @@ OpenETA 将从数字智能体（Digital Agent）到物理智能体（Physical Ag
 [架构](docs/architecture.md) ·
 [动作流水线](docs/agent-action-pipeline.md) ·
 [并行评估](docs/parallel-simulator-evaluation.md) ·
+[具身 GRPO Smoke](docs/embodied-grpo-smoke.zh-CN.md) ·
+[具身 Alice/Bob Self-Play](docs/embodied-asymmetric-selfplay-implementation.zh-CN.md) ·
 [真机部署](real/README.md)
 
 ## 最新动态

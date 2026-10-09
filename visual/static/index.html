@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenETA · 轨迹浏览器</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><b>OpenETA · 轨迹浏览器</b><nav aria-label="数据来源"><button data-source="baseline" class="active">Baseline 跑分</button><button data-source="sft">SFT 构造</button><button data-source="expert">Artificial 专家轨迹</button><button data-source="training">训练 Rollout</button></nav><span id="context" class="muted"></span></header>
+<main><aside>
+<div class="toolbar"><button id="refresh">刷新轨迹</button><label><input id="auto" type="checkbox" style="width:auto"> 30 秒自动刷新</label></div>
+<a id="legacy" href="sft-history/" target="_blank" rel="noopener">打开旧版 ManiSkill SFT 构造轨迹 ↗</a>
+<p id="source-root" class="muted"></p>
+<input id="search" placeholder="搜索任务 / 模型 / 轨迹" aria-label="搜索轨迹">
+<select id="bench" aria-label="Benchmark"><option value="">全部 benchmark</option></select>
+<select id="group" aria-label="Run 或 Round"><option value="">全部 run / round</option></select>
+<select id="model" aria-label="模型或角色"><option value="">全部模型 / 角色</option></select>
+<select id="result" aria-label="成功状态"><option value="">全部状态</option><option value="true">成功</option><option value="false">失败</option><option value="unknown">未知</option></select>
+<select id="annotation" aria-label="补写状态" style="display:none"><option value="">全部 reasoning 状态</option><option value="some">已有模型补写</option><option value="none">尚无模型补写</option></select>
+<div id="summary"></div><div id="error" role="alert"></div><div id="count" class="muted"></div><div id="list"></div>
+</aside><section id="viewer">
+<h2 id="title">选择一条轨迹</h2><div id="meta" class="muted">逐步快照、模型原始输出、动作和奖励。</div>
+<div class="toolbar"><button id="prev">← 上一步</button><button id="play">播放</button><button id="next">下一步 →</button><select id="speed" aria-label="播放间隔"><option value="250">0.25 秒</option><option value="500" selected>0.5 秒</option><option value="1000">1 秒</option></select><select id="phase" aria-label="图像时刻"><option value="after">动作后</option><option value="before">动作前</option><option value="input">本轮模型实际输入</option></select><span id="position"></span></div>
+<input type="range" id="slider" aria-label="轨迹步骤" min="0" max="0" value="0"><canvas id="chart" class="chart" width="1000" height="85" aria-label="环境奖励曲线"></canvas><div id="status" role="status"></div>
+<div class="content"><div class="images" id="images"></div><div class="details" id="detail">选择左侧记录查看。</div></div>
+<details><summary>轨迹结果与原始元数据</summary><pre id="audit"></pre></details>
+</section></main><script src="app.js?v=20261008-compressed-reasoning"></script></body></html>

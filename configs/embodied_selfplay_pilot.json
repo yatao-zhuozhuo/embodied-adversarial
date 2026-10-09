@@ -1,0 +1,52 @@
+{
+  "version": "openeta.embodied-selfplay.v1",
+  "model": "/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B",
+  "output_dir": "runs/embodied_selfplay_pilot",
+  "devices": {
+    "alice": 0,
+    "bob": 1
+  },
+  "environment": {
+    "env_id": "PickCube-v1",
+    "camera_resolution": 128,
+    "translation_step_m": 0.05,
+    "fine_translation_step_m": 0.01,
+    "episode_horizon": 120,
+    "train_seed_start": 0,
+    "holdout_seeds": [10000, 10001, 10002, 10003]
+  },
+  "model_input": {
+    "min_image_pixels": 3136,
+    "max_image_pixels": 12544,
+    "max_new_tokens": 12
+  },
+  "grpo": {
+    "group_size": 4,
+    "update_epochs": 1,
+    "learning_rate": 5e-6,
+    "clip_epsilon": 0.2,
+    "beta": 0.01,
+    "max_grad_norm": 1.0,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "alice_temperature": 0.3,
+    "alice_top_p": 0.9,
+    "bob_temperature": 1.0,
+    "bob_top_p": 0.95,
+    "lora_rank": 8,
+    "lora_alpha": 16
+  },
+  "selfplay": {
+    "rounds": 3,
+    "proposal_groups_per_round": 2,
+    "bob_evaluations_per_task": 4,
+    "selected_tasks_per_round": 4,
+    "alice_max_steps": 60,
+    "bob_max_steps": 40,
+    "holdout_max_steps": 40,
+    "alice_oracle_mix_schedule": [1.0, 0.5, 0.0],
+    "target_bob_success_rate": 0.45,
+    "min_goal_displacement": 0.04,
+    "goal_tolerance": 0.025
+  }
+}

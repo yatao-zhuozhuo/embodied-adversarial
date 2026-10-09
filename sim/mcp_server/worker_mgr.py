@@ -777,16 +777,19 @@ def _proxy_step(meta: dict, action, num_steps: int = 1, render: bool = True,
     return _public_observation_result(meta, result)
 
 
-def _proxy_reset(meta: dict, seed: int | None = None) -> dict:
+def _proxy_reset(meta: dict, seed: int | None = None, reference_demo_index: int | None = None) -> dict:
     """Proxy a reset request to the worker and cache the observation."""
     mgr = _get_mgr()
     body = {"seed": seed} if seed is not None else {}
+    if reference_demo_index is not None:
+        body["reference_demo_index"] = reference_demo_index
     result = mgr.proxy_handle_op(meta, f"/env/{meta['remote_handle']}/reset", method="POST", body=body)
     _capture_internal_objects(meta, result)
     key = _obs_key(meta)
     with _session_last_obs_lock:
+        cache_result = {k: v for k, v in result.items() if not k.startswith("_reference_")}
         _session_last_obs.setdefault(meta.get("_sid", ""), {})[key] = _public_observation_result(
-            meta, result
+            meta, cache_result
         )
     # reset re-initialises physics → cached frame is stale.  If the reset
     # result already carries camera frames it's current for this generation;

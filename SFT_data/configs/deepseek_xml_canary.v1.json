@@ -1,0 +1,9 @@
+{
+  "schema_version": "openeta.two_tool_xml_canary_manifest.v1",
+  "tasks": [
+    {"bench": "metaworld", "task_id": "reach-v3", "env_id": "openeta/metaworld_50_reach-v3-v0", "task": "Reach a goal position", "expected_action_dim": 4},
+    {"bench": "libero", "task_id": "libero_spatial_task6", "env_id": "openeta/libero_libero_spatial_task6-v0", "task": "pick up the black bowl next to the cookie box and place it on the plate", "expected_action_dim": 7},
+    {"bench": "robocasa", "task_id": "CoffeeSetupMug", "env_id": "openeta/robocasa_pretrain_CoffeeSetupMug-v0", "task": "Pick the mug from the counter and place it under the coffee machine dispenser.", "expected_action_dim": 12},
+    {"bench": "maniskill", "task_id": "PullCube-v1", "env_id": "openeta/maniskill_PullCube-v1-v0", "task": "Pull the cube onto the target region", "expected_action_dim": 7}
+  ]
+}

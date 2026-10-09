@@ -75,3 +75,12 @@ sim/rlinf/
 third_party/codex-remote-feishu/
 CLAUDE.md
 third_party/
+
+# Generated model collection and expert replay artifacts
+SFT_data/qwen_live_v1/
+SFT_data/qwen_xml_v1/
+SFT_data/deepseek*/
+SFT_data/gemini_input_v1_*/
+SFT_data/gemini_flash_expanded_*/
+SFT_data/codingrouter_input_v1_*/
+SFT_data/expert_replay*/

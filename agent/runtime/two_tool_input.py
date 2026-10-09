@@ -20,8 +20,11 @@ CAMERAS = {
     "robocasa": (["agentview_left", "agentview_right"], ["wrist"]),
 }
 MANISKILL_WRIST = {"PullCube-v1": False, "PokeCube-v1": False, "LiftPegUpright-v1": False,
+                   "AssemblingKits-v1": True, "TurnFaucet-v1": True,
                    "FMBAssembly1Easy-v1": False, "PickSingleYCB-v1": True, "PickCube-v1": False}
 TASK_TEXT = {
+    "AssemblingKits-v1": "Insert the misplaced shape on the board completely into its matching empty slot.",
+    "TurnFaucet-v1": "Turn the faucet handle from its initial position to the fully open end of its range.",
     "FMBAssembly1Easy-v1": "Assemble the parts onto the red board using the reorientation fixture.",
     "PickSingleYCB-v1": "Pick up the object on the table and move it to the task's goal position, then keep the robot still.",
 }

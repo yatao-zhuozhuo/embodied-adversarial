@@ -277,7 +277,8 @@ def create_env(env_id: str, *, render_mode: str = "rgb_array", seed: int = 0,
 
 @_blocking_tool
 @_serialized_env_control
-def reset_env(handle: str, *, seed: int | None = None, session_id: str = "") -> dict:
+def reset_env(handle: str, *, seed: int | None = None, session_id: str = "",
+              reference_demo_index: int | None = None) -> dict:
     """Reset an environment and return the initial observation.
 
     Args:
@@ -408,7 +409,13 @@ def reset_env(handle: str, *, seed: int | None = None, session_id: str = "") -> 
     # gripper_close establishes the opposite latch.
     meta["_gripper_cmd"] = -1.0
     meta.pop("_attachment_proxy", None)
-    reset_obs = _proxy_reset(meta, seed=seed)
+    if reference_demo_index is not None and meta.get("backend") not in {"robocasa", "libero", "maniskill"}:
+        return {"error": "Reference demo reset is supported only for RoboCasa, LIBERO and ManiSkill"}
+    reset_obs = _proxy_reset(meta, seed=seed, reference_demo_index=reference_demo_index)
+    if reference_demo_index is not None:
+        # Preserve the exact demonstration start state; settling would advance
+        # physics and invalidate deterministic action replay.
+        return reset_obs
     # Let physics settle before returning — objects can spawn hovering /
     # jittering right after reset; a few hold steps bring them to rest.
     settled = _settle_env(meta, meta.get("backend", ""))
@@ -2692,6 +2699,25 @@ def observe_env(handle: str, *, session_id: str = "") -> dict:
     return _proxy_observe(meta)
 
 
+@_blocking_tool
+def expert_action_env(handle: str, task_slug: str, *, session_id: str = "") -> dict:
+    """Host-side reference-policy query, not an agent-visible collection tool.
+
+    The SFT collector must never place this tool in the model's tool schema or
+    training conversation. It returns an action proposal only; step_env still
+    performs the actual native-vector action and official success check.
+    """
+    sid = session_id or _current_session.get() or ""
+    _touch_session(sid)
+    meta = _session_envs.get(sid, {}).get(handle)
+    if not meta:
+        return {"error": f"Unknown: {handle}"}
+    if meta.get("backend") != "metaworld":
+        return {"error": "Official expert adapter unavailable for this bench"}
+    return _get_mgr().proxy_handle_op(
+        meta, f"/env/{meta['remote_handle']}/expert-action", method="POST",
+        body={"task_slug": task_slug},
+    )
 
 
 @_blocking_tool

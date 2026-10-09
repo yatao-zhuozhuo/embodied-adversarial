@@ -2,6 +2,9 @@
 'use strict';
 
 const $ = (sel) => document.querySelector(sel);
+// The viewer can be served at / or behind a Notebook proxy prefix.
+const APP_BASE_URL = new URL('.', document.baseURI);
+const appUrl = (path) => new URL(path.replace(/^\/+/, ''), APP_BASE_URL).toString();
 const state = {
   filters: { teacher: '', task: '', status: '', q: '', sort: 'recent', page: 1,
              seed: '', tool: '', min_turns: '', max_turns: '', reason: '' },
@@ -32,11 +35,11 @@ function el(tag, cls, text) {
   return e;
 }
 async function api(path) {
-  const r = await fetch(path);
+  const r = await fetch(appUrl(path));
   if (!r.ok) throw new Error(`${r.status} ${path}`);
   return r.json();
 }
-const mediaUrl = (id, w) => id ? `/api/media/${id}${w ? `?thumb=1&w=${w}` : ''}` : null;
+const mediaUrl = (id, w) => id ? appUrl(`api/media/${id}${w ? `?thumb=1&w=${w}` : ''}`) : null;
 const fmtS = (s) => s == null ? '—' : s >= 60 ? `${(s / 60).toFixed(1)} min` : `${Number(s).toFixed(1)} s`;
 const fmtTime = (s) => s ? new Date(s * 1000).toLocaleString() : '—';
 
@@ -76,12 +79,22 @@ async function loadSummary() {
   state.summary = await api('/api/summary');
   const tp = $('#teacher-progress');
   tp.textContent = '';
+  const teacherSel = $('#f-teacher');
+  const selectedTeacher = state.filters.teacher || teacherSel.value;
+  teacherSel.textContent = '';
+  const allTeachers = el('option', null, '全部教师');
+  allTeachers.value = '';
+  teacherSel.append(allTeachers);
   for (const [name, t] of Object.entries(state.summary.teachers)) {
+    const option = el('option', null, name.toUpperCase());
+    option.value = name;
+    teacherSel.append(option);
     const b = el('span', 'badge');
     b.append(el('span', null, `${name.toUpperCase()} `), el('b', null, `${t.accepted || 0}`),
              el('span', null, `/${t.quota_total || '?'} 验收 · ${t.rejected || 0} 拒绝 · ${t.other || 0} 未验收`));
     tp.append(b);
   }
+  teacherSel.value = selectedTeacher;
   const taskSel = $('#f-task');
   const cur = taskSel.value;
   taskSel.textContent = '';
@@ -672,7 +685,7 @@ function syncFilterInputs() {
 $('#btn-reindex').onclick = async () => {
   const btn = $('#btn-reindex');
   btn.disabled = true; btn.textContent = '索引中…';
-  await fetch('/api/reindex', { method: 'POST' });
+  await fetch(appUrl('api/reindex'), { method: 'POST' });
   const poll = setInterval(async () => {
     const s = await api('/api/reindex/status');
     if (!s.running) {

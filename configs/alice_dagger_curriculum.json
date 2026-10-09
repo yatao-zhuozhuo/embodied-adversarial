@@ -1,0 +1,41 @@
+{
+  "version": "openeta.alice-dagger.v1",
+  "model": "/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B",
+  "output_dir": "runs/alice_dagger_curriculum",
+  "device": 0,
+  "environment": {
+    "env_id": "PickCube-v1",
+    "camera_resolution": 64,
+    "translation_step_m": 0.05,
+    "fine_translation_step_m": 0.01,
+    "episode_horizon": 120,
+    "max_steps": 70,
+    "train_seed_start": 4,
+    "train_seeds_per_round": 4,
+    "eval_seeds": [100, 101, 102, 103]
+  },
+  "model_input": {
+    "min_image_pixels": 3136,
+    "max_image_pixels": 12544,
+    "max_new_tokens": 12
+  },
+  "optimization": {
+    "rounds": 12,
+    "learning_rate": 5e-6,
+    "max_grad_norm": 1.0,
+    "gradient_accumulation": 8,
+    "phase_balance_max_multiplier": 8,
+    "rare_action_weight_cap": 12.0,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "oracle_mix_start": 0.9,
+    "oracle_mix_min": 0.5,
+    "mix_decrement": 0.1,
+    "promotion_valid_rate": 0.25,
+    "promotion_grasp_rate": 0.25,
+    "min_goal_displacement": 0.04,
+    "goal_tolerance": 0.025
+  }
+}

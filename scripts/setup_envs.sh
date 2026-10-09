@@ -113,7 +113,7 @@ gym.make('\$task', obs_mode='state', render_mode='rgb_array', num_envs=1).reset(
 
         uv venv -q --python "$PYTHON_VERSION" "$VENV" 2>&1 || true
         source "$VENV/bin/activate"
-        uv pip install -q gymnasium numpy torch cloudpickle 2>&1 | tail -1
+        uv pip install -q gymnasium numpy torch cloudpickle huggingface_hub h5py 'uvicorn>=0.23' 2>&1 | tail -1
 
         if [ ! -d "$LIBERO_DIR" ]; then
             echo "   Cloning LIBERO..."
@@ -161,7 +161,7 @@ SH
         # Download datasets
         mkdir -p "$LIBERO_ASSETS"
         echo "   Downloading LIBERO datasets..."
-        for ds in libero_spatial libero_object libero_goal libero_10; do
+        for ds in libero_spatial libero_object libero_goal libero_100; do
             echo -n "     $ds ... "
             echo "N" | timeout 120 python -c "
 import os, sys; sys.path.insert(0, '$LIBERO_DIR')

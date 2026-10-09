@@ -28,6 +28,12 @@ openeta-replay = "logger.replay:main"
 dev = [
   "pytest>=8",
 ]
+grpo = [
+  "accelerate>=1.15,<2",
+  "mani-skill>=3.0.1,<4",
+  "peft>=0.21,<1",
+  "transformers>=5.12,<6",
+]
 # Real-robot deployment hardware SDKs. Imported lazily by real/ drivers so the
 # base agent runtime and unit tests do not require these to be installed.
 real = [

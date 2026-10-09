@@ -4,6 +4,7 @@
   --bad: #e05d5d; --warn: #d9a13b; --other: #9b7ed9;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; margin: 0; }
 body {
   background: var(--bg); color: var(--fg);

@@ -1,0 +1,14 @@
+{
+  "profile": "two_tool_xml_sft.v1",
+  "protocol": "openeta.two_tool_xml.v1",
+  "swift_version": "4.4.2",
+  "validation_model": "/inspire/hdd/global_public/public_models/Qwen/Qwen3.5-4B",
+  "template": "qwen3_5",
+  "agent_template": null,
+  "loss_scale": "last_round+ignore_empty_think",
+  "enable_thinking": true,
+  "thinking_supervision": "answer_only",
+  "supervision": "current_decision_only",
+  "truncation_strategy": "raise",
+  "note": "Teacher thinking is retained in source episodes, not fabricated or used as an SFT target. Validate another student model's template before training."
+}

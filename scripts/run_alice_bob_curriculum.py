@@ -1,10 +1,9 @@
-"""Run one real Alice -> Bob embodied curriculum round.
+"""运行一轮真实的 Alice -> Bob 具身课程实验。
 
-The model is loaded once. Alice executes a multi-step trajectory and creates a
-candidate PickCube task. The host captures the initial ManiSkill state, restores
-it, and runs Bob on the same task. Trusted ``is_obj_placed`` receipts determine
-both proposal validity and Bob's score. A JSON feedback record is written in
-the adversarial-mle-agents curriculum format.
+模型只加载一次。Alice 先执行多步轨迹，尝试构造一个 PickCube 任务；然后 host
+保存/恢复 ManiSkill 的初始状态，让 Bob 从同一个状态开始执行。环境返回的
+``is_obj_placed`` 真值用于判断 Alice 的提案和 Bob 是否成功。最后将结果写成
+adversarial-mle-agents 课程模块可以读取的 JSON 文件。
 """
 from __future__ import annotations
 
@@ -21,11 +20,15 @@ from agent.runtime.embodied_goal import InfoGoalChecker
 from qwen_embodied_rollout import _decide, _load_model
 
 
+# 当前这个 runner 使用 ManiSkill 的官方成功字段作为目标判定。
+# 更完整的 cube_at_position 目标编译逻辑位于 agent/runtime/embodied_task_compiler.py。
 GOAL_PREDICATE = {"type": "is_obj_placed", "source": "maniskill_info"}
+# 目标检查器只读取环境返回的可信状态，不相信模型自己声称“成功”。
 GOAL_CHECKER = InfoGoalChecker()
 
 
 def _flag(info: dict[str, Any], key: str) -> bool:
+    """从环境 info 中读取布尔字段，并兼容 ManiSkill 的单元素列表格式。"""
     value = info.get(key, False)
     if isinstance(value, list):
         return bool(value[0]) if value else False
@@ -33,6 +36,8 @@ def _flag(info: dict[str, Any], key: str) -> bool:
 
 
 def _step_record(step: int, action: str, reason: str, raw: str, result: Any) -> dict[str, Any]:
+    """把一次环境交互整理成可写入 JSON 的轨迹记录。"""
+    # result.info 来自模拟器；GOAL_CHECKER 在这里计算本步的目标分数。
     evaluation = GOAL_CHECKER.evaluate(state=result.info, predicate=GOAL_PREDICATE)
     return {
         "step": step,
@@ -59,7 +64,9 @@ def run_round(
     max_steps: int,
     seed: int,
 ) -> dict[str, Any]:
+    """运行一轮 Alice -> Bob，并生成任务、分数和课程反馈 artifact。"""
     output_dir.mkdir(parents=True, exist_ok=True)
+    # Alice 和 Bob 共用同一个已加载模型；role 通过 prompt/rollout 上下文区分。
     processor, model = _load_model(model_path)
     env = ManiSkillSimulatorAdapter(
         env_id=env_id,
@@ -67,18 +74,24 @@ def run_round(
         snapshot_dir=output_dir / "snapshots",
     )
     try:
+        # 先创建并重置 ManiSkill 环境，然后保存 Alice 开始前的完整状态。
+        # snapshot 不只是随机种子，还包含模拟器状态、步数和夹爪 latch。
         initial_observation = env.reset(seed=seed)
         snapshot = env.capture_snapshot()
         snapshot_path = output_dir / "initial_snapshot.json"
         snapshot_path.write_text(json.dumps(snapshot.to_dict(), indent=2), encoding="utf-8")
 
+        # ------------------------- Alice 阶段 -------------------------
+        # Alice 看到初始 observation 和 instruction，通过真实动作改变环境。
         alice_steps: list[dict[str, Any]] = []
         observation = initial_observation
         alice_started = time.time()
         for step in range(max_steps):
             action, reason, raw = _decide(processor, model, observation, instruction)
+            # 将模型输出的离散动作交给适配器，再由适配器转换为 ManiSkill 原生动作。
             result = env.step(EnvAction(action_type=action, code=action))
             alice_steps.append(_step_record(step, action, reason, raw, result))
+            # 环境结束，或方块已经被放到目标处，就停止 Alice rollout。
             if result.terminated or result.truncated or alice_steps[-1]["is_obj_placed"]:
                 break
             observation = result.observation
@@ -97,6 +110,9 @@ def run_round(
             json.dumps(alice_trajectory, ensure_ascii=False, indent=2), encoding="utf-8"
         )
 
+        # ------------------------- Bob 阶段 -------------------------
+        # 恢复 Alice 之前保存的状态，确保 Bob 和 Alice 的物理初态一致。
+        # 这里的 replay_equal 是一个简单检查：恢复后的关节位置是否与初始位置相同。
         env.restore_snapshot(snapshot)
         replay_observation = env.observe()
         replay_equal = (
@@ -110,6 +126,7 @@ def run_round(
             action, reason, raw = _decide(processor, model, observation, instruction)
             result = env.step(EnvAction(action_type=action, code=action))
             bob_steps.append(_step_record(step, action, reason, raw, result))
+            # Bob 的成功同样由环境真值判断，而不是由模型生成的文本决定。
             if result.terminated or result.truncated or bob_steps[-1]["is_obj_placed"]:
                 break
             observation = result.observation
@@ -128,6 +145,8 @@ def run_round(
             json.dumps(bob_trajectory, ensure_ascii=False, indent=2), encoding="utf-8"
         )
 
+        # ------------------------- 任务 artifact -------------------------
+        # task.json 描述本轮任务以及 Alice 轨迹的引用，供其它模块消费。
         task = {
             "task_id": f"maniskill-{env_id.lower()}-seed{seed}",
             "env_id": f"openeta/maniskill_{env_id}-v0",
@@ -143,6 +162,8 @@ def run_round(
         (output_dir / "task.json").write_text(
             json.dumps(task, ensure_ascii=False, indent=2), encoding="utf-8"
         )
+        # 当前脚本只运行 1 次 Bob，因此 success_rate 实际上是 0.0 或 1.0。
+        # 完整实验通常会对同一 snapshot 采样 K 次，再计算聚合成功率。
         score = {
             "task_id": task["task_id"],
             "success_rate": float(bob_success),
@@ -155,9 +176,8 @@ def run_round(
             json.dumps(score, ensure_ascii=False, indent=2), encoding="utf-8"
         )
 
-        # Use the adversarial curriculum implementation when this workspace is
-        # available; keep a JSON fallback so the OpenETA runner remains usable
-        # when checked out independently.
+        # 如果同一工作区中存在 adversarial-mle-agents，就调用它计算 Alice 的课程奖励。
+        # 如果该仓库未检出，则写入一个简单 fallback，保证 OpenETA runner 仍可运行。
         feedback: dict[str, Any]
         adversarial_src = Path(__file__).resolve().parents[2] / "adversarial-mle-agents" / "src"
         if adversarial_src.is_dir():
@@ -198,8 +218,8 @@ def run_round(
         (output_dir / "curriculum_feedback.json").write_text(
             json.dumps(feedback, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        # Materialize the public curriculum handoff in the adversarial repo so
-        # its next round can consume the score without importing OpenETA.
+        # 将公开的课程交接文件复制到 adversarial-mle-agents，
+        # 这样它的下一轮可以通过 JSON 读取结果，而不需要导入 OpenETA。
         if adversarial_src.is_dir():
             curriculum_dir = (
                 adversarial_src.parent

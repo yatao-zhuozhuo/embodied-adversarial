@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenETA 两工具轨迹</title>
+<style>
+:root{color-scheme:dark;--bg:#14171c;--panel:#1c2129;--panel2:#232936;--border:#2e3542;--fg:#d7dde6;--dim:#8a94a5;--accent:#4f9cf9}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font:13px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg);display:flex;flex-direction:column;overflow:hidden}
+header{padding:12px 18px;background:var(--panel);border-bottom:1px solid var(--border);flex:none}main{display:grid;grid-template-columns:300px minmax(0,1fr);flex:1;min-height:0}
+aside{overflow:auto;border-right:1px solid var(--border);background:var(--panel);padding:12px}section{min-width:0;min-height:0}#viewer{display:flex;flex-direction:column;padding:16px;overflow:hidden}h2{margin:0 0 6px;font-size:17px}
+button,select,input{font:inherit;background:var(--panel2);color:var(--fg);border:1px solid var(--border);border-radius:4px;padding:5px 8px}button{cursor:pointer}button:hover{border-color:var(--accent)}button:focus-visible,select:focus-visible{outline:2px solid var(--accent)}
+.item{display:block;width:100%;text-align:left;padding:9px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:transparent;overflow-wrap:anywhere}.item:hover,.item.active{background:#26314a}.item.active{box-shadow:inset 3px 0 var(--accent)}.muted{color:var(--dim);font-size:12px}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0;flex:none}#position{font-variant-numeric:tabular-nums;min-width:90px}#status{min-height:20px;color:var(--dim);flex:none}#slider{width:100%;margin:0 0 10px;accent-color:var(--accent)}
+.content{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:12px;min-height:0;flex:1}.images{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:12px;align-content:start;overflow:auto;min-width:0;scrollbar-gutter:stable}
+.images figure{margin:0;background:#000;border:1px solid var(--border);border-radius:5px;overflow:hidden}.images canvas{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#000}.images figcaption{padding:5px 8px;background:var(--panel);color:var(--dim)}
+.details{background:var(--panel);border:1px solid var(--border);border-radius:5px;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;min-height:0;scrollbar-gutter:stable}
+@media(max-width:1000px){.content{grid-template-columns:1fr;grid-template-rows:minmax(180px,1fr) minmax(140px,.65fr)}main{grid-template-columns:240px minmax(0,1fr)}}
+@media(max-width:650px){main{grid-template-columns:1fr;grid-template-rows:180px minmax(0,1fr)}aside{border-right:0;border-bottom:1px solid var(--border)}#viewer{padding:10px}}
+</style>
+</head>
+<body>
+<header>OpenETA · 两工具成功轨迹查看器</header>
+<main>
+<aside><div class="toolbar"><select id="bench" aria-label="Benchmark"><option value="">全部 benchmark</option><option>metaworld</option><option>robocasa</option><option>libero</option><option>maniskill3</option></select><button id="refresh">刷新</button></div><div id="count" class="muted">加载中…</div><div id="list"></div></aside>
+<section id="viewer">
+<h2 id="title">选择一条成功轨迹</h2><div id="meta" class="muted"></div>
+<div class="toolbar"><button id="prev">← 上一步</button><button id="play">播放</button><button id="next">下一步 →</button><label>间隔 <select id="speed"><option value="250">0.25 秒</option><option value="500" selected>0.5 秒</option><option value="1000">1 秒</option></select></label><span id="position"></span></div>
+<input type="range" id="slider" aria-label="轨迹步骤" min="0" max="0" value="0"><div id="status" role="status"></div>
+<div class="content"><div class="images" id="images"></div><div class="details" id="detail">仅显示模型自主执行的成功轨迹。图像是逐步快照；解释文字来自当轮原始回复。</div></div>
+</section>
+</main>
+<script>
+const element = id => document.getElementById(id);
+const base = location.pathname.replace(/\/$/, '');
+const api = path => base + path;
+let rows = [], episode = null, selected = null, turn = 0, requestedTurn = 0;
+let playing = false, timer = null, playbackVersion = 0, renderVersion = 0, selectionVersion = 0, listVersion = 0;
+const cameras = new Map(), frameCache = new Map();
+const identity = row => [row.bench, row.task_id, row.attempt].join('/');
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+
+async function fetchJson(path) {
+  const response = await fetch(api(path));
+  if (!response.ok) throw new Error(`请求失败：${response.status}`);
+  return response.json();
+}
+
+function drawList() {
+  element('list').innerHTML = rows.map((row, index) => `<button class="item ${selected && identity(selected) === identity(row) ? 'active' : ''}" data-index="${index}"><b>${escapeHtml(row.bench)} / ${escapeHtml(row.task_id)}</b><br><span class="muted">${escapeHtml(row.attempt)} · ${row.turns} turns · ${escapeHtml(row.action_source)}</span></button>`).join('');
+  element('list').querySelectorAll('button').forEach(button => {
+    button.onclick = () => openEpisode(rows[Number(button.dataset.index)]);
+  });
+}
+
+async function refresh() {
+  const version = ++listVersion;
+  try {
+    const filter = element('bench').value;
+    const listing = await fetchJson('/api/episodes' + (filter ? '?bench=' + encodeURIComponent(filter) : ''));
+    if (version !== listVersion) return;
+    rows = listing.items;
+    element('count').textContent = `${listing.total} 条成功轨迹（刷新更新）`;
+    drawList();
+  } catch (error) {
+    if (version === listVersion) element('status').textContent = error.message;
+  }
+}
+
+function framesAt(record, index) {
+  return index ? record.turns[index - 1].frames ?? [] : record.initial_frames ?? [];
+}
+
+function frameUrl(row, path) {
+  return api('/api/frame/' + identity(row).split('/').map(encodeURIComponent).join('/') + '/' + encodeURIComponent(path.split('/').pop()));
+}
+
+function loadFrame(url) {
+  if (frameCache.has(url)) return frameCache.get(url);
+  const image = new Image();
+  image.src = url;
+  const pending = image.decode().then(() => image).catch(error => {
+    if (frameCache.get(url) === pending) frameCache.delete(url);
+    throw error;
+  });
+  frameCache.set(url, pending);
+  while (frameCache.size > 24) frameCache.delete(frameCache.keys().next().value);
+  return pending;
+}
+
+function cameraName(path) {
+  return path.split('/').pop().replace(/^\d+-/, '');
+}
+
+function setupCameras(record) {
+  const names = new Set(record.initial_frames?.map(cameraName));
+  record.turns.forEach(step => (step.frames ?? []).forEach(path => names.add(cameraName(path))));
+  cameras.clear();
+  element('images').replaceChildren();
+  for (const name of names) {
+    const figure = document.createElement('figure');
+    const canvas = document.createElement('canvas');
+    canvas.width = 512;
+    canvas.height = 512;
+    canvas.setAttribute('aria-label', name);
+    const caption = document.createElement('figcaption');
+    caption.textContent = name;
+    figure.append(canvas, caption);
+    element('images').append(figure);
+    cameras.set(name, {canvas, caption});
+  }
+}
+
+async function openEpisode(row) {
+  stop();
+  const version = ++selectionVersion;
+  ++renderVersion;
+  element('status').textContent = '加载轨迹…';
+  try {
+    const record = await fetchJson('/api/episode/' + identity(row).split('/').map(encodeURIComponent).join('/'));
+    if (version !== selectionVersion) return;
+    selected = {...row};
+    episode = record;
+    turn = requestedTurn = 0;
+    frameCache.clear();
+    setupCameras(record);
+    element('title').textContent = `${record.bench} / ${row.task_id} / ${row.attempt}`;
+    element('meta').textContent = `任务：${record.task} ｜ 成功：${record.success} ｜ 动作来源：${record.action_source}`;
+    element('slider').max = record.turns.length;
+    drawList();
+    await render(0);
+  } catch (error) {
+    if (version === selectionVersion) element('status').textContent = error.message;
+  }
+}
+
+async function render(index) {
+  if (!episode) return false;
+  const record = episode, row = selected, version = ++renderVersion;
+  const target = Math.max(0, Math.min(index, record.turns.length));
+  requestedTurn = target;
+  const frames = framesAt(record, target);
+  element('status').textContent = '加载帧…';
+  try {
+    const decoded = await Promise.all(frames.map(async path => ({path, image: await loadFrame(frameUrl(row, path))})));
+    if (version !== renderVersion || record !== episode) return false;
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    if (version !== renderVersion || record !== episode) return false;
+    const available = new Map(decoded.map(frame => [cameraName(frame.path), frame]));
+    for (const [name, camera] of cameras) {
+      const context = camera.canvas.getContext('2d');
+      const frame = available.get(name);
+      context.fillStyle = '#000';
+      context.fillRect(0, 0, 512, 512);
+      if (frame) {
+        const scale = Math.min(512 / frame.image.naturalWidth, 512 / frame.image.naturalHeight);
+        const width = frame.image.naturalWidth * scale, height = frame.image.naturalHeight * scale;
+        context.drawImage(frame.image, (512 - width) / 2, (512 - height) / 2, width, height);
+      }
+      camera.caption.textContent = frame ? frame.path.split('/').pop() : `${name} · 本步无帧`;
+    }
+    turn = target;
+    element('slider').value = target;
+    element('position').textContent = `${target} / ${record.turns.length}`;
+    const step = target ? record.turns[target - 1] : null;
+    const info = step ? {protocol:record.model_protocol,output_source:record.output_source,decision:step.decision,validation:step.validation,tool:step.tool,arguments:step.arguments,executed_control_steps:step.executed_control_steps,reward:step.reward,official_success:step.official_success,robot:step.robot,official_info:step.official_info} : {protocol:record.model_protocol,initial_robot:record.initial_robot};
+    const reply = step?.model_message;
+    const explanation = [reply?.reasoning_content, reply?.content].filter(Boolean).join('\n\n') || '本轮未返回解释文本';
+    element('detail').textContent = `${target ? `第 ${target} 步` : '初始状态'}\n\n${record.model || '模型'} 当轮原始输出：${explanation}\n\n${JSON.stringify(info, null, 2)}`;
+    element('status').textContent = frames.length ? '逐步快照 · 空格播放/暂停 · ← → 切换步骤' : '本步无相机帧';
+    for (let next = target + 1; next <= Math.min(target + 2, record.turns.length); next++) {
+      framesAt(record, next).forEach(path => loadFrame(frameUrl(row, path)).catch(() => {}));
+    }
+    return true;
+  } catch (error) {
+    if (version === renderVersion) {
+      stop();
+      requestedTurn = turn;
+      element('slider').value = turn;
+      element('status').textContent = `图片加载失败，保留上一帧。${error.message}`;
+    }
+    return false;
+  }
+}
+
+function stop() {
+  playing = false;
+  ++playbackVersion;
+  ++renderVersion;
+  requestedTurn = turn;
+  clearTimeout(timer);
+  timer = null;
+  element('play').textContent = '播放';
+  if (element('status').textContent === '加载帧…') element('status').textContent = '已暂停';
+}
+
+async function playStep(version) {
+  if (!playing || version !== playbackVersion) return;
+  const target = turn >= episode.turns.length ? 0 : turn + 1;
+  const started = performance.now();
+  const rendered = await render(target);
+  if (!playing || version !== playbackVersion) return;
+  if (!rendered || turn >= episode.turns.length) { stop(); return; }
+  timer = setTimeout(() => playStep(version), Math.max(0, Number(element('speed').value) - (performance.now() - started)));
+}
+
+function seek(index) {
+  stop();
+  render(index);
+}
+
+element('refresh').onclick = refresh;
+element('bench').onchange = refresh;
+element('prev').onclick = () => seek(requestedTurn - 1);
+element('next').onclick = () => seek(requestedTurn + 1);
+element('slider').oninput = event => seek(Number(event.target.value));
+element('play').onclick = () => {
+  if (playing) { stop(); return; }
+  if (!episode) return;
+  playing = true;
+  element('play').textContent = '暂停';
+  playStep(++playbackVersion);
+};
+document.onkeydown = event => {
+  if (['INPUT','SELECT','TEXTAREA','BUTTON'].includes(event.target.tagName)) return;
+  if (event.key === 'ArrowRight') { event.preventDefault(); seek(requestedTurn + 1); }
+  if (event.key === 'ArrowLeft') { event.preventDefault(); seek(requestedTurn - 1); }
+  if (event.key === ' ') { event.preventDefault(); element('play').click(); }
+};
+refresh();
+</script>
+</body>
+</html>

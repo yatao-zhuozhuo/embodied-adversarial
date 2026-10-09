@@ -1,0 +1,755 @@
+{
+  "episodes": [
+    {
+      "episode_id": "baseline-libero-00",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "4cd16e3d9ca23fe12fa1aee5fd458a1d07f555c47e053d2533ea03c94f1f6613"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-01",
+      "env_id": "openeta/libero_libero_spatial_task9-v0",
+      "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 9,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "fac50b74370e5959e220ce18641372570da2bd5c057e17808aa40b7da707d397"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-02",
+      "env_id": "openeta/libero_libero_spatial_task5-v0",
+      "task": "pick up the black bowl on the ramekin and place it on the plate",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_spatial",
+        "task_index": 5,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "2c401fbbc73053c386603b677d6e6c2ba317b67c50b20456ed7c964e5f06f821"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-03",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "task": "pick up the butter and place it in the basket",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 6,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a4e89b1b97f1565224c88bb8276661b5ab99be1f5ec3341acafe274138d837b0"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-04",
+      "env_id": "openeta/libero_libero_object_task8-v0",
+      "task": "pick up the chocolate pudding and place it in the basket",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 8,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a2e2e2b1be8da8299ead58721ed4e6305455b46f4d6949b01f827b262379ca70"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-05",
+      "env_id": "openeta/libero_libero_object_task0-v0",
+      "task": "pick up the alphabet soup and place it in the basket",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_object",
+        "task_index": 0,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "a24c42337f008e00533b8cb47f3ae54756e18829569e453f207551be20495d84"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-06",
+      "env_id": "openeta/libero_libero_goal_task1-v0",
+      "task": "put the bowl on the stove",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 1,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "94c56617000a584d9f4cbea782745a8d4b2dbbd7caae935260fef3352d54a951"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-07",
+      "env_id": "openeta/libero_libero_goal_task4-v0",
+      "task": "put the bowl on top of the cabinet",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_goal",
+        "task_index": 4,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "029daeafc8fe1bb6b514b43f56b8e93f7154fd524ade1ebdab0288327c37cbbe"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-08",
+      "env_id": "openeta/libero_libero_10_task2-v0",
+      "task": "turn on the stove and put the moka pot on it",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 2,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "b36db3775ef71c338272de14810a9aa0463d5cc082bc0f78f38daa9095bf7c99"
+      }
+    },
+    {
+      "episode_id": "baseline-libero-09",
+      "env_id": "openeta/libero_libero_10_task3-v0",
+      "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "benchmark": "libero",
+        "suite": "libero_10",
+        "task_index": 3,
+        "pass_at_k": 1,
+        "native_success_checker": "libero.check_success",
+        "legacy_rgb512_initial_frame_sha256": "56fd18658c1eead41998c1677adf961efc42716460dd4d2f57b6e45893fedba8"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-00",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "task": "Open a drawer",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "drawer-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "e61084aac7e1fa106661d76db083c6e2a0992a1911a5900566ccf0ec4c4842e9"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-01",
+      "env_id": "openeta/metaworld_50_coffee-button-v3-v0",
+      "task": "Push a button on the coffee machine",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "coffee-button-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "ed5bb0acd01607057dc5b4c8a021c35b7ef322a47c19e8f8e7e1ab21cacd9890"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-02",
+      "env_id": "openeta/metaworld_50_door-open-v3-v0",
+      "task": "Open a door with a revolving joint",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "door-open-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "4dc40ddb2190ce1ce6fa7807395ea5d3100a9855116bb3c6f6e9b548acb9a2c3"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-03",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "task": "Grasp a stick and push a box using the stick",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "stick-push-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "63f767aacdd5a74f7cdb2d99d463dafdbfdfcf2869a85fb2bd9f5ddeb63eccd1"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-04",
+      "env_id": "openeta/metaworld_50_pick-out-of-hole-v3-v0",
+      "task": "Pick up a puck from a hole",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "pick-out-of-hole-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "1c4cf67e3833734d38fb5e46395f0f9af3239a5e10497bcdc61d48437be65601"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-05",
+      "env_id": "openeta/metaworld_50_window-close-v3-v0",
+      "task": "Push and close a window",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "window-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0eadfde6792afa5abb86ef709f5c5d8db956985ba106a961e79564f291d1268a"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-06",
+      "env_id": "openeta/metaworld_50_reach-wall-v3-v0",
+      "task": "Bypass a wall and reach a goal",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "reach-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "6380ac655594dfc51f176c7f8a52b3d6ec4bd390dfc07c913382aa9f1ff4138d"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-07",
+      "env_id": "openeta/metaworld_50_faucet-close-v3-v0",
+      "task": "Rotate the faucet clockwise",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "faucet-close-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "76857ebfa90b9d3703e01ff1117ef8322637ef1a32b2a90d6b3596f7e46b9f80"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-08",
+      "env_id": "openeta/metaworld_50_pick-place-wall-v3-v0",
+      "task": "Pick a puck, bypass a wall and place the puck",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "pick-place-wall-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "f065adf462d84269c6912dc280d78b3cc1b22b0eb45e7bdb799ab8d33dfa4600"
+      }
+    },
+    {
+      "episode_id": "baseline-metaworld-09",
+      "env_id": "openeta/metaworld_50_coffee-pull-v3-v0",
+      "task": "Pull a mug from a coffee machine",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "coffee-pull-v3",
+        "suite": "metaworld_50",
+        "benchmark": "metaworld",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "407905f1778bd1b10333d62183de7e78003d97c45835f89e3c8c0d06bcc1e4f6"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-00",
+      "env_id": "openeta/maniskill_RollBall-v1-v0",
+      "task": "Roll the ball into the goal region.",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "RollBall-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0d1718c8f3df95431dc0d88c1e4aa3b57d36a586ae0d4202c0fdf27ff759fc7e"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-01",
+      "env_id": "openeta/maniskill_PlaceSphere-v1-v0",
+      "task": "Place the sphere into the shallow bin and release it; keep the robot still at the end.",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PlaceSphere-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "12c83e0282483fd2ce3aefdf504279bfae6418a421b4f2a6eb07df43d5d6a78b"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-02",
+      "env_id": "openeta/maniskill_StackCube-v1-v0",
+      "task": "Stack the red cube on the green cube and release it.",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StackCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "742c3c93ffe7511b12b76332890b089ad041bf8eed81da6203c584a37bae5952"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-03",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "task": "Insert the charger into the receptacle.",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PlugCharger-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "900d968e42f1bd42e68e83ad60a218f4982a3ac51ebaf8b6f105298b574c0667"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-04",
+      "env_id": "openeta/maniskill_StackPyramid-v1-v0",
+      "task": "Stack the cubes into a pyramid: two cubes below and one cube on top.",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StackPyramid-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "b2881679e1615f8db71f1ddcb1d948718dd3d687fa606121b6c0676ddd39b6f6"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-05",
+      "env_id": "openeta/maniskill_PullCubeTool-v1-v0",
+      "task": "Use the L-shaped tool to pull the cube into the goal region.",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PullCubeTool-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "241fa3673f86225cb82de9b06e8ac9dcc95a1f188b0b999f069b37a22a7e4bea"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-06",
+      "env_id": "openeta/maniskill_PushCube-v1-v0",
+      "task": "Push the cube onto the goal region.",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PushCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "f6d7bcf376b6ff65aa8bfd0e3c1dd2dff21668ed9eb71d04d8e325e5144467dd"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-07",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "task": "Push the T-shaped block to align with the target T-shaped region.",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PushT-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_stick",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "03bab87b6ac033998023d22367d24f564cd3d26bebf1e4391162ca7933d473df"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-08",
+      "env_id": "openeta/maniskill_PickCube-v1-v0",
+      "task": "Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PickCube-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "bcd2de43dac4ccd5aae4843281a413a717e7dd24c222fff6408eced8f918c82a"
+      }
+    },
+    {
+      "episode_id": "baseline-maniskill3-09",
+      "env_id": "openeta/maniskill_PegInsertionSide-v1-v0",
+      "task": "Insert the peg into the side hole of the box.",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PegInsertionSide-v1",
+        "benchmark_version": "ManiSkill3 3.0.1",
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "benchmark": "maniskill3",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "6a6695ae31f8bea8224ad16b123cffffe7c4fd75d6f57857b4df331f60ea476c"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-00",
+      "env_id": "openeta/robocasa_target_TurnOffStove-v0",
+      "task": "Turn off the rear left burner of the stove.",
+      "seed": 20261002,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "TurnOffStove",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "868e51e9da9fc07bb66f499888ce58a5f03759e95a91ff18518700cba3011262"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-01",
+      "env_id": "openeta/robocasa_target_PickPlaceCounterToCabinet-v0",
+      "task": "Pick the jug from the counter and place it in the cabinet.",
+      "seed": 20261003,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "PickPlaceCounterToCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "7a109935e62d309fc1130dd0512c7cac9dfb6a9ffcff3c7cd8cd1df1ead77c0a"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-02",
+      "env_id": "openeta/robocasa_target_OpenDrawer-v0",
+      "task": "Open the left drawer.",
+      "seed": 20261004,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "OpenDrawer",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 750,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "aa5375a72a0fc51829a68b051a0a0637b2d21891880121da4e0ae1072d9a4135"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-03",
+      "env_id": "openeta/robocasa_target_OpenCabinet-v0",
+      "task": "Open the cabinet doors.",
+      "seed": 20261005,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "OpenCabinet",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 1050,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "0d83c5fd70b905a97055b070ee74648733d5ebda9aa3c3959bbaa128bf2414d3"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-04",
+      "env_id": "openeta/robocasa_target_NavigateKitchen-v0",
+      "task": "Navigate to the toaster.",
+      "seed": 20261006,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "NavigateKitchen",
+        "split": "target",
+        "task_family": "atomic",
+        "native_horizon": 450,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "a0b96a4ef889e46bbaf79b1eef560691e86fe77140eb20a878df4420aa261c9d"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-05",
+      "env_id": "openeta/robocasa_target_MakeIceLemonade-v0",
+      "task": "Grab a lemon wedge from the fridge and one ice cube from the ice bowl, and put them in the glass of lemonade.",
+      "seed": 20261007,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "MakeIceLemonade",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "86eb9652e1e8935de8d6667a4667ac8c11b562be31c2d54ae2154ff4256c5d09"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-06",
+      "env_id": "openeta/robocasa_target_StoreLeftoversInBowl-v0",
+      "task": "Pick the chicken drumstick and avocado from their plates and place them in the bowl. Then put the bowl in the fridge.",
+      "seed": 20261008,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "StoreLeftoversInBowl",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2550,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "replaces": "RinseSinkBasin",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "3c580500e06616b69686fcb53c88e34c8a13fe6980ecfea5dce3eed4f942176c"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-07",
+      "env_id": "openeta/robocasa_target_GetToastedBread-v0",
+      "task": "Start the toaster. Once the lever pops up, take the bread to the plate on the dining counter.",
+      "seed": 20261009,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "GetToastedBread",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 3000,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "4c62b3a1ab195b5501cd05556a24ef4a7b4348ee4df168b27626798b3c261f16"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-08",
+      "env_id": "openeta/robocasa_target_LoadDishwasher-v0",
+      "task": "Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",
+      "seed": 20261010,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "LoadDishwasher",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 1800,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "e73c36158730a2e834e7fd83d999384fd06626946bae0b43b9f38f60ab5c0017"
+      }
+    },
+    {
+      "episode_id": "baseline-robocasa-09",
+      "env_id": "openeta/robocasa_target_RecycleBottlesByType-v0",
+      "task": "Move the plastic bottles in the middle to the plastics group, and the glass bottles in the middle to the glass group.",
+      "seed": 20261011,
+      "max_turns": 100,
+      "max_tool_calls": 200,
+      "timeout_s": 3600,
+      "max_total_tokens": 5000000,
+      "metadata": {
+        "native_task": "RecycleBottlesByType",
+        "split": "target",
+        "task_family": "composite",
+        "native_horizon": 2850,
+        "robot": "PandaOmron",
+        "instruction_source": "official get_ep_meta().lang at fixed reset seed",
+        "benchmark": "robocasa",
+        "native_success_checker": "step.info.success",
+        "legacy_rgb512_initial_frame_sha256": "b3666306f55713db757d5cc608343c7d452d3ecd679ebf7bdb52c0cf291c7d94"
+      }
+    }
+  ]
+}

@@ -202,7 +202,7 @@ class _MainThreadExecutor:
 
 
 async def _run_sim_call(fn, *args, **kwargs):
-    """Run on BEHAVIOR's main-thread executor, otherwise Starlette's pool."""
+    """Use the simulator's thread-affine executor when one is configured."""
     executor = getattr(app.state, "sim_executor", None)
     if executor is not None:
         return await asyncio.wrap_future(executor.submit(fn, *args, **kwargs))
@@ -542,8 +542,170 @@ def _reset_with_image(env, seed=None, handle: str = "") -> dict:
         return EnvObservation.from_dict(obs).to_mcp_dict()
 
 
+def _reset_with_robocasa_reference_demo(env, *, seed: int | None, handle: str, episode_index: int) -> dict:
+    """Restore an official human demo's exact XML/state; actions stay host-only."""
+    from adapter.protocol import EnvObservation
+    from robocasa.utils.dataset_registry_utils import get_ds_meta
+    import robocasa.utils.lerobot_utils as lerobot_utils
+    from robocasa.scripts.dataset_scripts.playback_dataset import reset_to
+
+    direct = getattr(env, "_env", None)
+    if getattr(env, "_backend", None) != "robocasa" or direct is None:
+        return {"error": "Reference demo reset is supported only for RoboCasa"}
+    if episode_index < 0 or episode_index > 9999:
+        return {"error": "Invalid reference demo index"}
+    meta = get_ds_meta(task=direct.task_name, source="human", split=direct.split)
+    if not meta or not meta.get("path"):
+        return {"error": "No official human demonstration registered for task"}
+    registered_dataset = Path(meta["path"]).absolute()
+    dataset = registered_dataset.resolve()
+    # Check the registry path before resolving: the official dataset directory
+    # may be a symlink to project HDD storage.
+    if not dataset.is_dir() or "datasets/v1.0/" not in str(registered_dataset):
+        return {"error": "Official demonstration files are not installed"}
+    try:
+        actions = np.asarray(lerobot_utils.get_episode_actions(dataset, episode_index), dtype=float)
+        states = np.asarray(lerobot_utils.get_episode_states(dataset, episode_index), dtype=float)
+        ep_meta = lerobot_utils.get_episode_meta(dataset, episode_index)
+        model_xml = lerobot_utils.get_episode_model_xml(dataset, episode_index)
+    except Exception as exc:
+        return {"error": f"Cannot load official demonstration: {type(exc).__name__}: {exc}"}
+    if actions.ndim != 2 or actions.shape[1] != 12 or not np.all(np.isfinite(actions)):
+        return {"error": "Official demonstration actions are not finite 12D vectors"}
+    with _obs_lock_for(handle):
+        with _gl_lock:
+            env.reset(seed=seed)
+            raw = direct.unwrapped_env
+            reset_to(raw, {"model": model_xml, "states": states[0], "ep_meta": json.dumps(ep_meta)})
+            raw_obs = raw._get_observations(force_update=True)
+            obs = env._normalise_obs(direct._annotate(raw_obs))
+            _inject_render_frame(env, obs)
+        _last_obs[handle] = obs
+        _done_handles.discard(handle)
+        _terminal_step_results.pop(handle, None)
+        result = EnvObservation.from_dict(obs).to_mcp_dict()
+    result["_reference_actions"] = actions.tolist()
+    result["_reference_demo"] = {
+        "source": "robocasa.official_human_demonstration",
+        "episode_index": episode_index,
+        "dataset": str(dataset),
+        "language": str(ep_meta.get("lang") or ""),
+    }
+    return result
 
 
+def _reset_with_libero_reference_demo(env, *, seed: int | None, handle: str, episode_index: int) -> dict:
+    """Restore official LIBERO HDF5 XML and initial state; keep actions host-only."""
+    import h5py
+    import re
+    from libero.libero.benchmark import get_benchmark
+    from libero.libero.envs.utils import postprocess_model_xml
+    from adapter.protocol import EnvObservation
+
+    if getattr(env, "_backend", None) != "libero" or not 0 <= episode_index <= 9999:
+        return {"error": "Invalid LIBERO reference demonstration request"}
+    match = re.fullmatch(r"openeta/libero_(.+)_task(\d+)-v0", str(getattr(env, "_env_id", "")))
+    if not match:
+        return {"error": "Cannot identify LIBERO task from environment ID"}
+    suite, task_index = match.group(1), int(match.group(2))
+    benchmark = get_benchmark(suite)()
+    relative_path = benchmark.get_task_demonstration(task_index)
+    dataset_root = Path(os.environ["LIBERO_DATASET_PATH"]).resolve()
+    dataset = (dataset_root / relative_path).resolve()
+    if not dataset.is_relative_to(dataset_root) or not dataset.is_file():
+        return {"error": f"Official LIBERO demonstration not installed: {relative_path}"}
+    with h5py.File(dataset, "r") as file:
+        key = f"demo_{episode_index}"
+        if key not in file["data"]:
+            return {"error": f"Official LIBERO demonstration has no {key}"}
+        group = file["data"][key]
+        actions = np.asarray(group["actions"], dtype=float)
+        initial_state = np.asarray(group.attrs["init_state"], dtype=float)
+        model_xml = group.attrs["model_file"]
+    if actions.ndim != 2 or actions.shape[1] != 7 or not np.all(np.isfinite(actions)):
+        return {"error": "Official LIBERO demonstration actions are not finite 7D vectors"}
+    if isinstance(model_xml, bytes):
+        model_xml = model_xml.decode("utf-8")
+    model_xml = postprocess_model_xml(model_xml)
+    assets_root = Path(os.environ["LIBERO_DIR"]).resolve() / "libero/libero/assets"
+    for recorded_assets_root in (
+        "/home/yifengz/workspace/libero-dev/chiliocosm/assets",
+        "/Users/yifengz/workspace/libero-dev/chiliocosm/assets",
+    ):
+        model_xml = model_xml.replace(recorded_assets_root, str(assets_root))
+    with _obs_lock_for(handle):
+        with _gl_lock:
+            env.reset(seed=seed)
+            direct = env._env
+            raw = direct._env
+            raw.reset_from_xml_string(model_xml)
+            raw_obs = raw.set_init_state(initial_state)
+            obs = env._normalise_obs(raw_obs)
+            _inject_render_frame(env, obs)
+        _last_obs[handle] = obs
+        _done_handles.discard(handle)
+        _terminal_step_results.pop(handle, None)
+        result = EnvObservation.from_dict(obs).to_mcp_dict()
+    result["_reference_actions"] = actions.tolist()
+    result["_reference_demo"] = {
+        "source": "libero.official_human_demonstration",
+        "episode_index": episode_index,
+        "dataset": str(dataset),
+    }
+    return result
+
+
+def _reset_with_maniskill_reference_demo(env, *, seed: int | None, handle: str, episode_index: int) -> dict:
+    """Restore an installed official 7D ManiSkill demo's first state."""
+    import h5py
+    import re
+    from mani_skill.trajectory import utils as trajectory_utils
+    from adapter.protocol import EnvObservation
+
+    if getattr(env, "_backend", None) != "maniskill" or not 0 <= episode_index <= 9999:
+        return {"error": "Invalid ManiSkill reference demonstration request"}
+    match = re.fullmatch(r"openeta/maniskill_(.+)-v0", str(getattr(env, "_env_id", "")))
+    if not match:
+        return {"error": "Cannot identify ManiSkill task from environment ID"}
+    task_id = match.group(1)
+    demo_root = Path(_REPO) / "SFT_data/expert_replay_v1/official_maniskill_demos"
+    dataset = demo_root / task_id / "rl/trajectory.none.pd_ee_delta_pose.physx_cuda.h5"
+    metadata = dataset.with_suffix(".json")
+    if not dataset.is_file() or not metadata.is_file():
+        return {"error": f"Official ManiSkill demonstration not installed: {task_id}"}
+    episodes = json.loads(metadata.read_text(encoding="utf-8")).get("episodes", [])
+    episode = next((item for item in episodes if item.get("episode_id") == episode_index), None)
+    if episode is None or episode.get("success") is not True:
+        return {"error": "Reference demonstration episode missing or not source-successful"}
+    if episode.get("control_mode") != "pd_ee_delta_pose":
+        return {"error": "Reference demonstration control mode differs from OpenETA"}
+    with h5py.File(dataset, "r") as file:
+        group = file.get(f"traj_{episode_index}")
+        if group is None:
+            return {"error": "Reference demonstration trajectory missing"}
+        actions = np.asarray(group["actions"], dtype=float)
+        initial_state = trajectory_utils.dict_to_list_of_dicts(group["env_states"])[0]
+    if actions.ndim != 2 or actions.shape[1] != 7 or not np.all(np.isfinite(actions)):
+        return {"error": "Official ManiSkill actions are not finite 7D vectors"}
+    with _obs_lock_for(handle):
+        with _gl_lock:
+            env.reset(seed=int(episode["episode_seed"]))
+            raw = env._env.unwrapped
+            raw.set_state_dict(initial_state)
+            obs = env._normalise_obs(raw.get_obs())
+            _inject_render_frame(env, obs)
+        _last_obs[handle] = obs
+        _done_handles.discard(handle)
+        _terminal_step_results.pop(handle, None)
+        result = EnvObservation.from_dict(obs).to_mcp_dict()
+    result["_reference_actions"] = actions.tolist()
+    result["_reference_demo"] = {
+        "source": "maniskill.official_rl_demonstration",
+        "episode_index": episode_index,
+        "episode_seed": episode["episode_seed"],
+        "dataset": str(dataset),
+    }
+    return result
 
 
 def _observe_with_image(env, handle: str = "") -> dict:
@@ -864,8 +1026,24 @@ async def reset_env(request):
         return _json_response({"error": f"Unknown handle: {h}"}, 400)
     body = _safe_json_body(await request.body()) if request.method == "POST" else {}
     try:
-        result = await _run_sim_call(
-            _reset_with_image, env, seed=body.get("seed"), handle=h)
+        reference_index = body.get("reference_demo_index")
+        if reference_index is not None:
+            if isinstance(reference_index, bool) or not isinstance(reference_index, int):
+                return _json_response({"error": "reference_demo_index must be an integer"}, 400)
+            reference_reset = {
+                "libero": _reset_with_libero_reference_demo,
+                "robocasa": _reset_with_robocasa_reference_demo,
+                "maniskill": _reset_with_maniskill_reference_demo,
+            }.get(getattr(env, "_backend", None))
+            if reference_reset is None:
+                return _json_response({"error": "Unsupported reference demonstration backend"}, 400)
+            result = await _run_sim_call(
+                reference_reset, env,
+                seed=body.get("seed"), handle=h, episode_index=reference_index,
+            )
+        else:
+            result = await _run_sim_call(
+                _reset_with_image, env, seed=body.get("seed"), handle=h)
         _env_errors.pop(h, None)
         return _json_response(result)
     except Exception as exc:
@@ -1059,6 +1237,39 @@ async def host_state_env(request):
         return _json_response({"error": f"{type(exc).__name__}: {exc}"}, 400)
 
 
+async def expert_action_env(request):
+    """Host-only Meta-World reference policy action; never part of model tools."""
+    h = request.path_params.get("handle", "")
+    env = _envs.get(h)
+    if env is None:
+        return _json_response({"error": f"Unknown handle: {h}"}, 400)
+    if request.app.state.bench != "metaworld":
+        return _json_response({"error": "No official expert action adapter for this bench"}, 400)
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    slug = str(body.get("task_slug") or "")
+    if not slug.endswith("-v3") or not all(c.islower() or c.isdigit() or c == "-" for c in slug):
+        return _json_response({"error": "Invalid Meta-World task slug"}, 400)
+
+    def _action():
+        with _obs_lock_for(h):
+            from metaworld import policies
+
+            class_name = "Sawyer" + "".join(piece.capitalize() for piece in slug.removesuffix("-v3").split("-")) + "V3Policy"
+            policy_class = getattr(policies, class_name, None)
+            state = getattr(env, "_last_metaworld_state", None)
+            if policy_class is None or state is None:
+                return {"error": f"Official policy or current observation unavailable: {class_name}"}
+            raw_action = np.asarray(policy_class().get_action(state), dtype=float).reshape(-1)
+            if raw_action.size != 4 or not np.all(np.isfinite(raw_action)):
+                return {"error": "Official policy returned invalid 4D action"}
+            action = np.clip(raw_action, -1.0, 1.0).tolist()
+            return {"action": action, "raw_action": raw_action.tolist(), "policy": class_name,
+                    "source": "metaworld.official_scripted_policy"}
+
+    return _json_response(await _run_sim_call(_action))
 
 
 async def reachability_env(request):
@@ -1271,6 +1482,7 @@ app = Starlette(routes=[
     Route("/env/{handle}/step", step_env, methods=["POST"]),
     Route("/env/{handle}/observe", observe_env, methods=["POST"]),
     Route("/env/{handle}/host-state", host_state_env, methods=["POST"]),
+    Route("/env/{handle}/expert-action", expert_action_env, methods=["POST"]),
     Route("/env/{handle}/render", render_env, methods=["POST"]),
     Route("/env/{handle}/reachability", reachability_env, methods=["POST"]),
     Route("/env/{handle}/controller-goal", controller_goal_env, methods=["POST"]),
@@ -1336,7 +1548,7 @@ if __name__ == "__main__":
     import uvicorn
     config = uvicorn.Config(app, fd=sock.fileno(), log_level="warning")
     server = uvicorn.Server(config)
-    if args.bench == "behavior":
+    if args.bench in {"behavior", "robocasa"}:
         # Isaac Kit / OmniGibson requires the process main thread (signal
         # handlers, render loop, and teardown). Keep HTTP responsive in a
         # server thread and execute every simulator operation here via queue.
