@@ -16,7 +16,7 @@ fi
 "$UV_BIN" pip install --python "$PYTHON_BIN" --target "$OPENETA_TILELANG_OVERLAY" \
   --no-deps 'tilelang==0.1.14' 'apache-tvm-ffi==0.1.12' 'ml-dtypes==0.6.0' 'z3-solver==4.15.4.0'
 "$UV_BIN" pip install --python "$PYTHON_BIN" --target "$OPENETA_MANISKILL_EXTRA_PATH" \
-  --no-deps 'svgpathtools==1.8.0' 'svgwrite==1.4.3' 'pytest==8.4.2' 'pluggy==1.6.0' 'iniconfig==2.3.0'
+  --no-deps 'svgpathtools==1.8.0' 'svgwrite==1.4.3' 'pytest==8.4.2' 'pluggy==1.6.0' 'iniconfig==2.3.0' 'liger-kernel==0.8.4'
 "$PYTHON_BIN" - <<'PY'
 import json
 import os
