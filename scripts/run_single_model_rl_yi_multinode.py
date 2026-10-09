@@ -78,6 +78,18 @@ def main():
         batch = plan['batch']
         assert world == batch['nnodes'] == 2
         assert batch['num_generations'] * batch['tasks_per_batch'] == batch['generation_batch_size'] == 64
+        # Validate both difficulty stages before spending time on any updates.
+        for stage in plan['stages']:
+            node_stage = local / stage['name']
+            node_stage.mkdir(parents=True, exist_ok=True)
+            if rank == 0:
+                write(root/'curriculum_status.json', {'status':'preflight','stage':stage['name']})
+            command([sys.executable, 'scripts/preflight_single_model_rl.py', '--dataset',
+                str(Path(stage['directory'])/'preflight_tasks.jsonl'), '--output', str(node_stage/'preflight')],
+                os.environ.copy(), node_stage/'preflight.log')
+            barrier(stage['name']+'-preflight')
+        # New training starts only after the original configuration saved a real update.
+        wait(args.original_acceptance)
         checkpoint = None
         for stage in plan['stages']:
             directory = Path(stage['directory'])
@@ -96,13 +108,6 @@ def main():
             env.pop('RESUME_FROM_CHECKPOINT', None)
             if checkpoint:
                 env['RESUME_FROM_CHECKPOINT'] = str(checkpoint)
-            if rank == 0:
-                write(root/'curriculum_status.json', {'status':'preflight','stage':stage['name']})
-            command([sys.executable, 'scripts/preflight_single_model_rl.py', '--dataset',
-                str(directory/'preflight_tasks.jsonl'), '--output', str(node_stage/'preflight')], env, node_stage/'preflight.log')
-            barrier(stage['name']+'-preflight')
-            # New training starts only after the original configuration saved a real update.
-            wait(args.original_acceptance)
             if rank == 0:
                 write(root/'curriculum_status.json', {'status':'training','stage':stage['name'],
                     'start_step':stage['start_step'],'target_step':stage['target_step'],
