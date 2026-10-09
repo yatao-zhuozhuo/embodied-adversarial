@@ -1,0 +1,388 @@
+{
+  "schema": "openeta.single_model_rl.v1",
+  "holdout": "SFT_data/configs/two_tool_test_holdout.v1.json",
+  "input_protocol": "openeta.two_tool_input.v1",
+  "model_protocol": "openeta.two_tool_xml.v1",
+  "model": "/mnt/shared-storage-user/self-evolve/model/Qwen3.5-9B-embodied-mixed",
+  "initialization": "mixed_model_fresh_lora",
+  "enable_thinking": false,
+  "reward": "official_success_binary",
+  "num_generations": 16,
+  "max_turns": 48,
+  "max_control_steps": 400,
+  "per_turn_tokens": 1536,
+  "episode_tokens": 73728,
+  "context_length": 32768,
+  "history_groups": 4,
+  "seed_base": 20480000,
+  "evaluation_seed_base": 20330000,
+  "epochs": 3,
+  "learning_rate": 5e-06,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "beta": 0.01,
+  "steps_per_generation": 1,
+  "loss_scale": "last_round",
+  "vllm_mode": "colocate",
+  "per_device_train_batch_size": 4,
+  "generation_batch_size": 64,
+  "report_to": "tensorboard",
+  "baseline_exclusion": "configs/single_model_rl_baseline_v2_exclusion.json",
+  "curriculum": [
+    {
+      "name": "01_easy",
+      "epochs": 3,
+      "seeds_per_task": 1,
+      "tasks": [
+        {
+          "bench": "metaworld",
+          "task_id": "reach-v3",
+          "env_id": "openeta/metaworld_50_reach-v3-v0",
+          "task": "Reach a goal position",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "window-open-v3",
+          "env_id": "openeta/metaworld_50_window-open-v3-v0",
+          "task": "Push and open a window",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "faucet-open-v3",
+          "env_id": "openeta/metaworld_50_faucet-open-v3-v0",
+          "task": "Rotate the faucet counter-clockwise",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "dial-turn-v3",
+          "env_id": "openeta/metaworld_50_dial-turn-v3-v0",
+          "task": "Rotate a dial 180 degrees",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "door-lock-v3",
+          "env_id": "openeta/metaworld_50_door-lock-v3-v0",
+          "task": "Lock the door by rotating the lock clockwise",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "door-unlock-v3",
+          "env_id": "openeta/metaworld_50_door-unlock-v3-v0",
+          "task": "Unlock the door by rotating the lock counter-clockwise",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "plate-slide-v3",
+          "env_id": "openeta/metaworld_50_plate-slide-v3-v0",
+          "task": "Slide a plate into a cabinet",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "handle-pull-side-v3",
+          "env_id": "openeta/metaworld_50_handle-pull-side-v3-v0",
+          "task": "Pull a handle up sideways",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CloseCabinet",
+          "env_id": "openeta/robocasa_pretrain_CloseCabinet-v0",
+          "task": "RoboCasa365 pretrain task: close cabinet",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CloseDrawer",
+          "env_id": "openeta/robocasa_pretrain_CloseDrawer-v0",
+          "task": "RoboCasa365 pretrain task: close drawer",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CloseMicrowave",
+          "env_id": "openeta/robocasa_pretrain_CloseMicrowave-v0",
+          "task": "RoboCasa365 pretrain task: close microwave",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "TurnOffMicrowave",
+          "env_id": "openeta/robocasa_pretrain_TurnOffMicrowave-v0",
+          "task": "RoboCasa365 pretrain task: turn off microwave",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CloseElectricKettleLid",
+          "env_id": "openeta/robocasa_pretrain_CloseElectricKettleLid-v0",
+          "task": "RoboCasa365 pretrain task: close electric kettle lid",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_90_task35",
+          "env_id": "openeta/libero_libero_90_task35-v0",
+          "task": "open the microwave",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_90_task7",
+          "env_id": "openeta/libero_libero_90_task7-v0",
+          "task": "open the top drawer of the cabinet",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "maniskill",
+          "task_id": "PullCube-v1",
+          "env_id": "openeta/maniskill_PullCube-v1-v0",
+          "task": "Pull the cube onto the target region",
+          "expected_action_dim": 7
+        }
+      ],
+      "promotion": null
+    },
+    {
+      "name": "02_medium",
+      "epochs": 3,
+      "seeds_per_task": 1,
+      "tasks": [
+        {
+          "bench": "metaworld",
+          "task_id": "coffee-push-v3",
+          "env_id": "openeta/metaworld_50_coffee-push-v3-v0",
+          "task": "Push a mug under a coffee machine",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "sweep-into-v3",
+          "env_id": "openeta/metaworld_50_sweep-into-v3-v0",
+          "task": "Sweep a puck into a hole",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "bin-picking-v3",
+          "env_id": "openeta/metaworld_50_bin-picking-v3-v0",
+          "task": "Grasp the puck from one bin and place it into another bin",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "box-close-v3",
+          "env_id": "openeta/metaworld_50_box-close-v3-v0",
+          "task": "Grasp the cover and close the box with it",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "hammer-v3",
+          "env_id": "openeta/metaworld_50_hammer-v3-v0",
+          "task": "Hammer a screw on the wall",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "peg-insert-side-v3",
+          "env_id": "openeta/metaworld_50_peg-insert-side-v3-v0",
+          "task": "Insert a peg sideways",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "push-wall-v3",
+          "env_id": "openeta/metaworld_50_push-wall-v3-v0",
+          "task": "Bypass a wall and push a puck to a goal",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "metaworld",
+          "task_id": "sweep-v3",
+          "env_id": "openeta/metaworld_50_sweep-v3-v0",
+          "task": "Sweep a puck off the table",
+          "expected_action_dim": 4
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task0",
+          "env_id": "openeta/libero_libero_spatial_task0-v0",
+          "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task2",
+          "env_id": "openeta/libero_libero_spatial_task2-v0",
+          "task": "pick up the black bowl from table center and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task3",
+          "env_id": "openeta/libero_libero_spatial_task3-v0",
+          "task": "pick up the black bowl on the cookie box and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task4",
+          "env_id": "openeta/libero_libero_spatial_task4-v0",
+          "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task6",
+          "env_id": "openeta/libero_libero_spatial_task6-v0",
+          "task": "pick up the black bowl next to the cookie box and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task7",
+          "env_id": "openeta/libero_libero_spatial_task7-v0",
+          "task": "pick up the black bowl on the stove and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_spatial_task8",
+          "env_id": "openeta/libero_libero_spatial_task8-v0",
+          "task": "pick up the black bowl next to the plate and place it on the plate",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_object_task1",
+          "env_id": "openeta/libero_libero_object_task1-v0",
+          "task": "pick up the cream cheese and place it in the basket",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_object_task2",
+          "env_id": "openeta/libero_libero_object_task2-v0",
+          "task": "pick up the salad dressing and place it in the basket",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "libero",
+          "task_id": "libero_object_task3",
+          "env_id": "openeta/libero_libero_object_task3-v0",
+          "task": "pick up the bbq sauce and place it in the basket",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "maniskill",
+          "task_id": "PokeCube-v1",
+          "env_id": "openeta/maniskill_PokeCube-v1-v0",
+          "task": "Use the peg to poke the red cube onto the red-and-white target region, then keep the robot still.",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "maniskill",
+          "task_id": "LiftPegUpright-v1",
+          "env_id": "openeta/maniskill_LiftPegUpright-v1-v0",
+          "task": "Move the peg lying on the table into an upright position standing on the table.",
+          "expected_action_dim": 7
+        },
+        {
+          "bench": "maniskill",
+          "task_id": "RotateValveLevel0-v1",
+          "env_id": "openeta/maniskill_RotateValveLevel0-v1-v0",
+          "task": "Rotate the valve counterclockwise by at least 90 degrees.",
+          "expected_action_dim": 9
+        },
+        {
+          "bench": "maniskill",
+          "task_id": "DrawTriangle-v1",
+          "env_id": "openeta/maniskill_DrawTriangle-v1-v0",
+          "task": "Trace the outlined target triangle on the canvas with the red brush.",
+          "expected_action_dim": 6
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CoffeeSetupMug",
+          "env_id": "openeta/robocasa_pretrain_CoffeeSetupMug-v0",
+          "task": "Pick the mug from the counter and place it under the coffee machine dispenser.",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "CoffeeServeMug",
+          "env_id": "openeta/robocasa_pretrain_CoffeeServeMug-v0",
+          "task": "RoboCasa365 pretrain task: coffee serve mug",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceCounterToSink",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToSink-v0",
+          "task": "RoboCasa365 pretrain task: pick place counter to sink",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceSinkToCounter",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceSinkToCounter-v0",
+          "task": "RoboCasa365 pretrain task: pick place sink to counter",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceCounterToMicrowave",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToMicrowave-v0",
+          "task": "RoboCasa365 pretrain task: pick place counter to microwave",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceMicrowaveToCounter",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceMicrowaveToCounter-v0",
+          "task": "RoboCasa365 pretrain task: pick place microwave to counter",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceCounterToOven",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToOven-v0",
+          "task": "RoboCasa365 pretrain task: pick place counter to oven",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceCounterToToasterOven",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToToasterOven-v0",
+          "task": "RoboCasa365 pretrain task: pick place counter to toaster oven",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceToasterOvenToCounter",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceToasterOvenToCounter-v0",
+          "task": "RoboCasa365 pretrain task: pick place toaster oven to counter",
+          "expected_action_dim": 12
+        },
+        {
+          "bench": "robocasa",
+          "task_id": "PickPlaceCabinetToCounter",
+          "env_id": "openeta/robocasa_pretrain_PickPlaceCabinetToCounter-v0",
+          "task": "RoboCasa365 pretrain task: pick place cabinet to counter",
+          "expected_action_dim": 12
+        }
+      ],
+      "promotion": null
+    }
+  ],
+  "consecutive_zero_group_limit": 0,
+  "tasks_per_batch": 4,
+  "nnodes": 2
+}
