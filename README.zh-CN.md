@@ -21,6 +21,112 @@ OpenETA 将从数字智能体（Digital Agent）到物理智能体（Physical Ag
 [并行评估](docs/parallel-simulator-evaluation.md) ·
 [真机部署](real/README.md)
 
+<a id="yicloud-rl"></a>
+## Yicloud 平台 RL（`feat/rl-yi`）
+
+本分支基于 `feat/rl`，提供共享 GPFS 环境下的两节点 GRPO 训练与完整断点恢复。
+
+| 项目 | 配置 |
+| --- | --- |
+| 模型 | `YangYongzhuo/Qwen3.5-4B-embodied-mixed` 或 `YangYongzhuo/Qwen3.5-9B-embodied-mixed` |
+| 每个训练任务 | 2 个节点，各 8 张 H200；提交后生成两个 RJob |
+| 训练题目 | 简单 16 题、中等 32 题，来自 MetaWorld、LIBERO、ManiSkill、RoboCasa |
+| 基线隔离 | 排除 `configs/single_model_rl_baseline_v2_exclusion.json` 冻结的 69 道 baseline 题目，包含任务别名校验 |
+| 更新方式 | 每阶段 3 Epoch，每批 4 题，每题 16 条 rollout，每批更新 1 次 |
+| 更新总数 | 简单阶段 12 次、中等阶段 24 次，累计 36 次 |
+| 训练协议 | 保持 `openeta.two_tool_input.v1` / `openeta.two_tool_xml.v1`、原生任务成功奖励及原有产物结构 |
+
+### 环境与配置
+
+4B 和 9B 分别使用 [`single_model_rl_curriculum_mixed_yi_2n16.json`](configs/single_model_rl_curriculum_mixed_yi_2n16.json)
+和 [`single_model_rl_curriculum_mixed_yi_9b_2n16.json`](configs/single_model_rl_curriculum_mixed_yi_9b_2n16.json)，两者仅模型路径不同。
+`single_model_rl_curriculum_mixed_yi.json` 保留原始单节点配置，用于原配置验收。
+
+平台路径集中在 [`scripts/single_model_rl_yi_env.sh`](scripts/single_model_rl_yi_env.sh)。
+当前部署依赖共享存储中已有的 Swift 训练环境、baseline coordinator、四个模拟器环境和本地模型目录，
+并要求 `brainctl` 已登录且具有 `fdj-infra` 命名空间的任务权限。
+[`setup_single_model_rl_yi.sh`](scripts/setup_single_model_rl_yi.sh) 用于补充平台依赖与原始 4B 模型，
+不是从零安装所有模拟器的脚本；9B 模型需事先放到对应配置指定的目录。
+
+### 提交两节点任务
+
+在仓库根目录执行。每次启动使用新的 run 目录及任务名；下例为 4B，9B 改用对应配置并单独命名。
+`original_update_acceptance.json` 应来自已经完成实际更新的原始配置验收。
+
+```bash
+run_root="runs/rl_yi_4b_$(date +%Y%m%d_%H%M%S)"
+job_name="embodied-rl-yi-4b-$(date +%m%d%H%M%S)"
+acceptance="runs/single_model_rl_curriculum_mixed_yi_start04/diagnostics/original_update_acceptance.json"
+
+python3 scripts/run_single_model_curriculum.py \
+  --config configs/single_model_rl_curriculum_mixed_yi_2n16.json \
+  --run-root "$run_root" --prepare-only
+
+# 启用每卡渲染检查及 DrawTriangle 原生 300 步边界检查。
+python3 - "$run_root/curriculum_plan.json" <<'PY'
+import json, sys
+from pathlib import Path
+p = Path(sys.argv[1])
+plan = json.loads(p.read_text())
+plan['startup_maniskill_gpu_probe'] = True
+p.write_text(json.dumps(plan, indent=2) + '\n')
+PY
+
+python3 scripts/submit_single_model_rl_yi_jobs.py \
+  --run-root "$run_root" --name "$job_name" \
+  --original-acceptance "$acceptance" \
+  --exclude-node lg-cmc-gpu-0941.host.lg.shzhisuan.com \
+  --exclude-node lg-cmc-gpu-1207.host.lg.shzhisuan.com
+```
+
+两个排除节点曾出现原生 Vulkan 渲染失败，节点恢复后可重新验证再调整。
+提交器在 `jobs/run_job.sh` 保存启动脚本快照，防止共享脚本后续编辑影响正在执行的 Bash。
+启动顺序为 GPU 检查、16 卡通信、回归测试、两节点各 48 道原生题目检查、模型训练。
+
+### 断点恢复
+
+使用新的 run 目录，准备计划时额外传入以下参数，再按上述方式开启 GPU 检查并提交：
+
+```bash
+python3 scripts/run_single_model_curriculum.py \
+  --config configs/single_model_rl_curriculum_mixed_yi_9b_2n16.json \
+  --run-root runs/rl_yi_9b_resume --prepare-only \
+  --resume-checkpoint /absolute/path/to/checkpoint-N \
+  --history-plan /absolute/path/to/previous_run/curriculum_plan.json
+```
+
+断点须包含 adapter 权重、`optimizer.pt`、`scheduler.pt` 和 `trainer_state.json`；配置必须与原任务一致。
+恢复会跳过已完成阶段，保留累计步数和优化器，并按当前阶段已经完成的更新数跳过数据批次。
+例如累计 step 25 表示中等阶段完成 13 次更新，下一批是该阶段的第 6 批。
+达到 step 36 即完成全部训练，无需再次提交。
+
+### 产物与 TensorBoard
+
+- `curriculum_status.json`：课程状态；`stages/*/stage_result.json`：阶段结果。
+- `formal/trainer/<stage>/v*/checkpoint-*`：完整恢复断点，每次更新保存，每阶段保留最近两个。
+- `formal/trainer/<stage>/rollouts/`：原始轨迹与输入审计；`nodes/`：节点日志及检查证据。
+- `tensorboard/continuous/`：根据 checkpoint 历史生成的连续全局步数曲线。
+
+在能读取共享存储的工作空间启动 TensorBoard：
+
+```bash
+source scripts/single_model_rl_yi_env.sh
+"$SWIFT_VENV/bin/python" -m tensorboard.main \
+  --logdir /absolute/path/to/run/tensorboard/continuous \
+  --host 127.0.0.1 --port 6006
+```
+
+本机建立 SSH 转发后访问 `http://127.0.0.1:26006`。将 `WORKSPACE_SSH_USER` 替换为运行 TensorBoard 的工作空间 SSH 用户：
+
+```bash
+ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 \
+  -L 127.0.0.1:26006:127.0.0.1:6006 \
+  -p 2202 WORKSPACE_SSH_USER@ssh.gate.yicloud.com.cn
+```
+
+本地端口被占用时，更换 `26006` 并使用对应浏览器地址。恢复任务使用新 run 目录时，TensorBoard 的 logdir 也应指向新目录。
+运行目录、模型权重、依赖环境与认证信息留在平台，不纳入 Git 提交。
+
 ## 最新动态
 
 - **2026-09-06** — **Stage 2 Agent Harness：** 我们将 Stage 2 闭环具身智能体 Harness

@@ -6,6 +6,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+Branch `feat/rl-yi`: [Yicloud RL setup, two-node jobs, checkpoint recovery and TensorBoard](README.zh-CN.md#yicloud-rl).
+
 [📄 Paper](https://arxiv.org/abs/2608.03924) ·
 [🌐 Project Page](https://openmoss.ai/OpenETA/) ·
 [💻 GitHub](https://github.com/OpenMOSS/OpenETA)
