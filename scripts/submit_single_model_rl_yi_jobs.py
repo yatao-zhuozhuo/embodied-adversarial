@@ -26,7 +26,7 @@ def request(name, rank, root, acceptance, excluded_nodes=()):
     env = {'RUN_ROOT':str(root),'NODE_RANK':str(rank),'NNODES':'2','MASTER_PORT':'29885',
            'OPENETA_RL_MCP_PORT':'19785','ORIGINAL_ACCEPTANCE':str(acceptance),
            'NCCL_DEBUG':'WARN','PYTHONUNBUFFERED':'1'}
-    command = 'cd '+shlex.quote(str(ROOT))+' && bash scripts/run_single_model_rl_yi_job.sh'
+    command = 'cd '+shlex.quote(str(ROOT))+' && bash '+shlex.quote(str(root/'jobs'/'run_job.sh'))
     body = {'apiVersion':'rjob.brainpp.cn/v1alpha1','kind':'RJob',
         'metadata':{'name':name,'namespace':namespace,'labels':labels,'annotations':annotations},
         'spec':{'autoDeleteDuration':'720h','backoffLimit':1,'failurePolicy':'None','taskSpecs':{'task1':{
@@ -59,6 +59,11 @@ def main():
     root=args.run_root.resolve()
     if not (root/'curriculum_plan.json').is_file():parser.error('Prepare the curriculum first')
     directory=root/'jobs';directory.mkdir(parents=True,exist_ok=True)
+    # Bash reads a running script incrementally. Freeze its bytes so edits to
+    # the shared checkout cannot corrupt the tail of an already running job.
+    launcher = directory/'run_job.sh'
+    if not launcher.exists():
+        launcher.write_bytes((ROOT/'scripts/run_single_model_rl_yi_job.sh').read_bytes())
     env={k:v for k,v in os.environ.items() if k.lower() not in {'http_proxy','https_proxy','all_proxy'}}
     for rank in range(2):
         name=f'{args.name}-{rank}'

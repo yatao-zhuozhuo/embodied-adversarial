@@ -17,7 +17,7 @@ finish() {
   fi
 }
 trap finish EXIT
-source "$(dirname "${BASH_SOURCE[0]}")/single_model_rl_yi_env.sh"
+source scripts/single_model_rl_yi_env.sh
 cd "$REPO_ROOT"
 bash scripts/bootstrap_single_model_rl_yi_gpu.sh
 if "$OPENETA_MCP_PYTHON" -c 'import json,os,sys; from pathlib import Path; sys.exit(not json.loads((Path(os.environ["RUN_ROOT"])/"curriculum_plan.json").read_text()).get("startup_maniskill_gpu_probe",False))'; then

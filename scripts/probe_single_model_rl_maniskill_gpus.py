@@ -12,7 +12,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def child():
+def child(drawing_boundary=False):
     faulthandler.enable()
     faulthandler.dump_traceback_later(60, repeat=True)
     sys.path.insert(0, str(ROOT))
@@ -24,8 +24,18 @@ def child():
     def check():
         import numpy as np
         start = time.monotonic()
-        env = _make_maniskill_direct('PullCube-v1', image_width=256, image_height=256)
+        env = _make_maniskill_direct('DrawTriangle-v1' if drawing_boundary else 'PullCube-v1', image_width=256, image_height=256)
         try:
+            if drawing_boundary:
+                env.reset(seed=20582100)
+                action = np.zeros(env.action_space.shape, dtype=np.float32)
+                action[-1] = 1.
+                for step in range(1, 301):
+                    _, _, _, truncated, _ = env.step(action)
+                    assert bool(truncated) == (step == 300), (step, truncated)
+                assert env.unwrapped.draw_step == 300
+                print(json.dumps({'drawing_boundary': 'passed', 'control_steps': 300}), flush=True)
+                return
             for _ in range(3):
                 env.reset(seed=20481500)
                 action = np.zeros(env.action_space.shape, dtype=np.float32)
@@ -42,11 +52,12 @@ def child():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--child', action='store_true')
+    parser.add_argument('--drawing-boundary', action='store_true')
     parser.add_argument('--output', type=Path)
     parser.add_argument('--processes-per-gpu', type=int, default=2)
     args = parser.parse_args()
     if args.child:
-        child()
+        child(args.drawing_boundary)
         return
     if args.output is None:
         parser.error('--output is required')
@@ -88,6 +99,12 @@ def main():
     (args.output/'summary.json').write_text(json.dumps({'host': os.uname().nodename, 'checks': records}, indent=2)+'\n')
     if any(record['status'] != 'passed' for record in records):
         raise SystemExit('ManiSkill GPU rendering check failed; model training was not started')
+    env = os.environ.copy()
+    env['CUDA_VISIBLE_DEVICES'] = gpus[0]
+    with (args.output/'drawing_boundary.log').open('w') as log:
+        subprocess.run([os.environ['OPENETA_MANISKILL_PYTHON'], str(Path(__file__).resolve()),
+                        '--child', '--drawing-boundary'], env=env, stdout=log,
+                       stderr=subprocess.STDOUT, timeout=180, check=True)
 
 
 if __name__ == '__main__':

@@ -65,6 +65,23 @@ def split_turn_samples(samples, records, template=None):
 
 
 class ConditionalTurnsMixin:
+    def _init_training_state(self, max_steps, num_update_steps_per_epoch,
+                             num_train_epochs, resume_from_checkpoint, trial):
+        position = super()._init_training_state(max_steps, num_update_steps_per_epoch,
+                                                num_train_epochs, resume_from_checkpoint, trial)
+        start = os.environ.get('OPENETA_CURRICULUM_START_STEP')
+        if enabled() and start is not None and resume_from_checkpoint and not self.args.ignore_data_skip:
+            start = int(start)
+            completed = self.state.global_step - start
+            if completed < 0:
+                raise ValueError('Checkpoint precedes current curriculum stage')
+            # Stage transitions deliberately start at dataset row zero while
+            # retaining cumulative global_step and the full optimizer state.
+            epochs = start // num_update_steps_per_epoch + completed // num_update_steps_per_epoch
+            skipped = completed % num_update_steps_per_epoch * self.args.gradient_accumulation_steps
+            position = (epochs, skipped)
+        return position
+
     def _infer_single_or_multi_turn(self, samples, request_config, is_global_inputs=False):
         if not enabled() or not self.multi_turn_scheduler or self.enable_server_multi_turn:
             return super()._infer_single_or_multi_turn(samples,request_config,is_global_inputs)

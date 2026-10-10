@@ -89,7 +89,7 @@ def main():
             command([sys.executable, '-m', 'pytest', '-q',
                      'tests/test_single_model_yi_multinode.py', 'tests/test_single_model_yi_config.py',
                      'tests/test_single_model_curriculum.py', 'tests/test_worker_gpu_assignment.py',
-                     'tests/test_simulator_mcp_sse_order.py'],
+                     'tests/test_simulator_mcp_sse_order.py', 'tests/test_curriculum_resume_position.py'],
                     os.environ.copy(), local/'contract_tests.log')
         barrier('contract-tests')
         plan = json.loads((root / 'curriculum_plan.json').read_text())
@@ -133,7 +133,8 @@ def main():
                 OPENETA_RL_EPISODE_TOKENS=str(plan['episode_tokens']), VLLM_MAX_MODEL_LEN=str(plan['context_length']),
                 NUM_GENERATIONS=str(batch['num_generations']), PER_DEVICE_TRAIN_BATCH_SIZE=str(batch['per_device_train_batch_size']),
                 GRADIENT_ACCUMULATION_STEPS='1', DATASET_SHUFFLE='false', IGNORE_DATA_SKIP='false' if same_stage_resume or not checkpoint else 'true',
-                OPENETA_CURRICULUM_ZERO_LIMIT=str(plan['zero_limit']))
+                OPENETA_CURRICULUM_ZERO_LIMIT=str(plan['zero_limit']),
+                OPENETA_CURRICULUM_START_STEP=str(stage['start_step']))
             env.pop('TRAIN_ADAPTER_PATH', None)
             env.pop('RESUME_FROM_CHECKPOINT', None)
             if checkpoint:
