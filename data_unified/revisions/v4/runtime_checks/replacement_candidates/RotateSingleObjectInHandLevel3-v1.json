@@ -1,0 +1,463 @@
+{
+  "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 995600467,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "allegro_hand_right_touch",
+        "control_mode": "pd_joint_pos",
+        "obs_mode": "rgbd",
+        "sim_backend": "physx_cuda",
+        "pass_robot_uids": false
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/029_plate-0": [
+          [
+            -0.020320843905210495,
+            0.004021661356091499,
+            0.2980886697769165,
+            1.0000001192092896,
+            -1.9067161044494796e-11,
+            -1.7863745205293213e-11,
+            -1.2853769160159345e-09,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/allegro_hand_right_touch": [
+          [
+            0.0,
+            0.0,
+            0.25,
+            -0.7070000171661377,
+            0.0,
+            0.7070000171661377,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.6246950030326843,
+              0.0,
+              -0.7808688282966614,
+              0.25768670439720154
+            ],
+            [
+              -0.7808687686920166,
+              0.0,
+              -0.6246950030326843,
+              0.39824312925338745
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.6246950030326843,
+              0.7808687686920166,
+              0.15000000596046448
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.7808687686920166,
+              0.6246950626373291,
+              0.44999998807907104
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/029_plate-0": [
+          [
+            -0.020320843905210495,
+            0.004021661356091499,
+            0.2980886697769165,
+            1.0000001192092896,
+            -1.9067161044494796e-11,
+            -1.7863745205293213e-11,
+            -1.2853769160159345e-09
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Y axis without dropping it.",
+      "state_fingerprint": "ab85b10d80b0da9cfc811f8ca4832fcb9bf6ce5b7dee59d8b33f406996f5f3a7",
+      "task_state_fingerprint": "76033856d78b7659a97aad3c975f052322c931719809b5114386168cdc4aa0ba",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000/base_camera.png",
+          "sha256": "98ecd34c9a66596e7aa9094dc164afe6e9113a08182073502577aa4fd7856ce3"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 1899361693,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "allegro_hand_right_touch",
+        "control_mode": "pd_joint_pos",
+        "obs_mode": "rgbd",
+        "sim_backend": "physx_cuda",
+        "pass_robot_uids": false
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/062_dice-0": [
+          [
+            -0.02056015655398369,
+            0.012791178189218044,
+            0.2742610573768616,
+            1.0000001192092896,
+            3.634545997499572e-10,
+            -9.994677308000632e-11,
+            1.588004450159275e-10,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/allegro_hand_right_touch": [
+          [
+            0.0,
+            0.0,
+            0.25,
+            -0.7070000171661377,
+            0.0,
+            0.7070000171661377,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.6246950030326843,
+              0.0,
+              -0.7808688282966614,
+              0.25768670439720154
+            ],
+            [
+              -0.7808687686920166,
+              0.0,
+              -0.6246950030326843,
+              0.39824312925338745
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.6246950030326843,
+              0.7808687686920166,
+              0.15000000596046448
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.7808687686920166,
+              0.6246950626373291,
+              0.44999998807907104
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/062_dice-0": [
+          [
+            -0.02056015655398369,
+            0.012791178189218044,
+            0.2742610573768616,
+            1.0000001192092896,
+            3.634545997499572e-10,
+            -9.994677308000632e-11,
+            1.588004450159275e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Z axis without dropping it.",
+      "state_fingerprint": "173bd8fa3d7c788f1f76ef43c87acb5b66a2b7712ff20dceb0ef25f81b70da7e",
+      "task_state_fingerprint": "dfae5ee25821da7aa14e13ca9be53a755de7220a57cbc19bfaea5fe8771dd72a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001/base_camera.png",
+          "sha256": "9c9262f9f8151e9212edddc390ce45c2c9b902a302a9e59a66998c902efe441a"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

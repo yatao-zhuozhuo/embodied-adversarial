@@ -1,0 +1,3002 @@
+{
+  "AdjustToasterOvenTemperature": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/AdjustToasterOvenTemperature/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "AdjustToasterOvenTemperature",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/AdjustToasterOvenTemperature/20250820/lerobot"
+  },
+  "AdjustWaterTemperature": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/AdjustWaterTemperature/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "AdjustWaterTemperature",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/AdjustWaterTemperature/20250820/lerobot"
+  },
+  "CloseBlenderLid": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseBlenderLid/20250822/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "CloseBlenderLid",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseBlenderLid/20250822/lerobot"
+  },
+  "CloseCabinet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseCabinet/20250819/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "CloseCabinet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseCabinet/20250819/lerobot"
+  },
+  "CloseDishwasher": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseDishwasher/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "CloseDishwasher",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseDishwasher/20250820/lerobot"
+  },
+  "CloseDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseDrawer/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseDrawer/20250819/lerobot"
+  },
+  "CloseElectricKettleLid": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseElectricKettleLid/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "CloseElectricKettleLid",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseElectricKettleLid/20250820/lerobot"
+  },
+  "CloseFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseFridge/20250819/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "CloseFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseFridge/20250819/lerobot"
+  },
+  "CloseFridgeDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseFridgeDrawer/20250821/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseFridgeDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseFridgeDrawer/20250821/lerobot"
+  },
+  "CloseMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseMicrowave/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseMicrowave/20250819/lerobot"
+  },
+  "CloseOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseOven/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseOven/20250820/lerobot"
+  },
+  "CloseStandMixerHead": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseStandMixerHead/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseStandMixerHead",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseStandMixerHead/20250820/lerobot"
+  },
+  "CloseToasterOvenDoor": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CloseToasterOvenDoor/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CloseToasterOvenDoor",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CloseToasterOvenDoor/20250820/lerobot"
+  },
+  "CoffeeServeMug": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CoffeeServeMug/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "CoffeeServeMug",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CoffeeServeMug/20250819/lerobot"
+  },
+  "CoffeeSetupMug": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CoffeeSetupMug/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "CoffeeSetupMug",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CoffeeSetupMug/20250819/lerobot"
+  },
+  "NavigateKitchen": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/NavigateKitchen/20250821/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "NavigateKitchen",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/NavigateKitchen/20250821/lerobot"
+  },
+  "OpenBlenderLid": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenBlenderLid/20250822/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "OpenBlenderLid",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenBlenderLid/20250822/lerobot"
+  },
+  "OpenCabinet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenCabinet/20250819/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "OpenCabinet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenCabinet/20250819/lerobot"
+  },
+  "OpenDishwasher": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenDishwasher/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "OpenDishwasher",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenDishwasher/20250820/lerobot"
+  },
+  "OpenDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenDrawer/20250819/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "OpenDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenDrawer/20250819/lerobot"
+  },
+  "OpenElectricKettleLid": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenElectricKettleLid/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "OpenElectricKettleLid",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenElectricKettleLid/20250820/lerobot"
+  },
+  "OpenFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenFridge/20250819/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "OpenFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenFridge/20250819/lerobot"
+  },
+  "OpenFridgeDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenFridgeDrawer/20250821/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "OpenFridgeDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenFridgeDrawer/20250821/lerobot"
+  },
+  "OpenMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenMicrowave/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "OpenMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenMicrowave/20250819/lerobot"
+  },
+  "OpenOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenOven/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "OpenOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenOven/20250820/lerobot"
+  },
+  "OpenStandMixerHead": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenStandMixerHead/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "OpenStandMixerHead",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenStandMixerHead/20250820/lerobot"
+  },
+  "OpenToasterOvenDoor": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/OpenToasterOvenDoor/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "OpenToasterOvenDoor",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/OpenToasterOvenDoor/20250820/lerobot"
+  },
+  "PickPlaceCabinetToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCabinetToCounter/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCabinetToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCabinetToCounter/20250819/lerobot"
+  },
+  "PickPlaceCounterToBlender": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToBlender/20250822/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToBlender",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToBlender/20250822/lerobot"
+  },
+  "PickPlaceCounterToCabinet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToCabinet/20250819/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToCabinet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToCabinet/20250819/lerobot"
+  },
+  "PickPlaceCounterToDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToDrawer/20250821/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToDrawer/20250821/lerobot"
+  },
+  "PickPlaceCounterToMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToMicrowave/20250819/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToMicrowave/20250819/lerobot"
+  },
+  "PickPlaceCounterToOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToOven/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToOven/20250819/lerobot"
+  },
+  "PickPlaceCounterToSink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToSink/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToSink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToSink/20250819/lerobot"
+  },
+  "PickPlaceCounterToStandMixer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToStandMixer/20250820/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToStandMixer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToStandMixer/20250820/lerobot"
+  },
+  "PickPlaceCounterToStove": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToStove/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToStove",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToStove/20250819/lerobot"
+  },
+  "PickPlaceCounterToToasterOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceCounterToToasterOven/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "PickPlaceCounterToToasterOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceCounterToToasterOven/20250819/lerobot"
+  },
+  "PickPlaceDrawerToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceDrawerToCounter/20250820/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "PickPlaceDrawerToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceDrawerToCounter/20250820/lerobot"
+  },
+  "PickPlaceFridgeDrawerToShelf": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceFridgeDrawerToShelf/20250821/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceFridgeDrawerToShelf",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceFridgeDrawerToShelf/20250821/lerobot"
+  },
+  "PickPlaceFridgeShelfToDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceFridgeShelfToDrawer/20250821/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceFridgeShelfToDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceFridgeShelfToDrawer/20250821/lerobot"
+  },
+  "PickPlaceMicrowaveToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceMicrowaveToCounter/20250819/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "PickPlaceMicrowaveToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceMicrowaveToCounter/20250819/lerobot"
+  },
+  "PickPlaceSinkToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceSinkToCounter/20250819/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "PickPlaceSinkToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceSinkToCounter/20250819/lerobot"
+  },
+  "PickPlaceStoveToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceStoveToCounter/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "PickPlaceStoveToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceStoveToCounter/20250819/lerobot"
+  },
+  "PickPlaceToasterOvenToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceToasterOvenToCounter/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "PickPlaceToasterOvenToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceToasterOvenToCounter/20250819/lerobot"
+  },
+  "PickPlaceToasterToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PickPlaceToasterToCounter/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PickPlaceToasterToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PickPlaceToasterToCounter/20250819/lerobot"
+  },
+  "PreheatOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PreheatOven/20250903/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "PreheatOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PreheatOven/20250903/lerobot"
+  },
+  "SlideDishwasherRack": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/SlideDishwasherRack/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "SlideDishwasherRack",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/SlideDishwasherRack/20250820/lerobot"
+  },
+  "SlideOvenRack": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/SlideOvenRack/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "SlideOvenRack",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/SlideOvenRack/20250820/lerobot"
+  },
+  "SlideToasterOvenRack": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/SlideToasterOvenRack/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "SlideToasterOvenRack",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/SlideToasterOvenRack/20250820/lerobot"
+  },
+  "StartCoffeeMachine": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/StartCoffeeMachine/20250819/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "StartCoffeeMachine",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/StartCoffeeMachine/20250819/lerobot"
+  },
+  "TurnOffMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOffMicrowave/20250819/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "TurnOffMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOffMicrowave/20250819/lerobot"
+  },
+  "TurnOffSinkFaucet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOffSinkFaucet/20250819/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "TurnOffSinkFaucet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOffSinkFaucet/20250819/lerobot"
+  },
+  "TurnOffStove": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOffStove/20250819/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "TurnOffStove",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOffStove/20250819/lerobot"
+  },
+  "TurnOnBlender": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnBlender/20250822/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "TurnOnBlender",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnBlender/20250822/lerobot"
+  },
+  "TurnOnElectricKettle": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnElectricKettle/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "TurnOnElectricKettle",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnElectricKettle/20250820/lerobot"
+  },
+  "TurnOnMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnMicrowave/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "TurnOnMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnMicrowave/20250819/lerobot"
+  },
+  "TurnOnSinkFaucet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnSinkFaucet/20250819/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "TurnOnSinkFaucet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnSinkFaucet/20250819/lerobot"
+  },
+  "TurnOnStove": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnStove/20250819/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "TurnOnStove",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnStove/20250819/lerobot"
+  },
+  "TurnOnToaster": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnToaster/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "TurnOnToaster",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnToaster/20250820/lerobot"
+  },
+  "TurnOnToasterOven": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnOnToasterOven/20250820/lerobot",
+    "horizon": 450,
+    "filter_key": "100_demos",
+    "task": "TurnOnToasterOven",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnOnToasterOven/20250820/lerobot"
+  },
+  "TurnSinkSpout": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/TurnSinkSpout/20250820/lerobot",
+    "horizon": 300,
+    "filter_key": "100_demos",
+    "task": "TurnSinkSpout",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/TurnSinkSpout/20250820/lerobot"
+  },
+  "MakeIcedCoffee": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/MakeIcedCoffee/20250801/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "MakeIcedCoffee",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/MakeIcedCoffee/20250801/lerobot"
+  },
+  "CheesyBread": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/CheesyBread/20250714/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "CheesyBread",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/CheesyBread/20250714/lerobot"
+  },
+  "LowerHeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/LowerHeat/20250805/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "LowerHeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/LowerHeat/20250805/lerobot"
+  },
+  "PackDessert": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/atomic/PackDessert/20250806/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "PackDessert",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/atomic/PackDessert/20250806/lerobot"
+  },
+  "AddIceCubes": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AddIceCubes/20250829/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "AddIceCubes",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AddIceCubes/20250829/lerobot"
+  },
+  "AddLemonToFish": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AddLemonToFish/20250804/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "AddLemonToFish",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AddLemonToFish/20250804/lerobot"
+  },
+  "AddMarshmallow": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AddMarshmallow/20250805/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "AddMarshmallow",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AddMarshmallow/20250805/lerobot"
+  },
+  "AddSugarCubes": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AddSugarCubes/20250804/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "AddSugarCubes",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AddSugarCubes/20250804/lerobot"
+  },
+  "AddSweetener": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AddSweetener/20250829/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "AddSweetener",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AddSweetener/20250829/lerobot"
+  },
+  "AdjustHeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AdjustHeat/20250724/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "AdjustHeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AdjustHeat/20250724/lerobot"
+  },
+  "AfterwashSorting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AfterwashSorting/20250723/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "AfterwashSorting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AfterwashSorting/20250723/lerobot"
+  },
+  "AirDryFruit": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AirDryFruit/20250718/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "AirDryFruit",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AirDryFruit/20250718/lerobot"
+  },
+  "AlcoholServingPrep": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AlcoholServingPrep/20250724/lerobot",
+    "horizon": 4650,
+    "filter_key": "100_demos",
+    "task": "AlcoholServingPrep",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AlcoholServingPrep/20250724/lerobot"
+  },
+  "AlignSilverware": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AlignSilverware/20250801/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "AlignSilverware",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AlignSilverware/20250801/lerobot"
+  },
+  "ArrangeBreadBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeBreadBowl/20250903/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "ArrangeBreadBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeBreadBowl/20250903/lerobot"
+  },
+  "ArrangeBuffetDessert": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeBuffetDessert/20250730/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "ArrangeBuffetDessert",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeBuffetDessert/20250730/lerobot"
+  },
+  "ArrangeDrinkware": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeDrinkware/20250902/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "ArrangeDrinkware",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeDrinkware/20250902/lerobot"
+  },
+  "ArrangeTeaAccompaniments": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeTeaAccompaniments/20250805/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "ArrangeTeaAccompaniments",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeTeaAccompaniments/20250805/lerobot"
+  },
+  "ArrangeUtensilsByType": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeUtensilsByType/20250805/lerobot",
+    "horizon": 5100,
+    "filter_key": "100_demos",
+    "task": "ArrangeUtensilsByType",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeUtensilsByType/20250805/lerobot"
+  },
+  "ArrangeVegetables": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ArrangeVegetables/20250714/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "ArrangeVegetables",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ArrangeVegetables/20250714/lerobot"
+  },
+  "AssembleCookingArray": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/AssembleCookingArray/20250721/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "AssembleCookingArray",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/AssembleCookingArray/20250721/lerobot"
+  },
+  "BalancedMealPrep": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BalancedMealPrep/20250729/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "BalancedMealPrep",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BalancedMealPrep/20250729/lerobot"
+  },
+  "BeverageOrganization": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BeverageOrganization/20250725/lerobot",
+    "horizon": 4500,
+    "filter_key": "100_demos",
+    "task": "BeverageOrganization",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BeverageOrganization/20250725/lerobot"
+  },
+  "BeverageSorting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BeverageSorting/20250718/lerobot",
+    "horizon": 5250,
+    "filter_key": "100_demos",
+    "task": "BeverageSorting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BeverageSorting/20250718/lerobot"
+  },
+  "BlendIngredients": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BlendIngredients/20250829/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "BlendIngredients",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BlendIngredients/20250829/lerobot"
+  },
+  "BlendMarinade": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BlendMarinade/20250902/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "BlendMarinade",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BlendMarinade/20250902/lerobot"
+  },
+  "BowlAndCup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BowlAndCup/20250715/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "BowlAndCup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BowlAndCup/20250715/lerobot"
+  },
+  "BreadAndCheese": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BreadAndCheese/20250723/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "BreadAndCheese",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BreadAndCheese/20250723/lerobot"
+  },
+  "BreadSetupSlicing": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BreadSetupSlicing/20250719/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "BreadSetupSlicing",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BreadSetupSlicing/20250719/lerobot"
+  },
+  "BuildAppetizerPlate": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/BuildAppetizerPlate/20250804/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "BuildAppetizerPlate",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/BuildAppetizerPlate/20250804/lerobot"
+  },
+  "ButterOnPan": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ButterOnPan/20250724/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "ButterOnPan",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ButterOnPan/20250724/lerobot"
+  },
+  "CandleCleanup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CandleCleanup/20250721/lerobot",
+    "horizon": 4500,
+    "filter_key": "100_demos",
+    "task": "CandleCleanup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CandleCleanup/20250721/lerobot"
+  },
+  "CerealAndBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CerealAndBowl/20250725/lerobot",
+    "horizon": 4350,
+    "filter_key": "100_demos",
+    "task": "CerealAndBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CerealAndBowl/20250725/lerobot"
+  },
+  "ChooseMeasuringCup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ChooseMeasuringCup/20250718/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "ChooseMeasuringCup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ChooseMeasuringCup/20250718/lerobot"
+  },
+  "ChooseRipeFruit": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ChooseRipeFruit/20250901/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "ChooseRipeFruit",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ChooseRipeFruit/20250901/lerobot"
+  },
+  "CleanBoard": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CleanBoard/20250729/lerobot",
+    "horizon": 4800,
+    "filter_key": "100_demos",
+    "task": "CleanBoard",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CleanBoard/20250729/lerobot"
+  },
+  "CleanMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CleanMicrowave/20250724/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "CleanMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CleanMicrowave/20250724/lerobot"
+  },
+  "ClearClutter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearClutter/20250723/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "ClearClutter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearClutter/20250723/lerobot"
+  },
+  "ClearCuttingBoard": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearCuttingBoard/20250719/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "ClearCuttingBoard",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearCuttingBoard/20250719/lerobot"
+  },
+  "ClearFoodWaste": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearFoodWaste/20250728/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "ClearFoodWaste",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearFoodWaste/20250728/lerobot"
+  },
+  "ClearFreezer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearFreezer/20250807/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "ClearFreezer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearFreezer/20250807/lerobot"
+  },
+  "ClearReceptaclesForCleaning": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearReceptaclesForCleaning/20250721/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "ClearReceptaclesForCleaning",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearReceptaclesForCleaning/20250721/lerobot"
+  },
+  "ClearSink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearSink/20250717/lerobot",
+    "horizon": 4950,
+    "filter_key": "100_demos",
+    "task": "ClearSink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearSink/20250717/lerobot"
+  },
+  "ClearSinkArea": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearSinkArea/20250728/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "ClearSinkArea",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearSinkArea/20250728/lerobot"
+  },
+  "ClearSinkSpace": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ClearSinkSpace/20250718/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "ClearSinkSpace",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ClearSinkSpace/20250718/lerobot"
+  },
+  "CollectWashingSupplies": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CollectWashingSupplies/20250717/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "CollectWashingSupplies",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CollectWashingSupplies/20250717/lerobot"
+  },
+  "ColorfulSalsa": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ColorfulSalsa/20250719/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "ColorfulSalsa",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ColorfulSalsa/20250719/lerobot"
+  },
+  "CondimentCollection": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CondimentCollection/20250721/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "CondimentCollection",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CondimentCollection/20250721/lerobot"
+  },
+  "CookieDoughPrep": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CookieDoughPrep/20250728/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "CookieDoughPrep",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CookieDoughPrep/20250728/lerobot"
+  },
+  "CoolBakedCake": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CoolBakedCake/20250729/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "CoolBakedCake",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CoolBakedCake/20250729/lerobot"
+  },
+  "CoolKettle": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CoolKettle/20250717/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "CoolKettle",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CoolKettle/20250717/lerobot"
+  },
+  "CreateChildFriendlyFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CreateChildFriendlyFridge/20250826/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "CreateChildFriendlyFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CreateChildFriendlyFridge/20250826/lerobot"
+  },
+  "CupcakeCleanup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CupcakeCleanup/20250716/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "CupcakeCleanup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CupcakeCleanup/20250716/lerobot"
+  },
+  "CutBuffetPizza": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/CutBuffetPizza/20250730/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "CutBuffetPizza",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/CutBuffetPizza/20250730/lerobot"
+  },
+  "DateNight": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DateNight/20250725/lerobot",
+    "horizon": 4800,
+    "filter_key": "100_demos",
+    "task": "DateNight",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DateNight/20250725/lerobot"
+  },
+  "DefrostByCategory": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DefrostByCategory/20250716/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "DefrostByCategory",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DefrostByCategory/20250716/lerobot"
+  },
+  "DeliverBrewedCoffee": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DeliverBrewedCoffee/20250904/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "DeliverBrewedCoffee",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DeliverBrewedCoffee/20250904/lerobot"
+  },
+  "DeliverStraw": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DeliverStraw/20250723/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "DeliverStraw",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DeliverStraw/20250723/lerobot"
+  },
+  "DessertAssembly": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DessertAssembly/20250719/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "DessertAssembly",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DessertAssembly/20250719/lerobot"
+  },
+  "DessertUpgrade": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DessertUpgrade/20250724/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "DessertUpgrade",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DessertUpgrade/20250724/lerobot"
+  },
+  "DisplayMeatVariety": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DisplayMeatVariety/20250804/lerobot",
+    "horizon": 4350,
+    "filter_key": "100_demos",
+    "task": "DisplayMeatVariety",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DisplayMeatVariety/20250804/lerobot"
+  },
+  "DistributeChicken": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DistributeChicken/20250807/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "DistributeChicken",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DistributeChicken/20250807/lerobot"
+  },
+  "DivideBasins": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DivideBasins/20250718/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "DivideBasins",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DivideBasins/20250718/lerobot"
+  },
+  "DivideBuffetTrays": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DivideBuffetTrays/20250730/lerobot",
+    "horizon": 7200,
+    "filter_key": "100_demos",
+    "task": "DivideBuffetTrays",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DivideBuffetTrays/20250730/lerobot"
+  },
+  "DrainVeggies": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DrainVeggies/20250723/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "DrainVeggies",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DrainVeggies/20250723/lerobot"
+  },
+  "DrinkwareConsolidation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DrinkwareConsolidation/20250723/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "DrinkwareConsolidation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DrinkwareConsolidation/20250723/lerobot"
+  },
+  "DryDishes": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DryDishes/20250714/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "DryDishes",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DryDishes/20250714/lerobot"
+  },
+  "DryDrinkware": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DryDrinkware/20250714/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "DryDrinkware",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DryDrinkware/20250714/lerobot"
+  },
+  "DumpLeftovers": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/DumpLeftovers/20250902/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "DumpLeftovers",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/DumpLeftovers/20250902/lerobot"
+  },
+  "FillBlenderJug": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FillBlenderJug/20250902/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "FillBlenderJug",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FillBlenderJug/20250902/lerobot"
+  },
+  "FillKettle": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FillKettle/20250721/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "FillKettle",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FillKettle/20250721/lerobot"
+  },
+  "FilterMicrowavableItem": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FilterMicrowavableItem/20250901/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "FilterMicrowavableItem",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FilterMicrowavableItem/20250901/lerobot"
+  },
+  "FoodCleanup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FoodCleanup/20250725/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "FoodCleanup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FoodCleanup/20250725/lerobot"
+  },
+  "FreezeBottledWaters": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FreezeBottledWaters/20250807/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "FreezeBottledWaters",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FreezeBottledWaters/20250807/lerobot"
+  },
+  "FreezeCookedFood": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FreezeCookedFood/20250804/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "FreezeCookedFood",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FreezeCookedFood/20250804/lerobot"
+  },
+  "FreezeIceTray": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FreezeIceTray/20250807/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "FreezeIceTray",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FreezeIceTray/20250807/lerobot"
+  },
+  "FreshProduceOrganization": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FreshProduceOrganization/20250828/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "FreshProduceOrganization",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FreshProduceOrganization/20250828/lerobot"
+  },
+  "FryingPanAdjustment": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/FryingPanAdjustment/20250714/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "FryingPanAdjustment",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/FryingPanAdjustment/20250714/lerobot"
+  },
+  "GarnishCupcake": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/GarnishCupcake/20250804/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "GarnishCupcake",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/GarnishCupcake/20250804/lerobot"
+  },
+  "GatherCuttingTools": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/GatherCuttingTools/20250730/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "GatherCuttingTools",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/GatherCuttingTools/20250730/lerobot"
+  },
+  "GatherMarinadeIngredients": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/GatherMarinadeIngredients/20250729/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "GatherMarinadeIngredients",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/GatherMarinadeIngredients/20250729/lerobot"
+  },
+  "GatherVegetables": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/GatherVegetables/20250805/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "GatherVegetables",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/GatherVegetables/20250805/lerobot"
+  },
+  "GetToastedBread": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/GetToastedBread/20250731/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "GetToastedBread",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/GetToastedBread/20250731/lerobot"
+  },
+  "HeatMug": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/HeatMug/20250725/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "HeatMug",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/HeatMug/20250725/lerobot"
+  },
+  "HeatMultipleWater": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/HeatMultipleWater/20250714/lerobot",
+    "horizon": 4200,
+    "filter_key": "100_demos",
+    "task": "HeatMultipleWater",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/HeatMultipleWater/20250714/lerobot"
+  },
+  "HotDogSetup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/HotDogSetup/20250805/lerobot",
+    "horizon": 4200,
+    "filter_key": "100_demos",
+    "task": "HotDogSetup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/HotDogSetup/20250805/lerobot"
+  },
+  "JuiceFruitReamer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/JuiceFruitReamer/20250902/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "JuiceFruitReamer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/JuiceFruitReamer/20250902/lerobot"
+  },
+  "KettleBoiling": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/KettleBoiling/20250725/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "KettleBoiling",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/KettleBoiling/20250725/lerobot"
+  },
+  "LemonSeasoningFish": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LemonSeasoningFish/20250731/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "LemonSeasoningFish",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LemonSeasoningFish/20250731/lerobot"
+  },
+  "LineUpCondiments": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LineUpCondiments/20250731/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "LineUpCondiments",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LineUpCondiments/20250731/lerobot"
+  },
+  "LoadCondimentsInFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LoadCondimentsInFridge/20250826/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "LoadCondimentsInFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LoadCondimentsInFridge/20250826/lerobot"
+  },
+  "LoadDishwasher": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LoadDishwasher/20250717/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "LoadDishwasher",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LoadDishwasher/20250717/lerobot"
+  },
+  "LoadFridgeByType": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LoadFridgeByType/20250827/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "LoadFridgeByType",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LoadFridgeByType/20250827/lerobot"
+  },
+  "LoadFridgeFifo": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LoadFridgeFifo/20250826/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "LoadFridgeFifo",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LoadFridgeFifo/20250826/lerobot"
+  },
+  "LoadPreparedFood": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/LoadPreparedFood/20250827/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "LoadPreparedFood",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/LoadPreparedFood/20250827/lerobot"
+  },
+  "MakeFruitBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MakeFruitBowl/20250723/lerobot",
+    "horizon": 3450,
+    "filter_key": "100_demos",
+    "task": "MakeFruitBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MakeFruitBowl/20250723/lerobot"
+  },
+  "MakeLoadedPotato": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MakeLoadedPotato/20250724/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "MakeLoadedPotato",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MakeLoadedPotato/20250724/lerobot"
+  },
+  "MatchCupAndDrink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MatchCupAndDrink/20250723/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "MatchCupAndDrink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MatchCupAndDrink/20250723/lerobot"
+  },
+  "MaximizeFreezerSpace": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MaximizeFreezerSpace/20250807/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "MaximizeFreezerSpace",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MaximizeFreezerSpace/20250807/lerobot"
+  },
+  "MealPrepStaging": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MealPrepStaging/20250718/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "MealPrepStaging",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MealPrepStaging/20250718/lerobot"
+  },
+  "MeatSkewerAssembly": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MeatSkewerAssembly/20250804/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "MeatSkewerAssembly",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MeatSkewerAssembly/20250804/lerobot"
+  },
+  "MeatTransfer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MeatTransfer/20250721/lerobot",
+    "horizon": 3450,
+    "filter_key": "100_demos",
+    "task": "MeatTransfer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MeatTransfer/20250721/lerobot"
+  },
+  "MicrowaveCorrectMeal": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MicrowaveCorrectMeal/20250901/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "MicrowaveCorrectMeal",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MicrowaveCorrectMeal/20250901/lerobot"
+  },
+  "MicrowaveDefrostMeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MicrowaveDefrostMeat/20250901/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "MicrowaveDefrostMeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MicrowaveDefrostMeat/20250901/lerobot"
+  },
+  "MicrowaveThawing": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MicrowaveThawing/20250715/lerobot",
+    "horizon": 4650,
+    "filter_key": "100_demos",
+    "task": "MicrowaveThawing",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MicrowaveThawing/20250715/lerobot"
+  },
+  "MicrowaveThawingFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MicrowaveThawingFridge/20250730/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "MicrowaveThawingFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MicrowaveThawingFridge/20250730/lerobot"
+  },
+  "MixCakeFrosting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MixCakeFrosting/20250728/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "MixCakeFrosting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MixCakeFrosting/20250728/lerobot"
+  },
+  "MixedFruitPlatter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MixedFruitPlatter/20250804/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "MixedFruitPlatter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MixedFruitPlatter/20250804/lerobot"
+  },
+  "MoveFreezerToFridge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MoveFreezerToFridge/20250827/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "MoveFreezerToFridge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MoveFreezerToFridge/20250827/lerobot"
+  },
+  "MoveFridgeToFreezer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MoveFridgeToFreezer/20250807/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "MoveFridgeToFreezer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MoveFridgeToFreezer/20250807/lerobot"
+  },
+  "MoveToCounter": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MoveToCounter/20250729/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "MoveToCounter",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MoveToCounter/20250729/lerobot"
+  },
+  "MoveToFreezerDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MoveToFreezerDrawer/20250902/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "MoveToFreezerDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MoveToFreezerDrawer/20250902/lerobot"
+  },
+  "MultistepSteaming": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/MultistepSteaming/20250724/lerobot",
+    "horizon": 3450,
+    "filter_key": "100_demos",
+    "task": "MultistepSteaming",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/MultistepSteaming/20250724/lerobot"
+  },
+  "OrganizeBakingIngredients": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeBakingIngredients/20250725/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "OrganizeBakingIngredients",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeBakingIngredients/20250725/lerobot"
+  },
+  "OrganizeCleaningSupplies": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeCleaningSupplies/20250723/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "OrganizeCleaningSupplies",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeCleaningSupplies/20250723/lerobot"
+  },
+  "OrganizeCoffeeCondiments": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeCoffeeCondiments/20250731/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "OrganizeCoffeeCondiments",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeCoffeeCondiments/20250731/lerobot"
+  },
+  "OrganizeCondiments": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeCondiments/20250731/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "OrganizeCondiments",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeCondiments/20250731/lerobot"
+  },
+  "OrganizeMetallicUtensils": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeMetallicUtensils/20250806/lerobot",
+    "horizon": 3150,
+    "filter_key": "100_demos",
+    "task": "OrganizeMetallicUtensils",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeMetallicUtensils/20250806/lerobot"
+  },
+  "OrganizeMugsByHandle": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeMugsByHandle/20250718/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "OrganizeMugsByHandle",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeMugsByHandle/20250718/lerobot"
+  },
+  "OrganizeVegetables": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OrganizeVegetables/20250719/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "OrganizeVegetables",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OrganizeVegetables/20250719/lerobot"
+  },
+  "OvenBroilFish": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/OvenBroilFish/20250805/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "OvenBroilFish",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/OvenBroilFish/20250805/lerobot"
+  },
+  "PackFoodByTemp": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PackFoodByTemp/20250805/lerobot",
+    "horizon": 4950,
+    "filter_key": "100_demos",
+    "task": "PackFoodByTemp",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PackFoodByTemp/20250805/lerobot"
+  },
+  "PackFruitContainer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PackFruitContainer/20250806/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "PackFruitContainer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PackFruitContainer/20250806/lerobot"
+  },
+  "PackIdenticalLunches": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PackIdenticalLunches/20250805/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "PackIdenticalLunches",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PackIdenticalLunches/20250805/lerobot"
+  },
+  "PastryDisplay": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PastryDisplay/20250724/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "PastryDisplay",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PastryDisplay/20250724/lerobot"
+  },
+  "PlaceBeveragesTogether": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceBeveragesTogether/20250730/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "PlaceBeveragesTogether",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceBeveragesTogether/20250730/lerobot"
+  },
+  "PlaceDishesBySink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceDishesBySink/20250717/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "PlaceDishesBySink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceDishesBySink/20250717/lerobot"
+  },
+  "PlaceEqualIceCubes": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceEqualIceCubes/20250801/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "PlaceEqualIceCubes",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceEqualIceCubes/20250801/lerobot"
+  },
+  "PlaceFoodInBowls": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceFoodInBowls/20250725/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "PlaceFoodInBowls",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceFoodInBowls/20250725/lerobot"
+  },
+  "PlaceIceInCup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceIceInCup/20250801/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "PlaceIceInCup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceIceInCup/20250801/lerobot"
+  },
+  "PlaceMeatInMarinade": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceMeatInMarinade/20250728/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "PlaceMeatInMarinade",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceMeatInMarinade/20250728/lerobot"
+  },
+  "PlaceMicrowaveSafeItem": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceMicrowaveSafeItem/20250901/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "PlaceMicrowaveSafeItem",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceMicrowaveSafeItem/20250901/lerobot"
+  },
+  "PlaceStraw": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceStraw/20250829/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "PlaceStraw",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceStraw/20250829/lerobot"
+  },
+  "PlaceVegetablesEvenly": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceVegetablesEvenly/20250724/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "PlaceVegetablesEvenly",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceVegetablesEvenly/20250724/lerobot"
+  },
+  "PlaceVeggiesInDrawer": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlaceVeggiesInDrawer/20250826/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "PlaceVeggiesInDrawer",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlaceVeggiesInDrawer/20250826/lerobot"
+  },
+  "PlateSteakMeal": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlateSteakMeal/20250902/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "PlateSteakMeal",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlateSteakMeal/20250902/lerobot"
+  },
+  "PlateStoreDinner": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PlateStoreDinner/20250730/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "PlateStoreDinner",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PlateStoreDinner/20250730/lerobot"
+  },
+  "PortionFruitBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PortionFruitBowl/20250807/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "PortionFruitBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PortionFruitBowl/20250807/lerobot"
+  },
+  "PortionInTupperware": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PortionInTupperware/20250807/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "PortionInTupperware",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PortionInTupperware/20250807/lerobot"
+  },
+  "PortionOnSize": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PortionOnSize/20250806/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "PortionOnSize",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PortionOnSize/20250806/lerobot"
+  },
+  "PortionYogurt": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PortionYogurt/20250806/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "PortionYogurt",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PortionYogurt/20250806/lerobot"
+  },
+  "PreRinseStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PreRinseStation/20250717/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "PreRinseStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PreRinseStation/20250717/lerobot"
+  },
+  "PreSoakPan": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PreSoakPan/20250715/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "PreSoakPan",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PreSoakPan/20250715/lerobot"
+  },
+  "PreheatPot": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PreheatPot/20250724/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "PreheatPot",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PreheatPot/20250724/lerobot"
+  },
+  "PrepForSanitizing": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepForSanitizing/20250715/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "PrepForSanitizing",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepForSanitizing/20250715/lerobot"
+  },
+  "PrepForTenderizing": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepForTenderizing/20250721/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "PrepForTenderizing",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepForTenderizing/20250721/lerobot"
+  },
+  "PrepFridgeForCleaning": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepFridgeForCleaning/20250805/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "PrepFridgeForCleaning",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepFridgeForCleaning/20250805/lerobot"
+  },
+  "PrepMarinatingMeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepMarinatingMeat/20250714/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "PrepMarinatingMeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepMarinatingMeat/20250714/lerobot"
+  },
+  "PrepSinkForCleaning": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepSinkForCleaning/20250806/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "PrepSinkForCleaning",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepSinkForCleaning/20250806/lerobot"
+  },
+  "PrepareBroilingStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareBroilingStation/20250804/lerobot",
+    "horizon": 900,
+    "filter_key": "100_demos",
+    "task": "PrepareBroilingStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareBroilingStation/20250804/lerobot"
+  },
+  "PrepareCheeseStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareCheeseStation/20250728/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "PrepareCheeseStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareCheeseStation/20250728/lerobot"
+  },
+  "PrepareCocktailStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareCocktailStation/20250801/lerobot",
+    "horizon": 5250,
+    "filter_key": "100_demos",
+    "task": "PrepareCocktailStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareCocktailStation/20250801/lerobot"
+  },
+  "PrepareCoffee": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareCoffee/20250716/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "PrepareCoffee",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareCoffee/20250716/lerobot"
+  },
+  "PrepareDishwasher": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareDishwasher/20250717/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "PrepareDishwasher",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareDishwasher/20250717/lerobot"
+  },
+  "PrepareDrinkStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareDrinkStation/20250723/lerobot",
+    "horizon": 5850,
+    "filter_key": "100_demos",
+    "task": "PrepareDrinkStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareDrinkStation/20250723/lerobot"
+  },
+  "PrepareSausageCheese": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareSausageCheese/20250805/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "PrepareSausageCheese",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareSausageCheese/20250805/lerobot"
+  },
+  "PrepareSmoothie": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareSmoothie/20250829/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "PrepareSmoothie",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareSmoothie/20250829/lerobot"
+  },
+  "PrepareSoupServing": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareSoupServing/20250724/lerobot",
+    "horizon": 3450,
+    "filter_key": "100_demos",
+    "task": "PrepareSoupServing",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareSoupServing/20250724/lerobot"
+  },
+  "PrepareStoringLeftovers": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareStoringLeftovers/20250903/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "PrepareStoringLeftovers",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareStoringLeftovers/20250903/lerobot"
+  },
+  "PrepareToast": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrepareToast/20250714/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "PrepareToast",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrepareToast/20250714/lerobot"
+  },
+  "PressChicken": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PressChicken/20250717/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "PressChicken",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PressChicken/20250717/lerobot"
+  },
+  "PrewashFoodAssembly": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrewashFoodAssembly/20250714/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "PrewashFoodAssembly",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrewashFoodAssembly/20250714/lerobot"
+  },
+  "PrewashFoodSorting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/PrewashFoodSorting/20250718/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "PrewashFoodSorting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/PrewashFoodSorting/20250718/lerobot"
+  },
+  "QuickThaw": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/QuickThaw/20250725/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "QuickThaw",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/QuickThaw/20250725/lerobot"
+  },
+  "RearrangeFridgeItems": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RearrangeFridgeItems/20250827/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "RearrangeFridgeItems",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RearrangeFridgeItems/20250827/lerobot"
+  },
+  "RecycleBottlesBySize": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RecycleBottlesBySize/20250717/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "RecycleBottlesBySize",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RecycleBottlesBySize/20250717/lerobot"
+  },
+  "RecycleSodaCans": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RecycleSodaCans/20250719/lerobot",
+    "horizon": 6750,
+    "filter_key": "100_demos",
+    "task": "RecycleSodaCans",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RecycleSodaCans/20250719/lerobot"
+  },
+  "RecycleStackedYogurt": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RecycleStackedYogurt/20250717/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "RecycleStackedYogurt",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RecycleStackedYogurt/20250717/lerobot"
+  },
+  "RefillCondimentStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RefillCondimentStation/20250827/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "RefillCondimentStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RefillCondimentStation/20250827/lerobot"
+  },
+  "ReheatMeal": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ReheatMeal/20250901/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "ReheatMeal",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ReheatMeal/20250901/lerobot"
+  },
+  "RemoveBroiledFish": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RemoveBroiledFish/20250805/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "RemoveBroiledFish",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RemoveBroiledFish/20250805/lerobot"
+  },
+  "RemoveCuttingBoardItems": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RemoveCuttingBoardItems/20250805/lerobot",
+    "horizon": 750,
+    "filter_key": "100_demos",
+    "task": "RemoveCuttingBoardItems",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RemoveCuttingBoardItems/20250805/lerobot"
+  },
+  "ReorganizeFrozenVegetables": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ReorganizeFrozenVegetables/20250807/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "ReorganizeFrozenVegetables",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ReorganizeFrozenVegetables/20250807/lerobot"
+  },
+  "ResetCabinetDoors": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ResetCabinetDoors/20250731/lerobot",
+    "horizon": 3300,
+    "filter_key": "100_demos",
+    "task": "ResetCabinetDoors",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ResetCabinetDoors/20250731/lerobot"
+  },
+  "RestockBowls": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RestockBowls/20250725/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "RestockBowls",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RestockBowls/20250725/lerobot"
+  },
+  "RestockCannedFood": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RestockCannedFood/20250827/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "RestockCannedFood",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RestockCannedFood/20250827/lerobot"
+  },
+  "RestockPantry": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RestockPantry/20250714/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "RestockPantry",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RestockPantry/20250714/lerobot"
+  },
+  "RestockSinkSupplies": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RestockSinkSupplies/20250827/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "RestockSinkSupplies",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RestockSinkSupplies/20250827/lerobot"
+  },
+  "RetrieveIceTray": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RetrieveIceTray/20250801/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "RetrieveIceTray",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RetrieveIceTray/20250801/lerobot"
+  },
+  "RetrieveMeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RetrieveMeat/20250728/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "RetrieveMeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RetrieveMeat/20250728/lerobot"
+  },
+  "ReturnHeatedFood": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ReturnHeatedFood/20250901/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "ReturnHeatedFood",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ReturnHeatedFood/20250901/lerobot"
+  },
+  "ReturnWashingSupplies": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ReturnWashingSupplies/20250717/lerobot",
+    "horizon": 5100,
+    "filter_key": "100_demos",
+    "task": "ReturnWashingSupplies",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ReturnWashingSupplies/20250717/lerobot"
+  },
+  "RinseBowls": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RinseBowls/20250718/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "RinseBowls",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RinseBowls/20250718/lerobot"
+  },
+  "RinseCuttingBoard": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RinseCuttingBoard/20250805/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "RinseCuttingBoard",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RinseCuttingBoard/20250805/lerobot"
+  },
+  "RinseSinkBasin": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RinseSinkBasin/20250728/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "RinseSinkBasin",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RinseSinkBasin/20250728/lerobot"
+  },
+  "RotatePan": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/RotatePan/20250717/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "RotatePan",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/RotatePan/20250717/lerobot"
+  },
+  "SanitizePrepCuttingBoard": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SanitizePrepCuttingBoard/20250806/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "SanitizePrepCuttingBoard",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SanitizePrepCuttingBoard/20250806/lerobot"
+  },
+  "ScalePortioning": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ScalePortioning/20250807/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "ScalePortioning",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ScalePortioning/20250807/lerobot"
+  },
+  "ScrubBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ScrubBowl/20250717/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "ScrubBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ScrubBowl/20250717/lerobot"
+  },
+  "ScrubCuttingBoard": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ScrubCuttingBoard/20250805/lerobot",
+    "horizon": 1200,
+    "filter_key": "100_demos",
+    "task": "ScrubCuttingBoard",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ScrubCuttingBoard/20250805/lerobot"
+  },
+  "SearingMeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SearingMeat/20250716/lerobot",
+    "horizon": 4350,
+    "filter_key": "100_demos",
+    "task": "SearingMeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SearingMeat/20250716/lerobot"
+  },
+  "SeasoningSpiceSetup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SeasoningSpiceSetup/20250728/lerobot",
+    "horizon": 4200,
+    "filter_key": "100_demos",
+    "task": "SeasoningSpiceSetup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SeasoningSpiceSetup/20250728/lerobot"
+  },
+  "SeasoningSteak": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SeasoningSteak/20250731/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "SeasoningSteak",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SeasoningSteak/20250731/lerobot"
+  },
+  "ServeSteak": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ServeSteak/20250718/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "ServeSteak",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ServeSteak/20250718/lerobot"
+  },
+  "ServeTea": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ServeTea/20250805/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "ServeTea",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ServeTea/20250805/lerobot"
+  },
+  "ServeWarmCroissant": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ServeWarmCroissant/20250731/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "ServeWarmCroissant",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ServeWarmCroissant/20250731/lerobot"
+  },
+  "SetBowlsForSoup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetBowlsForSoup/20250716/lerobot",
+    "horizon": 5400,
+    "filter_key": "100_demos",
+    "task": "SetBowlsForSoup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetBowlsForSoup/20250716/lerobot"
+  },
+  "SetUpCuttingStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetUpCuttingStation/20250729/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "SetUpCuttingStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetUpCuttingStation/20250729/lerobot"
+  },
+  "SetUpSpiceStation": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetUpSpiceStation/20250731/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "SetUpSpiceStation",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetUpSpiceStation/20250731/lerobot"
+  },
+  "SetupBowls": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupBowls/20250801/lerobot",
+    "horizon": 2700,
+    "filter_key": "100_demos",
+    "task": "SetupBowls",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupBowls/20250801/lerobot"
+  },
+  "SetupButterPlate": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupButterPlate/20250801/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "SetupButterPlate",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupButterPlate/20250801/lerobot"
+  },
+  "SetupFruitBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupFruitBowl/20250801/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "SetupFruitBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupFruitBowl/20250801/lerobot"
+  },
+  "SetupFrying": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupFrying/20250724/lerobot",
+    "horizon": 3150,
+    "filter_key": "100_demos",
+    "task": "SetupFrying",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupFrying/20250724/lerobot"
+  },
+  "SetupSodaBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupSodaBowl/20250801/lerobot",
+    "horizon": 3600,
+    "filter_key": "100_demos",
+    "task": "SetupSodaBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupSodaBowl/20250801/lerobot"
+  },
+  "SetupWineGlasses": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SetupWineGlasses/20250801/lerobot",
+    "horizon": 3150,
+    "filter_key": "100_demos",
+    "task": "SetupWineGlasses",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SetupWineGlasses/20250801/lerobot"
+  },
+  "ShakePan": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ShakePan/20250724/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "ShakePan",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ShakePan/20250724/lerobot"
+  },
+  "SimmeringSauce": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SimmeringSauce/20250715/lerobot",
+    "horizon": 3450,
+    "filter_key": "100_demos",
+    "task": "SimmeringSauce",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SimmeringSauce/20250715/lerobot"
+  },
+  "SizeSorting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SizeSorting/20250714/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "SizeSorting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SizeSorting/20250714/lerobot"
+  },
+  "SnackSorting": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SnackSorting/20250718/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "SnackSorting",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SnackSorting/20250718/lerobot"
+  },
+  "SoakSponge": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SoakSponge/20250718/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "SoakSponge",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SoakSponge/20250718/lerobot"
+  },
+  "SortingCleanup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SortingCleanup/20250723/lerobot",
+    "horizon": 3000,
+    "filter_key": "100_demos",
+    "task": "SortingCleanup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SortingCleanup/20250723/lerobot"
+  },
+  "SpicyMarinade": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SpicyMarinade/20250715/lerobot",
+    "horizon": 5400,
+    "filter_key": "100_demos",
+    "task": "SpicyMarinade",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SpicyMarinade/20250715/lerobot"
+  },
+  "StackBowlsCabinet": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StackBowlsCabinet/20250717/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "StackBowlsCabinet",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StackBowlsCabinet/20250717/lerobot"
+  },
+  "StackBowlsInSink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StackBowlsInSink/20250714/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "StackBowlsInSink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StackBowlsInSink/20250714/lerobot"
+  },
+  "StackCans": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StackCans/20250731/lerobot",
+    "horizon": 1800,
+    "filter_key": "100_demos",
+    "task": "StackCans",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StackCans/20250731/lerobot"
+  },
+  "StartElectricKettle": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StartElectricKettle/20250717/lerobot",
+    "horizon": 1050,
+    "filter_key": "100_demos",
+    "task": "StartElectricKettle",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StartElectricKettle/20250717/lerobot"
+  },
+  "SteamInMicrowave": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SteamInMicrowave/20250714/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "SteamInMicrowave",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SteamInMicrowave/20250714/lerobot"
+  },
+  "StirVegetables": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StirVegetables/20250807/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "StirVegetables",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StirVegetables/20250807/lerobot"
+  },
+  "StockingBreakfastFoods": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StockingBreakfastFoods/20250715/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "StockingBreakfastFoods",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StockingBreakfastFoods/20250715/lerobot"
+  },
+  "StoreDumplings": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StoreDumplings/20250804/lerobot",
+    "horizon": 3750,
+    "filter_key": "100_demos",
+    "task": "StoreDumplings",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StoreDumplings/20250804/lerobot"
+  },
+  "StoreLeftoversByType": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StoreLeftoversByType/20250804/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "StoreLeftoversByType",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StoreLeftoversByType/20250804/lerobot"
+  },
+  "StoreLeftoversInBowl": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StoreLeftoversInBowl/20250804/lerobot",
+    "horizon": 2550,
+    "filter_key": "100_demos",
+    "task": "StoreLeftoversInBowl",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StoreLeftoversInBowl/20250804/lerobot"
+  },
+  "StrainerSetup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/StrainerSetup/20250805/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "StrainerSetup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": true,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/StrainerSetup/20250805/lerobot"
+  },
+  "SweetSavoryToastSetup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SweetSavoryToastSetup/20250721/lerobot",
+    "horizon": 4050,
+    "filter_key": "100_demos",
+    "task": "SweetSavoryToastSetup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SweetSavoryToastSetup/20250721/lerobot"
+  },
+  "SweetenCoffee": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SweetenCoffee/20250904/lerobot",
+    "horizon": 1950,
+    "filter_key": "100_demos",
+    "task": "SweetenCoffee",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SweetenCoffee/20250904/lerobot"
+  },
+  "SweetenHotChocolate": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/SweetenHotChocolate/20250805/lerobot",
+    "horizon": 2100,
+    "filter_key": "100_demos",
+    "task": "SweetenHotChocolate",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/SweetenHotChocolate/20250805/lerobot"
+  },
+  "ThawInSink": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ThawInSink/20250721/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "ThawInSink",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ThawInSink/20250721/lerobot"
+  },
+  "TiltPan": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/TiltPan/20250808/lerobot",
+    "horizon": 600,
+    "filter_key": "100_demos",
+    "task": "TiltPan",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/TiltPan/20250808/lerobot"
+  },
+  "ToastBagel": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ToastBagel/20250731/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "ToastBagel",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ToastBagel/20250731/lerobot"
+  },
+  "ToastBaguette": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ToastBaguette/20250731/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "ToastBaguette",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ToastBaguette/20250731/lerobot"
+  },
+  "ToastOnCorrectRack": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/ToastOnCorrectRack/20250731/lerobot",
+    "horizon": 3900,
+    "filter_key": "100_demos",
+    "task": "ToastOnCorrectRack",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/ToastOnCorrectRack/20250731/lerobot"
+  },
+  "TongBuffetSetup": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/TongBuffetSetup/20250730/lerobot",
+    "horizon": 2400,
+    "filter_key": "100_demos",
+    "task": "TongBuffetSetup",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/TongBuffetSetup/20250730/lerobot"
+  },
+  "TransportCookware": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/TransportCookware/20250717/lerobot",
+    "horizon": 2850,
+    "filter_key": "100_demos",
+    "task": "TransportCookware",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/TransportCookware/20250717/lerobot"
+  },
+  "TurnOffSimmeredSauceHeat": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/TurnOffSimmeredSauceHeat/20250728/lerobot",
+    "horizon": 1500,
+    "filter_key": "100_demos",
+    "task": "TurnOffSimmeredSauceHeat",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/TurnOffSimmeredSauceHeat/20250728/lerobot"
+  },
+  "VeggieDipPrep": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/VeggieDipPrep/20250718/lerobot",
+    "horizon": 3150,
+    "filter_key": "100_demos",
+    "task": "VeggieDipPrep",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/VeggieDipPrep/20250718/lerobot"
+  },
+  "WarmCroissant": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/WarmCroissant/20250724/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "WarmCroissant",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/WarmCroissant/20250724/lerobot"
+  },
+  "WashFish": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/WashFish/20250805/lerobot",
+    "horizon": 1350,
+    "filter_key": "100_demos",
+    "task": "WashFish",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/WashFish/20250805/lerobot"
+  },
+  "WashLettuce": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/WashLettuce/20250723/lerobot",
+    "horizon": 1650,
+    "filter_key": "100_demos",
+    "task": "WashLettuce",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/WashLettuce/20250723/lerobot"
+  },
+  "YogurtDelightPrep": {
+    "path": "/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/robocasa/src/robocasa/datasets/v1.0/pretrain/composite/YogurtDelightPrep/20250725/lerobot",
+    "horizon": 2250,
+    "filter_key": "100_demos",
+    "task": "YogurtDelightPrep",
+    "split": "pretrain",
+    "source": "human",
+    "installed": false,
+    "resolved_path": "/inspire/hdd/project/exploration-topic/ky26060/OpenETA-assets/robocasa-human-demos-pretrain/composite/YogurtDelightPrep/20250725/lerobot"
+  }
+}

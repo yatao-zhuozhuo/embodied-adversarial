@@ -1,0 +1,1040 @@
+{
+  "task_key": "metaworld/hammer-v3",
+  "records": [
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 798482728,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06382236542391245,
+          0.4054198947328458,
+          0.0
+        ],
+        "/object_position": [
+          0.06382236542391245,
+          0.4054198947328458,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f7e926883917875288cb5a27080d16db63061a0dd9256963267430d3e53e9a9d",
+      "task_state_fingerprint": "14c5ca0fffd90c2d4cf88218cfb70e74ea338b99da45ec17939f347c64d7813d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/000/native_camera_2.png",
+          "sha256": "853f9c40f0116246e136c5453a3d3fb26db6ec365eaf431cbb249a71ff854c32"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1770972170,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0515689494273687,
+          0.47657079496728894,
+          0.0
+        ],
+        "/object_position": [
+          0.0515689494273687,
+          0.47657079496728894,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "28211403ef6a82263fe3df32a4475905deb7c05455871d20b1c187c109db102f",
+      "task_state_fingerprint": "1ead7aa9e414701b8733313d35044b3a9a2c1ad8609d460200fec29573a8b283",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/001/native_camera_2.png",
+          "sha256": "40bea45446c550a8dccfc7595e6bfb0cf40bcc3bcd078871a9d8e0444f072583"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/002",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 199131960,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.032507489136588186,
+          0.40985092261737066,
+          0.0
+        ],
+        "/object_position": [
+          0.032507489136588186,
+          0.40985092261737066,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "eb82d74180569cca30446d7e59bb9415ce7e7695bf5214495de1d453ce7e0698",
+      "task_state_fingerprint": "781ad9de2fc5285878d7c2fb5246cc92b2ec56f2a45bcd0a48ce0242e94af346",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/002/native_camera_2.png",
+          "sha256": "842f0b140acbefe62474ab8aeb5996797da331dab056fbf706ab960096a5b97d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/005",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1481241132,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07404772443871166,
+          0.42619423601922896,
+          0.0
+        ],
+        "/object_position": [
+          -0.07404772443871166,
+          0.42619423601922896,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e54668324386141bb92f091709eaff441a1e709228d5127f8368df4cbbf6db4c",
+      "task_state_fingerprint": "ba1b84ad76b4e4453172364291a218ea836cf117463f0b2e902311fb27f1fe5e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/005/native_camera_2.png",
+          "sha256": "19ad8cb5a4b61b59a2b817babda49a1f2451b723581cf08fc57547c897e7e83e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/008",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1222224359,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06761401391600694,
+          0.4093454763762218,
+          0.0
+        ],
+        "/object_position": [
+          0.06761401391600694,
+          0.4093454763762218,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b39bdfcf5cab7713741d0f16b000f061959e31c5fbff9b7153038eeb85f93d0e",
+      "task_state_fingerprint": "e945e73aaf2f2dafc0637e81ebed5615beacc1c0a6645e48c634b1344f8159a1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/008/native_camera_2.png",
+          "sha256": "d6c9740e51563ecfe8bd825991d37ae42ce25c0da628e82a7c24021c45cb7812"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/011",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 595520544,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.012462420810742142,
+          0.4885516864896771,
+          0.0
+        ],
+        "/object_position": [
+          -0.012462420810742142,
+          0.4885516864896771,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ede379c07569801329273032e769cdc89b06fcec0c9698076ac252f9e051ecbc",
+      "task_state_fingerprint": "a77ce5f8280cb40a6c6becdd6a282894fdc13f34a9fee7f2970a3f80a61f0538",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/011/native_camera_2.png",
+          "sha256": "a9ff4b1b85a69a6ba526263f33de633a2e91463cf0de8a1d22bead80874b1cb1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/sft_train/014",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1406394488,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03017279005962277,
+          0.40553924951660836,
+          0.0
+        ],
+        "/object_position": [
+          -0.03017279005962277,
+          0.40553924951660836,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "47ff2e277d42abc9e19313670b02e040e98102de2bfb6f723c4aa93e26fb7c3c",
+      "task_state_fingerprint": "c80559f5e872192df17cdeea0d409cf172d29efb65c652d3267d4024dacab95e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/sft_train/014/native_camera_2.png",
+          "sha256": "51d2a45effd62c245ae0aec0c1f2d8b50ee380cd48c6c996263845e8af6b7343"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 21092546,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04738340386130918,
+          0.4952198688733961,
+          0.0
+        ],
+        "/object_position": [
+          0.04738340386130918,
+          0.4952198688733961,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6b9ce0bc9bb41907bb2da0b9ffd4ffa6c4ede5424f9ce3b7616d4b5542249705",
+      "task_state_fingerprint": "83dec24e1fb9f24502ddc4a3c3aa7c6a5b568005a00ff90806f2087d6e6ba30e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/000/native_camera_2.png",
+          "sha256": "70803b7c1a6c1fdc9e5aaa86de7d67b06b9516c93dba748bd5e5436383567f62"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 523990746,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.016519062142648422,
+          0.49873703100064243,
+          0.0
+        ],
+        "/object_position": [
+          -0.016519062142648422,
+          0.49873703100064243,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "279713c21dee3d538f92da3836d9e6a4be0e5a9493ea92a5c6bc44b35c9febb9",
+      "task_state_fingerprint": "7fe895ef3c2512c5eb7b3250cd32d9f84e20b93144cb8cca5feb5a819ef12ff5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/001/native_camera_2.png",
+          "sha256": "f15810d6c5cbc95e96cb6e411d03f213a28647cc1431d6487bce107e96fc6207"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/002",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 591736105,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.014620518303841173,
+          0.49480064781665334,
+          0.0
+        ],
+        "/object_position": [
+          -0.014620518303841173,
+          0.49480064781665334,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6cc1b098f9ba668bfcc2106c272046045fe6227011debfe3cec90c6393a332df",
+      "task_state_fingerprint": "28aff94e04b9b371a261ba75f830bdad5b6f359b6c1c6dc4c928ea0e20b2e3f9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/002/native_camera_2.png",
+          "sha256": "a8a59bd547b7824d34b7f6ae2babec236cad719f1564cd557097eaf3b759faf0"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/005",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 240846024,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.038221609179995564,
+          0.4155638469422264,
+          0.0
+        ],
+        "/object_position": [
+          0.038221609179995564,
+          0.4155638469422264,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b87161612b048e53bb4f3c4ffdc0b69cd4e255722fe4a36b13cf93e771f25d2e",
+      "task_state_fingerprint": "47212264e013375e3500eddcdea98a1ac558a4cb93fd35f5e171a0a8cb55d156",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/005/native_camera_2.png",
+          "sha256": "3926f1e70fa72ff34ce9135e66b1bd34ea9abd77242503f699b8c03e3db51846"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/008",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 222128424,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07528727124273518,
+          0.4338619978928386,
+          0.0
+        ],
+        "/object_position": [
+          -0.07528727124273518,
+          0.4338619978928386,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7efcb1a6e31cfc687b35bdb4c870044e909b9e57650b031e521447ec1fe032fa",
+      "task_state_fingerprint": "ddbd8e70556011b26419ed42e314cf4c1620c8ec62c886b3ccc9e61cff481057",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/008/native_camera_2.png",
+          "sha256": "9346bf11f3498c60e36d71e77860eb9cdb9a884885a3242ccabaec08f22344e8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/011",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 553837612,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07422639565809791,
+          0.4390660875948441,
+          0.0
+        ],
+        "/object_position": [
+          0.07422639565809791,
+          0.4390660875948441,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6194c4451879f322d2038e5877ad19e2ba9c10204295bc3f375af995b2aa75e7",
+      "task_state_fingerprint": "714f948d702ad546cb10b6315b7c819f365038829a04d05f6ec5841d07f4a824",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/011/native_camera_2.png",
+          "sha256": "010a25ab56a7845a7be3486511786bbb298ae885f8c560a6a691f1bb72ed2f36"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/rl_train/014",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1740981666,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07328612932401837,
+          0.4563436138534773,
+          0.0
+        ],
+        "/object_position": [
+          -0.07328612932401837,
+          0.4563436138534773,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "de329d21b81adcda9feb99390b740a2994a2e1f7a9e2f24ee346f5b0f0b27bac",
+      "task_state_fingerprint": "344f993c13ed004b6965cc87696d9c1ca9635f807cd52884af3e25d9842a814d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/rl_train/014/native_camera_2.png",
+          "sha256": "9c12678d0374f0b1258bc7de37f12e6a31886c7823bfd4fed249e1f2fd500441"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/validation/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1850084917,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07462988002351659,
+          0.4952242498250802,
+          0.0
+        ],
+        "/object_position": [
+          -0.07462988002351659,
+          0.4952242498250802,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fb5cb09f948018bbe766be66b76dd5663e6c85920d0f8ea87d86b8492dfc34d3",
+      "task_state_fingerprint": "65b8276f40b7fe4d1849a1e2a19b4eeed7c3ba1559e56bb08d02d84219db61d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/validation/000/native_camera_2.png",
+          "sha256": "ca6b983cec01294593a54828bc5b49ff39fff594441775e6fc97bbdda5443aee"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 793510320,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05360350675283304,
+          0.4387209222794791,
+          0.0
+        ],
+        "/object_position": [
+          0.05360350675283304,
+          0.4387209222794791,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f324b380cf0acda79d9b27edcc5e894b943092922d5d61912216c314c516d59c",
+      "task_state_fingerprint": "66ea2cf6924b555a4a7303c65566ccb4a867ff57613bba309f7b924e37956317",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "79db1c591845436c1c51c02326d92bd48031be80b41a1f40cfe1807e28b46a1c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1849343304,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08804734456595265,
+          0.4938076215557967,
+          0.0
+        ],
+        "/object_position": [
+          0.08804734456595265,
+          0.4938076215557967,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cb212ba9f302c63174040dbce4303e9ec09d8f0a334e24b3c45fc37288e416b8",
+      "task_state_fingerprint": "4db74c7059cbe5071a97f90efe9a792a4a5ea1b1ddfa3e0f8c2bc00d0cf850d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "a88497187a602282fa1fc82dc38e386f8f70519cffdf0129c5ecfc698ea87e29"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/002",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 901971320,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.035961163806779745,
+          0.42482909894925536,
+          0.0
+        ],
+        "/object_position": [
+          -0.035961163806779745,
+          0.42482909894925536,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e51c878389e1e1945b499df9ce75e7a5d9223f29187081f3ced849535f3c2a7a",
+      "task_state_fingerprint": "4cf2a560b9de52749093056e1802d5ca5f4670077b5c171c94b591331d5ce1b0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "fdc75d347545fc2e776eb2af28af13d0f2ce2b77b54b42c331948e8cbe91de45"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/006",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1383678179,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06345121150592087,
+          0.48411767383037446,
+          0.0
+        ],
+        "/object_position": [
+          0.06345121150592087,
+          0.48411767383037446,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "79c8270e4a6559dbf26231e86c30a7b6d12cfc11cf5e70f041d230f6570e904d",
+      "task_state_fingerprint": "4c93d6b9c7fbfe328e3058791cf1c7bb0d640a796ffe8a31179264e06f638bc0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "a7ed0afac48faf9f152c1ad10fe0b06e6f8bc08e7bfac58d774b4ce91796c88e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/010",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 622020764,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06175701800367517,
+          0.40430690135918956,
+          0.0
+        ],
+        "/object_position": [
+          -0.06175701800367517,
+          0.40430690135918956,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e132aa815434b52c4c159426b166ba60e97d56f88c1a2f99dadd03678f156cb3",
+      "task_state_fingerprint": "91d1eff82a0351e4051c858652b2c3a98cc3a56eb716b9d012b21b6ccd65fa21",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "5f44a33bdaa472a777e06d94878781568f347c434b17d33a372496a28c8a3566"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/014",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 677559793,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06731287474718368,
+          0.4253997941423014,
+          0.0
+        ],
+        "/object_position": [
+          -0.06731287474718368,
+          0.4253997941423014,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4572745b2c1d21bfc85f6a63bf5f43fdb0cbf9067d1b8e98810be85f832e06a2",
+      "task_state_fingerprint": "844aaf0ea17865bba88737ad212d623ea0c71457d3caca58869b609ddad162db",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "ec9901f2e1de204a180b5d672b3f62cdd55628b02555f3e499192ade9c0e24e6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/eval_seen/019",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 934394944,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0865174972456122,
+          0.4774861300609647,
+          0.0
+        ],
+        "/object_position": [
+          -0.0865174972456122,
+          0.4774861300609647,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "903d17dbd08d3e773787bbdaa61dc0ff3068a907d61857d067868e0eadfc8ad0",
+      "task_state_fingerprint": "736c47a8969e36e66daece6893b0f159431c32b68bb27c4a17a2bccac301b5e3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "813b6068688757f6094d90274e428392ce91a2ee518beb383394cfb00d1b1adc"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/hammer-v3/validation/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1309461857,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07912255639506408,
+          0.41789778852244636,
+          0.0
+        ],
+        "/object_position": [
+          0.07912255639506408,
+          0.41789778852244636,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "881f6a62b7873551775e7bb19395d4bd2913db891e405dc29b06c8387c9a3f9b",
+      "task_state_fingerprint": "8ec0efaef5eee06be4bfdd71b3d389352da2d869a5400b2a0ac80ec72a98db32",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/hammer-v3/validation/001/native_camera_2.png",
+          "sha256": "0069f4fa0b286753ef564d82c4e8191dfa305eba02bba1cfe7ea4c653f08a40b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

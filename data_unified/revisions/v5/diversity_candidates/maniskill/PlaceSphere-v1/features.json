@@ -1,0 +1,1385 @@
+{
+  "task_key": "maniskill/PlaceSphere-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 26544805,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07087412476539612,
+            -0.08449174463748932,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.009098916314542294,
+            0.06273894757032394,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7d8d44d26a2364629f96e15defb31e7c258ee5068b695656874dd70750b46da2",
+      "task_state_fingerprint": "c0deb4de7daf525930d5db9e3b204b803ab6b3898adbbc0b80b182e8dd80b4df",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/000/base_camera.png",
+          "sha256": "d5a3c15b51a4500ba08be34437a607018574b6aa3fb4c04612de3229fd1071ed"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1468115625,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.057253461331129074,
+            0.05900178104639053,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.08402423560619354,
+            -0.033751897513866425,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0b7b198d51f93d88131401fa6cab60a1a23ba422a8f97ef7ff1f0209ca28bba0",
+      "task_state_fingerprint": "784ad64e41b0c08e44964ae715e8e7c0997a3b371dad23d2ddd1442f746fa00d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/001/base_camera.png",
+          "sha256": "a63cc3bbfb4827d169546885a2f4e1d4d720604b6ecb2c1dc4d1b15538924b96"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/002",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 202169653,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05185903236269951,
+            -0.04698596149682999,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.06771960109472275,
+            -0.03009282797574997,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "33b705aecc01e4b2abdba27cc758629b004016345e9bc53e67f7b9d7cac86346",
+      "task_state_fingerprint": "20e16c760f2a3f6bfc67cba8384a0ff6486b45a41ed8f944409ef80e53a511ad",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/002/base_camera.png",
+          "sha256": "82dbc5bd301daddd7ec2c2890ab820f6edd015f2540a6f23a6a901db17ba59d7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/005",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 628144109,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06036800146102905,
+            0.026920266449451447,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.08520398288965225,
+            -0.02885150909423828,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1a7328af05cdc996a9fb535e7ba3b4e3adfe4a4a2aaa7767705a0c3b375bd5fe",
+      "task_state_fingerprint": "a0d9d4988dca520e4cb7a68d7cc7f940338c2d0a38ca9da602bc69d7f180a9d2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/005/base_camera.png",
+          "sha256": "646b879bd8bcceb68d83c4ebb2008e201871bd428b09e3cb8a26ecf14e32195f"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/008",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1726758634,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.08879983425140381,
+            -0.0686434805393219,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.04364515841007233,
+            0.007499001920223236,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "65be08f40d7d7ec71a565b41c83302ea47ac1ad63918980756a914c16978a932",
+      "task_state_fingerprint": "252ce3b4c0111d894e8ae39610950d71f10d3d9ba4d91e3e6bac36b64302c894",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/008/base_camera.png",
+          "sha256": "3499e92875fedef35c4ee97b8afe1e76afe4c4364a745db8b5eb93db9d477ff8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/011",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1254531241,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.09378895163536072,
+            0.039374567568302155,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.06092249974608421,
+            0.09433282166719437,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e92bf6a8e0d7ae8cc485cdd2ac6b2aafabcfee8b3d4bf59736d3d1287484618b",
+      "task_state_fingerprint": "2d9171b50268960935c566fb62a34cf623e1ddf00d98ba4ef66bfa89b6ba44f5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/011/base_camera.png",
+          "sha256": "b0076f27da9e93864c52002630bf1aa12135d3547009f63f921e3644419feed8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/014",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 838643167,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.08113815635442734,
+            -0.014701969921588898,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.014644363895058632,
+            -0.09779496490955353,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "61322df644bb002e1ddeaa32793d37364800b7bc5a0bac6584a09a072bf1fc7e",
+      "task_state_fingerprint": "ef2ac880698f3f1c706ab1d5bd5d13d3b64fd4fb59dbf284511d22105caa9b3b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/sft_train/014/base_camera.png",
+          "sha256": "0224a8e9644e80c856e6b48ccacb4ebd617298942a7c266c86a4eaee910c3bad"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 847987959,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05228696018457413,
+            0.09205598384141922,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.03602069243788719,
+            -0.01544884592294693,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "78154e2df1d9b66dbc57c2ed4826a7c3cd3c54024c4e06f9df4e7b4b1ca4b830",
+      "task_state_fingerprint": "a6f215a8d5c70be9b5e7bfa00f95a1cad9417b62c2ed2b42a096b024caa2a76a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/000/base_camera.png",
+          "sha256": "21e2dca413e716f937f86476df93b1fe6198650169085d4c7c9fc1f586b3d200"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 846218096,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.08116341382265091,
+            -0.07770612090826035,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.09461497515439987,
+            0.024815477430820465,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4e65ef621ff984250aac82ad4ecfa48c8c3ecb2032aca60cd01c971ba7f20ee5",
+      "task_state_fingerprint": "3f389a12f4d8addc9f42f57d31b57c8120df8cf87df76ad93afc39926b712638",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/001/base_camera.png",
+          "sha256": "70c6ed72ca54d59b0f715fb4bf0c9b9bf44d5c33169671e56a5b943fbca688dc"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/002",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1972942028,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06304129958152771,
+            0.03090200573205948,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.06076384335756302,
+            0.06862609833478928,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8978d66a5d5e7b9a3f27c5f517fce749d116d76f412d3ddae1a19dc5e77b926c",
+      "task_state_fingerprint": "99cc129f930a9fd79aa03092b3c0fa380fc9518e1a0ff2adf2ca44a7df7e34ac",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/002/base_camera.png",
+          "sha256": "95139e0734121d8d89ae2fcade12101c9d3a9a1fad92220b8785c650d249a6a7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/005",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 923902656,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07642166316509247,
+            -0.0723903700709343,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.040739428251981735,
+            -0.02549445629119873,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "582f4eb3a4364239cdeb529760cf97e1f4c59d5794fbf7fc1fcc162c22df00ae",
+      "task_state_fingerprint": "70c7ae6606a61f325f5ea6beee756837f7e6f60fa99142c56da2c46a05fb0b85",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/005/base_camera.png",
+          "sha256": "734a391b0a5ebd83b103092db2391038ebd1e8b2b4b17b73514883bedf7e5634"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/008",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 675546538,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.09711064398288727,
+            0.03603171557188034,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.07099933922290802,
+            -0.05961168557405472,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "09c4ddfedfe210977bc5a4fefa945242d4a0f63750b146a73d1cc6a02bdb513a",
+      "task_state_fingerprint": "3742f23c718c174bdaafcdc0f29aa6e6ba0060f34a3bd1af20dce6eaa6f09e1c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/008/base_camera.png",
+          "sha256": "09853bf02df39b8bab52842c58dc9dc9ae90aeb025f861aa26c5a715861f0b00"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/011",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1262633317,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05645191669464111,
+            0.07434398680925369,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.03387951850891113,
+            -0.00936984270811081,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "369ef139134bf917b635bcde7ac099aa4fe8201f5db18db9c0d82aa626a98ee5",
+      "task_state_fingerprint": "0f65ce00c0d2ab79cc53c1b436c219816c86b94a5eec7eccba3bcb9bcab5fb39",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/011/base_camera.png",
+          "sha256": "eec4c753b188e804600d5ce17e383a8bb9d7e6944b3b7d6cc370c6d12c690818"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/014",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 689486060,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05154232308268547,
+            -0.021330200135707855,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.010618389584124088,
+            -0.055949728935956955,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0a797e2147b7fbb52a62672cedf688912a5ca29571b7d2a1127b6ea19a8ffc01",
+      "task_state_fingerprint": "ff26a87025e70b279ca8077b61425dbc8e5f27b5abb253cbe50c561f8ac626f5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/rl_train/014/base_camera.png",
+          "sha256": "54bf3067f488a3c1ea892b24d7947ea93e264470c49e3f33fe730d6ee37c0bd6"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/validation/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1709811859,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.058876629918813705,
+            0.0011453628540039062,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.04665868729352951,
+            0.09511596709489822,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a8372f167293c7a3bccc06c9aa2989179df726bb4e9f1400b0fc75549d074a93",
+      "task_state_fingerprint": "0f19df63a8be5208da69da676763cee37e7a166d678d9cae3b967228dc969d37",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/validation/000/base_camera.png",
+          "sha256": "0e840a384251318bb2e3245d188b6c9655ab1d9c4405cbba4b596ea91e31034c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1998460458,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06508728861808777,
+            -0.018136508762836456,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.006143323145806789,
+            0.009658418595790863,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b59e3c8337ca666075c453db02748c74e956b87d24335f3a6bf83f753c5887fb",
+      "task_state_fingerprint": "4c520c1b198d793d287b0a8a775374e26863526761ac33ccb5b6bd03dbf09854",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/000/base_camera.png",
+          "sha256": "ff59f959d6ab98878cd0b23b85f45ccabc7e3efdac806d8b36c306ca61a4e532"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1701255636,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07798856496810913,
+            -0.008092649281024933,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.07022721320390701,
+            0.002100728452205658,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c4450879fa6aab8f643cb3669fddb63670a8fe5d2e03ebba94bbf116a6d39a78",
+      "task_state_fingerprint": "2ee5f8d03e015c3653114e0a89f07a218f40405ef8e7f2044f692146f84ac731",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/001/base_camera.png",
+          "sha256": "1f106008443664fabb29fe71a6be4a663be2be35999df966f25dee19246b0556"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/002",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 84689466,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.054237909615039825,
+            0.05673467367887497,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.00033295611501671374,
+            0.09547204524278641,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c0f8b46d32572d834bbc608105e0e359014174ea17dfa3f1846cc0a6698274fb",
+      "task_state_fingerprint": "4237d2448ac783cf777349f87b4c0cfb016cbd299713eb5fedbbdb38bbf06716",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/002/base_camera.png",
+          "sha256": "66ddf9c6d2dcc236974c9b0ced94b35afc4e8c56e5b7e8ec9b8696ea2a8b2e55"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/006",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 124462336,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06156659871339798,
+            -0.025091931223869324,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.09947719424962997,
+            -0.025279037654399872,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7b0e4a47ceac383f41b8a5558674ffe6b5f6092a6e9d2a90b6518b3cd99c6684",
+      "task_state_fingerprint": "76a823356a8d72d6d4e448442575f7573bde819e7d103508a05891ad01e79c58",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/006/base_camera.png",
+          "sha256": "0302dd1f9ef3927aad936b6c0745aa1c6456db8c4b30169d439750b0c90011cb"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/010",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 595714514,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06776866316795349,
+            0.08984272927045822,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.09466227889060974,
+            -0.012419715523719788,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "07e835e8547ce6e831635ed8a9eead2c468688c2d348fd3b39886af13a7c89e8",
+      "task_state_fingerprint": "b7e26f49694f2b6e79e154ed4a5efb917c0edd0931d183c117a63271ef3b2f12",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/010/base_camera.png",
+          "sha256": "e07602ad2524e1877da06c9c5645e5be8a1f53c04b2095c360e3931a7d5f0603"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/014",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 696366373,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05227476358413696,
+            0.04947150498628616,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.08574095368385315,
+            -0.005706667900085449,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c6dfa88a5172c2dedc3a65621e38e77296f2d8085aa35934e7bb711e732778a5",
+      "task_state_fingerprint": "d16fb084da3192bc22c715f0b329fd10f340e752a875331971ec9ed6c879b150",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/014/base_camera.png",
+          "sha256": "75cc7fd74e992b9d75221fcfd57ef5ab59adf09cfe68058cd82413a22551ff10"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/019",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1039611701,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.09005442261695862,
+            -0.054605428129434586,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.08756130933761597,
+            -0.07939617335796356,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee55f1c18ba64906629fa6fa9a692caf4e31655862739d0cc1b8fcde908e19b7",
+      "task_state_fingerprint": "281daf286ce244a614c0f425f15f70ef8d40672802cad9ebfe88957dec048d4b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/eval_seen/019/base_camera.png",
+          "sha256": "8db260a62b2e1269fdad13626a78a8babb49a25b35d076a33e8482852930e7a1"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlaceSphere-v1/validation/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 599886815,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07623408734798431,
+            -0.0844516009092331,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.024912148714065552,
+            -0.043551005423069,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "156c6d99d0dfd6d03237616e1974799b41659de480980cfa727d8ddd9bf166b9",
+      "task_state_fingerprint": "9bf05f59c9b2478607944e840975dc8148cc1cef087f9f7289028ce325858726",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlaceSphere-v1/validation/001/base_camera.png",
+          "sha256": "882386ab8848b41289e9f51ccc5f2bb4b5c311fde9b75b92c4ec638041ad64ff"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    }
+  ]
+}

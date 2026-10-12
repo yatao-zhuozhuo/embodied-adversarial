@@ -1,0 +1,26 @@
+{
+  "split_revision": 3,
+  "reason": "User requested four runnable replacement tasks while retaining 15 shared and 5 generalization tasks per benchmark.",
+  "replacements": [
+    {
+      "old": "AssemblingKits-v1",
+      "new": "DrawTriangle-v1",
+      "role": "shared"
+    },
+    {
+      "old": "TurnFaucet-v1",
+      "new": "DrawSVG-v1",
+      "role": "shared"
+    },
+    {
+      "old": "OpenCabinetDoor-v1",
+      "new": "RotateSingleObjectInHandLevel3-v1",
+      "role": "generalization"
+    },
+    {
+      "old": "OpenCabinetDrawer-v1",
+      "new": "InsertFlower-v1",
+      "role": "generalization"
+    }
+  ]
+}

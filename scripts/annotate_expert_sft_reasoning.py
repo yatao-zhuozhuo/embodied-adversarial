@@ -24,16 +24,23 @@ from scripts.collect_two_tool_sft import PROVIDERS, _call_model, _write_json
 
 MODEL = "gemini-3.6-flash"
 SCHEMA = "openeta.sft.artificial_action_gemini_reasoning.v1"
+PROMPT_VERSION = "step_purpose.v2"
 SYSTEM = (
     "You annotate an already-executed robot demonstration for supervised training. "
-    "Write only one short English sentence explaining why the FIXED next action is sensible "
-    "from the visible current observation and supplied prior history. "
+    "Explain the immediate purpose of this FIXED next step in progressing toward the task, "
+    "rather than merely describing the action or its numeric direction. "
+    "State the local subgoal this action is intended to achieve, grounded in the current observation. "
+    "Mention motion or gripper behavior only when necessary to explain that purpose. "
+    "Do not infer a successful grasp or object possession from a close-gripper command alone. "
+    "Write one concise English sentence. "
     "This is a post-hoc explanation, not your own action choice. Do not change or propose "
     "an action, cite hidden simulator state, or refer to any future observation or success. "
     "Do not claim a movement has succeeded before it happens. No XML, JSON or markdown. "
     "If evidence is ambiguous, say what the action is intended to do rather than inventing facts. "
     "Do not guess an object's color, shape or identity from ambiguous pixels; use the task's object name. "
-    "Use world-axis language only when the action mapping makes it unambiguous."
+    "Use world-axis language only when the action mapping makes it unambiguous. "
+    "Do not mention official implementations, expert policies, demonstrations, replay, "
+    "annotation, source code or dataset construction in the explanation."
 )
 
 
@@ -69,7 +76,9 @@ def _gemini_content(sample: dict, action_contract: dict) -> list[dict]:
             "Do not reverse this polarity.\n"
             f"Current student-visible state: {json.dumps(compact, ensure_ascii=False)}\n"
             f"Fixed expert decision: {sample['messages'][-1]['content']}\n"
-            "Explain this fixed next step using the current image. It has not been executed yet.")
+            "What immediate task-relevant subgoal is this fixed step intended to achieve? "
+            "Ground the purpose in the current image and visible state, not merely the action numbers. "
+            "It has not been executed yet; do not claim its outcome or assume an object is held.")
     if not sample["images"]:
         raise ValueError("Reasoning preview requires the current RGB observation")
     frame_prefix = f"{int(visible['turn']) - 1:04d}-"
@@ -91,6 +100,8 @@ def _reasoning_from_response(response: dict, *, gripper_state: str) -> tuple[str
         raise ValueError("Gemini reasoning is empty, overlong, or contains markup")
     if "<" in value or ">" in value:
         raise ValueError("Gemini reasoning contains angle brackets")
+    if re.search(r'\b(?:official|implementation|expert policy|replay|demonstration|annotation|source code|dataset)\b', value, re.I):
+        raise ValueError("Gemini reasoning refers to data construction instead of the current action")
     def gripper_verb(verb: str) -> bool:
         forms = (r"open(?:s|ed|ing)?" if verb == "open" else
                  r"clos(?:e|es|ed|ing)")
@@ -106,7 +117,7 @@ def _reasoning_from_response(response: dict, *, gripper_state: str) -> tuple[str
 
 
 def annotate_episode(path: Path, output_root: Path, *, api_key: str, timeout: float,
-                     verbose: bool = True, workers: int = 1) -> dict:
+                     verbose: bool = True, workers: int = 1, model: str = MODEL) -> dict:
     episode_path = path.parent / "episode.json"
     episode = json.loads(episode_path.read_text(encoding="utf-8"))
     if episode.get("success") is not True or episode.get("stop_reason") != "official_success":
@@ -137,8 +148,7 @@ def annotate_episode(path: Path, output_root: Path, *, api_key: str, timeout: fl
             action = decision["parameters"]["action"]
             gripper = action[3 if bench == "metaworld" else 6]
             gripper_state = _gripper_state(bench, gripper)
-            wire = {"model": MODEL, "max_tokens": 512, "provider": "gemini",
-                    "thinking_level": "minimal",
+            wire = {"model": model, "max_tokens": 8192, "provider": "gemini",
                     "messages": [{"role": "system", "content": SYSTEM},
                                  {"role": "user", "content": _gemini_content(sample, episode["action_contract"])}]}
             error = None
@@ -159,7 +169,8 @@ def annotate_episode(path: Path, output_root: Path, *, api_key: str, timeout: fl
                           "source_sample_sha256": hashlib.sha256(
                               json.dumps(sample, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                           "sample_id": sample["sample_id"], "reasoning": reasoning,
-                          "reasoning_model": MODEL, "usage": usage}
+                          "reasoning_model": model, "usage": usage,
+                          "thinking_mode": "provider_default", "prompt_version": PROMPT_VERSION}
             _write_json(cache_path, annotation)
         return annotation
 
@@ -181,7 +192,8 @@ def annotate_episode(path: Path, output_root: Path, *, api_key: str, timeout: fl
         new_sample["schema_version"] = SCHEMA
         new_sample["messages"][-1]["content"] = new_xml
         new_sample["metadata"].update({"reasoning_source": "gemini_posthoc_annotation",
-                                       "reasoning_model": MODEL,
+                                       "reasoning_model": annotation['reasoning_model'],
+                                       "reasoning_prompt_version": PROMPT_VERSION,
                                        "posthoc_annotation": True,
                                        "source_sample_sha256": annotation["source_sample_sha256"]})
         decorated.append(new_sample)
@@ -194,7 +206,9 @@ def annotate_episode(path: Path, output_root: Path, *, api_key: str, timeout: fl
     temporary.replace(output)
     report = {"schema_version": "openeta.reasoning_preview_episode.v1",
               "source_episode": str(episode_path.resolve()), "source_samples_sha256": source_hash,
-              "success": True, "model": MODEL, "action_source": "artificial",
+              "success": True, "model": model,
+              "annotation_models": sorted({annotation['reasoning_model'] for annotation in annotations}),
+              "action_source": "artificial", "prompt_version": PROMPT_VERSION,
               "reasoning_source": "gemini_posthoc_annotation", "turns": len(decorated),
               "output": str(output.resolve())}
     _write_json(directory / "report.json", report)

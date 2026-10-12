@@ -1,0 +1,5985 @@
+{
+  "task_key": "maniskill/FMBAssembly1Easy-v1",
+  "records": [
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/000",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 978402592,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.13559916615486145,
+            0.22874651849269867,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.13559916615486145,
+            0.19874651730060577,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "50b4f3136a0c12242729f77aeff35e9c2b84734963d6449c7ab0822f949f79bc",
+      "task_state_fingerprint": "13f50167ad74f31830be1d5e6a4873e278ae07edee4d5d9264fb57d35430d5c8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/000/base_camera.png",
+          "sha256": "b78f5690c7a525f6862d00b3ee3fff443236a67e06bbccdafb34412599732851"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/001",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 294956880,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12160295993089676,
+            0.2290828675031662,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12160295993089676,
+            0.1990828663110733,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "83080ae46059e9f736d2be937cabaffe0fb5772084ee5888968b557e9637cad9",
+      "task_state_fingerprint": "32c83f81df5fde355abff60ac05c76fdc6db72f1b4a08eb7fa9f62a3fb193666",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/001/base_camera.png",
+          "sha256": "786bd17f641335d6cde515bbe327a30bc1552748de907d579eaa0d1bae58d19e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/002",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 468193497,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.13981185853481293,
+            0.21952056884765625,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.13981185853481293,
+            0.18952056765556335,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f959810afeb1f9ace601c508dbfd130c97ea155c2df46256077de74f1ec0dc07",
+      "task_state_fingerprint": "9ad912a10f80a41117b3316fa0dbaef5b4b9cacc72b67bf9dae5779ac37513c1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/002/base_camera.png",
+          "sha256": "9b4479e104c3b0a820f9d15cfef378573b95706044be5211eaa360ce3c7fd02c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/003",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 516921115,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.10836517810821533,
+            0.24300231039524078,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.10836517810821533,
+            0.2130023092031479,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7a9a8228b1d796c40ee03af70a9eb99a349fc49b2df3a54bcc87bfc58a9080ba",
+      "task_state_fingerprint": "cdaddb96877e4e8969ec4108cf34fb39ac80aa0a76cbfaf77d7ce0772039dccb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/003/base_camera.png",
+          "sha256": "bea2795c865bb7698fd2540e1055f67711dfc47b7fc4622c530802a6afad6086"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/004",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1166367878,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12971808016300201,
+            0.24266724288463593,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12971808016300201,
+            0.21266724169254303,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "652137a735bcbceaf9c7d3b350c9573221b66f3b887a607b07b968fdc56cf416",
+      "task_state_fingerprint": "e0ac684083e35584af1876c9c38244b4e1f98df1ac05fa6ed56a9b2d9c62dbb3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/004/base_camera.png",
+          "sha256": "ce525112a98e81144ea1170df693f2cf256edbaff9ef6360929ce2b6da37ed92"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/005",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1855613898,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11069916188716888,
+            0.25468507409095764,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11069916188716888,
+            0.22468507289886475,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0e18873476e56baab58f40f007d421e1a7aecde25021edceac3b003f397e8a6c",
+      "task_state_fingerprint": "0b55df04093057d95cd6c5862cd8bff3d41607092be705ad2e6f29ac5ced80ad",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/005/base_camera.png",
+          "sha256": "2ef2931dc77f8828e1031efc2ae8f4423c29bb4b80ac0b894cdccbb383599090"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/006",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1575087819,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.13691703975200653,
+            0.24989449977874756,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.13691703975200653,
+            0.21989449858665466,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e091356760a8befadbd67c4eaf823bd1d02fd45b380297d6f28cc40c6156293a",
+      "task_state_fingerprint": "39d8af022303b5b14379698378611a7eca78f233fd711783503080a7bc2e94ba",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/006/base_camera.png",
+          "sha256": "937b5d64071d2c8b4437e2dfdfa42c72312acf43677ccaa6f29946505e0f0855"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/007",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1517642009,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12342142313718796,
+            0.21223703026771545,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12342142313718796,
+            0.18223702907562256,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "369fe628460f9c1a051bc69ac44982f897886b7d5ce4333a2fcb5e7fbd7b71f8",
+      "task_state_fingerprint": "e9779c217810cadaa1888789ebf398323fcce0e3e176a4f3c21704ca38308948",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/007/base_camera.png",
+          "sha256": "4dac17a3ac72f27acd533f16b3340c1a3ad045aa055f6c2e447153fa5373cb61"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/008",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1154829201,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14861652255058289,
+            0.21619604527950287,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14861652255058289,
+            0.18619604408740997,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e19a05a4a4433a4b9d287b7b0cdeec2f0e142b0dbc460e6cfe119f36c1a120c1",
+      "task_state_fingerprint": "ac5f05275ddce59525edd4c53e03e2f845a116baba1325fd8ee986739186feda",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/008/base_camera.png",
+          "sha256": "6a5ee17d2bf1a2c37860400a7438168b1240267ef4787a99052d3724ed752098"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/009",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1374669310,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1165580302476883,
+            0.24718797206878662,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1165580302476883,
+            0.21718798577785492,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3325a924a615a63f8dbfe94b596636e7240f39d491bfa15f2d0f190d0ec72d83",
+      "task_state_fingerprint": "434c4579e615a7d690e1fe48bbf1d5e0d0625470fb0c68b3914ac1e66109ac63",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/009/base_camera.png",
+          "sha256": "0d868cc136820cda7539649495a7e027a9a860122772c692843bbeb00161c63e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/010",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 470103388,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11871226131916046,
+            0.2318418025970459,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11871226131916046,
+            0.201841801404953,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d43696ede60554888e165c48627e03b89854c6f42c813a05b965105686fb7dfd",
+      "task_state_fingerprint": "718e3a0f02f5033b2fe0a40f04234a982d88c27ddde9a00348ab251713cd4349",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/010/base_camera.png",
+          "sha256": "c12af25dd4722a42759b84f2caa47c11860e71d2800b9f6695fe00b954f807d2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/011",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 714416920,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12217289954423904,
+            0.24149508774280548,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12217289954423904,
+            0.21149508655071259,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0188a1ee50fd804285cbeb5a1775ff67ae62132e6d56bde9461e348781cef693",
+      "task_state_fingerprint": "c2d13900cee15cfcaa677b818b541bbfd23e6f69586519aeaaa528c312a1a344",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/011/base_camera.png",
+          "sha256": "f60f848e3dbef3e0966c2ba64300a3b7b8d0c2a8b4af4f02942ab19c460f1b7e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/012",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1348078121,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1536082923412323,
+            0.23910237848758698,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1536082923412323,
+            0.20910237729549408,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b8988cf615db69db10e6d553a7d8fa54932d20bb34639a7f04b82672ad9428dd",
+      "task_state_fingerprint": "4a5df0cfb1ea6e9e7115f8d0b96a5ac0d94174d270111608618a6b553448f134",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/012/base_camera.png",
+          "sha256": "376eddc56f347ff9979137a269fc976a3173828b9aa5dfe4b5f699a43f567c8e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/013",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 210081633,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12454720586538315,
+            0.24881041049957275,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12454720586538315,
+            0.21881042420864105,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d58cec186d4503a48d94749c8b116265b39962903258367ea8d80464f1eb7190",
+      "task_state_fingerprint": "07a01f5e0eb4cbfea07cc70c4f5b479a46ac2a7d2fb8bdca491d0fa36e890f52",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/013/base_camera.png",
+          "sha256": "595d5f00f909e6523821604353500921ac6f00ecc20d3ce08c5d5e7883056238"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/sft_train/014",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 37811182,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1336311399936676,
+            0.22665277123451233,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1336311399936676,
+            0.19665277004241943,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "83b0be8382d31c52a964e4cb4e82ee6ddd6ed925476e2ac8ae021ede8213666e",
+      "task_state_fingerprint": "fc364154b72b8300f4344158e7f2e1fd410e881a2ea403cf3f8066915b61e1de",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/sft_train/014/base_camera.png",
+          "sha256": "6c661fc319edc2f93440f35522d70c427225c5a59db4ab79f9f2e0a04e7fa136"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/000",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1418012059,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1395401805639267,
+            0.22260774672031403,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1395401805639267,
+            0.19260774552822113,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c034f31a7f8f5ee1a1751d944b84d5c109b464c9ace7ee15cec5f6279bff2bd3",
+      "task_state_fingerprint": "90d6c3025bd66b287c5969429918eed523f87bf4f0210b2ecfcf8ab19215402b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/000/base_camera.png",
+          "sha256": "50b51354976beccf6829d210bfac2de899d61b7477e08efa130a9a2b1ffcca62"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/001",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1061408974,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.10768641531467438,
+            0.25481319427490234,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.10768641531467438,
+            0.22481319308280945,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2586f7aa64fc9c5ff7771fefe7506572e0078b57cc3dc6b44c746a4aa6afdc1e",
+      "task_state_fingerprint": "0feac6b1af47b96cdd54ef807b2b48d278a6cdce840c015312cc94a72de1cf40",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/001/base_camera.png",
+          "sha256": "acee93c4e47c5e2721d2db74c6697595c9e54dc4f293b47598c7fceef99eacaa"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/002",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1465127729,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11695928871631622,
+            0.23544785380363464,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11695928871631622,
+            0.20544785261154175,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6fe1873b60b37b0225f0f1f313331afd419c16f0133fbedbac32ba2c0785746d",
+      "task_state_fingerprint": "3f222bfa1b145d96fe3444b03ef5d83d8a37fcde7b06d7e733b7bdc0e0c89826",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/002/base_camera.png",
+          "sha256": "086890a54e38ee58f401bbeada3ed40e3b62158ecc810a8bf8890b31409acd68"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/003",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 652177064,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12463144212961197,
+            0.24694585800170898,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12463144212961197,
+            0.21694587171077728,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "53c653b6b51995fc7f42823bdabe46c2e7e0526afa0396cb38363da2186cb59f",
+      "task_state_fingerprint": "3fdf0c5a1364c5dcf07b0603c66df3d2f09069de8ca57b7f679d94a5e99e482d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/003/base_camera.png",
+          "sha256": "0fc25a9eaa8c861ca1a06e339fbc31af566f0a270cc4191ce0c2d7b9510387f4"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/004",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 904692169,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1472235918045044,
+            0.24368193745613098,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1472235918045044,
+            0.21368193626403809,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "64b06a0c3aa22629a6e8770f3509ea0f0b6c1cbe1c1411e261165606423b09ad",
+      "task_state_fingerprint": "22a9c93c2f72d318338d9b8215aefe8fcb001a415677ffc2aaca03cfc44e4465",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/004/base_camera.png",
+          "sha256": "f23cae36e793a9dd380bc8f035a103465f2d7c195e179a646cb166838589233a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/005",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 766428509,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.150193452835083,
+            0.2371959388256073,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.150193452835083,
+            0.2071959376335144,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2f0b10f8c88790a2e88734b2239e49068f2fcdb077677016b0d21699ea21201d",
+      "task_state_fingerprint": "2c8576ba4a0f1108f85d2c9fdbdf522b58efd3c00aa71ba11da65649453c6bec",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/005/base_camera.png",
+          "sha256": "d74152636915b35614cd7d54e3c6b25b00c897bd92836634fcc009855ed73343"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/006",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 2136302484,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1300991177558899,
+            0.23818525671958923,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1300991177558899,
+            0.20818525552749634,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9d02137727dc3867a19d73e45622b82cc899f0177c1914b36a2537c75e1afa96",
+      "task_state_fingerprint": "f5fd4d7d9c0fc901e20f09a0bcb55efdbda147fc8af28313a83cb2654b736004",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/006/base_camera.png",
+          "sha256": "6f414306c1c191f1a2863b4acea005f30d452d09c2e6997eca03c68a60d022fa"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/007",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 684075269,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11984936147928238,
+            0.23951579630374908,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11984936147928238,
+            0.2095157951116562,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9b4b8e98e2e2af4e32cce22255c94907ef3adef8c33eaa720d444cccba6cbec5",
+      "task_state_fingerprint": "fb30a043c843428fc8879071518d8877f80ac389b8cdb9f51dbec8afbd19a64f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/007/base_camera.png",
+          "sha256": "b05488beca446c1e7dcf754e9e6c3acef9290a2c98c7b9adaf0e5d062eb27dcb"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/008",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 541989124,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1519273817539215,
+            0.23215316236019135,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1519273817539215,
+            0.20215316116809845,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4523ddcf456262f97f88219e4fc54bf647e382595202a06b121225dc1c49528a",
+      "task_state_fingerprint": "102a2ba4d502d9e21b3695982e41ef65a7d82a13bed239a5c7f90af2591ad31b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/008/base_camera.png",
+          "sha256": "b3459f811f7688487a75c9dc622daa6fc926f77a2c9aa5090dbbf7244627a0ea"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/009",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1925005158,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1343134045600891,
+            0.2229921668767929,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1343134045600891,
+            0.1929921656847,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1269dd3e2f0b7e8f4f270950aeae256d637bebfacab62ea0714348127705b1e5",
+      "task_state_fingerprint": "51dd3a8584d47c1eee08306d9dd07299e363fe87cc470dc24d7e3dd82cd63696",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/009/base_camera.png",
+          "sha256": "f3f045fb8d6937679cd9f280403a1c7ad7239b0139822ffdceface6c3e01c729"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/010",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1589261238,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11285237967967987,
+            0.2070232331752777,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11285237967967987,
+            0.17702323198318481,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0bd5676a6958c0e5d514b02a66d805589872dea1b896abfac2d0f4e2a8cebe9d",
+      "task_state_fingerprint": "e3cffefbe526c320b131dbd89b85a0b03349c5c14a6892f37591fa0be48e2069",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/010/base_camera.png",
+          "sha256": "93e36c38936c1bfa2f40067278407df73d22874a359c17c26b9d3c686b49cfe7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/011",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1378282991,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14092117547988892,
+            0.24800387024879456,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14092117547988892,
+            0.21800388395786285,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d68aa0dfcb54064d965e480e99dc79a0e2ecc5a79dc158ed30558029cf0beefc",
+      "task_state_fingerprint": "9444deae34699d6d069946c226d5bdd257951cc80b2f035cb927b978f2658d0e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/011/base_camera.png",
+          "sha256": "b5c5ff12c65cd60b6fc2ff66261ee5b78824dcc2b25ef54591cac6a6ecd086f5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/012",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1516415549,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12149293720722198,
+            0.21880587935447693,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12149293720722198,
+            0.18880587816238403,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d8d2142066e8987110c690f1d4cd4862c89bd709ddc8e504a9603c011bea369c",
+      "task_state_fingerprint": "980dfe39aae106ab39aecc7b483a2160e02240b64bcc7c574d9990d002539856",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/012/base_camera.png",
+          "sha256": "d4e0db1a83ce33e424ac29000d1e1016f4d312ca5f81efd11cad79940a77ace7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/013",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 691368448,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.12367594242095947,
+            0.2302519679069519,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.12367594242095947,
+            0.200251966714859,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9866973e550b33493dad977a84cc3159dd6ad7e815958a2de8fc5fd7bb03a3eb",
+      "task_state_fingerprint": "a2ab0ade9e929e2346e76c6254cc475bd1716bb27bf3396176b1be06c95b0057",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/013/base_camera.png",
+          "sha256": "63a4805526a4d5a3e461bd9fc4b235f35e621294104e92aa4039f8e8096d55da"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/rl_train/014",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 652252360,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1199038103222847,
+            0.2333734631538391,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1199038103222847,
+            0.20337346196174622,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b96ab1ca24eac71f749db65ed424a75b86428360420ac4e77a45bc0164bc3f7d",
+      "task_state_fingerprint": "e441fe37262a3caec46c72567815da844413b1d2c2be5c44174ad45eaee1ce25",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/rl_train/014/base_camera.png",
+          "sha256": "efd379b51eced73dcd4999d2f88798606eacc65e536c0f111d150d0de6825724"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/validation/000",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1561510146,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1407535821199417,
+            0.2536451518535614,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1407535821199417,
+            0.2236451506614685,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f77ca353345b4c0d41e2368a82282ec6ff0a893048be0cc1adaf48119cdff134",
+      "task_state_fingerprint": "1f332f067eb17c682bb213510565c8f34ea479e690a1648d3935bba7abe711bc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/validation/000/base_camera.png",
+          "sha256": "15c4cd9f0b07c6a604926ae12168011a389b1fb650488287232e6ad306d8ee98"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/000",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1401659768,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1135973110795021,
+            0.21048322319984436,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1135973110795021,
+            0.18048322200775146,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8c9b5f179cc23d7b9f77d55375d7d4ddaaa071022975f09f459c05be2a547fa6",
+      "task_state_fingerprint": "2ef1751c89225e4b16ecd244b4e59ca1425bc50e61890da8f860469962d75dba",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/000/base_camera.png",
+          "sha256": "9a38abbd0cb983bf4fa8519bbb09364c0f8ac999ecf3e8662175a4ea92a7d909"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/001",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1089088688,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14705678820610046,
+            0.23412317037582397,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14705678820610046,
+            0.20412316918373108,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5b09ba1529f70b52f6ff5afade3b16b2a9279e9de6131d94e2947bf014dd4582",
+      "task_state_fingerprint": "ae5fca357c9543a9b1027fbd701b7231e965eeebfb6a2705747e6569e8a92478",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/001/base_camera.png",
+          "sha256": "544b408557f5ca394cc28d02d9b408ba1fba8fe2cfd379d03af2d0cd9862ff3f"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/002",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 339206007,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1299327313899994,
+            0.2415933459997177,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1299327313899994,
+            0.21159334480762482,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "36df95360579ed98116a420aa8a0b42d477cb5756424a59a56413523a7574030",
+      "task_state_fingerprint": "07309e113e162dac34c0665249283c677d0ff17fe3c96fe5d8d1d6e6ae1833d8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/002/base_camera.png",
+          "sha256": "d3478de40da2602004c4e3f253d5722de103fe3aa7a0acc1aea815578b2b1306"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/003",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 152332881,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11354880034923553,
+            0.21715876460075378,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11354880034923553,
+            0.1871587634086609,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "501218031511ea9cb46e3d311d6055b448872e28553cfa68b81c73a443d89c8b",
+      "task_state_fingerprint": "a5da811297e8c078f028a1dfd9c544f279b458f8b217cc27597e21b2632d96cf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/003/base_camera.png",
+          "sha256": "c8ddbd971650c8405543aba961be74f17fdc0c336e49b4d118e62b83c3bfeb43"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/004",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1573646844,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1515970379114151,
+            0.2196914702653885,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1515970379114151,
+            0.1896914690732956,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4628d98545ad6134138e4dce23d6c8c0fb7149554befdd60446397200d3fbdc8",
+      "task_state_fingerprint": "78afe4c13a79359555681c7b5f7ce152708d1ac613b678677ef409a88ac93feb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/004/base_camera.png",
+          "sha256": "1f8396826a179de7c120677bb32a1f8d5e58a7d8b8b169b888b52e4c020d88e3"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/005",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 385514105,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11699910461902618,
+            0.22391755878925323,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11699910461902618,
+            0.19391755759716034,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "32da0be72b9e8aacf96638f32d28c3f8616483343f32eaeebe7d15fa121a389b",
+      "task_state_fingerprint": "06780d43e8048905b809e4c140e14e83f2cdac9afad7f08a41407745c8f0441d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/005/base_camera.png",
+          "sha256": "79a467d09d993bfa645598d944824482aec9832f93b2c09c7351bdc3a802b57a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/006",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1741690038,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11297593265771866,
+            0.21918398141860962,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11297593265771866,
+            0.18918398022651672,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "357864666e44286bf63dfdfe023c37c7a7e560f87bc0dece0fc52445b29cfa30",
+      "task_state_fingerprint": "77944163ccfff9810b87d21d08015822bd58800667089939bb132408ef1335de",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/006/base_camera.png",
+          "sha256": "d3ef26d6acd012b35318a9a05bf4ad327afcfc8dc62628d11deaa6a614cd6663"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/007",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 2036840505,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11963021010160446,
+            0.20944631099700928,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11963021010160446,
+            0.17944630980491638,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "410777c41482c693584f7591aa9452b75a268b972518ff39152193a21ee6826c",
+      "task_state_fingerprint": "874167fe0f6a0807528922069a16a344fb91a40e3be94a59199a83aae2ffced5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/007/base_camera.png",
+          "sha256": "896a4b0c1650495c4e25cb1109c0a5b2615ecdefcadb3a448d9a8856eb71f7d6"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/008",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1290047615,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.13574597239494324,
+            0.21453438699245453,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.13574597239494324,
+            0.18453438580036163,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "47c8a846c4cdcc2e0b31de5032b5a6ba5688b0a8b282f412aec12f7d5462c8fc",
+      "task_state_fingerprint": "c6c4be1261a965004a0e17dabc9083f29ab7f2a80b744544e7b8cbff12f36055",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/008/base_camera.png",
+          "sha256": "1059f47a8a7723dcca8e8aeef394e5318f1f49f492e0755254d100977b294595"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/009",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 122841649,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1484730839729309,
+            0.23179617524147034,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1484730839729309,
+            0.20179617404937744,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a7e688192bd20a76ebec0421d56d28c151ea7703096b7da1c2ea61049d870334",
+      "task_state_fingerprint": "c525fc70fe3b93e85ee451d4d199ae5681f8e410673caa64037629d1da334ffa",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/009/base_camera.png",
+          "sha256": "6febe21bf06302d83153528f9336828e28e53e988e0624564fdc56ddd8df9564"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/010",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1857734225,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.1445653885602951,
+            0.22296302020549774,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.1445653885602951,
+            0.19296301901340485,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b2330b5dbd7f0fa93ab45ac880fbfcf2c4ff787dcc548fad09321232e9434d52",
+      "task_state_fingerprint": "48756b5a5b88e55f00c45928fdc5b218a6088d96b9daf69a7283d94afaef4fd9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/010/base_camera.png",
+          "sha256": "9ed257e30eab9d516b015e0e7735462ce1127d0ab4b5b3f99757b1fbcd12de4a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/011",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1874708180,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.10712270438671112,
+            0.214262917637825,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.10712270438671112,
+            0.18426291644573212,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "216d7a2c360c7f2613b4ba907f759fdfca6b1b2f4002c595b6b62a6fed72389f",
+      "task_state_fingerprint": "85cb014611487ad8341278039802f86b864625301effe2c973245a1f5b36cd07",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/011/base_camera.png",
+          "sha256": "5e90643aa74aadfd78024c719e6818b85199110de378854ddb099067bfb675f2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/012",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 558975685,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14975377917289734,
+            0.21329830586910248,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14975377917289734,
+            0.18329830467700958,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cb004b63e66cb2268ba094205712bb8857a7c8480d2e532875533f0158f423ee",
+      "task_state_fingerprint": "053143052c41b9f2066996896e259d575ed1c4321d2472a5909c8191152765da",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/012/base_camera.png",
+          "sha256": "a4de23c1909eb556420f1b7a45973031162860cfc7fc5a5d91aea21bdefbefd5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/013",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 67171960,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14291658997535706,
+            0.21326377987861633,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14291658997535706,
+            0.18326377868652344,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f9b657645f2cf348938670ffb5a33e71469714d5e1cb43ef13ad14b8e1fadbb5",
+      "task_state_fingerprint": "b7854ed667210462ec1f043f078d58cd2734911fb5ed5ec41e43b0ec6c2e5b2b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/013/base_camera.png",
+          "sha256": "6784a204f7ee2aa33a4fd3fbd2454e62fad6fb92052dac5eb0ba8306727dd074"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/014",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 646774479,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11412478983402252,
+            0.23103535175323486,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11412478983402252,
+            0.20103535056114197,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "25663bb3468645bdd2e3747561e9b08a4514db28de22264f9fd72dfe29fd9a40",
+      "task_state_fingerprint": "1eef6d8ac0f3104a50dcb0e92d89fc345e75db321c6584e631b399f9bb46d29f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/014/base_camera.png",
+          "sha256": "8c0e349557c568d5a076374c3966c80df14ea5b540a2a10b520250ccd8d96b7a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/015",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1981170661,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14415904879570007,
+            0.20518670976161957,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14415904879570007,
+            0.17518670856952667,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "26f62e138da1e645e523c772991cf68d350a2e55ceb70aa59d4ccd93a4688226",
+      "task_state_fingerprint": "bdb00f617d57b5870f16b92cadf5fc0402768ebc039ac5eb74f18624465bae6a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/015/base_camera.png",
+          "sha256": "60947dad9970105d3d54155aa9f7fa312415e3c9bb2f02f00d2b6c8d499b8ac1"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/016",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1959490853,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.15132778882980347,
+            0.22559906542301178,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.15132778882980347,
+            0.19559906423091888,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a3acf771a9106f31f07b51ebfd465b4278c5cf0e94e2aad66877023458fe33b0",
+      "task_state_fingerprint": "3da9dd5da3137c6577c0df403d6002d1e92eb0d16f73feece8fae0f6bebfdca8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/016/base_camera.png",
+          "sha256": "fc4126328317c45af9cca1611b92f653e494c8f2afde1d61a57ccbccf70adfb2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/017",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 482124878,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.14570948481559753,
+            0.20971812307834625,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.14570948481559753,
+            0.17971812188625336,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "eaf17a425d02368ca1a6cd2ca2b283e075e52c8317e905a4853bc2dec1b742d5",
+      "task_state_fingerprint": "04337eebcd7811c00248f0666da3165461e856e126620f138501ba3e7a5f7f6e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/017/base_camera.png",
+          "sha256": "73fc7a92b5758eb9564901d84abffdfbf86577e87cfaabf3504d5894e0d9aae2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/018",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 1995328413,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.127335324883461,
+            0.25283554196357727,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.127335324883461,
+            0.22283554077148438,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0ec221392cafdb4b42549d7155c81c4dc634ae15b348f651bf91b89ea1a4504f",
+      "task_state_fingerprint": "718ed4f556d2eecc8de51818a2730b25b966a8e580ee4662675a3debf2fc5c0e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/018/base_camera.png",
+          "sha256": "62967212d6d024e97826986d7b00140691ca3e539276da5ae3a76b5320b4a4f2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/eval_seen/019",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 919516568,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.11209125816822052,
+            0.21207357943058014,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.11209125816822052,
+            0.18207357823848724,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "612eeb56ad55ef157139ffda85f31b4cb906b58bdfbdfe6406acd433c9628ea3",
+      "task_state_fingerprint": "ea94d1768434eda1623bca4ec4154d7c75cb970829d34b4fa01ca518616f1d3f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/eval_seen/019/base_camera.png",
+          "sha256": "4497826b25abf87087c397d674200f185b941173a29b7177c05a9b9f11dba438"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/FMBAssembly1Easy-v1/validation/001",
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "seed": 408606595,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/board": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.03444400057196617,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/yellow_peg": [
+          [
+            0.13500000536441803,
+            0.0,
+            0.05849999934434891,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/purple_u": [
+          [
+            0.13500000536441803,
+            -0.06800000369548798,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/blue_u": [
+          [
+            0.13500000536441803,
+            0.06799999624490738,
+            0.0637499988079071,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/green_bridge": [
+          [
+            -0.15310175716876984,
+            0.2303210198879242,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ],
+        "actor/reorienting_fixture": [
+          [
+            0.05000000074505806,
+            0.25,
+            0.02850000001490116,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bridge_grasp": [
+          [
+            -0.15310175716876984,
+            0.2003210186958313,
+            0.024333499372005463,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3954d5680d42b6f7059773fb42a99480ea173d367105d59193499e9073b8d15b",
+      "task_state_fingerprint": "3482bad2a3b63bb1ff9b956ce0a02139deebbfca10e208f2ae08d7131bb45283",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/FMBAssembly1Easy-v1/validation/001/base_camera.png",
+          "sha256": "86fcb25b46be645839f76e33e19bab6566a4d3ec33918bda8c9d834db1b7ce56"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    }
+  ]
+}

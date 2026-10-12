@@ -1,0 +1,2989 @@
+{
+  "task_key": "maniskill/LiftPegUpright-v1",
+  "candidate_count": 14,
+  "requested_sample_count": 14,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/sft_train/004",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 1907223641,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 14,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/sft_train/004",
+        "state_fingerprint": "b448c2b383eb2a6c78f796136cbe775059f0a08ef565872564900155b69aa44b"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.06159687042236328,
+            -0.09995269775390625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02586973085999489,
+            0.3741610646247864,
+            -0.01976463384926319,
+            -1.9481016397476196,
+            -0.01129018422216177,
+            2.3766725063323975,
+            0.8115089535713196,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.06159687042236328,
+            -0.09995269775390625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d9a6e941f5b4e29ac2e39ce188d10619f1be34e30b76bd63bec5fe83a67d3cc1",
+      "task_state_fingerprint": "8d2a8dab814ee003d31416732ce40314f8c790131ead594d54b15facefb681b0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/sft_train/004/base_camera.png",
+          "sha256": "5a67b07e121cf539f22298206f673583787f22be6c6eb9cfc4d279dd6b3aae9b"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/sft_train/010",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 1952329701,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 19,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/sft_train/010",
+        "state_fingerprint": "ff0c3282106ce725ff27d1e8e16cfdb3549057cfc04fce04f20a088d5cb68a93"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.08086872100830078,
+            0.01436614990234375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.03355100750923157,
+            0.3942349851131439,
+            -0.03277628868818283,
+            -1.9595855474472046,
+            0.01701917126774788,
+            2.3472321033477783,
+            0.7526239156723022,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.08086872100830078,
+            0.01436614990234375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8f26a0d6a7a5d6f22a7208fae51c78a9b6d9fb8930da20e584da70387a0776c4",
+      "task_state_fingerprint": "699090da12c581652d130ff0f503433805a4ff7e25d7f643d525a708ad827060",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/sft_train/010/base_camera.png",
+          "sha256": "4d547ef1fc56ad847508bdb3971ae699f0bbfaed8ac9ad84e13f15ff30ce26c8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/sft_train/012",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 803381576,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 58,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/sft_train/012",
+        "state_fingerprint": "e317b70bf5385713a52e48d2a49094b4f40f69e3477919a68330b49c36878950"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.05739593505859375,
+            0.09759521484375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.01940692588686943,
+            0.367796927690506,
+            0.0012964025372639298,
+            -1.936002492904663,
+            0.0020913141779601574,
+            2.3842098712921143,
+            0.8051712512969971,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.05739593505859375,
+            0.09759521484375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "788bc3ee9c25356f9b7cfca48d8d117834ea998713c0f2234cd3c150063e081f",
+      "task_state_fingerprint": "7a208bfd9ff734c9897dd8ef00466c65ae055cfeac38e084b6f397e34fb619ea",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/sft_train/012/base_camera.png",
+          "sha256": "8235690024fd2f51b6ba88196707c014d7140aa54301586b005410dff2d93e83"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/sft_train/013",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 94462214,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 89,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/sft_train/013",
+        "state_fingerprint": "1f8a16a3d34b110e65006dace8c20235ccb43f83fa4b6166d0617f5f46d08bdb"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.06290435791015625,
+            -0.094818115234375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.030608337372541428,
+            0.4058123826980591,
+            -0.012226348742842674,
+            -1.9467034339904785,
+            -0.03373401612043381,
+            2.3746490478515625,
+            0.8104507327079773,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.06290435791015625,
+            -0.094818115234375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "91f894e067e57fdb6889ea7506363583f2f6dfd4a07a5342d67277df56b63db3",
+      "task_state_fingerprint": "7731f4c774129a3a8bc9db2d145128efb3455799b66f9d0fd18a10fa10e1f0a1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/sft_train/013/base_camera.png",
+          "sha256": "c9e01f755088055aa2b2bc9660118ac890b85f3e3dd300d221b4b113b762a73a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/rl_train/001",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 432432390,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 18,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/rl_train/001",
+        "state_fingerprint": "f12b2568db3c496b3c508682adbfe2f9b8216f1fd5825aee88b9a47a736f8e1e"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.043221473693847656,
+            0.0171051025390625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02246066741645336,
+            0.3879357874393463,
+            -0.020400874316692352,
+            -1.9591610431671143,
+            0.027788931503891945,
+            2.3743975162506104,
+            0.7653200030326843,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.043221473693847656,
+            0.0171051025390625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "16eaf274f528011e88c14b7237c9c2df412dc844e5826c822a4952e1bc350fbe",
+      "task_state_fingerprint": "bbc66bb7b455ef49814a5e7329ce7c80ee4700ce86850150b7c6748578017f8d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/rl_train/001/base_camera.png",
+          "sha256": "8d36a2ffe86c7ad22a16799fafd6c60b204655063e49414dec249e30e78d3d03"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/rl_train/003",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 4299739,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 1,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/rl_train/003",
+        "state_fingerprint": "3a3f55c1d98d505e726c1344b5159b23879240d6766570080fbc98e5dad5e12d"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.059539794921875,
+            0.09063720703125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.01197519525885582,
+            0.3506423532962799,
+            0.01798546314239502,
+            -2.0035712718963623,
+            -0.025477103888988495,
+            2.3448381423950195,
+            0.7817956209182739,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.059539794921875,
+            0.09063720703125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4af812aa259579775d74fa41167b477fdf53009fd2bf61540c3ea6e82ff51b30",
+      "task_state_fingerprint": "d9f4d35d0312ece61f4b9eb78aecebce20528ef6d2e8a947744632eedc4ad744",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/rl_train/003/base_camera.png",
+          "sha256": "fefac4e11a5ac8a03767b78b9f8abd525fc9e86ae75fea6b9e4adbc08b44b34a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/rl_train/006",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 635756833,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 72,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/rl_train/006",
+        "state_fingerprint": "6567d04b8c56f40a07533d394ecefe3d777497e4ce1241a0e70f4548cc0c617b"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.0998382568359375,
+            -0.059173583984375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.01741367019712925,
+            0.39618119597435,
+            -0.01902635209262371,
+            -1.9443103075027466,
+            -0.03869283199310303,
+            2.3723855018615723,
+            0.818162739276886,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.0998382568359375,
+            -0.059173583984375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ebfb38f79d15c539923ee8a0ac63862f1e63a0fd9669bb40ba6e24f3e241dcbc",
+      "task_state_fingerprint": "35971c5314607026a89ec5ff8ccd8cf553a9afe55609ae6c934b6e058c580498",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/rl_train/006/base_camera.png",
+          "sha256": "898e3d0ce643cf45252a5f720f279ca372c9147a98e9a2ebf12468960740088c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/rl_train/009",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 1600292407,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 10,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/rl_train/009",
+        "state_fingerprint": "77fbee4461d142f928e4e9a868a9de44778829f7128458d1ee0a40fb492c90ff"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.09322929382324219,
+            -0.0088348388671875,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.01194271445274353,
+            0.37249231338500977,
+            0.005980453919619322,
+            -1.9726428985595703,
+            0.0036970973014831543,
+            2.3497016429901123,
+            0.7965697050094604,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.09322929382324219,
+            -0.0088348388671875,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2b8d69844a0a0b0242aec387209602f72cdce14323c068a54fc1d73fd0af8e4a",
+      "task_state_fingerprint": "a9011a71e847f94847e82161744ade26486e1b1fc54c32e0c7ca12ca7aa36a62",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/rl_train/009/base_camera.png",
+          "sha256": "479142a015db5900da814eefd32f4cc9b5e4b2a877feee7bd44f7ccecbe21b86"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/validation/cache-096",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 1825480364,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 96,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/validation/cache-096",
+        "state_fingerprint": "74ee7ba2328f7c85bf1dd0172aec04345467585401c7aa539ac9879c8b4f6d42"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.08550262451171875,
+            -0.0437774658203125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0031954371370375156,
+            0.39286404848098755,
+            -0.016300467774271965,
+            -1.9887993335723877,
+            -0.006453714799135923,
+            2.3503737449645996,
+            0.7897429466247559,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.08550262451171875,
+            -0.0437774658203125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "77b9295d87e0e8703d754f8c381067e7b3219980da3c69ef70f434f150c11016",
+      "task_state_fingerprint": "4a069d341852ef04dce0712080ed9f68716eb1c4e100d2bad7bb332131827791",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/validation/cache-096/base_camera.png",
+          "sha256": "5b4091b072b49ff757e290e47a5f80f205987ddb2cdab0bfa1b2a29626762277"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/validation/cache-101",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 895459583,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 101,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/validation/cache-101",
+        "state_fingerprint": "f5ee9061bfc42229c478c7c76916dceac6f387a30a2b5d98e52dc4e5a2faed1e"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.09793853759765625,
+            0.03836822509765625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.02915038727223873,
+            0.38491585850715637,
+            -0.025317072868347168,
+            -1.9792711734771729,
+            -0.004050586372613907,
+            2.367664337158203,
+            0.8107924461364746,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.09793853759765625,
+            0.03836822509765625,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b126bc41504c9f7f27fd68643ded26ad00f76d83cf1df724874a700375457959",
+      "task_state_fingerprint": "040b6ceee1d9b63ccf4e2715c3d7a282f6e94f1bcc04d049a58875177065affe",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/validation/cache-101/base_camera.png",
+          "sha256": "c4ec00c51d76c01602b4a2c5ae9f35881b947029cca9992a8a65a1cfdc31c245"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/eval_seen/008",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 989128397,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 35,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/eval_seen/008",
+        "state_fingerprint": "f356e3a211dcfc1cad65286faaf1c540da1298e0016db62d10aa82a03048241d"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.01070404052734375,
+            0.081390380859375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.017788643017411232,
+            0.3791925013065338,
+            -0.020730746909976006,
+            -1.9783830642700195,
+            0.0015095301205292344,
+            2.381633996963501,
+            0.7636802792549133,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.01070404052734375,
+            0.081390380859375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "eca1bccd8913a57ea7359f54dce03fed4984142d7d5d9e3b2e2fc6ef840ef591",
+      "task_state_fingerprint": "0565e1139aae5b79dee53baf8ce62101baba97b820f4cd9e48047910319ff533",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/eval_seen/008/base_camera.png",
+          "sha256": "871a4e7645d1658323c88500b225289beced8282ac2264d7cf9738cdb0f86b24"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/eval_seen/012",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 233626892,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 21,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/eval_seen/012",
+        "state_fingerprint": "7a43516da052963af767462eb5a6679eafe82b851438602925202cf1fd1c3706"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.030452728271484375,
+            -0.03540802001953125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.023686038330197334,
+            0.4227343499660492,
+            -0.01785263791680336,
+            -1.939781904220581,
+            0.0024511865340173244,
+            2.3582448959350586,
+            0.7570697665214539,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.030452728271484375,
+            -0.03540802001953125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0dbe1a6d698562b2c56d4e72a5cff37c159e0beeaf0af09f6290eb5e814d3021",
+      "task_state_fingerprint": "6f4fb2a85da12bf40c9304ddd75cf4a8ee50c2bcec289c2ed21933c6ef8d6f99",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/eval_seen/012/base_camera.png",
+          "sha256": "b43bb91919c9bca35cb71bf23583c068de5d0b8148b4d8c9d292d8fd1e35b81d"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/eval_seen/014",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 601881570,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 64,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/eval_seen/014",
+        "state_fingerprint": "06f0ea7e3433b3d244b1d8d2b3e7f46f51ad3d3bd62b83a68b97237cc9ab80c5"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.0075836181640625,
+            -0.07570648193359375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0022487000096589327,
+            0.3849621117115021,
+            0.0024882215075194836,
+            -1.948903203010559,
+            -0.05590434372425079,
+            2.3538594245910645,
+            0.8208853602409363,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.0075836181640625,
+            -0.07570648193359375,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8caf8b651a400eff7c2ccac1069f809ab1adca3482d0edf540a1f3a78a0fd03c",
+      "task_state_fingerprint": "c060eae7f9b7aa940f4f4d60ec80d5f7e9ff7c40325c344c3e59523d2300c917",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/eval_seen/014/base_camera.png",
+          "sha256": "dc7767092db7a76582dc98092f2ec239264082658e3fa2952eecc833a6ebc618"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/LiftPegUpright-v1/eval_seen/016",
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "seed": 631632047,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 37,
+        "source_ref_id": "maniskill/LiftPegUpright-v1/eval_seen/016",
+        "state_fingerprint": "dc5ba233e1954aa0608986bee0801200acd8f7cfec309ec2c036859f93c0ceb0"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.0390472412109375,
+            -0.04755401611328125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.008333082310855389,
+            0.4003111720085144,
+            -0.011203588917851448,
+            -1.9883792400360107,
+            -0.018309378996491432,
+            2.3428711891174316,
+            0.7632203102111816,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.0390472412109375,
+            -0.04755401611328125,
+            0.02500000037252903,
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7f8be3ab35b0919a867c06e7d84b2467683a0cecf96c77ddf0e67903de05a3e9",
+      "task_state_fingerprint": "03ce1609d934c322e8cd9e0eee7f8e6be81c900d6aae9448d297a725757c2485",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/LiftPegUpright-v1/eval_seen/016/base_camera.png",
+          "sha256": "943ef82da1569da3c7e09b4f65ddb3a0267b55bfc4ba56391f4ba3f2456b42be"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    }
+  ]
+}

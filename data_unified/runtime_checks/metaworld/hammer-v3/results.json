@@ -1,0 +1,826 @@
+{
+  "task_key": "metaworld/hammer-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/sft_train/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 798482728,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 798482728,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          0.06382236542391245,
+          0.4054198947328458,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.06382236542391245,
+          0.4054198947328458,
+          0.0
+        ],
+        "/object_position": [
+          0.06382236542391245,
+          0.4054198947328458,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "f7e926883917875288cb5a27080d16db63061a0dd9256963267430d3e53e9a9d",
+      "task_state_fingerprint": "14c5ca0fffd90c2d4cf88218cfb70e74ea338b99da45ec17939f347c64d7813d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/sft_train/000/native_camera_2.png",
+          "sha256": "853f9c40f0116246e136c5453a3d3fb26db6ec365eaf431cbb249a71ff854c32"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/sft_train/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1770972170,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1770972170,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          0.0515689494273687,
+          0.47657079496728894,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.0515689494273687,
+          0.47657079496728894,
+          0.0
+        ],
+        "/object_position": [
+          0.0515689494273687,
+          0.47657079496728894,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "28211403ef6a82263fe3df32a4475905deb7c05455871d20b1c187c109db102f",
+      "task_state_fingerprint": "1ead7aa9e414701b8733313d35044b3a9a2c1ad8609d460200fec29573a8b283",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/sft_train/001/native_camera_2.png",
+          "sha256": "40bea45446c550a8dccfc7595e6bfb0cf40bcc3bcd078871a9d8e0444f072583"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/rl_train/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 21092546,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 21092546,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          0.04738340386130918,
+          0.4952198688733961,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.04738340386130918,
+          0.4952198688733961,
+          0.0
+        ],
+        "/object_position": [
+          0.04738340386130918,
+          0.4952198688733961,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "6b9ce0bc9bb41907bb2da0b9ffd4ffa6c4ede5424f9ce3b7616d4b5542249705",
+      "task_state_fingerprint": "83dec24e1fb9f24502ddc4a3c3aa7c6a5b568005a00ff90806f2087d6e6ba30e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/rl_train/000/native_camera_2.png",
+          "sha256": "70803b7c1a6c1fdc9e5aaa86de7d67b06b9516c93dba748bd5e5436383567f62"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/rl_train/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 523990746,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 523990746,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          -0.016519062142648422,
+          0.49873703100064243,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.016519062142648422,
+          0.49873703100064243,
+          0.0
+        ],
+        "/object_position": [
+          -0.016519062142648422,
+          0.49873703100064243,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "279713c21dee3d538f92da3836d9e6a4be0e5a9493ea92a5c6bc44b35c9febb9",
+      "task_state_fingerprint": "7fe895ef3c2512c5eb7b3250cd32d9f84e20b93144cb8cca5feb5a819ef12ff5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/rl_train/001/native_camera_2.png",
+          "sha256": "f15810d6c5cbc95e96cb6e411d03f213a28647cc1431d6487bce107e96fc6207"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/validation/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1850084917,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1850084917,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          -0.07462988002351659,
+          0.4952242498250802,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07462988002351659,
+          0.4952242498250802,
+          0.0
+        ],
+        "/object_position": [
+          -0.07462988002351659,
+          0.4952242498250802,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "fb5cb09f948018bbe766be66b76dd5663e6c85920d0f8ea87d86b8492dfc34d3",
+      "task_state_fingerprint": "65b8276f40b7fe4d1849a1e2a19b4eeed7c3ba1559e56bb08d02d84219db61d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/validation/000/native_camera_2.png",
+          "sha256": "ca6b983cec01294593a54828bc5b49ff39fff594441775e6fc97bbdda5443aee"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/eval_seen/000",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 793510320,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 793510320,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          0.05360350675283304,
+          0.4387209222794791,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.05360350675283304,
+          0.4387209222794791,
+          0.0
+        ],
+        "/object_position": [
+          0.05360350675283304,
+          0.4387209222794791,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "f324b380cf0acda79d9b27edcc5e894b943092922d5d61912216c314c516d59c",
+      "task_state_fingerprint": "66ea2cf6924b555a4a7303c65566ccb4a867ff57613bba309f7b924e37956317",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "79db1c591845436c1c51c02326d92bd48031be80b41a1f40cfe1807e28b46a1c"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/hammer-v3/eval_seen/001",
+      "task_key": "metaworld/hammer-v3",
+      "seed": 1849343304,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1849343304,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905923514736,
+          -0.5459568445218868,
+          -1.234721784412852,
+          2.1711108857948975,
+          1.2478093863780149,
+          1.0194763242802976,
+          1.901196004010709,
+          -0.000171860779495447,
+          0.00017178965409449294,
+          0.08804734456595265,
+          0.4938076215557967,
+          0.0,
+          0.9995573724101424,
+          0.00015558832855086825,
+          -0.02974953400296568,
+          1.671555998355333e-05,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931627675,
+          0.632752585180826,
+          -0.21596147423105438,
+          0.1741174790488192,
+          0.7585235072920052,
+          0.4010606920080248,
+          1.0192004782673003,
+          2.054303231071457e-07,
+          2.0096593042051664e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.08804734456595265,
+          0.4938076215557967,
+          0.0
+        ],
+        "/object_position": [
+          0.08804734456595265,
+          0.4938076215557967,
+          0.0,
+          0.24,
+          0.64,
+          0.11
+        ],
+        "/goal_position": [
+          0.24,
+          0.74,
+          0.11
+        ]
+      },
+      "state_fingerprint": "cb212ba9f302c63174040dbce4303e9ec09d8f0a334e24b3c45fc37288e416b8",
+      "task_state_fingerprint": "4db74c7059cbe5071a97f90efe9a792a4a5ea1b1ddfa3e0f8c2bc00d0cf850d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/hammer-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "a88497187a602282fa1fc82dc38e386f8f70519cffdf0129c5ecfc698ea87e29"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

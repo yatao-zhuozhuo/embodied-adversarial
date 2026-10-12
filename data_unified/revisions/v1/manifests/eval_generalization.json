@@ -1,0 +1,2988 @@
+{
+  "schema_version": "openeta.unified_phase.v1",
+  "phase": "eval_generalization",
+  "runtime_ready": false,
+  "tasks": [
+    {
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "role": "generalization",
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "family": "spatial_selection",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 7,
+      "robot": "franka_panda",
+      "horizon": 500,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "franka_panda",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      }
+    },
+    {
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "role": "generalization",
+      "task": "pick up the butter and place it in the basket",
+      "family": "object_pick",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 7,
+      "robot": "franka_panda",
+      "horizon": 500,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "franka_panda",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      }
+    },
+    {
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "role": "generalization",
+      "task": "Open a drawer",
+      "family": "articulated",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 4,
+      "robot": "sawyer",
+      "horizon": 500,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "expert_policy": "SawyerDrawerOpenV3Policy",
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      }
+    },
+    {
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "role": "generalization",
+      "task": "Grasp a stick and push a box using the stick",
+      "family": "tool_use",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 4,
+      "robot": "sawyer",
+      "horizon": 500,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "expert_policy": "SawyerStickPushV3Policy",
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      }
+    },
+    {
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "role": "generalization",
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "family": "planar_shape_alignment",
+      "selection_reason": "Preserve a legacy reserved task; Panda stick uses its native 6D action interface.",
+      "expected_action_dim": 6,
+      "robot": "panda_stick",
+      "horizon": 2000,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_task_implementation_and_existing_protocol_text",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "panda_stick",
+        "control_mode": "pd_ee_delta_pose",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      }
+    },
+    {
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "role": "generalization",
+      "task": "Insert the charger into the receptacle.",
+      "family": "insertion",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 7,
+      "robot": "panda_wristcam",
+      "horizon": 2000,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_task_implementation_and_existing_protocol_text",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      }
+    },
+    {
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "role": "generalization",
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "family": "articulated_open",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 12,
+      "robot": "PandaOmron",
+      "horizon": 750,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "PandaOmron",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": "pretrain",
+        "sim_backend": "mujoco"
+      }
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "role": "generalization",
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "family": "pick_place",
+      "selection_reason": "Preserve legacy reservation and exclude local known training exposure.",
+      "expected_action_dim": 12,
+      "robot": "PandaOmron",
+      "horizon": 750,
+      "historical_exposure": {
+        "sft_samples": 0,
+        "rl_pool": false,
+        "baseline_v2": true
+      },
+      "legacy_holdout": true,
+      "instruction_source": "local_registry",
+      "cache_states": 0,
+      "cache_unique_states": 0,
+      "sft_source": "forbidden_generalization_holdout",
+      "environment_config": {
+        "robot": "PandaOmron",
+        "control_mode": "benchmark_native",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": "pretrain",
+        "sim_backend": "mujoco"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/000",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 160035040,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/001",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1628995895,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/002",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 476242147,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/003",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 436460626,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/004",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1224447082,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/005",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 546495655,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/006",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 887040106,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/007",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 254114120,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/008",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1025902220,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/009",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1127746193,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/010",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1066101454,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/011",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 752016172,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/012",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 499405308,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/013",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1568281488,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/014",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 450757216,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/015",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 2057278974,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/016",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 857844393,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/017",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 356780587,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/018",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 2089184663,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_spatial_task1/eval_generalization/019",
+      "task_key": "libero/libero_spatial_task1",
+      "bench": "libero",
+      "task_id": "libero_spatial_task1",
+      "env_id": "openeta/libero_libero_spatial_task1-v0",
+      "phase": "eval_generalization",
+      "seed": 1266905029,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/000",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1394842778,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/001",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1572488356,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/002",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 349786509,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/003",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 390723355,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/004",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1505689724,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/005",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1746493644,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/006",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 228622327,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/007",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1344318391,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/008",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 511538010,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/009",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 680904726,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/010",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1734779541,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/011",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 781012807,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/012",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1378572767,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/013",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 435318775,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/014",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 50319601,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/015",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 449093973,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/016",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 241331093,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/017",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1798710687,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/018",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 1348794656,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "libero/libero_object_task6/eval_generalization/019",
+      "task_key": "libero/libero_object_task6",
+      "bench": "libero",
+      "task_id": "libero_object_task6",
+      "env_id": "openeta/libero_libero_object_task6-v0",
+      "phase": "eval_generalization",
+      "seed": 558581589,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "pick up the butter and place it in the basket",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/000",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1290069515,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/001",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1734282979,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/002",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 621621333,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/003",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 308261879,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/004",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 818814293,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/005",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 972899845,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/006",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 2026177759,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/007",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1739745042,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/008",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 196604381,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/009",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 544245764,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/010",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 655054470,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/011",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1486261922,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/012",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 374838256,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/013",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 185581421,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/014",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1682756041,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/015",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 142948524,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/016",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1916550859,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/017",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 721085167,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/018",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 2098611609,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/drawer-open-v3/eval_generalization/019",
+      "task_key": "metaworld/drawer-open-v3",
+      "bench": "metaworld",
+      "task_id": "drawer-open-v3",
+      "env_id": "openeta/metaworld_50_drawer-open-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 2056948569,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Open a drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/000",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 491178748,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/001",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 467588050,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/002",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1189757651,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/003",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 282400733,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/004",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1973960700,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/005",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 167231810,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/006",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1212338728,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/007",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 116843689,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/008",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1313804786,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/009",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 994922431,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/010",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1968319746,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/011",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1800976743,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/012",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 362620164,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/013",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1653716925,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/014",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 801844079,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/015",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 583513091,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/016",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 405387989,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/017",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1092099404,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/018",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 2068066688,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "metaworld/stick-push-v3/eval_generalization/019",
+      "task_key": "metaworld/stick-push-v3",
+      "bench": "metaworld",
+      "task_id": "stick-push-v3",
+      "env_id": "openeta/metaworld_50_stick-push-v3-v0",
+      "phase": "eval_generalization",
+      "seed": 1477197407,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Grasp a stick and push a box using the stick",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/000",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1636562306,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/001",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 2115638116,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/002",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 441686706,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/003",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 703800538,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/004",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 240996119,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/005",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 153715367,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/006",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1013583864,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/007",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1126019198,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/008",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 977981671,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/009",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1687607733,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/010",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1398245882,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/011",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1160396390,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/012",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 502863807,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/013",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 2007053797,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/014",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1252088454,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/015",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 661360886,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/016",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 172623272,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/017",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 2057915346,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/018",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1771897671,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/019",
+      "task_key": "maniskill/PushT-v1",
+      "bench": "maniskill",
+      "task_id": "PushT-v1",
+      "env_id": "openeta/maniskill_PushT-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 250096827,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/000",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 2077873560,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/001",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1486187168,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/002",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 646540722,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/003",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 47954493,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/004",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 868284429,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/005",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 686706451,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/006",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 667674319,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/007",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 602356827,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/008",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 256071391,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/009",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1280111767,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/010",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 427902077,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/011",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 435250600,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/012",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1445872312,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/013",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1322185878,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/014",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1585627045,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/015",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 674782018,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/016",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1882895911,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/017",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1715756622,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/018",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1441645310,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/019",
+      "task_key": "maniskill/PlugCharger-v1",
+      "bench": "maniskill",
+      "task_id": "PlugCharger-v1",
+      "env_id": "openeta/maniskill_PlugCharger-v1-v0",
+      "phase": "eval_generalization",
+      "seed": 1215514945,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "Insert the charger into the receptacle.",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/000",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1491825448,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/001",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 407841790,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/002",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 442547699,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/003",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1888832003,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/004",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 121719191,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/005",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 2114071619,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/006",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 2043239916,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/007",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1579784894,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/008",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 739464175,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/009",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 283192626,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/010",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1989842539,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/011",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1964604695,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/012",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 891445578,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/013",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 672341881,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/014",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1388870216,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/015",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 857323510,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/016",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1747310628,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/017",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 963612265,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/018",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 481670078,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/OpenDrawer/eval_generalization/019",
+      "task_key": "robocasa/OpenDrawer",
+      "bench": "robocasa",
+      "task_id": "OpenDrawer",
+      "env_id": "openeta/robocasa_pretrain_OpenDrawer-v0",
+      "phase": "eval_generalization",
+      "seed": 1818244639,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: open drawer",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/000",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 640868588,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/001",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 204224390,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/002",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 896458009,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/003",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 627934186,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/004",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 465534009,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/005",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 437837169,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/006",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 354861598,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/007",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1248554884,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/008",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 397728482,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/009",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1045425633,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/010",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 312142762,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/011",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1616608365,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/012",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 658345079,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/013",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1897897327,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/014",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1556535844,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/015",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 263419429,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/016",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 2096599015,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/017",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 115559694,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/018",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 1462241636,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    },
+    {
+      "case_id": "robocasa/PickPlaceCounterToCabinet/eval_generalization/019",
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "bench": "robocasa",
+      "task_id": "PickPlaceCounterToCabinet",
+      "env_id": "openeta/robocasa_pretrain_PickPlaceCounterToCabinet-v0",
+      "phase": "eval_generalization",
+      "seed": 208321107,
+      "seed_role": "environment_seed",
+      "cached_episode_seed": null,
+      "task": "RoboCasa365 pretrain task: pick place counter to cabinet",
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "runtime_verified": false
+    }
+  ],
+  "execution_requirement": "Use initial_state selector, not seed alone. Verify state and action contract before execution."
+}

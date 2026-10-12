@@ -43,7 +43,7 @@ def collect_one(row: dict, seed: int, root: Path, max_steps: int) -> dict:
     task_id = row["task_id"]
     directory = root / "episodes" / "metaworld" / task_id / f"seed-{seed}"
     directory.mkdir(parents=True, exist_ok=True)
-    raw = _make_metaworld_direct(task_id, image_width=256, image_height=256)
+    raw = _make_metaworld_direct(task_id, image_width=256, image_height=256, seed=seed)
     env = UnifiedEnv(raw, render_mode="rgb_array")
     expert = getattr(policies, POLICIES[task_id])()
     contract = {"action_dim": 4, "action_low": [-1.0] * 4, "action_high": [1.0] * 4}
@@ -56,6 +56,8 @@ def collect_one(row: dict, seed: int, root: Path, max_steps: int) -> dict:
               "input_protocol": inputs.INPUT_PROTOCOL, "input_profile": profile,
               "action_contract": contract, "bench": "metaworld", "task_id": task_id,
               "env_id": row["env_id"], "seed": seed,
+              "environment_seed_protocol": raw._openeta_seed_protocol,
+              "creation_seed": seed,
               "source_kind": "official_metaworld_scripted_policy_live_openeta",
               "source_dataset": "Farama-Foundation/Metaworld",
               "source_version": getattr(metaworld, "__version__", "unreported"),
@@ -64,6 +66,18 @@ def collect_one(row: dict, seed: int, root: Path, max_steps: int) -> dict:
     samples, actions = [], []
     try:
         observation, _ = env.reset(seed=seed)
+        if row.get("unified_case"):
+            state = raw.unwrapped
+            verdict = state.evaluate_state(state._get_obs(), np.zeros(4))[-1]
+            record["unified_case"] = row["unified_case"]
+            record["initial_state_audit"] = {
+                "qpos": state.data.qpos.tolist(), "qvel": state.data.qvel.tolist(),
+                "task_random_parameters": np.asarray(state._last_rand_vec).tolist(),
+                "goal_position": np.asarray(state._target_pos).tolist(),
+                "initial_success": bool(verdict.get("success", False)),
+            }
+            if record["initial_state_audit"]["initial_success"]:
+                raise ValueError("frozen initial state is already successful")
         # Match OpenETA reset_env's five open-gripper settling steps.
         for _ in range(5):
             observation, _, terminated, truncated, _ = env.step([0.0, 0.0, 0.0, -1.0])

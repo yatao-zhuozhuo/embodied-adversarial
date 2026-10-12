@@ -1,0 +1,1349 @@
+{
+  "task_key": "metaworld/stick-pull-v3",
+  "records": [
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/000",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 829849492,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09097016654568302,
+          0.5629330573040519,
+          0.0005681330950212066,
+          0.4374935246214906,
+          0.45015599209556084,
+          0.019908425709493402
+        ],
+        "/object_position": [
+          -0.09097016654568302,
+          0.5629330573040519,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4374935246214906,
+          0.45015599209556084,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fe86e84d7210e3ab309c6bafcdc2b4c991042a46b1916ab2fc57e112429a2c7e",
+      "task_state_fingerprint": "b02c153e0f99370273ee0552717c42b6b8f20c785f391ac6cf4ef187712ac8dc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/000/native_camera_2.png",
+          "sha256": "0a5050f93df9d9b3c59cf10cc1b7bf4b210a3651d29a220705ecab19c8298d8d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/001",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 985928605,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09207350663444752,
+          0.5557392210866728,
+          0.00013189758883528724,
+          0.37790532448467246,
+          0.5083111517412591,
+          0.019984847606213458
+        ],
+        "/object_position": [
+          -0.09207350663444752,
+          0.5557392210866728,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.37790532448467246,
+          0.5083111517412591,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "aa3457adbc525813c24c08d62d2c6e60edcb3b45aaa7af0679598aac75448631",
+      "task_state_fingerprint": "4b27e9eb0d2257616ccf76e26660288139a485ac8a5783c1a0a743e976e46329",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/001/native_camera_2.png",
+          "sha256": "84f03f6f9d5040454f1aebd324a7dc74928232e4d678dae1dc84690fa1e9c75b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/002",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 397692972,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07921373840996676,
+          0.5729114103926055,
+          0.0007618140468459775,
+          0.3994685249007047,
+          0.478345786180287,
+          0.020057716325649743
+        ],
+        "/object_position": [
+          -0.07921373840996676,
+          0.5729114103926055,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.3994685249007047,
+          0.478345786180287,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4c919f8fa64d9809722ad6fb53c96c3e459485fb3d18c5023f7dbc08fceb0e64",
+      "task_state_fingerprint": "4c1e2d3c56fa64902812dd1683044eb2389783c15861144ce2dbf62c1b655fde",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/002/native_camera_2.png",
+          "sha256": "d0dae56b10b2f4d751def6de6bed487be5b6e3a06c575275ccc72c5e39322e20"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/003",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 716885389,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08235150413370278,
+          0.5905920650224454,
+          0.0007637250767165887,
+          0.36842609076295935,
+          0.4753842376162889,
+          0.01996416353690855
+        ],
+        "/object_position": [
+          -0.08235150413370278,
+          0.5905920650224454,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.36842609076295935,
+          0.4753842376162889,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4a9148e4356960c76d52ec31ab2d677ffef4191a71ac00475e263b3b7a578f7c",
+      "task_state_fingerprint": "12f62c794fceb45a4c2ae3f3219f73f3701199427db1e435a089bc5f7d97c80c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/003/native_camera_2.png",
+          "sha256": "8c579b6ef226cb8d981c5bc9d531fe88aa6980d5551578554a2daa2543500ea9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/004",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1523920807,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02558875381042043,
+          0.6153806792620954,
+          0.00035670183982478655,
+          0.4311012143389399,
+          0.4958827825214719,
+          0.019925133771126504
+        ],
+        "/object_position": [
+          -0.02558875381042043,
+          0.6153806792620954,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4311012143389399,
+          0.4958827825214719,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3aa8295adb7700ed257b201e52e50a33c67dafc672ca6ba13b8e25dd5d37ff85",
+      "task_state_fingerprint": "3a1295b3960d3dbe32565967e1b15c7db6498d02b90c10ace4c8b7086d27cf98",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/004/native_camera_2.png",
+          "sha256": "f22f3996fa09d42bff0c0d6aac135fc9c4e89b09dd121a553e126ebd9a877e6e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/005",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1777053088,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.009521953987985082,
+          0.6266739848375098,
+          0.00094273943763614,
+          0.363050786688383,
+          0.48362090898620935,
+          0.0199304914417971
+        ],
+        "/object_position": [
+          -0.009521953987985082,
+          0.6266739848375098,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.363050786688383,
+          0.48362090898620935,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fdd51f03fab6698370d7e1778726b83ee54ead1e9a0936cf5854077088d87794",
+      "task_state_fingerprint": "4ac7c04475620d8d86202b314a9b5f6f744774ed25ae1d789d3e7fd7b6992241",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/005/native_camera_2.png",
+          "sha256": "4a3e0fef27500d6bb4f8a4815b4babc4b7282a5aa7794a30c2047af7dd9284eb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/sft_train/006",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 44389115,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02621223299172197,
+          0.5542134482494527,
+          0.00035458349473911345,
+          0.43860459155157916,
+          0.4646361084632437,
+          0.01991754737231408
+        ],
+        "/object_position": [
+          -0.02621223299172197,
+          0.5542134482494527,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.43860459155157916,
+          0.4646361084632437,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6f6df7a0174f95c1c707aedd83286aa46963b6c69ea22fc9a0600121fbf8db0a",
+      "task_state_fingerprint": "80b9acfd29406f938cf980ec91c51a0ba9cc245e9ca315b277a793d61500b42b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/sft_train/006/native_camera_2.png",
+          "sha256": "c45e6a7418de2f86e3f6e4f265927ec3f5ea454ccb453f9ffa7e501ea81cb1d7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/000",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 971421276,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02890214563289943,
+          0.630507024045177,
+          0.00018116908624927385,
+          0.35660143338929545,
+          0.45908735738120643,
+          0.020038421653506694
+        ],
+        "/object_position": [
+          -0.02890214563289943,
+          0.630507024045177,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.35660143338929545,
+          0.45908735738120643,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5efb4095e60e6c7efd01861ac66ed263f3c2de5d53289eb4c1bbe91f7395d34f",
+      "task_state_fingerprint": "ac372e1e36829e5196b2d7c0fbd17a62bbd706db214f21c2ea486900951b5205",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/000/native_camera_2.png",
+          "sha256": "3c1549a157c665924073dab461b3b07135ab66548ba3b0378657dac4528987bd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/001",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1728037392,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03739262614526691,
+          0.6184635598336675,
+          0.0007264557738103546,
+          0.4365099554792138,
+          0.49628561432942886,
+          0.019988295550531884
+        ],
+        "/object_position": [
+          -0.03739262614526691,
+          0.6184635598336675,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4365099554792138,
+          0.49628561432942886,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "27b4ce2f9e0ad54596f2f4a5a9324906715d9d2f7f32b4aee62852c08ce167b6",
+      "task_state_fingerprint": "df03c7f11568bfafbeebd6f414c446c2d562c0eb9c7adb59d94bd6bd08afc0da",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/001/native_camera_2.png",
+          "sha256": "6097254dc40cbababaa8773f6dc0f0e69d989d053a883beaa7d20eeacc6fb6c9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/002",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 2072489878,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.015080037798121393,
+          0.636006873188506,
+          0.0007110849728402352,
+          0.4434684545679798,
+          0.53854792894437,
+          0.019952843523837586
+        ],
+        "/object_position": [
+          -0.015080037798121393,
+          0.636006873188506,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4434684545679798,
+          0.53854792894437,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "70244dc70d00d4367939aef150e1c7fa502075d19f55d7576d089917d730d24d",
+      "task_state_fingerprint": "90ecaa22d656210cefc65628a953ed2846039268c29477fad35ce5e3ba362443",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/002/native_camera_2.png",
+          "sha256": "d7dc7d2bf2ede009f4a72a8c9569795dcf7b1f003e14298a0ca84364c9e0ec57"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/003",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 728826925,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04769160287880482,
+          0.5993428962455949,
+          0.0007199857815519192,
+          0.39973870277900836,
+          0.46599477218576735,
+          0.020064571153915953
+        ],
+        "/object_position": [
+          -0.04769160287880482,
+          0.5993428962455949,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.39973870277900836,
+          0.46599477218576735,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "37abe1387f38e1664e74993f0b51755b9d263e67cdfc34b2660bed267fc36068",
+      "task_state_fingerprint": "5a83dfd3de1aa232989247620a454c297f374c43c3a42ccf630df395e87f9cb8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/003/native_camera_2.png",
+          "sha256": "d1af39b8bbcfc51d456da5ab85206006a279e9d20f36f6417bca2b1122bdfe09"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/004",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 515256727,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08177138776238206,
+          0.6076591735894681,
+          0.0008457260572799195,
+          0.4008856497514358,
+          0.5240983584557014,
+          0.01992116229584972
+        ],
+        "/object_position": [
+          -0.08177138776238206,
+          0.6076591735894681,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4008856497514358,
+          0.5240983584557014,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b88af2d91f95d67d39a61d71a717eb392e2c58d62ef35909a888a1146be80213",
+      "task_state_fingerprint": "d883a7f46c61e84a9d0e0cf0c6e8802ad12acbf70b215bd871f12a34755ae777",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/004/native_camera_2.png",
+          "sha256": "c2848f01b88ba3cf49d2660dbc54e8335f412db94754947ddba807a3541e6f52"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/005",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1790936285,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09888113394205812,
+          0.6353581947663336,
+          0.00036002578149712996,
+          0.4002921953755869,
+          0.5455386268263279,
+          0.020012775612557657
+        ],
+        "/object_position": [
+          -0.09888113394205812,
+          0.6353581947663336,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4002921953755869,
+          0.5455386268263279,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8cbdbfaa2acf1935ed335f25eae8bd600976d38c8f71028981fbf11db747ae9f",
+      "task_state_fingerprint": "ca11c878dbda13c62cfb2192c8ed03ba95e5bcf71573fbb3908fa7e7f61fcbee",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/005/native_camera_2.png",
+          "sha256": "0e309ffc0a0e4c28392ae3a9480d436879a4fa21a1aa58c4e6bdb28a87f4fcc9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/rl_train/006",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1355184194,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0009199734109404251,
+          0.5680932924569283,
+          0.0003727332767655118,
+          0.4113838700001198,
+          0.4613483035867299,
+          0.019969003498565514
+        ],
+        "/object_position": [
+          -0.0009199734109404251,
+          0.5680932924569283,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4113838700001198,
+          0.4613483035867299,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d1f39c14aabe3df2f5ceb3a4396e9ec1a65c070a805109dcfbb229f59f4df892",
+      "task_state_fingerprint": "fa6d6084d9820c14f09f77647d0d4ea6b3348620a51a1c85d9ce846255f3f9d8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/rl_train/006/native_camera_2.png",
+          "sha256": "c56f1ab8a9e254f90971115b0b67e10ece1b5f39adca89b72fbc53bae38147e8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/000",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1219795453,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.00015174440018525526,
+          0.5866726622587413,
+          0.0005197297704066445,
+          0.4480545100360915,
+          0.45163272610316185,
+          0.020026860228015364
+        ],
+        "/object_position": [
+          -0.00015174440018525526,
+          0.5866726622587413,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4480545100360915,
+          0.45163272610316185,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ec199e4bfdc8557a628d963433f667163c0a38582254a56cecbd2b1fa6cdfeb7",
+      "task_state_fingerprint": "54f2f5c77afa663146ed81d1973a139cc4d6940dd1d47ace850045122e87f3db",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/000/native_camera_2.png",
+          "sha256": "4c1c2e43cdf6a9665e75ce81af6a7754a5471141a8df9f1b31f2486103a155da"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/001",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 724835887,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02718985266400771,
+          0.6444422764979035,
+          0.0004683751004917377,
+          0.3857473224553274,
+          0.509891770262409,
+          0.020049546593796725
+        ],
+        "/object_position": [
+          -0.02718985266400771,
+          0.6444422764979035,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.3857473224553274,
+          0.509891770262409,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c4dc43a69f65aa2bac321873c3fa967d9a6c31462441bb3d4fe85ca718b2efa7",
+      "task_state_fingerprint": "12a3e29bc937445fa214b94d65e1ea58fe334ead3cbd55fd18a29e65a5f1b5c6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/001/native_camera_2.png",
+          "sha256": "318157103fa0d74611000d90716e0a66fe4cc2fa1f9c356e9d2c7b5159b1d50a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/002",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 445617375,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08802307253562487,
+          0.6232179473634059,
+          0.0003695503616225634,
+          0.43505101155560744,
+          0.5195836898756393,
+          0.02007963561744725
+        ],
+        "/object_position": [
+          -0.08802307253562487,
+          0.6232179473634059,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.43505101155560744,
+          0.5195836898756393,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "53773b20b8f9603b1ba73c8d5bfcd92d30030b9dadd0c8a7e6634e498034e990",
+      "task_state_fingerprint": "ddba1e8310c343d59824c7529d5854b53c08e2a3fbf2047e5dbc2cb535ad1e5d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/002/native_camera_2.png",
+          "sha256": "4cafdef297c0bc75e6cba23192d2f0161701209992e7eb1819ddf117ba3a08a1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/003",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 775278462,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.049852038825884876,
+          0.6227814486015696,
+          0.0004242403407618294,
+          0.37246825006433704,
+          0.47047944255863144,
+          0.01990586040038534
+        ],
+        "/object_position": [
+          -0.049852038825884876,
+          0.6227814486015696,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.37246825006433704,
+          0.47047944255863144,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6aff22b54550e8ee79e7b149a65011339c9e15720d2802d15fef1d6be6a6d675",
+      "task_state_fingerprint": "f10ae5415a03a57d9744687aff63c949648b7f16d96f2605a2522d2658d1b57d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/003/native_camera_2.png",
+          "sha256": "f0b7af9c5e269268dec90b4ed97cebb66955f2f3ed46bf3416102344fee9bea7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/004",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1920256808,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07700720944942993,
+          0.5693992009502598,
+          0.0007773325103186477,
+          0.44676421704388875,
+          0.5141044129638953,
+          0.02002569962960762
+        ],
+        "/object_position": [
+          -0.07700720944942993,
+          0.5693992009502598,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.44676421704388875,
+          0.5141044129638953,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "42ba597c86b7dd3c924a3eedaa4711e73ded804b2a035335fdccffca5e2aff50",
+      "task_state_fingerprint": "08f42f7119205be79ed2e635ba7501b5b31d58728567323b8c00d0f542c127cf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/004/native_camera_2.png",
+          "sha256": "aab20d8304c506a9ec3ccd190add25b8289c87b00505474376fc844a1efa438c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/005",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 184979260,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08153821948178121,
+          0.5590477675010909,
+          0.0006523513356782316,
+          0.35789358925317066,
+          0.4768096835040929,
+          0.020033771255357637
+        ],
+        "/object_position": [
+          -0.08153821948178121,
+          0.5590477675010909,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.35789358925317066,
+          0.4768096835040929,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7627859039c61ff7f9c68d5efcf3c4843053a0fe2467fd90a3ec01e8fc34b409",
+      "task_state_fingerprint": "b4c5ddd51123d5d01e07507aafe035a82c7e4f45cbab5032c1ec55cce60556e6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/005/native_camera_2.png",
+          "sha256": "a88a508eb7403ff5cb2e279ca1597ed896597dd40d1b61438b804ccc6d21de52"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/validation/006",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 678424199,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07953325137592376,
+          0.5999006976257225,
+          3.1123320622313936e-05,
+          0.37134050576165767,
+          0.5288841066326526,
+          0.01991052528613867
+        ],
+        "/object_position": [
+          -0.07953325137592376,
+          0.5999006976257225,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.37134050576165767,
+          0.5288841066326526,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a420abdbf971ebb17cde47ace0938faa957ecc9e9df5bb735794c857a59edd25",
+      "task_state_fingerprint": "106536b3372caf63240d28682d2b1854575d91b34aece6ce9c3ef7bd45d95120",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/validation/006/native_camera_2.png",
+          "sha256": "51b2ae5e69c408f0a5188fa125dc2bf3c0810735950c5f37fe646f048542099f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/000",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 1487159100,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0004665293346858834,
+          0.5709447301958755,
+          0.0005270628727033733,
+          0.4302301352277831,
+          0.4573067066572131,
+          0.019961692086357955
+        ],
+        "/object_position": [
+          -0.0004665293346858834,
+          0.5709447301958755,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4302301352277831,
+          0.4573067066572131,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6afb68e14b5a750f81dc14d7b1956707b1eebbd6cb77dcacc07cfc42cc585784",
+      "task_state_fingerprint": "6c3e219fb83bb3d5ee5766a53f0bc059fa631861a78fc1d128d6e4fc9bf6ef24",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "a63d2c8eb8b7b2445a99d9f0879e52282bd891b85bbdc458b97b70262364fa44"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/001",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 758755521,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08502260031131462,
+          0.5505081882046661,
+          0.0005919472247668295,
+          0.4237133011631646,
+          0.49910398226779445,
+          0.020015305949334133
+        ],
+        "/object_position": [
+          -0.08502260031131462,
+          0.5505081882046661,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4237133011631646,
+          0.49910398226779445,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "30182c44eefbc7d965553cbcaef330e96f1c392c03eff6402514f51131e5e544",
+      "task_state_fingerprint": "6bd930e10b76c74d3b0eb6f428b488611aaa3bb75b46afc011bb6db19dca31b2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "b3d49861da8a3f95c797af37468190a9fa93900fff907f2f0df9e1516d46c4fe"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/002",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 97964351,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03719740239036287,
+          0.597326749947789,
+          0.0003000738839767148,
+          0.35511696417548333,
+          0.4860284013028115,
+          0.019988841610418945
+        ],
+        "/object_position": [
+          -0.03719740239036287,
+          0.597326749947789,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.35511696417548333,
+          0.4860284013028115,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "39c01bb55e746aeb0e7c46e31599fe67b18bfd3fa1e64d70d63094586fd45bb8",
+      "task_state_fingerprint": "aad4b88da695df60f6e86803bd1a554b35ca64ae6d07814570134474f1b870ac",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "d9a73ca7af8b6a7986fe668287224a89e602e201b2674448bf9bc5ba3f7b3a5a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/003",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 776883863,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06681678256467741,
+          0.564300690567598,
+          0.00023050653068757744,
+          0.439107906462901,
+          0.5281735202813893,
+          0.020056301516873806
+        ],
+        "/object_position": [
+          -0.06681678256467741,
+          0.564300690567598,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.439107906462901,
+          0.5281735202813893,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a41218b746928662f4c14e9b0fb726672a6581ca15d4236d2ec6447749e73a5e",
+      "task_state_fingerprint": "35ed0b6d4b544f7ab1781ffa5969fd4e0cc34164808c3b6b377e392315e0ffa5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/003/native_camera_2.png",
+          "sha256": "74facb25fc1deac956c7740829465103a1afe4a99a987522650847b58238a61b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/004",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 836563276,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.027410438370762485,
+          0.6153983766393185,
+          0.0007140120185595199,
+          0.42865410227716416,
+          0.5324584714562287,
+          0.0199231847920637
+        ],
+        "/object_position": [
+          -0.027410438370762485,
+          0.6153983766393185,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.42865410227716416,
+          0.5324584714562287,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ed6e995f2a18f4c4366717243571dc6b7758e6d9993c5e12cbd6e2b26e128592",
+      "task_state_fingerprint": "ed6e0df6b47c1078f54f745d1b24e17543f262fb0c5d4b9e2e5aaa1f32bc9b24",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/004/native_camera_2.png",
+          "sha256": "240c0355a319773d0f0fa8dc55edeb0838de8f69b992565c63799a3f68c801b1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/005",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 574310468,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03525434693172251,
+          0.5732145434164928,
+          0.0006945341915205142,
+          0.4306471649090412,
+          0.5201767093103029,
+          0.019944085831300445
+        ],
+        "/object_position": [
+          -0.03525434693172251,
+          0.5732145434164928,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4306471649090412,
+          0.5201767093103029,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "888f943c120642e15832f8c1f78df8cf132c37caef4fd35e497c30d795e501af",
+      "task_state_fingerprint": "e876d480c46b21ba7fdca2c842e6269321a29899591b8ebbddffe1e1df20b725",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/005/native_camera_2.png",
+          "sha256": "4fef8585a4f34ad6348d44db9d39c5f8c05a9b1255d57167b0688fef6c87f541"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/stick-pull-v3/eval_seen/006",
+      "task_key": "metaworld/stick-pull-v3",
+      "seed": 639883990,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04952758455917025,
+          0.5993146841583724,
+          0.00025597170957449825,
+          0.4306776302881037,
+          0.4938142299577168,
+          0.019992344281357193
+        ],
+        "/object_position": [
+          -0.04952758455917025,
+          0.5993146841583724,
+          0.02,
+          0.2,
+          0.6,
+          0.132
+        ],
+        "/goal_position": [
+          0.4306776302881037,
+          0.4938142299577168,
+          0.02
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8e9b5df60781789643ef98a02d98f895051a9017f5d393a92112f46be1edd60d",
+      "task_state_fingerprint": "b84535d9a69ad72ec5e0ec83b423a41a4c0bf03048a25f2d40bc7c5b301b5ff7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/stick-pull-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "084752677e3ad808c3b3940b691c73c1566383961325dfb83af845ed752cce5e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

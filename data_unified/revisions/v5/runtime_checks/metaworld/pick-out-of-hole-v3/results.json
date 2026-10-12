@@ -1,0 +1,239 @@
+{
+  "task_key": "metaworld/pick-out-of-hole-v3",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/000",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 1763996267,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1763996267,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881812939126,
+          -0.5757689061948443,
+          -0.9766593499473483,
+          1.6419914938132965,
+          0.9428596255713372,
+          1.0436962396375828,
+          2.292833311536149,
+          -0.00017190619515364345,
+          0.00017174542246661774,
+          0.0,
+          0.75,
+          0.02,
+          0.9999999999998543,
+          4.770135867342323e-07,
+          2.528568802751833e-07,
+          1.4673693009483344e-15
+        ],
+        "/qvel": [
+          0.26100214075489697,
+          0.4289125865815568,
+          -0.48577049769751895,
+          0.24403763935382544,
+          0.8291097873010803,
+          0.09876226777705523,
+          1.5894717647955003,
+          5.842799054351705e-07,
+          5.910160138773161e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          0.06852562492041456,
+          0.5691383604664205,
+          0.23666353534588075
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          0.06852562492041456,
+          0.5691383604664205,
+          0.23666353534588075
+        ]
+      },
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "59e0a1bb7e4a9e00bd63768cb107aae71c9a1716e54ed1cbd1418325e93f104c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/pick-out-of-hole-v3/eval_generalization/000/native_camera_2.png",
+          "sha256": "9565ac9448d4f09e125bbce09e250c9d5e5fb2a01f0737655144ea64d08dcb1c"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/001",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 736386128,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 736386128,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881812939126,
+          -0.5757689061948443,
+          -0.9766593499473483,
+          1.6419914938132965,
+          0.9428596255713372,
+          1.0436962396375828,
+          2.292833311536149,
+          -0.00017190619515364345,
+          0.00017174542246661774,
+          0.0,
+          0.75,
+          0.02,
+          0.9999999999998543,
+          4.770135867342323e-07,
+          2.528568802751833e-07,
+          1.4673693009483344e-15
+        ],
+        "/qvel": [
+          0.26100214075489697,
+          0.4289125865815568,
+          -0.48577049769751895,
+          0.24403763935382544,
+          0.8291097873010803,
+          0.09876226777705523,
+          1.5894717647955003,
+          5.842799054351705e-07,
+          5.910160138773161e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          -0.05877149537648743,
+          0.5216578972166516,
+          0.20579617276700501
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          -0.05877149537648743,
+          0.5216578972166516,
+          0.20579617276700501
+        ]
+      },
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "d9972c29066da825fa9d71b0e9af47dccc93df6d614470b39fe07d85e8cbbeff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/pick-out-of-hole-v3/eval_generalization/001/native_camera_2.png",
+          "sha256": "41905c478be51c2276cce47757a14df008fb99b3fd8e02c171a034598ab0b8e9"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

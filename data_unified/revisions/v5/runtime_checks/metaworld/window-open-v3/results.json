@@ -1,0 +1,714 @@
+{
+  "task_key": "metaworld/window-open-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/sft_train/000",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 1770807427,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1770807427,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0482788168782254,
+          0.7038047279051864,
+          0.16
+        ],
+        "/object_position": [
+          -0.08827881687822539,
+          0.6088047279051865,
+          0.16
+        ],
+        "/goal_position": [
+          0.15172118312177463,
+          0.7038047279051864,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "a48c40d8eb6139a046c3b9ec2e459e8d38025c33d8f3bddb83eff6d2fe9e762f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/sft_train/000/native_camera_2.png",
+          "sha256": "2df2846d8fd5e82921c3b7bb502db397855ccba3f7bfbf28dc7446af945785c3"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/sft_train/001",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 1548886973,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1548886973,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.023128692660477082,
+          0.7400662164398305,
+          0.16
+        ],
+        "/object_position": [
+          -0.01687130733952292,
+          0.6450662164398305,
+          0.16
+        ],
+        "/goal_position": [
+          0.22312869266047708,
+          0.7400662164398305,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "96e9d58a5d93ee14748fa4d66252ac926cb3e054a8f686c6ee65abc57182563a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/sft_train/001/native_camera_2.png",
+          "sha256": "052cefcd8249681a72e23364d27b7b72ba49178b804ae6c83a185f7722d50f2c"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/rl_train/000",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 675095169,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 675095169,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.011655221737341681,
+          0.7288745397151483,
+          0.16
+        ],
+        "/object_position": [
+          -0.02834477826265832,
+          0.6338745397151483,
+          0.16
+        ],
+        "/goal_position": [
+          0.2116552217373417,
+          0.7288745397151483,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "88e4184f467a72489fab91ef4a7577fa87e3efd38edfb862a413d09ccfe48e26",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/rl_train/000/native_camera_2.png",
+          "sha256": "9dff03e1b5ee8bbaec934d3f853a71a53a24aabf7c8d50f68e1bb37b0c160626"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/rl_train/001",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 1355564967,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1355564967,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.07205850497512625,
+          0.7108548559627249,
+          0.16
+        ],
+        "/object_position": [
+          0.03205850497512625,
+          0.6158548559627249,
+          0.16
+        ],
+        "/goal_position": [
+          0.2720585049751263,
+          0.7108548559627249,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "e6aeda221606943a1dcbc885d0837e99c3d7c90d35f43f5d221730ad9edc9824",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/rl_train/001/native_camera_2.png",
+          "sha256": "a324ee63992c5fd915ad3031c6e1bba353324c4d19064b923a291fc580a08344"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/validation/000",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 1490000509,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1490000509,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.03473185585422098,
+          0.8814693627731487,
+          0.16
+        ],
+        "/object_position": [
+          -0.005268144145779023,
+          0.7864693627731487,
+          0.16
+        ],
+        "/goal_position": [
+          0.234731855854221,
+          0.8814693627731487,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "bb5e0f218eea9b2ed222f744b4ee5366fc3f4a8794a3b4f89290e1cd43c52aca",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/validation/000/native_camera_2.png",
+          "sha256": "522ec5c25430350971fff7a8598c8066640612d34af2aadd75c6f35901f9990a"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/eval_seen/000",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 1947862240,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1947862240,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.01813427936373968,
+          0.7410865896929717,
+          0.16
+        ],
+        "/object_position": [
+          -0.05813427936373968,
+          0.6460865896929717,
+          0.16
+        ],
+        "/goal_position": [
+          0.18186572063626033,
+          0.7410865896929717,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "a265af73b378137e666539a03f1e2976840a49579164fda8621be271ac376616",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "afa3d0e01e040e827397e634566d8e33af1041c3a2f7da04e9bc9a32eb86cc93"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/window-open-v3/eval_seen/001",
+      "task_key": "metaworld/window-open-v3",
+      "seed": 325219270,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 325219270,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.1674905861779648,
+          -0.54595684516891,
+          -1.2347217871294214,
+          2.1711108676782205,
+          1.2478093742887353,
+          1.0194763318517632,
+          1.9011960169297555,
+          -0.00017186077949607473,
+          0.00017178965409390032,
+          0.0
+        ],
+        "/qvel": [
+          0.08512035396390233,
+          0.6327525877109921,
+          -0.21596148831978704,
+          0.17411748136133717,
+          0.7585235101632968,
+          0.4010606896775521,
+          1.019200496985335,
+          2.0543033886795994e-07,
+          2.0096594647101535e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.031032104120141596,
+          0.8016835756361078,
+          0.16
+        ],
+        "/object_position": [
+          -0.008967895879858405,
+          0.7066835756361078,
+          0.16
+        ],
+        "/goal_position": [
+          0.2310321041201416,
+          0.8016835756361078,
+          0.16
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "b2ffafe953fbdf0cc3fac81af6ade88696d3f5f9bf9ad40e13a1c43291431f33",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/window-open-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "572c8f0c2825af1a87244ec3c59e0130cd96e724ab529761c08d5d106090eaa9"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

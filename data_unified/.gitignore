@@ -1,0 +1,5 @@
+# Generated reset screenshots are local; manifests retain their references.
+*.png
+!runtime_checks/seed-comparison.png
+*.lock
+*.tmp

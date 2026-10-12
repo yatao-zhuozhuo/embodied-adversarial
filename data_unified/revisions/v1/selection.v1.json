@@ -1,0 +1,431 @@
+{
+  "schema_version": "openeta.unified_selection.v1",
+  "selection_seed": 20261010,
+  "validation_split": false,
+  "shared_tasks_per_bench": 15,
+  "generalization_tasks_per_bench": 2,
+  "states_per_task": {
+    "sft_train": 15,
+    "rl_train": 15,
+    "eval_seen": 20,
+    "eval_generalization": 20
+  },
+  "selection_policy": "Curated skill coverage with cache availability; no model scores used. This new protocol supersedes legacy holdout only for newly selected shared tasks. Historical runs retain their original rules.",
+  "tasks": {
+    "libero": {
+      "shared": [
+        {
+          "task_id": "libero_10_task0",
+          "family": "multi_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_10_task5",
+          "family": "placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_spatial_task6",
+          "family": "spatial_selection",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task35",
+          "family": "articulated_open",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task70",
+          "family": "relative_placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_10_task4",
+          "family": "multi_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_10_task8",
+          "family": "multi_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task5",
+          "family": "place_and_close",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task7",
+          "family": "articulated_open",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task40",
+          "family": "shelf_placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task52",
+          "family": "pick_place",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task55",
+          "family": "tray_placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task71",
+          "family": "pick_place",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_90_task88",
+          "family": "spatial_selection",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "libero_object_task2",
+          "family": "pick_place",
+          "reason": "Installed official demonstration plus skill coverage."
+        }
+      ],
+      "generalization": [
+        {
+          "task_id": "libero_spatial_task1",
+          "family": "spatial_selection",
+          "reason": "Preserve legacy reservation and exclude local known training exposure."
+        },
+        {
+          "task_id": "libero_object_task6",
+          "family": "object_pick",
+          "reason": "Preserve legacy reservation and exclude local known training exposure."
+        }
+      ]
+    },
+    "metaworld": {
+      "shared": [
+        {
+          "task_id": "assembly-v3",
+          "family": "assembly",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerAssemblyV3Policy"
+        },
+        {
+          "task_id": "bin-picking-v3",
+          "family": "pick_place",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerBinPickingV3Policy"
+        },
+        {
+          "task_id": "disassemble-v3",
+          "family": "disassembly",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerDisassembleV3Policy"
+        },
+        {
+          "task_id": "lever-pull-v3",
+          "family": "articulated",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerLeverPullV3Policy"
+        },
+        {
+          "task_id": "reach-v3",
+          "family": "reach",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerReachV3Policy"
+        },
+        {
+          "task_id": "window-open-v3",
+          "family": "articulated",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerWindowOpenV3Policy"
+        },
+        {
+          "task_id": "coffee-push-v3",
+          "family": "push",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerCoffeePushV3Policy"
+        },
+        {
+          "task_id": "dial-turn-v3",
+          "family": "rotation",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerDialTurnV3Policy"
+        },
+        {
+          "task_id": "faucet-open-v3",
+          "family": "rotation",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerFaucetOpenV3Policy"
+        },
+        {
+          "task_id": "hammer-v3",
+          "family": "tool_use",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerHammerV3Policy"
+        },
+        {
+          "task_id": "peg-insert-side-v3",
+          "family": "insertion",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerPegInsertionSideV3Policy"
+        },
+        {
+          "task_id": "shelf-place-v3",
+          "family": "placement",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerShelfPlaceV3Policy"
+        },
+        {
+          "task_id": "sweep-v3",
+          "family": "sweep",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerSweepV3Policy"
+        },
+        {
+          "task_id": "box-close-v3",
+          "family": "grasp_and_close",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerBoxCloseV3Policy"
+        },
+        {
+          "task_id": "door-unlock-v3",
+          "family": "articulated",
+          "reason": "Official task with scripted-expert support; cover distinct manipulation skills.",
+          "expert_policy": "SawyerDoorUnlockV3Policy"
+        }
+      ],
+      "generalization": [
+        {
+          "task_id": "drawer-open-v3",
+          "family": "articulated",
+          "reason": "Preserve legacy reservation and exclude local known training exposure.",
+          "expert_policy": "SawyerDrawerOpenV3Policy"
+        },
+        {
+          "task_id": "stick-push-v3",
+          "family": "tool_use",
+          "reason": "Preserve legacy reservation and exclude local known training exposure.",
+          "expert_policy": "SawyerStickPushV3Policy"
+        }
+      ]
+    },
+    "maniskill": {
+      "shared": [
+        {
+          "task_id": "AssemblingKits-v1",
+          "family": "assembly",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Insert the misplaced shape on the board completely into its matching empty slot.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "FMBAssembly1Easy-v1",
+          "family": "assembly",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Assemble the parts onto the red board using the reorientation fixture.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "LiftPegUpright-v1",
+          "family": "lift",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Move the peg from lying flat to standing upright on the table.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PegInsertionSide-v1",
+          "family": "insertion",
+          "reason": "Replace the installed PickClutterYCB task whose official evaluator always reports failure.",
+          "instruction": "Insert the peg into the side hole of the box.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PickCube-v1",
+          "family": "pick_place",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PickSingleYCB-v1",
+          "family": "object_pick",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Pick up the object on the table and move it to the task's goal position, then keep the robot still.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PlaceSphere-v1",
+          "family": "placement",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Place the sphere into the shallow bin and release it; keep the robot still at the end.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PokeCube-v1",
+          "family": "poke",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Use the peg to poke the cube into its target region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PullCube-v1",
+          "family": "pull",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Pull the cube onto the goal region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PullCubeTool-v1",
+          "family": "tool_use",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Use the L-shaped tool to pull the cube into the goal region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PushCube-v1",
+          "family": "push",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Push the cube onto the goal region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "RollBall-v1",
+          "family": "roll",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Roll the ball into the goal region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "StackCube-v1",
+          "family": "stack",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Stack the red cube on the green cube and release it.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "StackPyramid-v1",
+          "family": "multi_object_stack",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Stack the cubes into a pyramid: two cubes below and one cube on top.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "TurnFaucet-v1",
+          "family": "articulated",
+          "reason": "Single Panda arm and coverage of manipulation skills.",
+          "instruction": "Turn the designated faucet handle until it passes the required target angle.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        }
+      ],
+      "generalization": [
+        {
+          "task_id": "PushT-v1",
+          "family": "planar_shape_alignment",
+          "reason": "Preserve a legacy reserved task; Panda stick uses its native 6D action interface.",
+          "instruction": "Use the robot stick to push the T-shaped block into alignment with the target T-shaped region.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        },
+        {
+          "task_id": "PlugCharger-v1",
+          "family": "insertion",
+          "reason": "Preserve legacy reservation and exclude local known training exposure.",
+          "instruction": "Insert the charger into the receptacle.",
+          "instruction_source": "local_task_implementation_and_existing_protocol_text"
+        }
+      ]
+    },
+    "robocasa": {
+      "shared": [
+        {
+          "task_id": "CoffeeSetupMug",
+          "family": "placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "CloseBlenderLid",
+          "family": "lid_close",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "ScrubCuttingBoard",
+          "family": "surface_contact",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "MoveToFreezerDrawer",
+          "family": "navigation_and_manipulation",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "ArrangeDrinkware",
+          "family": "multi_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "CloseMicrowave",
+          "family": "articulated_close",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "PickPlaceCounterToDrawer",
+          "family": "pick_place",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "PickPlaceCounterToSink",
+          "family": "pick_place",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "TurnOnToasterOven",
+          "family": "appliance_control",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "AddSugarCubes",
+          "family": "small_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "AdjustHeat",
+          "family": "appliance_control",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "DeliverStraw",
+          "family": "placement",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "PlaceIceInCup",
+          "family": "small_object",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "RetrieveIceTray",
+          "family": "retrieval",
+          "reason": "Installed official demonstration plus skill coverage."
+        },
+        {
+          "task_id": "SetupFrying",
+          "family": "multi_step",
+          "reason": "Installed official demonstration plus skill coverage."
+        }
+      ],
+      "generalization": [
+        {
+          "task_id": "OpenDrawer",
+          "family": "articulated_open",
+          "reason": "Preserve legacy reservation and exclude local known training exposure."
+        },
+        {
+          "task_id": "PickPlaceCounterToCabinet",
+          "family": "pick_place",
+          "reason": "Preserve legacy reservation and exclude local known training exposure."
+        }
+      ]
+    }
+  }
+}

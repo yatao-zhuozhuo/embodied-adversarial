@@ -1,0 +1,105 @@
+benchmark,task,description,sft_actual,rl32_pool,rl_curriculum_pool,baseline_v2,sft_env_ids,rl_env_ids,baseline_env_ids
+libero,libero_10_task0,put both the alphabet soup and the tomato sauce in the basket,0,1,1,0,,openeta/libero_libero_10_task0-v0,
+libero,libero_10_task2,turn on the stove and put the moka pot on it,0,0,0,1,,,openeta/libero_libero_10_task2-v0
+libero,libero_10_task3,put the black bowl in the bottom drawer of the cabinet and close it,0,0,0,1,,,openeta/libero_libero_10_task3-v0
+libero,libero_10_task5,pick up the book and place it in the back compartment of the caddy,1,1,1,0,openeta/libero_libero_10_task5-v0,openeta/libero_libero_10_task5-v0,
+libero,libero_90_task0,close the top drawer of the cabinet,0,0,0,1,,,openeta/libero_libero_90_task0-v0
+libero,libero_90_task14,libero:KITCHEN_SCENE2_put_the_middle_black_bowl_on_the_plate,1,0,0,0,openeta/libero_libero_90_task14-v0,,
+libero,libero_90_task22,close the bottom drawer of the cabinet,0,0,0,1,,,openeta/libero_libero_90_task22-v0
+libero,libero_90_task33,close the microwave,0,0,0,1,,,openeta/libero_libero_90_task33-v0
+libero,libero_90_task35,open the microwave,1,1,1,0,openeta/libero_libero_90_task35-v0,openeta/libero_libero_90_task35-v0,
+libero,libero_90_task39,turn off the stove,0,0,0,1,,,openeta/libero_libero_90_task39-v0
+libero,libero_90_task41,libero:KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet,1,0,0,0,openeta/libero_libero_90_task41-v0,,
+libero,libero_90_task6,open the bottom drawer of the cabinet,0,0,0,1,,,openeta/libero_libero_90_task6-v0
+libero,libero_90_task69,libero:LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_left_of_the_plate,1,0,0,0,openeta/libero_libero_90_task69-v0,,
+libero,libero_90_task70,put the chocolate pudding to the right of the plate,1,1,1,0,openeta/libero_libero_90_task70-v0,openeta/libero_libero_90_task70-v0,
+libero,libero_goal_task0,open the middle drawer of the cabinet,0,0,0,1,,,openeta/libero_libero_goal_task0-v0
+libero,libero_goal_task1,put the bowl on the stove,0,0,0,1,,,openeta/libero_libero_goal_task1-v0
+libero,libero_goal_task4,put the bowl on top of the cabinet,0,0,0,1,,,openeta/libero_libero_goal_task4-v0
+libero,libero_goal_task5,push the plate to the front of the stove,0,0,0,1,,,openeta/libero_libero_goal_task5-v0
+libero,libero_goal_task6,put the cream cheese in the bowl,0,0,0,1,,,openeta/libero_libero_goal_task6-v0
+libero,libero_goal_task7,turn on the stove,0,0,0,1,,,openeta/libero_libero_goal_task7-v0
+libero,libero_goal_task8,libero:put_the_bowl_on_the_plate,1,0,0,0,openeta/libero_libero_goal_task8-v0,,
+libero,libero_object_task0,pick up the alphabet soup and place it in the basket,0,0,0,1,,,openeta/libero_libero_object_task0-v0
+libero,libero_object_task6,pick up the butter and place it in the basket,0,0,0,1,,,openeta/libero_libero_object_task6-v0
+libero,libero_object_task7,pick up the milk and place it in the basket,0,0,0,1,,,openeta/libero_libero_object_task7-v0
+libero,libero_object_task8,pick up the chocolate pudding and place it in the basket,0,0,0,1,,,openeta/libero_libero_object_task8-v0
+libero,libero_spatial_task1,pick up the black bowl next to the ramekin and place it on the plate,0,0,0,1,,,openeta/libero_libero_spatial_task1-v0
+libero,libero_spatial_task5,pick up the black bowl on the ramekin and place it on the plate,0,0,0,1,,,openeta/libero_libero_spatial_task5-v0
+libero,libero_spatial_task6,pick up the black bowl next to the cookie box and place it on the plate,1,1,1,0,openeta/libero_libero_spatial_task6-v0,openeta/libero_libero_spatial_task6-v0,
+libero,libero_spatial_task9,pick up the black bowl on the wooden cabinet and place it on the plate,0,0,0,1,,,openeta/libero_libero_spatial_task9-v0
+maniskill,DrawSVG-v1,Trace the outlined target shape on the canvas with the red brush.,0,1,1,0,,openeta/maniskill_DrawSVG-v1-v0,
+maniskill,DrawTriangle-v1,Trace the outlined target triangle on the canvas with the red brush.,0,1,1,0,,openeta/maniskill_DrawTriangle-v1-v0,
+maniskill,FMBAssembly1Easy-v1,ManiSkill task: FMBAssembly1Easy-v1,0,1,1,0,,openeta/maniskill_FMBAssembly1Easy-v1-v0,
+maniskill,LiftPegUpright-v1,Move the peg lying on the table into an upright position standing on the table.,1,1,1,0,openeta/maniskill_LiftPegUpright-v1-v0,openeta/maniskill_LiftPegUpright-v1-v0,
+maniskill,PegInsertionSide-v1,Insert the peg into the side hole of the box.,0,0,0,1,,,openeta/maniskill_PegInsertionSide-v1-v0
+maniskill,PickCube-v1,Pick up the cube and move it to the goal marked by the green sphere; keep the robot still at the end.,0,0,0,1,,,openeta/maniskill_PickCube-v1-v0
+maniskill,PickSingleYCB-v1,Pick up the object and move it to the goal marked by the green sphere; keep the robot still at the end.,0,1,1,1,,openeta/maniskill_PickSingleYCB-v1-v0,openeta/maniskill_PickSingleYCB-v1-v0
+maniskill,PlaceSphere-v1,Place the sphere into the shallow bin and release it; keep the robot still at the end.,0,0,0,1,,,openeta/maniskill_PlaceSphere-v1-v0
+maniskill,PlugCharger-v1,Insert the charger into the receptacle.,0,0,0,1,,,openeta/maniskill_PlugCharger-v1-v0
+maniskill,PokeCube-v1,"Use the peg to poke the red cube onto the red-and-white target region, then keep the robot still.",1,1,1,0,openeta/maniskill_PokeCube-v1-v0,openeta/maniskill_PokeCube-v1-v0,
+maniskill,PullCube-v1,Pull the cube onto the target region,1,1,1,0,openeta/maniskill_PullCube-v1-v0,openeta/maniskill_PullCube-v1-v0,
+maniskill,PullCubeTool-v1,Use the L-shaped tool to pull the cube into the goal region.,0,0,0,1,,,openeta/maniskill_PullCubeTool-v1-v0
+maniskill,PushCube-v1,Push the cube onto the goal region.,0,0,0,1,,,openeta/maniskill_PushCube-v1-v0
+maniskill,PushT-v1,Push the T-shaped block to align with the target T-shaped region.,0,0,0,1,,,openeta/maniskill_PushT-v1-v0
+maniskill,RollBall-v1,Roll the ball into the goal region.,0,0,0,1,,,openeta/maniskill_RollBall-v1-v0
+maniskill,RotateSingleObjectInHandLevel0-v1,Rotate the object in the hand through more than two full turns around the vertical axis.,0,1,1,0,,openeta/maniskill_RotateSingleObjectInHandLevel0-v1-v0,
+maniskill,RotateSingleObjectInHandLevel1-v1,Rotate the object in the hand through more than two full turns around the vertical axis.,0,1,1,0,,openeta/maniskill_RotateSingleObjectInHandLevel1-v1-v0,
+maniskill,RotateSingleObjectInHandLevel2-v1,Rotate the object in the hand through more than two full turns around the vertical axis.,0,1,1,0,,openeta/maniskill_RotateSingleObjectInHandLevel2-v1-v0,
+maniskill,RotateValveLevel0-v1,Rotate the valve counterclockwise by at least 90 degrees.,0,1,1,0,,openeta/maniskill_RotateValveLevel0-v1-v0,
+maniskill,RotateValveLevel1-v1,Rotate the valve counterclockwise by at least 180 degrees.,0,1,1,0,,openeta/maniskill_RotateValveLevel1-v1-v0,
+maniskill,RotateValveLevel2-v1,Rotate the valve counterclockwise by at least 180 degrees.,0,1,1,0,,openeta/maniskill_RotateValveLevel2-v1-v0,
+maniskill,RotateValveLevel3-v1,Rotate the valve counterclockwise by at least 180 degrees.,0,1,1,0,,openeta/maniskill_RotateValveLevel3-v1-v0,
+maniskill,RotateValveLevel4-v1,Rotate the valve by more than one full turn in the direction specified by the reset task instruction.,0,1,1,0,,openeta/maniskill_RotateValveLevel4-v1-v0,
+maniskill,StackCube-v1,Stack the red cube on the green cube and release it.,0,0,0,1,,,openeta/maniskill_StackCube-v1-v0
+maniskill,StackPyramid-v1,Stack the cubes into a pyramid: two cubes below and one cube on top.,0,0,0,1,,,openeta/maniskill_StackPyramid-v1-v0
+maniskill,TwoRobotPickCube-v1,Use both robot arms to transfer the red cube to the green goal sphere.,0,1,1,0,,openeta/maniskill_TwoRobotPickCube-v1-v0,
+maniskill,TwoRobotStackCube-v1,"Use both robot arms to place the green cube on the red-and-white target region, stack the blue cube on the green cube, and release both cubes.",0,1,1,0,,openeta/maniskill_TwoRobotStackCube-v1-v0,
+metaworld,assembly-v3,Pick up a nut and place it onto a peg,1,1,1,0,openeta/metaworld_50_assembly-v3-v0,openeta/metaworld_50_assembly-v3-v0,
+metaworld,bin-picking-v3,Grasp the puck from one bin and place it into another bin,1,1,1,0,openeta/metaworld_50_bin-picking-v3-v0,openeta/metaworld_50_bin-picking-v3-v0,
+metaworld,button-press-topdown-v3,Press a button from the top,0,0,1,1,,openeta/metaworld_50_button-press-topdown-v3-v0,openeta/metaworld_50_button-press-topdown-v3-v0
+metaworld,button-press-topdown-wall-v3,Bypass a wall and press a button from the top,0,0,0,1,,,openeta/metaworld_50_button-press-topdown-wall-v3-v0
+metaworld,button-press-v3,Press a button,0,0,1,1,,openeta/metaworld_50_button-press-v3-v0,openeta/metaworld_50_button-press-v3-v0
+metaworld,button-press-wall-v3,Bypass a wall and press a button,0,0,0,1,,,openeta/metaworld_50_button-press-wall-v3-v0
+metaworld,coffee-button-v3,Push a button on the coffee machine,0,0,0,1,,,openeta/metaworld_50_coffee-button-v3-v0
+metaworld,coffee-pull-v3,Pull a mug from a coffee machine,0,0,0,1,,,openeta/metaworld_50_coffee-pull-v3-v0
+metaworld,disassemble-v3,Pick a nut out of a peg,1,1,1,0,openeta/metaworld_50_disassemble-v3-v0,openeta/metaworld_50_disassemble-v3-v0,
+metaworld,door-close-v3,Close a door with a revolving joint,0,0,0,1,,,openeta/metaworld_50_door-close-v3-v0
+metaworld,door-open-v3,Open a door with a revolving joint,0,0,0,1,,,openeta/metaworld_50_door-open-v3-v0
+metaworld,drawer-close-v3,Push and close a drawer,0,0,1,1,,openeta/metaworld_50_drawer-close-v3-v0,openeta/metaworld_50_drawer-close-v3-v0
+metaworld,drawer-open-v3,Open a drawer,0,0,0,1,,,openeta/metaworld_50_drawer-open-v3-v0
+metaworld,faucet-close-v3,Rotate the faucet clockwise,0,0,0,1,,,openeta/metaworld_50_faucet-close-v3-v0
+metaworld,handle-press-side-v3,Press a handle down sideways,0,0,0,1,,,openeta/metaworld_50_handle-press-side-v3-v0
+metaworld,handle-press-v3,Press a handle down,0,0,1,1,,openeta/metaworld_50_handle-press-v3-v0,openeta/metaworld_50_handle-press-v3-v0
+metaworld,handle-pull-v3,Pull a handle up,0,0,0,1,,,openeta/metaworld_50_handle-pull-v3-v0
+metaworld,lever-pull-v3,Pull a lever down 90 degrees,1,1,1,0,openeta/metaworld_50_lever-pull-v3-v0,openeta/metaworld_50_lever-pull-v3-v0,
+metaworld,pick-out-of-hole-v3,Pick up a puck from a hole,0,0,0,1,,,openeta/metaworld_50_pick-out-of-hole-v3-v0
+metaworld,pick-place-wall-v3,"Pick a puck, bypass a wall and place the puck",0,0,0,1,,,openeta/metaworld_50_pick-place-wall-v3-v0
+metaworld,push-v3,Push the puck to a goal,0,0,1,1,,openeta/metaworld_50_push-v3-v0,openeta/metaworld_50_push-v3-v0
+metaworld,reach-v3,Reach a goal position,1,1,1,0,openeta/metaworld_50_reach-v3-v0,openeta/metaworld_50_reach-v3-v0,
+metaworld,reach-wall-v3,Bypass a wall and reach a goal,0,0,0,1,,,openeta/metaworld_50_reach-wall-v3-v0
+metaworld,stick-push-v3,Grasp a stick and push a box using the stick,0,0,0,1,,,openeta/metaworld_50_stick-push-v3-v0
+metaworld,window-close-v3,Push and close a window,0,0,0,1,,,openeta/metaworld_50_window-close-v3-v0
+metaworld,window-open-v3,Push and open a window,1,0,1,0,openeta/metaworld_50_window-open-v3-v0,openeta/metaworld_50_window-open-v3-v0,
+robocasa,ArrangeDrinkware,RoboCasa365 pretrain task: arrange drinkware,0,1,1,0,,openeta/robocasa_pretrain_ArrangeDrinkware-v0,
+robocasa,CloseBlenderLid,Close the lid blender by securely placing the lid on top.,0,1,1,1,,openeta/robocasa_pretrain_CloseBlenderLid-v0,openeta/robocasa_target_CloseBlenderLid-v0
+robocasa,CloseFridge,Close the fridge door.,0,0,0,1,,,openeta/robocasa_target_CloseFridge-v0
+robocasa,CloseToasterOvenDoor,Close the toaster oven door.,0,0,0,1,,,openeta/robocasa_target_CloseToasterOvenDoor-v0
+robocasa,CoffeeSetupMug,Pick the mug from the counter and place it under the coffee machine dispenser.,1,1,1,0,openeta/robocasa_pretrain_CoffeeSetupMug-v0,openeta/robocasa_pretrain_CoffeeSetupMug-v0,
+robocasa,GetToastedBread,"Start the toaster. Once the lever pops up, take the bread to the plate on the dining counter.",0,0,0,1,,,openeta/robocasa_target_GetToastedBread-v0
+robocasa,LoadDishwasher,"Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",0,0,0,1,,,openeta/robocasa_target_LoadDishwasher-v0
+robocasa,MakeIceLemonade,"Grab a lemon wedge from the fridge and one ice cube from the ice bowl, and put them in the glass of lemonade.",0,0,0,1,,,openeta/robocasa_target_MakeIceLemonade-v0
+robocasa,MoveToFreezerDrawer,RoboCasa365 pretrain task: move to freezer drawer,0,1,1,0,,openeta/robocasa_pretrain_MoveToFreezerDrawer-v0,
+robocasa,NavigateKitchen,Navigate to the toaster.,0,0,0,1,,,openeta/robocasa_target_NavigateKitchen-v0
+robocasa,OpenCabinet,Open the cabinet doors.,0,0,0,1,,,openeta/robocasa_target_OpenCabinet-v0
+robocasa,OpenDrawer,Open the left drawer.,0,0,0,1,,,openeta/robocasa_target_OpenDrawer-v0
+robocasa,PickPlaceCounterToCabinet,Pick the straw from the counter and place it in the cabinet.,0,0,0,1,,,openeta/robocasa_target_PickPlaceCounterToCabinet-v0
+robocasa,PickPlaceCounterToStove,Pick the egg from the plate and place it in the pan.,0,0,0,1,,,openeta/robocasa_target_PickPlaceCounterToStove-v0
+robocasa,PickPlaceDrawerToCounter,Pick the ladle from the drawer and place it on the counter.,0,0,0,1,,,openeta/robocasa_target_PickPlaceDrawerToCounter-v0
+robocasa,RecycleBottlesByType,"Move the plastic bottles in the middle to the plastics group, and the glass bottles in the middle to the glass group.",0,0,0,1,,,openeta/robocasa_target_RecycleBottlesByType-v0
+robocasa,ScrubCuttingBoard,RoboCasa365 pretrain task: scrub cutting board,0,1,1,0,,openeta/robocasa_pretrain_ScrubCuttingBoard-v0,
+robocasa,SlideDishwasherRack,Fully slide the top dishwasher rack in.,0,0,0,1,,,openeta/robocasa_target_SlideDishwasherRack-v0
+robocasa,StoreLeftoversInBowl,Pick the chicken drumstick and potato from their plates and place them in the bowl. Then put the bowl in the fridge.,0,0,0,1,,,openeta/robocasa_target_StoreLeftoversInBowl-v0
+robocasa,TurnOffStove,Turn off the rear right burner of the stove.,0,0,0,1,,,openeta/robocasa_target_TurnOffStove-v0
+robocasa,TurnOnMicrowave,Press the start button on the microwave.,0,0,0,1,,,openeta/robocasa_target_TurnOnMicrowave-v0
+robocasa,TurnOnSinkFaucet,Turn on the sink faucet.,0,0,0,1,,,openeta/robocasa_target_TurnOnSinkFaucet-v0

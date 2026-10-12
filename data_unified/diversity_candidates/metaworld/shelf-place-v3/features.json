@@ -1,0 +1,1040 @@
+{
+  "task_key": "metaworld/shelf-place-v3",
+  "records": [
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 56769760,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.018735482696603592,
+          0.5111015316664946,
+          0.0194946179081205,
+          -0.05823504642709765,
+          0.8681663138223151,
+          0.30034753986319546
+        ],
+        "/object_position": [
+          -0.018735482696603592,
+          0.5111015316664946,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.05823504642709765,
+          0.8681663138223151,
+          0.30034753986319546
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "21c6a7beddb253ecf83db2ad53104c9149849ec34edd705dcccb9a0522bb1ff3",
+      "task_state_fingerprint": "bf2cce80c692d68780d3c0ee13db4a94c6fbe28d1281aceccafabfc925bc1666",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/000/native_camera_2.png",
+          "sha256": "3fb13f301f07da9009a1b3c5dcd1cf1b86031e70f42915bb127d427c6431d435"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 813334215,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05098676776345937,
+          0.5427040289794824,
+          0.01987829760152697,
+          -0.08650331115338834,
+          0.8892593469498112,
+          0.29998276588168504
+        ],
+        "/object_position": [
+          0.05098676776345937,
+          0.5427040289794824,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.08650331115338834,
+          0.8892593469498112,
+          0.29998276588168504
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bb9a4ab1db73b23316daa440c65884a4da2e03d5781cd14e57e13c21b6b4484e",
+      "task_state_fingerprint": "f47ffd6597e3b989d59b98a56757c6d8d99bc8cdf735ff72d185d70f1a9c1c2e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/001/native_camera_2.png",
+          "sha256": "8c886cb9c7ec685691c0b6b954ae8c96c6af6cba760119bf352ee3cc9b051a97"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/002",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 613017592,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03131179808586959,
+          0.5934946479037241,
+          0.02095818192026076,
+          -0.05783152184619292,
+          0.8235937707755436,
+          0.3006043581788452
+        ],
+        "/object_position": [
+          0.03131179808586959,
+          0.5934946479037241,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.05783152184619292,
+          0.8235937707755436,
+          0.3006043581788452
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e6f942555a87ec0e4b729f25a3eb725e4890acce80953ea06c39a5eb5b6e729d",
+      "task_state_fingerprint": "fb2f7a249456dafc9015bd45ac79be92e2caa20dbea8d226759cea5fd5cd829b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/002/native_camera_2.png",
+          "sha256": "fc8dc243eafe09439c55de791a2329afc29327a16f100aaaf59521e50a3ce32d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/005",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2081746408,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0017192841328865366,
+          0.5475337984521024,
+          0.02073703536285161,
+          -0.05198338655960451,
+          0.8542561689897077,
+          0.2997504320803918
+        ],
+        "/object_position": [
+          0.0017192841328865366,
+          0.5475337984521024,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.05198338655960451,
+          0.8542561689897077,
+          0.2997504320803918
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d0b5f8cfd8fd680d8879701ac886458df8959436715294f4d66a4e3f9565bd86",
+      "task_state_fingerprint": "9d4a40a9f53a17db1e5c123c1eb275800052298f171992499cdb40c735f13014",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/005/native_camera_2.png",
+          "sha256": "aceeaf3c14b3af0ec468b219e17b5baa191dc40a108bd38c3f0f5e5fa67425b4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/008",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1212289501,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.010008773405476096,
+          0.5334261735758985,
+          0.01916788354967084,
+          -0.0790675114012134,
+          0.828260983381459,
+          0.30068459006634923
+        ],
+        "/object_position": [
+          -0.010008773405476096,
+          0.5334261735758985,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.0790675114012134,
+          0.828260983381459,
+          0.30068459006634923
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6f2df587f3d7d4cf4912ee1f5826ba754fbca00300ef5b6a4dd589b70479476e",
+      "task_state_fingerprint": "01822bfa802f5cee449991e8e4513f444b5c0f2a0b28f71807b5f787a6ca0851",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/008/native_camera_2.png",
+          "sha256": "7809f168617359c302e58a4d72bd3cafabab9dc66e26f1b83087bbea6cb03a6d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/011",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2089686957,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0043079280176976376,
+          0.561851864604317,
+          0.020086546127134907,
+          0.000588603566335083,
+          0.8942175220526868,
+          0.2990355694296247
+        ],
+        "/object_position": [
+          -0.0043079280176976376,
+          0.561851864604317,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.000588603566335083,
+          0.8942175220526868,
+          0.2990355694296247
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "da961b9ac13f5977ed35c40482fb679fb0b4aeb32ad41f83265a53bad83d7bc4",
+      "task_state_fingerprint": "4b671a19cdf1179ab1538c83decc8ed64b69a2c4e9f15dded3737b89c872b2b6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/011/native_camera_2.png",
+          "sha256": "6febfa5f6fe07e9ef3d165ec54e3a689d7b2e658d2636ca59f7f6cac8a05b2fe"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/sft_train/014",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 865848360,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.012636627123976535,
+          0.5867381186444799,
+          0.01919155436876736,
+          -0.042980201767763807,
+          0.8040610083994468,
+          0.3001993550417491
+        ],
+        "/object_position": [
+          -0.012636627123976535,
+          0.5867381186444799,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.042980201767763807,
+          0.8040610083994468,
+          0.3001993550417491
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2257cfb3e322a1fa76160666116199246d5a56ff18207abc8fd3bb8f44931f84",
+      "task_state_fingerprint": "5a17344d00fb530bff596bfc24542b80e211defd744db99e8e51f37314e1b73e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/sft_train/014/native_camera_2.png",
+          "sha256": "e803d9fb6a8e5cf46f44382b6721ede2b0b259705d3e40ed9f06ea1f637c51d3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1680865903,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.052404666498108626,
+          0.599659043291837,
+          0.019617093622723094,
+          -0.09410893603807342,
+          0.8715512651386249,
+          0.2997621400201724
+        ],
+        "/object_position": [
+          -0.052404666498108626,
+          0.599659043291837,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.09410893603807342,
+          0.8715512651386249,
+          0.2997621400201724
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "af5d8834c5a132ac8fde59fdfafd538d77fa494c26d2aeed5c4b45b3733dfe79",
+      "task_state_fingerprint": "e5d1e1dd93a942dab522c46030e24e909675e939829b038c5b8e5674f0d82051",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/000/native_camera_2.png",
+          "sha256": "50ea4b243b4a7e34ee27363ce771ac97f85a505b2a17ff09f8a672890dc644cc"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2037456226,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.019706615679761216,
+          0.5391745168519384,
+          0.020268538001435184,
+          0.07675132284280287,
+          0.8209754998107495,
+          0.29946553943697285
+        ],
+        "/object_position": [
+          0.019706615679761216,
+          0.5391745168519384,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.07675132284280287,
+          0.8209754998107495,
+          0.29946553943697285
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bea41fb50d1614ce68613d98a60af17d0fa018d3d578b0ab74083ca0f7cac494",
+      "task_state_fingerprint": "3ddf9b6ca961ca22e92dbc8da2b5d85adffcf173b97d6f160fed7e7c7a78b55a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/001/native_camera_2.png",
+          "sha256": "7b183a2bd3fea161cd978174f4e32998c31d763239371be690a9f7a1c4df1341"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/002",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 339529504,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03289486634499256,
+          0.5657846525533475,
+          0.020843591581699555,
+          0.03590492660478081,
+          0.8362950518632215,
+          0.3005574899628642
+        ],
+        "/object_position": [
+          0.03289486634499256,
+          0.5657846525533475,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.03590492660478081,
+          0.8362950518632215,
+          0.3005574899628642
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a689242873bbfa63a2adabeed483120ce69352c3615651ed60f2527cc0e5b49a",
+      "task_state_fingerprint": "c62a33895ab437e0fdf5273de6bd2d6f6d034be4f625b1dc555fc85daf8b648c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/002/native_camera_2.png",
+          "sha256": "53703c40a989fafc4e5454be3d02b7cd73047896278796b2a26715a566e95bb3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/005",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 892194531,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07275057463300148,
+          0.5835039459631064,
+          0.019211780711222093,
+          0.047832578005575055,
+          0.8020607519533552,
+          0.29939191571311974
+        ],
+        "/object_position": [
+          -0.07275057463300148,
+          0.5835039459631064,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.047832578005575055,
+          0.8020607519533552,
+          0.29939191571311974
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5c1c3d8e35f5a2d656b481a62a792918e59bb60146414cabfa937c409ea51ddc",
+      "task_state_fingerprint": "e567d0fcf8329f7b8a93934c25e47b8a2aacfa7792a6f4702c30bf2455d2b7a3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/005/native_camera_2.png",
+          "sha256": "88ae250fcd0679eeb907efe212aef0c79575c63365fc9b54b559f26000613b86"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/008",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1550186305,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09978859836807381,
+          0.5417207039116266,
+          0.020069623183940528,
+          -0.0069344556540025665,
+          0.8184614569517334,
+          0.30043542586711347
+        ],
+        "/object_position": [
+          -0.09978859836807381,
+          0.5417207039116266,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.0069344556540025665,
+          0.8184614569517334,
+          0.30043542586711347
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "79dfa2c2d3ae15b7bc01c8e05b1c0d064010e849e131500abc1c0c040219480b",
+      "task_state_fingerprint": "a25de7ea0490ea55db15eeed96e49dd0cbdc615ab937b26c38777ae8c9d7ab79",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/008/native_camera_2.png",
+          "sha256": "33259f5a1d24f7eaff3646cf618087d39e047b9932848ac7af690ce58eaf353e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/011",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1805416398,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.046960690715877745,
+          0.569703944599661,
+          0.019187166703354352,
+          0.08700271351036631,
+          0.8445542170543029,
+          0.3001257405392219
+        ],
+        "/object_position": [
+          0.046960690715877745,
+          0.569703944599661,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.08700271351036631,
+          0.8445542170543029,
+          0.3001257405392219
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0b95a145e0bb510c6e6a79ccb0f3f5ede082c742b66c3f73995972b030fab395",
+      "task_state_fingerprint": "950c3c8191bfe214795303ec5458139dd5dfab005fb5324e8753294e99a11e80",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/011/native_camera_2.png",
+          "sha256": "080ee006a3f1d8d2a91baa247eac4cb289a18d1da9f2e3c8ee62a2d32c74ecb4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/rl_train/014",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1156751917,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.058599282594395424,
+          0.5186374157971042,
+          0.02097865118496898,
+          0.03475461978863212,
+          0.8490561603113663,
+          0.3004842928888389
+        ],
+        "/object_position": [
+          0.058599282594395424,
+          0.5186374157971042,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.03475461978863212,
+          0.8490561603113663,
+          0.3004842928888389
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4594a6c98e578994262fa1df2a5f497be336c6f2ec4ded8b5510eb630eec31c9",
+      "task_state_fingerprint": "355d87ccb31ec3aafd76aac33856cc79aa3a4a473759823ed1b8b4849b996069",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/rl_train/014/native_camera_2.png",
+          "sha256": "2d57c7abe00e321429d08afbc72c7f3f2078a94e3a321fe280f7265e4d1b3aa3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/validation/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1236751998,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09000330982339758,
+          0.5609028527093576,
+          0.020407047380833376,
+          0.08424576067530995,
+          0.8093902103247527,
+          0.3005537944679601
+        ],
+        "/object_position": [
+          -0.09000330982339758,
+          0.5609028527093576,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.08424576067530995,
+          0.8093902103247527,
+          0.3005537944679601
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "31bdfd9df6df29be59aab50380b0c3c462a4729aeaf9d8453e01ca3bc2a6160f",
+      "task_state_fingerprint": "1922f72653f85d9281841f689cd975c5e0a9f84f178362087aa2ef411554f099",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/validation/000/native_camera_2.png",
+          "sha256": "8602ae1cc59e564cb922f90afb177e687d5d57a821b73ff78fa7112fc570b14e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2040658001,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03237043679496429,
+          0.5298696154913088,
+          0.020075546564571133,
+          -0.0050303697556851185,
+          0.8586987313813105,
+          0.3006650823027257
+        ],
+        "/object_position": [
+          0.03237043679496429,
+          0.5298696154913088,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.0050303697556851185,
+          0.8586987313813105,
+          0.3006650823027257
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b343302a9f00de8e938517883a5a25e287e0366029191560069285c98f44a284",
+      "task_state_fingerprint": "f43176b967c1f4b3df0a64064ea566e4bd492232d3cc30c0cdc3770aa0a7b654",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "05943d80b3b3305be795a18ab2bed7bca2f2ddbcb7e1bf308e62af0afb23784e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 630352862,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07466191382986259,
+          0.5501635764566818,
+          0.019031916802914974,
+          -0.09516616828818013,
+          0.8502084598235577,
+          0.30040795769578993
+        ],
+        "/object_position": [
+          0.07466191382986259,
+          0.5501635764566818,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.09516616828818013,
+          0.8502084598235577,
+          0.30040795769578993
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fad3d0e8c2683f854e939295de896969d456860f5ee66675bfeffbfa96a0662b",
+      "task_state_fingerprint": "c7fd7fd577f9b49464cd6c9d9ee5bd9af7d8bb3b7c0abe143a7054b235a81f48",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "89cefefa51f4d17d3cba838bdb71c3526d14fe3a2acffe51b4704f3388638d22"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/002",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 475320280,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07828201216285507,
+          0.5695842508150386,
+          0.020999239650905666,
+          -0.07496500652737699,
+          0.8079797990503099,
+          0.3007684144244524
+        ],
+        "/object_position": [
+          0.07828201216285507,
+          0.5695842508150386,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.07496500652737699,
+          0.8079797990503099,
+          0.3007684144244524
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f4574c02be74ed7751249b3752e2fa3b8202673cdb8a98e55b20673f85d155a3",
+      "task_state_fingerprint": "72c9e57a0d59f39aaad095f0dd5ad83ae8bfe689436afefa14535e1844f1eecd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "d0041f359201eda075744e059084362bb800ef22faf45852fdcb430d4f9a50f9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/006",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 812779583,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0638037638465177,
+          0.5139563433043344,
+          0.02018409892020763,
+          0.05770938451136623,
+          0.8593263166914259,
+          0.30027576082810276
+        ],
+        "/object_position": [
+          0.0638037638465177,
+          0.5139563433043344,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.05770938451136623,
+          0.8593263166914259,
+          0.30027576082810276
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0f3f5d223e9cbcbf067d086b91b97a8bcff55dcf943f4586adcf3cd7cc29c955",
+      "task_state_fingerprint": "6d723cebcbf21f7a19c99935f8072a787ca2c58b61aeacb8efb1c9d8c99bfa0c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "a946efd9ad27c6e6a510b4f1d932eabffd520f38dfd31cf2053003dd4b59cda7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/010",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 918529688,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07430284588698173,
+          0.581711724887178,
+          0.019014576544941854,
+          0.08112678975622697,
+          0.8331454416218995,
+          0.3000227960837537
+        ],
+        "/object_position": [
+          -0.07430284588698173,
+          0.581711724887178,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.08112678975622697,
+          0.8331454416218995,
+          0.3000227960837537
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "071d273211f3028abe676f8b68cd71d2aea0c599f9c7fa6f8fa069b15754f70a",
+      "task_state_fingerprint": "1d558de3cbdf98994e0d8c05534f46a33f9be5dcb3911b259a608ae546f066ee",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "fc325c3fbbbba469078ee6fb6eb0b028aa114bcb54987a63a44717353002dc72"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/014",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1728898812,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07129489595998745,
+          0.5187926015385708,
+          0.020147851648429357,
+          -0.05873498598476521,
+          0.8435942536220749,
+          0.2997785888702545
+        ],
+        "/object_position": [
+          -0.07129489595998745,
+          0.5187926015385708,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.05873498598476521,
+          0.8435942536220749,
+          0.2997785888702545
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "060871de7b9b368f85c5dbd57cba654d2682b141de14906f9e8ab826a1265009",
+      "task_state_fingerprint": "482f7726e55d09bccce847f18ab88221eb385f2bc78bf58ba6ee5498c56e9ea2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "f7b82cdda84bdfa374ec1700997aa213acaa7e86385795de03244360142f09c8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/eval_seen/019",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 494573825,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06632828029281931,
+          0.5727658865492575,
+          0.01990361208214918,
+          0.020521291092716762,
+          0.8127481915649641,
+          0.30090892178753725
+        ],
+        "/object_position": [
+          -0.06632828029281931,
+          0.5727658865492575,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.020521291092716762,
+          0.8127481915649641,
+          0.30090892178753725
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "07910f082d896daf1e0e4cdc86d60a2bff5d822dae220aa959c9ef4c7c615d5b",
+      "task_state_fingerprint": "a2b021d7bff491b7d229dd69b028270b39fc29a447b11c0b98a2f22ae533745a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "e7b4a94bb290b4d0837acba1f40a7bfe11881c6b5a9dc34853e2ef65c7347e5c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/shelf-place-v3/validation/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1603403133,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.058471607815810095,
+          0.5748743764784379,
+          0.020893146835997356,
+          0.054247988994820195,
+          0.8318445324537149,
+          0.29930336416288283
+        ],
+        "/object_position": [
+          0.058471607815810095,
+          0.5748743764784379,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.054247988994820195,
+          0.8318445324537149,
+          0.29930336416288283
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "16c00a292bf7abe911f437f49eda2a00d6fcb7d666aa0491c4e7a9850a045eff",
+      "task_state_fingerprint": "d4a1b0dbd23bed73c6d29c770800f818e3d3f51d0c3122552377f1fd16e0b903",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/shelf-place-v3/validation/001/native_camera_2.png",
+          "sha256": "5e773183b83a9a383ac5f29e55e08865e2b2213bacf9776d4a0515f0140e1a3c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

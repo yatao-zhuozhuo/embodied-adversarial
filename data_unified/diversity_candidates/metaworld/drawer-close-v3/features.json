@@ -1,0 +1,1181 @@
+{
+  "task_key": "metaworld/drawer-close-v3",
+  "records": [
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/000",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1621976006,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07563629872700993,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.07563629872700993,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.07563629872700993,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "914e200988360e58208aaeccbc648691c592440bac87c84581612e5c6f6cc2c0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/000/native_camera_2.png",
+          "sha256": "177cad99504761d16292ad6dc4576d880119e1e8b4d87f24d1369a6b5ca8268a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/001",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 798928252,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.048519860816281304,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.048519860816281304,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.048519860816281304,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "79c17eafb418a0c95da2ebdef665118d09e5f70ce808bbd429726ba4250f36bf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/001/native_camera_2.png",
+          "sha256": "19c6308c47b49d97fc7ebc651284684802a86d3df014a840f8f78861a09efa37"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/002",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1093720772,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03768788833839048,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.03768788833839048,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.03768788833839048,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "6225ada2c5c7f4b56dec5606a6fa7892340e26ef8e73bb41a38a7a4c16b7f0c5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/002/native_camera_2.png",
+          "sha256": "02300205119876cbabd85774384f437d6639d760e898ef92268a4825a198b9e4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/003",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 463225677,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08663387758332797,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.08663387758332797,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.08663387758332797,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "ceb488f4e01ab1726682e015e93fcb23455f11794939765f70900a27b119f439",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/003/native_camera_2.png",
+          "sha256": "191ef121c962bf5445b22d82348941a43b31f74f9cc7fbbe0b07163763ff9ee2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/004",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 144351712,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03365957475314307,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.03365957475314307,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.03365957475314307,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "37b7b573a6fba496e46c39fd7843640c23d31942378f7d9c0160d7cca627a317",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/004/native_camera_2.png",
+          "sha256": "319161f5cf5ce93380da73be1ae86688de7937e2fc3920b9a21a43b18f8c08bf"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/005",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1674957130,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08600918012570535,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.08600918012570535,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.08600918012570535,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "646f94e42035e460a11e396d0f96f0533670536e091f42240c282d6e8dc93de0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/005/native_camera_2.png",
+          "sha256": "277fe797b90ddaee87bf667842023eb1828dd72d2cebabce739757fc7ec378f1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/sft_train/006",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 808503850,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.022896269253058835,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.022896269253058835,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.022896269253058835,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "9743d685eb3ad97871fa802e215862cf364246ad2e6f41080c6e05cebefe0808",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/sft_train/006/native_camera_2.png",
+          "sha256": "b5717712b220062ed88211ec232d19fc6af56b0d48430f2bd9a90db7e0941e72"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/000",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 646066394,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.022516558622147548,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.022516558622147548,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.022516558622147548,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "430c336bbef9911144df89f5cc7223b3468b4d0bb84fc6471670359ba0036058",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/000/native_camera_2.png",
+          "sha256": "f3695bf6d413154e7373a2c31768482deab18a49c661a05439d7337f1df9c307"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/001",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1165825412,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0913633703652901,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.0913633703652901,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.0913633703652901,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "1d0736b639b6504171e0dac59bd4b5d21ea7adcae918ab072da201a60e59abe8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/001/native_camera_2.png",
+          "sha256": "9357fe1e95af904dbded197887477d2bc77cce80367408c432ed068707b90f5e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/002",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 165948063,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03560430525515684,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.03560430525515684,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.03560430525515684,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "2020b4c3df7f6abaaeb5a954e40403b69950ae8e208253e8711de69b46bbe87f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/002/native_camera_2.png",
+          "sha256": "467681d3c4bfd1b22bede6f59ffcf67c24c3aa4f92cf71196ea5ce2582575d27"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/003",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1623104155,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0074815123916478765,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.0074815123916478765,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.0074815123916478765,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "fe32b17d1401e7922176d4a322cafbecb55134dcd5de8ae5d686df57b6f27d76",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/003/native_camera_2.png",
+          "sha256": "6c6164e0cba37c3d30ff5b9c28a91593931953758c31e7a8da402dcfe4587490"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/004",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 898980871,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07722793745671341,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.07722793745671341,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.07722793745671341,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "b5b91fa7e9c5e0f364b597e480be61002b7998ffda11bc08fddee7886cc2aa7e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/004/native_camera_2.png",
+          "sha256": "87c36fec66d6f54a5562aa0df0e5d723ff9e9e6eabfb35e16fa075e98273fd26"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/005",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 86028938,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.015035088865802446,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.015035088865802446,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.015035088865802446,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "11de760fc4a946c07509d16c7fdde177d3ddb93d45fd86eed0632f262ffce0c1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/005/native_camera_2.png",
+          "sha256": "1b0ab92ab068befbd9296e3a21ecb6c3dd5107e9af7fe78c64b6253b7c639ab4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/rl_train/006",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1984879591,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04580498980274053,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.04580498980274053,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.04580498980274053,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "5e5fbaf14797b75df8ab6a3646629c3c6ada9b49c56152e6f0152e6785bcd6b8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/rl_train/006/native_camera_2.png",
+          "sha256": "e09f2683b7f51109f095f8895c1e4a1a58bfb578b879e3725ba9ba68811dde08"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/000",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1373476690,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04515447565997391,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.04515447565997391,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.04515447565997391,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "22132021622256d9ba4c59a92fc3d37e5cb5f57e8fa669408fb77e71f52ce4ef",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/000/native_camera_2.png",
+          "sha256": "af07f5e7d8edfbaddceca063c18571281ac3a30b65ac14f2bd25b6d493815a90"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/001",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 2003572804,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.00406062621076371,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.00406062621076371,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.00406062621076371,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "df131eeab09f1343628a03594f60ef2774973f813c259bb1bb2028324a62bf31",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/001/native_camera_2.png",
+          "sha256": "beabc4a0d251d621f463c4fc761ee81ad050244de9cd44d42e609248bf6e33c8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/002",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1799132112,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0978470981503789,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.0978470981503789,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.0978470981503789,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "d1001ae32a09a22e238fa923570b152b000be7bedc76c311c102a5afa3a83ff9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/002/native_camera_2.png",
+          "sha256": "aaf92681a6122f0ea8135f84906c3ccb99091f30c1fd76e2ae62b1f7f81c83a8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/003",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 58355277,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03288119996541328,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.03288119996541328,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.03288119996541328,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "a89ca78bb8dd3b711cc6ab34bff0fd43a8b9345ee88bdef9c8af1376b9d28673",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/003/native_camera_2.png",
+          "sha256": "fa17dbbc5de1eac439ac1044f72ed6ed95d1597fe2e0df80597b27fe677c1f5c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/004",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 93028933,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06188459144859766,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.06188459144859766,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.06188459144859766,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "7185ded33b690794cdc3b2ec13ee17d67a369d0b7023b732e84608a32313d15c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/004/native_camera_2.png",
+          "sha256": "45547b1697fffc1a50a85d4ca8521ff481de829b0ff21ccd3ff722ac84d3f42c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/005",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 449254373,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.043492208639360236,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.043492208639360236,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.043492208639360236,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "ce8302e7a75b48b0cc65f580366021b239d2971c689a4e9eb5a94735573981ec",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/005/native_camera_2.png",
+          "sha256": "bbdfb7792692d4dc600d66823861969acbb92081d0c5691afa9c97a44a3c8509"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/validation/006",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1083300164,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.024432502569570344,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.024432502569570344,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.024432502569570344,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "e36a5b452c5c4ea58f203872f536f410df8a3b2b2a795afa368e945f55d22c3f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/validation/006/native_camera_2.png",
+          "sha256": "c30ddad971ff7c7597adfd3325e6d6a97bb68c9be64b3041e2351797b1ed5890"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/000",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 819179994,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.004347341339690197,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.004347341339690197,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.004347341339690197,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "02c9fb6f68c99b54dda59f99c57c782e0f2769f8f319f5b2f72f8413ee8ce750",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "c02f91d487a9ba9f294b945a86045e1751a9a70aa1255d5998ca13dfe84dbe9a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/001",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 228731370,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.029627400721605468,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.029627400721605468,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.029627400721605468,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "fbc519c0454b94f59e90936dd411920cf8ab5a1993540210bfff4d3429d2bad8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "bbc6324d2423e82a58a78ed9f69199c037955c112bbff2fba6f35413bb1067f3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/002",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1307054407,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07925781801722145,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.07925781801722145,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.07925781801722145,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "ae3a7c799d84ee43db444ea446efd21c552f44d6f66399523c9adc99c22b0506",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "6b9e49ad87419c1052e9677909b716db9d47ea5cd5ef239f2776242e746d70cb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/003",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 54096614,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0975496815663087,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.0975496815663087,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.0975496815663087,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "855fe265d043107afea3ef9903ecfaf9287445c6972e192efe020dee4342ef94",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/003/native_camera_2.png",
+          "sha256": "997f5b106156f8abcc9f3f940fd6e6da3109909b6b9f557edaa242a5dfd19de8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/004",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 193929089,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.042134562169103676,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.042134562169103676,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.042134562169103676,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "4023a75c4374c71c078a34b1387626ace2d47b87cde7e9db2d11d5572b34def0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/004/native_camera_2.png",
+          "sha256": "5f5878a4d1cb9e0b22f53440d1099278d61f330a813617616348739062ae7c06"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/005",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1344998472,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.005805065261983072,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          -0.005805065261983072,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          -0.005805065261983072,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "d1da6fbf3a05d3ed469b6b22ae57926228780a3673b5d997da2a34e3697ddd2b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/005/native_camera_2.png",
+          "sha256": "a036c10e9d15e58a26d13a3aae595b564668e3ec3148151e3551497e75ec97db"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/drawer-close-v3/eval_seen/006",
+      "task_key": "metaworld/drawer-close-v3",
+      "seed": 1339767235,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.022841777678919956,
+          0.9,
+          0.0
+        ],
+        "/object_position": [
+          0.022841777678919956,
+          0.58,
+          0.14
+        ],
+        "/goal_position": [
+          0.022841777678919956,
+          0.74,
+          0.09
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd51dd83a5f85fe89996fed6c91f74b6d91068bea15e47a2b5d5d58c75396817",
+      "task_state_fingerprint": "c1a340bada660ba0d55aac3ce4fc2e417ff787eedfbd55d19f327cc10bdc6615",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/drawer-close-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "543625a9e1cb1563286aaae58370bca8b9f47bf44fc7f653cce8eeeebff4a559"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

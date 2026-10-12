@@ -1,0 +1,3267 @@
+{
+  "split_revision": 4,
+  "algorithm": "task geometry normalized farthest-point selection, respecting phase pools and historical exposure",
+  "scope": "Cached non-robot qpos/scene identity; captured native object and goal geometry. Unmeasured tasks explicitly flagged; seed magnitude is not a distance.",
+  "selections": [
+    {
+      "task_key": "libero/libero_10_task0",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task0/sft_train/002",
+        "libero/libero_10_task0/sft_train/006",
+        "libero/libero_10_task0/sft_train/000",
+        "libero/libero_10_task0/sft_train/012"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task0",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task0/rl_train/001",
+        "libero/libero_10_task0/rl_train/006",
+        "libero/libero_10_task0/rl_train/000",
+        "libero/libero_10_task0/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task0",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task0/eval_seen/002",
+        "libero/libero_10_task0/eval_seen/017",
+        "libero/libero_10_task0/eval_seen/000",
+        "libero/libero_10_task0/eval_seen/012"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task0",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task0/validation/cache-036",
+        "libero/libero_10_task0/validation/cache-029"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task5",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task5/sft_train/006",
+        "libero/libero_10_task5/sft_train/007",
+        "libero/libero_10_task5/sft_train/013",
+        "libero/libero_10_task5/sft_train/010"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task5",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task5/rl_train/013",
+        "libero/libero_10_task5/rl_train/008",
+        "libero/libero_10_task5/rl_train/014",
+        "libero/libero_10_task5/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task5",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task5/eval_seen/007",
+        "libero/libero_10_task5/eval_seen/002",
+        "libero/libero_10_task5/eval_seen/009",
+        "libero/libero_10_task5/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task5",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task5/validation/cache-048",
+        "libero/libero_10_task5/validation/cache-040"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task6",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_spatial_task6/sft_train/009",
+        "libero/libero_spatial_task6/sft_train/010",
+        "libero/libero_spatial_task6/sft_train/000",
+        "libero/libero_spatial_task6/sft_train/008"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task6",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_spatial_task6/rl_train/012",
+        "libero/libero_spatial_task6/rl_train/007",
+        "libero/libero_spatial_task6/rl_train/001",
+        "libero/libero_spatial_task6/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task6",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_spatial_task6/eval_seen/018",
+        "libero/libero_spatial_task6/eval_seen/013",
+        "libero/libero_spatial_task6/eval_seen/017",
+        "libero/libero_spatial_task6/eval_seen/019"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task6",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_spatial_task6/validation/cache-025",
+        "libero/libero_spatial_task6/validation/cache-020"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task35",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task35/sft_train/001",
+        "libero/libero_90_task35/sft_train/002",
+        "libero/libero_90_task35/sft_train/005",
+        "libero/libero_90_task35/sft_train/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task35",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task35/rl_train/002",
+        "libero/libero_90_task35/rl_train/003",
+        "libero/libero_90_task35/rl_train/009",
+        "libero/libero_90_task35/rl_train/013"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task35",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task35/eval_seen/005",
+        "libero/libero_90_task35/eval_seen/016",
+        "libero/libero_90_task35/eval_seen/012",
+        "libero/libero_90_task35/eval_seen/010"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task35",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task35/validation/cache-036",
+        "libero/libero_90_task35/validation/cache-044"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task70",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task70/sft_train/003",
+        "libero/libero_90_task70/sft_train/013",
+        "libero/libero_90_task70/sft_train/005",
+        "libero/libero_90_task70/sft_train/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task70",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task70/rl_train/009",
+        "libero/libero_90_task70/rl_train/003",
+        "libero/libero_90_task70/rl_train/002",
+        "libero/libero_90_task70/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task70",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task70/eval_seen/014",
+        "libero/libero_90_task70/eval_seen/009",
+        "libero/libero_90_task70/eval_seen/007",
+        "libero/libero_90_task70/eval_seen/006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task70",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task70/validation/cache-045",
+        "libero/libero_90_task70/validation/cache-023"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task4",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task4/sft_train/009",
+        "libero/libero_10_task4/sft_train/012",
+        "libero/libero_10_task4/sft_train/010",
+        "libero/libero_10_task4/sft_train/013"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task4",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task4/rl_train/005",
+        "libero/libero_10_task4/rl_train/000",
+        "libero/libero_10_task4/rl_train/001",
+        "libero/libero_10_task4/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task4",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task4/eval_seen/005",
+        "libero/libero_10_task4/eval_seen/014",
+        "libero/libero_10_task4/eval_seen/003",
+        "libero/libero_10_task4/eval_seen/012"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task4",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task4/validation/cache-046",
+        "libero/libero_10_task4/validation/cache-039"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task8",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task8/sft_train/000",
+        "libero/libero_10_task8/sft_train/009",
+        "libero/libero_10_task8/sft_train/012",
+        "libero/libero_10_task8/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task8",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task8/rl_train/004",
+        "libero/libero_10_task8/rl_train/010",
+        "libero/libero_10_task8/rl_train/002",
+        "libero/libero_10_task8/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task8",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task8/eval_seen/019",
+        "libero/libero_10_task8/eval_seen/012",
+        "libero/libero_10_task8/eval_seen/003",
+        "libero/libero_10_task8/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_10_task8",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_10_task8/validation/cache-017",
+        "libero/libero_10_task8/validation/cache-021"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task5",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task5/sft_train/000",
+        "libero/libero_90_task5/sft_train/013",
+        "libero/libero_90_task5/sft_train/008",
+        "libero/libero_90_task5/sft_train/014"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task5",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task5/rl_train/013",
+        "libero/libero_90_task5/rl_train/007",
+        "libero/libero_90_task5/rl_train/008",
+        "libero/libero_90_task5/rl_train/003"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task5",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task5/eval_seen/006",
+        "libero/libero_90_task5/eval_seen/000",
+        "libero/libero_90_task5/eval_seen/007",
+        "libero/libero_90_task5/eval_seen/008"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task5",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task5/validation/cache-030",
+        "libero/libero_90_task5/validation/cache-023"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task7",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task7/sft_train/003",
+        "libero/libero_90_task7/sft_train/007",
+        "libero/libero_90_task7/sft_train/005",
+        "libero/libero_90_task7/sft_train/006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task7",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task7/rl_train/010",
+        "libero/libero_90_task7/rl_train/006",
+        "libero/libero_90_task7/rl_train/002",
+        "libero/libero_90_task7/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task7",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task7/eval_seen/007",
+        "libero/libero_90_task7/eval_seen/017",
+        "libero/libero_90_task7/eval_seen/002",
+        "libero/libero_90_task7/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task7",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task7/validation/cache-025",
+        "libero/libero_90_task7/validation/cache-021"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task40",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task40/sft_train/001",
+        "libero/libero_90_task40/sft_train/005",
+        "libero/libero_90_task40/sft_train/004",
+        "libero/libero_90_task40/sft_train/012"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task40",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task40/rl_train/004",
+        "libero/libero_90_task40/rl_train/008",
+        "libero/libero_90_task40/rl_train/010",
+        "libero/libero_90_task40/rl_train/012"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task40",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task40/eval_seen/006",
+        "libero/libero_90_task40/eval_seen/012",
+        "libero/libero_90_task40/eval_seen/016",
+        "libero/libero_90_task40/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task40",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task40/validation/cache-027",
+        "libero/libero_90_task40/validation/cache-049"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task52",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task52/sft_train/006",
+        "libero/libero_90_task52/sft_train/013",
+        "libero/libero_90_task52/sft_train/005",
+        "libero/libero_90_task52/sft_train/011"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task52",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task52/rl_train/012",
+        "libero/libero_90_task52/rl_train/003",
+        "libero/libero_90_task52/rl_train/014",
+        "libero/libero_90_task52/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task52",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task52/eval_seen/018",
+        "libero/libero_90_task52/eval_seen/005",
+        "libero/libero_90_task52/eval_seen/011",
+        "libero/libero_90_task52/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task52",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task52/validation/cache-002",
+        "libero/libero_90_task52/validation/cache-006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task55",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task55/sft_train/000",
+        "libero/libero_90_task55/sft_train/005",
+        "libero/libero_90_task55/sft_train/008",
+        "libero/libero_90_task55/sft_train/007"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task55",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task55/rl_train/009",
+        "libero/libero_90_task55/rl_train/013",
+        "libero/libero_90_task55/rl_train/014",
+        "libero/libero_90_task55/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task55",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task55/eval_seen/016",
+        "libero/libero_90_task55/eval_seen/002",
+        "libero/libero_90_task55/eval_seen/004",
+        "libero/libero_90_task55/eval_seen/000"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task55",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task55/validation/cache-005",
+        "libero/libero_90_task55/validation/cache-025"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task71",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task71/sft_train/000",
+        "libero/libero_90_task71/sft_train/005",
+        "libero/libero_90_task71/sft_train/003",
+        "libero/libero_90_task71/sft_train/007"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task71",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task71/rl_train/006",
+        "libero/libero_90_task71/rl_train/003",
+        "libero/libero_90_task71/rl_train/001",
+        "libero/libero_90_task71/rl_train/007"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task71",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task71/eval_seen/010",
+        "libero/libero_90_task71/eval_seen/009",
+        "libero/libero_90_task71/eval_seen/001",
+        "libero/libero_90_task71/eval_seen/018"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task71",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task71/validation/cache-016",
+        "libero/libero_90_task71/validation/cache-032"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task88",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task88/sft_train/000",
+        "libero/libero_90_task88/sft_train/014",
+        "libero/libero_90_task88/sft_train/012",
+        "libero/libero_90_task88/sft_train/013"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task88",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task88/rl_train/011",
+        "libero/libero_90_task88/rl_train/002",
+        "libero/libero_90_task88/rl_train/012",
+        "libero/libero_90_task88/rl_train/003"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task88",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task88/eval_seen/007",
+        "libero/libero_90_task88/eval_seen/018",
+        "libero/libero_90_task88/eval_seen/017",
+        "libero/libero_90_task88/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task88",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_90_task88/validation/cache-012",
+        "libero/libero_90_task88/validation/cache-024"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task2",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_object_task2/sft_train/003",
+        "libero/libero_object_task2/sft_train/007",
+        "libero/libero_object_task2/sft_train/012",
+        "libero/libero_object_task2/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task2",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_object_task2/rl_train/001",
+        "libero/libero_object_task2/rl_train/000",
+        "libero/libero_object_task2/rl_train/013",
+        "libero/libero_object_task2/rl_train/014"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task2",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_object_task2/eval_seen/004",
+        "libero/libero_object_task2/eval_seen/016",
+        "libero/libero_object_task2/eval_seen/007",
+        "libero/libero_object_task2/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task2",
+      "phase": "validation",
+      "candidate_count": 16,
+      "measured_candidate_count": 16,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "libero/libero_object_task2/validation/cache-009",
+        "libero/libero_object_task2/validation/cache-020"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "libero/libero_spatial_task1/eval_generalization/000",
+        "libero/libero_spatial_task1/eval_generalization/006",
+        "libero/libero_spatial_task1/eval_generalization/012",
+        "libero/libero_spatial_task1/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task6",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "libero/libero_object_task6/eval_generalization/000",
+        "libero/libero_object_task6/eval_generalization/006",
+        "libero/libero_object_task6/eval_generalization/012",
+        "libero/libero_object_task6/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "libero/libero_spatial_task5",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "libero/libero_spatial_task5/eval_generalization/000",
+        "libero/libero_spatial_task5/eval_generalization/006",
+        "libero/libero_spatial_task5/eval_generalization/012",
+        "libero/libero_spatial_task5/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task8",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "libero/libero_object_task8/eval_generalization/000",
+        "libero/libero_object_task8/eval_generalization/006",
+        "libero/libero_object_task8/eval_generalization/012",
+        "libero/libero_object_task8/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "libero/libero_goal_task1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "libero/libero_goal_task1/eval_generalization/000",
+        "libero/libero_goal_task1/eval_generalization/006",
+        "libero/libero_goal_task1/eval_generalization/012",
+        "libero/libero_goal_task1/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "metaworld/assembly-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/assembly-v3/sft_train/010",
+        "metaworld/assembly-v3/sft_train/013",
+        "metaworld/assembly-v3/sft_train/014",
+        "metaworld/assembly-v3/sft_train/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/assembly-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/assembly-v3/rl_train/006",
+        "metaworld/assembly-v3/rl_train/008",
+        "metaworld/assembly-v3/rl_train/007",
+        "metaworld/assembly-v3/rl_train/012"
+      ]
+    },
+    {
+      "task_key": "metaworld/assembly-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/assembly-v3/eval_seen/013",
+        "metaworld/assembly-v3/eval_seen/011",
+        "metaworld/assembly-v3/eval_seen/007",
+        "metaworld/assembly-v3/eval_seen/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/assembly-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/assembly-v3/validation/000",
+        "metaworld/assembly-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/bin-picking-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/bin-picking-v3/sft_train/013",
+        "metaworld/bin-picking-v3/sft_train/014",
+        "metaworld/bin-picking-v3/sft_train/012",
+        "metaworld/bin-picking-v3/sft_train/009"
+      ]
+    },
+    {
+      "task_key": "metaworld/bin-picking-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/bin-picking-v3/rl_train/001",
+        "metaworld/bin-picking-v3/rl_train/014",
+        "metaworld/bin-picking-v3/rl_train/007",
+        "metaworld/bin-picking-v3/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/bin-picking-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/bin-picking-v3/eval_seen/013",
+        "metaworld/bin-picking-v3/eval_seen/008",
+        "metaworld/bin-picking-v3/eval_seen/019",
+        "metaworld/bin-picking-v3/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/bin-picking-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/bin-picking-v3/validation/000",
+        "metaworld/bin-picking-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/disassemble-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/disassemble-v3/sft_train/002",
+        "metaworld/disassemble-v3/sft_train/009",
+        "metaworld/disassemble-v3/sft_train/010",
+        "metaworld/disassemble-v3/sft_train/007"
+      ]
+    },
+    {
+      "task_key": "metaworld/disassemble-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/disassemble-v3/rl_train/009",
+        "metaworld/disassemble-v3/rl_train/004",
+        "metaworld/disassemble-v3/rl_train/011",
+        "metaworld/disassemble-v3/rl_train/008"
+      ]
+    },
+    {
+      "task_key": "metaworld/disassemble-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/disassemble-v3/eval_seen/001",
+        "metaworld/disassemble-v3/eval_seen/007",
+        "metaworld/disassemble-v3/eval_seen/002",
+        "metaworld/disassemble-v3/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/disassemble-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/disassemble-v3/validation/000",
+        "metaworld/disassemble-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/lever-pull-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/lever-pull-v3/sft_train/007",
+        "metaworld/lever-pull-v3/sft_train/008",
+        "metaworld/lever-pull-v3/sft_train/009",
+        "metaworld/lever-pull-v3/sft_train/011"
+      ]
+    },
+    {
+      "task_key": "metaworld/lever-pull-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/lever-pull-v3/rl_train/002",
+        "metaworld/lever-pull-v3/rl_train/005",
+        "metaworld/lever-pull-v3/rl_train/010",
+        "metaworld/lever-pull-v3/rl_train/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/lever-pull-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/lever-pull-v3/eval_seen/016",
+        "metaworld/lever-pull-v3/eval_seen/018",
+        "metaworld/lever-pull-v3/eval_seen/005",
+        "metaworld/lever-pull-v3/eval_seen/009"
+      ]
+    },
+    {
+      "task_key": "metaworld/lever-pull-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/lever-pull-v3/validation/000",
+        "metaworld/lever-pull-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/reach-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/reach-v3/sft_train/001",
+        "metaworld/reach-v3/sft_train/008",
+        "metaworld/reach-v3/sft_train/011",
+        "metaworld/reach-v3/sft_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/reach-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/reach-v3/rl_train/011",
+        "metaworld/reach-v3/rl_train/014",
+        "metaworld/reach-v3/rl_train/008",
+        "metaworld/reach-v3/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/reach-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/reach-v3/eval_seen/006",
+        "metaworld/reach-v3/eval_seen/002",
+        "metaworld/reach-v3/eval_seen/019",
+        "metaworld/reach-v3/eval_seen/010"
+      ]
+    },
+    {
+      "task_key": "metaworld/reach-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/reach-v3/validation/000",
+        "metaworld/reach-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/window-open-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/window-open-v3/sft_train/000",
+        "metaworld/window-open-v3/sft_train/011",
+        "metaworld/window-open-v3/sft_train/002",
+        "metaworld/window-open-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/window-open-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/window-open-v3/rl_train/002",
+        "metaworld/window-open-v3/rl_train/014",
+        "metaworld/window-open-v3/rl_train/001",
+        "metaworld/window-open-v3/rl_train/008"
+      ]
+    },
+    {
+      "task_key": "metaworld/window-open-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/window-open-v3/eval_seen/002",
+        "metaworld/window-open-v3/eval_seen/014",
+        "metaworld/window-open-v3/eval_seen/019",
+        "metaworld/window-open-v3/eval_seen/010"
+      ]
+    },
+    {
+      "task_key": "metaworld/window-open-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/window-open-v3/validation/000",
+        "metaworld/window-open-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/coffee-push-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/coffee-push-v3/sft_train/011",
+        "metaworld/coffee-push-v3/sft_train/014",
+        "metaworld/coffee-push-v3/sft_train/005",
+        "metaworld/coffee-push-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/coffee-push-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/coffee-push-v3/rl_train/000",
+        "metaworld/coffee-push-v3/rl_train/014",
+        "metaworld/coffee-push-v3/rl_train/001",
+        "metaworld/coffee-push-v3/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/coffee-push-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/coffee-push-v3/eval_seen/010",
+        "metaworld/coffee-push-v3/eval_seen/014",
+        "metaworld/coffee-push-v3/eval_seen/000",
+        "metaworld/coffee-push-v3/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/coffee-push-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/coffee-push-v3/validation/001",
+        "metaworld/coffee-push-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/dial-turn-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/dial-turn-v3/sft_train/008",
+        "metaworld/dial-turn-v3/sft_train/011",
+        "metaworld/dial-turn-v3/sft_train/014",
+        "metaworld/dial-turn-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/dial-turn-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/dial-turn-v3/rl_train/002",
+        "metaworld/dial-turn-v3/rl_train/014",
+        "metaworld/dial-turn-v3/rl_train/008",
+        "metaworld/dial-turn-v3/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "metaworld/dial-turn-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/dial-turn-v3/eval_seen/010",
+        "metaworld/dial-turn-v3/eval_seen/001",
+        "metaworld/dial-turn-v3/eval_seen/002",
+        "metaworld/dial-turn-v3/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "metaworld/dial-turn-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/dial-turn-v3/validation/001",
+        "metaworld/dial-turn-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/faucet-open-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/faucet-open-v3/sft_train/001",
+        "metaworld/faucet-open-v3/sft_train/002",
+        "metaworld/faucet-open-v3/sft_train/005",
+        "metaworld/faucet-open-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/faucet-open-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/faucet-open-v3/rl_train/005",
+        "metaworld/faucet-open-v3/rl_train/002",
+        "metaworld/faucet-open-v3/rl_train/000",
+        "metaworld/faucet-open-v3/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "metaworld/faucet-open-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/faucet-open-v3/eval_seen/000",
+        "metaworld/faucet-open-v3/eval_seen/010",
+        "metaworld/faucet-open-v3/eval_seen/002",
+        "metaworld/faucet-open-v3/eval_seen/019"
+      ]
+    },
+    {
+      "task_key": "metaworld/faucet-open-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/faucet-open-v3/validation/000",
+        "metaworld/faucet-open-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/hammer-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/hammer-v3/sft_train/000",
+        "metaworld/hammer-v3/sft_train/011",
+        "metaworld/hammer-v3/sft_train/005",
+        "metaworld/hammer-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/hammer-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/hammer-v3/rl_train/011",
+        "metaworld/hammer-v3/rl_train/014",
+        "metaworld/hammer-v3/rl_train/005",
+        "metaworld/hammer-v3/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/hammer-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/hammer-v3/eval_seen/010",
+        "metaworld/hammer-v3/eval_seen/019",
+        "metaworld/hammer-v3/eval_seen/001",
+        "metaworld/hammer-v3/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/hammer-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/hammer-v3/validation/000",
+        "metaworld/hammer-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-insert-side-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/peg-insert-side-v3/sft_train/005",
+        "metaworld/peg-insert-side-v3/sft_train/011",
+        "metaworld/peg-insert-side-v3/sft_train/008",
+        "metaworld/peg-insert-side-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-insert-side-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/peg-insert-side-v3/rl_train/011",
+        "metaworld/peg-insert-side-v3/rl_train/014",
+        "metaworld/peg-insert-side-v3/rl_train/002",
+        "metaworld/peg-insert-side-v3/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-insert-side-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/peg-insert-side-v3/eval_seen/014",
+        "metaworld/peg-insert-side-v3/eval_seen/001",
+        "metaworld/peg-insert-side-v3/eval_seen/010",
+        "metaworld/peg-insert-side-v3/eval_seen/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-insert-side-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/peg-insert-side-v3/validation/000",
+        "metaworld/peg-insert-side-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/shelf-place-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/shelf-place-v3/sft_train/001",
+        "metaworld/shelf-place-v3/sft_train/014",
+        "metaworld/shelf-place-v3/sft_train/011",
+        "metaworld/shelf-place-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/shelf-place-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/shelf-place-v3/rl_train/001",
+        "metaworld/shelf-place-v3/rl_train/008",
+        "metaworld/shelf-place-v3/rl_train/000",
+        "metaworld/shelf-place-v3/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/shelf-place-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/shelf-place-v3/eval_seen/002",
+        "metaworld/shelf-place-v3/eval_seen/006",
+        "metaworld/shelf-place-v3/eval_seen/001",
+        "metaworld/shelf-place-v3/eval_seen/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/shelf-place-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/shelf-place-v3/validation/001",
+        "metaworld/shelf-place-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/sweep-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/sweep-v3/sft_train/005",
+        "metaworld/sweep-v3/sft_train/008",
+        "metaworld/sweep-v3/sft_train/001",
+        "metaworld/sweep-v3/sft_train/011"
+      ]
+    },
+    {
+      "task_key": "metaworld/sweep-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/sweep-v3/rl_train/002",
+        "metaworld/sweep-v3/rl_train/008",
+        "metaworld/sweep-v3/rl_train/005",
+        "metaworld/sweep-v3/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "metaworld/sweep-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/sweep-v3/eval_seen/001",
+        "metaworld/sweep-v3/eval_seen/014",
+        "metaworld/sweep-v3/eval_seen/019",
+        "metaworld/sweep-v3/eval_seen/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/sweep-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/sweep-v3/validation/001",
+        "metaworld/sweep-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/box-close-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/box-close-v3/sft_train/002",
+        "metaworld/box-close-v3/sft_train/008",
+        "metaworld/box-close-v3/sft_train/014",
+        "metaworld/box-close-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/box-close-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/box-close-v3/rl_train/005",
+        "metaworld/box-close-v3/rl_train/011",
+        "metaworld/box-close-v3/rl_train/001",
+        "metaworld/box-close-v3/rl_train/014"
+      ]
+    },
+    {
+      "task_key": "metaworld/box-close-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/box-close-v3/eval_seen/010",
+        "metaworld/box-close-v3/eval_seen/019",
+        "metaworld/box-close-v3/eval_seen/014",
+        "metaworld/box-close-v3/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/box-close-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/box-close-v3/validation/000",
+        "metaworld/box-close-v3/validation/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-unlock-v3",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/door-unlock-v3/sft_train/001",
+        "metaworld/door-unlock-v3/sft_train/011",
+        "metaworld/door-unlock-v3/sft_train/000",
+        "metaworld/door-unlock-v3/sft_train/008"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-unlock-v3",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/door-unlock-v3/rl_train/011",
+        "metaworld/door-unlock-v3/rl_train/000",
+        "metaworld/door-unlock-v3/rl_train/008",
+        "metaworld/door-unlock-v3/rl_train/014"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-unlock-v3",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/door-unlock-v3/eval_seen/010",
+        "metaworld/door-unlock-v3/eval_seen/002",
+        "metaworld/door-unlock-v3/eval_seen/019",
+        "metaworld/door-unlock-v3/eval_seen/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-unlock-v3",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/door-unlock-v3/validation/001",
+        "metaworld/door-unlock-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/drawer-open-v3",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/drawer-open-v3/eval_generalization/014",
+        "metaworld/drawer-open-v3/eval_generalization/019",
+        "metaworld/drawer-open-v3/eval_generalization/006",
+        "metaworld/drawer-open-v3/eval_generalization/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/stick-push-v3",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/stick-push-v3/eval_generalization/000",
+        "metaworld/stick-push-v3/eval_generalization/014",
+        "metaworld/stick-push-v3/eval_generalization/019",
+        "metaworld/stick-push-v3/eval_generalization/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/coffee-button-v3",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/coffee-button-v3/eval_generalization/000",
+        "metaworld/coffee-button-v3/eval_generalization/014",
+        "metaworld/coffee-button-v3/eval_generalization/019",
+        "metaworld/coffee-button-v3/eval_generalization/010"
+      ]
+    },
+    {
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/pick-out-of-hole-v3/eval_generalization/000",
+        "metaworld/pick-out-of-hole-v3/eval_generalization/002",
+        "metaworld/pick-out-of-hole-v3/eval_generalization/019",
+        "metaworld/pick-out-of-hole-v3/eval_generalization/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/reach-wall-v3",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "metaworld/reach-wall-v3/eval_generalization/001",
+        "metaworld/reach-wall-v3/eval_generalization/006",
+        "metaworld/reach-wall-v3/eval_generalization/000",
+        "metaworld/reach-wall-v3/eval_generalization/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawTriangle-v1/sft_train/004",
+        "maniskill/DrawTriangle-v1/sft_train/009",
+        "maniskill/DrawTriangle-v1/sft_train/011",
+        "maniskill/DrawTriangle-v1/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawTriangle-v1/rl_train/011",
+        "maniskill/DrawTriangle-v1/rl_train/003",
+        "maniskill/DrawTriangle-v1/rl_train/005",
+        "maniskill/DrawTriangle-v1/rl_train/012"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawTriangle-v1/eval_seen/014",
+        "maniskill/DrawTriangle-v1/eval_seen/016",
+        "maniskill/DrawTriangle-v1/eval_seen/008",
+        "maniskill/DrawTriangle-v1/eval_seen/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawTriangle-v1/validation/000",
+        "maniskill/DrawTriangle-v1/validation/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/FMBAssembly1Easy-v1/sft_train/005",
+        "maniskill/FMBAssembly1Easy-v1/sft_train/008",
+        "maniskill/FMBAssembly1Easy-v1/sft_train/001",
+        "maniskill/FMBAssembly1Easy-v1/sft_train/006"
+      ]
+    },
+    {
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/FMBAssembly1Easy-v1/rl_train/010",
+        "maniskill/FMBAssembly1Easy-v1/rl_train/005",
+        "maniskill/FMBAssembly1Easy-v1/rl_train/009",
+        "maniskill/FMBAssembly1Easy-v1/rl_train/003"
+      ]
+    },
+    {
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/FMBAssembly1Easy-v1/eval_seen/006",
+        "maniskill/FMBAssembly1Easy-v1/eval_seen/015",
+        "maniskill/FMBAssembly1Easy-v1/eval_seen/016",
+        "maniskill/FMBAssembly1Easy-v1/eval_seen/008"
+      ]
+    },
+    {
+      "task_key": "maniskill/FMBAssembly1Easy-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/FMBAssembly1Easy-v1/validation/000",
+        "maniskill/FMBAssembly1Easy-v1/validation/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/LiftPegUpright-v1/sft_train/004",
+        "maniskill/LiftPegUpright-v1/sft_train/012",
+        "maniskill/LiftPegUpright-v1/sft_train/013",
+        "maniskill/LiftPegUpright-v1/sft_train/010"
+      ]
+    },
+    {
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/LiftPegUpright-v1/rl_train/009",
+        "maniskill/LiftPegUpright-v1/rl_train/003",
+        "maniskill/LiftPegUpright-v1/rl_train/001",
+        "maniskill/LiftPegUpright-v1/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/LiftPegUpright-v1/eval_seen/012",
+        "maniskill/LiftPegUpright-v1/eval_seen/016",
+        "maniskill/LiftPegUpright-v1/eval_seen/008",
+        "maniskill/LiftPegUpright-v1/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/LiftPegUpright-v1",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/LiftPegUpright-v1/validation/cache-096",
+        "maniskill/LiftPegUpright-v1/validation/cache-101"
+      ]
+    },
+    {
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PegInsertionSide-v1/sft_train/001",
+        "maniskill/PegInsertionSide-v1/sft_train/003",
+        "maniskill/PegInsertionSide-v1/sft_train/011",
+        "maniskill/PegInsertionSide-v1/sft_train/012"
+      ]
+    },
+    {
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PegInsertionSide-v1/rl_train/003",
+        "maniskill/PegInsertionSide-v1/rl_train/014",
+        "maniskill/PegInsertionSide-v1/rl_train/007",
+        "maniskill/PegInsertionSide-v1/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PegInsertionSide-v1/eval_seen/019",
+        "maniskill/PegInsertionSide-v1/eval_seen/000",
+        "maniskill/PegInsertionSide-v1/eval_seen/005",
+        "maniskill/PegInsertionSide-v1/eval_seen/017"
+      ]
+    },
+    {
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PegInsertionSide-v1/validation/000",
+        "maniskill/PegInsertionSide-v1/validation/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickCube-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickCube-v1/sft_train/000",
+        "maniskill/PickCube-v1/sft_train/011",
+        "maniskill/PickCube-v1/sft_train/005",
+        "maniskill/PickCube-v1/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickCube-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickCube-v1/rl_train/014",
+        "maniskill/PickCube-v1/rl_train/005",
+        "maniskill/PickCube-v1/rl_train/000",
+        "maniskill/PickCube-v1/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickCube-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickCube-v1/eval_seen/001",
+        "maniskill/PickCube-v1/eval_seen/002",
+        "maniskill/PickCube-v1/eval_seen/000",
+        "maniskill/PickCube-v1/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickCube-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickCube-v1/validation/000",
+        "maniskill/PickCube-v1/validation/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickSingleYCB-v1/sft_train/001",
+        "maniskill/PickSingleYCB-v1/sft_train/014",
+        "maniskill/PickSingleYCB-v1/sft_train/002",
+        "maniskill/PickSingleYCB-v1/sft_train/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickSingleYCB-v1/rl_train/002",
+        "maniskill/PickSingleYCB-v1/rl_train/000",
+        "maniskill/PickSingleYCB-v1/rl_train/011",
+        "maniskill/PickSingleYCB-v1/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickSingleYCB-v1/eval_seen/002",
+        "maniskill/PickSingleYCB-v1/eval_seen/000",
+        "maniskill/PickSingleYCB-v1/eval_seen/006",
+        "maniskill/PickSingleYCB-v1/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PickSingleYCB-v1/validation/001",
+        "maniskill/PickSingleYCB-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/PlaceSphere-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PlaceSphere-v1/sft_train/000",
+        "maniskill/PlaceSphere-v1/sft_train/001",
+        "maniskill/PlaceSphere-v1/sft_train/011",
+        "maniskill/PlaceSphere-v1/sft_train/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/PlaceSphere-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PlaceSphere-v1/rl_train/001",
+        "maniskill/PlaceSphere-v1/rl_train/008",
+        "maniskill/PlaceSphere-v1/rl_train/014",
+        "maniskill/PlaceSphere-v1/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/PlaceSphere-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PlaceSphere-v1/eval_seen/002",
+        "maniskill/PlaceSphere-v1/eval_seen/019",
+        "maniskill/PlaceSphere-v1/eval_seen/006",
+        "maniskill/PlaceSphere-v1/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PlaceSphere-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PlaceSphere-v1/validation/001",
+        "maniskill/PlaceSphere-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/PokeCube-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PokeCube-v1/sft_train/004",
+        "maniskill/PokeCube-v1/sft_train/007",
+        "maniskill/PokeCube-v1/sft_train/000",
+        "maniskill/PokeCube-v1/sft_train/008"
+      ]
+    },
+    {
+      "task_key": "maniskill/PokeCube-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PokeCube-v1/rl_train/012",
+        "maniskill/PokeCube-v1/rl_train/001",
+        "maniskill/PokeCube-v1/rl_train/002",
+        "maniskill/PokeCube-v1/rl_train/007"
+      ]
+    },
+    {
+      "task_key": "maniskill/PokeCube-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PokeCube-v1/eval_seen/017",
+        "maniskill/PokeCube-v1/eval_seen/004",
+        "maniskill/PokeCube-v1/eval_seen/006",
+        "maniskill/PokeCube-v1/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/PokeCube-v1",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PokeCube-v1/validation/cache-044",
+        "maniskill/PokeCube-v1/validation/cache-028"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCube-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCube-v1/sft_train/000",
+        "maniskill/PullCube-v1/sft_train/013",
+        "maniskill/PullCube-v1/sft_train/012",
+        "maniskill/PullCube-v1/sft_train/008"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCube-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCube-v1/rl_train/007",
+        "maniskill/PullCube-v1/rl_train/011",
+        "maniskill/PullCube-v1/rl_train/008",
+        "maniskill/PullCube-v1/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCube-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCube-v1/eval_seen/015",
+        "maniskill/PullCube-v1/eval_seen/017",
+        "maniskill/PullCube-v1/eval_seen/009",
+        "maniskill/PullCube-v1/eval_seen/016"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCube-v1",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCube-v1/validation/cache-068",
+        "maniskill/PullCube-v1/validation/cache-071"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCubeTool-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCubeTool-v1/sft_train/000",
+        "maniskill/PullCubeTool-v1/sft_train/005",
+        "maniskill/PullCubeTool-v1/sft_train/011",
+        "maniskill/PullCubeTool-v1/sft_train/008"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCubeTool-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCubeTool-v1/rl_train/011",
+        "maniskill/PullCubeTool-v1/rl_train/005",
+        "maniskill/PullCubeTool-v1/rl_train/008",
+        "maniskill/PullCubeTool-v1/rl_train/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCubeTool-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCubeTool-v1/eval_seen/002",
+        "maniskill/PullCubeTool-v1/eval_seen/006",
+        "maniskill/PullCubeTool-v1/eval_seen/014",
+        "maniskill/PullCubeTool-v1/eval_seen/019"
+      ]
+    },
+    {
+      "task_key": "maniskill/PullCubeTool-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PullCubeTool-v1/validation/001",
+        "maniskill/PullCubeTool-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/PushCube-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PushCube-v1/sft_train/001",
+        "maniskill/PushCube-v1/sft_train/011",
+        "maniskill/PushCube-v1/sft_train/005",
+        "maniskill/PushCube-v1/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/PushCube-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PushCube-v1/rl_train/008",
+        "maniskill/PushCube-v1/rl_train/001",
+        "maniskill/PushCube-v1/rl_train/002",
+        "maniskill/PushCube-v1/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/PushCube-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PushCube-v1/eval_seen/006",
+        "maniskill/PushCube-v1/eval_seen/014",
+        "maniskill/PushCube-v1/eval_seen/002",
+        "maniskill/PushCube-v1/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PushCube-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PushCube-v1/validation/001",
+        "maniskill/PushCube-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/RollBall-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/RollBall-v1/sft_train/005",
+        "maniskill/RollBall-v1/sft_train/011",
+        "maniskill/RollBall-v1/sft_train/000",
+        "maniskill/RollBall-v1/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/RollBall-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/RollBall-v1/rl_train/014",
+        "maniskill/RollBall-v1/rl_train/011",
+        "maniskill/RollBall-v1/rl_train/008",
+        "maniskill/RollBall-v1/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/RollBall-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/RollBall-v1/eval_seen/019",
+        "maniskill/RollBall-v1/eval_seen/006",
+        "maniskill/RollBall-v1/eval_seen/002",
+        "maniskill/RollBall-v1/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/RollBall-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/RollBall-v1/validation/000",
+        "maniskill/RollBall-v1/validation/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackCube-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackCube-v1/sft_train/005",
+        "maniskill/StackCube-v1/sft_train/011",
+        "maniskill/StackCube-v1/sft_train/008",
+        "maniskill/StackCube-v1/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackCube-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackCube-v1/rl_train/005",
+        "maniskill/StackCube-v1/rl_train/001",
+        "maniskill/StackCube-v1/rl_train/011",
+        "maniskill/StackCube-v1/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackCube-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackCube-v1/eval_seen/001",
+        "maniskill/StackCube-v1/eval_seen/010",
+        "maniskill/StackCube-v1/eval_seen/019",
+        "maniskill/StackCube-v1/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackCube-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackCube-v1/validation/001",
+        "maniskill/StackCube-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackPyramid-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackPyramid-v1/sft_train/000",
+        "maniskill/StackPyramid-v1/sft_train/001",
+        "maniskill/StackPyramid-v1/sft_train/014",
+        "maniskill/StackPyramid-v1/sft_train/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackPyramid-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackPyramid-v1/rl_train/000",
+        "maniskill/StackPyramid-v1/rl_train/008",
+        "maniskill/StackPyramid-v1/rl_train/014",
+        "maniskill/StackPyramid-v1/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackPyramid-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackPyramid-v1/eval_seen/010",
+        "maniskill/StackPyramid-v1/eval_seen/006",
+        "maniskill/StackPyramid-v1/eval_seen/001",
+        "maniskill/StackPyramid-v1/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "maniskill/StackPyramid-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/StackPyramid-v1/validation/001",
+        "maniskill/StackPyramid-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawSVG-v1/sft_train/000",
+        "maniskill/DrawSVG-v1/sft_train/005",
+        "maniskill/DrawSVG-v1/sft_train/011",
+        "maniskill/DrawSVG-v1/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawSVG-v1/rl_train/008",
+        "maniskill/DrawSVG-v1/rl_train/014",
+        "maniskill/DrawSVG-v1/rl_train/002",
+        "maniskill/DrawSVG-v1/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawSVG-v1/eval_seen/002",
+        "maniskill/DrawSVG-v1/eval_seen/014",
+        "maniskill/DrawSVG-v1/eval_seen/010",
+        "maniskill/DrawSVG-v1/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "validation",
+      "candidate_count": 2,
+      "measured_candidate_count": 2,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/DrawSVG-v1/validation/001",
+        "maniskill/DrawSVG-v1/validation/000"
+      ]
+    },
+    {
+      "task_key": "maniskill/PushT-v1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PushT-v1/eval_generalization/000",
+        "maniskill/PushT-v1/eval_generalization/006",
+        "maniskill/PushT-v1/eval_generalization/010",
+        "maniskill/PushT-v1/eval_generalization/001"
+      ]
+    },
+    {
+      "task_key": "maniskill/PlugCharger-v1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/PlugCharger-v1/eval_generalization/002",
+        "maniskill/PlugCharger-v1/eval_generalization/019",
+        "maniskill/PlugCharger-v1/eval_generalization/000",
+        "maniskill/PlugCharger-v1/eval_generalization/014"
+      ]
+    },
+    {
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000",
+        "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001",
+        "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/002",
+        "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/006"
+      ]
+    },
+    {
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/InsertFlower-v1/eval_generalization/000",
+        "maniskill/InsertFlower-v1/eval_generalization/006",
+        "maniskill/InsertFlower-v1/eval_generalization/010",
+        "maniskill/InsertFlower-v1/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 7,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "maniskill/SO100GraspCube-v1/eval_generalization/000",
+        "maniskill/SO100GraspCube-v1/eval_generalization/019",
+        "maniskill/SO100GraspCube-v1/eval_generalization/002",
+        "maniskill/SO100GraspCube-v1/eval_generalization/014"
+      ]
+    },
+    {
+      "task_key": "robocasa/CoffeeSetupMug",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CoffeeSetupMug/sft_train/005",
+        "robocasa/CoffeeSetupMug/sft_train/009",
+        "robocasa/CoffeeSetupMug/sft_train/000",
+        "robocasa/CoffeeSetupMug/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "robocasa/CoffeeSetupMug",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CoffeeSetupMug/rl_train/001",
+        "robocasa/CoffeeSetupMug/rl_train/009",
+        "robocasa/CoffeeSetupMug/rl_train/014",
+        "robocasa/CoffeeSetupMug/rl_train/008"
+      ]
+    },
+    {
+      "task_key": "robocasa/CoffeeSetupMug",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CoffeeSetupMug/eval_seen/017",
+        "robocasa/CoffeeSetupMug/eval_seen/004",
+        "robocasa/CoffeeSetupMug/eval_seen/007",
+        "robocasa/CoffeeSetupMug/eval_seen/003"
+      ]
+    },
+    {
+      "task_key": "robocasa/CoffeeSetupMug",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CoffeeSetupMug/validation/cache-098",
+        "robocasa/CoffeeSetupMug/validation/cache-097"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseBlenderLid",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseBlenderLid/sft_train/011",
+        "robocasa/CloseBlenderLid/sft_train/012",
+        "robocasa/CloseBlenderLid/sft_train/014",
+        "robocasa/CloseBlenderLid/sft_train/010"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseBlenderLid",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseBlenderLid/rl_train/005",
+        "robocasa/CloseBlenderLid/rl_train/004",
+        "robocasa/CloseBlenderLid/rl_train/003",
+        "robocasa/CloseBlenderLid/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseBlenderLid",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseBlenderLid/eval_seen/011",
+        "robocasa/CloseBlenderLid/eval_seen/006",
+        "robocasa/CloseBlenderLid/eval_seen/003",
+        "robocasa/CloseBlenderLid/eval_seen/018"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseBlenderLid",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseBlenderLid/validation/cache-042",
+        "robocasa/CloseBlenderLid/validation/cache-035"
+      ]
+    },
+    {
+      "task_key": "robocasa/ScrubCuttingBoard",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ScrubCuttingBoard/sft_train/002",
+        "robocasa/ScrubCuttingBoard/sft_train/005",
+        "robocasa/ScrubCuttingBoard/sft_train/000",
+        "robocasa/ScrubCuttingBoard/sft_train/009"
+      ]
+    },
+    {
+      "task_key": "robocasa/ScrubCuttingBoard",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ScrubCuttingBoard/rl_train/010",
+        "robocasa/ScrubCuttingBoard/rl_train/001",
+        "robocasa/ScrubCuttingBoard/rl_train/014",
+        "robocasa/ScrubCuttingBoard/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "robocasa/ScrubCuttingBoard",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ScrubCuttingBoard/eval_seen/013",
+        "robocasa/ScrubCuttingBoard/eval_seen/010",
+        "robocasa/ScrubCuttingBoard/eval_seen/003",
+        "robocasa/ScrubCuttingBoard/eval_seen/019"
+      ]
+    },
+    {
+      "task_key": "robocasa/ScrubCuttingBoard",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ScrubCuttingBoard/validation/cache-033",
+        "robocasa/ScrubCuttingBoard/validation/cache-045"
+      ]
+    },
+    {
+      "task_key": "robocasa/MoveToFreezerDrawer",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/MoveToFreezerDrawer/sft_train/000",
+        "robocasa/MoveToFreezerDrawer/sft_train/009",
+        "robocasa/MoveToFreezerDrawer/sft_train/008",
+        "robocasa/MoveToFreezerDrawer/sft_train/011"
+      ]
+    },
+    {
+      "task_key": "robocasa/MoveToFreezerDrawer",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/MoveToFreezerDrawer/rl_train/013",
+        "robocasa/MoveToFreezerDrawer/rl_train/001",
+        "robocasa/MoveToFreezerDrawer/rl_train/008",
+        "robocasa/MoveToFreezerDrawer/rl_train/010"
+      ]
+    },
+    {
+      "task_key": "robocasa/MoveToFreezerDrawer",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/MoveToFreezerDrawer/eval_seen/005",
+        "robocasa/MoveToFreezerDrawer/eval_seen/000",
+        "robocasa/MoveToFreezerDrawer/eval_seen/010",
+        "robocasa/MoveToFreezerDrawer/eval_seen/006"
+      ]
+    },
+    {
+      "task_key": "robocasa/MoveToFreezerDrawer",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/MoveToFreezerDrawer/validation/cache-079",
+        "robocasa/MoveToFreezerDrawer/validation/cache-041"
+      ]
+    },
+    {
+      "task_key": "robocasa/ArrangeDrinkware",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ArrangeDrinkware/sft_train/006",
+        "robocasa/ArrangeDrinkware/sft_train/013",
+        "robocasa/ArrangeDrinkware/sft_train/014",
+        "robocasa/ArrangeDrinkware/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "robocasa/ArrangeDrinkware",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ArrangeDrinkware/rl_train/013",
+        "robocasa/ArrangeDrinkware/rl_train/004",
+        "robocasa/ArrangeDrinkware/rl_train/008",
+        "robocasa/ArrangeDrinkware/rl_train/011"
+      ]
+    },
+    {
+      "task_key": "robocasa/ArrangeDrinkware",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ArrangeDrinkware/eval_seen/008",
+        "robocasa/ArrangeDrinkware/eval_seen/019",
+        "robocasa/ArrangeDrinkware/eval_seen/012",
+        "robocasa/ArrangeDrinkware/eval_seen/014"
+      ]
+    },
+    {
+      "task_key": "robocasa/ArrangeDrinkware",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/ArrangeDrinkware/validation/cache-059",
+        "robocasa/ArrangeDrinkware/validation/cache-001"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseMicrowave",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseMicrowave/sft_train/003",
+        "robocasa/CloseMicrowave/sft_train/013",
+        "robocasa/CloseMicrowave/sft_train/005",
+        "robocasa/CloseMicrowave/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseMicrowave",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseMicrowave/rl_train/012",
+        "robocasa/CloseMicrowave/rl_train/007",
+        "robocasa/CloseMicrowave/rl_train/005",
+        "robocasa/CloseMicrowave/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseMicrowave",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseMicrowave/eval_seen/012",
+        "robocasa/CloseMicrowave/eval_seen/010",
+        "robocasa/CloseMicrowave/eval_seen/011",
+        "robocasa/CloseMicrowave/eval_seen/008"
+      ]
+    },
+    {
+      "task_key": "robocasa/CloseMicrowave",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/CloseMicrowave/validation/cache-082",
+        "robocasa/CloseMicrowave/validation/cache-069"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToDrawer",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToDrawer/sft_train/001",
+        "robocasa/PickPlaceCounterToDrawer/sft_train/004",
+        "robocasa/PickPlaceCounterToDrawer/sft_train/002",
+        "robocasa/PickPlaceCounterToDrawer/sft_train/009"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToDrawer",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToDrawer/rl_train/006",
+        "robocasa/PickPlaceCounterToDrawer/rl_train/002",
+        "robocasa/PickPlaceCounterToDrawer/rl_train/013",
+        "robocasa/PickPlaceCounterToDrawer/rl_train/004"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToDrawer",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToDrawer/eval_seen/019",
+        "robocasa/PickPlaceCounterToDrawer/eval_seen/014",
+        "robocasa/PickPlaceCounterToDrawer/eval_seen/013",
+        "robocasa/PickPlaceCounterToDrawer/eval_seen/006"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToDrawer",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToDrawer/validation/cache-063",
+        "robocasa/PickPlaceCounterToDrawer/validation/cache-005"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToSink",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToSink/sft_train/000",
+        "robocasa/PickPlaceCounterToSink/sft_train/006",
+        "robocasa/PickPlaceCounterToSink/sft_train/003",
+        "robocasa/PickPlaceCounterToSink/sft_train/013"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToSink",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToSink/rl_train/006",
+        "robocasa/PickPlaceCounterToSink/rl_train/004",
+        "robocasa/PickPlaceCounterToSink/rl_train/002",
+        "robocasa/PickPlaceCounterToSink/rl_train/010"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToSink",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToSink/eval_seen/019",
+        "robocasa/PickPlaceCounterToSink/eval_seen/017",
+        "robocasa/PickPlaceCounterToSink/eval_seen/000",
+        "robocasa/PickPlaceCounterToSink/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToSink",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToSink/validation/cache-006",
+        "robocasa/PickPlaceCounterToSink/validation/cache-047"
+      ]
+    },
+    {
+      "task_key": "robocasa/TurnOnToasterOven",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/TurnOnToasterOven/sft_train/007",
+        "robocasa/TurnOnToasterOven/sft_train/009",
+        "robocasa/TurnOnToasterOven/sft_train/001",
+        "robocasa/TurnOnToasterOven/sft_train/003"
+      ]
+    },
+    {
+      "task_key": "robocasa/TurnOnToasterOven",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/TurnOnToasterOven/rl_train/014",
+        "robocasa/TurnOnToasterOven/rl_train/002",
+        "robocasa/TurnOnToasterOven/rl_train/003",
+        "robocasa/TurnOnToasterOven/rl_train/013"
+      ]
+    },
+    {
+      "task_key": "robocasa/TurnOnToasterOven",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/TurnOnToasterOven/eval_seen/000",
+        "robocasa/TurnOnToasterOven/eval_seen/005",
+        "robocasa/TurnOnToasterOven/eval_seen/015",
+        "robocasa/TurnOnToasterOven/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "robocasa/TurnOnToasterOven",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/TurnOnToasterOven/validation/cache-081",
+        "robocasa/TurnOnToasterOven/validation/cache-028"
+      ]
+    },
+    {
+      "task_key": "robocasa/AddSugarCubes",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AddSugarCubes/sft_train/001",
+        "robocasa/AddSugarCubes/sft_train/003",
+        "robocasa/AddSugarCubes/sft_train/004",
+        "robocasa/AddSugarCubes/sft_train/010"
+      ]
+    },
+    {
+      "task_key": "robocasa/AddSugarCubes",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AddSugarCubes/rl_train/009",
+        "robocasa/AddSugarCubes/rl_train/000",
+        "robocasa/AddSugarCubes/rl_train/005",
+        "robocasa/AddSugarCubes/rl_train/004"
+      ]
+    },
+    {
+      "task_key": "robocasa/AddSugarCubes",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AddSugarCubes/eval_seen/014",
+        "robocasa/AddSugarCubes/eval_seen/012",
+        "robocasa/AddSugarCubes/eval_seen/019",
+        "robocasa/AddSugarCubes/eval_seen/000"
+      ]
+    },
+    {
+      "task_key": "robocasa/AddSugarCubes",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AddSugarCubes/validation/cache-027",
+        "robocasa/AddSugarCubes/validation/cache-021"
+      ]
+    },
+    {
+      "task_key": "robocasa/AdjustHeat",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AdjustHeat/sft_train/002",
+        "robocasa/AdjustHeat/sft_train/009",
+        "robocasa/AdjustHeat/sft_train/013",
+        "robocasa/AdjustHeat/sft_train/007"
+      ]
+    },
+    {
+      "task_key": "robocasa/AdjustHeat",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AdjustHeat/rl_train/014",
+        "robocasa/AdjustHeat/rl_train/011",
+        "robocasa/AdjustHeat/rl_train/001",
+        "robocasa/AdjustHeat/rl_train/007"
+      ]
+    },
+    {
+      "task_key": "robocasa/AdjustHeat",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AdjustHeat/eval_seen/003",
+        "robocasa/AdjustHeat/eval_seen/015",
+        "robocasa/AdjustHeat/eval_seen/001",
+        "robocasa/AdjustHeat/eval_seen/016"
+      ]
+    },
+    {
+      "task_key": "robocasa/AdjustHeat",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/AdjustHeat/validation/cache-076",
+        "robocasa/AdjustHeat/validation/cache-042"
+      ]
+    },
+    {
+      "task_key": "robocasa/DeliverStraw",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/DeliverStraw/sft_train/005",
+        "robocasa/DeliverStraw/sft_train/007",
+        "robocasa/DeliverStraw/sft_train/009",
+        "robocasa/DeliverStraw/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "robocasa/DeliverStraw",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/DeliverStraw/rl_train/012",
+        "robocasa/DeliverStraw/rl_train/010",
+        "robocasa/DeliverStraw/rl_train/009",
+        "robocasa/DeliverStraw/rl_train/003"
+      ]
+    },
+    {
+      "task_key": "robocasa/DeliverStraw",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/DeliverStraw/eval_seen/015",
+        "robocasa/DeliverStraw/eval_seen/009",
+        "robocasa/DeliverStraw/eval_seen/012",
+        "robocasa/DeliverStraw/eval_seen/008"
+      ]
+    },
+    {
+      "task_key": "robocasa/DeliverStraw",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/DeliverStraw/validation/cache-003",
+        "robocasa/DeliverStraw/validation/cache-084"
+      ]
+    },
+    {
+      "task_key": "robocasa/PlaceIceInCup",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PlaceIceInCup/sft_train/000",
+        "robocasa/PlaceIceInCup/sft_train/013",
+        "robocasa/PlaceIceInCup/sft_train/001",
+        "robocasa/PlaceIceInCup/sft_train/014"
+      ]
+    },
+    {
+      "task_key": "robocasa/PlaceIceInCup",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PlaceIceInCup/rl_train/003",
+        "robocasa/PlaceIceInCup/rl_train/000",
+        "robocasa/PlaceIceInCup/rl_train/002",
+        "robocasa/PlaceIceInCup/rl_train/013"
+      ]
+    },
+    {
+      "task_key": "robocasa/PlaceIceInCup",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PlaceIceInCup/eval_seen/011",
+        "robocasa/PlaceIceInCup/eval_seen/017",
+        "robocasa/PlaceIceInCup/eval_seen/010",
+        "robocasa/PlaceIceInCup/eval_seen/008"
+      ]
+    },
+    {
+      "task_key": "robocasa/PlaceIceInCup",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/PlaceIceInCup/validation/cache-070",
+        "robocasa/PlaceIceInCup/validation/cache-003"
+      ]
+    },
+    {
+      "task_key": "robocasa/RetrieveIceTray",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/RetrieveIceTray/sft_train/002",
+        "robocasa/RetrieveIceTray/sft_train/010",
+        "robocasa/RetrieveIceTray/sft_train/004",
+        "robocasa/RetrieveIceTray/sft_train/009"
+      ]
+    },
+    {
+      "task_key": "robocasa/RetrieveIceTray",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/RetrieveIceTray/rl_train/002",
+        "robocasa/RetrieveIceTray/rl_train/014",
+        "robocasa/RetrieveIceTray/rl_train/005",
+        "robocasa/RetrieveIceTray/rl_train/007"
+      ]
+    },
+    {
+      "task_key": "robocasa/RetrieveIceTray",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/RetrieveIceTray/eval_seen/010",
+        "robocasa/RetrieveIceTray/eval_seen/001",
+        "robocasa/RetrieveIceTray/eval_seen/003",
+        "robocasa/RetrieveIceTray/eval_seen/012"
+      ]
+    },
+    {
+      "task_key": "robocasa/RetrieveIceTray",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/RetrieveIceTray/validation/cache-036",
+        "robocasa/RetrieveIceTray/validation/cache-061"
+      ]
+    },
+    {
+      "task_key": "robocasa/SetupFrying",
+      "phase": "sft_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/SetupFrying/sft_train/002",
+        "robocasa/SetupFrying/sft_train/005",
+        "robocasa/SetupFrying/sft_train/001",
+        "robocasa/SetupFrying/sft_train/011"
+      ]
+    },
+    {
+      "task_key": "robocasa/SetupFrying",
+      "phase": "rl_train",
+      "candidate_count": 15,
+      "measured_candidate_count": 15,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/SetupFrying/rl_train/009",
+        "robocasa/SetupFrying/rl_train/003",
+        "robocasa/SetupFrying/rl_train/007",
+        "robocasa/SetupFrying/rl_train/000"
+      ]
+    },
+    {
+      "task_key": "robocasa/SetupFrying",
+      "phase": "eval_seen",
+      "candidate_count": 20,
+      "measured_candidate_count": 20,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/SetupFrying/eval_seen/001",
+        "robocasa/SetupFrying/eval_seen/016",
+        "robocasa/SetupFrying/eval_seen/011",
+        "robocasa/SetupFrying/eval_seen/017"
+      ]
+    },
+    {
+      "task_key": "robocasa/SetupFrying",
+      "phase": "validation",
+      "candidate_count": 66,
+      "measured_candidate_count": 66,
+      "method": "task_geometry_maximin",
+      "case_ids": [
+        "robocasa/SetupFrying/validation/cache-048",
+        "robocasa/SetupFrying/validation/cache-091"
+      ]
+    },
+    {
+      "task_key": "robocasa/OpenDrawer",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "robocasa/OpenDrawer/eval_generalization/000",
+        "robocasa/OpenDrawer/eval_generalization/006",
+        "robocasa/OpenDrawer/eval_generalization/012",
+        "robocasa/OpenDrawer/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "robocasa/PickPlaceCounterToCabinet",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "robocasa/PickPlaceCounterToCabinet/eval_generalization/000",
+        "robocasa/PickPlaceCounterToCabinet/eval_generalization/006",
+        "robocasa/PickPlaceCounterToCabinet/eval_generalization/012",
+        "robocasa/PickPlaceCounterToCabinet/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "robocasa/OpenCabinet",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "robocasa/OpenCabinet/eval_generalization/000",
+        "robocasa/OpenCabinet/eval_generalization/006",
+        "robocasa/OpenCabinet/eval_generalization/012",
+        "robocasa/OpenCabinet/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "robocasa/TurnOffStove",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "robocasa/TurnOffStove/eval_generalization/000",
+        "robocasa/TurnOffStove/eval_generalization/006",
+        "robocasa/TurnOffStove/eval_generalization/012",
+        "robocasa/TurnOffStove/eval_generalization/019"
+      ]
+    },
+    {
+      "task_key": "robocasa/LoadDishwasher",
+      "phase": "eval_generalization",
+      "candidate_count": 20,
+      "measured_candidate_count": 0,
+      "method": "unmeasured_candidate_spacing",
+      "case_ids": [
+        "robocasa/LoadDishwasher/eval_generalization/000",
+        "robocasa/LoadDishwasher/eval_generalization/006",
+        "robocasa/LoadDishwasher/eval_generalization/012",
+        "robocasa/LoadDishwasher/eval_generalization/019"
+      ]
+    }
+  ]
+}

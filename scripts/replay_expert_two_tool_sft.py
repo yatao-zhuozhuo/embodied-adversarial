@@ -95,6 +95,34 @@ def replay_one(transport: SseSimulatorMcpTransport, source_path: Path, row: dict
         observed = transport.call_tool("observe_env", base, timeout_s=180)
         if reset.get("error") or observed.get("error"):
             raise RuntimeError(f"reset/observe: {reset.get('error') or observed.get('error')}")
+        if source.get("unified_case") and source.get("unified_source_ref"):
+            reference = source["unified_source_ref"]
+            restored = reset.get("_reference_demo") or {}
+            expected_path = (REPO_ROOT / reference["dataset_uri"]).resolve()
+            if (Path(restored.get("dataset", "")).resolve() != expected_path or
+                    restored.get("episode_index") != reference["reference_demo_index"]):
+                raise ValueError("restored reference differs from frozen SFT case")
+            if bench == "maniskill" and restored.get("episode_seed") != reference["episode_seed"]:
+                raise ValueError("restored cached episode seed differs from frozen SFT case")
+            if restored.get("initial_success") is not False:
+                raise ValueError("reference initial success must be checked and false")
+            if bench != "maniskill":
+                restoration_error = restored.get("restored_state_max_abs_error", float("inf"))
+                if not np.isfinite(restoration_error) or restoration_error > 1e-5:
+                    raise ValueError("reference physics restoration differs from frozen state")
+            record["unified_case"] = source["unified_case"]
+            record["unified_source_ref"] = reference
+            record["source_integrity_verified"] = source["source_integrity_verified"]
+        elif source.get("unified_case"):
+            case = source["unified_case"]
+            if (case["phase"] != "sft_train" or case["initial_state"]["kind"] != "native_seed"
+                    or case["seed"] != seed or contract["action_dim"] != row["expected_action_dim"]):
+                raise ValueError("native expert source differs from frozen SFT case")
+            record["unified_case"] = case
+            record["expert_source_initial_state"] = source.get("initial_state")
+            record["initial_state_audit"] = {"scope": "settled_openeta_observation_only",
+                                             "robot": observed.get("robot"), "objects": observed.get("objects")}
+            record["source_start_protocol"] = source.get("start_protocol")
         if "segments" in source:
             segments = source["segments"]
             if not isinstance(segments, list) or not segments or any(
@@ -110,8 +138,18 @@ def replay_one(transport: SseSimulatorMcpTransport, source_path: Path, row: dict
             if not isinstance(actions, list) or not actions:
                 raise ValueError("reference actions missing")
             segments = [{"action": action, "num_steps": 1} for action in actions]
+        hold_steps = source.get("post_source_hold_steps", 0)
+        if hold_steps and "segments" not in source:
+            if type(hold_steps) is not int or hold_steps < 0:
+                raise ValueError("invalid post-source hold budget")
+            hold = [0.0] * contract["action_dim"]
+            if bench in {"libero", "robocasa"}:
+                hold[6] = segments[-1]["action"][6]
+            elif bench == "maniskill" and len(hold) == 7:
+                hold[-1] = segments[-1]["action"][-1]
+            segments.extend({"action": list(hold), "num_steps": 1} for _ in range(hold_steps))
         source_steps = sum(segment["num_steps"] for segment in segments)
-        if source_steps > max_control_steps:
+        if source_steps > max_control_steps and not source.get("unified_case"):
             raise ValueError(f"reference action length outside 1..{max_control_steps}: {source_steps}")
         record["source_steps"] = source_steps
         if reference_index is not None:
@@ -125,9 +163,12 @@ def replay_one(transport: SseSimulatorMcpTransport, source_path: Path, row: dict
         clipped_count = 0
         control_steps_used = 0
         for offset, segment in enumerate(segments):
+            if control_steps_used >= max_control_steps:
+                record["stop_reason"] = "control_budget_exhausted"
+                break
             turn = offset + 1
             action = segment["action"]
-            num_steps = segment["num_steps"]
+            num_steps = min(segment["num_steps"], max_control_steps - control_steps_used)
             if source.get("action_conversion") == "maniskill_pd_ee_delta_pose_controller":
                 original = np.asarray(action, dtype=float)
                 action = canonicalize_pd_ee_delta_pose(action)

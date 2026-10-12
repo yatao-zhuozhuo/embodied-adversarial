@@ -1,0 +1,2189 @@
+{
+  "task_key": "metaworld/lever-pull-v3",
+  "records": [
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1518231734,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05782170328011191,
+          0.7694396340346276,
+          0.0
+        ],
+        "/object_position": [
+          0.1778217032801119,
+          0.5694397128494171,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1778217032801119,
+          0.7694396340346276,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "cd16320b93117d892bb785700234f6252bc8f9b774748660b34833411c4773cb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/000/native_camera_2.png",
+          "sha256": "899aeed014894bb3eb08e8e95d222aa9091f8066c6c1b260b7d9f97136804d25"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1905159076,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.015564844387841198,
+          0.7083564477036262,
+          0.0
+        ],
+        "/object_position": [
+          0.1044351556121588,
+          0.5083565265184157,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1044351556121588,
+          0.7083564477036262,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "a7c8b2e434b7a627c484941e341ced0e230e507f28b1985bfe21ad0ebe21dffe",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/001/native_camera_2.png",
+          "sha256": "5a45cdeb4147e3435df792f09ed2e933db39142a9c9f3be718dc94ed0ed58d0b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/002",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 516036925,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08769772567104012,
+          0.7193291022495933,
+          0.0
+        ],
+        "/object_position": [
+          0.03230227432895988,
+          0.5193291810643829,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03230227432895988,
+          0.7193291022495933,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "524f15b2ae25681238362347b556a299f2a2bc6ac502738433a642f8edd3e474",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/002/native_camera_2.png",
+          "sha256": "ada45d704af5147ee421513ce19fee159d46e56055fac9ba1d2cf5451a083a82"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/003",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 983254694,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.025179652559292165,
+          0.7668179029522668,
+          0.0
+        ],
+        "/object_position": [
+          0.14517965255929216,
+          0.5668179817670563,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.14517965255929216,
+          0.7668179029522668,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "2a9808c36f2b7927f80872f0a8579848b9262cf7c352130ff7865a711ccbff81",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/003/native_camera_2.png",
+          "sha256": "951ebf62ef8e5067631b5c56ae4bd19a808f579078fb8e1adb838cadec5801d6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/004",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1201439945,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05807324679776818,
+          0.7447841629614841,
+          0.0
+        ],
+        "/object_position": [
+          0.17807324679776818,
+          0.5447842417762736,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.17807324679776818,
+          0.7447841629614841,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "53641acf827f863a1c75c41088215d0b72f18ab511fa2c48263db329bd957879",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/004/native_camera_2.png",
+          "sha256": "699dcf8b4f1d182db727083de80588e53e08dd5cc0c322ab961ec770239528ef"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/005",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 2114885780,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.01155549536053739,
+          0.752689962026561,
+          0.0
+        ],
+        "/object_position": [
+          0.1084445046394626,
+          0.5526900408413505,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1084445046394626,
+          0.752689962026561,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "41c51dd82b1a59219c52e066290990db496bb044c580a134294e3fa36d1f9786",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/005/native_camera_2.png",
+          "sha256": "a14038eae158d40a02f6cbdebc73a7dd9f1698daf30c3137ec4c9a38a0536b2b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/006",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1183413224,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.015607580587597897,
+          0.7861436791688718,
+          0.0
+        ],
+        "/object_position": [
+          0.1043924194124021,
+          0.5861437579836614,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1043924194124021,
+          0.7861436791688718,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "9d6132855190e81e3f26048182566c5b3f0770c8e4427621dbe17e7d761ac368",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/006/native_camera_2.png",
+          "sha256": "59b0916474e876955d9f6b463b35e5a69996461c4f500d999615171bbc78c2fb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/007",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 676358184,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0684330278441592,
+          0.7975751847375451,
+          0.0
+        ],
+        "/object_position": [
+          0.1884330278441592,
+          0.5975752635523346,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1884330278441592,
+          0.7975751847375451,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "ef02a0291adad1704ee1432ccfc4f3183137c358d6cd1cc4e12206992ad9f2cd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/007/native_camera_2.png",
+          "sha256": "d3680a0a24d14f7e5627099fc0e5e64825f9c11f481af94886358d4ab9fc8783"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/008",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 290258935,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07827175470896637,
+          0.7041519330339747,
+          0.0
+        ],
+        "/object_position": [
+          0.041728245291033625,
+          0.5041520118487642,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.041728245291033625,
+          0.7041519330339747,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "98c8c052f78d94af9f6a55f51684ff4b27d8b5ec27395aff3b90b697eaaa4236",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/008/native_camera_2.png",
+          "sha256": "ec5692ecf47d9688674330bfc7c5b02f013a059bbd1541356cfa09267d7011ad"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/009",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 584331756,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0979023432877798,
+          0.7886824204705112,
+          0.0
+        ],
+        "/object_position": [
+          0.022097656712220193,
+          0.5886824992853007,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.022097656712220193,
+          0.7886824204705112,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "66dc00a92c7460abb6eb72c93b7f6a8eab611bb8e49a0b38b1b8a2f7d93628e2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/009/native_camera_2.png",
+          "sha256": "66e9b9295d246260e3158e591b78a1bcbc9ca580fa67dd42d29f6be10f9ce165"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/010",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1312116228,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08320760179853884,
+          0.7733135510960889,
+          0.0
+        ],
+        "/object_position": [
+          0.03679239820146116,
+          0.5733136299108784,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03679239820146116,
+          0.7733135510960889,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "9b63f632cb18d7a0b1a6f3f86adefe64b69bfed999dd4fef25c4cacefa55ad2e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/010/native_camera_2.png",
+          "sha256": "376eb240cc4130905929c4f29a404c0b27583212de7deba2372339dba2263e66"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/011",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 116953842,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0593701893028952,
+          0.711348240550561,
+          0.0
+        ],
+        "/object_position": [
+          0.1793701893028952,
+          0.5113483193653505,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1793701893028952,
+          0.711348240550561,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "7ef59f48446e53994b5f5f19f17d0a3832773223d404a552ace4c4f6c06713d7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/011/native_camera_2.png",
+          "sha256": "5284273b95302cfd116bd317491072fe02ee916c384a338b31dfbafdbee47fae"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/012",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1984667159,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07851437025170377,
+          0.7765990373088754,
+          0.0
+        ],
+        "/object_position": [
+          0.04148562974829623,
+          0.5765991161236649,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.04148562974829623,
+          0.7765990373088754,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "76214d49d60c525d2fadbbefe3645acf37825ce347f92be2a63965a5d05f53f5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/012/native_camera_2.png",
+          "sha256": "09e9907c5a9cb7bfd15c685fe1af38c802ea73284216fa1c5fb7e352e1236809"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/013",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 4908907,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09158225076429168,
+          0.7874348075172845,
+          0.0
+        ],
+        "/object_position": [
+          0.02841774923570832,
+          0.587434886332074,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.02841774923570832,
+          0.7874348075172845,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "be9786faa6ea53e3a5f6fca158623fe2d5c3974e3073174fa343f470e1615cd6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/013/native_camera_2.png",
+          "sha256": "fa820fb51b4eac5aed81621c28114ce4f8331ce3b8e4fd0b749490642a73585d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/sft_train/014",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 280373472,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09975217717757852,
+          0.7422731801111401,
+          0.0
+        ],
+        "/object_position": [
+          0.020247822822421477,
+          0.5422732589259296,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.020247822822421477,
+          0.7422731801111401,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "4569a5360f749ed541a07104323a6ef47971a01aaf0a752bce94b2f5d02b3d7d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/sft_train/014/native_camera_2.png",
+          "sha256": "5e46af8e673a880d91ef522f0b38d3d1dac4cad61effd7bc7d2603289f35bdc0"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 893196913,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08792841040924958,
+          0.721461650968643,
+          0.0
+        ],
+        "/object_position": [
+          0.03207158959075042,
+          0.5214617297834325,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03207158959075042,
+          0.721461650968643,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "5912f6fabd06c076d54db328c2b9556a0513e1fcd91950c8772d1a0d6602417c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/000/native_camera_2.png",
+          "sha256": "d18c66b0642ea7f575722a566b93f4851f86900a9f4de2793cc06d122d70ad3a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 253839688,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0036317359410467376,
+          0.7106187489518729,
+          0.0
+        ],
+        "/object_position": [
+          0.11636826405895326,
+          0.5106188277666625,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11636826405895326,
+          0.7106187489518729,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "32bb6234b4d95d83c9b1842e8bfa7546a4269888fc1f123114713097f0f9f77d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/001/native_camera_2.png",
+          "sha256": "9c745680c8f425513b3646d985023104dfbdacb16b2840a8648a8475e33730b1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/002",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1066417524,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.00921166260412884,
+          0.7549251965945177,
+          0.0
+        ],
+        "/object_position": [
+          0.11078833739587116,
+          0.5549252754093073,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11078833739587116,
+          0.7549251965945177,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "1f8f26b7a78be628d3ffa36804a08f0f0ef238980e8667661422bcf05a273629",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/002/native_camera_2.png",
+          "sha256": "259461c3f47f73d7d65c131dbea996ab2b01cce2f71e5db46cde837b8f36472b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/003",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 382736607,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.02455310837455213,
+          0.7944451869926266,
+          0.0
+        ],
+        "/object_position": [
+          0.14455310837455213,
+          0.5944452658074161,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.14455310837455213,
+          0.7944451869926266,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "12215ff9c889f126219f2ae0a2699c0f0abb65ea6210622afbadabffd30cbacf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/003/native_camera_2.png",
+          "sha256": "a4f3c356805506d21eddf143bf1a0cc744f4b2f566d1b1a7005ddb5cc5678237"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/004",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 2017685123,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03782655356006155,
+          0.7778822766503938,
+          0.0
+        ],
+        "/object_position": [
+          0.08217344643993844,
+          0.5778823554651833,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.08217344643993844,
+          0.7778822766503938,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "007f9994806a7283eed8b69a3f245ee5db509f89a5b1913a9f5beb4777cdd9e3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/004/native_camera_2.png",
+          "sha256": "844e03e946e19cbccb552bf5ad3c335268c573dfbcf2336067681d1429b24c57"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/005",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1788288102,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.00970543100158068,
+          0.7063101959775849,
+          0.0
+        ],
+        "/object_position": [
+          0.11029456899841932,
+          0.5063102747923744,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11029456899841932,
+          0.7063101959775849,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "83a4bc272e67769dc6a90271d79e77b22a0029a6353412d0c6ca85b45ff18545",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/005/native_camera_2.png",
+          "sha256": "dc6f3157a6879e08f77dc15df8bc85123466f9ca3d641bc4344491d27e993bed"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/006",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 752199653,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.019659780101877994,
+          0.7750858906398618,
+          0.0
+        ],
+        "/object_position": [
+          0.100340219898122,
+          0.5750859694546513,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.100340219898122,
+          0.7750858906398618,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "354053a92ea7a838432e72b42b5053280ce73381da53aa17ae1744ebc720bc48",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/006/native_camera_2.png",
+          "sha256": "8aacaacc2eaf2c655368af0f29428bb613aa27dffd5d4e83f7ec0d49cabc0963"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/007",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1963157868,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.01951773584225558,
+          0.7298962551014166,
+          0.0
+        ],
+        "/object_position": [
+          0.10048226415774442,
+          0.5298963339162062,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.10048226415774442,
+          0.7298962551014166,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "b92c8e4d9628b3aa24c3b8eb2de2a36181a56bbbe42e79cc0f8d86734341a604",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/007/native_camera_2.png",
+          "sha256": "d1e77c1bc0801565811da265c73b1c2e474a98d4fef79e5f2700d58c5a3e0000"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/008",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1231436673,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.048192065158793485,
+          0.7971658507971733,
+          0.0
+        ],
+        "/object_position": [
+          0.16819206515879348,
+          0.5971659296119628,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.16819206515879348,
+          0.7971658507971733,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "186b29d8844b111cef9d4f903392f70d58b564e7b3cf358e4d33c00781a29fcd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/008/native_camera_2.png",
+          "sha256": "b90fb4dde1818cc2e2911221d0ba20c762e14625eedf070d977ca10db661bd0d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/009",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1507099601,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09535361819466423,
+          0.7832565683903653,
+          0.0
+        ],
+        "/object_position": [
+          0.21535361819466423,
+          0.5832566472051548,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.21535361819466423,
+          0.7832565683903653,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "a53f12282ea73521e6525fc9f8e1be7414641a3b344d7eda6ea1e29c93dc0123",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/009/native_camera_2.png",
+          "sha256": "5088372a7ca9a4d57760877a442ecf60c487f06fc1046316e706420d77c74c13"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/010",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 483327991,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09506558386772612,
+          0.7344669466350369,
+          0.0
+        ],
+        "/object_position": [
+          0.024934416132273873,
+          0.5344670254498264,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.024934416132273873,
+          0.7344669466350369,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "d69dddde069d115fb315ddfc4f48366bfc84c8fedc1c7f02e3d24ace71483a21",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/010/native_camera_2.png",
+          "sha256": "4f577f27b5af2a4d1b6cdadb6666a670b20f4b53651da5071b7c7f3186000b61"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/011",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 443325746,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -4.8207428872543145e-05,
+          0.7477488708312529,
+          0.0
+        ],
+        "/object_position": [
+          0.11995179257112745,
+          0.5477489496460424,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11995179257112745,
+          0.7477488708312529,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "91300eaecf9a6810004f613eb1493a572bad2783aaf0b59de099cfc07b84b74d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/011/native_camera_2.png",
+          "sha256": "9eb4661beecebb345ec4e55da93ee21c1231402f6c879535a1c167954c8502e5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/012",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 509757960,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09486740803580176,
+          0.795404938353484,
+          0.0
+        ],
+        "/object_position": [
+          0.02513259196419823,
+          0.5954050171682735,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.02513259196419823,
+          0.795404938353484,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "c6c4f3511b0a58302ec932c251c1fc4457466ab79030e5444ac8dd4bdface01f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/012/native_camera_2.png",
+          "sha256": "952b7908f1b5afd4de34e2289555b42d9f8f581c63f41d5198ccf387481acf12"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/013",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 2067776701,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05204650951274621,
+          0.7598626222484033,
+          0.0
+        ],
+        "/object_position": [
+          0.06795349048725378,
+          0.5598627010631928,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.06795349048725378,
+          0.7598626222484033,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "7ad2b035b78551f9919e7d2611b077d3e33b8fc0a27978e71b257a9455c04c6d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/013/native_camera_2.png",
+          "sha256": "cb6c7d25c4b4841dc719975f941f681ecdbd4e4a82fe9313f7b6169401ed5421"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/rl_train/014",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 164462810,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06326856503360004,
+          0.7116034758814369,
+          0.0
+        ],
+        "/object_position": [
+          0.05673143496639996,
+          0.5116035546962264,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.05673143496639996,
+          0.7116034758814369,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "982a75652b02a37f87c940b498923a93b01e1fcf321d4a74cc4f8acfa3c1b292",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/rl_train/014/native_camera_2.png",
+          "sha256": "d5a98b92fc8ddfbe2d4f75e81153254cca279b528006f440ae52d1dd48e56d43"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/validation/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 403815477,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.023954926524670433,
+          0.7119295368588057,
+          0.0
+        ],
+        "/object_position": [
+          0.14395492652467043,
+          0.5119296156735952,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.14395492652467043,
+          0.7119295368588057,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "23d1e6b1d49ca9087166433d0c546588b53dbe457b7985d8b8d28d7e2bfd12c2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/validation/000/native_camera_2.png",
+          "sha256": "4ea22b41080193764475c71495c965c8c822e47254b8c8e77b90237e5254ea2c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 153533240,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.052838399573852085,
+          0.7771946014890752,
+          0.0
+        ],
+        "/object_position": [
+          0.06716160042614791,
+          0.5771946803038647,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.06716160042614791,
+          0.7771946014890752,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "279dcb83974a87a3b95b552d00da456105a72213944aca43f3dc64ababe6398b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "4b8157f403ca5c02c65af77fa492be08f3faa46204785724da42136ad943a302"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 413178706,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.083204545239261,
+          0.7513259005025466,
+          0.0
+        ],
+        "/object_position": [
+          0.03679545476073899,
+          0.5513259793173361,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03679545476073899,
+          0.7513259005025466,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "b7a94e8db11f299c4db1462d2d044159f16d9077b876e3a7c953cb3d46e50fc7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "1f4cf5c6546282567d83a0bbb69d4548de0715ffaedd5a797f59f1e479679a19"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/002",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 902804070,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03166943455409624,
+          0.7942868709323376,
+          0.0
+        ],
+        "/object_position": [
+          0.08833056544590376,
+          0.5942869497471271,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.08833056544590376,
+          0.7942868709323376,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "85aaf8b4206e03354057edf5ee02d62829e0eef7a08324f1e073da0d5fdbbce0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "b32436a788308017db465ca450e697e144f762dc743bc9846b1803534a065b47"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/003",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 655701914,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04124136083809726,
+          0.7625502469684351,
+          0.0
+        ],
+        "/object_position": [
+          0.07875863916190273,
+          0.5625503257832246,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.07875863916190273,
+          0.7625502469684351,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "71fbf2d0496abd810bff0a379bc741ecd185b71c3a0fe5fad5d80898c1d40d24",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/003/native_camera_2.png",
+          "sha256": "597647e93079779990b1a31e5385340090f6b4b8db778b8110a925cc236049ed"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/004",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1451211391,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02940789755478468,
+          0.7024869714157927,
+          0.0
+        ],
+        "/object_position": [
+          0.09059210244521532,
+          0.5024870502305823,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.09059210244521532,
+          0.7024869714157927,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "2d7fa53058f4c4160fe66b60f4118323e9ed942211727bcdbf60ebd6821f7146",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/004/native_camera_2.png",
+          "sha256": "132e524ec7d18fb9118618306ffb1a7281f3b9a47ca48b4a77b2209233d2582a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/005",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1982986120,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.016316353665685512,
+          0.7750711719097716,
+          0.0
+        ],
+        "/object_position": [
+          0.1363163536656855,
+          0.5750712507245611,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1363163536656855,
+          0.7750711719097716,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "bd0008da678bad13e7f1eddef010d5222d09e809fd6094b12fe3fd57a62abf11",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/005/native_camera_2.png",
+          "sha256": "a1dd01c43cb1f59a86ff2c9e52b9cfcbcb455d177194f3d49fa8d944df3476b9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/006",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1232935753,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.01880120349107646,
+          0.7731819984175866,
+          0.0
+        ],
+        "/object_position": [
+          0.13880120349107644,
+          0.5731820772323761,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.13880120349107644,
+          0.7731819984175866,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "3632aa64c8896fc9fc08e6761e17e6442dde33b3e5f9f14dc93280521453740f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "a268b93d88f1a8784bc6041e0889f52d38d29ab9c4361b9f519f2eb1ee7b6299"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/007",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1435408203,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08305296831354395,
+          0.7343246890477084,
+          0.0
+        ],
+        "/object_position": [
+          0.03694703168645605,
+          0.5343247678624979,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03694703168645605,
+          0.7343246890477084,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "a22eea5416f1e556ff1b55ed13c7ac0d210054adc987a1d46c0fffb2503d6d5d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/007/native_camera_2.png",
+          "sha256": "0bf0367dace583aa14baa24970a29779d5af3f78d247b00c2a8212b3a1e28a42"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/008",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 2265632,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06739777355630625,
+          0.7297538444533713,
+          0.0
+        ],
+        "/object_position": [
+          0.18739777355630624,
+          0.5297539232681608,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.18739777355630624,
+          0.7297538444533713,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "87a9c7afc287f1f508b6d8ff756648eb769461dd8874f8307000f1d368316412",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/008/native_camera_2.png",
+          "sha256": "0876a65bc05f675bea0fb2a57146f87e962e40dc933a1a9f4a42fd1937ca0e72"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/009",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 561151155,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08163251432328467,
+          0.7301952982589743,
+          0.0
+        ],
+        "/object_position": [
+          0.20163251432328466,
+          0.5301953770737639,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.20163251432328466,
+          0.7301952982589743,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "ea71a595b27ea74d4e0d41ffbe7d50db4969bf77c91dfca2d564ea17fbed1976",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/009/native_camera_2.png",
+          "sha256": "14710c7c1956ba9c53d46e699014f9d45b1f68e9149739eefad151fdd3962d1c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/010",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 895811815,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06808493853992931,
+          0.7230419493808994,
+          0.0
+        ],
+        "/object_position": [
+          0.05191506146007069,
+          0.5230420281956889,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.05191506146007069,
+          0.7230419493808994,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "e5cb4a65e4a097fe3224f248dc9a741ccda31c00ff04fd11c9ae6afdfb07e25e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "8ffb042af87f043d0ef79c391ebec2eb38fb909bbaf98297d554a230738342b5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/011",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1948631579,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.005440986906170675,
+          0.7463719475618962,
+          0.0
+        ],
+        "/object_position": [
+          0.11455901309382932,
+          0.5463720263766857,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11455901309382932,
+          0.7463719475618962,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "1bec05caec753f5b06052619cf146a2d83a588290a298e8ba04e5ff6294d4a43",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/011/native_camera_2.png",
+          "sha256": "3385f8978b2bd17ff4314bf4b2b5f40afad9715242fd27ce20f6ca3442dc8786"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/012",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 612690656,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.031634793417027574,
+          0.7903553281699004,
+          0.0
+        ],
+        "/object_position": [
+          0.08836520658297242,
+          0.5903554069846899,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.08836520658297242,
+          0.7903553281699004,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "7d1f2f361dead34ae604da4f93cfb389435046dfc0dfeded69484ba4e810935a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/012/native_camera_2.png",
+          "sha256": "3fa1251c2979db4190676e7fb39c09a159f09dc0d666b8278fcfaa7751c870cf"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/013",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 714767504,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.021098465121690696,
+          0.7699106566900435,
+          0.0
+        ],
+        "/object_position": [
+          0.1410984651216907,
+          0.5699107355048331,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1410984651216907,
+          0.7699106566900435,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "fef0f3c8f28623b18986ebf9100873aad9bd1dde1c3708beefb8d415e2d27ccb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/013/native_camera_2.png",
+          "sha256": "8b851fcd4c72b9af3169669131306a584260d4425b566c5ad0820931461e8319"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/014",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1078966833,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.013348451019065649,
+          0.7208654045451608,
+          0.0
+        ],
+        "/object_position": [
+          0.13334845101906564,
+          0.5208654833599503,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.13334845101906564,
+          0.7208654045451608,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "23208d916da6ca5987165d6401dfa15ad3090140eaefc66f4732c9a607d05689",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "cd8f079f582400bd8b6ec07f2f9b5c03335924d1eb257783a19f516c832f495b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/015",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 60094529,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03142447730563365,
+          0.741324033370317,
+          0.0
+        ],
+        "/object_position": [
+          0.08857552269436635,
+          0.5413241121851066,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.08857552269436635,
+          0.741324033370317,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "4df2f604f88dc2f2458d33b202add808d3bd375025ff674776e3501ff51c4dca",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/015/native_camera_2.png",
+          "sha256": "1716d501c06f7ac1b84b54ca6ee814d986ec1ee681ad77a3b76034b96b3c509c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/016",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1355188021,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.062382753864127394,
+          0.7712962559287542,
+          0.0
+        ],
+        "/object_position": [
+          0.1823827538641274,
+          0.5712963347435437,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1823827538641274,
+          0.7712962559287542,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "deb91615b6451daf0852dd346a54023cfc08138f7592c7a91ffe38002ed400a7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/016/native_camera_2.png",
+          "sha256": "cb35389d544fcbde6737026c6605617f86cd69943beeadeb493093f0eaf3fbd3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/017",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 990082596,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04525359703852197,
+          0.7670162139438478,
+          0.0
+        ],
+        "/object_position": [
+          0.07474640296147803,
+          0.5670162927586373,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.07474640296147803,
+          0.7670162139438478,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "9ea57e0cad72cbd057bef9ec9e470711c4a848b496a70fd9f93ad3d633ad098d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/017/native_camera_2.png",
+          "sha256": "22fefd92c86a95e9293ac18c9f48beee833dda7caa6ac2305517fb54da20f1bf"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/018",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1499547793,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05430168604006991,
+          0.7496276506525376,
+          0.0
+        ],
+        "/object_position": [
+          0.06569831395993009,
+          0.5496277294673271,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.06569831395993009,
+          0.7496276506525376,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "82746ed41e71933caac271a6bac7f001c578b79e926375381d9765bc48753f89",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/018/native_camera_2.png",
+          "sha256": "4a91bc85505a3ad268b0a0e1a1a8c12f09dc0e65e812061b70496fada1cc9a4f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/eval_seen/019",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 533790297,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.039843895836212284,
+          0.7061287932214919,
+          0.0
+        ],
+        "/object_position": [
+          0.08015610416378771,
+          0.5061288720362814,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.08015610416378771,
+          0.7061287932214919,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "b8fdeac6fb267c44740ea527f693c52564553264dcba5c61af924d5fa5a5aebb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "817764a2f3109c7ad0d5e9358131d1c7f41112c0c689d7bb5b464c61be83c732"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/lever-pull-v3/validation/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1281043206,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.016328255137726982,
+          0.758072837187669,
+          0.0
+        ],
+        "/object_position": [
+          0.13632825513772698,
+          0.5580729160024586,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.13632825513772698,
+          0.758072837187669,
+          0.45
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "0bea56caf84f3c1dc3058fa361da5e8154ec64de6ea5cd131874d61c4ecef201",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/lever-pull-v3/validation/001/native_camera_2.png",
+          "sha256": "7dc6980c86b6a6e396aa3f4ac2c8ade155e80bb239dd8c23933fcc90da8a56d5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

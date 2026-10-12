@@ -1,0 +1,460 @@
+{
+  "task_key": "maniskill/PlugCharger-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/000",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 2077873560,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.08736199885606766,
+            -0.15475043654441833,
+            0.012000000104308128,
+            0.9928960204124451,
+            0.0,
+            0.0,
+            -0.11898549646139145
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.07625030726194382,
+            -0.04390832781791687,
+            0.10000000149011612,
+            0.18479023873806,
+            0.0,
+            0.0,
+            -0.9827779531478882
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "56de651919248fedf6890362f8ca1282ae1a700bc040582e11a54a05c3047b92",
+      "task_state_fingerprint": "057b28021dbed27949fab4a4fee6a8ac291844f511e1f366f16fd2963ea01fff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/000/base_camera.png",
+          "sha256": "300f7bb7b9424f507ac83081b19017360a78907e00f5a16e6cd6cacc2fe0a4cb"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/000/hand_camera.png",
+          "sha256": "15e8401cb5aa5f7667e3ac5467440d1433eeb9b8df48aa6c0362391db1efb3fc"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/001",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 1486187168,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.034005001187324524,
+            0.06018845736980438,
+            0.012000000104308128,
+            0.959593653678894,
+            0.0,
+            0.0,
+            -0.28138935565948486
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.08972667157649994,
+            -0.04362582042813301,
+            0.10000000149011612,
+            0.14911046624183655,
+            0.0,
+            0.0,
+            -0.9888205528259277
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0e90157865f21b87e5aa030d8c072a13dddc1d861559089536b999d18cf3d7be",
+      "task_state_fingerprint": "321ff2b3bc124ea3872ece1590957ef6223d905a744d47e451ad0b51ef5ee3a9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/001/base_camera.png",
+          "sha256": "3e1bed2f6dd066315936af6eae2e0a96b57fb14d8fe5929a8d9bc8b1386779b0"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/001/hand_camera.png",
+          "sha256": "64cfb5dc43442975a78c3a05f91bc1e1a4533b5c11b1030a43de7981e7dc7b33"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/002",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 646540722,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.033681243658065796,
+            0.08826516568660736,
+            0.012000000104308128,
+            0.99165278673172,
+            0.0,
+            0.0,
+            -0.1289372593164444
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.02498364821076393,
+            0.0449981763958931,
+            0.10000000149011612,
+            0.10623675584793091,
+            0.0,
+            0.0,
+            -0.9943408370018005
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d15d5ba08ec2a9a9779cdee74b6766baa46920cb62b19273376be7f2633a1879",
+      "task_state_fingerprint": "8651ba4bffb58d214e8eaf25e74beb5390b1ddf08fab68ea2706664d7d298067",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/002/base_camera.png",
+          "sha256": "98deb1ace96a9da944acf9247e5feacd133a2b577ed95875ea53e33da162bdfe"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/002/hand_camera.png",
+          "sha256": "d4ee05f129c4ed423e7002323ed59cdc2be2cab0bb7a6618548e5acdb7a7a67f"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/006",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 667674319,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.0738511011004448,
+            0.12785936892032623,
+            0.012000000104308128,
+            0.9918867349624634,
+            0.0,
+            0.0,
+            0.12712474167346954
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.015449518337845802,
+            0.08247024565935135,
+            0.10000000149011612,
+            0.05166751891374588,
+            0.0,
+            0.0,
+            0.9986643195152283
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "79bc62a3acf9ac12ebb6ffeaa86225e9bead5aa43da02941d6a18ecf914e0182",
+      "task_state_fingerprint": "6e962f7031c1ee72740b36bfff2b02474783c422f8e18a4c3bf349c1c88a60b5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/006/base_camera.png",
+          "sha256": "4959df55d836a968c9ceb9ddc8ef7a92e740c2fac54a4b99e01a67274d2c17bd"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/006/hand_camera.png",
+          "sha256": "f0621586530af8b947f82c7ec23d4dc0168925c08df0bdf8acf35ec004b78d9f"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/010",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 427902077,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.034265607595443726,
+            0.07382561266422272,
+            0.012000000104308128,
+            0.9557114839553833,
+            0.0,
+            0.0,
+            0.2943052649497986
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.03780777007341385,
+            0.041367895901203156,
+            0.10000000149011612,
+            0.14336834847927094,
+            0.0,
+            0.0,
+            -0.9896693825721741
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "57af09e965110b74a8dc33d7296ba230271719e50894e1ad0f7ba5bdef82a66a",
+      "task_state_fingerprint": "efe63111351d39b94bc91be1cf57337fa26425a06ecc5f5c306b59ff5ba5737f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/010/base_camera.png",
+          "sha256": "8de82af30e75c471ac05d35eb649c791a38636e56dff4697cd432e23c3ef83a4"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/010/hand_camera.png",
+          "sha256": "283f5b41da07a1446cd564b2bd183c6b06e60d8687c50b704c972e161a9a81da"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/014",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 1585627045,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.03871087357401848,
+            -0.0454966276884079,
+            0.012000000104308128,
+            0.9665861129760742,
+            0.0,
+            0.0,
+            -0.25634193420410156
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.05265334993600845,
+            -0.050731003284454346,
+            0.10000000149011612,
+            0.18383371829986572,
+            0.0,
+            0.0,
+            0.9829573631286621
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f0275d778eff85eb9b6ee0f3f7ed8dab1514fe9eb01db0cd87fd9032d8100a56",
+      "task_state_fingerprint": "b36fa817acc91e485d4162dfab48b75369112b359ee8227aff642f0abb3bf564",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/014/base_camera.png",
+          "sha256": "72c0095f96f083db84ab9473984448cf348c815e134ad84feb2fea6a94e9f783"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/014/hand_camera.png",
+          "sha256": "40629a5eed40f522cc0b399e1763d73d85603ff6435048fad0fa6a43903765e0"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/019",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 1215514945,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.07420499622821808,
+            -0.18803037703037262,
+            0.012000000104308128,
+            0.88555908203125,
+            0.0,
+            0.0,
+            0.46452680230140686
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.06561803817749023,
+            -0.020381048321723938,
+            0.10000000149011612,
+            0.16003715991973877,
+            0.0,
+            0.0,
+            0.98711097240448
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b01e3b4ae87a37468c06b6a3e2f4a967922036f497250dab9d32d8edee8c6a80",
+      "task_state_fingerprint": "4233859ad8da3f4fbfeb2a526673733f56593cf508786d5b2cd4a4772d006469",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/019/base_camera.png",
+          "sha256": "1d5db317d502c6ec560a9b1b4e4e22c4bd378f283f4d5070003083fe54e5418d"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PlugCharger-v1/eval_generalization/019/hand_camera.png",
+          "sha256": "063703e6e487f7cf8ee35003a133b18e7450df26b6df3aeba6a2608b3320fb4c"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    }
+  ]
+}

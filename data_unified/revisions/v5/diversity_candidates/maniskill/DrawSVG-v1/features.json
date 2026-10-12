@@ -1,0 +1,1385 @@
+{
+  "task_key": "maniskill/DrawSVG-v1",
+  "records": [
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 979377004,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08586715161800385,
+            -0.091464564204216,
+            0.009999999776482582,
+            0.41651982069015503,
+            0.0,
+            0.0,
+            0.9091266393661499
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "65aad6b5ac58088b131252d37c82203bb2c56116aa4f82fe59b3cd9a96543bc3",
+      "task_state_fingerprint": "653dccaa8c549c8e1bc851e764c430e2a672274d99abd6bfd112d4705b31740e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/000/base_camera.png",
+          "sha256": "2e61d1c4f36f5f55135f4280f683265a7b985c6982d2932d734d493e34f0b678"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1556054104,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.0928594097495079,
+            -0.08765168488025665,
+            0.009999999776482582,
+            0.9545366168022156,
+            0.0,
+            0.0,
+            -0.2980937063694
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "096c36f6f32cd5b7117b5a45d7ba5611df138514ce34a5f1d3ac30e3d0c25b4a",
+      "task_state_fingerprint": "90979e0370b262c4be0a555b42fea329323f86a791d92cf944f167f34fe5a2b3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/001/base_camera.png",
+          "sha256": "50105f69898b0f02a0b93605e7e758e9435d25650297bc913d56afb90db5a555"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1089501350,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08446260541677475,
+            -0.09731592237949371,
+            0.009999999776482582,
+            0.997631847858429,
+            0.0,
+            0.0,
+            -0.06878034770488739
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "df397b689c8fa18251b8e0cc5f81c23f6316e32083cd0b3009783d5de1a5e63d",
+      "task_state_fingerprint": "ffa6a93004eefff0f6d1fd80e4aa41179bd9c03a3b174338b07b3f96026f70ab",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/002/base_camera.png",
+          "sha256": "3eefd720728802dcacca09054a9085ec6cfdef0731121d4145c7a6513d17ed42"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/005",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1026530468,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09745723009109497,
+            -0.09754951298236847,
+            0.009999999776482582,
+            0.9021979570388794,
+            0.0,
+            0.0,
+            -0.43132224678993225
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d071395a89863a68c714b669562687fe885c12cfab3082243955c7a83dd5aeec",
+      "task_state_fingerprint": "c10754fd12010732b7d662495fba1fd93d1998cc236410ac53a44f683ed7bc56",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/005/base_camera.png",
+          "sha256": "14d9054355e72454abb484f3504db8fae71d7dfb9b3f512993d2628b44a96f68"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/008",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 2128146870,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08715023100376129,
+            -0.09454623609781265,
+            0.009999999776482582,
+            0.9804300665855408,
+            0.0,
+            0.0,
+            -0.19686761498451233
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "884e1a02f37f9eba2a8a4fd6065b0f3872db985a136d797c888cf52b3085f363",
+      "task_state_fingerprint": "86f8a8c93907acc448d1c5bb937cd0b41a49ba55752aaacf5fd1c9402168e1c9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/008/base_camera.png",
+          "sha256": "b4d7faa8307d148ad474c8e12901fc24b2332ef23a8c2027186375c28ce9b290"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/011",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 774957375,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08056613802909851,
+            -0.09027750045061111,
+            0.009999999776482582,
+            0.9527760744094849,
+            0.0,
+            0.0,
+            0.30367374420166016
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2f8d846b67ad2d0c4ad11fe66722258cb38b8cdb36c62adce5c1f68001da9a2f",
+      "task_state_fingerprint": "5357a10fe24b49ff6d776894723cb8a4c55b4f2455703afc9dc5134ae8997da8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/011/base_camera.png",
+          "sha256": "7b9b18e9e1ceac3022434fc77ebbb4493dd7168b9399985e2bf4f2ebc4c93ce9"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 457537151,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08904417604207993,
+            -0.09662149101495743,
+            0.009999999776482582,
+            0.9334559440612793,
+            0.0,
+            0.0,
+            0.3586920201778412
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "111feffb800bc4e25d7a0000e13ab3e69adea10b639bc5240110a8bf38a2ed93",
+      "task_state_fingerprint": "1d9bb1a2d0af7f94e0f7890de0249f717521aa6ac8c98b8a893e33b81966f82f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/sft_train/014/base_camera.png",
+          "sha256": "adf8eeec090850e412a2970abd1bc4b7e69ff81c0d914160325c9278a7c1836f"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1051235234,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08019502460956573,
+            -0.09411142021417618,
+            0.009999999776482582,
+            0.632371187210083,
+            0.0,
+            0.0,
+            0.7746655941009521
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "28d47c6150a9e8d92f48fc71d62af7325a5ce01c301798a72430a2992654ca41",
+      "task_state_fingerprint": "f0b4e25ef2701997a2f1272f12dd9adce2f17b12ce583f266fac04b439ed52d6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/000/base_camera.png",
+          "sha256": "44a29e911accf055fc53f5cab91b1957b46207033323db99b95db294f412e5ee"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 801109004,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09146621078252792,
+            -0.08857071399688721,
+            0.009999999776482582,
+            0.9187259674072266,
+            0.0,
+            0.0,
+            -0.3948957026004791
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c3d613b575c15670508d4e941533efdc03084ffe36c59757d08ad9470d9e7cb5",
+      "task_state_fingerprint": "b30223e2f6ed83fc59becc0540db96da8379ee6901307e9c13a213fd1a112255",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/001/base_camera.png",
+          "sha256": "9e52d8243ae49b6e8b37d2de2f07de2b6457b2bae5ddbe3ce8e2e47740ed18b3"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 388518905,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09520061314105988,
+            -0.09206130355596542,
+            0.009999999776482582,
+            0.5746943950653076,
+            0.0,
+            0.0,
+            0.818368136882782
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1a772d8dab2bdd13be6c0c950fefd5627821046963fc65f3d2167ed3b08ce38d",
+      "task_state_fingerprint": "7ca702b6fbc5c3b546f102e09aee2308d59c006b01d7745fa3eeaf63826dac6c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/002/base_camera.png",
+          "sha256": "76cd79da7694a213d23a4ac12b9fd70ed56bc594845e27b3e6bb44eecaa17763"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/005",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1025963951,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08838152885437012,
+            -0.08471658825874329,
+            0.009999999776482582,
+            0.9624895453453064,
+            0.0,
+            0.0,
+            -0.27131882309913635
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c4eb468085d2a637f11abb82aa08b0e02cccb18cd899f397dbf8001acbf89a80",
+      "task_state_fingerprint": "753adc490fbc5ef1dea7872a31cd00304e180c28e167ad2f5eb3d5831c0182b8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/005/base_camera.png",
+          "sha256": "e2f8a50c68e5daab76b4f2ee92bed3f8eeadc50713b4c2d992ea6ffc0517bbed"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/008",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 2133481835,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08111453056335449,
+            -0.08757978677749634,
+            0.009999999776482582,
+            0.25910988450050354,
+            0.0,
+            0.0,
+            -0.9658478498458862
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d06edd5d19ca82daf3580e30ef37841484fc5ac8915bc7fb25274eba07f81d11",
+      "task_state_fingerprint": "08e5bc5a2febb5795773a32cbe8a4c426b1d81280fbe0db2a393481acdb33ae9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/008/base_camera.png",
+          "sha256": "72ee1ae805eec6fbdd3df7b1c6c126f050a0a893f319ecea67bfaf75128511d5"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/011",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 427108427,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09716569632291794,
+            -0.09518130868673325,
+            0.009999999776482582,
+            0.48014840483665466,
+            0.0,
+            0.0,
+            -0.8771872520446777
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fcc468fcdc82f9e2d33a46337fc7297bfec733eeba9f200aefac135014cd3b6d",
+      "task_state_fingerprint": "d67ffb77a5c9b51297a104afb050b79f8e9b318010be45dd5924e1b4dde544f8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/011/base_camera.png",
+          "sha256": "2acdf0227d1262604640b04fbe66f7763b4c31bd41886c8a4137a2389baebdb9"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 346288140,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09455542266368866,
+            -0.09108972549438477,
+            0.009999999776482582,
+            0.4621920883655548,
+            0.0,
+            0.0,
+            -0.8867798447608948
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "77796127d2fc50b0f676794ac8adee65a327c0b7f65747a8feff9d26f1b6c896",
+      "task_state_fingerprint": "cf359210080dfd393fd79391ecd0af0950bdb49d864df2d91357cc7dbf93e8ce",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/rl_train/014/base_camera.png",
+          "sha256": "64a661f4736b4d66d9e77a20614b6ba7e744ec34bffde46bd4a7245ce7e39958"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/validation/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 173362293,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09528002887964249,
+            -0.09460826218128204,
+            0.009999999776482582,
+            0.9482714533805847,
+            0.0,
+            0.0,
+            0.3174605369567871
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ff2c759a0e1f8708fcda4c43fd3d362b0c7176e84d8cce78ad772b6638686085",
+      "task_state_fingerprint": "61c336eb65bef65ad14f240a044342fcd8ffb85ce7d4a751b05989caf1a53b21",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/validation/000/base_camera.png",
+          "sha256": "7c4fea23269e5f389a0a1c9fcee245747f114336e1ddc49158098c396d0e981f"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 650672486,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09029556065797806,
+            -0.08670021593570709,
+            0.009999999776482582,
+            0.9172983765602112,
+            0.0,
+            0.0,
+            -0.3982006013393402
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b7df307e84e972fe481e4d43cb632da13c2d72ba9ef6b788ab0a60bd2a30dbcb",
+      "task_state_fingerprint": "6443b4e5a380154948d483cca42b0790d820425add84fdfc44e7c107108874fb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/000/base_camera.png",
+          "sha256": "02e5853b230ca03c0c07e1674e4f271664e42cef1c8ba5fec723c850a5249cb3"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1701702120,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09513194859027863,
+            -0.09366493672132492,
+            0.009999999776482582,
+            0.5781437754631042,
+            0.0,
+            0.0,
+            -0.8159348368644714
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9645343f7d4670b010962360f16606ac589f4296c6d15bae9c5005724ae7753d",
+      "task_state_fingerprint": "5003832d62968af54b5eefb027169db93c7c6802ea4a3caca415468ec67dfdbf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/001/base_camera.png",
+          "sha256": "e27020e89771fb9890e59259d272170218b42919f4f26393a7892d0ae9e4f4c2"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1061493001,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.08114476501941681,
+            -0.08549999445676804,
+            0.009999999776482582,
+            0.8162754774093628,
+            0.0,
+            0.0,
+            -0.5776628255844116
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3196345b848ff9d0e064f6e89c2628ad8ed163d6c935de68c857148bbcfb23d6",
+      "task_state_fingerprint": "38e58ab00157b543b332c8d636ee412fe22243222d048802c66178ce04053c20",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/002/base_camera.png",
+          "sha256": "8878caad3732e06bdc1f4ae913c83c6eb06ac4ea832e032c012f64dd885322e6"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/006",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1109494480,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09566032141447067,
+            -0.08752577751874924,
+            0.009999999776482582,
+            0.4837300777435303,
+            0.0,
+            0.0,
+            -0.8752173185348511
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a95226325919eba55165bd2c7dc03f0d90070be78cc3779220188ea4b3097a8b",
+      "task_state_fingerprint": "902a06fc604f77bbd6115c781114b8ba89c642957e62b0c47988958094ed4a0a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/006/base_camera.png",
+          "sha256": "f8afa66df7b2072df8d492354eb98d63f620f17799998a5dbfac124ffafa4dde"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/010",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 935605082,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09663596004247665,
+            -0.08673803508281708,
+            0.009999999776482582,
+            0.4990793466567993,
+            0.0,
+            0.0,
+            -0.8665562868118286
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3b1a7513472be7bacd8f42155734cc1ee1ee07f1907589340e6a97c40303432c",
+      "task_state_fingerprint": "a833d57ac04edfcda861790efc939d6433c6ae3e31894b829efe7bb8dc4917f3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/010/base_camera.png",
+          "sha256": "c2d11634c92a9028e4b61cb2020df17597bc53ed82614df177199c28c4def39c"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1603697506,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09595675021409988,
+            -0.09755008667707443,
+            0.009999999776482582,
+            0.9048282504081726,
+            0.0,
+            0.0,
+            0.42577674984931946
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fc090f2ad690ef110e59d8f8ff84f3c3931383fa0d8f7671dad2021352c0797d",
+      "task_state_fingerprint": "81f11c6bcfba16ee35d3835b11a827774310dbd11e7c1d7cfaea5f93def9346a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/014/base_camera.png",
+          "sha256": "27d2e96210e58f844685f81cf2bc24e69dce2ecb887d0f7d05ff76828515588c"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/019",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 2067250440,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09183942526578903,
+            -0.0858871266245842,
+            0.009999999776482582,
+            0.9221931099891663,
+            0.0,
+            0.0,
+            -0.38672971725463867
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fbff89c14e2c08f664470712c5ea5994dcb3af8acc5155dd7b2cfb4096a15a03",
+      "task_state_fingerprint": "a8629a8934f5f25e98f64a2c071bd37342d849620148bdbc9b5ee4fa5212d5b1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/eval_seen/019/base_camera.png",
+          "sha256": "19d35f9a82a43e65d1ff1f5722808b0456c8922f1b7b030675216217b7efd819"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/validation/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "seed": 1158707579,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/canvas": [
+          [
+            -0.10000000149011612,
+            0.0,
+            0.009999999776482582,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_tri": [
+          [
+            -0.09392523765563965,
+            -0.09963373094797134,
+            0.009999999776482582,
+            0.9969014525413513,
+            0.0,
+            0.0,
+            -0.07866011559963226
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f2855acc032cb7c96425a34da65097d31fc14e3ae8b180eb5ab26c34257f0db4",
+      "task_state_fingerprint": "b6e1b257354784600d4ef19cfab0552c36faf0afb495f5d017349de5638252ed",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/DrawSVG-v1/validation/001/base_camera.png",
+          "sha256": "e5ee69dbd28ee0732dd1ccfb1b4a7b95c887452c6828c860cfb762700f924ce7"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    }
+  ]
+}

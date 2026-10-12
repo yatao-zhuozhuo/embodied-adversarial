@@ -22,6 +22,13 @@ CAMERAS = {
 MANISKILL_WRIST = {"PullCube-v1": False, "PokeCube-v1": False, "LiftPegUpright-v1": False,
                    "AssemblingKits-v1": True, "TurnFaucet-v1": True,
                    "FMBAssembly1Easy-v1": False, "PickSingleYCB-v1": True, "PickCube-v1": False}
+MANISKILL_WRIST.update({'DrawTriangle-v1': False, 'DrawSVG-v1': False,
+                       'RotateSingleObjectInHandLevel3-v1': False, 'InsertFlower-v1': False})
+MANISKILL_WRIST.update({'PegInsertionSide-v1': True, 'StackCube-v1': True,
+                       'StackPyramid-v1': True, 'PlaceSphere-v1': False,
+                       'PullCubeTool-v1': False, 'PushCube-v1': False, 'RollBall-v1': False})
+MANISKILL_CONTROL_MODES = {'RotateSingleObjectInHandLevel3-v1': 'pd_joint_pos',
+                          'InsertFlower-v1': 'pd_joint_pos'}
 TASK_TEXT = {
     "AssemblingKits-v1": "Insert the misplaced shape on the board completely into its matching empty slot.",
     "TurnFaucet-v1": "Turn the faucet handle from its initial position to the fully open end of its range.",
@@ -55,7 +62,7 @@ def make_profile(bench, task_id, created, contract):
         if task_id not in MANISKILL_WRIST:
             raise ValueError("ManiSkill task needs an audited camera subprofile")
         primary, wrist = ["base_camera"], ["hand_camera"] if MANISKILL_WRIST[task_id] else []
-        if native.get("mode") != "pd_ee_delta_pose":
+        if native.get("mode") != MANISKILL_CONTROL_MODES.get(task_id, 'pd_ee_delta_pose'):
             raise ValueError("ManiSkill controller mode changed")
     else:
         primary, wrist = CAMERAS[bench]

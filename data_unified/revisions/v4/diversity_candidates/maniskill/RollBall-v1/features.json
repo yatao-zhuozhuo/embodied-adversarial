@@ -1,0 +1,1385 @@
+{
+  "task_key": "maniskill/RollBall-v1",
+  "records": [
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/000",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1284141085,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.2203483283519745,
+            0.6849580407142639,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.21249507367610931,
+            -0.7187181711196899,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "13f7e468254fb471cb7ec2338e94fb6b5f791abcb500cb57c94b8e63d2a80866",
+      "task_state_fingerprint": "dcaebc220b4e69df214b63e77c33f701623788c8df18902aeab3e5cb4cf52161",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/000/base_camera.png",
+          "sha256": "384fc589e21fe7b22b8c4cbbeb9fc9ec6000b117018529e759ce8ceee5617d05"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/001",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 707216911,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.0081392303109169,
+            0.6300758123397827,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.23184990882873535,
+            -0.7849079370498657,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7b91493831f9c22207d971814d2d4c276eacf9c8c750353c80f21e75127b4ae3",
+      "task_state_fingerprint": "b2dcac4cc28e9c1e3d50cff6f80d405ca4ce3099fcc73834cd629ecf7f5bec41",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/001/base_camera.png",
+          "sha256": "c4656e56ffae9731b9a83e5bbc589b3f090ef7052a7b3cf2c18dc276dcc131f4"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/002",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 4663275,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.14104074239730835,
+            0.5156986117362976,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.060481540858745575,
+            -0.8302465081214905,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0f2010d7d2d50a33f454cbae10d4fe386750636898a526459e500cda1bec38c1",
+      "task_state_fingerprint": "cffaf6b51694853d25ec500811b36430b8abba4dc5a40c7180b98f3e7926c0d7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/002/base_camera.png",
+          "sha256": "634e7e5180dd838efbac8a4711c61c18ed97192761d4731fb64ea90caa00327c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/005",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 466391027,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.012950047850608826,
+            0.6896679401397705,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.12280956655740738,
+            -0.8536261916160583,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3704a71949d5e2d1492e21881c95daa15ac8215ef29e8dde65b34f4d71d3e096",
+      "task_state_fingerprint": "8e97863eee5e74ae4626dc5ebd686b6903c17e70c48c7eeddcaf016c7908b2b6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/005/base_camera.png",
+          "sha256": "6ce678a95be61cf1a76379a958c6a2075bdf616a289bbd2681c02a546c5d6f00"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/008",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1556283157,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.17767521739006042,
+            0.5623445510864258,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.3379512429237366,
+            -0.7781254649162292,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b378730eab48e34538873c225909ea2f82576d0e155f3cff32c1e1f454628630",
+      "task_state_fingerprint": "3a6d2fdb43b3c619608a18218f134432a6cde8743b24bced398d9c3da7b35daf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/008/base_camera.png",
+          "sha256": "e7958f522aafdd452eb189dbd1d297d25b417f6935af25d3d1d924794a605cf1"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/011",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 2103092306,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.38772615790367126,
+            0.5220505595207214,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.04961258918046951,
+            -0.7231631875038147,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fae1f086f60a37cc2e6b462f9c85a5ed24e06e003a75a807b343de3537819169",
+      "task_state_fingerprint": "0fd4ee08609d3b10ae09e4625b26f3973f8c3e249a11495eb4f7ca4af36f7e1c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/011/base_camera.png",
+          "sha256": "a850d5e0b39467080dc1c4c62e102959986f008620d054ffc70b3a39ce2bff33"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/sft_train/014",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1438418062,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.199296236038208,
+            0.6767914891242981,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.0844714418053627,
+            -0.7435639500617981,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bca412fdd5e5adbdf6a4723e782166551dcc806bace825c21c359e630c71f572",
+      "task_state_fingerprint": "77dc2e455a8c67b694373bd3d4d5475ac317b4bab8cba94c6ae715ddd540c257",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/sft_train/014/base_camera.png",
+          "sha256": "3563c6649af4191f001ad925f4882550c58edf736d7498d5957d4ee8b037a92d"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/000",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1664913566,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.14044725894927979,
+            0.5250413417816162,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.1713942587375641,
+            -0.7712258100509644,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "48c05ef698a1342f767b56322e592eee562f119d3244155a0d75d3d896916cdc",
+      "task_state_fingerprint": "3b6d4e3d6d6ddd3ce0ca24f2fc548536496887cc4ed7f1de042b17ee433f3258",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/000/base_camera.png",
+          "sha256": "a55843b2652e9d8755495e40f64963cf6d6eb091a3df3709db0b29418071395d"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/001",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 904439474,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.383068323135376,
+            0.5292842984199524,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.1791778802871704,
+            -0.8172468543052673,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "94530ccded539107fce18ce628087549a1a805a59031a89dfcd2f3e37ee3f0c7",
+      "task_state_fingerprint": "f3a0602aa538878dcb45c9e6388dd83cbc5bd3762eb498c6604b546b47bdec77",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/001/base_camera.png",
+          "sha256": "24112c1511df063336d1c32d146bb0123c37de88ce2f92ebf7bbff744070eaf7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/002",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1051073184,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.017210356891155243,
+            0.5129794478416443,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.18517109751701355,
+            -0.79471755027771,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "649742c812dbf4e16fcb8b10fa06f37135e7ffee5eccdc1920468af2425eae4c",
+      "task_state_fingerprint": "1139bbf1880b1f17bba369702977bf91897478801ff3ca1fe8c0938ecc3a67f2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/002/base_camera.png",
+          "sha256": "3b6ea93977ad16c80200678674b463903ea8733ca8fc02eaedf79ef8b84eea39"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/005",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 57938819,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.017428696155548096,
+            0.5896870493888855,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.025214001536369324,
+            -0.8420238494873047,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "198657690d6797d2d396a00dd8164827ce50d7facf88b0771fac32fbb46316c2",
+      "task_state_fingerprint": "9526a4c8af95806d69971728e2b7b0e2ac55e22a022d9b2a79b9ab5b9340c1ef",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/005/base_camera.png",
+          "sha256": "8763e0087d71121b68d4005989a5efa9d18967e4b265d093f18f25b93963db57"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/008",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 710897482,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.3695327341556549,
+            0.6196816563606262,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.20828405022621155,
+            -0.8063379526138306,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "05c98c49bd22d52b4555706717803c31a059583b236de50c7042ddcf144915d1",
+      "task_state_fingerprint": "9d75fd3bf7b3b53b864d942c85146cdf5a78f019e7eb1c198439fed84d97a85f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/008/base_camera.png",
+          "sha256": "89eb0c8891164ac62acc11ec54411884249c34523787422ce5675100c1c58aad"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/011",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 651528777,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.24759837985038757,
+            0.6469619274139404,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.08079329878091812,
+            -0.7000690698623657,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4d5b9e69b1c9ea9d86977bc24c04f0cb64600e7a0265bc3ece57571a37b1f722",
+      "task_state_fingerprint": "881dcfd4b9c1aaf20e38a8749865ece9738beaf973c3c1a07f02a76e4d0810f8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/011/base_camera.png",
+          "sha256": "0140c71259367be47a15af19a7aa0e72381bdfe246b3a016b70a2ab179a4f6c0"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/rl_train/014",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 987028435,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.07027482241392136,
+            0.6931423544883728,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.23217138648033142,
+            -0.8675123453140259,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "187cb05ccfcdde0c6d0ea6fe914f0547b6bb369f037b3a940013f9e8a0205052",
+      "task_state_fingerprint": "24253efe6c34356529e85ae69525457b3b2ec9724a6795453ecc6f3535edc513",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/rl_train/014/base_camera.png",
+          "sha256": "fc581d1e471a0bf6ccdeff389fa4f5d3428df78e4c5915f6bcca946c5d44f0d3"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/validation/000",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1170835034,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.23057502508163452,
+            0.6863784790039062,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.21512657403945923,
+            -0.8589134216308594,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "17b32ca69b45bd40fdfbcae330b13d22b5c60ea828ee93a3e5f3a035783d707e",
+      "task_state_fingerprint": "9c283cdb2517e82bccb4c3582405375766fcee9f8e26ea5a2c5e4c0253475168",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/validation/000/base_camera.png",
+          "sha256": "031b6e39e73b9f6cfcaae06c7bcb9329196e6076c3b4fbe00f9fde0c39333715"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/000",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 225586118,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.193843275308609,
+            0.6078333854675293,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.3431313633918762,
+            -0.7150518894195557,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "17dcf057fba28a14f89d9f112e2ce049b866253afe66abee52a20a1669b4a85f",
+      "task_state_fingerprint": "eb746b87926caaf402cf91c8f07446ee8101a4777d08c5d7c9c3c97804a40218",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/000/base_camera.png",
+          "sha256": "7b291c91c5154353ef1178eb4033823a25d2b0b1b017248924a7ce8981488048"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/001",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1972366427,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.14564675092697144,
+            0.6144084930419922,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.22363169491291046,
+            -0.775362491607666,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "47d306e1319a78a1e1ea345de5bc1136abb7d69d272eee33face9a2f406ab669",
+      "task_state_fingerprint": "fee47ace0bd1cebcb9cd71a7103fc2b7874eef0df01cdd18eb45d3545a30decc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/001/base_camera.png",
+          "sha256": "ad108ec66fa180ddd2efb4dd1ccd73a685372bd64375af2bfb8217a49d975d65"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/002",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 166648032,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.15250816941261292,
+            0.5679762363433838,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.10349109023809433,
+            -0.7490679025650024,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a7168817275b46de124f825a9a87fe286028a8465cf74e32290c9876263c8e7b",
+      "task_state_fingerprint": "fcfbe56463904d1a9002016228811ead13dd051025a255b2f3941d84faa3efc1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/002/base_camera.png",
+          "sha256": "0ac967dcb81aba5439c80575b630a6dd9492bf9cb805952f2b0624b06f7aa4ee"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/006",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 290062732,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.16737064719200134,
+            0.6490941047668457,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.06292685121297836,
+            -0.7431632876396179,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "04d3fd43af00a1cd865eb417a242d377d9275b6703af5eaa5157f24c0837ee16",
+      "task_state_fingerprint": "0ed0fd751c028d8a4a4daf3c77a6c7b8465286354cb80fd867c58f0026ff86d1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/006/base_camera.png",
+          "sha256": "a75c54994906983b4f401b27d29f987c7e8549c4c0d2ea400efcf7562f15b9c9"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/010",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1099626648,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.3281286060810089,
+            0.6467273831367493,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.1744713932275772,
+            -0.7420288920402527,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "802b24449144d293854ef51bc763ea020c84f8a65b2df4aa086bc0ba371f45a2",
+      "task_state_fingerprint": "3a6f157e0a5ffee7ee06550730c6db85cc0a729491f453b05da34bf9f847f490",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/010/base_camera.png",
+          "sha256": "b78b511936ead215b6b911c8a1c9d5dbcd87fd09c7d84d4c8e0cff267e5c6bdf"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/014",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 1328127008,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            -0.3062451183795929,
+            0.5479429364204407,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.17129981517791748,
+            -0.8743922114372253,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d5a8a9f53ae5e15902fa378e932482182deecbf13a2f64d3079921c6e0c508bd",
+      "task_state_fingerprint": "6a2680fa0f5bf9544d64d7ba892f43363e9bd8b1bb0afe64c8bb30289e773277",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/014/base_camera.png",
+          "sha256": "26be5f87d6d80774539e96e9e98f3ee19908b12305babea804974a8a4d4186a8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/eval_seen/019",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 599127294,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.029932506382465363,
+            0.5389933586120605,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.3904821276664734,
+            -0.7254931330680847,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "58f0d3f808b1673106375a84ab22d2c61bf604b8a200890c4dd2b31eb4081e9a",
+      "task_state_fingerprint": "bb99641e933cc22d864512c2dbc3ea0b49a5d1da46ea49a823d432adc701584e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/eval_seen/019/base_camera.png",
+          "sha256": "91806139853340963f083b7a7e038daafb616e91f480a2789e645eab6871b24a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/RollBall-v1/validation/001",
+      "task_key": "maniskill/RollBall-v1",
+      "seed": 252260965,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/ball": [
+          [
+            0.14162522554397583,
+            0.5003567337989807,
+            0.03500000014901161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.2281753122806549,
+            -0.7655056118965149,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "40b1c0629f3fd1bbbe712e3ee6b0a7956f0263bde9b10f9fefd66a8532f1ec19",
+      "task_state_fingerprint": "12c217f4d8636e2f24c8ae4d9d4db7ce66bd3eccf21dd735e43d80ec6bdb4201",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RollBall-v1/validation/001/base_camera.png",
+          "sha256": "907333ff528f365b0b4fdaf04218dee66196a615e17ef45441ed102dced4b16f"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    }
+  ]
+}

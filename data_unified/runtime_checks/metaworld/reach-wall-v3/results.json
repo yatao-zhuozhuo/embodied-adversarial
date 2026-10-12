@@ -1,0 +1,239 @@
+{
+  "task_key": "metaworld/reach-wall-v3",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/reach-wall-v3/eval_generalization/000",
+      "task_key": "metaworld/reach-wall-v3",
+      "seed": 652069852,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 652069852,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881812939122,
+          -0.5757689061948446,
+          -0.9766593499473476,
+          1.6419914938132965,
+          0.9428596255713365,
+          1.0436962396375824,
+          2.292833311536151,
+          -0.00017190619515364345,
+          0.00017174542246661768,
+          -0.003190823212201245,
+          0.6063203984840836,
+          0.015,
+          0.9999999213953051,
+          -0.00031649528318076803,
+          -0.0002388243320268023,
+          -1.7486465717745804e-06
+        ],
+        "/qvel": [
+          0.2610021407548999,
+          0.4289125865815505,
+          -0.4857704976975248,
+          0.24403763935382114,
+          0.8291097873010841,
+          0.0987622677770601,
+          1.5894717647955041,
+          5.84279905435473e-07,
+          5.910160138769672e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.003190823212201245,
+          0.6063203984840836,
+          0.015,
+          0.042765223308262615,
+          0.8901598267984265,
+          0.27598892364399563
+        ],
+        "/object_position": [
+          -0.003190823212201245,
+          0.6063203984840836,
+          0.015
+        ],
+        "/goal_position": [
+          0.042765223308262615,
+          0.8901598267984265,
+          0.27598892364399563
+        ]
+      },
+      "state_fingerprint": "dc5891418016b218c01cd3bb5fb78a5122e72839fd01c41c8cc1118e6b193586",
+      "task_state_fingerprint": "c153a749e31064c4530cbc517f4c82f391935b4f6a1695f1c8d143073a85873f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/reach-wall-v3/eval_generalization/000/native_camera_2.png",
+          "sha256": "7df96040bc79714f861c77fc5b2037fb938230c5c263077256e17af0b9963e3e"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/reach-wall-v3/eval_generalization/001",
+      "task_key": "metaworld/reach-wall-v3",
+      "seed": 123994601,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 123994601,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881812939122,
+          -0.5757689061948446,
+          -0.9766593499473476,
+          1.6419914938132965,
+          0.9428596255713365,
+          1.0436962396375824,
+          2.292833311536151,
+          -0.00017190619515364345,
+          0.00017174542246661768,
+          0.037289721764349984,
+          0.6009809642474024,
+          0.015,
+          0.9999999213953051,
+          -0.00031649528318076803,
+          -0.0002388243320268023,
+          -1.7486465717745804e-06
+        ],
+        "/qvel": [
+          0.2610021407548999,
+          0.4289125865815505,
+          -0.4857704976975248,
+          0.24403763935382114,
+          0.8291097873010841,
+          0.0987622677770601,
+          1.5894717647955041,
+          5.84279905435473e-07,
+          5.910160138769672e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.037289721764349984,
+          0.6009809642474024,
+          0.015,
+          0.02955633763266312,
+          0.8565474268425198,
+          0.22658558242183818
+        ],
+        "/object_position": [
+          0.037289721764349984,
+          0.6009809642474024,
+          0.015
+        ],
+        "/goal_position": [
+          0.02955633763266312,
+          0.8565474268425198,
+          0.22658558242183818
+        ]
+      },
+      "state_fingerprint": "dab46a0cc79f2e59a38bef7fe96569fe91c0858a334004443784f4ca187a4d01",
+      "task_state_fingerprint": "2cbc24b225a92dce48080806bea74735cd28c85513d6532f8a241308b9d36998",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/reach-wall-v3/eval_generalization/001/native_camera_2.png",
+          "sha256": "1e5c4b4873e11f6a118c4d7edec51db0ae67b38b0e46171fcfa99ca5c5e67c9d"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

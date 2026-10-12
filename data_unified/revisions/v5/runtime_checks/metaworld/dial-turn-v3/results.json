@@ -1,0 +1,714 @@
+{
+  "task_key": "metaworld/dial-turn-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/sft_train/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 2075188903,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2075188903,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.03092979612346386,
+          0.7717300243618929,
+          0.0
+        ],
+        "/object_position": [
+          0.03092979612346386,
+          0.7217300243618928,
+          0.0
+        ],
+        "/goal_position": [
+          0.03092979612346386,
+          0.8017300243618929,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "fc95bee601819f22bc5ca825e66d7c73743f86d916f92e7984de4a9b040e527c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/sft_train/000/native_camera_2.png",
+          "sha256": "46782b0fdd9951f86b097304293c828ae1e0f61443eede36714ff130f8ced6bb"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/sft_train/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1957991976,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1957991976,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.021476637947453664,
+          0.7952096337738118,
+          0.0
+        ],
+        "/object_position": [
+          -0.021476637947453664,
+          0.7452096337738118,
+          0.0
+        ],
+        "/goal_position": [
+          -0.021476637947453664,
+          0.8252096337738118,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "4370b5e78c9f6fe484650d2c8a739d7edec0ce04c6d194287ca50f6cd21a82ea",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/sft_train/001/native_camera_2.png",
+          "sha256": "5c531b8059d7411f9272e30853020515b6508bc2b569e66ccd2dc5583e1e5faf"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/rl_train/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1836033751,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1836033751,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.05627719137190301,
+          0.7040848697042372,
+          0.0
+        ],
+        "/object_position": [
+          0.05627719137190301,
+          0.6540848697042372,
+          0.0
+        ],
+        "/goal_position": [
+          0.05627719137190301,
+          0.7340848697042373,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "d86ca88efd3292222e9e6c28aa9ba4daaea312a585d1a12c137abb292ede1ce9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/rl_train/000/native_camera_2.png",
+          "sha256": "1303e7b4a9bae10c035d7d5eadb266044cc77a4c9b5f0f19aeabd4174436653b"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/rl_train/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1974320432,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1974320432,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.03066996864289681,
+          0.7180570282198429,
+          0.0
+        ],
+        "/object_position": [
+          0.03066996864289681,
+          0.6680570282198428,
+          0.0
+        ],
+        "/goal_position": [
+          0.03066996864289681,
+          0.7480570282198429,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "58d3b376d8795a1298b45c4c03f77880a5b34b941f1ad52198c893a1b4ae97b8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/rl_train/001/native_camera_2.png",
+          "sha256": "0b0b80c1f5af7f718d08e8605976f0e84d36dce42e30068357ce97965ca0d49f"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/validation/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1612939477,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1612939477,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06124814328291997,
+          0.7685178340389069,
+          0.0
+        ],
+        "/object_position": [
+          -0.06124814328291997,
+          0.7185178340389069,
+          0.0
+        ],
+        "/goal_position": [
+          -0.06124814328291997,
+          0.798517834038907,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "b4da663db94f02f6f5b3f336da6106e7f0fcdc28aa4c79bae1fb97392c00c562",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/validation/000/native_camera_2.png",
+          "sha256": "0fb7b976105cdbaf147e843a7bbb37077461b243462834cf63b3b7a3d03835ce"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/eval_seen/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 594492134,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 594492134,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.043549192045669205,
+          0.7452713604783313,
+          0.0
+        ],
+        "/object_position": [
+          -0.043549192045669205,
+          0.6952713604783313,
+          0.0
+        ],
+        "/goal_position": [
+          -0.043549192045669205,
+          0.7752713604783313,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "cde2afd2170a45fba84bbff36bdbd2431622a717813f116118e348342e478c00",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "c7eb04da3aba98387918d7c82977f872b36be91e3162bcaef04524c9c8e4e71e"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/dial-turn-v3/eval_seen/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 496692813,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 496692813,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995813,
+          -0.9766593169577553,
+          1.6419914193500211,
+          0.9428595829327349,
+          1.0436962570085024,
+          2.2928333628291524,
+          -0.00017190619515694534,
+          0.00017174542246342232,
+          0.0
+        ],
+        "/qvel": [
+          0.2610021469297647,
+          0.42891255683314594,
+          -0.48577052759702194,
+          0.244037650896174,
+          0.8291097824960386,
+          0.09876223225413615,
+          1.5894718270526838,
+          5.842799376722306e-07,
+          5.91016048208995e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.04524604834932705,
+          0.7668836181734334,
+          0.0
+        ],
+        "/object_position": [
+          0.04524604834932705,
+          0.7168836181734334,
+          0.0
+        ],
+        "/goal_position": [
+          0.04524604834932705,
+          0.7968836181734335,
+          0.03
+        ]
+      },
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "6d70340b7ec9619c07afea2dd204faee4d24b217789968fd392f53d7176dca1d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/dial-turn-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "5e74d8c9011cac7835527faf78ba780eccec88a8485f1afe9c9ed8c126402d59"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

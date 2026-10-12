@@ -1,0 +1,502 @@
+{
+  "task_key": "maniskill/PushT-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/000",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 1636562306,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.0945499911904335,
+            -0.17442011833190918,
+            0.020999999716877937,
+            -0.4317624866962433,
+            0.0,
+            0.0,
+            0.9019873738288879
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0195c2cf499f321e6506895c905c239c2b7682c63fffba90d40afdd16bffae2c",
+      "task_state_fingerprint": "e68090afa385794f45fed2c999c972376b92528921631220a3108f4bf0b81cdd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/000/base_camera.png",
+          "sha256": "086dd77a17eeb56d633ce219b1f99bca42db98ae1d177f9b5cbc95da5ef18b09"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/001",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 2115638116,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.21439522504806519,
+            0.01706703007221222,
+            0.020999999716877937,
+            -0.6455176472663879,
+            0.0,
+            0.0,
+            0.7637453675270081
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ca0172c1bf766190a2ae34886c2f6a9d1ac711b37db00ca66ca058e0e099ab28",
+      "task_state_fingerprint": "95eb2f64870eb86046dc602d8bd0d08ae119de97d62c7af70c100bfedae6b585",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/001/base_camera.png",
+          "sha256": "897489189a36779e6e15a3a4b91e74d6044f43b3b4ac15fc4567233b032d8058"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/002",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 441686706,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.21390751004219055,
+            -0.12215068936347961,
+            0.020999999716877937,
+            0.8579444289207458,
+            0.0,
+            0.0,
+            0.5137425661087036
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5ea0ff061323e2898df3f0801986d86addeb17a641717beb6156580b959b0e9f",
+      "task_state_fingerprint": "71aa7a70808f9f0232ed9402b973d66509661948c80b7b00a28e55cdd85ee24e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/002/base_camera.png",
+          "sha256": "48bc08b6acb880d6f2d9b2fb44ad8d36720dae4a0dff40089a2297abea05bceb"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/006",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 1013583864,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.2147592306137085,
+            0.07553907483816147,
+            0.020999999716877937,
+            0.1024259477853775,
+            0.0,
+            0.0,
+            0.9947406053543091
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "540ade74c3687159d796a83144480b2fa8dac5d0afdb0fd693b63ebe6ea96ed6",
+      "task_state_fingerprint": "262fbd0e0e979d3840189a96e196efa923504af2eeacf205d2f5148b52866e37",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/006/base_camera.png",
+          "sha256": "5c15f554f2b2cac5e14a7d93866fa81a6cf1d554643222ddfc670fbd7250d239"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/010",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 1398245882,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.23358426988124847,
+            -0.1393696367740631,
+            0.020999999716877937,
+            -0.995276927947998,
+            0.0,
+            0.0,
+            0.09707650542259216
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d527118643cdd09723186cd70640b93295ef96414d459f124236c7b23fca46ab",
+      "task_state_fingerprint": "e2a517f3ba618324917718cbe1ed7059bd893164618085b55abbb4acbc0e5c36",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/010/base_camera.png",
+          "sha256": "53e6bf4577bfe01fa896a763cd5a9ac1b90afbcc773acf1affc91a71653bf937"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/014",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 1252088454,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.14898060262203217,
+            -0.12028379738330841,
+            0.020999999716877937,
+            0.9344356060028076,
+            0.0,
+            0.0,
+            0.3561321496963501
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ca8e1b38211e8d14f10ea02158ac22f7bfaab09f33c4e0b2d556504fc358f6be",
+      "task_state_fingerprint": "6024b2677b518a1fbf0930c0a641a440d68c29bae5ef31a1f83805ab0c93dee0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/014/base_camera.png",
+          "sha256": "1fc33cd85b722689b38c58c1154b0f53c5687f93177ab46d30f34b4ed33774d3"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/PushT-v1/eval_generalization/019",
+      "task_key": "maniskill/PushT-v1",
+      "seed": 250096827,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/Tee": [
+          [
+            -0.1126488521695137,
+            -0.14034724235534668,
+            0.020999999716877937,
+            -0.21906769275665283,
+            0.0,
+            0.0,
+            0.9757096767425537
+          ]
+        ],
+        "actor/goal_Tee": [
+          [
+            -0.15600000321865082,
+            -0.10000000149011612,
+            0.0010000000474974513,
+            -0.8660253882408142,
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actor/goal_ee": [
+          [
+            -0.32100000977516174,
+            0.2840000092983246,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "06157be8b3e333b78afe98264531053104b4bca3481d50bad1d9709f8bd84a86",
+      "task_state_fingerprint": "f6c75d3e80ffb4b6ed1ad470db6039104d31ad4c31353c68ad9223af4692e725",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PushT-v1/eval_generalization/019/base_camera.png",
+          "sha256": "633e00abbc5c48fcc7a6ef3aefaa1492cef176326bc3aa366924662f1d1efac0"
+        }
+      ],
+      "actual_robot": "panda_stick",
+      "actual_action_dim": 6
+    }
+  ]
+}

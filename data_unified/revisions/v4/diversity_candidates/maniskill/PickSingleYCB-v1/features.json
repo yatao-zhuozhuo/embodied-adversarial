@@ -1,0 +1,1500 @@
+{
+  "task_key": "maniskill/PickSingleYCB-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/000",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1504730722,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/008_pudding_box-0": [
+          [
+            -0.0066490028984844685,
+            0.09019262343645096,
+            0.016499698162078857,
+            0.9984413981437683,
+            4.276799192570735e-10,
+            1.0825870200292798e-09,
+            0.055814292281866074
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.056764956563711166,
+            0.03596421331167221,
+            0.17677372694015503,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a8ae6d0f8c2230da7e0a45f373f57b42632df7fff941e420c795a87519ffbc65",
+      "task_state_fingerprint": "7af502e6625174f14ed32ac8f505c54fa53105577ece2c63c1522850a76e02ce",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/000/base_camera.png",
+          "sha256": "d2b51af77d7e5318448036b367628e0c3d2f8bdd747de9cd3f6735f66425eac2"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/000/hand_camera.png",
+          "sha256": "377ceebecfabffa6ae0e87a653d936c2349d43bc36f7e173f0cd4181b960e397"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/001",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1054331707,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/063-b_marbles-0": [
+          [
+            -0.044087331742048264,
+            0.01068934053182602,
+            0.017065640538930893,
+            0.17769429087638855,
+            5.899571497991474e-09,
+            6.782602479660227e-09,
+            -0.9840860962867737
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.0927814319729805,
+            -0.0720755010843277,
+            0.26952314376831055,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1e78c1566413d67b3bcfb1148def4c3da7fac442da29d0a2be48033bf3891bf0",
+      "task_state_fingerprint": "479145f8565ec286f3121d62dad12dd8a10f66f08dc095ce7b48356fdb25b0e7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/001/base_camera.png",
+          "sha256": "b72093b1b11bfbb6e6df36f9b1c43e59fb9b44200632d948e875e1f1ab71637c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/001/hand_camera.png",
+          "sha256": "d3e0371c37825541eba0fd06bcac90b7da50e96b77c272a92e5206223cb2ec76"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/002",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 864066402,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/062_dice-0": [
+          [
+            -0.0014129206538200378,
+            0.017907336354255676,
+            0.009075656533241272,
+            0.6325792074203491,
+            2.9701530124270903e-09,
+            -1.6201400221405038e-09,
+            -0.7744959592819214
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.08662274479866028,
+            0.028491683304309845,
+            0.054355498403310776,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ecd422e0514df32483af43dc046909ab879afd0b79ecf79b277f002cc9c7cfc0",
+      "task_state_fingerprint": "6e7b735ba6aa0760b27c543fd995f927c60172575e83a46b65081784de535070",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/002/base_camera.png",
+          "sha256": "c83c57b67ca7c808e6078483f4cad0312367969d59ea128e8e448709b74c8bca"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/002/hand_camera.png",
+          "sha256": "27023f6209e42c67dcada3d70b8c8c6628f89ff3780444c3356a0ea23f31aca5"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/005",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 987977964,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/072-d_toy_airplane-0": [
+          [
+            -0.06463074684143066,
+            0.06882118433713913,
+            0.033789291977882385,
+            0.9980864524841309,
+            -2.1295859520265026e-10,
+            -8.253918382106207e-11,
+            -0.06183982267975807
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.04735366627573967,
+            0.060484014451503754,
+            0.18914034962654114,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2d64524c50fbe987ab386c9b4f620ccaf237cbd5f43b320f22f8ee73798a9f6c",
+      "task_state_fingerprint": "bac24dd76e35632d51ff82fed462848dd141c8b668d0f4927af9a77dab598e21",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/005/base_camera.png",
+          "sha256": "96363c994d2dfa0ae93a33854f686d1100ab8936f962b4352c9088b175b3e6f8"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/005/hand_camera.png",
+          "sha256": "d67d3f27a3c94715edbab5b91e6f76a0f586cc19ac85af6ee5d7dcbc5be3dd0c"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/008",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1449538860,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/065-i_cups-0": [
+          [
+            0.05407501012086868,
+            0.016361340880393982,
+            0.039162494242191315,
+            0.9707468748092651,
+            3.046270791173811e-08,
+            8.100372594910255e-10,
+            -0.24010521173477173
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.0778798758983612,
+            -0.03423073887825012,
+            0.14162437617778778,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "be73c2da339957dcc0221cc189450c52c28bb4a83bbe68d7cca1d7e63c2c6388",
+      "task_state_fingerprint": "1bb3ef448cb9029af7485d8cd7c88456bbdafb57b3ba065dbe7ca7e58996332a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/008/base_camera.png",
+          "sha256": "a1d0403cb5983b6b5f9b2bcf423f1a4fb5e184d4e18ecc0a8a5015ca9d4a4cbd"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/008/hand_camera.png",
+          "sha256": "92d1c7bf9e801073ea52b616163612524602d70b7abe6b18702473d013db85bd"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/011",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 727388324,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/077_rubiks_cube-0": [
+          [
+            -0.042685139924287796,
+            -0.05189117416739464,
+            0.02914096973836422,
+            0.4833628833293915,
+            5.445008888216307e-10,
+            -3.2369658065078966e-09,
+            -0.8754201531410217
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.03255712240934372,
+            0.02228543907403946,
+            0.09318231046199799,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6599eddbdd4179d091c8fd7fad15f352f2bdcaf29464088dc808ad28f46e28ca",
+      "task_state_fingerprint": "0f6aeec444a8920c39d82fadc68c7fd0ac576cd059326205e09947d0f28e7edc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/011/base_camera.png",
+          "sha256": "d13d19bfdca351632d33e7275fafac0b72937a463ab48c5701b26525b9d7f4df"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/011/hand_camera.png",
+          "sha256": "94a3ffdc01a0b09eabd5af0fa3cfd284577c504564fb968e8cb26d4a4e2d7a16"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/sft_train/014",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1518042345,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/021_bleach_cleanser-0": [
+          [
+            0.07829213887453079,
+            -0.08431915938854218,
+            0.12830699980258942,
+            0.04617901146411896,
+            2.3406088178745676e-10,
+            -4.2519912035743346e-09,
+            -0.9989331364631653
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.061999090015888214,
+            0.03813289850950241,
+            0.20864304900169373,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "42bd413c092c2b577f4a61a84ba19a26eeb00e4f73631d5806f8d8b7e7e1cf69",
+      "task_state_fingerprint": "59e6d59591c1565a49518139bd7fffab134c7a35cb821afaa407f38aef21c916",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/014/base_camera.png",
+          "sha256": "14245058c72ac9353bb7a8ff9f4cd5d165b8697eacb757f24b9f525124877725"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/sft_train/014/hand_camera.png",
+          "sha256": "18bdf9bde322f2a5f29b0c72ef76e32bc9e3a0b4a730f1d61e6cebf6a4f1edea"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/000",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 926697040,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/048_hammer-0": [
+          [
+            -0.012926970608532429,
+            -0.0992639884352684,
+            0.016727710142731667,
+            0.49466195702552795,
+            -1.9394150729823423e-09,
+            4.114901475116284e-11,
+            -0.869085431098938
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.0517592653632164,
+            -0.05497473105788231,
+            0.2812749147415161,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "31e584db4185e8f777c08f6fe9138749905f9afa9e27b99eabbed98ca25d5b77",
+      "task_state_fingerprint": "cc2c8cfd4bdd3a30092bee86b8e5567e05c849c0526e256d4b38689856371499",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/000/base_camera.png",
+          "sha256": "26cc31d8a635002b825d3cb3b5d608d77281fea69f369501853e9dd9acbfa5ef"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/000/hand_camera.png",
+          "sha256": "14bbf08d1ea68421ada1e779257a0ed2f30db10a2b7c398475b28a1e55ac734a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/001",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1595180362,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/073-f_lego_duplo-0": [
+          [
+            0.0727684423327446,
+            -0.05997606739401817,
+            0.02219264954328537,
+            0.45158320665359497,
+            4.579603363197293e-10,
+            -5.333201102963869e-10,
+            0.8922291398048401
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.06166500598192215,
+            -0.05645566061139107,
+            0.2774813175201416,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cfb479c7d4454678dab02f733042cf3a1fa226666f6d27eb88a5031b574616bf",
+      "task_state_fingerprint": "7ca6a88d80dca0d69f58e2b9ff9751b99326a1275b33a82b6151aaf01cfa5be1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/001/base_camera.png",
+          "sha256": "bef4ef56f5cd1cf64af564ca25b96be335215f156771cb8864727cdde4cb7b6c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/001/hand_camera.png",
+          "sha256": "a3ff1f51934e04575925e8ded05d45873e55bb597a6fb581ef158937d98a8110"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/002",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1957793355,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/061_foam_brick-0": [
+          [
+            0.0882672443985939,
+            0.08206027001142502,
+            0.026036730036139488,
+            0.6693639159202576,
+            -6.453567014119699e-09,
+            -8.241209381587566e-10,
+            0.7429348826408386
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.030267484486103058,
+            -0.08555687218904495,
+            0.10939650982618332,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "25eb437e703ac91d1a36fd7936d4768862d6cf901ed37d85c82138d29a76aaf0",
+      "task_state_fingerprint": "7be17011c986898cdc5d25f9dc192f60ca69f0b7b1159ce6e57195c0f9e6255a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/002/base_camera.png",
+          "sha256": "423f02f46e549dce9ff8d6c94a20c12f752004ca0a3b5484cbf5708ee30fef65"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/002/hand_camera.png",
+          "sha256": "31d7f15a8e74cb193d52790a9dc8adde11602920898b78449b8cef5189d74ea1"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/005",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1619454083,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/056_tennis_ball-0": [
+          [
+            -0.07985152304172516,
+            0.010670602321624756,
+            0.03326189145445824,
+            0.9635694026947021,
+            -8.24227086582141e-09,
+            3.3298304114026678e-09,
+            -0.2674587666988373
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.03257513791322708,
+            0.013868927955627441,
+            0.1939055174589157,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9aea16b26a3a8524132e862c07bac42b939c125749fbb44cd6112afc46f42740",
+      "task_state_fingerprint": "4506c1880eac8cbf56dd7ae3660ecc7d705fa2aff3f13a7eb300c540e4c10da4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/005/base_camera.png",
+          "sha256": "d2605ee49f2eee4e90dc46e4ad26a26d5f29242de51c8304df4169cedf1c7fd6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/005/hand_camera.png",
+          "sha256": "afca7f6fe9c2c89da0f961c2156fd78dc8f98d6cde53324682398644da339d4b"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/008",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 2130530803,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/072-d_toy_airplane-0": [
+          [
+            -0.03522007167339325,
+            -0.019465096294879913,
+            0.033789291977882385,
+            0.8677372932434082,
+            -1.6337328712090482e-10,
+            6.116285256041465e-11,
+            -0.4970237910747528
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.004097193479537964,
+            0.0390055850148201,
+            0.23831860721111298,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "10ac6e3df28a236c26a6446a385e02020198f297ce60678440ad93e85efd3257",
+      "task_state_fingerprint": "98b668f8be6bdaa655edb3b5413c2f43d402c7d0d6d5248e4be08bd7dc944a47",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/008/base_camera.png",
+          "sha256": "86128adb06a68671b240c2c0a7955f7e1ed2ab820868b59cd7d1b425821ed122"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/008/hand_camera.png",
+          "sha256": "21df30d64a6490defd59bca0198ab42f56d8d12e90200df4660ba92ab397f36b"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/011",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 330669380,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/063-a_marbles-0": [
+          [
+            -0.09644366055727005,
+            -0.009656498208642006,
+            0.03623662516474724,
+            0.9352579712867737,
+            -2.105728924561845e-10,
+            -3.317564178928478e-08,
+            0.3539677560329437
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.06583944708108902,
+            -0.015285216271877289,
+            0.23577365279197693,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "821478f29888f9a65d2ed1cd172c14932b763364e69c6cc0cd5c47ec557392aa",
+      "task_state_fingerprint": "6f457d1b5b84d51b480fa8b2dfde2b6716a2a61ac6d1360cf275ed7ac43fc2fd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/011/base_camera.png",
+          "sha256": "f13546fb6155bd329e841e592c6692d48935d3bc9e6017d2bd0520c615986d0c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/011/hand_camera.png",
+          "sha256": "3b876ec2e2db6600e193b950ca123513d63d199741ff48c3d5bb92becb600527"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/rl_train/014",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 257476272,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/053_mini_soccer_ball-0": [
+          [
+            -0.07903847098350525,
+            -0.0564894899725914,
+            0.030797159299254417,
+            0.9103566408157349,
+            3.742022158803593e-08,
+            6.017518927592391e-09,
+            -0.4138251543045044
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.04691276699304581,
+            0.015187002718448639,
+            0.2194434553384781,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fdfbb42d8a27e3851137e2433d62d593fdd409923cfa85210a3b064cda242708",
+      "task_state_fingerprint": "3710d3317652c07f8933c0b1f7b88182c6f982b2ee1e96fa31a20fd458bbf2d2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/014/base_camera.png",
+          "sha256": "1363006d6d91666b4db1bf8e5a380b74cf389b35b919ecc29fd0ee8f54749ad7"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/rl_train/014/hand_camera.png",
+          "sha256": "4b5887dd1eaa7dad2efe73c083d2b551c4d2d17240cc88b8ffe9adcb23a81d29"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/validation/000",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1384552724,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/052_extra_large_clamp-0": [
+          [
+            0.06965527683496475,
+            -0.040511954575777054,
+            0.018995989114046097,
+            0.11684560030698776,
+            1.0178448361930492e-11,
+            -3.2471195177130596e-10,
+            0.9931506514549255
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.07202146202325821,
+            0.003059759736061096,
+            0.3125264048576355,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fb0287cbc6b1379f5f572414576ba0742d0756ee41923809c0737104d720b1a7",
+      "task_state_fingerprint": "483bf53be8fb1a7c068bf8b8adb920fff5cea21998b4279ca0001c10cc22caff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/validation/000/base_camera.png",
+          "sha256": "6b64cb535a48022475485dcea7086b9131cb3cdc7bcc4544bc42bf7266f6d154"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/validation/000/hand_camera.png",
+          "sha256": "9c89f3d625eda1918bc3be05d60ddff623d3fc707cc5ca1d1fab511fa3362ac8"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/000",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 248744511,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/065-b_cups-0": [
+          [
+            0.09383245557546616,
+            -0.07486185431480408,
+            0.0326651856303215,
+            0.7940720319747925,
+            -4.054510616136042e-10,
+            -1.8321084926942177e-10,
+            -0.6078237891197205
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.029124312102794647,
+            0.05840299278497696,
+            0.3195027709007263,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "873674ef51026adc4283200d5ac58de3afde45047f63b26d062bb6b1ee49a337",
+      "task_state_fingerprint": "72e3bc347156a2cc6219773dea09c15db85723daec51cd795f94f27fb94f816b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/000/base_camera.png",
+          "sha256": "71bf240f691bd168ea795c0bf9c6d6c03c35244a698253920af36a5ce6b398a0"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/000/hand_camera.png",
+          "sha256": "3151a445d1b54b57c67612ab43ee2696252f678b15237793aa2179629655114a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/001",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 585264853,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/061_foam_brick-0": [
+          [
+            0.07501853257417679,
+            0.015276037156581879,
+            0.026036730036139488,
+            0.994780957698822,
+            3.277199067674985e-10,
+            -3.6091400978932597e-09,
+            -0.10203664004802704
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.08932816237211227,
+            0.09687306731939316,
+            0.20716196298599243,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "741b01d299e9bb95d81b472059eff5442f3d18a604457be4961d4aa696f86b8e",
+      "task_state_fingerprint": "be340f36f999cb5896434263d239f59c143e3bcd71370ffd2dd4a8962196345c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/001/base_camera.png",
+          "sha256": "28ec2edf81a78fcedeba8200fc7d3a062c2a821a24932cae34586b684fbe0f1d"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/001/hand_camera.png",
+          "sha256": "3862fff3be92b02449a4ea22ba9b17adbde42937de50f4c5cd7ccf0a7f563c39"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/002",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 545824188,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/065-h_cups-0": [
+          [
+            0.07701116055250168,
+            -0.09844136238098145,
+            0.03888630494475365,
+            0.9993550181388855,
+            9.457920668864972e-09,
+            -5.842135664124726e-10,
+            -0.03591686487197876
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.07529289275407791,
+            0.024997755885124207,
+            0.08027312159538269,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "836af5f6c564141ed3f2d27b245000334eba9250e2144649ee2a3122a385568f",
+      "task_state_fingerprint": "768feaa69a492a883fe3db54e129fd5bcb7a7333556c282d58e3cca00db4fe48",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/002/base_camera.png",
+          "sha256": "594e523f4da70a5a74761fecb23c7204008608bc3a3289776c39f2ad638ba183"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/002/hand_camera.png",
+          "sha256": "55af5c82074687c0915632940bafd1538a5fbd02d987f060531602c742586106"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/006",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 47435405,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/002_master_chef_can-0": [
+          [
+            0.09839463979005814,
+            0.08980508893728256,
+            0.04962830990552902,
+            0.6989476084709167,
+            -1.2044393260524089e-11,
+            2.0879568907172796e-10,
+            -0.7151733040809631
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.0800594761967659,
+            -0.017808809876441956,
+            0.25683921575546265,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bb5ee8522eea362a1c5a1e7e1fb40e6fcc3131f7833a332a25bedbcc8b8857a9",
+      "task_state_fingerprint": "81d9b2ddee7e501eaefe025ea04c82459e02b629f8ea60611f595498ceb351c9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/006/base_camera.png",
+          "sha256": "feb7e5e652b4100c6d6707c9dfba75b7555ccff541c1a8f9788129c72d14cfc3"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/006/hand_camera.png",
+          "sha256": "f6d1468e4d0c696e74eadc318e2ec1fe6c243fe5a819922b71d2a4b673368afd"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/010",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1321632542,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/021_bleach_cleanser-0": [
+          [
+            0.0756654217839241,
+            0.04926767572760582,
+            0.12830699980258942,
+            0.8190155029296875,
+            -7.101412791143957e-10,
+            -1.5550983833989562e-09,
+            0.5737714171409607
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.04470811039209366,
+            -0.04074934870004654,
+            0.2055974155664444,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bfbff98705539f479ac5187503060f92e2b181b9a30d66eb919e196424eda9bc",
+      "task_state_fingerprint": "7d86ffe5039b0fd2efd823cb680cd7854abe550dc0ad7d946f4a91f936adbe46",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/010/base_camera.png",
+          "sha256": "88e395e6717d91528b1802b603e255835a2b44133e8fdcf506d033b9ce270310"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/010/hand_camera.png",
+          "sha256": "67b984f80023eebdc3a1a7c42ecf2f83a9aea17ff38375ee6f2ff013d2928e7a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/014",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 963932481,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/072-d_toy_airplane-0": [
+          [
+            -0.09882473200559616,
+            0.03593049198389053,
+            0.03378928452730179,
+            0.7341205477714539,
+            1.2166714857819727e-10,
+            2.538254606498924e-10,
+            0.6790193915367126
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.06288357079029083,
+            -0.035685375332832336,
+            0.19527682662010193,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1fb81acd6701e29e7565286923a225968a72394bae1c283938512d0a52ce1e5d",
+      "task_state_fingerprint": "396e2b1c4ce0eb46b5ef8c662076a34a00fd604a4a7cff9943e2060b2ccfe6ee",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/014/base_camera.png",
+          "sha256": "b56ff375fd16f4452177c06fb0c3009154ce8e50ea8178fcb01d024b3c686ef8"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/014/hand_camera.png",
+          "sha256": "654ec0b2984ec050ff93614ebe9554726a7173eceba9a194f30c7f92412415cf"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/eval_seen/019",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1194590508,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/063-b_marbles-0": [
+          [
+            -0.09834936261177063,
+            -0.07945374399423599,
+            0.017065640538930893,
+            0.36020427942276,
+            2.0320634064319165e-09,
+            -3.826666983286486e-09,
+            -0.9328737258911133
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.03337071090936661,
+            0.04069431871175766,
+            0.2753007411956787,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "89dc62f1fca032d4f2dfcbecf36d6e23d47fce33467750863b994612f2b10b5f",
+      "task_state_fingerprint": "2dff0b979ff2d55582ed0827c14abb97274ef77edd1ab80c43ddf2713ed2f3ae",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/019/base_camera.png",
+          "sha256": "3335f26fa0d5a4c04a968dc27c51d35a23dd4657c9fe19b8407ab0b6ff27dfcc"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/eval_seen/019/hand_camera.png",
+          "sha256": "5bafa0c4dead6997a20ea97f45c36423773a7905c49cea665820f9643b067316"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickSingleYCB-v1/validation/001",
+      "task_key": "maniskill/PickSingleYCB-v1",
+      "seed": 1344533555,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/040_large_marker-0": [
+          [
+            0.027810044586658478,
+            -0.03360651433467865,
+            0.00980858039110899,
+            0.9795095324516296,
+            -1.7570347954354304e-10,
+            3.501227086033509e-11,
+            -0.20139846205711365
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.0918111503124237,
+            -0.000987038016319275,
+            0.29138678312301636,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a6d4129535558568c557f7e2b30799ad566ddb259c883f1dc9777e48c47b6ae2",
+      "task_state_fingerprint": "5b18cee97fda9f17d60878295b0c0dfcd8779a8bfc0c19f8300ec0994fa09c96",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/validation/001/base_camera.png",
+          "sha256": "1c7521caca29627e687e496385c8aa716f130c552940ea75a6e3b84f15156285"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PickSingleYCB-v1/validation/001/hand_camera.png",
+          "sha256": "d5d3a6df2f389d16f1ea4103d736965afa3cf1d0b33376016a51e4c9b29186c8"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    }
+  ]
+}

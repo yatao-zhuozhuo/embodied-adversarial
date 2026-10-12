@@ -1,0 +1,971 @@
+{
+  "task_key": "metaworld/faucet-open-v3",
+  "records": [
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1868641201,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.008704865689033371,
+          0.8385554293712619,
+          0.0
+        ],
+        "/object_position": [
+          -0.02370486568903337,
+          0.663555429371262,
+          0.114
+        ],
+        "/goal_position": [
+          0.16629513431096662,
+          0.8385554293712619,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "8b9d77c5ba06fb0c208609cdbbd6403604c367fce953f9ec5e329da4cd151bd0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/000/native_camera_2.png",
+          "sha256": "a476d2ec6a775dd14a6b730bc090821bc4f494b3ae145febf1024e4165e0b27a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 481100996,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.016609153327399845,
+          0.8464323811746656,
+          0.0
+        ],
+        "/object_position": [
+          0.0016091533273998454,
+          0.6714323811746656,
+          0.114
+        ],
+        "/goal_position": [
+          0.19160915332739983,
+          0.8464323811746656,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "aa17a545db609927b650fce7a70a32f23ef0bb4a2a0c075483c0d34a6484dfd2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/001/native_camera_2.png",
+          "sha256": "f87f6aa0386caf0760b8590c314e38b4ea46c292ad80c3be8d37fe28861847b6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/002",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 302560067,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.011666705321212036,
+          0.8026251190383946,
+          0.0
+        ],
+        "/object_position": [
+          -0.026666705321212035,
+          0.6276251190383946,
+          0.114
+        ],
+        "/goal_position": [
+          0.16333329467878796,
+          0.8026251190383946,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "ddf4c8fb2a0db6057c82a024b6d8fbd405da93407c1c0d035b695fd8e2f7b7c8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/002/native_camera_2.png",
+          "sha256": "ee9890a83432dd8e6d26e2424d294350c7eb12ab2ee9638d2685e05a1b2fdcda"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/005",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 2044219697,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03090831138849025,
+          0.8329884141274337,
+          0.0
+        ],
+        "/object_position": [
+          -0.04590831138849025,
+          0.6579884141274337,
+          0.114
+        ],
+        "/goal_position": [
+          0.14409168861150973,
+          0.8329884141274337,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "380eea99865f575084e05f9747b15f372d9d465adb596e7c4d2d7ac4a44af910",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/005/native_camera_2.png",
+          "sha256": "2bae1d1c3b78a4d2faa5e713f330640cd19c7ac2b69913dbd4e39a0ef0b5f1f1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/008",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 800136591,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.00375478041962337,
+          0.8160867501156358,
+          0.0
+        ],
+        "/object_position": [
+          -0.01124521958037663,
+          0.6410867501156359,
+          0.114
+        ],
+        "/goal_position": [
+          0.17875478041962337,
+          0.8160867501156358,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "d7e5e70025d082b3dcaf2c96234477bf31518d5ea46f6039fec1ce150316fbbf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/008/native_camera_2.png",
+          "sha256": "9b9e6e603127927594dd046bd1219784fb5232e3ccd1d5e112a6109e34c66d56"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/011",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1139409505,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.01671462264532443,
+          0.8264902402988152,
+          0.0
+        ],
+        "/object_position": [
+          0.0017146226453244318,
+          0.6514902402988152,
+          0.114
+        ],
+        "/goal_position": [
+          0.1917146226453244,
+          0.8264902402988152,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "7f4e3e855ff5aae856897cdc016b8ca806f9dca2e6455469978f5cb3b7d9bce8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/011/native_camera_2.png",
+          "sha256": "6f0c0ef2fe1c4318faa7c37c6ccd0a817e2213c9e10b64b77126d85e840b6429"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/sft_train/014",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1994655840,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0009255753200397079,
+          0.8004064888225851,
+          0.0
+        ],
+        "/object_position": [
+          -0.015925575320039707,
+          0.6254064888225852,
+          0.114
+        ],
+        "/goal_position": [
+          0.1740744246799603,
+          0.8004064888225851,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "6b280d9e87650fd21f8668f8ce7cf07fb78c26400ce6abcfaea49ac9b3e00761",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/sft_train/014/native_camera_2.png",
+          "sha256": "b9d9724b02261cff65f132405c53edc4446a04a6402b4bd434915cb678c726fa"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1552659157,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.030452056873712465,
+          0.8482763898721744,
+          0.0
+        ],
+        "/object_position": [
+          -0.04545205687371247,
+          0.6732763898721743,
+          0.114
+        ],
+        "/goal_position": [
+          0.14454794312628752,
+          0.8482763898721744,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "17cfa4cd4b90f7035b9026b72d724c6913a5623990d8778d459d06693f4a9f68",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/000/native_camera_2.png",
+          "sha256": "037fc15e80600b7dd8b4b5f4c7e263c2cb1cb6ef9912940dd9c1c4d9d1c4ee01"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 575847997,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.006313489695409513,
+          0.8085812154723796,
+          0.0
+        ],
+        "/object_position": [
+          -0.021313489695409513,
+          0.6335812154723797,
+          0.114
+        ],
+        "/goal_position": [
+          0.16868651030459048,
+          0.8085812154723796,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "50670c9dd25b99dbe2962ecb89c201ce5bd2156fffcf63353ac1ede5c81934cb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/001/native_camera_2.png",
+          "sha256": "a349e8603bf97fdb822ca2c02f186d9990b3b7153b414ed58d215a3921f05c1d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/002",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1773945924,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03211180024995351,
+          0.8342674223865114,
+          0.0
+        ],
+        "/object_position": [
+          0.017111800249953513,
+          0.6592674223865114,
+          0.114
+        ],
+        "/goal_position": [
+          0.20711180024995351,
+          0.8342674223865114,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "4ee180511fc964ce4299af360a31e950d135baa43b6f65358a5fc2ead9470fdd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/002/native_camera_2.png",
+          "sha256": "34b10696029d253eb7a8dd60863a18879835de282b592b88a0de79450e49e20a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/005",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1900245679,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.013326679595528301,
+          0.8215717901720949,
+          0.0
+        ],
+        "/object_position": [
+          -0.0016733204044716982,
+          0.6465717901720949,
+          0.114
+        ],
+        "/goal_position": [
+          0.1883266795955283,
+          0.8215717901720949,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "f91c84681753dfa9f951cd97239657bc2f83d2de6352f441911e01881c44288e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/005/native_camera_2.png",
+          "sha256": "0219692d182f47a4f7a3c625bb91e3ba0853a7ac6380f728b5080c2e53fca0ae"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/008",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 359507706,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.027269594969539207,
+          0.8475971673857735,
+          0.0
+        ],
+        "/object_position": [
+          0.012269594969539208,
+          0.6725971673857736,
+          0.114
+        ],
+        "/goal_position": [
+          0.2022695949695392,
+          0.8475971673857735,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "f51f77e3c1cf67edb5dfdeb440b5b13d975c7baa1c9ff20aa0022592f09eff4c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/008/native_camera_2.png",
+          "sha256": "2a83f07aa9fd14f745d6a5440eda801c67d4e25d5ced751521f483c4c76fb38f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/011",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 901534820,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0014512087968221316,
+          0.8492428367261381,
+          0.0
+        ],
+        "/object_position": [
+          -0.01645120879682213,
+          0.6742428367261382,
+          0.114
+        ],
+        "/goal_position": [
+          0.17354879120317784,
+          0.8492428367261381,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "6158d364e1bd9cd7edfcb9f86226bfdebd1a9bd29bbfc7819cbef4dfc1a1386f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/011/native_camera_2.png",
+          "sha256": "4cd3868b6943f688c33be8e7b95f2d3116df839b8de235aa369b48966aabb2c1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/rl_train/014",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1718503116,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0019179917537838764,
+          0.8479184410546913,
+          0.0
+        ],
+        "/object_position": [
+          -0.016917991753783876,
+          0.6729184410546913,
+          0.114
+        ],
+        "/goal_position": [
+          0.1730820082462161,
+          0.8479184410546913,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "37d7f98d9121045aabb9acf26c77a9cf81a0e7e874eb6d0a9d1fd40f01eaf816",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/rl_train/014/native_camera_2.png",
+          "sha256": "bf99d51c29a56d0c26e5f2c8ac225ab0d3281c9adbafd45738cef3e3f0c0b175"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/validation/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1840624396,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02397672658820467,
+          0.8118229570080153,
+          0.0
+        ],
+        "/object_position": [
+          -0.03897672658820467,
+          0.6368229570080153,
+          0.114
+        ],
+        "/goal_position": [
+          0.15102327341179533,
+          0.8118229570080153,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "22b151fb66c4d4c9953f81ab85134bfb88de4a60ae1c9d493e6c5afe0e7b49d4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/validation/000/native_camera_2.png",
+          "sha256": "2663fc74209409b0d2043e99baaebbcf855023f687be03cf774703ef305c1c09"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 921170159,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03913929944897281,
+          0.810076150670588,
+          0.0
+        ],
+        "/object_position": [
+          -0.05413929944897281,
+          0.635076150670588,
+          0.114
+        ],
+        "/goal_position": [
+          0.13586070055102717,
+          0.810076150670588,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "e4714d697fd7cc1756b458e9f60e9271621da2d18baca7d4481b4ba71ea9d444",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "0262e99905fed55d5029d6d553f7bb5f7156a8c96041eb58d0ae6a36260f6e3c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 857089703,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.011957847268494373,
+          0.8467821545197547,
+          0.0
+        ],
+        "/object_position": [
+          -0.0030421527315056263,
+          0.6717821545197546,
+          0.114
+        ],
+        "/goal_position": [
+          0.18695784726849435,
+          0.8467821545197547,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "96610e411955aba5da8c73f624c8afd2399cce9850c3b3b99347b46f393a41dc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "a36607cb7a27683eb6b2c2b18e6b847be47971cf9802112289715fbcf9bca0b1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/002",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 921165896,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.012900526250089792,
+          0.8028329764080516,
+          0.0
+        ],
+        "/object_position": [
+          -0.002099473749910208,
+          0.6278329764080517,
+          0.114
+        ],
+        "/goal_position": [
+          0.1879005262500898,
+          0.8028329764080516,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "f226703325df638458eb419ebe91f7b38283660a57e795960533fed08e0bbf54",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "0b122eb8c3ae1f2b54057866da6787ebc02c7cf0bdad2675db6c71a06b329311"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/006",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1462155870,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.035518012828642725,
+          0.8034612933301329,
+          0.0
+        ],
+        "/object_position": [
+          -0.050518012828642725,
+          0.628461293330133,
+          0.114
+        ],
+        "/goal_position": [
+          0.13948198717135726,
+          0.8034612933301329,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "118ae22e3b6359c3c64ca3e151813111508e36ef5cee66dd943b887ecc641beb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "f96a02bd0fa6d0e06c7b9f8f5d7ad2578a81e3e2e08662a005d8e7c28eb16c68"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/010",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 832053975,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.014008703533598559,
+          0.8196781845750072,
+          0.0
+        ],
+        "/object_position": [
+          -0.029008703533598558,
+          0.6446781845750071,
+          0.114
+        ],
+        "/goal_position": [
+          0.16099129646640142,
+          0.8196781845750072,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "8c75745f37430ac5dd698d57ab027b34d3955e1004d25912c5d945bb1c16039f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "26e7f9d673e2247f40830b001d9e2cbf9858c4a84bcf2d0ff9d91088d187b9c9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/014",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 686686528,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.043315630726700305,
+          0.8229037870667528,
+          0.0
+        ],
+        "/object_position": [
+          -0.058315630726700304,
+          0.6479037870667528,
+          0.114
+        ],
+        "/goal_position": [
+          0.13168436927329968,
+          0.8229037870667528,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "994ccd30c0e6bd56842621eba1793667535f26f1afc00445138fea41526bde4d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "656e0322c469b70736f870f7e2455a50fa74a8125c3d857de0b8afb5bc94b254"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/eval_seen/019",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1235757551,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03707233937564168,
+          0.8199507503367454,
+          0.0
+        ],
+        "/object_position": [
+          0.02207233937564168,
+          0.6449507503367453,
+          0.114
+        ],
+        "/goal_position": [
+          0.21207233937564168,
+          0.8199507503367454,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "d6ebffe5dc2443d1c12b0f0d85f28e7e468771be9a89d8e77b8b46365e8ba94c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "23c655c88669ea1ed97ecc83d702ce7264b70b555d57f509da28454af4fe9db9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/faucet-open-v3/validation/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1205844161,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.009904114831912766,
+          0.8363688983772932,
+          0.0
+        ],
+        "/object_position": [
+          -0.024904114831912766,
+          0.6613688983772932,
+          0.114
+        ],
+        "/goal_position": [
+          0.1650958851680872,
+          0.8363688983772932,
+          0.125
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "dc6293125974b54c1d5876d5eb7e00ef4d2d714914be99ed892d01c84d92aa2f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/faucet-open-v3/validation/001/native_camera_2.png",
+          "sha256": "788f6d4c10186abd448e4412abb45b2060da0e00e654a7fb8254ff70f322e656"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

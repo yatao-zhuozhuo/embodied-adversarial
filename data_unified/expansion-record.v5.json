@@ -1,0 +1,1020 @@
+{
+  "split_revision": 5,
+  "active_benches": [
+    "libero",
+    "metaworld",
+    "maniskill",
+    "robocasa"
+  ],
+  "added_tasks": {
+    "libero": [
+      [
+        "libero_90_task8",
+        "open_and_place"
+      ],
+      [
+        "libero_90_task10",
+        "cabinet_top"
+      ],
+      [
+        "libero_90_task28",
+        "drawer_close"
+      ],
+      [
+        "libero_90_task30",
+        "plate_placement"
+      ],
+      [
+        "libero_90_task41",
+        "pan_placement"
+      ],
+      [
+        "libero_90_task58",
+        "tray_placement"
+      ],
+      [
+        "libero_90_task59",
+        "tray_placement"
+      ],
+      [
+        "libero_90_task73",
+        "caddy_front"
+      ],
+      [
+        "libero_90_task77",
+        "caddy_back"
+      ],
+      [
+        "libero_object_task3",
+        "object_pick"
+      ]
+    ],
+    "metaworld": [
+      [
+        "button-press-topdown-wall-v3",
+        "obstacle_button"
+      ],
+      [
+        "door-open-v3",
+        "articulated_open"
+      ],
+      [
+        "drawer-close-v3",
+        "drawer_close"
+      ],
+      [
+        "handle-press-side-v3",
+        "side_handle_press"
+      ],
+      [
+        "handle-pull-v3",
+        "handle_pull"
+      ],
+      [
+        "pick-place-wall-v3",
+        "obstacle_pick_place"
+      ],
+      [
+        "push-back-v3",
+        "push_back"
+      ],
+      [
+        "plate-slide-side-v3",
+        "side_slide"
+      ],
+      [
+        "peg-unplug-side-v3",
+        "unplug"
+      ],
+      [
+        "stick-pull-v3",
+        "tool_pull"
+      ]
+    ]
+  },
+  "selections": [
+    {
+      "task_key": "libero/libero_90_task8",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task8/sft_train/cache-004",
+        "libero/libero_90_task8/sft_train/cache-027",
+        "libero/libero_90_task8/sft_train/cache-022",
+        "libero/libero_90_task8/sft_train/cache-049"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task8",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task8/rl_train/cache-006",
+        "libero/libero_90_task8/rl_train/cache-007",
+        "libero/libero_90_task8/rl_train/cache-003",
+        "libero/libero_90_task8/rl_train/cache-002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task8",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task8/validation/cache-043",
+        "libero/libero_90_task8/validation/cache-013"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task8",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task8/eval_seen/cache-036",
+        "libero/libero_90_task8/eval_seen/cache-015",
+        "libero/libero_90_task8/eval_seen/cache-005",
+        "libero/libero_90_task8/eval_seen/cache-024"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task10",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task10/sft_train/cache-011",
+        "libero/libero_90_task10/sft_train/cache-046",
+        "libero/libero_90_task10/sft_train/cache-004",
+        "libero/libero_90_task10/sft_train/cache-027"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task10",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task10/rl_train/cache-013",
+        "libero/libero_90_task10/rl_train/cache-026",
+        "libero/libero_90_task10/rl_train/cache-014",
+        "libero/libero_90_task10/rl_train/cache-010"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task10",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task10/validation/cache-043",
+        "libero/libero_90_task10/validation/cache-032"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task10",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task10/eval_seen/cache-001",
+        "libero/libero_90_task10/eval_seen/cache-025",
+        "libero/libero_90_task10/eval_seen/cache-037",
+        "libero/libero_90_task10/eval_seen/cache-023"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task28",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task28/sft_train/cache-025",
+        "libero/libero_90_task28/sft_train/cache-044",
+        "libero/libero_90_task28/sft_train/cache-002",
+        "libero/libero_90_task28/sft_train/cache-021"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task28",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task28/rl_train/cache-033",
+        "libero/libero_90_task28/rl_train/cache-036",
+        "libero/libero_90_task28/rl_train/cache-032",
+        "libero/libero_90_task28/rl_train/cache-038"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task28",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task28/validation/cache-010",
+        "libero/libero_90_task28/validation/cache-039"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task28",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task28/eval_seen/cache-029",
+        "libero/libero_90_task28/eval_seen/cache-011",
+        "libero/libero_90_task28/eval_seen/cache-014",
+        "libero/libero_90_task28/eval_seen/cache-003"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task30",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task30/sft_train/cache-012",
+        "libero/libero_90_task30/sft_train/cache-046",
+        "libero/libero_90_task30/sft_train/cache-019",
+        "libero/libero_90_task30/sft_train/cache-006"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task30",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task30/rl_train/cache-018",
+        "libero/libero_90_task30/rl_train/cache-022",
+        "libero/libero_90_task30/rl_train/cache-042",
+        "libero/libero_90_task30/rl_train/cache-033"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task30",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task30/validation/cache-014",
+        "libero/libero_90_task30/validation/cache-047"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task30",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task30/eval_seen/cache-041",
+        "libero/libero_90_task30/eval_seen/cache-035",
+        "libero/libero_90_task30/eval_seen/cache-021",
+        "libero/libero_90_task30/eval_seen/cache-034"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task41",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task41/sft_train/cache-038",
+        "libero/libero_90_task41/sft_train/cache-044",
+        "libero/libero_90_task41/sft_train/cache-015",
+        "libero/libero_90_task41/sft_train/cache-020"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task41",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task41/rl_train/cache-002",
+        "libero/libero_90_task41/rl_train/cache-016",
+        "libero/libero_90_task41/rl_train/cache-033",
+        "libero/libero_90_task41/rl_train/cache-022"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task41",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task41/validation/cache-003",
+        "libero/libero_90_task41/validation/cache-032"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task41",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task41/eval_seen/cache-024",
+        "libero/libero_90_task41/eval_seen/cache-027",
+        "libero/libero_90_task41/eval_seen/cache-030",
+        "libero/libero_90_task41/eval_seen/cache-040"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task58",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task58/sft_train/cache-007",
+        "libero/libero_90_task58/sft_train/cache-029",
+        "libero/libero_90_task58/sft_train/cache-005",
+        "libero/libero_90_task58/sft_train/cache-039"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task58",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task58/rl_train/cache-028",
+        "libero/libero_90_task58/rl_train/cache-018",
+        "libero/libero_90_task58/rl_train/cache-034",
+        "libero/libero_90_task58/rl_train/cache-037"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task58",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task58/validation/cache-038",
+        "libero/libero_90_task58/validation/cache-004"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task58",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task58/eval_seen/cache-031",
+        "libero/libero_90_task58/eval_seen/cache-042",
+        "libero/libero_90_task58/eval_seen/cache-048",
+        "libero/libero_90_task58/eval_seen/cache-016"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task59",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task59/sft_train/cache-022",
+        "libero/libero_90_task59/sft_train/cache-032",
+        "libero/libero_90_task59/sft_train/cache-043",
+        "libero/libero_90_task59/sft_train/cache-040"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task59",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task59/rl_train/cache-020",
+        "libero/libero_90_task59/rl_train/cache-001",
+        "libero/libero_90_task59/rl_train/cache-048",
+        "libero/libero_90_task59/rl_train/cache-030"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task59",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task59/validation/cache-026",
+        "libero/libero_90_task59/validation/cache-024"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task59",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task59/eval_seen/cache-038",
+        "libero/libero_90_task59/eval_seen/cache-029",
+        "libero/libero_90_task59/eval_seen/cache-004",
+        "libero/libero_90_task59/eval_seen/cache-042"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task73",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task73/sft_train/cache-029",
+        "libero/libero_90_task73/sft_train/cache-047",
+        "libero/libero_90_task73/sft_train/cache-025",
+        "libero/libero_90_task73/sft_train/cache-023"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task73",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task73/rl_train/cache-031",
+        "libero/libero_90_task73/rl_train/cache-041",
+        "libero/libero_90_task73/rl_train/cache-019",
+        "libero/libero_90_task73/rl_train/cache-013"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task73",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task73/validation/cache-015",
+        "libero/libero_90_task73/validation/cache-002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task73",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task73/eval_seen/cache-006",
+        "libero/libero_90_task73/eval_seen/cache-049",
+        "libero/libero_90_task73/eval_seen/cache-012",
+        "libero/libero_90_task73/eval_seen/cache-038"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task77",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_90_task77/sft_train/cache-020",
+        "libero/libero_90_task77/sft_train/cache-022",
+        "libero/libero_90_task77/sft_train/cache-027",
+        "libero/libero_90_task77/sft_train/cache-044"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task77",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_90_task77/rl_train/cache-019",
+        "libero/libero_90_task77/rl_train/cache-037",
+        "libero/libero_90_task77/rl_train/cache-004",
+        "libero/libero_90_task77/rl_train/cache-030"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task77",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_90_task77/validation/cache-007",
+        "libero/libero_90_task77/validation/cache-002"
+      ]
+    },
+    {
+      "task_key": "libero/libero_90_task77",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_90_task77/eval_seen/cache-046",
+        "libero/libero_90_task77/eval_seen/cache-010",
+        "libero/libero_90_task77/eval_seen/cache-018",
+        "libero/libero_90_task77/eval_seen/cache-011"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 50,
+      "case_ids": [
+        "libero/libero_object_task3/sft_train/cache-003",
+        "libero/libero_object_task3/sft_train/cache-017",
+        "libero/libero_object_task3/sft_train/cache-015",
+        "libero/libero_object_task3/sft_train/cache-040"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 46,
+      "case_ids": [
+        "libero/libero_object_task3/rl_train/cache-026",
+        "libero/libero_object_task3/rl_train/cache-010",
+        "libero/libero_object_task3/rl_train/cache-027",
+        "libero/libero_object_task3/rl_train/cache-007"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 42,
+      "case_ids": [
+        "libero/libero_object_task3/validation/cache-042",
+        "libero/libero_object_task3/validation/cache-043"
+      ]
+    },
+    {
+      "task_key": "libero/libero_object_task3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 40,
+      "case_ids": [
+        "libero/libero_object_task3/eval_seen/cache-047",
+        "libero/libero_object_task3/eval_seen/cache-013",
+        "libero/libero_object_task3/eval_seen/cache-020",
+        "libero/libero_object_task3/eval_seen/cache-016"
+      ]
+    },
+    {
+      "task_key": "metaworld/button-press-topdown-wall-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/button-press-topdown-wall-v3/sft_train/002",
+        "metaworld/button-press-topdown-wall-v3/sft_train/003",
+        "metaworld/button-press-topdown-wall-v3/sft_train/000",
+        "metaworld/button-press-topdown-wall-v3/sft_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/button-press-topdown-wall-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/button-press-topdown-wall-v3/rl_train/004",
+        "metaworld/button-press-topdown-wall-v3/rl_train/000",
+        "metaworld/button-press-topdown-wall-v3/rl_train/003",
+        "metaworld/button-press-topdown-wall-v3/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/button-press-topdown-wall-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/button-press-topdown-wall-v3/validation/006",
+        "metaworld/button-press-topdown-wall-v3/validation/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/button-press-topdown-wall-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/button-press-topdown-wall-v3/eval_seen/002",
+        "metaworld/button-press-topdown-wall-v3/eval_seen/006",
+        "metaworld/button-press-topdown-wall-v3/eval_seen/001",
+        "metaworld/button-press-topdown-wall-v3/eval_seen/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-open-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/door-open-v3/sft_train/000",
+        "metaworld/door-open-v3/sft_train/003",
+        "metaworld/door-open-v3/sft_train/004",
+        "metaworld/door-open-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-open-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/door-open-v3/rl_train/002",
+        "metaworld/door-open-v3/rl_train/000",
+        "metaworld/door-open-v3/rl_train/004",
+        "metaworld/door-open-v3/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-open-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/door-open-v3/validation/006",
+        "metaworld/door-open-v3/validation/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/door-open-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/door-open-v3/eval_seen/005",
+        "metaworld/door-open-v3/eval_seen/002",
+        "metaworld/door-open-v3/eval_seen/000",
+        "metaworld/door-open-v3/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/drawer-close-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/drawer-close-v3/sft_train/003",
+        "metaworld/drawer-close-v3/sft_train/004",
+        "metaworld/drawer-close-v3/sft_train/002",
+        "metaworld/drawer-close-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/drawer-close-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/drawer-close-v3/rl_train/001",
+        "metaworld/drawer-close-v3/rl_train/003",
+        "metaworld/drawer-close-v3/rl_train/000",
+        "metaworld/drawer-close-v3/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/drawer-close-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/drawer-close-v3/validation/004",
+        "metaworld/drawer-close-v3/validation/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/drawer-close-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/drawer-close-v3/eval_seen/005",
+        "metaworld/drawer-close-v3/eval_seen/003",
+        "metaworld/drawer-close-v3/eval_seen/004",
+        "metaworld/drawer-close-v3/eval_seen/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-press-side-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-press-side-v3/sft_train/004",
+        "metaworld/handle-press-side-v3/sft_train/005",
+        "metaworld/handle-press-side-v3/sft_train/001",
+        "metaworld/handle-press-side-v3/sft_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-press-side-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-press-side-v3/rl_train/005",
+        "metaworld/handle-press-side-v3/rl_train/003",
+        "metaworld/handle-press-side-v3/rl_train/004",
+        "metaworld/handle-press-side-v3/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-press-side-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-press-side-v3/validation/003",
+        "metaworld/handle-press-side-v3/validation/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-press-side-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-press-side-v3/eval_seen/000",
+        "metaworld/handle-press-side-v3/eval_seen/006",
+        "metaworld/handle-press-side-v3/eval_seen/003",
+        "metaworld/handle-press-side-v3/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-pull-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-pull-v3/sft_train/004",
+        "metaworld/handle-pull-v3/sft_train/005",
+        "metaworld/handle-pull-v3/sft_train/006",
+        "metaworld/handle-pull-v3/sft_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-pull-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-pull-v3/rl_train/005",
+        "metaworld/handle-pull-v3/rl_train/001",
+        "metaworld/handle-pull-v3/rl_train/003",
+        "metaworld/handle-pull-v3/rl_train/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-pull-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-pull-v3/validation/000",
+        "metaworld/handle-pull-v3/validation/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/handle-pull-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/handle-pull-v3/eval_seen/004",
+        "metaworld/handle-pull-v3/eval_seen/001",
+        "metaworld/handle-pull-v3/eval_seen/005",
+        "metaworld/handle-pull-v3/eval_seen/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/pick-place-wall-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/pick-place-wall-v3/sft_train/001",
+        "metaworld/pick-place-wall-v3/sft_train/003",
+        "metaworld/pick-place-wall-v3/sft_train/006",
+        "metaworld/pick-place-wall-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/pick-place-wall-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/pick-place-wall-v3/rl_train/001",
+        "metaworld/pick-place-wall-v3/rl_train/004",
+        "metaworld/pick-place-wall-v3/rl_train/002",
+        "metaworld/pick-place-wall-v3/rl_train/005"
+      ]
+    },
+    {
+      "task_key": "metaworld/pick-place-wall-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/pick-place-wall-v3/validation/001",
+        "metaworld/pick-place-wall-v3/validation/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/pick-place-wall-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/pick-place-wall-v3/eval_seen/005",
+        "metaworld/pick-place-wall-v3/eval_seen/000",
+        "metaworld/pick-place-wall-v3/eval_seen/006",
+        "metaworld/pick-place-wall-v3/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/push-back-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/push-back-v3/sft_train/001",
+        "metaworld/push-back-v3/sft_train/005",
+        "metaworld/push-back-v3/sft_train/006",
+        "metaworld/push-back-v3/sft_train/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/push-back-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/push-back-v3/rl_train/001",
+        "metaworld/push-back-v3/rl_train/002",
+        "metaworld/push-back-v3/rl_train/004",
+        "metaworld/push-back-v3/rl_train/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/push-back-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/push-back-v3/validation/005",
+        "metaworld/push-back-v3/validation/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/push-back-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/push-back-v3/eval_seen/001",
+        "metaworld/push-back-v3/eval_seen/006",
+        "metaworld/push-back-v3/eval_seen/005",
+        "metaworld/push-back-v3/eval_seen/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/plate-slide-side-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/plate-slide-side-v3/sft_train/003",
+        "metaworld/plate-slide-side-v3/sft_train/005",
+        "metaworld/plate-slide-side-v3/sft_train/001",
+        "metaworld/plate-slide-side-v3/sft_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/plate-slide-side-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/plate-slide-side-v3/rl_train/002",
+        "metaworld/plate-slide-side-v3/rl_train/003",
+        "metaworld/plate-slide-side-v3/rl_train/000",
+        "metaworld/plate-slide-side-v3/rl_train/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/plate-slide-side-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/plate-slide-side-v3/validation/001",
+        "metaworld/plate-slide-side-v3/validation/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/plate-slide-side-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/plate-slide-side-v3/eval_seen/001",
+        "metaworld/plate-slide-side-v3/eval_seen/004",
+        "metaworld/plate-slide-side-v3/eval_seen/002",
+        "metaworld/plate-slide-side-v3/eval_seen/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-unplug-side-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/peg-unplug-side-v3/sft_train/005",
+        "metaworld/peg-unplug-side-v3/sft_train/006",
+        "metaworld/peg-unplug-side-v3/sft_train/004",
+        "metaworld/peg-unplug-side-v3/sft_train/000"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-unplug-side-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/peg-unplug-side-v3/rl_train/002",
+        "metaworld/peg-unplug-side-v3/rl_train/005",
+        "metaworld/peg-unplug-side-v3/rl_train/000",
+        "metaworld/peg-unplug-side-v3/rl_train/001"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-unplug-side-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/peg-unplug-side-v3/validation/004",
+        "metaworld/peg-unplug-side-v3/validation/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/peg-unplug-side-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/peg-unplug-side-v3/eval_seen/000",
+        "metaworld/peg-unplug-side-v3/eval_seen/001",
+        "metaworld/peg-unplug-side-v3/eval_seen/004",
+        "metaworld/peg-unplug-side-v3/eval_seen/003"
+      ]
+    },
+    {
+      "task_key": "metaworld/stick-pull-v3",
+      "phase": "sft_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/stick-pull-v3/sft_train/000",
+        "metaworld/stick-pull-v3/sft_train/005",
+        "metaworld/stick-pull-v3/sft_train/001",
+        "metaworld/stick-pull-v3/sft_train/004"
+      ]
+    },
+    {
+      "task_key": "metaworld/stick-pull-v3",
+      "phase": "rl_train",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/stick-pull-v3/rl_train/005",
+        "metaworld/stick-pull-v3/rl_train/006",
+        "metaworld/stick-pull-v3/rl_train/003",
+        "metaworld/stick-pull-v3/rl_train/002"
+      ]
+    },
+    {
+      "task_key": "metaworld/stick-pull-v3",
+      "phase": "validation",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/stick-pull-v3/validation/004",
+        "metaworld/stick-pull-v3/validation/006"
+      ]
+    },
+    {
+      "task_key": "metaworld/stick-pull-v3",
+      "phase": "eval_seen",
+      "method": "task_geometry_maximin",
+      "candidate_count": 7,
+      "case_ids": [
+        "metaworld/stick-pull-v3/eval_seen/005",
+        "metaworld/stick-pull-v3/eval_seen/002",
+        "metaworld/stick-pull-v3/eval_seen/001",
+        "metaworld/stick-pull-v3/eval_seen/004"
+      ]
+    }
+  ],
+  "preserved_case_count": 920,
+  "previous_revision": "revisions/v4",
+  "policy": "Existing task and case bindings are preserved; new states use measured / cached task geometry."
+}

@@ -1,0 +1,530 @@
+{
+  "task": {
+    "task_key": "maniskill/DrawSVG-v1",
+    "bench": "maniskill",
+    "task_id": "DrawSVG-v1",
+    "env_id": "openeta/maniskill_DrawSVG-v1-v0",
+    "role": "shared",
+    "horizon": 500,
+    "expected_action_dim": 6,
+    "environment_config": {
+      "robot": "panda_stick",
+      "control_mode": "pd_ee_delta_pose",
+      "obs_mode": "rgbd",
+      "sim_backend": "physx_cuda",
+      "pass_robot_uids": true
+    }
+  },
+  "cases": [
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 979377004,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1556054104,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1089501350,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/003",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 798190743,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/004",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 994706943,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/005",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1026530468,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/006",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 855305463,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/007",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1665910233,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/008",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 2128146870,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/009",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1686135703,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/010",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1012666612,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/011",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 774957375,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/012",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 2120941725,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/013",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 1741624411,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/sft_train/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "sft_train",
+      "seed": 457537151,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1051235234,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 801109004,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 388518905,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/003",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1384018221,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/004",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1909323732,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/005",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1025963951,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/006",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1653296094,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/007",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 634301817,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/008",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 2133481835,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/009",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 144516605,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/010",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 529023214,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/011",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 427108427,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/012",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 1308802875,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/013",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 544400018,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/rl_train/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "rl_train",
+      "seed": 346288140,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/validation/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "validation",
+      "seed": 173362293,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/000",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 650672486,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/001",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1701702120,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/002",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1061493001,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/003",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 369259078,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/004",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1230454449,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/005",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1541355471,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/006",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1109494480,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/007",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1687349082,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/008",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1177754688,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/009",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1848145142,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/010",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 935605082,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/011",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 609927302,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/012",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 198446743,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/013",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1128596396,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/014",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1603697506,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/015",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1626655441,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/016",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1303310890,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/017",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 250269094,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/018",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 1854233721,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawSVG-v1/eval_seen/019",
+      "task_key": "maniskill/DrawSVG-v1",
+      "phase": "eval_seen",
+      "seed": 2067250440,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    }
+  ]
+}

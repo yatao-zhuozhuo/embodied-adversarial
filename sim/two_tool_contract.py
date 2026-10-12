@@ -23,14 +23,43 @@ def controller_contract(env, backend):
                       slots=["dx", "dy", "dz", "gripper"], position_scale_m=float(raw.action_scale),
                       rotation="not controlled", gripper={"open_value": -1, "close_value": 1})
     elif backend == "maniskill":
-        controller = raw.agent.controller.controllers["arm"]
-        config = controller.config
-        result.update(controller=type(controller).__name__, mode=raw.control_mode,
-                      slots=["dx", "dy", "dz", "rx", "ry", "rz", "gripper"], frame=config.frame,
-                      rotation="XYZ Euler delta; normalized rotation vector norm-clipped to 1, multiplied by rot_lower",
-                      position_low_m=values(config.pos_lower), position_high_m=values(config.pos_upper),
-                      rotation_multiplier_rad=values(config.rot_lower), use_delta=config.use_delta,
-                      gripper={"open_value": 1, "close_value": -1, "semantics": "finger joint position"})
+        aggregate = raw.agent.controller
+        parts = getattr(aggregate, 'controllers', {'joints': aggregate})
+        if raw.control_mode == 'pd_ee_delta_pose':
+            controller = parts['arm']
+            config = controller.config
+            slots = ["dx", "dy", "dz", "rx", "ry", "rz"]
+            if 'gripper' in parts:
+                slots.append('gripper')
+            result.update(controller=type(controller).__name__, mode=raw.control_mode,
+                          slots=slots, frame=config.frame,
+                          rotation="XYZ Euler delta; normalized rotation vector norm-clipped to 1, multiplied by rot_lower",
+                          position_low_m=values(config.pos_lower), position_high_m=values(config.pos_upper),
+                          rotation_multiplier_rad=values(config.rot_lower), use_delta=config.use_delta,
+                          gripper={"open_value": 1, "close_value": -1, "semantics": "finger joint position"} if 'gripper' in parts else {"supported": False})
+        elif raw.control_mode == 'pd_joint_pos':
+            controller = aggregate
+            slots, components = [], []
+            for name, part in parts.items():
+                space = getattr(part, 'single_action_space', None)
+                if space is None:
+                    space = part.action_space
+                count = int(space.shape[-1])
+                names = list(part.config.joint_names)
+                labels = names if len(names) == count else [f'command_{i}' for i in range(count)]
+                slots.extend(f'{name}:{label}' for label in labels)
+                components.append({'name': name, 'joint_names': names,
+                                   'normalized': bool(part.config.normalize_action),
+                                   'use_delta': bool(part.config.use_delta),
+                                   'action_low': values(space.low), 'action_high': values(space.high)})
+            result.update(controller=type(controller).__name__, mode=raw.control_mode,
+                          slots=slots, frame='native_joint_coordinates', components=components,
+                          normalization='Native bounded joint-position targets; consult component normalization and action limits.',
+                          rotation='Controlled by native joints, not Cartesian Euler or axis-angle commands',
+                          gripper={'supported': False, 'semantics': 'Finger joints are commanded individually'},
+                          tcp={'supported': False})
+        else:
+            raise ValueError(f'Unaudited ManiSkill control mode: {raw.control_mode}')
     elif backend == "libero":
         spec = direct.openeta_control_spec
         cartesian = spec["cartesian_delta"]

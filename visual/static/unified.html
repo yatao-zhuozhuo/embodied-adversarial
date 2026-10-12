@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenETA · 统一题单</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="unified.css"></head>
+<body class="unified-page">
+<header><b>OpenETA · 统一题单</b><nav aria-label="数据来源"><a class="view-link" href="index.html">轨迹浏览器</a><a class="view-link active" href="unified.html">统一题单</a></nav><span class="muted" id="revision">读取划分…</span></header>
+<main><aside>
+<div class="toolbar"><button id="refresh-tasks">刷新题单</button><span class="muted">缓存只读预览</span></div>
+<input id="task-search" type="search" placeholder="搜索题目、技能或指令" aria-label="搜索题目">
+<select id="task-bench" aria-label="Benchmark"><option value="">全部 benchmark</option></select>
+<select id="task-role" aria-label="题目用途"><option value="">共同题 + 泛化题</option><option value="shared">共同训练 / 验证 / 测试题</option><option value="generalization">预留泛化题</option></select>
+<div id="task-count" class="muted"></div><div id="task-error" role="alert"></div><div id="task-list"></div>
+</aside><section id="unified-viewer">
+<div id="benchmark-summary" class="benchmark-summary"></div>
+<div class="task-heading"><div><p class="eyebrow" id="task-badge">统一任务 · 独立初态</p><h2 id="task-title">选择一道题查看</h2></div><span id="verification" class="badge">待运行核验</span></div>
+<p id="task-instruction" class="instruction">LIBERO、MetaWorld 各 25 个共同题，ManiSkill、RoboCasa 各 15 个共同题；每个 bench 各 5 个泛化题；每个共同题 SFT 4 个、RL 4 个、验证 2 个、同任务测试 4 个初态。</p>
+<div id="split-counts" class="split-counts"></div>
+<div class="case-toolbar"><label>用途<select id="case-phase" aria-label="初态用途"></select></label><label class="case-picker">初态<select id="case-picker" aria-label="选择初态"></select></label></div>
+<div class="preview-heading"><b id="preview-label">选择题目后显示已有图片</b><span id="preview-status" class="muted" role="status"></span></div>
+<div id="task-previews" class="task-previews"></div>
+<details id="history-example" hidden><summary>同题历史参考图（与所选 seed 无关，不用于比较初态）</summary><p id="history-source" class="muted"></p><div id="history-previews" class="task-previews"></div></details>
+<div class="info-grid"><div class="info-panel"><h3>所选初态</h3><dl id="case-info"></dl></div><div class="info-panel"><h3>任务与接口</h3><dl id="task-info"></dl></div></div>
+<details><summary>题目与初态记录</summary><pre id="task-raw"></pre></details>
+</section></main><script src="unified.js?v=20261011-v5-expanded"></script></body></html>

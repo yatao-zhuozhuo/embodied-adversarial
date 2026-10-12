@@ -791,8 +791,9 @@ class UnifiedEnv(gym.Env):
         agent = raw.get("agent", {})
         if isinstance(agent, dict) and "qpos" in agent:
             state = self._np(agent["qpos"])
-            joint_positions = state[..., :9] if state.shape[-1] >= 9 else state
-            obs.setdefault("proprio", {})["joint_positions"] = joint_positions
+            # This is already the native agent joint vector, not a flat state
+            # containing objects. Dexterous hands need all their joint angles.
+            obs.setdefault("proprio", {})["joint_positions"] = state
         # state mode: flat tensor
         _raw = raw.get("_raw")
         if not obs.get("proprio"):
@@ -855,6 +856,15 @@ class UnifiedEnv(gym.Env):
             st = raw.get("_raw") if not isinstance(raw.get("_raw"), dict) else None
             if st is not None:
                 obs["proprio"] = {"joint_positions": self._np(st)}
+
+        rotate_dir = raw.get('extra', {}).get('rotate_dir')
+        if rotate_dir is not None:
+            axis_vector = self._np(rotate_dir).reshape(-1, 3)[0]
+            axis = int(np.argmax(axis_vector))
+            obs['task_description'] = (
+                f"Rotate the held object through more than two full turns about the {'XYZ'[axis]} axis "
+                "specified by the environment, without dropping it."
+            )
 
         return obs
 

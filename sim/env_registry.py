@@ -266,7 +266,7 @@ def make_env(
     # These envs bypass the RLinf wrapper for direct gym.make()
     if env_type == "metaworld":
         raw = _make_metaworld_direct(task_name, render_mode=render_mode,
-                                     image_width=image_width, image_height=image_height)
+                                     image_width=image_width, image_height=image_height, seed=seed)
         ue = UnifiedEnv(raw, render_mode=render_mode)
         ue._include_objects = include_objects
         return ue
@@ -342,8 +342,17 @@ def make_env(
     return UnifiedEnv(raw, render_mode=render_mode)
 
 
+class _MetaWorldSeededReset(gym.Wrapper):
+    """Seed before task selection: this MetaWorld reset implementation ignores seed."""
+    def reset(self, *, seed=None, options=None):
+        if seed is not None:
+            self.env.unwrapped.seed(int(seed))
+        return self.env.reset(seed=seed, options=options)
+
+
 def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
-                            image_width: int | None = None, image_height: int | None = None) -> gym.Env:
+                            image_width: int | None = None, image_height: int | None = None,
+                            seed: int | None = None) -> gym.Env:
     """Create a MetaWorld gym env directly (bypasses MetaWorldEnv vectorisation).
 
     Note: Requires mujoco_py (MuJoCo 210) to be installed with working
@@ -366,6 +375,7 @@ def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
         env_name=env_name,
         render_mode=rm,
         camera_id=2,
+        seed=seed,
         disable_env_checker=True,
         **kwargs,
     )
@@ -384,7 +394,11 @@ def _make_metaworld_direct(env_name: str, render_mode: str | None = "rgb_array",
         env._task_description = descs[idx]
     except Exception:
         env._task_description = str(env_name)
-    return env
+    wrapped = _MetaWorldSeededReset(env)
+    wrapped._task_description = getattr(env, '_task_description', str(env_name))
+    wrapped._openeta_seed_protocol = 'metaworld-create-and-preselect-seed.v1'
+    wrapped._openeta_creation_seed = seed
+    return wrapped
 
 
 def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
@@ -402,6 +416,8 @@ def _make_maniskill_direct(task_id: str, render_mode: str | None = "rgb_array",
                                # controller steps, so the inner wrapper must
                                # not terminate a multi-waypoint manipulation.
                                "max_episode_steps": 2000}
+    from sim.maniskill_task_profiles import TASK_DEFAULTS
+    kwargs.update(TASK_DEFAULTS.get(task_id, {}))
     # Official RL demonstrations may have been recorded with PhysX CUDA.
     # Keep the interactive default unchanged; a dedicated replay worker can
     # opt into the matching backend before it starts.

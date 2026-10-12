@@ -1,0 +1,3381 @@
+{
+  "task_key": "maniskill/PullCube-v1",
+  "candidate_count": 14,
+  "requested_sample_count": 14,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/sft_train/000",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 307763865,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 7,
+        "source_ref_id": "maniskill/PullCube-v1/sft_train/000",
+        "state_fingerprint": "f96d0b5fb9dfa0859c4e8ff2891d7d09ce818fe7cf78a02989314fb5f3195f80"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.08269882202148438,
+            0.07105255126953125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.2826995849609375,
+            0.07105255126953125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.020917817950248718,
+            0.4107668995857239,
+            -0.012116379104554653,
+            -1.9734748601913452,
+            0.000775810971390456,
+            2.3576126098632812,
+            0.7562041282653809,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.08269882202148438,
+            0.07105255126953125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.2826995849609375,
+            0.07105255126953125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a1456557c4613828944ee2ed5e13f440af4808c9e63cdfc82f3ee3ae6d373eb4",
+      "task_state_fingerprint": "a3d6612331e50f5c95716e25c69f5e11140330c9121856d4b83c88f9b1ae7da7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/sft_train/000/base_camera.png",
+          "sha256": "8ccd6567beaa40fb4a9296729fe1a0b638e944bfdac3b8d003e08eabea42d3f6"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/sft_train/008",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1475406987,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 36,
+        "source_ref_id": "maniskill/PullCube-v1/sft_train/008",
+        "state_fingerprint": "c92fa98d19d8c410297b2ac5f070953ab7a3a825a92e4a6b5d3067df2baa6a69"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.012302398681640625,
+            -0.09076690673828125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.21230316162109375,
+            -0.09076690673828125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.019935624673962593,
+            0.3866986334323883,
+            -0.018461696803569794,
+            -1.971967339515686,
+            -0.002787521807476878,
+            2.3453996181488037,
+            0.7790682911872864,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.012302398681640625,
+            -0.09076690673828125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.21230316162109375,
+            -0.09076690673828125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1431007e537cdad14c4c77abe863d5c8dbd8153eea6f64e8771b70e93162607d",
+      "task_state_fingerprint": "496bac36956590cc30527966e827ff8b99ed1f73887f756db69fabf31f847f44",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/sft_train/008/base_camera.png",
+          "sha256": "6010f7ee90caf8b162592bb7eabf363aa677e1f61549610065377b82b4db0b12"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/sft_train/012",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 397426882,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 97,
+        "source_ref_id": "maniskill/PullCube-v1/sft_train/012",
+        "state_fingerprint": "1cbf4b0f006e7d327572b605a66efcfa32906ec9ff4f9c753a2fe057c6a7df47"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.0596466064453125,
+            0.0626983642578125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.14035797119140625,
+            0.0626983642578125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.010734472423791885,
+            0.39881545305252075,
+            0.041077788919210434,
+            -1.93248450756073,
+            0.0025105359964072704,
+            2.3634512424468994,
+            0.7907973527908325,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0596466064453125,
+            0.0626983642578125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.14035797119140625,
+            0.0626983642578125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7a0a7936280695c658cd46b29a8fa0c86c5fd8a74e9ca5d843d70ff370b54aa7",
+      "task_state_fingerprint": "6cc1cc0a3c64c322945146e7cb2e13492882a75a0f8746d89ca2cfed779a670f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/sft_train/012/base_camera.png",
+          "sha256": "a5a0ec896c53ad02189174f6e4143a404b44b9fce49a9ad4537b5ae2410fd882"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/sft_train/013",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1964855642,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 79,
+        "source_ref_id": "maniskill/PullCube-v1/sft_train/013",
+        "state_fingerprint": "5dfafd60910a6c2d4897d46a98b85374c29ad9b317f0e814ecfe0b400522d863"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.08672618865966797,
+            -0.08135986328125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.11327362060546875,
+            -0.08135986328125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.007885279133915901,
+            0.4013064503669739,
+            0.050520822405815125,
+            -1.9941165447235107,
+            -0.018249813467264175,
+            2.408116579055786,
+            0.7598000764846802,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.08672618865966797,
+            -0.08135986328125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.11327362060546875,
+            -0.08135986328125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "06f788f0ebf38e144650df7904df289ebf22f05b08a761860aaf29f437a9f1cb",
+      "task_state_fingerprint": "7265d4bd0d3d2bb6a418f3f3f593af8c6fcfcf0f119d1794118c009518d0121b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/sft_train/013/base_camera.png",
+          "sha256": "47c568c06a8bbf4b58769ea14bf5378a62fc539f7eb0a8be34eea3b6aabb5ff9"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/rl_train/006",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 367624988,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 18,
+        "source_ref_id": "maniskill/PullCube-v1/rl_train/006",
+        "state_fingerprint": "b0b78e64d73b83e0bb52f134396bf88ba4b884391ebe1b57ebe8a0860f477fec"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.043221473693847656,
+            0.0171051025390625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.24322128295898438,
+            0.0171051025390625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02246066741645336,
+            0.3879357874393463,
+            -0.020400874316692352,
+            -1.9591610431671143,
+            0.027788931503891945,
+            2.3743975162506104,
+            0.7653200030326843,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.043221473693847656,
+            0.0171051025390625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.24322128295898438,
+            0.0171051025390625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d6109a1b96fc68f3242374729f35dee6f187a164d50799b4a3be6603dedcf524",
+      "task_state_fingerprint": "7e15330a935836d10b6b158527a32f0737295e814c8fb7e357ca5793864e3e7e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/rl_train/006/base_camera.png",
+          "sha256": "ca87e526c118e43e04a2c4824013c7d235fe89e3cc3876ff8a3d571f04457011"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/rl_train/007",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1395411357,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 6,
+        "source_ref_id": "maniskill/PullCube-v1/rl_train/007",
+        "state_fingerprint": "b599b9c4c1968ae0278f4da291696cf99c11bd49699a602007e353c276cef542"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.08614349365234375,
+            -0.0150299072265625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.2861442565917969,
+            -0.0150299072265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.008259634487330914,
+            0.4077175259590149,
+            -0.030958788469433784,
+            -1.9873746633529663,
+            -0.029674801975488663,
+            2.3497934341430664,
+            0.8001828193664551,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.08614349365234375,
+            -0.0150299072265625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.2861442565917969,
+            -0.0150299072265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "324bd344f9abefe4ad3bfda479ee1cef706700fbc54b2072093fc73786d1cbfc",
+      "task_state_fingerprint": "3a42c22121e3bccbdfb27faa22e8e6736bc92af5e4fca3f84a5a56e55a46d875",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/rl_train/007/base_camera.png",
+          "sha256": "5578ce5a8785a384effde31cc1fad92f5b8802f1dea35a80d18aa4ddb46bff3c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/rl_train/008",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1813452446,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 5,
+        "source_ref_id": "maniskill/PullCube-v1/rl_train/008",
+        "state_fingerprint": "eab6b4f12359097f9e60fffbe10dfae9d8fb71d9364e64af9379541dcdf27a47"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.0196380615234375,
+            -0.03466033935546875,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.18036270141601562,
+            -0.03466033935546875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.005779299419373274,
+            0.42877206206321716,
+            -0.01586448773741722,
+            -1.9544651508331299,
+            0.011045332998037338,
+            2.3354129791259766,
+            0.7904938459396362,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0196380615234375,
+            -0.03466033935546875,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.18036270141601562,
+            -0.03466033935546875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "47f990bf3f2b4819a14c9679fb385839a3b7b51751a47613b2edd6d7033f6a3c",
+      "task_state_fingerprint": "1c58776567eecba6ac6b8bd8e28c4da1f00dde27978f4a3bed51601ccc466f1b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/rl_train/008/base_camera.png",
+          "sha256": "03a4e8fcabdb898f1a1b622e0acd15e1f2e880c251b0b71e4b11d3bd854b426e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/rl_train/011",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1780735420,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 49,
+        "source_ref_id": "maniskill/PullCube-v1/rl_train/011",
+        "state_fingerprint": "3072266e3b8393eadd8265854bb271127e6f60ea8ccc660afb909dc820f1534a"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.08145427703857422,
+            -0.0984954833984375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.28145408630371094,
+            -0.0984954833984375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.03139747306704521,
+            0.39816543459892273,
+            0.016181230545043945,
+            -1.9864195585250854,
+            0.0018645772943273187,
+            2.3565757274627686,
+            0.8184966444969177,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.08145427703857422,
+            -0.0984954833984375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.28145408630371094,
+            -0.0984954833984375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "15548efbb184a89d24280b6b298540dacbaeb128d78c336727369add340de76b",
+      "task_state_fingerprint": "b12508344901078b65ca81cc9b8aab09b149c55b5f5bf07d512530294d4ab0b2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/rl_train/011/base_camera.png",
+          "sha256": "e729544586b66554e289fcda3e794d6d65f061aa4c4b1a4a11382224a9cc7616"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/validation/cache-068",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 802752964,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 68,
+        "source_ref_id": "maniskill/PullCube-v1/validation/cache-068",
+        "state_fingerprint": "49c9fe006f1cf8f600ba7ba348ebfb0431b847f5dffc0033ade923f5aeb42660"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.035369873046875,
+            -0.041656494140625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.23537063598632812,
+            -0.041656494140625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.01527359988540411,
+            0.40961262583732605,
+            -0.007610093802213669,
+            -1.9664894342422485,
+            -0.020248394459486008,
+            2.351876974105835,
+            0.8003803491592407,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.035369873046875,
+            -0.041656494140625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.23537063598632812,
+            -0.041656494140625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9176c300e44db79ef476668e1292c60717cab3fec5c4be17d0de4d669c2088be",
+      "task_state_fingerprint": "aa904ee22dc2935b0a71d44823e4a898813383141e3b2cf630e0a62b7e739c95",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/validation/cache-068/base_camera.png",
+          "sha256": "1def20f7f062407b44b8793d9ae0a75287c27d3c1a607418045bbe838e65a086"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/validation/cache-071",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 406044765,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 71,
+        "source_ref_id": "maniskill/PullCube-v1/validation/cache-071",
+        "state_fingerprint": "97722e07eaf040157313ba075601034bd6110cb59be4bcccaad32f4914da27e8"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.0395660400390625,
+            -0.07684326171875,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.16043472290039062,
+            -0.07684326171875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.012738358229398727,
+            0.3766624927520752,
+            -0.016429325565695763,
+            -1.9522626399993896,
+            -0.01005321741104126,
+            2.3849711418151855,
+            0.7548828721046448,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0395660400390625,
+            -0.07684326171875,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.16043472290039062,
+            -0.07684326171875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "76a3f70470c06f5f7fd7faa1a9aaf40013e8d2e9e10b640825c8231fd781bc2d",
+      "task_state_fingerprint": "db75c10f2c4f311efbd79fb6a479e52e0c65317761d9f8bd2271f7a95b64e854",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/validation/cache-071/base_camera.png",
+          "sha256": "ee23c2d8307788d63247c7aea6c82d2ba8732dd7200cc389b2abd4f536a8d78f"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/eval_seen/009",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1687794865,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 72,
+        "source_ref_id": "maniskill/PullCube-v1/eval_seen/009",
+        "state_fingerprint": "68530f982a440c507f6dab923a53172d1a3a1fc3a757f10498e4cfe8a19c3a9e"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.0998382568359375,
+            -0.059173583984375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.2998390197753906,
+            -0.059173583984375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.01741367019712925,
+            0.39618119597435,
+            -0.01902635209262371,
+            -1.9443103075027466,
+            -0.03869283199310303,
+            2.3723855018615723,
+            0.818162739276886,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.0998382568359375,
+            -0.059173583984375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.2998390197753906,
+            -0.059173583984375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6ee1684fed24ebf75d2402e1c420dc48eb7b33b3ad1473907a46130865e24246",
+      "task_state_fingerprint": "2b272fd22c0cd4945d32535cec954c9b686884d6b56e13ed43f36e47b9909e62",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/eval_seen/009/base_camera.png",
+          "sha256": "80bd3091d689eae0cce885394aec22491e1f1baf1a8111bdb9b8706fe7ce3257"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/eval_seen/015",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 957005712,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 26,
+        "source_ref_id": "maniskill/PullCube-v1/eval_seen/015",
+        "state_fingerprint": "704e1a5e6d3021e767e337ceaaf6737d07dbefa9477234bd11f85d7fe9a7cec5"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            -0.01602935791015625,
+            0.099517822265625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.21603012084960938,
+            0.099517822265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0037503158673644066,
+            0.4091392755508423,
+            -0.017580483108758926,
+            -1.9669322967529297,
+            -0.02311698906123638,
+            2.372300624847412,
+            0.7506846785545349,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.01602935791015625,
+            0.099517822265625,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.21603012084960938,
+            0.099517822265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "682780017aaf1aeede6d8d8c77feffb65311a043cfca1aff9a9110b38fc834d2",
+      "task_state_fingerprint": "f92ac27bae04f6cb80705c591e7b3e8d8a7d0d4fcac926507f0affd725bbfa56",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/eval_seen/015/base_camera.png",
+          "sha256": "e933bec198cef2aff56718946aa7bf85df8643ed09956503cc98be1e562f123c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/eval_seen/016",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1745770329,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 46,
+        "source_ref_id": "maniskill/PullCube-v1/eval_seen/016",
+        "state_fingerprint": "845e6caa30913aa3f67cd4febdce85c70bd4957ea59f4bbc78756a5d8bb2da00"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.0233917236328125,
+            0.0796966552734375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.17660903930664062,
+            0.0796966552734375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.009572136215865612,
+            0.41597169637680054,
+            0.022363685071468353,
+            -1.9733593463897705,
+            0.01748933456838131,
+            2.3756041526794434,
+            0.772223711013794,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0233917236328125,
+            0.0796966552734375,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.17660903930664062,
+            0.0796966552734375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "db9910dad9aa625700824fb243362788886a71612d3887018ee2a353712fa634",
+      "task_state_fingerprint": "a5e0bfef3307f9be8cfe1545c6c40e648c8f62ffbfa1c405769db0fdb4637593",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/eval_seen/016/base_camera.png",
+          "sha256": "abf971eaca0fba74a7e0ef845644305ce5a0519e2f864ec4d2eb89961ef4fc1e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PullCube-v1/eval_seen/017",
+      "task_key": "maniskill/PullCube-v1",
+      "seed": 1461907977,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 95,
+        "source_ref_id": "maniskill/PullCube-v1/eval_seen/017",
+        "state_fingerprint": "8c389a9508fea6411472abe5dd454668db4727711f71fdd69b58c2c55087644c"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.09989166259765625,
+            -0.02081298828125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            -0.10010528564453125,
+            -0.02081298828125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149978637695312,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.025875238701701164,
+            0.3601304292678833,
+            0.005251077935099602,
+            -1.9296374320983887,
+            0.017465002834796906,
+            2.359574794769287,
+            0.7892819046974182,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -0.7310553193092346,
+              0.0,
+              -0.6823182106018066,
+              -0.19494807720184326
+            ],
+            [
+              0.6823182106018066,
+              0.0,
+              -0.7310553193092346,
+              0.5239229202270508
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              0.7310553193092346,
+              -0.6823182106018066,
+              -0.5
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6823182106018066,
+              0.7310552597045898,
+              0.25
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000274658203125,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.09989166259765625,
+            -0.02081298828125,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            -0.10010528564453125,
+            -0.02081298828125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "94df3e7ba88a280171f068e784696173d37bfe8adf58c082073e89ba5ab9deda",
+      "task_state_fingerprint": "2cc7b514ae16926de841c4fa5cfad781c495873fa08f53b7ab2510a56259e769",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PullCube-v1/eval_seen/017/base_camera.png",
+          "sha256": "dd45fa0e0bc902b513d2de9a7995af9723501a4350f81cb4fe4b0c9c1a917a67"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    }
+  ]
+}

@@ -1,0 +1,2345 @@
+{
+  "task_key": "metaworld/disassemble-v3",
+  "records": [
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/000",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1171618307,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07179040049239258,
+          0.6325667168808884,
+          0.02500775393911102,
+          -0.06215823510576149,
+          0.6890966419525848,
+          0.17006478814976433
+        ],
+        "/object_position": [
+          0.18280212770495852,
+          0.700215763055434,
+          0.024953229109672535
+        ],
+        "/goal_position": [
+          0.07179040049239258,
+          0.6325667168808884,
+          0.175007753939111
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "23a48b3ef4a670e7170adf3e721965125998aa2a734b0621779f56ea3212bf79",
+      "task_state_fingerprint": "48957de8d5b2cec3f34de0719ebc9a83fa49c4cd4c2de0805564fafde0437851",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/000/native_camera_2.png",
+          "sha256": "a1f0c585b54ab61acc4757b485694555f8b75c2ed785a328686d5855552dc55e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/001",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 942521679,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.009924768300447674,
+          0.6387679132488968,
+          0.025008932350841537,
+          -0.08923870753628549,
+          0.7333816621241711,
+          0.17003299047560838
+        ],
+        "/object_position": [
+          0.13992475686599726,
+          0.6387679133843014,
+          0.02495440752154168
+        ],
+        "/goal_position": [
+          0.009924768300447674,
+          0.6387679132488968,
+          0.17500893235084153
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "919eb5c5b9abce2ca7b1727bc08ab39f903d0888e2cd3f238d1667859aac92f6",
+      "task_state_fingerprint": "d01f74dfda48bf29c056718a1c2725e0cf6f2e4f75c6867c7143ddbdc0f5b614",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/001/native_camera_2.png",
+          "sha256": "990b6c6744a24ed24b83e092acec2c80d881cb527c0c47d3549669edb1ecaa67"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/002",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 633570141,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09891273866019251,
+          0.7404246322691657,
+          0.025006497407692303,
+          -0.09795373815610031,
+          0.7274236981233341,
+          0.16993132283180357
+        ],
+        "/object_position": [
+          0.2289127272257421,
+          0.7404246324045702,
+          0.024951972578392444
+        ],
+        "/goal_position": [
+          0.09891273866019251,
+          0.7404246322691657,
+          0.1750064974076923
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "799ccaadd602deb23b58c3e570e5b770d8a32bf791f4574a56a2842b2c628154",
+      "task_state_fingerprint": "d3991c6288a590311f5661c20f607b4cae5708a431c57ac780e5d8c03061f204",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/002/native_camera_2.png",
+          "sha256": "4c78c2126b5c3bed35f3f257fc3b820210aab555961ad4b44b68cd77efc27644"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/003",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 564225923,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07400124687842974,
+          0.6024596298529977,
+          0.025004040563020153,
+          -0.007692651817557156,
+          0.7242838409509947,
+          0.17005526121351255
+        ],
+        "/object_position": [
+          0.20378466182547944,
+          0.6099604452569991,
+          0.024949515733716766
+        ],
+        "/goal_position": [
+          0.07400124687842974,
+          0.6024596298529977,
+          0.17500404056302016
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c63234ac649663ab501caf4d2766cef191c1a9b960563b479b9fd663d97c39f0",
+      "task_state_fingerprint": "3a1066e54214491ccadb59906584094e02191e0b3c196c211f2e969ac3f1ac3a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/003/native_camera_2.png",
+          "sha256": "54e79852d9876392f9c95eac2c1f0d2cac55a8786412a723847b6339467196c0"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/004",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1097399806,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.061654400250290654,
+          0.6498716944329125,
+          0.025007973966143685,
+          -0.07289881071917058,
+          0.742515859161449,
+          0.16993523221004844
+        ],
+        "/object_position": [
+          0.18893145244456327,
+          0.6234038080084271,
+          0.024953449137314503
+        ],
+        "/goal_position": [
+          0.061654400250290654,
+          0.6498716944329125,
+          0.17500797396614368
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2f0695e87bd7da42e99af1eb91989dbddd39415c6b5b4609b336e99c87371b25",
+      "task_state_fingerprint": "5876bc7d123258a45203f67ce8d89b3273744b4bc0d39349bfa1aa0e1e7d39d2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/004/native_camera_2.png",
+          "sha256": "cd83849e7ce67f28ccf5067d7329ddff8f916ace58b0a8f0bf56e1a16faf6472"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/005",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1288423560,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.011055110257687906,
+          0.6875140167366948,
+          0.025000059399149805,
+          -0.08937816123045261,
+          0.672246123294284,
+          0.16992737102719732
+        ],
+        "/object_position": [
+          0.1410550988232375,
+          0.6875140168720993,
+          0.024945534569849947
+        ],
+        "/goal_position": [
+          0.011055110257687906,
+          0.6875140167366948,
+          0.1750000593991498
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "39bb65cc685f25e05fa14a0c741ac784dd347e79b5596872f2e95bc96f869582",
+      "task_state_fingerprint": "b9d20cc25280529766d396d1644beb00b57a52b1623a11a212b2c73a6139913a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/005/native_camera_2.png",
+          "sha256": "b895a31838848bcfca5e1e01a79a848b5056980aca0c3cbd3b60f0a416a28079"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/006",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 592684729,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08861143085603623,
+          0.6194125114412024,
+          0.02500484445141593,
+          -0.03807163793932773,
+          0.6223033039438728,
+          0.17004780692255217
+        ],
+        "/object_position": [
+          0.21855836238080825,
+          0.6231262715760482,
+          0.024950319622114397
+        ],
+        "/goal_position": [
+          0.08861143085603623,
+          0.6194125114412024,
+          0.17500484445141593
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e7872482d7e3d83e544f67587c31c1b61620d8dbddd0f863d19e62c054b9ee2f",
+      "task_state_fingerprint": "77783d0338efda664c211be07f1a62b2ae8a5d6388324737ee0621b63b4d98e5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/006/native_camera_2.png",
+          "sha256": "656ec9f6d8fd18dba553a3c52063312f932140eabf5b8801521d13ace3345fbd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/007",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 570399862,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.02837022550856463,
+          0.7373219811833014,
+          0.025000473131986892,
+          -0.03459430261320372,
+          0.616767130630069,
+          0.1700187368208452
+        ],
+        "/object_position": [
+          0.15837021407411422,
+          0.737321981318706,
+          0.024945948302687034
+        ],
+        "/goal_position": [
+          0.02837022550856463,
+          0.7373219811833014,
+          0.17500047313198688
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cb4904894e564824bece3e99e0c0043b35f91e61d8b3157a93651076acbf7da3",
+      "task_state_fingerprint": "d4d391b0346e297db8713ef2eceb6bf0bfc914a97f19e15ee5814e4d7f9ce71e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/007/native_camera_2.png",
+          "sha256": "91c629fe79d34dcb15fb7100bc3c0b4076617b8cc2b1c1e1318929261e165c8d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/008",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1749812305,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.005778505497290066,
+          0.6374279648736397,
+          0.025002311915585614,
+          -0.06726061717262828,
+          0.7231523185990096,
+          0.17003628217248096
+        ],
+        "/object_position": [
+          0.13577849406283965,
+          0.6374279650090443,
+          0.024947787086285755
+        ],
+        "/goal_position": [
+          0.005778505497290066,
+          0.6374279648736397,
+          0.1750023119155856
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "16df00f9662185cc18040162eef6f08905ae749512c76a48e1760c73860d45ea",
+      "task_state_fingerprint": "23bd3552aac8ef9d99cbec5bf157fc0016aa8c157e209cadb632bfbc269e5457",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/008/native_camera_2.png",
+          "sha256": "295278553b926e5605c3e7f51a9adc93365a1a00cbb489d0330efd3a65e255b1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/009",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1503816710,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05181808281275359,
+          0.6057653528768018,
+          0.025009429803609966,
+          -0.0808633637547253,
+          0.6668510986442725,
+          0.1699911555729241
+        ],
+        "/object_position": [
+          0.14594208884049467,
+          0.6037231668016769,
+          0.1146559632855261
+        ],
+        "/goal_position": [
+          0.05181808281275359,
+          0.6057653528768018,
+          0.17500942980360995
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "01382f51c8150f755603b2427694c1efdf0ee8e1746734671080610e0be8cfef",
+      "task_state_fingerprint": "570c556428ac2ec2e40b7ae993a3b1d3845b6f9f35340ff10cbe93c992a08c4c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/009/native_camera_2.png",
+          "sha256": "045a4ce43850d153921d64c526810903821ef27e448d7030437d8c01ed9f6ed2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/010",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 390871945,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08902890264617014,
+          0.6265405450530668,
+          0.02500632513247952,
+          0.015699063350495618,
+          0.7228949771037422,
+          0.17005964147708139
+        ],
+        "/object_position": [
+          0.2171914316723481,
+          0.6483204252331118,
+          0.024951800303482503
+        ],
+        "/goal_position": [
+          0.08902890264617014,
+          0.6265405450530668,
+          0.17500632513247952
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3ee504d52cf3fa605344da80c2f2bf26529d07ec911096fa9733cd0e7881fd47",
+      "task_state_fingerprint": "b272b3973538109b1d82286f99bedca63e60b6b91c91cd1ce281b3014b7773cf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/010/native_camera_2.png",
+          "sha256": "36f6248d2415c371450f29495ed018a1759de3fc99cf78800848a391d5f80cf6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/011",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1373831007,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06937669247639935,
+          0.605356726173223,
+          0.025007232200221784,
+          0.002426348189036906,
+          0.7317406751272932,
+          0.16993448696037436
+        ],
+        "/object_position": [
+          0.18950374828154137,
+          0.6550506643410863,
+          0.02495270737246896
+        ],
+        "/goal_position": [
+          0.06937669247639935,
+          0.605356726173223,
+          0.17500723220022177
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "139142f46c3b10859223c731d291860cd198e2dd1aa8fc6ab8875f7fc76da58f",
+      "task_state_fingerprint": "b444dabb7593535b5814235eefc4cadc1c1a0ab51874338d050b29c318134a95",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/011/native_camera_2.png",
+          "sha256": "008d07e4fc569995393427def3d3283de4940341ec624cbe06e96854a7a2777e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/012",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1321515519,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04094518853150936,
+          0.6952597319168855,
+          0.025002906372622587,
+          -0.07726189312305105,
+          0.691015024600278,
+          0.16993860433892913
+        ],
+        "/object_position": [
+          0.17094517709705895,
+          0.6952597320522901,
+          0.02494838154332273
+        ],
+        "/goal_position": [
+          0.04094518853150936,
+          0.6952597319168855,
+          0.17500290637262259
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dcde1eacd1b288c7bfa60b790d91879cb4cca6e680fd254efbc532538a375173",
+      "task_state_fingerprint": "5506e88288fce2f0b8152317bef9a62a532da70fcfdb9ca47b1e4d4ac24646b0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/012/native_camera_2.png",
+          "sha256": "59506bd1f48553f15d4769c7c11986a2e74f7f7d2594a9fd23497668769173b8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/013",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 969124650,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.01920688799447844,
+          0.6186454725228284,
+          0.025008671160280806,
+          -0.08225479730403668,
+          0.7235040596974236,
+          0.1700114108734234
+        ],
+        "/object_position": [
+          0.14920667881424432,
+          0.6184203410566586,
+          0.024947821838116023
+        ],
+        "/goal_position": [
+          0.01920688799447844,
+          0.6186454725228284,
+          0.1750086711602808
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7d12fc1c40849629242907fd77dc1dfa9ae82a13b29d8ca7b3e548b4015fb196",
+      "task_state_fingerprint": "64bbdfbef41de3ee8fee3f0e1cb06f901d838fca529e637de5104599041256d4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/013/native_camera_2.png",
+          "sha256": "d76e2d9f31c002bd5ac84f7c183e810677c6cd7d3c2f07597a88441df4603303"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/sft_train/014",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 706659917,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.061925307779157834,
+          0.7204459912772514,
+          0.025000015836248345,
+          -0.09613032634912513,
+          0.6911763232448699,
+          0.16997186899473302
+        ],
+        "/object_position": [
+          0.19192529634470742,
+          0.720445991412656,
+          0.024945491006948487
+        ],
+        "/goal_position": [
+          0.061925307779157834,
+          0.7204459912772514,
+          0.17500001583624833
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "62585ac18695ddbe5268dc7313c7af55c5fcbe965d6ed93e9ade62fbedba2915",
+      "task_state_fingerprint": "87eb8eb674c8ac05f523b1a70607158ab26274cec9be4a2a01e8c76f6c82fb64",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/sft_train/014/native_camera_2.png",
+          "sha256": "b44bf40b2473ffce3d6199054b5e8a1a42a98d9c0f19e2ca8a5bedc4cab62870"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/000",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1796784319,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05263389798386753,
+          0.6607460804555687,
+          0.02500559526139619,
+          -0.06179700158293758,
+          0.6798748945111524,
+          0.17001142190072854
+        ],
+        "/object_position": [
+          0.18259968396720377,
+          0.6637279424202964,
+          0.02495107043212618
+        ],
+        "/goal_position": [
+          0.05263389798386753,
+          0.6607460804555687,
+          0.1750055952613962
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fd66193aa85ac7faa851f63017a565598e23cbcbef723b911dc5c6867ee4a9b0",
+      "task_state_fingerprint": "379bd4962d8977fcd893701cb7ef46faf3ada7fbde004ba7f925d1faaa327604",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/000/native_camera_2.png",
+          "sha256": "c96a0ff97053c5bf0d652114a5837113a127895935cad0bf8c0efc212fe6ab1b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/001",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 988826306,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09831144681440153,
+          0.6079307698990878,
+          0.025009810770318223,
+          0.00047814032233335635,
+          0.7225572713073691,
+          0.17001825271189777
+        ],
+        "/object_position": [
+          0.22831143537995113,
+          0.6079307700344924,
+          0.024955285941018365
+        ],
+        "/goal_position": [
+          0.09831144681440153,
+          0.6079307698990878,
+          0.1750098107703182
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "829bd3fae0006ad7b2cabfdc92c8180efc92f254bd1462e2d0a514a2f841e694",
+      "task_state_fingerprint": "12d825edb29457f1566ee95b06e4f1bf404c1f1b5b8423127165b7583d904d2a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/001/native_camera_2.png",
+          "sha256": "87f73f8c10a5a2bd6b580c9d85399a146b9b1bc0c0e2d763c393d2201fe31f5d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/002",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 428930099,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.003587881708858054,
+          0.7426863281166709,
+          0.02500630099216703,
+          0.02632787325661723,
+          0.6115235696156218,
+          0.17005157103320603
+        ],
+        "/object_position": [
+          0.13358787027440763,
+          0.7426863282520755,
+          0.024951776162867173
+        ],
+        "/goal_position": [
+          0.003587881708858054,
+          0.7426863281166709,
+          0.17500630099216702
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6b0ddf85f5eb2e2ad01834c64d6ad0e7c45aa60de380d1f5827c39f626a2890e",
+      "task_state_fingerprint": "f5f322476728a8351c1d28ff306026513222fabd6e0e50a55cc6249fbe06ee16",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/002/native_camera_2.png",
+          "sha256": "262dff3259ceeb0da24377b9f42fcb79c610a422b41eb46dc27af10b0bd87f4e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/003",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 333707028,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07081955735489665,
+          0.656741239221768,
+          0.025002528000031183,
+          -0.08794350148105311,
+          0.6266954642701394,
+          0.16992908156212844
+        ],
+        "/object_position": [
+          0.19937640304091997,
+          0.6760579277139257,
+          0.024948003170955576
+        ],
+        "/goal_position": [
+          0.07081955735489665,
+          0.656741239221768,
+          0.1750025280000312
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dd53dbd50503f1859b994ae6893e4c8a07409e5c3a44e95b8f55d17733d06a5d",
+      "task_state_fingerprint": "01b44e9e4b449acc848642ec1bd209d727196129849b27ba500f3d946765487a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/003/native_camera_2.png",
+          "sha256": "24bcd9ac1d2d43a0c1f179d7c51397feb7f10527ba489c5960354040b03e1305"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/004",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1790261327,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.015457423972648578,
+          0.6038503278244044,
+          0.025008233116870095,
+          0.060005319545460956,
+          0.7393358507019623,
+          0.16995569678480982
+        ],
+        "/object_position": [
+          0.14545581151700576,
+          0.6037639588079696,
+          0.024366535166039083
+        ],
+        "/goal_position": [
+          0.015457423972648578,
+          0.6038503278244044,
+          0.17500823311687008
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ff525f6584cb57fa8bdfedd37a5b8c9ad5149e3c645ef7236d5e19d0598260ff",
+      "task_state_fingerprint": "82ab7794ea58d59d95910df07f98e8f4c36cc0df03ce7a3a1128a1944593e59c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/004/native_camera_2.png",
+          "sha256": "f3c2e2aa186384eab0654eee2ab1fd856ffd678f9caedfed8d54a07964c7cc1c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/005",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1471022923,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.019742194244106972,
+          0.7359640170931531,
+          0.025002610345838734,
+          -0.08858586962109494,
+          0.6056374199190454,
+          0.16993041675544399
+        ],
+        "/object_position": [
+          0.14974218280965657,
+          0.7359640172285576,
+          0.024948085516538876
+        ],
+        "/goal_position": [
+          0.019742194244106972,
+          0.7359640170931531,
+          0.17500261034583872
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1727336bdee231e8af12d21456de5460430cfffcab714e9c2e9fcd65eecbcfa8",
+      "task_state_fingerprint": "72574168013ee434d03b8dda47c9c13d7ba5d863b60356547fee2d6c9d6d8550",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/005/native_camera_2.png",
+          "sha256": "16c50599b140ef8836addc0a338b0e6be5384a2dd732f1411328c337d856f22a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/006",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1894107853,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03445958304060879,
+          0.7098944387629039,
+          0.025003429199065445,
+          -0.06946713716149021,
+          0.6514102072870789,
+          0.16990169198862543
+        ],
+        "/object_position": [
+          0.16445957160615837,
+          0.7098944388983085,
+          0.024948904369765587
+        ],
+        "/goal_position": [
+          0.03445958304060879,
+          0.7098944387629039,
+          0.17500342919906545
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c597ed807c4df496ef872d4723692b9e39dfc80daece4ce5538283f8d964a797",
+      "task_state_fingerprint": "0b60d3e3793b9be582fa70383c74c2e9844e06af1edd9210a3a86a184bbf124b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/006/native_camera_2.png",
+          "sha256": "1b50555e90c494db7103ae3e3b558db7675252f903f32d76cd9989a892f2e3f8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/007",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1935331789,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05687031703676024,
+          0.6293831694947057,
+          0.02500458159193017,
+          0.09545870534562698,
+          0.7436909973627266,
+          0.16991308873197938
+        ],
+        "/object_position": [
+          0.17902137650601185,
+          0.6738704227114451,
+          0.024950067657763995
+        ],
+        "/goal_position": [
+          0.05687031703676024,
+          0.6293831694947057,
+          0.17500458159193016
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "84a483ada5c461faf0c549c1d74a18fd3adb535ed50f8150f27d6813c2e780bb",
+      "task_state_fingerprint": "14dd5c0080c31af0f7abbb9cbd68e2c65aa2d4b6c76d6faa26d7f9e9f3956f1b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/007/native_camera_2.png",
+          "sha256": "46327eca507720858fd597855ff41d1f23927b582be73f9ca5e9933c877bbb5e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/008",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 722996511,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05141168887304777,
+          0.6154401680731605,
+          0.02500117502134195,
+          -0.030512406165668596,
+          0.7298098158114203,
+          0.16992098440243208
+        ],
+        "/object_position": [
+          0.17876662915774594,
+          0.589622442411205,
+          0.021237635899058267
+        ],
+        "/goal_position": [
+          0.05141168887304777,
+          0.6154401680731605,
+          0.17500117502134194
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6314f735d76090be1c671288e39dee2876af3ba500e8aa4e4bbbae3c3534d058",
+      "task_state_fingerprint": "2739fc33c3475555e1c0dc6452a8e9d8e0ab58661eeb8e7953567b9037f822fd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/008/native_camera_2.png",
+          "sha256": "e5d5466fdfcb2bc02397d5c44dab3965c874cd1f398e0df03905146f9ce6b43e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/009",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 308126115,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08664838467437984,
+          0.6293554828403305,
+          0.025007306100655654,
+          -0.06591518146164188,
+          0.660746306254334,
+          0.1700769948477318
+        ],
+        "/object_position": [
+          0.055020304152726254,
+          0.7554493429190978,
+          0.02495278131694981
+        ],
+        "/goal_position": [
+          0.08664838467437984,
+          0.6293554828403305,
+          0.17500730610065565
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3645d039680d35f8a0da13bdc34a434bc51f77353303b6fe99a331180fd95271",
+      "task_state_fingerprint": "2314c850a9185a6ab975ecba89d30648bae0536c7c85bc965cc32fefc8e9d1e8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/009/native_camera_2.png",
+          "sha256": "1c5bbac6aceb00b6c53f6a40804981403ab1bde3860504c72fbf67327fc5fd8a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/010",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1261261607,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08764199144417129,
+          0.7098539266431343,
+          0.025002914850661678,
+          -0.09245948437570506,
+          0.7313110819720227,
+          0.17007906192111977
+        ],
+        "/object_position": [
+          0.21764198000972088,
+          0.7098539267785389,
+          0.02494839002136182
+        ],
+        "/goal_position": [
+          0.08764199144417129,
+          0.7098539266431343,
+          0.17500291485066166
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7b1c237724689406836fae7f082b4070daf2d1a6aefe1be97080602565f79af3",
+      "task_state_fingerprint": "1de92e7a255179490d64cc1c82521b52f08cea0c8112de77c9752416e23c4b83",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/010/native_camera_2.png",
+          "sha256": "4ff168eae49b8036e7a88c087526d6f2601f3ff8f4c95d0c983cafd356c69b7f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/011",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 545417120,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04314094009632148,
+          0.6520570374121244,
+          0.025008161778745097,
+          -0.09218549380044427,
+          0.6547959096281373,
+          0.17001876367883126
+        ],
+        "/object_position": [
+          0.17302875378209126,
+          0.657456378387995,
+          0.024953636949442227
+        ],
+        "/goal_position": [
+          0.04314094009632148,
+          0.6520570374121244,
+          0.1750081617787451
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e07d2619032a012102b2c9e8c18c410c2dc389f8ff458c0d0a44ba3abd253d5b",
+      "task_state_fingerprint": "2286feeb9418277f0d14de11526af663496b13d11ba11314a2535ce9443107c9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/011/native_camera_2.png",
+          "sha256": "3804544973285230b7a41e01e95de8b4368b1000dc7d135bbec9cf59aaf6b756"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/012",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 338565905,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09219287197818941,
+          0.6908547859479176,
+          0.02500953715834929,
+          -0.02055664547524208,
+          0.7348955797611945,
+          0.17004269139624348
+        ],
+        "/object_position": [
+          0.222192860543739,
+          0.6908547860833222,
+          0.024955012329049432
+        ],
+        "/goal_position": [
+          0.09219287197818941,
+          0.6908547859479176,
+          0.17500953715834927
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "13151c47742fe5da9b40005bbfebb787c19431a9b56bd8eb035402fb34222705",
+      "task_state_fingerprint": "20ac42f899e8d6b453ce879157ed3179e0914395d7b99ed50f736987f417dae4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/012/native_camera_2.png",
+          "sha256": "62013cfe872aeb1335444567604cec16f7803f845ee947ccdeb2e1edc2880714"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/013",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 433255705,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07524783349643738,
+          0.6429997261217925,
+          0.025001959540736987,
+          -0.09041117403012906,
+          0.703269041184408,
+          0.17003432031704088
+        ],
+        "/object_position": [
+          0.20266244738172265,
+          0.6172021834627334,
+          0.02494754246861465
+        ],
+        "/goal_position": [
+          0.07524783349643738,
+          0.6429997261217925,
+          0.175001959540737
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "24a35e9ed87fadaeb4a6f3f6dcd396608b3a08cfbdcf347b422e55b70b609e9c",
+      "task_state_fingerprint": "61022b6e1b061e84e1b71edac1628e79a29487cc0e6710ea7e1b6a7014ad84d5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/013/native_camera_2.png",
+          "sha256": "22637ac149bfb66b771bd92f3a1a0b2efd04f9d7c40b4eb7702bf5ad4ecaddf8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/rl_train/014",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1943705090,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07880670710995025,
+          0.673435385113828,
+          0.02500389131214939,
+          -0.045217297764683195,
+          0.6331335465861786,
+          0.17004329642895158
+        ],
+        "/object_position": [
+          0.2080771536248176,
+          0.6871885187527405,
+          0.024949366482862712
+        ],
+        "/goal_position": [
+          0.07880670710995025,
+          0.673435385113828,
+          0.17500389131214938
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "45cdc4c414d49f085512274af7bf624b47acff48d632e0b7d322ce8838d95bad",
+      "task_state_fingerprint": "669dedc08c15c700395d55aa6f2fa48aec1e78ebd51d19494d883847af84c0a0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/rl_train/014/native_camera_2.png",
+          "sha256": "9d1b22d8312b51997bf8b50e7269cce46ace3ee6d404eb1682479f0baf4c5a02"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/validation/000",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 60811034,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.004502092128407531,
+          0.7270540543887756,
+          0.025002391495671746,
+          -0.0994092919728469,
+          0.6801999959857836,
+          0.1700383361333169
+        ],
+        "/object_position": [
+          0.1345020806939571,
+          0.7270540545241801,
+          0.024947866666371887
+        ],
+        "/goal_position": [
+          0.004502092128407531,
+          0.7270540543887756,
+          0.17500239149567173
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "034b88cceae4dfc43eba72c3272dba621333d85f1a652707899d2fde8d1a34e4",
+      "task_state_fingerprint": "a3eb159be2f0671483089d930d79f53d6250beefab8be18e90607f3660dc5028",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/validation/000/native_camera_2.png",
+          "sha256": "6eaad83a63cf81eed22b9c61bec16065493c714df45c0732c35c1ab9d36e96c3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/000",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 250119587,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07902909633189226,
+          0.7166839933707909,
+          0.0250014536508761,
+          0.005371743598054549,
+          0.6132732509043428,
+          0.17008575714828802
+        ],
+        "/object_position": [
+          0.20902908489744185,
+          0.7166839935061955,
+          0.02494692882157624
+        ],
+        "/goal_position": [
+          0.07902909633189226,
+          0.7166839933707909,
+          0.1750014536508761
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "aab926304861084a95c1df264b8bb1fdb1aef6023a5cf105fa59de90c1464ad9",
+      "task_state_fingerprint": "775294f6421f9316483e38586782ed3556c45b9578bd3d0a5570d51381cfb1df",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "c12c24d475801f2f1387067397972eb9cfcfa1fbef9791ec060a6ef0e89d8545"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/001",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 681538761,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09430883730280676,
+          0.7363137574250379,
+          0.025005072777206698,
+          0.07062065928454594,
+          0.6227526538034845,
+          0.17003758275402164
+        ],
+        "/object_position": [
+          0.22430882586835635,
+          0.7363137575604425,
+          0.02495054794790684
+        ],
+        "/goal_position": [
+          0.09430883730280676,
+          0.7363137574250379,
+          0.1750050727772067
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4f709b3601eda5a00da93ec93f9b509a253f1e23df1599b28697e8d7f5c1e405",
+      "task_state_fingerprint": "1296c50317d7fb80b6e4ff7837ff2ea89395cfdcc5a56bf1172415fa9c57b986",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "5d1aa051e3c8f10d93695a65e568cd64f1cdd519848dc98ca5c418860b904bbe"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/002",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 259265081,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0864644511564348,
+          0.6757757954260711,
+          0.025003565113228463,
+          -0.03796329799344622,
+          0.6211643679140983,
+          0.16990797139973057
+        ],
+        "/object_position": [
+          0.21611825673004204,
+          0.6852567092704358,
+          0.024949040283928917
+        ],
+        "/goal_position": [
+          0.0864644511564348,
+          0.6757757954260711,
+          0.17500356511322845
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4733d1b5fa960c962239c5896a88e1323241a5f5bf4d85d9cd8b9e0b291e0457",
+      "task_state_fingerprint": "261d945e8185a925a111515d8d271efad62a6b6c5ca58c3c7579e8687848f16a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "75bb8151ef8eb9b95b46a810ae7282fae3806bd3dbdbfd0f7251cb2538e7e865"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/003",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1795090937,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09155037030326618,
+          0.6128006852161867,
+          0.02500110370085238,
+          -0.013763756670650926,
+          0.6531377450099893,
+          0.16994877003019285
+        ],
+        "/object_position": [
+          0.22150451430010654,
+          0.6093485141469163,
+          0.02494657887155488
+        ],
+        "/goal_position": [
+          0.09155037030326618,
+          0.6128006852161867,
+          0.17500110370085237
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5d2f41667a131bec7d6e2ab5533b5b9115b70bd3d968c7b94a75492ef664467c",
+      "task_state_fingerprint": "4dfd530f94f474c9a83df1ff19f19cc1f530fb00b110fd0282bae427970c0d60",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/003/native_camera_2.png",
+          "sha256": "f161e2116a7b878f13c1d0425b383cd0eb400580272371380d5866c3adee922f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/004",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1331823643,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.028908216438366597,
+          0.6754992894249432,
+          0.025004124620420985,
+          -0.052647385181873486,
+          0.7477137637614735,
+          0.17004594357599967
+        ],
+        "/object_position": [
+          0.1589082050039162,
+          0.6754992895603478,
+          0.024949599791121126
+        ],
+        "/goal_position": [
+          0.028908216438366597,
+          0.6754992894249432,
+          0.17500412462042098
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "71431e639589c9be54d23af0eb2b6b81e95029fa35ebf5f25f2b448bbb753640",
+      "task_state_fingerprint": "4468763d19523001e6f139557e992cfa30b806139be1754ce3eee46667c1ed3f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/004/native_camera_2.png",
+          "sha256": "353c81cdfe8557a58e1021149927b339842f95daa78c19671e1b88575ca02f27"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/005",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 757636120,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05455415256465277,
+          0.7182226723718443,
+          0.025008090793088335,
+          0.007623807727360862,
+          0.6275053139610518,
+          0.17001231902008498
+        ],
+        "/object_position": [
+          0.18455414113020235,
+          0.7182226725072489,
+          0.024953565963788477
+        ],
+        "/goal_position": [
+          0.05455415256465277,
+          0.7182226723718443,
+          0.17500809079308832
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "765757cc6fbb5c623d9b02fd7687f56d9e2b792f2cdb296318f17d9f21f15cbb",
+      "task_state_fingerprint": "d97b68a0c8191f96d4c7745a8dd97d562cfa9ccc6eff50be47b684b2246b61de",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/005/native_camera_2.png",
+          "sha256": "9f6f241254d1c6cd83303e0454e39ba6f426080fe4f7ff828839eae455ee0a69"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/006",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 2051359679,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.029065048389765258,
+          0.7377160064116868,
+          0.02500807172838967,
+          -0.05650765773255853,
+          0.6608074238260072,
+          0.1700133044333489
+        ],
+        "/object_position": [
+          0.15906503695531485,
+          0.7377160065470914,
+          0.024953546899089813
+        ],
+        "/goal_position": [
+          0.029065048389765258,
+          0.7377160064116868,
+          0.17500807172838967
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2f1ada60031f4c396a00a3a7c82d0791df5bf95b6c325269f3ab0b5ae1e9268d",
+      "task_state_fingerprint": "efcb69f9060ebb7ba5af74006253162c841b48f043bb93257eef8bfd6cf81cdb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "524df690a7b03ff73bc29b0f74998a179eab3b57aac8d002ee18e8385d179f5f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/007",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1454741355,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09187115224316252,
+          0.6323143816993801,
+          0.025009439570621884,
+          -0.05840666840932949,
+          0.6855923948736903,
+          0.17007931894255424
+        ],
+        "/object_position": [
+          0.13199606198768649,
+          0.5086616880569116,
+          0.024954914754673898
+        ],
+        "/goal_position": [
+          0.09187115224316252,
+          0.6323143816993801,
+          0.17500943957062187
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "230d078c8bad65e63a1e122cce99ae2a7fd5d7e07125c5a8462598a152eca416",
+      "task_state_fingerprint": "bc23584ea3622ecd8bbfaf1b01ad660584be81a0aa73ce7d5c4fc313e623318a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/007/native_camera_2.png",
+          "sha256": "69fb43d3534152d85b25b0a9dffbe6ee8f86576c52c92f65f1012bbdf9e3eec8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/008",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1643692030,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09003916622932856,
+          0.7362446308865539,
+          0.02500255038332637,
+          0.03352131782309259,
+          0.653654545481702,
+          0.17002849428194536
+        ],
+        "/object_position": [
+          0.22003915479487815,
+          0.7362446310219585,
+          0.02494802555402651
+        ],
+        "/goal_position": [
+          0.09003916622932856,
+          0.7362446308865539,
+          0.17500255038332635
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3bd7d8b2a108ae7e3dad3e81bdb05166a041a5b9a58ddbf02ea6bcf88b302bd5",
+      "task_state_fingerprint": "307fd2bef981b0eb0e2ed39bbc675169ee81e2f5fbc9150ca67e3e8f42f6bbd8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/008/native_camera_2.png",
+          "sha256": "a02b9a6ee81985c0ab6d40947d675c077e5e754670711278befc585e2778c8a2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/009",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1363661126,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.031010269823008807,
+          0.6605338762548995,
+          0.0250034622677399,
+          -0.09861766174430918,
+          0.6104814188376292,
+          0.1700409582808656
+        ],
+        "/object_position": [
+          0.1610102583885584,
+          0.660533876390304,
+          0.024948937438440042
+        ],
+        "/goal_position": [
+          0.031010269823008807,
+          0.6605338762548995,
+          0.17500346226773988
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "204db5a1256a24351db3e5bef4fbbd2953394f05f18cfb87665820e45d4d5c06",
+      "task_state_fingerprint": "52eba3e1014e34a9a60faef0561a83d8978750076f2cacc7ba23b16e111da4ad",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/009/native_camera_2.png",
+          "sha256": "fb9f7c7dede78606e509e49f352cbb57f02836ec5874c129a8a6c6efffc660aa"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/010",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1171188453,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0757259316385522,
+          0.6128956415944122,
+          0.02500780639771776,
+          0.027811370158700083,
+          0.7403557356060284,
+          0.16992740504773673
+        ],
+        "/object_position": [
+          0.18068394594402426,
+          0.5361896297042397,
+          0.02495328156838694
+        ],
+        "/goal_position": [
+          0.0757259316385522,
+          0.6128956415944122,
+          0.17500780639771776
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "04786b2f20bb6817f2dc6752c9ba898999ffe49d6bc48da1a8e83493603377c0",
+      "task_state_fingerprint": "7a5be4fdaf37ee0ee46457378887cc034f65a306770c10e6d02289513b893988",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "95eaf3699019ffa0f4b8cb29abe957eff626aa90d4ed5872a45a835d61f3438d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/011",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 549338924,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.077295918181716,
+          0.7475528604119787,
+          0.025002345817726573,
+          -0.05117468390503428,
+          0.6514415007536275,
+          0.16997040242695202
+        ],
+        "/object_position": [
+          0.20729590674726558,
+          0.7475528605473832,
+          0.024947820988426715
+        ],
+        "/goal_position": [
+          0.077295918181716,
+          0.7475528604119787,
+          0.17500234581772656
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "16f9c8ede6c3e04f098448668481f795d92dfad905f4a62f26882b9820b61e8f",
+      "task_state_fingerprint": "644470b92e87d850d3948c3fcc13ee0b5a88a82e5ff2bb5b8109dbc6e08f49c0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/011/native_camera_2.png",
+          "sha256": "f7a2c00f4b6d78fce83f96f9eede8892633c434859ebcf5985453cb06ee11b89"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/012",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 727401175,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07916359395818329,
+          0.7180223674183897,
+          0.025001698335995113,
+          -0.023973151304357593,
+          0.685777952937703,
+          0.17009607105729316
+        ],
+        "/object_position": [
+          0.20916358252373288,
+          0.7180223675537942,
+          0.024947173506695255
+        ],
+        "/goal_position": [
+          0.07916359395818329,
+          0.7180223674183897,
+          0.1750016983359951
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8b9f7830cf7cc68648969df25dbe004b6ef00c22b4c04ede87d514fb1ef6f0e9",
+      "task_state_fingerprint": "e06832861506f38854392e51730f97a77188d7956f31c6d7f154f4f254bad19b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/012/native_camera_2.png",
+          "sha256": "95817d2016c5c5de21989ec622d4837ee9a4d5a69a7eb28dc375453c7e7c4ab1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/013",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1863179453,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07958197251580963,
+          0.7358055697211358,
+          0.025001167629063823,
+          -0.09149057651126241,
+          0.6744297017330357,
+          0.16991169538600248
+        ],
+        "/object_position": [
+          0.20958196108135924,
+          0.7358055698565403,
+          0.024946642799763965
+        ],
+        "/goal_position": [
+          0.07958197251580963,
+          0.7358055697211358,
+          0.17500116762906381
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b2435bf45b7f55535fcd043cc47747307bdf525f2141a49c34c401019a0615be",
+      "task_state_fingerprint": "15687a380badba4068cbd172526af02b8c69d3b16e4b9eae0a9ea641fcfc1247",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/013/native_camera_2.png",
+          "sha256": "89b102730c12a0863d8ad33335b33062194dfe966299e77a63a9cda8dcb1673c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/014",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 695380984,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04989169818210744,
+          0.6166961073942804,
+          0.02500111119728102,
+          0.036158394856364795,
+          0.7225400468500918,
+          0.16999568716614485
+        ],
+        "/object_position": [
+          0.17505412264293263,
+          0.5815625822075626,
+          0.02494715711966007
+        ],
+        "/goal_position": [
+          0.04989169818210744,
+          0.6166961073942804,
+          0.175001111197281
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bb4d76cea0602ba609d3cefdf14de90b23ed1c3691f2e769ebb2129d0a63915e",
+      "task_state_fingerprint": "78c4e617fe5bc4a77ad28d448e23d005129a04904c77f12a1f57f4485ae2b8a2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "a31dd78ab72027dcb1e9d7180754218e7924bc6bdcd7c08c1e51bbe50c8fb3a2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/015",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 199336123,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03942415392125122,
+          0.7297259984585808,
+          0.025007945918057967,
+          -0.07177651593990542,
+          0.6886632668942084,
+          0.16995779470714306
+        ],
+        "/object_position": [
+          0.16942414248680082,
+          0.7297259985939853,
+          0.02495342108875811
+        ],
+        "/goal_position": [
+          0.03942415392125122,
+          0.7297259984585808,
+          0.17500794591805796
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "df33880f01dfbb46de6dc4627d4213c444f8a4d2318841d015eec23c025b58bb",
+      "task_state_fingerprint": "78b65f038d1e801b407259faad3a28ceb3d83ff9a20d465cdfce3f6890c44a07",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/015/native_camera_2.png",
+          "sha256": "20327aac4b39898d6fa78b0528b0510bc275f9a58bbe0a130b3e8eae675f1440"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/016",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 410779216,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.039863623129710216,
+          0.6608943248147977,
+          0.02500939691528315,
+          -0.05592092899964103,
+          0.6213124099642842,
+          0.16994044998176924
+        ],
+        "/object_position": [
+          0.16984837376360912,
+          0.6627514491842266,
+          0.02429128012842448
+        ],
+        "/goal_position": [
+          0.039863623129710216,
+          0.6608943248147977,
+          0.17500939691528314
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dfa849680388a2a364be6bb142583d60798c6cd1db4c73f1fcf775d6fc89418a",
+      "task_state_fingerprint": "cacca0ec043b1aff5e582b2ea12f84c893f766ffe46158fef341c0eaf478c9ea",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/016/native_camera_2.png",
+          "sha256": "e4cacc3cbce960e9dc830623433592ed585ccbfcdf0c83e1ac531d9e80ee4c26"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/017",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1317755824,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07786983824799588,
+          0.7057221878502524,
+          0.025001154442754803,
+          -0.046067229754307264,
+          0.687358546540847,
+          0.169924532380176
+        ],
+        "/object_position": [
+          0.2078698268135455,
+          0.705722187985657,
+          0.024946629613454945
+        ],
+        "/goal_position": [
+          0.07786983824799588,
+          0.7057221878502524,
+          0.1750011544427548
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f01ea3580eb98348850083f2c4a413906d3cf5d15d13b2fe2185be679e583227",
+      "task_state_fingerprint": "973acc0ba45050c64e4dc03d7901ac72dbba0137ff13bce89b03a17e23b63eff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/017/native_camera_2.png",
+          "sha256": "22fbbad2f35444365a3d138083004c91523a412f8fe6f7fee099b70af0f1f47e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/018",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 2013851349,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05463736921883201,
+          0.7261082163359251,
+          0.02500074521724087,
+          -0.054392862364297107,
+          0.613016854440493,
+          0.1699901214772474
+        ],
+        "/object_position": [
+          0.18463735778438162,
+          0.7261082164713297,
+          0.02494622038794101
+        ],
+        "/goal_position": [
+          0.05463736921883201,
+          0.7261082163359251,
+          0.17500074521724085
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fef2c372600abe3d600759cc880e86d780aed5c9e661ccf3c31ca33f93b26567",
+      "task_state_fingerprint": "055ec4cafc850238d754f0bda9abdd43f9d043df68c876723df804836c602d32",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/018/native_camera_2.png",
+          "sha256": "31a5723f60d0192e29c9a8c3fddf71ffe064b8f180f2e8e904c5f0663473e132"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/eval_seen/019",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1891949319,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09729933945316627,
+          0.616501931333926,
+          0.025002003959814875,
+          0.09975555284651022,
+          0.7392570606156008,
+          0.17004872525552497
+        ],
+        "/object_position": [
+          0.22698892353814074,
+          0.607523690587024,
+          0.024947479130517567
+        ],
+        "/goal_position": [
+          0.09729933945316627,
+          0.616501931333926,
+          0.17500200395981486
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "03fc9e6ac34784de0b1ecae29e72bbde4e600b75b09db489d1436b56e73151b6",
+      "task_state_fingerprint": "c97cbfd6ffa5472e05feca4f7dd90c65825e5ecaf5b54a0955ac4ba05975cfff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "5baa0396b1a9348bf4f5fe0848363fc291b24f4b6f176c1f56758f9609d3a40d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/disassemble-v3/validation/001",
+      "task_key": "metaworld/disassemble-v3",
+      "seed": 1553813443,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.00207636580476801,
+          0.7376865111464713,
+          0.025006618431531253,
+          -0.08913231638647011,
+          0.6007436807522324,
+          0.17006430763890346
+        ],
+        "/object_position": [
+          0.1320763543703176,
+          0.7376865112818759,
+          0.024952093602231395
+        ],
+        "/goal_position": [
+          0.00207636580476801,
+          0.7376865111464713,
+          0.17500661843153126
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9acbe7571a13447e183343548bd5560061ca0df5b6b0f859b420070d1dd1020f",
+      "task_state_fingerprint": "9df8025e421453c39d7541ccb8f82029acf3f1eaa24e4bcdee8b72b309e41c80",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/disassemble-v3/validation/001/native_camera_2.png",
+          "sha256": "1488aa040e38e7b0705b36bbb112386323d1d06e2f8575393502d09ec4e55d60"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

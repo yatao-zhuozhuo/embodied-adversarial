@@ -1,0 +1,1652 @@
+{
+  "task_key": "maniskill/PlaceSphere-v1",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 26544805,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.07087412476539612,
+            -0.08449174463748932,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.009098916314542294,
+            0.06273894757032394,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0006357517559081316,
+            0.3674202859401703,
+            0.014691036194562912,
+            -1.9723063707351685,
+            -0.022397810593247414,
+            2.357487201690674,
+            0.7374446988105774,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07087412476539612,
+            -0.08449174463748932,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.009098916314542294,
+            0.06273894757032394,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "7d8d44d26a2364629f96e15defb31e7c258ee5068b695656874dd70750b46da2",
+      "task_state_fingerprint": "c0deb4de7daf525930d5db9e3b204b803ab6b3898adbbc0b80b182e8dd80b4df",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/sft_train/000/base_camera.png",
+          "sha256": "d5a3c15b51a4500ba08be34437a607018574b6aa3fb4c04612de3229fd1071ed"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/sft_train/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1468115625,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.057253461331129074,
+            0.05900178104639053,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.08402423560619354,
+            -0.033751897513866425,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.008926176466047764,
+            0.3812747895717621,
+            0.03465447202324867,
+            -1.971419334411621,
+            -0.010192678309977055,
+            2.361273765563965,
+            0.7896342873573303,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.057253461331129074,
+            0.05900178104639053,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.08402423560619354,
+            -0.033751897513866425,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "0b7b198d51f93d88131401fa6cab60a1a23ba422a8f97ef7ff1f0209ca28bba0",
+      "task_state_fingerprint": "784ad64e41b0c08e44964ae715e8e7c0997a3b371dad23d2ddd1442f746fa00d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/sft_train/001/base_camera.png",
+          "sha256": "a63cc3bbfb4827d169546885a2f4e1d4d720604b6ecb2c1dc4d1b15538924b96"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 847987959,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.05228696018457413,
+            0.09205598384141922,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.03602069243788719,
+            -0.01544884592294693,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.005937641020864248,
+            0.38060125708580017,
+            0.018379084765911102,
+            -1.9649895429611206,
+            0.026353567838668823,
+            2.360072135925293,
+            0.806937038898468,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.05228696018457413,
+            0.09205598384141922,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.03602069243788719,
+            -0.01544884592294693,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "78154e2df1d9b66dbc57c2ed4826a7c3cd3c54024c4e06f9df4e7b4b1ca4b830",
+      "task_state_fingerprint": "a6f215a8d5c70be9b5e7bfa00f95a1cad9417b62c2ed2b42a096b024caa2a76a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/rl_train/000/base_camera.png",
+          "sha256": "21e2dca413e716f937f86476df93b1fe6198650169085d4c7c9fc1f586b3d200"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/rl_train/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 846218096,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.08116341382265091,
+            -0.07770612090826035,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.09461497515439987,
+            0.024815477430820465,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0033212555572390556,
+            0.3732580840587616,
+            -0.00975111685693264,
+            -1.982250452041626,
+            -0.02107229083776474,
+            2.3712234497070312,
+            0.8176314234733582,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.08116341382265091,
+            -0.07770612090826035,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.09461497515439987,
+            0.024815477430820465,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "4e65ef621ff984250aac82ad4ecfa48c8c3ecb2032aca60cd01c971ba7f20ee5",
+      "task_state_fingerprint": "3f389a12f4d8addc9f42f57d31b57c8120df8cf87df76ad93afc39926b712638",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/rl_train/001/base_camera.png",
+          "sha256": "70c6ed72ca54d59b0f715fb4bf0c9b9bf44d5c33169671e56a5b943fbca688dc"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/validation/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1709811859,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.058876629918813705,
+            0.0011453628540039062,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.04665868729352951,
+            0.09511596709489822,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.015674397349357605,
+            0.3640534281730652,
+            -0.011813748627901077,
+            -2.006385564804077,
+            -0.012947063893079758,
+            2.3610806465148926,
+            0.7768955230712891,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.058876629918813705,
+            0.0011453628540039062,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.04665868729352951,
+            0.09511596709489822,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "a8372f167293c7a3bccc06c9aa2989179df726bb4e9f1400b0fc75549d074a93",
+      "task_state_fingerprint": "0f19df63a8be5208da69da676763cee37e7a166d678d9cae3b967228dc969d37",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/validation/000/base_camera.png",
+          "sha256": "0e840a384251318bb2e3245d188b6c9655ab1d9c4405cbba4b596ea91e31034c"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/000",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1998460458,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.06508728861808777,
+            -0.018136508762836456,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.006143323145806789,
+            0.009658418595790863,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.025422533974051476,
+            0.40989407896995544,
+            0.05808271840214729,
+            -1.9565620422363281,
+            0.02416347526013851,
+            2.3481853008270264,
+            0.7989556193351746,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.06508728861808777,
+            -0.018136508762836456,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.006143323145806789,
+            0.009658418595790863,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "b59e3c8337ca666075c453db02748c74e956b87d24335f3a6bf83f753c5887fb",
+      "task_state_fingerprint": "4c520c1b198d793d287b0a8a775374e26863526761ac33ccb5b6bd03dbf09854",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/eval_seen/000/base_camera.png",
+          "sha256": "ff59f959d6ab98878cd0b23b85f45ccabc7e3efdac806d8b36c306ca61a4e532"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlaceSphere-v1/eval_seen/001",
+      "task_key": "maniskill/PlaceSphere-v1",
+      "seed": 1701255636,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/sphere": [
+          [
+            -0.07798856496810913,
+            -0.008092649281024933,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/bin": [
+          [
+            0.07022721320390701,
+            0.002100728452205658,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.02463258057832718,
+            0.37392517924308777,
+            -0.011362886056303978,
+            -1.9252068996429443,
+            -0.014718115329742432,
+            2.3657193183898926,
+            0.7979130744934082,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.4472135901451111,
+              0.0,
+              -0.8944271802902222,
+              0.044721364974975586
+            ],
+            [
+              -0.8944272994995117,
+              0.0,
+              -0.4472135901451111,
+              0.3577709197998047
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.4472135901451111,
+              0.8944271802902222,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.8944271802902222,
+              0.4472135901451111,
+              0.20000000298023224
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/sphere": [
+          [
+            -0.07798856496810913,
+            -0.008092649281024933,
+            0.019999999552965164,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/bin": [
+          [
+            0.07022721320390701,
+            0.002100728452205658,
+            0.002499999711290002,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "state_fingerprint": "c4450879fa6aab8f643cb3669fddb63670a8fe5d2e03ebba94bbf116a6d39a78",
+      "task_state_fingerprint": "2ee5f8d03e015c3653114e0a89f07a218f40405ef8e7f2044f692146f84ac731",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlaceSphere-v1/eval_seen/001/base_camera.png",
+          "sha256": "1f106008443664fabb29fe71a6be4a663be2be35999df966f25dee19246b0556"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

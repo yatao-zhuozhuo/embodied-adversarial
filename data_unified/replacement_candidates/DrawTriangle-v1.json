@@ -1,0 +1,530 @@
+{
+  "task": {
+    "task_key": "maniskill/DrawTriangle-v1",
+    "bench": "maniskill",
+    "task_id": "DrawTriangle-v1",
+    "env_id": "openeta/maniskill_DrawTriangle-v1-v0",
+    "role": "shared",
+    "horizon": 300,
+    "expected_action_dim": 6,
+    "environment_config": {
+      "robot": "panda_stick",
+      "control_mode": "pd_ee_delta_pose",
+      "obs_mode": "rgbd",
+      "sim_backend": "physx_cuda",
+      "pass_robot_uids": true
+    }
+  },
+  "cases": [
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/000",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 641045049,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/001",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 429308620,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/002",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 635422295,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/003",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 347389389,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/004",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 184351262,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/005",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 1385733901,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/006",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 247245627,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/007",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 1430323057,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/008",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 1074673396,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/009",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 1949566802,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/010",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 915659390,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/011",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 703521248,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/012",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 93386990,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/013",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 736919326,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/sft_train/014",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "sft_train",
+      "seed": 1513407996,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/000",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1234669658,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/001",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1956854070,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/002",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1148633057,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/003",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 422118243,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/004",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1164774736,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/005",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1256378893,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/006",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 433070016,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/007",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 841257171,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/008",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 855392131,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/009",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1009443459,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/010",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 2069349867,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/011",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1313299965,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/012",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 651490373,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/013",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 1920807159,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/rl_train/014",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "rl_train",
+      "seed": 706153810,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/validation/000",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "validation",
+      "seed": 121021458,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/000",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1686371045,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/001",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 861088723,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/002",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 350572132,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/003",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 2026566561,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/004",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1347073790,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/005",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 266865972,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/006",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1311302910,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/007",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 594117073,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/008",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1657188371,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/009",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 16043793,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/010",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 122807534,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/011",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1051875791,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/012",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 2138302901,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/013",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1159555792,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/014",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1080264924,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/015",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 746796959,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/016",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 767695464,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/017",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 1628878017,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/018",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 188329397,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/DrawTriangle-v1/eval_seen/019",
+      "task_key": "maniskill/DrawTriangle-v1",
+      "phase": "eval_seen",
+      "seed": 114306369,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    }
+  ]
+}

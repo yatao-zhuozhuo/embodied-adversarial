@@ -69,7 +69,9 @@ def audit_episode(path: Path) -> dict:
     terminal_frames = sorted(path.parent.glob("frames/" + terminal_prefix + "*.png"))
     if not terminal_frames:
         warnings.append("terminal_post_success_frame_not_captured")
-    if record.get("source_steps", 0) > len(turns):
+    executed_control_steps = sum(turn.get("executed_control_steps", turn.get("arguments", {}).get("num_steps", 1))
+                                 for turn in turns)
+    if record.get("source_steps", 0) > executed_control_steps:
         warnings.append("success_before_source_demo_end")
     return {"bench": record.get("bench"), "task_id": record.get("task_id"),
             "seed": record.get("seed"), "episode": str(path.resolve()),

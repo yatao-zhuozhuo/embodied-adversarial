@@ -1,0 +1,2345 @@
+{
+  "task_key": "metaworld/assembly-v3",
+  "records": [
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/000",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1337552129,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.0426197909322622,
+          0.8355031221624764,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.0426197909322622,
+          0.8355031221624764,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "5c98ade14791850589624e62356456ca928261b064ec5afbd37a76c8f77a4f7b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/000/native_camera_2.png",
+          "sha256": "7b2df96fc5d1945c4daf99645c4348350d60f1e7f952bd192def1826dde41034"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/001",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 2107042686,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.09943989274132217,
+          0.804556124402424,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.09943989274132217,
+          0.804556124402424,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "e7752bea226e3c8a296ad76b631927fa89aa48f82ce98f44a65014005973097d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/001/native_camera_2.png",
+          "sha256": "ddcb471a33465f930a9a56ace0af9eabe1138c1c947780e16513e79e21b90cb0"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/002",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 722486436,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.02745143435085033,
+          0.7796558213037489,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.02745143435085033,
+          0.7796558213037489,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "1a8aecba3901dff4103e6826781cbeeb62faff6eadeac4697bda68c8a484ac03",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/002/native_camera_2.png",
+          "sha256": "2268bc6bb5e730a8a2f71eef68c324b98c32882ca95144f0b464f45c62a90a05"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/003",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 995024405,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.005614015323695543,
+          0.7574687360219498,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.005614015323695543,
+          0.7574687360219498,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "46ab84ece7e2c5801a8268fe9508ae48611dc0a70ae08d7f516f4c798dd744b7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/003/native_camera_2.png",
+          "sha256": "6d1794e78e22bb78f2548203f563837e3fc53f3303100bd98fac487b824a1c59"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/004",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 400756634,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.014217200313931658,
+          0.760000191616929,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.014217200313931658,
+          0.760000191616929,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "29f9b2d5bec1268b149e48530431f5de1ca6908e157a4fe01bddeffa567fe453",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/004/native_camera_2.png",
+          "sha256": "2ba84eff63e71ad6cc3c3bdb12678c2ebb486cbc85a95577d79ac9737dc7eda5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/005",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 211475582,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.012993981554991804,
+          0.8127834155263263,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.012993981554991804,
+          0.8127834155263263,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "a3bcdc245e129b842623eb063910b6fd3c8b3ca4aa74d69a485472ab59e6675d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/005/native_camera_2.png",
+          "sha256": "24b9cff7a4f4aa720db8c3d41686e9cc53a461526a734f132efb60478cf5314b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/006",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1208998604,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.0339871422721304,
+          0.8045207681993605,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.0339871422721304,
+          0.8045207681993605,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "fe1f0f10977ca0ceea9214f2bbdc83ba382a497185f11edc1bb2f752278a3097",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/006/native_camera_2.png",
+          "sha256": "39ae99c680cf88af1d6ac469ddc994142b27b74cfee55c4a81abb2d303b45365"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/007",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1625008920,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.07434746072742723,
+          0.7785830230772509,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.07434746072742723,
+          0.7785830230772509,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "98238e2cfec137b29b27de82b878a754fd0d8eeb02fcf4dcb9bb6b2c0dce089f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/007/native_camera_2.png",
+          "sha256": "48365e5faa53b96f755ea4f7f50daeecfcdb5e7ed507c4207b7013a974a827ae"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/008",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1346588802,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.06677484429952579,
+          0.833546030552843,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.06677484429952579,
+          0.833546030552843,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "26704e58801d71b59a83b539f1b4b6714d0aa8b1d75533f00d9c64849d80e00c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/008/native_camera_2.png",
+          "sha256": "aae6e21676d618ecb980d754c9b710395f983ac0b2e611a39c3792357dd6d4af"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/009",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1495633356,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.029926778169184487,
+          0.7754982335661156,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.029926778169184487,
+          0.7754982335661156,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "1313cb993fd9eeb13c2189c3d7d29b56ea073dea916604858ac6381294a1d85c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/009/native_camera_2.png",
+          "sha256": "928191a1d94ebb55adecba62171387d59b4016f61e0471fa45fcc351b82416b2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/010",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1933426090,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.08588575624595579,
+          0.8252528007094614,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.08588575624595579,
+          0.8252528007094614,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "938b2da803c20cc25963092b75937bddfb80659146014fa385ef4ed075dcf179",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/010/native_camera_2.png",
+          "sha256": "370c84131c49930fd21a876e2b49740c998be274bd9c610b4aab01955adfdaf4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/011",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1998875833,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.092448142112856,
+          0.8170613408259122,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.092448142112856,
+          0.8170613408259122,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "dd8863ddc9a562764054e5ef1344db4b67058144dd57e50ce6cb0cd5a3787931",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/011/native_camera_2.png",
+          "sha256": "7f35d0c5f7f03c6908e6af804a108157643607d1cda6d95fe552fa858876fa45"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/012",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1918826840,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.026993290848373278,
+          0.8037531322157656,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.026993290848373278,
+          0.8037531322157656,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "089d6a77073b919172fd9ecd9054809b14597382f0bff40968a041ea4f8040c9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/012/native_camera_2.png",
+          "sha256": "d3fe2c6a42c6cc9921d8f500cc716491306bcf7b498c549dedca9475f2bfaca1"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/013",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1846077109,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.09566641316287591,
+          0.7816234791222456,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.09566641316287591,
+          0.7816234791222456,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "dc90a185677f8183c259a71ed494deb99a4738998245928b290233d83a35c746",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/013/native_camera_2.png",
+          "sha256": "595bc03fb041e0aa0290b885de0f813ee46ffc2a6fb0c141eeba7285865bc277"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/sft_train/014",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 421289252,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.03531794480625844,
+          0.8474604505659039,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.03531794480625844,
+          0.8474604505659039,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "80f3bcaaa8b89064371a23d4a3f2ce03971d4dce2976d191adca66b056e2498a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/sft_train/014/native_camera_2.png",
+          "sha256": "a39c4f2d7326d219ea9a73498d30794098c5f8e03017cc1507e933f5c02e269f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/000",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 2112934856,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.032449144011002254,
+          0.829707497738579,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.032449144011002254,
+          0.829707497738579,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "0d3b5385c3b570cace9033b7482d2e1dd7743150e6b08f1c5cc74d4f3c2ab3f4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/000/native_camera_2.png",
+          "sha256": "1fed4ed02101c1e6f08dffe3a2be9d289ec906ed7954bc235f4124c4076b2df5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/001",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1565798939,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.08545113137792673,
+          0.8235523796656268,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.08545113137792673,
+          0.8235523796656268,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "8669279728854cab69f935d74c07b8e3e38d33c9eb234a2b8e2ff63f55fb8e48",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/001/native_camera_2.png",
+          "sha256": "f0e9e0bf3d1b72607bfaeae7eab6d7bae3cb19d4a5b53e6c3869d3b1dead150d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/002",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 798435929,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.08077728536819395,
+          0.8018077112122641,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.08077728536819395,
+          0.8018077112122641,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "81f1a2010a6f437ba6473b24d68342a5f018a1223bfea2fa03efa3f563291d82",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/002/native_camera_2.png",
+          "sha256": "1da2f870c8425429571844d6b7c7fed013527dded66289be04eb2b672eeee4c3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/003",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1281985411,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.060581922177829074,
+          0.7592275835596207,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.060581922177829074,
+          0.7592275835596207,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "66dea492c2299ceff9ad765e18040f123cd5f2df475b22733afea7e0e2d16676",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/003/native_camera_2.png",
+          "sha256": "8bfd3911aa13dc426ac4f9050b5a8cc2833601263da9f3228d0e68fa3f600101"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/004",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 556382010,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.057339875299077164,
+          0.7878365092135331,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.057339875299077164,
+          0.7878365092135331,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "8de26b73926e382fc39af5942927158e8692143da63064472e0a592e22db682c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/004/native_camera_2.png",
+          "sha256": "18eb0dd73b1f13baeb68df8ee4cf32793a7cf6083a4a48e32421ee1820a33dc6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/005",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1601435691,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.08139017042795535,
+          0.8083598984786177,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.08139017042795535,
+          0.8083598984786177,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "2dbe68865ef719cea73606777d4fc864363bab4e806a9b810cb30c81c3d1034d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/005/native_camera_2.png",
+          "sha256": "6b31288ddc1d854a36637f4c343285bd7ff8ddce5213d588b9d65ffdd6222c6e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/006",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1769012639,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.08406231087055478,
+          0.7716328968203315,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.08406231087055478,
+          0.7716328968203315,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "c8a6a016c30e69f148ede2ca4e3f2cd40572bb60c7046719e23bc77b32d17df7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/006/native_camera_2.png",
+          "sha256": "2cd3938af03a27e8793a7b734eae1a8860ee3894f2623e3753500a01355d603a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/007",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1582430372,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.030843460759778243,
+          0.8331581958878007,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.030843460759778243,
+          0.8331581958878007,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "1065da8e0ba2456650f32582866cd76d86eded977d0266cdd75b76e82d15a348",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/007/native_camera_2.png",
+          "sha256": "981dfa5bc63ea47e571ec2941e4d69fe84bfcce3755696f1d138d26f3d1a8de8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/008",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1276971781,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.09620940110327766,
+          0.8229346510808696,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.09620940110327766,
+          0.8229346510808696,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "ca4aa4fab9f3687790bafdf124f5a1e13ab538b83f5df1d3fb646106f6b961f1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/008/native_camera_2.png",
+          "sha256": "33185defb78e0b879717287b9954bde2df6c4b9f03c0186c24ca2c41c8b25e27"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/009",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 2033438404,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.040811206457119,
+          0.7581506085887668,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.040811206457119,
+          0.7581506085887668,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "72c315498b53ba8a558d0785da8b9f2730f84dee36048e91b0ba4709aa40cb4a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/009/native_camera_2.png",
+          "sha256": "66dd427e4ffc686a621d9552c734521e17dd927a2a1e384ad9e93a12ec04e6d6"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/010",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 2140901792,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.037618128259905785,
+          0.7544357452332641,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.037618128259905785,
+          0.7544357452332641,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "1e6b8efb38870e9bca46e58a842aa79766dc12bfca431f1721f00ad6a9bb185e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/010/native_camera_2.png",
+          "sha256": "2d48b50e3c066c22f7043d543ba356a68bb13058f22111e6c38ce9e61ad31f3f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/011",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1315837116,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.008304765823068383,
+          0.833028901054899,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.008304765823068383,
+          0.833028901054899,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "b1d193e9ff6497c858cda50540a3787077d42a1867d3e8d21959062ade9343d1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/011/native_camera_2.png",
+          "sha256": "caff84609ced915d2378f42b78f9e2026679d3d8e18a7afad941e81c4bca2405"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/012",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 375615852,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.048993748626356914,
+          0.7779436974755694,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.048993748626356914,
+          0.7779436974755694,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "72c56875b6d9ebc84d73b5048a234a95ae94026b25c19e0cff3f18b0eb335b02",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/012/native_camera_2.png",
+          "sha256": "2a285e164fc669aafe3614615d319e99544ca29f68e7bbedb0c32532e3f3d045"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/013",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 55573670,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.06320034389282944,
+          0.8366917978036076,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.06320034389282944,
+          0.8366917978036076,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "fec3b94e3e10ab0bf8b981bc8d541e6c0d472dd95bbcbbd57fed9c32a24132dc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/013/native_camera_2.png",
+          "sha256": "061b8aa46f5d7c86e9325fe916837fcd495187a7f2450b199a5ec2c641dcb144"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/rl_train/014",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1184455130,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.034270928536650216,
+          0.7706896047767019,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.034270928536650216,
+          0.7706896047767019,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "e7c673f8ad73fdf356632b56503159dfac74738ec391b608923bbd36eb438c94",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/rl_train/014/native_camera_2.png",
+          "sha256": "f3ee62567e89e0107c843157c81d5e79e7d769be54d03a2c2ce8c33bbdd0af60"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/validation/000",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1544675064,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.0127522417186378,
+          0.8268381112981821,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.0127522417186378,
+          0.8268381112981821,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "7c2eaf52697787222b1471b12f5be57ef31d0b397cae326d9f3d0e7f844dcc95",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/validation/000/native_camera_2.png",
+          "sha256": "97033ec4082a1b0408dd16e4e03e0939b5c184d4a2b51c951f45a0cee3809c67"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/000",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1119755465,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.0465757727283829,
+          0.8319563093416084,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.0465757727283829,
+          0.8319563093416084,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "d8d1efb4eeddb4c2acbabfd391e86b7423bcea558b2bd6d41647039bd08300cd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "613e733bbc3e6e1655a1dc98b35cc88a4aa23a7f3033ba543bc56116e9490a55"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/001",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 844553334,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.012409386839420875,
+          0.7656598475683203,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.012409386839420875,
+          0.7656598475683203,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "597f87b03ed6a64a7d3b80c08dab92279984a46e8ab12bd2265ffaf16fc42d2a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "70222316d3d39877b0c5d8c91e099c97ab9436e1bd35e23cafb0a9d4446029bb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/002",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 315289669,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.0473759677481173,
+          0.8402336892119497,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.0473759677481173,
+          0.8402336892119497,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "c5ad9ac209e69dfa7e2a45df5c8b03289f2ecab21279e4ce9c421a21c1cd632e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "a11bc65e2ee719f4d12ea313d355c4f66c8ddda49f789a020f175c09dd71c907"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/003",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 427038694,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.057984733586539355,
+          0.7550750493633099,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.057984733586539355,
+          0.7550750493633099,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "3fd75195a613fb8af4402e0d90e1fb4e99c791f9e2cbede5ec5e435d6334a27a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/003/native_camera_2.png",
+          "sha256": "54c57476984696518060787bcaedd9a06500cfceefa4f35fc9d8c3f05c00a0b9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/004",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 342545494,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.032765319495357756,
+          0.841131843286155,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.032765319495357756,
+          0.841131843286155,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "80110ab0a699fc671d2d7723913786f7326397bb78e1d84384cd126cf255feb1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/004/native_camera_2.png",
+          "sha256": "c32cc4a3e5024508d983d92350e9a46cf0b4ef82632d6cc4e83364c0bab105cd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/005",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 506750813,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.02968170692083108,
+          0.8446984852494861,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.02968170692083108,
+          0.8446984852494861,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "33b84dd90e208387584bf0d9324bb76348e99dcc72743f3011700f938200efd5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/005/native_camera_2.png",
+          "sha256": "f68f918bfacad274546293cae082b6615fe2e019ae980a10b0a143988e4e878a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/006",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 181020653,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.042882740849730705,
+          0.783147075238144,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.042882740849730705,
+          0.783147075238144,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "d85abd308fd55ddc811645bf888e87ac415943bbe36126bb24e1777186337098",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "d3abfe34e3b304d7eeda13eeb348480b262ac28ee72c232ea040251c97ad6750"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/007",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 723660985,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.09775937673560622,
+          0.7950637468212233,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.09775937673560622,
+          0.7950637468212233,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "ad44074152fe0d527603ffa79838ed10280a0648f865d45ccaa9c4e00b682bc7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/007/native_camera_2.png",
+          "sha256": "08b4e534df19276a9808215ae45d88036effa5c59ffac24f9e337ef2c976f5a2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/008",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 367166951,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.06349483191522927,
+          0.8195672181777454,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.06349483191522927,
+          0.8195672181777454,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "6ad2463b78c69c11e052c9747c196a0fc07f7c6c6c9008851ed4f357cab4a4d6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/008/native_camera_2.png",
+          "sha256": "754b76dae98918825cb9aaec142e7772c989471245136cd9f19abf7b560474a4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/009",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1176150678,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.07579804076940158,
+          0.8409943928544794,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.07579804076940158,
+          0.8409943928544794,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "e4fd20400c67192cd4d42516c6d47bf8a59d77fe3591355879f7a875b6e1ec92",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/009/native_camera_2.png",
+          "sha256": "6f8d97ad1b5a8c6b5d0813e52dd578ec23591be7b959c4b32fa0994be68fc464"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/010",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1484039820,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.05618525436496383,
+          0.785030554655037,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.05618525436496383,
+          0.785030554655037,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "cb4476bf0ae3d5456bdf6ed643c0592f73ba547eb9dc0734b8f87298da1fc995",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "405ae0f60bf5ea1c6e028ed820d1057f9cbb66ab9aef14b52f4d3ca74f40c4e9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/011",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 993625454,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.03035351886810289,
+          0.7820203237448501,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.03035351886810289,
+          0.7820203237448501,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "6f1089d44e92dec36e465ce2677413a4852af8e38b570981ef0a86b52be05ad3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/011/native_camera_2.png",
+          "sha256": "da5bae1b2dd2153cfa55723b8971880ecb645fcf0ccf21be338821a8bf2b8693"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/012",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 64548832,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.023864174971928276,
+          0.7656863907890801,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.023864174971928276,
+          0.7656863907890801,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "c38346d32db970781f6f0cc379b2a79b20749a186276a4f585fade0599ea2dc7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/012/native_camera_2.png",
+          "sha256": "79e8e134c440bc44fea0535a4f7a26d4fce4d039d0fd58bdfa7c73596d5618c2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/013",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 276530490,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.03295348730377981,
+          0.813630474312811,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.03295348730377981,
+          0.813630474312811,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "fa4a8b682f226826ac1d46a489f87861941afab52ca0cf8b793927fe6feb90fc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/013/native_camera_2.png",
+          "sha256": "1a893c38394d9acdbae747901aa109f3524e0f4938ae9f98a0c37cec1df9792c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/014",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1611727291,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.02394371977396828,
+          0.8187345436345926,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.02394371977396828,
+          0.8187345436345926,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "01e2c4243d8f65679702f149d0dd6f9f920da34a3a4b6ec6a05bb7d09ae9597e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "b9fc40d4ce723f7980cf73f9421fec02b20358ff09ac32e07d5dc7b188aacd51"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/015",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1605422777,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.09169408342819062,
+          0.8367990550587299,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.09169408342819062,
+          0.8367990550587299,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "23d7efcb07b547335fea7b03462fa4b2dac33ac0b8198144f72fd100d99286b3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/015/native_camera_2.png",
+          "sha256": "06416607aec687ba150f545b93bdb9c51530d96ca8cb62c483bccabeee43fd52"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/016",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 2025839347,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.06723087761982685,
+          0.8235956353814824,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.06723087761982685,
+          0.8235956353814824,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "c1e490ba2f9ffaccd16dc6bb02a427bc2b7be64dbd3a495b16a7ffb7598df142",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/016/native_camera_2.png",
+          "sha256": "cfb241cae2f1db47891d990b20003ccb84d71f22785c8256451c263c3c0cf8b7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/017",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 997991510,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.05870508958944176,
+          0.7619953870477353,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.05870508958944176,
+          0.7619953870477353,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "520e99d3ef30e9515ed40476470da19d9cdc5628fb1a06e628359b5cfea7ae12",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/017/native_camera_2.png",
+          "sha256": "d080237de71487e1fa54ac9d703fba32d0c3c612c1ba8d13658fd71cd0c7b132"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/018",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 578553037,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.06216570280955831,
+          0.8424813176448326,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.06216570280955831,
+          0.8424813176448326,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "02b0820f7469bdd3961e5f1ac1185003a4adec48876e75ec0023a70c98a17e46",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/018/native_camera_2.png",
+          "sha256": "fa347d10ef982154e18d0ca1de56618f7d4a4a4ebefae7e2a5ac70be05d91307"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/eval_seen/019",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 1534598870,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          0.07009375162423673,
+          0.8174971536943219,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          0.07009375162423673,
+          0.8174971536943219,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "535516cea844a6f0de5dce95d21c2615a1a0fcc4e2076caa500ff577951c8b60",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "d57ef534eaad18a20751c98663d020193cca84b39a07099c2dfab0e7530b0610"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/assembly-v3/validation/001",
+      "task_key": "metaworld/assembly-v3",
+      "seed": 277260014,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.6,
+          0.02,
+          -0.027663731746497264,
+          0.7602312986353263,
+          0.1
+        ],
+        "/object_position": [
+          0.1299999885655496,
+          0.6000000001354046,
+          0.019945475170700142
+        ],
+        "/goal_position": [
+          -0.027663731746497264,
+          0.7602312986353263,
+          0.1
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144fd5cd4260fb20c5ef7bceea263e3b086fafef595905497935fb55486e501a",
+      "task_state_fingerprint": "70033705a832906edc6015a1aae09cfce9746f51be4fd5431d4e5985184528f9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/assembly-v3/validation/001/native_camera_2.png",
+          "sha256": "d6b5479a7b67d84506c35d7655b58595b10111c559c994a38ce11ffb60e16bd7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

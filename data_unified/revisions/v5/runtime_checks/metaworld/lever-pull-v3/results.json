@@ -1,0 +1,714 @@
+{
+  "task_key": "metaworld/lever-pull-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/sft_train/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1518231734,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1518231734,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.001427354438466017
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.05782170328011191,
+          0.7694396340346276,
+          0.0
+        ],
+        "/object_position": [
+          0.1778217032801119,
+          0.5694397128494171,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1778217032801119,
+          0.7694396340346276,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "cd16320b93117d892bb785700234f6252bc8f9b774748660b34833411c4773cb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/sft_train/000/native_camera_2.png",
+          "sha256": "899aeed014894bb3eb08e8e95d222aa9091f8066c6c1b260b7d9f97136804d25"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/sft_train/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 1905159076,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1905159076,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.0014273544384660187
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.015564844387841198,
+          0.7083564477036262,
+          0.0
+        ],
+        "/object_position": [
+          0.1044351556121588,
+          0.5083565265184157,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.1044351556121588,
+          0.7083564477036262,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "a7c8b2e434b7a627c484941e341ced0e230e507f28b1985bfe21ad0ebe21dffe",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/sft_train/001/native_camera_2.png",
+          "sha256": "5a45cdeb4147e3435df792f09ed2e933db39142a9c9f3be718dc94ed0ed58d0b"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/rl_train/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 893196913,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 893196913,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.001427354438466017
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08792841040924958,
+          0.721461650968643,
+          0.0
+        ],
+        "/object_position": [
+          0.03207158959075042,
+          0.5214617297834325,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03207158959075042,
+          0.721461650968643,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "5912f6fabd06c076d54db328c2b9556a0513e1fcd91950c8772d1a0d6602417c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/rl_train/000/native_camera_2.png",
+          "sha256": "d18c66b0642ea7f575722a566b93f4851f86900a9f4de2793cc06d122d70ad3a"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/rl_train/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 253839688,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 253839688,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.0014273544384660187
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0036317359410467376,
+          0.7106187489518729,
+          0.0
+        ],
+        "/object_position": [
+          0.11636826405895326,
+          0.5106188277666625,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.11636826405895326,
+          0.7106187489518729,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "32bb6234b4d95d83c9b1842e8bfa7546a4269888fc1f123114713097f0f9f77d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/rl_train/001/native_camera_2.png",
+          "sha256": "9c745680c8f425513b3646d985023104dfbdacb16b2840a8648a8475e33730b1"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/validation/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 403815477,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 403815477,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.0014273544384660187
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.023954926524670433,
+          0.7119295368588057,
+          0.0
+        ],
+        "/object_position": [
+          0.14395492652467043,
+          0.5119296156735952,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.14395492652467043,
+          0.7119295368588057,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "23d1e6b1d49ca9087166433d0c546588b53dbe457b7985d8b8d28d7e2bfd12c2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/validation/000/native_camera_2.png",
+          "sha256": "4ea22b41080193764475c71495c965c8c822e47254b8c8e77b90237e5254ea2c"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/eval_seen/000",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 153533240,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 153533240,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.0014273544384660187
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.052838399573852085,
+          0.7771946014890752,
+          0.0
+        ],
+        "/object_position": [
+          0.06716160042614791,
+          0.5771946803038647,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.06716160042614791,
+          0.7771946014890752,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "279dcb83974a87a3b95b552d00da456105a72213944aca43f3dc64ababe6398b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "4b8157f403ca5c02c65af77fa492be08f3faa46204785724da42136ad943a302"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/lever-pull-v3/eval_seen/001",
+      "task_key": "metaworld/lever-pull-v3",
+      "seed": 413178706,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 413178706,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490586177965,
+          -0.5459568451689084,
+          -1.2347217871294223,
+          2.171110867678221,
+          1.2478093742887368,
+          1.0194763318517643,
+          1.9011960169297546,
+          -0.0001718607794960747,
+          0.00017178965409390032,
+          0.0008913453552442287
+        ],
+        "/qvel": [
+          0.08512035396390152,
+          0.6327525877109925,
+          -0.21596148831978437,
+          0.17411748136133243,
+          0.7585235101632961,
+          0.40106068967755204,
+          1.0192004969853292,
+          2.0543033886610857e-07,
+          2.009659464701872e-07,
+          0.0014273544384660187
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4000000059604645,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.083204545239261,
+          0.7513259005025466,
+          0.0
+        ],
+        "/object_position": [
+          0.03679545476073899,
+          0.5513259793173361,
+          0.2498224446294937
+        ],
+        "/goal_position": [
+          0.03679545476073899,
+          0.7513259005025466,
+          0.45
+        ]
+      },
+      "state_fingerprint": "9bf96efb5f1238c50957715c32438b0db379fad226e1e996b9caf2650a05d1c0",
+      "task_state_fingerprint": "b7a94e8db11f299c4db1462d2d044159f16d9077b876e3a7c953cb3d46e50fc7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/lever-pull-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "1f4cf5c6546282567d83a0bbb69d4548de0715ffaedd5a797f59f1e479679a19"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

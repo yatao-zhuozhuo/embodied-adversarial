@@ -1,0 +1,3385 @@
+{
+  "task_key": "maniskill/PegInsertionSide-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/000",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 981856200,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.008065126836299896,
+            -0.08665302395820618,
+            0.019531244412064552,
+            0.41974329948425293,
+            0.0,
+            0.0,
+            0.9076429009437561
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.02047881856560707,
+            0.30881157517433167,
+            0.09326410293579102,
+            0.5860556364059448,
+            7.732612328226196e-10,
+            9.357998820291868e-10,
+            0.8102708458900452
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0f9ed434cdeb1f1b5159e2d5859be01bf5e539c0cb50b1d3ced59e209eae71f3",
+      "task_state_fingerprint": "86761e9a9affbff20da1b69acb9da2be0d02c347a1101a4cf8b8b4887993eb38",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/000/base_camera.png",
+          "sha256": "2566f68b0dad70ae2c116a291f25c9e1d3403f9ba69338379a4455859a8d295d"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/000/hand_camera.png",
+          "sha256": "3f30f05accbf873a7298fef472260f26bea1f8f72221a2d984fe639f9a491c3f"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/001",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1974325026,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.09378091245889664,
+            -0.04272264242172241,
+            0.01786460168659687,
+            0.9652969241142273,
+            0.0,
+            0.0,
+            0.26115500926971436
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.00873522087931633,
+            0.39269375801086426,
+            0.08562890440225601,
+            0.743876039981842,
+            -8.884004643050503e-10,
+            9.77744996077945e-10,
+            0.6683176755905151
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "48c657f4baee30bde0ee443d829e3b90346fd1c1f343921a453bb3a3d3b04ff4",
+      "task_state_fingerprint": "1e2e14d8789f85778b9fc47ddd91a40e1a3fd0d7ddc4a02f6f211561c7b794a9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/001/base_camera.png",
+          "sha256": "081292f64a855f2f5b8d54581c9067171e93365c937c2c2e47294043c5ac08fa"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/001/hand_camera.png",
+          "sha256": "78a0fb9261a1d2ff17ff26bd81e788eb43ae00206f0451c5c5b597a3aaceeb13"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/002",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1620259514,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.08172840625047684,
+            -0.11614957451820374,
+            0.018006086349487305,
+            0.5124638676643372,
+            0.0,
+            0.0,
+            0.8587087988853455
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.016852352768182755,
+            0.2009802758693695,
+            0.09896791726350784,
+            0.6249021887779236,
+            -4.4210679561729194e-10,
+            -8.157670094988134e-10,
+            0.7807031273841858
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8a87e1a961db0eb6c860eec407ff2943fb481cea0b91c2d4ed2b16acb158aa27",
+      "task_state_fingerprint": "8313a4e34f6470e95762a7c35f2ebc5bebece8ca84411d5badc68679933cb21c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/002/base_camera.png",
+          "sha256": "ff9430453045152a34c14a5e201f5ce62703215b02dd327b1ebfd49ce56bd776"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/002/hand_camera.png",
+          "sha256": "3936d334b67ab7f0a0479491c056c28789d129b407e456a1887ec1595eaff549"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/003",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 420959505,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.024997100234031677,
+            -0.29656028747558594,
+            0.01837320625782013,
+            0.3422381579875946,
+            0.0,
+            0.0,
+            0.9396132230758667
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.006654181517660618,
+            0.3861360251903534,
+            0.11476904898881912,
+            0.6310645341873169,
+            -1.2390846571008751e-08,
+            2.8795064110909152e-08,
+            0.7757303714752197
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ec11b55600d2df0ef5d946e614ac84792ce8dbc3adca3df2e68d584afe60e66c",
+      "task_state_fingerprint": "291131a02ea4bc3653b7c1daa8df4bd715634f8cc8a783cbc9560a450a53eda2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/003/base_camera.png",
+          "sha256": "e94fd1d4336b3239eb004a931cba61f119fe22107ebd91d94876dfd50afc99cd"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/003/hand_camera.png",
+          "sha256": "c7b3e411d6445f88dca21984f6dd0611c7af8fd06fa681b721e1e6e5c45643d9"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/004",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 133927646,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.08855341374874115,
+            -0.11026041209697723,
+            0.021050650626420975,
+            0.3617618978023529,
+            0.0,
+            0.0,
+            0.9322705268859863
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.017914313822984695,
+            0.38674551248550415,
+            0.10243278741836548,
+            0.6691922545433044,
+            6.585729295238707e-09,
+            1.512974634465536e-09,
+            0.7430893182754517
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1331ba2a3199e4df7de3c680ba194b51673fbc51b1d0f6f6150c2b531ded65b0",
+      "task_state_fingerprint": "175c1e5a7ef1d2494bbfcf9f9ce1cbfed9f9b1d3fe56b81a7f9c77e5378d3c66",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/004/base_camera.png",
+          "sha256": "8d3929e55a308a50afd2a5e6df03ce5b39d45ee75c868b4d3d41d47a1f8bf250"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/004/hand_camera.png",
+          "sha256": "2952da06fd519508c4a9793f9853fecdf617ba7f53399ee5e1badf51e9213580"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/005",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 61909659,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.020636141300201416,
+            -0.05161191523075104,
+            0.022503934800624847,
+            0.7912878394126892,
+            0.0,
+            0.0,
+            0.611443817615509
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.027056898921728134,
+            0.31407076120376587,
+            0.11607426404953003,
+            0.7666004300117493,
+            1.115004977236822e-08,
+            4.984119783557617e-09,
+            0.642124354839325
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "01be373531deeacbb10da3b8300cd875cab19ce6c6729248deb3f1be16431413",
+      "task_state_fingerprint": "3da0ae3c361cfcc388f2e20b9a7738179ffadf6997e531c182acf31a7bec2c28",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/005/base_camera.png",
+          "sha256": "5cdf6845559cf1913e79ab488a8ae074b4e2ba3d5c75ad9476bf2480dfaede92"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/005/hand_camera.png",
+          "sha256": "22614a99ad4bbecfe14f9297e5bc0aa51478093dac0873762a62bdcb8e32e592"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/006",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1000144019,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.09232068806886673,
+            -0.059864386916160583,
+            0.01898938976228237,
+            0.9139091968536377,
+            0.0,
+            0.0,
+            0.40591877698898315
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.03384380415081978,
+            0.34302493929862976,
+            0.10627236217260361,
+            0.6114460825920105,
+            4.12645251302024e-10,
+            6.5521632564014e-10,
+            0.791286289691925
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a63784aac76358a66bda2b705c26cc9e426324847e2d5504b9ee2e8f5c020063",
+      "task_state_fingerprint": "1387052c962bb64c5ce2f61b2ef0ebb30230c2868242e44497508c821232f2b4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/006/base_camera.png",
+          "sha256": "f0cca48142634a3486b5a844e91ad9cfac1d133cb66d531dd6f69940150c8b12"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/006/hand_camera.png",
+          "sha256": "5a61a38f9ceeb2fae987915349e8fbbda9039328a802ff18c4f50e7c1e671f95"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/007",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1999662983,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.020605720579624176,
+            -0.22704783082008362,
+            0.02089528553187847,
+            0.8629013299942017,
+            0.0,
+            0.0,
+            0.5053724646568298
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.03392728790640831,
+            0.32673007249832153,
+            0.10461904108524323,
+            0.6868481636047363,
+            2.3576540719716377e-10,
+            -3.762502531756695e-10,
+            0.7268009185791016
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "011078cc10a612614effbd565294b9f77fe8377f6c128a99d1b58ddf7739bb7c",
+      "task_state_fingerprint": "9f2b5b95aaca4c6f2cfc494f7e3f26982ca214e27768046c8013ace2888cd4a6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/007/base_camera.png",
+          "sha256": "50d15433a406cba069d0e4d10e25dadaf71f958cb2ae09c33fcdbbb08cb34da6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/007/hand_camera.png",
+          "sha256": "b932a5f9af37247c28cefdcfe8fcbb2da51fca3f787bcc97576096b7e357dfc8"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/008",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1321386517,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.017514653503894806,
+            -0.27591991424560547,
+            0.016060911118984222,
+            0.7260282039642334,
+            0.0,
+            0.0,
+            0.6876649856567383
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.006287641357630491,
+            0.38054659962654114,
+            0.12099375575780869,
+            0.7392522096633911,
+            3.564519790444365e-10,
+            1.815516625924829e-10,
+            0.6734286546707153
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dd9e097898b123f7e27aeccadea440f71a3c81e63a702164cb24e4d6120f3831",
+      "task_state_fingerprint": "c855dba8e204b05dbcec16c6f1889bb6f5bc8fafb2cfc61e63d874b285703202",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/008/base_camera.png",
+          "sha256": "883c2ca4b0a7fed9a7b1a7212bb958cb644a8ac206eca8fa54d3eca9f5a87b6c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/008/hand_camera.png",
+          "sha256": "3865a9762907146be096649a4e2800ecd7f950627bae4bfda2399da32e9d999b"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/009",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1911203089,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.07862872630357742,
+            -0.02900448441505432,
+            0.01595374569296837,
+            0.7592943906784058,
+            0.0,
+            0.0,
+            0.6507472991943359
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.0010307615157216787,
+            0.24256984889507294,
+            0.09210266172885895,
+            0.6646296381950378,
+            1.4947376669738333e-09,
+            -3.2340898847849076e-09,
+            0.7471730709075928
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd63247b2b9b8bd811159a26b6ebfbec52008c880e792be2958fa821311e8ac9",
+      "task_state_fingerprint": "0249b522588e81704a74c6cdf6b4b0972956e5cfa9c761c14f417776b7a1edb3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/009/base_camera.png",
+          "sha256": "9f912f5b8a644fc1a9e80b68beeae416a11bbef3029dcdd9bc900d58859e12d3"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/009/hand_camera.png",
+          "sha256": "6c7fa626623579e8b80459bded40a4847b073e5a2106a49e237433b7cc5e2755"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/010",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1864847059,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.007588103413581848,
+            -0.27775004506111145,
+            0.017510943114757538,
+            0.3271985352039337,
+            0.0,
+            0.0,
+            0.944955587387085
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.04285142570734024,
+            0.36788105964660645,
+            0.10913324356079102,
+            0.703188955783844,
+            1.4648293245045352e-08,
+            5.690770521482591e-09,
+            0.7110032439231873
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a73ee6c3ddf27b28592118bf4d8f66d9cd6c737a1ba74838b25313c744ffeed0",
+      "task_state_fingerprint": "59a41d6d043f0582c932bf94c7cc33a5132e3cffbefa44f57b17f8c2e088544d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/010/base_camera.png",
+          "sha256": "1ab135aabc3317c9087b75e12f83ef6150aeda1d6265b933e1575ae6c7de9f1a"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/010/hand_camera.png",
+          "sha256": "e0b5ae62e2a4fdfde14fc84d940cdb2678afaf6a0cf306a1afb9c6926f3ccbfc"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/011",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 994031341,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.05227133259177208,
+            -0.27808064222335815,
+            0.021215876564383507,
+            0.8696192502975464,
+            0.0,
+            0.0,
+            0.4937230050563812
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.02872350439429283,
+            0.24671010673046112,
+            0.10526130348443985,
+            0.7514462471008301,
+            -3.2275881967080977e-09,
+            -1.0904346314788427e-09,
+            0.6597943902015686
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bf91fc7c163114433e6a6df0da62f0169f1a293a2189d8bcc8b2db7753418b9b",
+      "task_state_fingerprint": "f799916566b55167254a3b0d76737df23faa018037cdb44d0811413ca2624333",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/011/base_camera.png",
+          "sha256": "397d207b41cae9b6dd11e39a586bcd05482dba84e3494d8b39195dab810c6086"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/011/hand_camera.png",
+          "sha256": "70b230a513f6b346e2de79541d3507e62c49bd44c549b31faa59f7291588c3bc"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/012",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1944640104,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.09923497587442398,
+            -0.25775325298309326,
+            0.022714922204613686,
+            0.8326812386512756,
+            0.0,
+            0.0,
+            0.553752601146698
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.004488240461796522,
+            0.23285949230194092,
+            0.09258274734020233,
+            0.5937058925628662,
+            -1.6824319715169622e-10,
+            5.1237292186812056e-11,
+            0.8046821355819702
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "03a2f3a0f2824dec79d763c5ae89810d85f3b6fd7ee6d98fc7d16bf72e011499",
+      "task_state_fingerprint": "989fe46fb4ff6d96a47841237ad1abae084fdce35f91f7f8653479505bbd2626",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/012/base_camera.png",
+          "sha256": "ad30f78b3af8500b62020d9abcffa328ccda5655b016352816e03f0c9d0e80b0"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/012/hand_camera.png",
+          "sha256": "c8a214c2464fe9a3d08f170c8f86a76ef740cb608ca9823054002d2750938745"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/013",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1967988138,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.027255482971668243,
+            -0.16424810886383057,
+            0.019078316166996956,
+            0.4768063724040985,
+            0.0,
+            0.0,
+            0.8790083527565002
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.017623309046030045,
+            0.259836882352829,
+            0.09969677031040192,
+            0.6305180788040161,
+            -5.374252154410897e-10,
+            -7.656952849544041e-10,
+            0.7761747241020203
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2729efaa6796f23ed1047ace575f8758aa05e426403638a1eb341c53a50268fa",
+      "task_state_fingerprint": "c8b4be24328296629991c493f609a5e0523e2d64e9c8a2949095f0590828da7e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/013/base_camera.png",
+          "sha256": "4d576a046fb018985c3203dace4191ce113a1532dddc4750937c19a54b1ef349"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/013/hand_camera.png",
+          "sha256": "419d0a0c440bb24ea1c8a8b4e6ff92b98fccd642cbaea4cf22c7e27f10f18342"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/sft_train/014",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1160594120,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.04099452495574951,
+            -0.19653642177581787,
+            0.024988852441310883,
+            0.5234423875808716,
+            0.0,
+            0.0,
+            0.8520610928535461
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.021150438115000725,
+            0.3278476595878601,
+            0.11664805561304092,
+            0.6482514142990112,
+            1.4103007650589916e-09,
+            3.11438097533312e-10,
+            0.7614264488220215
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0754d9dd6bf68171a8c4aa0e099bcb7ccea3de8696166aa9fb2aa894dc8868a3",
+      "task_state_fingerprint": "b1e4d5a8a53c0dd69cad67cd0c06e205d5b6df8c5fd17d3c5dac4ea16364d05c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/014/base_camera.png",
+          "sha256": "ebb19e79d3c388cb69fcd3a517b639d7e68e2eb2ce79fe1fd3e105edfd5300cf"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/sft_train/014/hand_camera.png",
+          "sha256": "ad725d8fd00e633e4f797026520cf7e85307f2ceb74114b429016a295e28501e"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/000",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 558718995,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.07064981013536453,
+            -0.12161527574062347,
+            0.01841377280652523,
+            0.7840234041213989,
+            0.0,
+            0.0,
+            0.6207313537597656
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.04455077275633812,
+            0.21606869995594025,
+            0.09265455603599548,
+            0.5856080651283264,
+            -3.162738071438298e-09,
+            6.685937137262954e-09,
+            0.810594379901886
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cec661c7b1719eaa396a0a8cfbe44f4e832750aae6217d2fc41d9bc47d883f6a",
+      "task_state_fingerprint": "7c3505ba1d30005ebb37a3bbc394dbb0d8c27bc780eba3c9b9621bc5fbafc66e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/000/base_camera.png",
+          "sha256": "65c830c371686b55b077a87e76365fea8d47b3b191dae667c13a2d6228d61d48"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/000/hand_camera.png",
+          "sha256": "b77814eadb5f7a3e7e14ec5cddaea54b29c3e921079ae50e4f06535f394f6d61"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/001",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 144729175,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.039932359009981155,
+            -0.010215967893600464,
+            0.02089751325547695,
+            0.44771942496299744,
+            0.0,
+            0.0,
+            0.8941740989685059
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.006018512882292271,
+            0.3944375216960907,
+            0.10435362160205841,
+            0.6294787526130676,
+            5.372259859193207e-10,
+            6.36210195636977e-10,
+            0.7770179510116577
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b06df94ecd5438477087c125499f6f185ac476b1316979473fc8605aa405f5c0",
+      "task_state_fingerprint": "156a14e967b8228167b4e353d957a9249c1151a69ccd3a1eb64b5a0801312abb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/001/base_camera.png",
+          "sha256": "91d4fd63df7c38b290dc7cb54aec97587bf727249d637059abc18f0400224118"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/001/hand_camera.png",
+          "sha256": "2299578dd148365337734903afeacfbc7181f05b35c872f50078a318a6cc7a4a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/002",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1920712455,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.024882689118385315,
+            -0.17580677568912506,
+            0.018806198611855507,
+            0.5003541707992554,
+            0.0,
+            0.0,
+            0.8658208250999451
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.009088516235351562,
+            0.3104473948478699,
+            0.12446421384811401,
+            0.6709148287773132,
+            7.654754607955283e-10,
+            5.22395904312134e-10,
+            0.7415342330932617
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dbaa89586ae44eeb3a3cbd1ed2a3798eb3024735a818d95e21e43f8aecfb8a96",
+      "task_state_fingerprint": "5ab3ef10b42d54f91ac708a7e5106fc6f7ccc7ff3fee7d074b3e218d3eb9e868",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/002/base_camera.png",
+          "sha256": "8e69480f9daff4f6b126655c0446d964dd1c5b1de36d2cb43914ff425d6aa6b6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/002/hand_camera.png",
+          "sha256": "e6cc83d81f8ae2e3831372d8c09be87d3a7b2d456dc98e5f841b743390d8b7f4"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/003",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 2060045618,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.003959298133850098,
+            -0.04205602407455444,
+            0.023386141285300255,
+            0.4957423210144043,
+            0.0,
+            0.0,
+            0.8684696555137634
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.03922494500875473,
+            0.337055504322052,
+            0.12130124866962433,
+            0.8107321858406067,
+            2.2488505502238354e-10,
+            3.1087865615120336e-10,
+            0.5854173302650452
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "69e96e663a404ef046ee1bc157ec536b2cfea0a1e516b4d0aa798d85676a6911",
+      "task_state_fingerprint": "d66e404c6277d5ddfc5efaeaee9de7648adcc8017c8e7d93ef13ba6c1822296e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/003/base_camera.png",
+          "sha256": "ff43890bde76acca3d2d215d51c2927116fe2053961d3077d7976f0524245ad9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/003/hand_camera.png",
+          "sha256": "1bc9bf60897ea096b66fb4adcd106cbb0e95bb35ea6cb4bb61a6384efff87a09"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/004",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1590055124,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.036821603775024414,
+            -0.11447453498840332,
+            0.024854660034179688,
+            0.8040931224822998,
+            0.0,
+            0.0,
+            0.5945033431053162
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.01454777643084526,
+            0.2714553475379944,
+            0.09887431561946869,
+            0.7275230884552002,
+            -4.013050780571348e-09,
+            -5.8252123125157595e-09,
+            0.6860831379890442
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cea78447412b7791704ec3a2da6134fc363319d690413f179cf28a81d50280c5",
+      "task_state_fingerprint": "81d85ce2245e18e673f733527ad04255233f25ea93e82597e7b2f3c492ead0ad",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/004/base_camera.png",
+          "sha256": "c9ab362de2fbc79992a74c36dc2db1d3b16e749829bac0e28c485f96f94ffa03"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/004/hand_camera.png",
+          "sha256": "69aeeecd88027ddc530c538f7deca3262d9cd7dea2f48f179dfb3d281bddec11"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/005",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1804415933,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.08745690435171127,
+            -0.10329984128475189,
+            0.02215700037777424,
+            0.9643904566764832,
+            0.0,
+            0.0,
+            0.2644825875759125
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.00624516187235713,
+            0.31485265493392944,
+            0.09849117696285248,
+            0.8027834892272949,
+            9.054618388404378e-09,
+            2.958922884488402e-09,
+            0.5962709188461304
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9b98b85aa8a716ef7bb0e00f1a954b6d8ac358160bb046a67b9f7e9e82345887",
+      "task_state_fingerprint": "f958750247c1ce6456c733a635e0c53645f705d722a27d64424b9f8bb4c93602",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/005/base_camera.png",
+          "sha256": "629241852e491b8c253353c81f717c1c8d5afdb4ccd85f1cb65606a85111b04d"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/005/hand_camera.png",
+          "sha256": "fab10dc3d539c38074a7462e62aa25ee8ae1a558e1bf51db0a3d3f822274f34a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/006",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 810466552,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.0577460415661335,
+            -0.1819668412208557,
+            0.021880827844142914,
+            0.9059603214263916,
+            0.0,
+            0.0,
+            0.42336246371269226
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.03622305020689964,
+            0.2389780431985855,
+            0.10668531805276871,
+            0.5739823579788208,
+            -7.393994749804733e-09,
+            -6.563824150873643e-09,
+            0.8188676834106445
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ecf102756373121ef6bf30cec47923dffdfd84c9e6c8653121e4f889581a0998",
+      "task_state_fingerprint": "3db4d2144e9a6427c3e844089440e916b3b7d96e4315375a3a474509d8e095dd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/006/base_camera.png",
+          "sha256": "9c747a48d2a5d08526eb951384b72974e77fcb2f121f9ca8756e3cca0bf117b3"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/006/hand_camera.png",
+          "sha256": "2476ec2c3f7d0db8e87ed79acf3000d2065aa8ab2b703f2379575577f9286176"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/007",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 824131081,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.009276941418647766,
+            -0.25622910261154175,
+            0.0215466171503067,
+            0.35679084062576294,
+            0.0,
+            0.0,
+            0.9341843128204346
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.001080076675862074,
+            0.21701675653457642,
+            0.11761748790740967,
+            0.7368414402008057,
+            -1.3038117252506254e-09,
+            -1.075997957400432e-09,
+            0.6760656237602234
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c5601bbab0aaa9d935635e3c2cf873d0ff3bc18b1f3ee9fbbf58b61c3e6709b4",
+      "task_state_fingerprint": "9c92be2f1fbcc1dea8d51080d47fbdfdae269cb06f61cbd5b791b4ba021b2579",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/007/base_camera.png",
+          "sha256": "31a4e01253c566b2658e0c93d44c7cafc9127e576bf098db25c38605147362cd"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/007/hand_camera.png",
+          "sha256": "712dc8c6f165c67cce1c361cf95c5faba2bab617404e8579a37b7091d9244ea6"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/008",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1483409025,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.07142678648233414,
+            -0.1276616007089615,
+            0.024018559604883194,
+            0.4090093970298767,
+            0.0,
+            0.0,
+            0.9125301837921143
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.025008071213960648,
+            0.2589297890663147,
+            0.09548062831163406,
+            0.6592220067977905,
+            -8.478928670285768e-11,
+            -2.638783636044195e-10,
+            0.751948356628418
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "846ce229ac4fee06def8cab5497a8463eda9da2ce52e94559bcf643f86173b33",
+      "task_state_fingerprint": "20d0af6718049bc1a1bb94b3baf5331267875df1b37307d1fda5ed8e3dbd4fa0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/008/base_camera.png",
+          "sha256": "8974757754b81b35a641df63823a6be203caf5038a55e9322f308dd4e040a965"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/008/hand_camera.png",
+          "sha256": "81fe85580c9647ea098919df5ca42df53a16e7e2e98c7896457f93c4ead3f5f9"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/009",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 2131799918,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.023357704281806946,
+            -0.0844641774892807,
+            0.017432801425457,
+            0.6217105984687805,
+            0.0,
+            0.0,
+            0.7832469940185547
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.04788351431488991,
+            0.3297460675239563,
+            0.11540597677230835,
+            0.6793793439865112,
+            -8.872379220203896e-11,
+            -9.880634505021746e-11,
+            0.7337871789932251
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e70ae682164bcea5770d8c8398711f7603f970f5dd8f125fabf80df6a608c185",
+      "task_state_fingerprint": "2a0ae8087b9b4b0408de7d89201b1102e269a8b26156ad9291a5bacef4bfc96d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/009/base_camera.png",
+          "sha256": "c606b2473b8ea6d6e343ca5724ffd06477dbd1437b0fd53526225f06b3ace903"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/009/hand_camera.png",
+          "sha256": "f3c70e55ac71c042e3c2266ea500b785dd9e2ad86a9e47b5a09d74a5b25af28c"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/010",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 103819352,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.040895409882068634,
+            -0.0767676830291748,
+            0.016644176095724106,
+            0.9206321835517883,
+            0.0,
+            0.0,
+            0.39043107628822327
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.04606858640909195,
+            0.35673198103904724,
+            0.09393562376499176,
+            0.7146271467208862,
+            9.715124704712252e-09,
+            -2.739601434598171e-09,
+            0.6995056867599487
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a585e10f4c02d4f30a23b7e9f66b5cde5010a36caa0fdf7084602cc89e10f334",
+      "task_state_fingerprint": "e898ea0a83f88825e1ebfb36964493ce27f2317beb26db6fbebcb99d8220f8a7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/010/base_camera.png",
+          "sha256": "d1e0e54103bfad816d76abcb372f1e249173cf75a326e5c92871d40b6d9f3905"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/010/hand_camera.png",
+          "sha256": "36e03152ad4aaaf2312a7b15e23e8a0fd14742af502e42e3cbcf6ed58c7f201b"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/011",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1793807300,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.03488527983427048,
+            -0.13262395560741425,
+            0.02051970362663269,
+            0.8471083641052246,
+            0.0,
+            0.0,
+            0.5314202308654785
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.04385152831673622,
+            0.2983890771865845,
+            0.08923940360546112,
+            0.6146624088287354,
+            1.903936119873606e-09,
+            -1.3870509185665014e-09,
+            0.7887902855873108
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "33a00e71184c4b6217fa136d8165d2577e5488fbb39b2883c3174209357586ac",
+      "task_state_fingerprint": "a560639700d912612fc12206239592f768b245ccac05deaad9563bba8404013f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/011/base_camera.png",
+          "sha256": "81f96301da88d1ac3798a68dfcf7b81fb90e8137f5f388b2019da6d6d8c095be"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/011/hand_camera.png",
+          "sha256": "71200b7e2dbf4cce44dcb3b80b07b8978b286952295f88ff2475fc4b487af612"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/012",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1953162345,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.03882675617933273,
+            -0.24580201506614685,
+            0.024815961718559265,
+            0.5461307168006897,
+            0.0,
+            0.0,
+            0.8376999497413635
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.030441386625170708,
+            0.38021478056907654,
+            0.12082859128713608,
+            0.7376598715782166,
+            -1.2023102513580852e-09,
+            1.8106249832783305e-09,
+            0.6751725077629089
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3547cb42de5cb6d93f8b7ef9372abd25bb22ab28053f13f19790cb874d1e16ad",
+      "task_state_fingerprint": "905a78977520969538faf5d4acb3f33b915a0af9f552c3aec89c2b9eed2a9b1a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/012/base_camera.png",
+          "sha256": "d15f5a1c27a5e3324b9b99c2b95d195e297a7b036b19bf056604d01223925222"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/012/hand_camera.png",
+          "sha256": "480ec48842950bd5aeb0109b34dd80958e12b9369bd3bce3dba3687031f80c74"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/013",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1303077805,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.035886116325855255,
+            -0.2732090651988983,
+            0.023437203839421272,
+            0.5926337242126465,
+            0.0,
+            0.0,
+            0.8054721355438232
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.013887714594602585,
+            0.2844110131263733,
+            0.108486607670784,
+            0.7263889312744141,
+            6.43496367302987e-10,
+            -5.504559585922664e-10,
+            0.6872838735580444
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0a364d39ba8393f921a9cb52aa8089ea78c85087e4a2da99f46cb5cae98a90cf",
+      "task_state_fingerprint": "542b8e299b9ad3b92a77a21acee0776e048d6614b5959f9f090a1e3c1aff3d94",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/013/base_camera.png",
+          "sha256": "ed996dd804a9cacb687001ff79c7186c6b94a2cbcb1832935b813aa6a30d8e65"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/013/hand_camera.png",
+          "sha256": "ff828a5d9a0c25d922ed126ce4dc8f2b8c75194b4a004dc0c5a81512c25d6c57"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/rl_train/014",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 90645682,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.06965140998363495,
+            -0.2794981896877289,
+            0.01637004315853119,
+            0.896884560585022,
+            0.0,
+            0.0,
+            0.44226470589637756
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.04629538953304291,
+            0.37715405225753784,
+            0.09470659494400024,
+            0.7925416827201843,
+            1.1152909706879655e-09,
+            -4.868297764915042e-09,
+            0.609817624092102
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "db9357c838177f91a6673f150eb2dbf34de594cd4dd9f04bfc4a23e63c3f51e4",
+      "task_state_fingerprint": "5bc5826860d71369d2fb91890003b1fd2e9418255928841713ea014965c975c4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/014/base_camera.png",
+          "sha256": "6eb14c562b0992ae85325661f7923511edfb258c64a98c40c6723eb0440c2485"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/rl_train/014/hand_camera.png",
+          "sha256": "c01f7545d8da192f871792c71c5d54a85dc2d1c00a5e02e7231c27bccef55d02"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/validation/000",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1595782667,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.02059570699930191,
+            -0.12011939287185669,
+            0.019467290490865707,
+            0.9639606475830078,
+            0.0,
+            0.0,
+            0.26604488492012024
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.03554169461131096,
+            0.2767900824546814,
+            0.11825601011514664,
+            0.6002146005630493,
+            9.876577333756131e-11,
+            -1.295632490183607e-10,
+            0.7998390793800354
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9a0c059c72d9fae086c3735ba566d0aedd3ed880d95a96ac3049508bb25c8bdc",
+      "task_state_fingerprint": "579fc73b42c9cc9834e2b7d5dbc79c40d6ad0c89c67ab1ba77f4314262856725",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/validation/000/base_camera.png",
+          "sha256": "31a02a52ca4c4d73daa2fcc43d3c4b9357ea4dca25ed115ba8f0c3719fa05682"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/validation/000/hand_camera.png",
+          "sha256": "7d18ca2eec4eec38fe0bdf7b8a544a434475b7a43f76cfe740dd735a03df1781"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/000",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 284452988,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.05558902770280838,
+            -0.2765517830848694,
+            0.02176305092871189,
+            0.26947513222694397,
+            0.0,
+            0.0,
+            0.963007390499115
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.04582899808883667,
+            0.37389257550239563,
+            0.0926172062754631,
+            0.7372793555259705,
+            2.1029011865181246e-11,
+            -6.607309144257556e-11,
+            0.6755879521369934
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "216181c3cf9e2a2942ada03b108ec8c9f79a29a63b1fd69b548d725fb822e502",
+      "task_state_fingerprint": "a6722bccf1b3f3f875400f6e773d5fca97629d89e417f9aa00f3e41698e00c46",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/000/base_camera.png",
+          "sha256": "00abc8cc577fc073b0523a25d939438d1afd631cfd386fa24793c0efb871489c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/000/hand_camera.png",
+          "sha256": "c77321b8f31ea9580648763939e2a600091b5baa409bf11552797d963abce408"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/001",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1595049918,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.0028989315032958984,
+            -0.19013747572898865,
+            0.024898001924157143,
+            0.33832937479019165,
+            0.0,
+            0.0,
+            0.9410277605056763
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.014341200701892376,
+            0.31848442554473877,
+            0.1189580112695694,
+            0.7558907270431519,
+            -3.628732425653425e-09,
+            -4.678639697885956e-09,
+            0.6546976566314697
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1d1273875bcf0a6bf33ab15e1dfc716ad88a40258d5fc6df7850abbc3e51ffef",
+      "task_state_fingerprint": "d2fb0d71c4fd4e3f7aeedcb228e1135d0cea5edc98233c856042fae78001290b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/001/base_camera.png",
+          "sha256": "715f66e857ba4090b41e2111a36427cc265c4cd5c3abcebfcf9d4f8c576a57ed"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/001/hand_camera.png",
+          "sha256": "a50c3e7b14209482a8beb11781348ca1ed77b2910f949ecc231190ebb8d16d41"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/002",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1089204967,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.03899111598730087,
+            -0.1337270587682724,
+            0.018585730344057083,
+            0.868693470954895,
+            0.0,
+            0.0,
+            0.49535003304481506
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.024530822411179543,
+            0.3518146872520447,
+            0.09762848168611526,
+            0.6058422923088074,
+            5.421758597634607e-10,
+            3.62803564968317e-10,
+            0.795585036277771
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2bba1af703fca2958c5b3dce7078d49b1a64c846870545d0f87d7252391bc001",
+      "task_state_fingerprint": "1a404707821d49b3e46fea6b4d0a4241b88162623b0c269ca457d931353a498c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/002/base_camera.png",
+          "sha256": "b1a3c078120c751c8a32fdd40be910a2f3277723c4006b41f5f4de4e3df5d7e3"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/002/hand_camera.png",
+          "sha256": "be4fb465e2083b1462990220840eef4bb0337966ab4024a527cad6829a19a804"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/003",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1471228949,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.08444314450025558,
+            -0.08477234840393066,
+            0.022050922736525536,
+            0.27067047357559204,
+            0.0,
+            0.0,
+            0.9626720547676086
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.029746761545538902,
+            0.360366553068161,
+            0.11650273948907852,
+            0.6135206818580627,
+            1.056396525811465e-09,
+            -3.074211996079157e-10,
+            0.7896788716316223
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f1d01f11183d94d1a39186b167c9b6dde9522ab58a968c95282d36ddb81e4332",
+      "task_state_fingerprint": "41c4b03074c3d37dba9f4844b329992660992e27e78382342a807fe9e21c1df4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/003/base_camera.png",
+          "sha256": "baf5e1a97b63d5f3086b2c9f1fc069cec25edc72dae1bcd50cfd818ab6610d84"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/003/hand_camera.png",
+          "sha256": "ec963abfa89789e9176560a8eb3af518805e34b2fb725e7294a86b3cc8654e0e"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/004",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1551058054,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.00170966237783432,
+            -0.26828211545944214,
+            0.020624905824661255,
+            0.8429884910583496,
+            0.0,
+            0.0,
+            0.5379316210746765
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.011811594478785992,
+            0.37212443351745605,
+            0.11421354860067368,
+            0.7868660688400269,
+            9.282477009264767e-10,
+            2.7625401965991614e-10,
+            0.617124080657959
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0177f8b10974401b170c1834da3c09420fe4a7171b6e58d15efe52ffd4c404c9",
+      "task_state_fingerprint": "5efc13f82f01156253950d56e177599ec99ab7f2579d3f41991afe5c78fa3762",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/004/base_camera.png",
+          "sha256": "3d2f324b5c605c6fc283934bd8809ee4d2bf8d5f997bcb13d1e7feb3124544f7"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/004/hand_camera.png",
+          "sha256": "6a334ca7c96ad02d0f0e52a8a46e3638eb86dc493506e28b7f1b694233cbbeeb"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/005",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 2005591652,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.004950128495693207,
+            -0.025634557008743286,
+            0.024075541645288467,
+            0.30074653029441833,
+            0.0,
+            0.0,
+            0.9537041187286377
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.04062466695904732,
+            0.253837525844574,
+            0.12373124808073044,
+            0.8183638453483582,
+            1.7986445666196005e-11,
+            8.146733287972552e-11,
+            0.5747004151344299
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a2941c99518f940f90371fdb32ecf67378e5a114af28c968b83e6223b98b345f",
+      "task_state_fingerprint": "76ad5be98e63fd77e6e52b1a80e397ad83e7a6a137e66b71e24fa04631514634",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/005/base_camera.png",
+          "sha256": "0210896773450cbac49981030bffcb1625290a7ceb91ee0a6a6be6fe097fd4a9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/005/hand_camera.png",
+          "sha256": "a131fb00e0a4ef686423007a5f0c929fb4482738a9c5feda43d0615cca765374"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/006",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1178956153,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.06548742949962616,
+            -0.08770677447319031,
+            0.022859038785099983,
+            0.35165050625801086,
+            0.0,
+            0.0,
+            0.9361313581466675
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.0463261604309082,
+            0.3386589288711548,
+            0.1079372987151146,
+            0.6980686783790588,
+            -1.8472610108233312e-09,
+            -9.061826844458665e-09,
+            0.7160307765007019
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6d6ecc2832a78aca49b13b05070dd7bacccf93a589940bf0417e1881367b32cf",
+      "task_state_fingerprint": "229f94287fd5692d6fa88704fbd43f305698872c9f825f1b6129badfa84f67cd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/006/base_camera.png",
+          "sha256": "3d9224b35578d824c849ff1a17dcf9167b3c778adb2cfee0c27b8edef2ea34b2"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/006/hand_camera.png",
+          "sha256": "57af5b86d6d86ddde52e7812aec434e5da6c8b0339d411992ee8476f3e7ef022"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/007",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 131974190,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.023947536945343018,
+            -0.06141030788421631,
+            0.017200395464897156,
+            0.7646960616111755,
+            0.0,
+            0.0,
+            0.6443911194801331
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.008260296657681465,
+            0.34105217456817627,
+            0.09712612628936768,
+            0.7728866934776306,
+            5.695033777897152e-09,
+            4.3707784058710786e-09,
+            0.6345443725585938
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "207aa40e2fda043ca329b3c766f09e919085ad8c74cb34e874eac37cb6253d41",
+      "task_state_fingerprint": "5a5c06d59a3e28d3ecfbdecc7d8f7a1eeb140ec8c9a460cad894754924ea5718",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/007/base_camera.png",
+          "sha256": "245d8a6dafd4819abe2966d29b0e7bddc1a661d2a7e8539e5b9b100ee8d95df9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/007/hand_camera.png",
+          "sha256": "d138f4c4282f4fd1b9dfef840f75219fb366dcbc3a248741281e1e76da3e1b67"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/008",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 431732407,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.03111165761947632,
+            -0.19310525059700012,
+            0.01819412223994732,
+            0.9335138201713562,
+            0.0,
+            0.0,
+            0.3585413992404938
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.031234275549650192,
+            0.3418005704879761,
+            0.09997064620256424,
+            0.8207867741584778,
+            2.4103308238210275e-10,
+            -4.756412486095485e-10,
+            0.5712347626686096
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7292b2ac6456802d84a0946b3cf35e9e08f7afd1081507f534ab1eb03aeef4d8",
+      "task_state_fingerprint": "4f37b0abcaa37e278fd17b03095fa010a24efbd700050b67f8444f6d0bb8f8a9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/008/base_camera.png",
+          "sha256": "1483c1ee0e4f5feeb99c6a05fd8fca873dbbb2d96adc15ddc1a13fdc4cb6db7e"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/008/hand_camera.png",
+          "sha256": "10622c9c6098575b684bf16a5bc1ed744fb10a0635b3bf6bb0ef0c7602cc1c63"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/009",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 413836871,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.023412786424160004,
+            -0.08169683814048767,
+            0.02401852421462536,
+            0.903485119342804,
+            0.0,
+            0.0,
+            0.42861950397491455
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.03398454561829567,
+            0.33108460903167725,
+            0.10710812360048294,
+            0.77291339635849,
+            -1.7914567607135723e-09,
+            -6.353699788519407e-10,
+            0.6345115303993225
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "26ae94cf6cbf72311bfd68078ce453381782a683b4174bc7e3bda2ed03fe77eb",
+      "task_state_fingerprint": "469293fad9142fbae96dcb8e8d69cefb5a67bb4a9b9d26c249e04ffdd538b1ab",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/009/base_camera.png",
+          "sha256": "a0daf952ac40ec5a4cfe0920b6a95e9be857fda070b1cc20e4a810934a46ec17"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/009/hand_camera.png",
+          "sha256": "6d9a2192aaac6e24d462cfa681f7b412c3ae28abf8db5321e1c06198a082fee5"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/010",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 306140784,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.0580594576895237,
+            -0.19530677795410156,
+            0.022465085610747337,
+            0.7496935725212097,
+            0.0,
+            0.0,
+            0.6617851853370667
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.043118540197610855,
+            0.3668435215950012,
+            0.11834599822759628,
+            0.6819648742675781,
+            1.9327416056480473e-10,
+            3.2436331398599805e-11,
+            0.7313851118087769
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b3311c93bae9116d9fe77e1c8e12e32f00100adfb8a380ea4928a8b1132ec6c0",
+      "task_state_fingerprint": "08d3fad29d0ae02b6fe47ed6c35f4d12075a8ecfee0adb05bb287570656aa1dd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/010/base_camera.png",
+          "sha256": "697958509e2c46a01d400666813521914ac3bc2484126bb186381f49af28e9d8"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/010/hand_camera.png",
+          "sha256": "8bd27d9cd7ccb50c9d8b1227567fdd498aea0588a45d8b511e0b5624ccc7e58e"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/011",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1869074488,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.021335363388061523,
+            -0.05015847086906433,
+            0.02440405637025833,
+            0.7976565957069397,
+            0.0,
+            0.0,
+            0.6031119227409363
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.027445010840892792,
+            0.37676602602005005,
+            0.10967531055212021,
+            0.6744868755340576,
+            5.042720685466406e-10,
+            7.59454943377591e-10,
+            0.7382871508598328
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e477cf39b31600c4e1d01bd1fd4291fb9f200355fd9a0d62c11052aa300a3585",
+      "task_state_fingerprint": "328fda07c4267ce35f5e395f4827ca9b3b6bff603d66b5cb3d375d55ce50f03b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/011/base_camera.png",
+          "sha256": "e99d81b1e9b598c6354baf39717bcb0b813bd9531e8f1445be8f314a35e8e58e"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/011/hand_camera.png",
+          "sha256": "ecd2213beaa7af3f83e690654d72ed4e5027febe431329cf0b7631ad62782201"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/012",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 249598393,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.07727064937353134,
+            -0.1404787302017212,
+            0.017213856801390648,
+            0.9207664132118225,
+            0.0,
+            0.0,
+            0.390114426612854
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.018178356811404228,
+            0.325996458530426,
+            0.12234680354595184,
+            0.6848928332328796,
+            1.2944154637040128e-09,
+            1.7786669914698905e-09,
+            0.728644073009491
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "44b94536ec0673551fcbe7adfbf5f41f7bf6e3f66533806f2494bd54983252dc",
+      "task_state_fingerprint": "5df8ce6890ab622bd236f26dec8a7a0c9d7aa31bfa37f95efac13bba05f317ae",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/012/base_camera.png",
+          "sha256": "351db4064b363276f60e0d2aedd2891d6949be16814277cccbe2f65e14dd3086"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/012/hand_camera.png",
+          "sha256": "d95210b6cd3889149cb28455a87f3e60c8619c465ed97dbb2a5f9ccb0ef7a180"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/013",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 570507384,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.09273708611726761,
+            -0.1435624063014984,
+            0.018815385177731514,
+            0.7513515949249268,
+            0.0,
+            0.0,
+            0.6599020957946777
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.024302953854203224,
+            0.2698982357978821,
+            0.09143615514039993,
+            0.605214536190033,
+            -1.8461454587281878e-10,
+            -2.04324868136041e-09,
+            0.7960625290870667
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f1c945479392cd8f94d59b938964cecdc61e7a0a95d4a2c0aec6738bbd252b80",
+      "task_state_fingerprint": "de6e90eab73f7417e353deee8aeb9be4d85e7708dc38d2b05ea0e4d8c6c27c1b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/013/base_camera.png",
+          "sha256": "04236e076fdeb058578b952da06ee79e88ca91c8016d4434c0d5bb858bde8c56"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/013/hand_camera.png",
+          "sha256": "c7340077e0a91f0ebd0a70ad656d73f0d0b6b16027bff93a4e685e650e5616cd"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/014",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 2117237735,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.07786136865615845,
+            -0.0017887353897094727,
+            0.02145211026072502,
+            0.48025038838386536,
+            0.0,
+            0.0,
+            0.877131462097168
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            9.450362995266914e-05,
+            0.29575270414352417,
+            0.11442949622869492,
+            0.7427652478218079,
+            7.094322906908701e-10,
+            -6.512701489214123e-10,
+            0.6695519685745239
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e618cc3c3919ef051b86cf868eb7641d632511dc4c6747150095c2556db0dd6d",
+      "task_state_fingerprint": "f856c629c34184332f5e975768c8d3f18c72a729fb1899136f96d751ed79d740",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/014/base_camera.png",
+          "sha256": "a5a84c1f45774b08d9abec5777b0abaef0783c56ea99e4f4a2f7eb68148a6c19"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/014/hand_camera.png",
+          "sha256": "3007340679db4c276a537eeaca6eb7ef9b60c7d8df1be037dc525b579e59ba02"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/015",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1417917941,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.061086662113666534,
+            -0.10309411585330963,
+            0.01687733270227909,
+            0.8136383295059204,
+            0.0,
+            0.0,
+            0.5813713669776917
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.0217285193502903,
+            0.38419145345687866,
+            0.09656479209661484,
+            0.6205174326896667,
+            2.0985607696033526e-10,
+            9.495082498034435e-11,
+            0.7841927409172058
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "03413c1ba552b1f6b84a4fad8e32ecbf2847227c842e007021abc8282e6396d5",
+      "task_state_fingerprint": "b18e37563b634034395b910689d80ae91cdaa24456fc0e79fc8cb5ee58de3ec7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/015/base_camera.png",
+          "sha256": "2c14af6b8d46ad42751488e75e8805e05267290f43bf889fee670cab9541a5f6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/015/hand_camera.png",
+          "sha256": "09fdd55ea9acc6ffb2b76f442d07cce87a657d00196341712b2f65c2e6c878ce"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/016",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1747799016,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.08785431832075119,
+            -0.005464315414428711,
+            0.023564832285046577,
+            0.2934926748275757,
+            0.0,
+            0.0,
+            0.9559613466262817
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.01315090898424387,
+            0.3651365637779236,
+            0.08751951158046722,
+            0.6728516221046448,
+            -5.031289163071051e-09,
+            -2.212452443473012e-09,
+            0.739777684211731
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2d73b46096bda1472d0060d2ecdb18c5f0e5c3fb5f69939cfcbf5706d7fd8c0f",
+      "task_state_fingerprint": "6ce848aa3e219e34303252a8935a8a584e527dfc4ac8fe5619cf6a5f7738f824",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/016/base_camera.png",
+          "sha256": "9b9cf4d78f15c72bc16b29456fcb23bd7c9bbc055b2319e4424fd2b41f39b01f"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/016/hand_camera.png",
+          "sha256": "4c2ffa40d61ed2dd6d6d656e2720f59e8e04a188a4634858bd2b478c6e7abb5b"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/017",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1268072649,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.07370705157518387,
+            -0.10778641700744629,
+            0.021520206704735756,
+            0.5202258825302124,
+            0.0,
+            0.0,
+            0.8540287613868713
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            -0.03494884446263313,
+            0.30517590045928955,
+            0.09718581289052963,
+            0.5787820219993591,
+            -4.795930319545505e-10,
+            1.0742073897063165e-10,
+            0.8154825568199158
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1ea74aa723790429a285f542bed43e8c34a1e5b38e2c634d7a59ef024d9f8eca",
+      "task_state_fingerprint": "7fdd2e5f42508648920b9e2395cb5fa4c1ad5b4ebf0c66db307a67fabf82538e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/017/base_camera.png",
+          "sha256": "dfdf130054c72da952b34b879e18c67b8c26e9fd5743b081245af204a6d84a72"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/017/hand_camera.png",
+          "sha256": "9a38c38aa240a5a08a590e6d8bc5037c6008898425f0ed9febbc28a11cbadc5f"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/018",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 1127969854,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.02660532295703888,
+            -0.10265529155731201,
+            0.021913588047027588,
+            0.3858988285064697,
+            0.0,
+            0.0,
+            0.922541081905365
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.020054329186677933,
+            0.26214346289634705,
+            0.10930857807397842,
+            0.5824242234230042,
+            -4.147517884689478e-10,
+            9.770857900548435e-09,
+            0.8128849864006042
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cce12afbf65083662ebe5bc6ecaaff7fa019f857fa3398e0ca7267131cceddda",
+      "task_state_fingerprint": "6ebe16ac892a6adfe55552337d814ba34f0538acaed15be59855c46aea76512a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/018/base_camera.png",
+          "sha256": "dfcd09d512aefa04d6afcbc36dfa0437cb92280d4e97ba16bdb2ae01aa5251db"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/018/hand_camera.png",
+          "sha256": "a24ac77a96457ab3e5a73197d72688dff070e660262bf2a930a8356e03f0322d"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/eval_seen/019",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 555850496,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            -0.08422325551509857,
+            -0.044574588537216187,
+            0.015141932293772697,
+            0.8848391175270081,
+            0.0,
+            0.0,
+            0.46589675545692444
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.02128339186310768,
+            0.375152587890625,
+            0.08795779943466187,
+            0.5895534157752991,
+            3.187282660022106e-10,
+            -1.0209273426653453e-09,
+            0.8077293038368225
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "33026efb75a0ff90f132e079b130c7ffcf5d6d347598eac13ec39b024f3038b3",
+      "task_state_fingerprint": "c30ef5581d087195c8e9ba1a57eed7f479d736f976bcfc5b01d0d08ae6c3bb67",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/019/base_camera.png",
+          "sha256": "304b20192a88ee5ea0dce6f0f9d7c67eea1c9c5248235e896693612139342a6c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/eval_seen/019/hand_camera.png",
+          "sha256": "d81fd8eaea56e72df5b06e9d63d89b609ba9146df6f6ed1033c3fa5a6926bede"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PegInsertionSide-v1/validation/001",
+      "task_key": "maniskill/PegInsertionSide-v1",
+      "seed": 641396532,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/peg_0": [
+          [
+            0.07766590267419815,
+            -0.2804292142391205,
+            0.01996874064207077,
+            0.5410609841346741,
+            0.0,
+            0.0,
+            0.8409833312034607
+          ]
+        ],
+        "actor/box_with_hole_0": [
+          [
+            0.029569396749138832,
+            0.2612461447715759,
+            0.09262574464082718,
+            0.7395740151405334,
+            3.693232164536653e-09,
+            -7.670133417292391e-10,
+            0.6730753183364868
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "057dd4273da446cd155cc265ad3ca3df40af1bdbda1ae441e288a8ace284a074",
+      "task_state_fingerprint": "817f5e5443530504dd5a42048fe2e46428f71fe6634644f38e0736a2865a9bb4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/validation/001/base_camera.png",
+          "sha256": "59278e9ed1fd3d74c3bfc98baec93657d96d6bba531f7aeeb39ef89aa028e4b9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/PegInsertionSide-v1/validation/001/hand_camera.png",
+          "sha256": "01298599dfdd9d7058eb6dc3a4cbce328fd598b1061d2f4e5c22e647218a20d4"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    }
+  ]
+}

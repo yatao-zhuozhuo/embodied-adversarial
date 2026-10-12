@@ -1,0 +1,971 @@
+{
+  "task_key": "metaworld/dial-turn-v3",
+  "records": [
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 2075188903,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03092979612346386,
+          0.7717300243618929,
+          0.0
+        ],
+        "/object_position": [
+          0.03092979612346386,
+          0.7217300243618928,
+          0.0
+        ],
+        "/goal_position": [
+          0.03092979612346386,
+          0.8017300243618929,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "fc95bee601819f22bc5ca825e66d7c73743f86d916f92e7984de4a9b040e527c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/000/native_camera_2.png",
+          "sha256": "46782b0fdd9951f86b097304293c828ae1e0f61443eede36714ff130f8ced6bb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1957991976,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.021476637947453664,
+          0.7952096337738118,
+          0.0
+        ],
+        "/object_position": [
+          -0.021476637947453664,
+          0.7452096337738118,
+          0.0
+        ],
+        "/goal_position": [
+          -0.021476637947453664,
+          0.8252096337738118,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "4370b5e78c9f6fe484650d2c8a739d7edec0ce04c6d194287ca50f6cd21a82ea",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/001/native_camera_2.png",
+          "sha256": "5c531b8059d7411f9272e30853020515b6508bc2b569e66ccd2dc5583e1e5faf"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/002",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 148133079,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.023769936419561488,
+          0.7497604741901078,
+          0.0
+        ],
+        "/object_position": [
+          0.023769936419561488,
+          0.6997604741901078,
+          0.0
+        ],
+        "/goal_position": [
+          0.023769936419561488,
+          0.7797604741901079,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "aa11afcef59f81a4302c8914dc267a4eac5d159a667989e396ffa1124f91b023",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/002/native_camera_2.png",
+          "sha256": "5504ae021ea9e747bbd832116bdaf2e2a4f88f94bee31a72e9bacbcf6d649c7e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/005",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 139423862,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06466605874165729,
+          0.7158010210702191,
+          0.0
+        ],
+        "/object_position": [
+          -0.06466605874165729,
+          0.6658010210702191,
+          0.0
+        ],
+        "/goal_position": [
+          -0.06466605874165729,
+          0.7458010210702192,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "1c2c4f0dacf6ae8c47d4c55e4a906284dee5cd4564cddefd003aa3d6824c6cf3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/005/native_camera_2.png",
+          "sha256": "3979675094b5c7e0d2d8209f74b1bb7be8014c29b96a9fbe3a2b8942cb44c359"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/008",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1976323869,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09684917223490183,
+          0.7696281000158447,
+          0.0
+        ],
+        "/object_position": [
+          0.09684917223490183,
+          0.7196281000158447,
+          0.0
+        ],
+        "/goal_position": [
+          0.09684917223490183,
+          0.7996281000158447,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "a34f8c918aab8486634ded87f4a2fcdac70550044f5817fae097f90e07a06895",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/008/native_camera_2.png",
+          "sha256": "73005722a839cf9d785c77534f7f030709b8823bbf1e589d122163e5f634ab43"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/011",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1766240538,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08593481666318753,
+          0.7098601882839648,
+          0.0
+        ],
+        "/object_position": [
+          -0.08593481666318753,
+          0.6598601882839648,
+          0.0
+        ],
+        "/goal_position": [
+          -0.08593481666318753,
+          0.7398601882839648,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "e6f4938e0be5718afd64c11729bcc232dc78ceaaa92468fa13fa4ab35e3feff3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/011/native_camera_2.png",
+          "sha256": "823207ae59ffd050b38153e097d30079ebf788cb35fa84185a4a0850d1e45bab"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/sft_train/014",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 428352113,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06468494544585529,
+          0.7060771158231518,
+          0.0
+        ],
+        "/object_position": [
+          0.06468494544585529,
+          0.6560771158231518,
+          0.0
+        ],
+        "/goal_position": [
+          0.06468494544585529,
+          0.7360771158231518,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "26605fb3005e85537924a07747b4133c504ee2406b5820e039468e8b634fc485",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/sft_train/014/native_camera_2.png",
+          "sha256": "d414c844206c9532a98b6410d176fcf7b96632b44b61b3c5a2cc4dde76faf128"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1836033751,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05627719137190301,
+          0.7040848697042372,
+          0.0
+        ],
+        "/object_position": [
+          0.05627719137190301,
+          0.6540848697042372,
+          0.0
+        ],
+        "/goal_position": [
+          0.05627719137190301,
+          0.7340848697042373,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "d86ca88efd3292222e9e6c28aa9ba4daaea312a585d1a12c137abb292ede1ce9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/000/native_camera_2.png",
+          "sha256": "1303e7b4a9bae10c035d7d5eadb266044cc77a4c9b5f0f19aeabd4174436653b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1974320432,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.03066996864289681,
+          0.7180570282198429,
+          0.0
+        ],
+        "/object_position": [
+          0.03066996864289681,
+          0.6680570282198428,
+          0.0
+        ],
+        "/goal_position": [
+          0.03066996864289681,
+          0.7480570282198429,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "58d3b376d8795a1298b45c4c03f77880a5b34b941f1ad52198c893a1b4ae97b8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/001/native_camera_2.png",
+          "sha256": "0b0b80c1f5af7f718d08e8605976f0e84d36dce42e30068357ce97965ca0d49f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/002",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1295392498,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09641332536946257,
+          0.7987676948192162,
+          0.0
+        ],
+        "/object_position": [
+          -0.09641332536946257,
+          0.7487676948192161,
+          0.0
+        ],
+        "/goal_position": [
+          -0.09641332536946257,
+          0.8287676948192162,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "4f49e3351b97218b04b6d0734b0d1d2242e63f37696fe96ca114eff02ffad64c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/002/native_camera_2.png",
+          "sha256": "83ae3f8347908ca653711ba62164e13b6bea62e1e10af8fa9577fa43acf237d8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/005",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 750812522,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06775479497942549,
+          0.7416455638789994,
+          0.0
+        ],
+        "/object_position": [
+          -0.06775479497942549,
+          0.6916455638789993,
+          0.0
+        ],
+        "/goal_position": [
+          -0.06775479497942549,
+          0.7716455638789994,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "95b2d8d286ce72e061a109e1acfe59fa1190c35c82906e5f6cfff8bf7afde187",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/005/native_camera_2.png",
+          "sha256": "b41e364f0d41a7968971332082bf1062b51f066413c9b2b4a24758bec4da0f86"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/008",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1047728070,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.015425669221924718,
+          0.710995261911177,
+          0.0
+        ],
+        "/object_position": [
+          -0.015425669221924718,
+          0.660995261911177,
+          0.0
+        ],
+        "/goal_position": [
+          -0.015425669221924718,
+          0.740995261911177,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "5c8000536a200e1b8f162c0bfc8d59abf8273299b3fbd5f822a2e8578a56d784",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/008/native_camera_2.png",
+          "sha256": "cd088fd39935953104608481a4c837300c725ad3e26a38e479a6ddf8f079dd57"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/011",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 649901607,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06373273281271297,
+          0.7404384280608554,
+          0.0
+        ],
+        "/object_position": [
+          0.06373273281271297,
+          0.6904384280608553,
+          0.0
+        ],
+        "/goal_position": [
+          0.06373273281271297,
+          0.7704384280608554,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "f9711a5a5db8fb4ff5ae50df75b4ade8876ff17a1cc9018684366664391269ac",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/011/native_camera_2.png",
+          "sha256": "ee33ce3a10bcc5d4ed66753d8e0f83281e081043218faaf44b810d3fb275fc7e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/rl_train/014",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1795738832,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06616206691330047,
+          0.7433734788784375,
+          0.0
+        ],
+        "/object_position": [
+          -0.06616206691330047,
+          0.6933734788784375,
+          0.0
+        ],
+        "/goal_position": [
+          -0.06616206691330047,
+          0.7733734788784375,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "b09032a15511506690e745cf3e4f5095ffc3a16fd9eaa3dc38bfaac74214f887",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/rl_train/014/native_camera_2.png",
+          "sha256": "54b0227a7629943f46ece12213a6516edfdb7579c0dbe6e2e4379c1f4decb43e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/validation/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1612939477,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06124814328291997,
+          0.7685178340389069,
+          0.0
+        ],
+        "/object_position": [
+          -0.06124814328291997,
+          0.7185178340389069,
+          0.0
+        ],
+        "/goal_position": [
+          -0.06124814328291997,
+          0.798517834038907,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "b4da663db94f02f6f5b3f336da6106e7f0fcdc28aa4c79bae1fb97392c00c562",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/validation/000/native_camera_2.png",
+          "sha256": "0fb7b976105cdbaf147e843a7bbb37077461b243462834cf63b3b7a3d03835ce"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/000",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 594492134,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.043549192045669205,
+          0.7452713604783313,
+          0.0
+        ],
+        "/object_position": [
+          -0.043549192045669205,
+          0.6952713604783313,
+          0.0
+        ],
+        "/goal_position": [
+          -0.043549192045669205,
+          0.7752713604783313,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "cde2afd2170a45fba84bbff36bdbd2431622a717813f116118e348342e478c00",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "c7eb04da3aba98387918d7c82977f872b36be91e3162bcaef04524c9c8e4e71e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 496692813,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04524604834932705,
+          0.7668836181734334,
+          0.0
+        ],
+        "/object_position": [
+          0.04524604834932705,
+          0.7168836181734334,
+          0.0
+        ],
+        "/goal_position": [
+          0.04524604834932705,
+          0.7968836181734335,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "6d70340b7ec9619c07afea2dd204faee4d24b217789968fd392f53d7176dca1d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "5e74d8c9011cac7835527faf78ba780eccec88a8485f1afe9c9ed8c126402d59"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/002",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1940040304,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08507094519195701,
+          0.7578984658031613,
+          0.0
+        ],
+        "/object_position": [
+          -0.08507094519195701,
+          0.7078984658031613,
+          0.0
+        ],
+        "/goal_position": [
+          -0.08507094519195701,
+          0.7878984658031614,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "6407d3c34cf34d2bbe8091fdc902791090d4768afcdb21ac49d17241b0ac699d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "768d4939c5584849a2e0547a952543bb93b16bf48256d6a65647b8c59f483546"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/006",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 2145504473,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0053396784691055466,
+          0.7967672138151928,
+          0.0
+        ],
+        "/object_position": [
+          -0.0053396784691055466,
+          0.7467672138151927,
+          0.0
+        ],
+        "/goal_position": [
+          -0.0053396784691055466,
+          0.8267672138151928,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "f2fb056e1b400859ff64373286bdc719e06f56ba29dc7e8b94f6f1223385e0a8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "6ade1b10bf6c7b18ff8879b55fa84b5bf762d1c4910a67fbf87bc0b1e42e685c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/010",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1412888141,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.00034300842599903347,
+          0.7689944068638013,
+          0.0
+        ],
+        "/object_position": [
+          0.00034300842599903347,
+          0.7189944068638012,
+          0.0
+        ],
+        "/goal_position": [
+          0.00034300842599903347,
+          0.7989944068638013,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "012c86b529b2620bb18f41f6de87c16bac6b26c9b6f55445d6e2bb63fafffc0c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "b17d8a5a290623ab77dadc46c567c51d749730a9f01039dbe17d677b4ee022c8"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/014",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 432783478,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.055653772409429016,
+          0.7908431586318633,
+          0.0
+        ],
+        "/object_position": [
+          -0.055653772409429016,
+          0.7408431586318632,
+          0.0
+        ],
+        "/goal_position": [
+          -0.055653772409429016,
+          0.8208431586318633,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "ed4c29cad28f3897b5f22df0e27dcdf369873e25272dfc54c886ef58bdf0d35b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "d6bb277211268125c2c0f02e439168a7e3beb4d96cc33f4d7703632b158edd41"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/eval_seen/019",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 1935041170,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03848976104401798,
+          0.7339222180046351,
+          0.0
+        ],
+        "/object_position": [
+          -0.03848976104401798,
+          0.683922218004635,
+          0.0
+        ],
+        "/goal_position": [
+          -0.03848976104401798,
+          0.7639222180046351,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "5c6e375f11dcf091e7ca1732459e02d3af9eb2b05ff7b9f85bc015c70590380c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "8667428f4e1a4b1f1d6c3d88934762fa26c0081e8fe9b6511f9d5fed2e72d6d4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/dial-turn-v3/validation/001",
+      "task_key": "metaworld/dial-turn-v3",
+      "seed": 958824094,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0974895811992933,
+          0.733187040256162,
+          0.0
+        ],
+        "/object_position": [
+          0.0974895811992933,
+          0.683187040256162,
+          0.0
+        ],
+        "/goal_position": [
+          0.0974895811992933,
+          0.763187040256162,
+          0.03
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "775a533be45823b52de8e034b8edd5fc9e1321475a86e5d977551c74ad631595",
+      "task_state_fingerprint": "0e628a6b21c9b576fd5deb04cae76273102ce851b956d7eeae906d3410156cc7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/dial-turn-v3/validation/001/native_camera_2.png",
+          "sha256": "d8fc7ebdf420014ee7d73f6fc7d3ed00352e011b13c85dc3641a946c80de20f7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

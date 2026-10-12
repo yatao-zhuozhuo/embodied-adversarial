@@ -1,0 +1,220 @@
+{
+  "task": {
+    "task_key": "maniskill/InsertFlower-v1",
+    "bench": "maniskill",
+    "task_id": "InsertFlower-v1",
+    "env_id": "openeta/maniskill_InsertFlower-v1-v0",
+    "role": "generalization",
+    "horizon": 300,
+    "expected_action_dim": 12,
+    "environment_config": {
+      "robot": "floating_ability_hand_right",
+      "control_mode": "pd_joint_pos",
+      "obs_mode": "rgbd",
+      "sim_backend": "physx_cuda",
+      "pass_robot_uids": true
+    }
+  },
+  "cases": [
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/000",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1950543901,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/001",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 2055112073,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/002",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 393893696,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/003",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1714706025,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/004",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1791483045,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/005",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1025547336,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/006",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1641473115,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/007",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 843404352,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/008",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 203529210,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/009",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1252975389,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/010",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1550343822,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/011",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 987458756,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/012",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1276199371,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/013",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1608636570,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/014",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1288091728,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/015",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 17094024,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/016",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1070386038,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/017",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 769939082,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/018",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 115988238,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/019",
+      "task_key": "maniskill/InsertFlower-v1",
+      "phase": "eval_generalization",
+      "seed": 1487585913,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    }
+  ]
+}

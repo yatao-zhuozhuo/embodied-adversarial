@@ -11,7 +11,8 @@ template = get_template(processor, template_type='qwen3_5', loss_scale='last_rou
                         enable_thinking=True, max_length=8192, truncation_strategy='raise')
 template.set_mode('train')
 lengths = []
-for i, line in enumerate((root / 'mixed-data/train.jsonl').read_text().splitlines()):
+dataset = Path(sys.argv[3]) if len(sys.argv) > 3 else root / 'mixed-data/train.jsonl'
+for i, line in enumerate(dataset.read_text().splitlines()):
     row = json.loads(line)
     encoded = template.encode(row)
     supervised = processor.tokenizer.decode([t for t in encoded['labels'] if t != -100])

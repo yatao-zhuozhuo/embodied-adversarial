@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Validate standalone model shards/configs and a merged adapter projection."""
 import json
+import sys
 from pathlib import Path
 import torch
 from safetensors import safe_open
 from transformers import AutoConfig, AutoProcessor
 
 root = Path(__file__).resolve().parent
-records = json.loads((root / 'logs/mixed-export.json').read_text())
+records = json.loads((Path(sys.argv[1]) if len(sys.argv) > 1 else root / 'logs/mixed-export.json').read_text())
 for name, record in records.items():
     output = Path(record['output'])
     assert 'Successfully merged LoRA and saved' in Path(record['log']).read_text(), name
@@ -39,7 +40,8 @@ for name, record in records.items():
     assert torch.allclose(merged.float(), expected.float(), rtol=0.01, atol=0.0001), name
     assert not torch.equal(original, merged), 'Adapter did not alter the sampled projection'
     report = {'base_model': record['base'], 'adapter_checkpoint': record['checkpoint'],
-              'global_step': 1320, 'training_samples': 3521, 'training_episodes': 74,
+              'global_step': record.get('global_step', 1320), 'training_samples': record.get('training_samples', 3521),
+              'training_episodes': record.get('training_episodes', 74),
               'torch_dtype': 'bfloat16', 'merged': True, 'tensors': len(tensors),
               'shards': len(set(index['weight_map'].values())), 'verified_projection': weight,
               'model_type': config.model_type, 'processor': type(processor).__name__}

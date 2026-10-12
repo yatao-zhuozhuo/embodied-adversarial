@@ -1,0 +1,7 @@
+{
+  "source": "https://huggingface.co/datasets/haosulab/OakInk-v2/resolve/main/object_repair.zip",
+  "publisher": "haosulab",
+  "sha256": "c9759e5873f59a0b415a2dc2778a64466b08d6f43cb8139926d4fba325973ce8",
+  "bytes": 113623391,
+  "installed_to": "/root/.maniskill/data/tasks/oakink-v2"
+}

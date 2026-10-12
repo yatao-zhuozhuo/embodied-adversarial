@@ -1,0 +1,509 @@
+{
+  "task_key": "maniskill/InsertFlower-v1",
+  "records": [
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/000",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1950543901,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.26558953523635864,
+            -0.029664820060133934,
+            -0.008170870132744312,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7f8a94455833e9e0434a6827decf5490a2076dd0a002d341d21d10ec065b8322",
+      "task_state_fingerprint": "75bd80f1434156c0db175db3be81e428c139344c063efa47c1d7a3acc31d2624",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/000/base_camera.png",
+          "sha256": "eea2f575a5aa9bd12868637bf92a005f7e2cee951dc7e7bfd3c1da2b06d829a2"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/001",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 2055112073,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.21123574674129486,
+            -0.007625812664628029,
+            0.01263368595391512,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4dcefd1579c3f5a7916dc17bce0a0350da5ebc6fda01ed56cc6391e6f2f01c9d",
+      "task_state_fingerprint": "67be80cdef36a3546f1537186b752f2131e7adde452af12969cc0e8f83a832c0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/001/base_camera.png",
+          "sha256": "19b63cad93824367b0ba909330533d2af702bbc9b65239720ee46c2675de3f50"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/002",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 393893696,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.23419636487960815,
+            0.017297588288784027,
+            0.016285864636301994,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b346684051766fd69fbffcfc18974ea5e9787235b686f26ab12a22f503acc6f7",
+      "task_state_fingerprint": "e42529eae38166f31976d4a7f9190e5fee3c4c309e33bf84a257235d4e4158b9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/002/base_camera.png",
+          "sha256": "af72b681d508228b877e4bde9de64f527cf3da878b7851733d77c6c3e1ffdf40"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/006",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1641473115,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.20948301255702972,
+            0.043360427021980286,
+            0.05470739305019379,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "eb021efc2a9fd78457d0869f294130e9f0ae8a69b51dd605a197e836284bf832",
+      "task_state_fingerprint": "ce6fa9a43587191aa61ff0b2b62e1a3041b53c3fab19f02dd8d05a70804792b0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/006/base_camera.png",
+          "sha256": "1acecfd99337b261917c857de4b0329edba25cdc18a5955e247f7915962413b4"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/010",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1550343822,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.27138349413871765,
+            -0.04564277082681656,
+            0.02339051105082035,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3e5873f7c729c4a4821d2fa53c094cabc38dbe1eed708485bd7803c541f673c0",
+      "task_state_fingerprint": "e810661902e987a7300489fab310a64fe763491b46d72f29ec96d3424e8a28ee",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/010/base_camera.png",
+          "sha256": "9e2194ee222dd82829579cf7b57fd87fbd962284f37717e0878fc7271988e4fe"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/014",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1288091728,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.25779005885124207,
+            0.0005006156861782074,
+            0.058292195200920105,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3f20d8f8785d540b3c8f34f494d44ef3b42bd76c6f4d3b77a66c00b6f3414aea",
+      "task_state_fingerprint": "8a4f61f714aaa0bd2583a81b831e856bc9a8c36b3b1daa11d6b272ae8860257e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/014/base_camera.png",
+          "sha256": "d642c55491bc6c22aad2a6912964016c0e766bb10f20679498b039ceba61d815"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    },
+    {
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/019",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1487585913,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.2793687880039215,
+            0.04898712784051895,
+            0.06397862732410431,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ],
+        "task/target_area_box": [
+          [
+            -0.30000001192092896,
+            -0.25,
+            0.25
+          ],
+          [
+            -0.20000000298023224,
+            -0.15000000596046448,
+            0.3499999940395355
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "792f54b51c3093bad738c2645ea4ecb23d16b93f5d0560f4024c408de8873dc1",
+      "task_state_fingerprint": "7e8d0f4287f9a065de25915ee15b8c2cbc336c5525a5f8df6b9bd22ba4419daa",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/InsertFlower-v1/eval_generalization/019/base_camera.png",
+          "sha256": "e24028b018a91843cae942177dc3396fb1e9ae62a58c584eade2f02bdd7157a8"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12
+    }
+  ]
+}

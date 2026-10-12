@@ -1,0 +1,1040 @@
+{
+  "task_key": "metaworld/coffee-push-v3",
+  "records": [
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 2063415395,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03588787550199675,
+          0.5720496939698446,
+          -0.0005122859135071958,
+          -0.01745615182403233,
+          0.7259584545711099,
+          -0.000467078559078377
+        ],
+        "/object_position": [
+          -0.03588787550199675,
+          0.5720496939698446,
+          -0.0005122859135071958
+        ],
+        "/goal_position": [
+          -0.01745615182403233,
+          0.7259584545711099,
+          -0.000467078559078377
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "730f5a4d115b6ae911c21a86fbdd05a1ea55ddffedf6d119e87c0fda1a22ad01",
+      "task_state_fingerprint": "b4f0285b955d6f15ede7e41f9937f4b3f78bf3d64f8a9a698aeb7c6fdcf7201b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/000/native_camera_2.png",
+          "sha256": "78e7128a2e89f65230abe7b19bcf2f324527d452b6c132f5f147d0d6e4de1fbd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 647060248,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0975384536151023,
+          0.5549861788400722,
+          0.0007550714489496777,
+          0.0013317759967046774,
+          0.7016140040415415,
+          -0.00040325169883382813
+        ],
+        "/object_position": [
+          0.0975384536151023,
+          0.5549861788400722,
+          0.0007550714489496777
+        ],
+        "/goal_position": [
+          0.0013317759967046774,
+          0.7016140040415415,
+          -0.00040325169883382813
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "90a8fb40fb608d011100a285b8e3a8064e493e1587ce177cb25e444703eb0ab9",
+      "task_state_fingerprint": "b2420752987aed09cdb00dbdd314a53444b3f0b5ab3aa3898404303f6efa7c66",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/001/native_camera_2.png",
+          "sha256": "c792fa5cc1cec4a486374a1a4fff5513686eb7ac6678cc461ede7fbc68203b94"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/002",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1294256873,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07513901983130747,
+          0.5715340311877035,
+          -0.0005753517116173668,
+          0.030865018483173315,
+          0.7095660182802641,
+          -0.0006514004658406969
+        ],
+        "/object_position": [
+          -0.07513901983130747,
+          0.5715340311877035,
+          -0.0005753517116173668
+        ],
+        "/goal_position": [
+          0.030865018483173315,
+          0.7095660182802641,
+          -0.0006514004658406969
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9a3c3f31dc05824ec7a67b7e8afc64cc16fb24f475badaa31de59971d1205c41",
+      "task_state_fingerprint": "b4f38f5f666410d824db367a88bd650e45fdfb544bcae78639d7c06f0bea6789",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/002/native_camera_2.png",
+          "sha256": "3b920ba4f6eb22bd31264f66613e7a7a68d8a88f053e742746648edbce3f8ccb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/005",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 886713937,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07350177122573281,
+          0.5550937248931157,
+          -0.0004867994266027453,
+          0.03733077333131979,
+          0.7482736006685948,
+          0.0008669202958732228
+        ],
+        "/object_position": [
+          0.07350177122573281,
+          0.5550937248931157,
+          -0.0004867994266027453
+        ],
+        "/goal_position": [
+          0.03733077333131979,
+          0.7482736006685948,
+          0.0008669202958732228
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9f2b0ce803c725e9f1fcb8e548bce415540d1c157c9bf7714838a4896847e440",
+      "task_state_fingerprint": "06c9116b64dfc7c6953b97d00f1fa08a1df133bf289322b28a22319584199d55",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/005/native_camera_2.png",
+          "sha256": "1ba7ba81fc3de8a53dbc158de378980805a752a220115b401baac67cc46bcd59"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/008",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 151892215,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.007180019327914705,
+          0.5759687680037305,
+          0.000109363303679597,
+          0.014538293625775411,
+          0.7442992413322539,
+          -5.264048928326176e-05
+        ],
+        "/object_position": [
+          -0.007180019327914705,
+          0.5759687680037305,
+          0.000109363303679597
+        ],
+        "/goal_position": [
+          0.014538293625775411,
+          0.7442992413322539,
+          -5.264048928326176e-05
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c31b5caffd57fbf3abd7747eb6acf29ec07270d12effa1b249020308c8bfe443",
+      "task_state_fingerprint": "773f37ff0fc961a9858480e73c9269bac262aa406c3414e30ddd0423b440e29a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/008/native_camera_2.png",
+          "sha256": "b3ae7c20daa02b352b68b000687b8649effed0c9767a9a87aea27501ee825642"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/011",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1488728483,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0695124234111908,
+          0.5975496748664219,
+          -0.0005726484644095759,
+          -0.0281066461879788,
+          0.7378436609825922,
+          8.953572947708135e-05
+        ],
+        "/object_position": [
+          0.0695124234111908,
+          0.5975496748664219,
+          -0.0005726484644095759
+        ],
+        "/goal_position": [
+          -0.0281066461879788,
+          0.7378436609825922,
+          8.953572947708135e-05
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "79387884d45b03bf468193cfdae922435f57c1ff2b3a5bb757201611bd575910",
+      "task_state_fingerprint": "1e81eb5ba0562e701a5cb6994361f138f34707f1c4c804c6a7b0c807901114c0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/011/native_camera_2.png",
+          "sha256": "4c688ce47a71a00069a7d811c232ab5969d8fec437271b95aba89b92a33cc37d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/sft_train/014",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 273929187,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08946686639452449,
+          0.5592308567020253,
+          -0.0005328997002510687,
+          0.003131513221209206,
+          0.7024617046086215,
+          0.0003993966779856277
+        ],
+        "/object_position": [
+          -0.08946686639452449,
+          0.5592308567020253,
+          -0.0005328997002510687
+        ],
+        "/goal_position": [
+          0.003131513221209206,
+          0.7024617046086215,
+          0.0003993966779856277
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9ec8e50228e8e10ab3abba17fefadc227e8f0b4e6a89e57dd1b48f8a6ba43c0a",
+      "task_state_fingerprint": "6b3f9535238bf4b649e8611cf22267764898b8f3443e36e59dfd1c31bfd27e13",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/sft_train/014/native_camera_2.png",
+          "sha256": "85cba77f1d7917415fce520cfb22fa62b25263c22a5aae1c6d0563d1c4e64f17"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1368927695,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09696038688853362,
+          0.6132458273402364,
+          -0.0007717824403020943,
+          0.005761880478105996,
+          0.7415116015135061,
+          -0.0005239504489645348
+        ],
+        "/object_position": [
+          -0.09696038688853362,
+          0.6132458273402364,
+          -0.0007717824403020943
+        ],
+        "/goal_position": [
+          0.005761880478105996,
+          0.7415116015135061,
+          -0.0005239504489645348
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f31f9e0db8a1f9ddb9f27648678fab7347b13933c825097ef6b2c355f0854c34",
+      "task_state_fingerprint": "10d6fc281cd7c842d9e0deecfb830be6ec05b45aade1395876fcfc5b6ebb0178",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/000/native_camera_2.png",
+          "sha256": "d50d0098303ab494422f1ac544ea984200cc187183502971d8b65b58e00fb32b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 333105765,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05885562004249008,
+          0.5531315114457458,
+          7.739696403676337e-05,
+          0.02522847575352616,
+          0.7229347284700705,
+          -0.0001489659648887618
+        ],
+        "/object_position": [
+          -0.05885562004249008,
+          0.5531315114457458,
+          7.739696403676337e-05
+        ],
+        "/goal_position": [
+          0.02522847575352616,
+          0.7229347284700705,
+          -0.0001489659648887618
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "fbd5e2ae5abe9bfd2a72c6f8ee35c0c22815014d8060dae04ff428b5d3fc2422",
+      "task_state_fingerprint": "f4c73edc01799201f6d08e9310c08170305084f863c362cf38c5afb85ff6af62",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/001/native_camera_2.png",
+          "sha256": "c7d5b7baeefd3fc6a8862663e3b0d505854618c80199bb7995c9be639eeb9a12"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/002",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 650076830,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.014927459266957849,
+          0.5700107172109263,
+          -0.000918634870019642,
+          -0.01631201432859656,
+          0.7298737417024441,
+          0.0009280808747600508
+        ],
+        "/object_position": [
+          -0.014927459266957849,
+          0.5700107172109263,
+          -0.000918634870019642
+        ],
+        "/goal_position": [
+          -0.01631201432859656,
+          0.7298737417024441,
+          0.0009280808747600508
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6c50218c4a35bf7a937485306852867aa15ecfb4fe9108141ceab81c9720a657",
+      "task_state_fingerprint": "3041cc634d5da4ae3ff0fbcd688c9bbd5f96f1c084e47e50001d0b98373ca2a5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/002/native_camera_2.png",
+          "sha256": "02f0fac8dc4d7b5102668bae62d30a8b8a7e4e796227d3c33862cd7da9a26425"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/005",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 598627225,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05171483740069849,
+          0.5634732827922113,
+          -0.0001726669539945327,
+          0.03912462126844081,
+          0.7439972978498399,
+          -0.00010712261364051099
+        ],
+        "/object_position": [
+          0.05171483740069849,
+          0.5634732827922113,
+          -0.0001726669539945327
+        ],
+        "/goal_position": [
+          0.03912462126844081,
+          0.7439972978498399,
+          -0.00010712261364051099
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "226168dfb36e9edc3b174dbe74bc8de3f4a5ad27b161f219dca413ea8e69839e",
+      "task_state_fingerprint": "4402a091bf9a9f5fccc3fa4a99d3844fcffc137b4cb68f8439a77b568152d80b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/005/native_camera_2.png",
+          "sha256": "4a0f557b58ebfb5cc921696d547e1da2855a74a9f3a3589e1e5b287ce28a321d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/008",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 874127801,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.04198486129983667,
+          0.5635576541699275,
+          -0.00043857284247092985,
+          -0.004419242317242764,
+          0.7076149693955012,
+          0.00034218076673434646
+        ],
+        "/object_position": [
+          0.04198486129983667,
+          0.5635576541699275,
+          -0.00043857284247092985
+        ],
+        "/goal_position": [
+          -0.004419242317242764,
+          0.7076149693955012,
+          0.00034218076673434646
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9e77367cf01a9b4d7deea969987fce2b1499dad10f70c02e140796269201dfef",
+      "task_state_fingerprint": "f34209d1b45228704167dc854f9b69340f6765c12c4effa52c99d73e43877216",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/008/native_camera_2.png",
+          "sha256": "39eb2933087ed378c9067bef39c2bbc1fdbdd66b78fcedfdfb771323655b88f2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/011",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1920731063,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06273254368729764,
+          0.5716566855926516,
+          -0.0004904760123750525,
+          -0.046984899584587105,
+          0.7425259759467607,
+          -0.0003611188282268632
+        ],
+        "/object_position": [
+          0.06273254368729764,
+          0.5716566855926516,
+          -0.0004904760123750525
+        ],
+        "/goal_position": [
+          -0.046984899584587105,
+          0.7425259759467607,
+          -0.0003611188282268632
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "44902c26476ab662ad3f2a514071f53c0d5d4b12b911ce54679ce5cd2f1b2080",
+      "task_state_fingerprint": "eb9169e306b8d7be6beb1204422021e2d2d5f54d26de785512da16b5f49963ae",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/011/native_camera_2.png",
+          "sha256": "6e0f54caab67cc2fec5194d17501371991427a174d684a97ca95c6197e213892"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/rl_train/014",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 787173650,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.028610127871261604,
+          0.5505188006236722,
+          -0.0007067887993203717,
+          -0.03478874449934723,
+          0.7342157958802612,
+          -0.0008379751199201609
+        ],
+        "/object_position": [
+          0.028610127871261604,
+          0.5505188006236722,
+          -0.0007067887993203717
+        ],
+        "/goal_position": [
+          -0.03478874449934723,
+          0.7342157958802612,
+          -0.0008379751199201609
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "144b68930e909ef7b901df7518228ec588fbceaf43e2af272d61575ae73fe93d",
+      "task_state_fingerprint": "ef8cc890b1d2540422818599ec43569bee4ca5021e1592c1450a631fe9de813e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/rl_train/014/native_camera_2.png",
+          "sha256": "85949dc57fb7aa8d89c0c9d6f43a4804ff50e6b50fa2154b74d986774a57e69b"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/validation/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 8301972,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09211765257898083,
+          0.5880814007682416,
+          0.0005060007593005189,
+          -0.015707311074130703,
+          0.7364826777278254,
+          -0.0008622503123523746
+        ],
+        "/object_position": [
+          0.09211765257898083,
+          0.5880814007682416,
+          0.0005060007593005189
+        ],
+        "/goal_position": [
+          -0.015707311074130703,
+          0.7364826777278254,
+          -0.0008622503123523746
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1671774b12a842b3131e146cd4c4934d4178d6caf0609cbca88624e748f3fa31",
+      "task_state_fingerprint": "566e86bed485944f81f4685de23c29a79f50518ab2fcedfabec445dfa284b082",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/validation/000/native_camera_2.png",
+          "sha256": "db7fed3382228f6f758a6bad7f1336b4cf7d2af0ae8386d6736e7d04777cc902"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 2049147057,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.08327292014098375,
+          0.578232136872293,
+          -0.00016553406141880586,
+          -0.04434273363307341,
+          0.7192176851243592,
+          0.0008105929591354657
+        ],
+        "/object_position": [
+          0.08327292014098375,
+          0.578232136872293,
+          -0.00016553406141880586
+        ],
+        "/goal_position": [
+          -0.04434273363307341,
+          0.7192176851243592,
+          0.0008105929591354657
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "94154a268a9f6d2347e7f15d06e9748ccec9df3b0998503aa06ee54503b2cf06",
+      "task_state_fingerprint": "8cb0db1df20b461fde11da809e182ec935b7bd89d925a7d0a040dd59869d708a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "7521d4466fa606f2e3d1748fd8e8a1f76e75d5643b555f911a7b32be8ae1e282"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 376374778,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02384631049274974,
+          0.5679294958619309,
+          9.286804383542234e-05,
+          -0.013340460612355498,
+          0.7465934589581998,
+          -0.0007954134849960784
+        ],
+        "/object_position": [
+          -0.02384631049274974,
+          0.5679294958619309,
+          9.286804383542234e-05
+        ],
+        "/goal_position": [
+          -0.013340460612355498,
+          0.7465934589581998,
+          -0.0007954134849960784
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4ebc4579f7ca23afbe2f449fb05c910afe2e85bfc9189ac02fa9aee53cc70ce3",
+      "task_state_fingerprint": "28c7117d68a016bd41b82a3e0cd497dca1993d73ce97bf46083d5650c7220226",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "ba7a0c040c779c286fc193205661d40e231bef3b451b8e1b7f636be92a03afb5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/002",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 231814463,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04408725212233107,
+          0.5788951891739159,
+          -0.0009036790715197105,
+          0.036565857182328895,
+          0.7252940055112187,
+          0.0002683190284047674
+        ],
+        "/object_position": [
+          -0.04408725212233107,
+          0.5788951891739159,
+          -0.0009036790715197105
+        ],
+        "/goal_position": [
+          0.036565857182328895,
+          0.7252940055112187,
+          0.0002683190284047674
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7c7cadc213ea4013f203da706f6955e9f066f4975d9cef2b9c7ecb31887895b3",
+      "task_state_fingerprint": "4d9665d05d4c2a1bd84d47cfa5e2b54822af46eee1bafd8fcfb5df4c3153cbdd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "b1b0ecf8b7d4929ac485c2bedf7d52ef24171ca612e30ffe30daaa0a77957923"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/006",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1350312422,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.012682211860080811,
+          0.5696730700467049,
+          -8.453779262774218e-05,
+          0.011144346884189894,
+          0.7301004624544374,
+          0.0006773077192105668
+        ],
+        "/object_position": [
+          -0.012682211860080811,
+          0.5696730700467049,
+          -8.453779262774218e-05
+        ],
+        "/goal_position": [
+          0.011144346884189894,
+          0.7301004624544374,
+          0.0006773077192105668
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6bf5f3efe11a7ac21e32f1fdbf53d72d42e62ebdd22f5977225f8c843e940315",
+      "task_state_fingerprint": "58d742ee7b226cb68c895cc79ad951a63b9f351742d63d3aaac8cbd12ca9f0cc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "ed2599bf47b42659df27cf340e32accc2054cb64085c78925d784ef9a26792c3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/010",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1917711153,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08795244568655239,
+          0.6287254268615907,
+          -0.0005734856301704698,
+          0.04158362495868562,
+          0.712924144047977,
+          0.0009348027355535094
+        ],
+        "/object_position": [
+          -0.08795244568655239,
+          0.6287254268615907,
+          -0.0005734856301704698
+        ],
+        "/goal_position": [
+          0.04158362495868562,
+          0.712924144047977,
+          0.0009348027355535094
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2da2ee8028fa942360cfc1205a5b5303707a3afe650b26d7022e03e42c7039b4",
+      "task_state_fingerprint": "fd8de16dd3ae5595e0022c3cb5bd5b3f1683a3b211f3374cdf96be900c96df45",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "f6031f54461f8d3e35e1d9f369be059fb1b66c7e869721aaf848460a3bec09dd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/014",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1609368488,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06936087890549117,
+          0.5619477957812851,
+          -0.00024516590672241296,
+          0.03940306866306603,
+          0.7133702821656596,
+          -0.0007080979075529128
+        ],
+        "/object_position": [
+          0.06936087890549117,
+          0.5619477957812851,
+          -0.00024516590672241296
+        ],
+        "/goal_position": [
+          0.03940306866306603,
+          0.7133702821656596,
+          -0.0007080979075529128
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "36a382d40d48cc84391417b2afdf5c755ad2c792a9b4111dc879ce0bd49e0c1e",
+      "task_state_fingerprint": "a73d0e00463e11f61edbf4ede45470766523a25c89ad1598772dee7b284dd639",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "35917bbf2d972a9cf3bf107ed4b487692abd434b4de120f14fb110e9907e64f5"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/eval_seen/019",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 533218086,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07714103343044876,
+          0.5555042331036626,
+          -0.0005746741648116735,
+          0.014545900631427203,
+          0.7487686767313254,
+          0.00018794580920265228
+        ],
+        "/object_position": [
+          0.07714103343044876,
+          0.5555042331036626,
+          -0.0005746741648116735
+        ],
+        "/goal_position": [
+          0.014545900631427203,
+          0.7487686767313254,
+          0.00018794580920265228
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ce66de3517e452b99d24928213d2eb0690b97724558c86d27d0ac8256f608a8c",
+      "task_state_fingerprint": "9da92f47bceae6e5833b70c7f2a78f3ce994d50a5ded08a5c2bfc3096187caf4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "d954f9d8cfa894927a009db8365fe4be5eac7e6e9166891090aca3e9fb2b61ad"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-push-v3/validation/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1928645292,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06377619473841098,
+          0.6139578668787495,
+          -0.0004999298093333949,
+          0.0450397636446975,
+          0.735560039387278,
+          -0.0008323920073415625
+        ],
+        "/object_position": [
+          -0.06377619473841098,
+          0.6139578668787495,
+          -0.0004999298093333949
+        ],
+        "/goal_position": [
+          0.0450397636446975,
+          0.735560039387278,
+          -0.0008323920073415625
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "73971b899c1711fdf405a23f011f0f5b5a3470e3bd7e9fcaf44b4749132a76c0",
+      "task_state_fingerprint": "192a6cdeb17cd2e535cfa169c54b2969adbf9a0fbde6308bbe1c7fef5d64bd47",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-push-v3/validation/001/native_camera_2.png",
+          "sha256": "b24c52915705823a9ff763f862fd9f4bcd987b37e083dfb36b9c237460a809d4"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

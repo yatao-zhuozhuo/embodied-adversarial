@@ -1,0 +1,971 @@
+{
+  "task_key": "metaworld/door-unlock-v3",
+  "records": [
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1240592967,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07363077645901636,
+          0.8099932671632621,
+          0.15
+        ],
+        "/object_position": [
+          0.06363044587062452,
+          0.6519932671632621,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17363077645901637,
+          0.6519932671632621,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "857ca543b73734d64c7954167dcdd7f3cadc68c5541909562a9956bf5eb6c5a5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/000/native_camera_2.png",
+          "sha256": "1e6eb08269e5798f3570eac309df8a301fafaa7cbe1feef4eb230179bb6467dd"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 367446798,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03601721749740619,
+          0.8050945377183627,
+          0.15
+        ],
+        "/object_position": [
+          -0.04601754808579803,
+          0.6470945377183627,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.06398278250259382,
+          0.6470945377183627,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ea2d3a24b480698652b62091da450be8049c6faf82b4b4fe9cd77a16288bdd46",
+      "task_state_fingerprint": "68cf0320276c13998b71e74fc54135ad2dccf276322dc6223a8e4f20a97afbf4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/001/native_camera_2.png",
+          "sha256": "b8b8f305c7b4b030f969e2d3c781c4add8d67420f8ecb87fcae8b1917c2a2b92"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/002",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 647183971,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.004587536882377535,
+          0.8279382167781392,
+          0.15
+        ],
+        "/object_position": [
+          -0.005412793706014298,
+          0.6699382167781391,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.10458753688237754,
+          0.6699382167781391,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "8268373b78eb5f5002f86c0681343671d8f16753c6e90aee48aeef18b7f88e50",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/002/native_camera_2.png",
+          "sha256": "ff0ab8cfcf37c05e9782e780d04f807e413c49c4224ad26ae22c5d901438d652"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/005",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1638646726,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0452957726469648,
+          0.8105605659958475,
+          0.15
+        ],
+        "/object_position": [
+          0.03529544205857296,
+          0.6525605659958474,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.1452957726469648,
+          0.6525605659958474,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "a5f75942f2eb2d998cf3c7bf4d231bec2c141ec39619ff26b418117e2ed3c51e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/005/native_camera_2.png",
+          "sha256": "63c4e9be0285a5ed55a0d07cad774fa2f11e6b1faf5c34bced64f7d8c08b1234"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/008",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 577667218,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.02463429510322683,
+          0.8001563085823777,
+          0.15
+        ],
+        "/object_position": [
+          0.01463396451483501,
+          0.6421563085823777,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.12463429510322685,
+          0.6421563085823777,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "24a33ac54607785e78326d7e295e13714c023de6ac01fbaf823acfda0b3d80eb",
+      "task_state_fingerprint": "edcd399972f08f0c9f47bafa07e16ed7d7b3cbc4c7e7af4f25baced5a5fba74a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/008/native_camera_2.png",
+          "sha256": "772da2d711b0e5a49ecc384a31df9c2b7e5ced83c1dff676697921574eeb36ff"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/011",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 616471432,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06047280712922112,
+          0.8262527138209039,
+          0.15
+        ],
+        "/object_position": [
+          0.050472476540829286,
+          0.6682527138209039,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.16047280712922113,
+          0.6682527138209039,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "970f9f7cf2920ae2932cb841489c745445bb4709a3b64f164d6af93a8f4bba0b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/011/native_camera_2.png",
+          "sha256": "3c2d8258801fd6ea34d6d3af51ea2a26311d523ded3b3198506bd9521352da70"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/sft_train/014",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 230366887,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07459777231611475,
+          0.8211628811514025,
+          0.15
+        ],
+        "/object_position": [
+          0.06459744172772292,
+          0.6631628811514024,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17459777231611476,
+          0.6631628811514024,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "f63584afba9a5edca5f61bbf4cc41b737354f5e1e91160b075cb49cd6d347881",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/sft_train/014/native_camera_2.png",
+          "sha256": "8124cf57dc7ab43f3a05c565eac8f9400605c5f18c621403bfca03b91bee6c5e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 86023763,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07168952950897463,
+          0.8142801084265141,
+          0.15
+        ],
+        "/object_position": [
+          -0.08168986009736645,
+          0.6562801084265141,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.02831047049102539,
+          0.6562801084265141,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1b993612e94fd18193c182b35a949f5ecae64f8f8f8ec4b9e6121da4358313b8",
+      "task_state_fingerprint": "abbe19462377023ff721edcc9a02f8756c71bc030c6eb42148f40b2a04172cb6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/000/native_camera_2.png",
+          "sha256": "a7258cc344c974c545183ee331997c57bec7a7a3adde966a75077150b92d4835"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 2011792483,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04024132160376395,
+          0.831727261871898,
+          0.15
+        ],
+        "/object_position": [
+          -0.05024165219215579,
+          0.673727261871898,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.059758678396236053,
+          0.673727261871898,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "e9af2447f765929c58c956cfa90636e7a8b9d067c7b2f86a4015cb210f0307e2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/001/native_camera_2.png",
+          "sha256": "46b98b9a7e345ff18ba891eba239e7538bbabe1211fb7e8344e63a9b2c51b6e7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/002",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1352687398,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07926303354720488,
+          0.8093388632639321,
+          0.15
+        ],
+        "/object_position": [
+          0.06926270295881304,
+          0.6513388632639321,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17926303354720488,
+          0.6513388632639321,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "fdec841e9d2be7640e29e703066106604128de3d47dc1d1396eeeffe42ef9129",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/002/native_camera_2.png",
+          "sha256": "73288fb856fe5bb8853b64d102c64eca6302c75b10fcd0603d0277e6abb68905"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/005",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 645531617,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.06863643669233241,
+          0.8302842575478657,
+          0.15
+        ],
+        "/object_position": [
+          0.05863610610394057,
+          0.6722842575478657,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.16863643669233241,
+          0.6722842575478657,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "8f9226fc72e0dfe99bc8a250207baef288987f7b8e946c9da24c5c6d5586eef1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/005/native_camera_2.png",
+          "sha256": "ac35026dbd024c6df7f1c65cbb8f9ac54a4c5cf6ecaa06b18c0d13bce658282d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/008",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 522987741,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0556355283343514,
+          0.8187953200472701,
+          0.15
+        ],
+        "/object_position": [
+          0.04563519774595956,
+          0.66079532004727,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.1556355283343514,
+          0.66079532004727,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "a54b2d4c26af8146d1e7881e736fe817e52afcba34d3e8d2548b2df0519286dd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/008/native_camera_2.png",
+          "sha256": "5294964c86950ab6dab51e46bab0ba7305d9362fb20b06f03133ff443c21fa77"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/011",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1998517718,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.052116604013943225,
+          0.8272526172289224,
+          0.15
+        ],
+        "/object_position": [
+          -0.062116934602335055,
+          0.6692526172289224,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.04788339598605679,
+          0.6692526172289224,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dfecad8fcfbf2824c7ae1f88b30e0eb92a783adea1fba50ce18f09cea0021ea1",
+      "task_state_fingerprint": "e87c1dbc9218a3380877b51be336b84d4cd8b1620cc08317ec86b36040655377",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/011/native_camera_2.png",
+          "sha256": "1c4ed5e4a6e724d39b5a3ec6866e7368ec4671c7a3711c21270d1c5bed4c03cc"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/rl_train/014",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 2046273163,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.007069862279579148,
+          0.8011601178222436,
+          0.15
+        ],
+        "/object_position": [
+          -0.01707019286797098,
+          0.6431601178222436,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.09293013772042086,
+          0.6431601178222436,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b50454e3756bbc9474581f1339e20e1c33dec23d4968ebac4520d384e4f826df",
+      "task_state_fingerprint": "8f6a9475d6b20db381d78476ea26bc3df4ec36419fe524aea558822cbdbb8581",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/rl_train/014/native_camera_2.png",
+          "sha256": "0d62981978029fcecfcf5b24dd25ef63c52d0541cd8ffb5fd4f4334b176cf8f7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/validation/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 43335380,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06928801648071069,
+          0.834599484049504,
+          0.15
+        ],
+        "/object_position": [
+          -0.07928834706910254,
+          0.676599484049504,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.030711983519289304,
+          0.676599484049504,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "51d1658cf46d438074ff34e65294935ec40d0bf7dbfa826e2120cd30b04972a4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/validation/000/native_camera_2.png",
+          "sha256": "fefff01bd6e3a5aee43eb4b9df01971fbbcb5fdb8e8a6a3e6c832a606304ad04"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 170337546,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05018432485631419,
+          0.8003751632168047,
+          0.15
+        ],
+        "/object_position": [
+          -0.060184655444706026,
+          0.6423751632168047,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.04981567514368582,
+          0.6423751632168047,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "451b251d63748fc7b6c441149adad5938cdfc438b970325f66e16ca73d5a340b",
+      "task_state_fingerprint": "6788c33e73281bd1dd52af375e729654d073e624468a258242aca490d73eb40e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "78ada88d2911de05bed8c0189c5f106968249e0985bec69a7586d206639e15e2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 698560726,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.07726990466347283,
+          0.8069542058007008,
+          0.15
+        ],
+        "/object_position": [
+          0.067269574075081,
+          0.6489542058007007,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17726990466347284,
+          0.6489542058007007,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "c451fd451ae61a8560be2d10f0ca98c7bfe4f868e0564e98578c4e41d5fb422e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "04285f5e87b0f0ac5879a4d57d189d1c153569259966c531830f0410653f7aa7"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/002",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1433168993,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.09936678444705727,
+          0.8217970440334511,
+          0.15
+        ],
+        "/object_position": [
+          0.08936645385866543,
+          0.6637970440334511,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.19936678444705727,
+          0.6637970440334511,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "dc9c2d22fc678daadcd3bfa4845d7e62e594174ab6e49318b5e87e764db19c15",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/002/native_camera_2.png",
+          "sha256": "fe263d9464f03ab2749a93e29357efe817878ea2c1757fbb5d22adabe34378ca"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/006",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1004640970,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05301673277275534,
+          0.8246452984296971,
+          0.15
+        ],
+        "/object_position": [
+          -0.06301706336114718,
+          0.6666452984296971,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.04698326722724466,
+          0.6666452984296971,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "c3e3b13f76eea8b5ee9830f36e754eca752a6c2f17fa4525970c254dea18f19a",
+      "task_state_fingerprint": "c96d0b4e412a8394ea6df6b78f171c9235e6e1543b6fcbf2e23c406443f34a49",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/006/native_camera_2.png",
+          "sha256": "33c7a5c3fe6471888140bd41f3c89b527c690e517e79a9d9cbc782a76af1641a"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/010",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1265755987,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05322463223334417,
+          0.8496365547366189,
+          0.15
+        ],
+        "/object_position": [
+          -0.06322496282173601,
+          0.6916365547366189,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.046775367766655834,
+          0.6916365547366189,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "ed16133aaf1371c25fdccc728a11e92bf8b96e5fea2d69df410fe849c62e380c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/010/native_camera_2.png",
+          "sha256": "955081a695af944e4f824d802437c77d4d0ab182282d313dc44860ad1c7fd29d"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/014",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1429872043,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.036761626179260765,
+          0.8027516280940525,
+          0.15
+        ],
+        "/object_position": [
+          0.02676129559086893,
+          0.6447516280940525,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.13676162617926077,
+          0.6447516280940525,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "cb95f30c172528afef3090a7889dff6c4fea78e932e949bb87e63646c913e361",
+      "task_state_fingerprint": "b85dfe8fee59835b30c1a868228813e9abb6fb1815a6ef68c8292e961004a96d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/014/native_camera_2.png",
+          "sha256": "37ff9a804c4da36a5b32ed9ddbe8229b4ceb3767aee0b7ff6689bc0778adcbc2"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/eval_seen/019",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1093020046,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.02415497778123077,
+          0.8155468499181383,
+          0.15
+        ],
+        "/object_position": [
+          0.014154647192838935,
+          0.6575468499181383,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.12415497778123077,
+          0.6575468499181383,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d07a98c8ea9e7b1f4f71482bc1063211646319a62ef553fda069f93ee1bd24a1",
+      "task_state_fingerprint": "e897ad2545ad68e31a5a19ee8f4f803bfc3c0aac695bafe25147b1ba1825702d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/eval_seen/019/native_camera_2.png",
+          "sha256": "49441d9803506edcbc97fff1a52596f1a7425bb1673d0ffd84a12bbac7d2c170"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/door-unlock-v3/validation/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1907890912,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.0011179297585079545,
+          0.8399192246201249,
+          0.15
+        ],
+        "/object_position": [
+          -0.011118260346899774,
+          0.6819192246201249,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.09888207024149206,
+          0.6819192246201249,
+          0.211
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "0c3ac249eacf19e70b26ae98d6f83e4948bba60e82e76f383713b9176b192985",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/door-unlock-v3/validation/001/native_camera_2.png",
+          "sha256": "dd69bcc942f391a99828be2090021927b8ef2441e8bf3012bfaa0a6a0691289c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

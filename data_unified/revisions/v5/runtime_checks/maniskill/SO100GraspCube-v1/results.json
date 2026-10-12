@@ -1,0 +1,487 @@
+{
+  "task_key": "maniskill/SO100GraspCube-v1",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/000",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 836224729,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "so100",
+        "control_mode": "pd_joint_target_delta_pos",
+        "obs_mode": "rgb+segmentation",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.2951151132583618,
+            -0.013883542269468307,
+            0.011028075590729713,
+            0.9515829682350159,
+            0.0,
+            0.0,
+            0.30739206075668335,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/camera_mount": [
+          [
+            0.49249401688575745,
+            0.3117804527282715,
+            0.35108527541160583,
+            0.4677203297615051,
+            0.25606220960617065,
+            0.14514023065567017,
+            -0.8334290981292725,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/so100": [
+          [
+            3.725290298461914e-09,
+            -1.9083188362856163e-09,
+            0.0,
+            0.7071067690849304,
+            -1.9154624553152644e-08,
+            -1.2303364549381968e-08,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.005996612831950188,
+            0.018443260341882706,
+            -0.008291440084576607,
+            1.5625338554382324,
+            1.5670864582061768,
+            -0.04945140704512596,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/controller/target_qpos": [
+          [
+            -0.005996612831950188,
+            0.018443260341882706,
+            -0.008291440084576607,
+            1.5625338554382324,
+            1.5670864582061768,
+            -0.04945140704512596
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              -0.8539534211158752,
+              0.5203440189361572,
+              0.0023971947375684977,
+              0.2574922442436218
+            ],
+            [
+              0.2910493314266205,
+              0.48145925998687744,
+              -0.826732873916626,
+              -0.0031958818435668945
+            ],
+            [
+              -0.4313396215438843,
+              -0.7052936553955078,
+              -0.5625895261764526,
+              0.6298457980155945
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              -0.8539533615112305,
+              -0.2910493314266205,
+              0.4313396215438843,
+              0.49249401688575745
+            ],
+            [
+              0.5203439593315125,
+              -0.4814591407775879,
+              0.7052936553955078,
+              0.3117804527282715
+            ],
+            [
+              0.00239716493524611,
+              0.8267329335212708,
+              0.5625895261764526,
+              0.35108527541160583
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              257.37738037109375,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              257.37738037109375,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.2951151132583618,
+            -0.013883542269468307,
+            0.011028075590729713,
+            0.9515829682350159,
+            0.0,
+            0.0,
+            0.30739206075668335
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.49249401688575745,
+            0.3117804527282715,
+            0.35108527541160583,
+            0.4677203297615051,
+            0.25606220960617065,
+            0.14514023065567017,
+            -0.8334290981292725
+          ]
+        ]
+      },
+      "state_fingerprint": "df354ad3ef0741a05cd50de54c80a2c4c37abdd2467e394e1ce3c7047aeeb3fc",
+      "task_state_fingerprint": "afe9734d909040c9554edefa16e6305a3ffe62cf5ebd26f68ac56d9faf6bb083",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/SO100GraspCube-v1/eval_generalization/000/base_camera.png",
+          "sha256": "b1f7e79e2fadf7894313ca846c3094aea2a14736d90932efbd0d9247259a94cf"
+        }
+      ],
+      "actual_action_dim": 6,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/001",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 1132123886,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "so100",
+        "control_mode": "pd_joint_target_delta_pos",
+        "obs_mode": "rgb+segmentation",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.2821819484233856,
+            0.11198031902313232,
+            0.011028075590729713,
+            0.8651012778282166,
+            0.0,
+            0.0,
+            0.5015972256660461,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/camera_mount": [
+          [
+            0.4882538616657257,
+            0.3016042411327362,
+            0.3526085615158081,
+            0.46420520544052124,
+            0.2642107605934143,
+            0.15286938846111298,
+            -0.831466794013977,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/so100": [
+          [
+            3.725290298461914e-09,
+            -1.9083188362856163e-09,
+            0.0,
+            0.7071067690849304,
+            -1.9154624553152644e-08,
+            -1.2303364549381968e-08,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.013086129911243916,
+            0.03422386571764946,
+            -0.03860647976398468,
+            1.5911463499069214,
+            1.5212665796279907,
+            0.0012657291954383254,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/controller/target_qpos": [
+          [
+            -0.013086129911243916,
+            0.03422386571764946,
+            -0.03860647976398468,
+            1.5911463499069214,
+            1.5212665796279907,
+            0.0012657291954383254
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              -0.8527220487594604,
+              0.5222890377044678,
+              0.008915618993341923,
+              0.2556765079498291
+            ],
+            [
+              0.29743942618370056,
+              0.49950772523880005,
+              -0.8136472105979919,
+              -0.008980631828308105
+            ],
+            [
+              -0.4294123649597168,
+              -0.6911630034446716,
+              -0.5812905430793762,
+              0.6230878233909607
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              -0.8527219295501709,
+              -0.29743942618370056,
+              0.4294123351573944,
+              0.4882538616657257
+            ],
+            [
+              0.5222888588905334,
+              -0.4995076656341553,
+              0.6911629438400269,
+              0.3016042411327362
+            ],
+            [
+              0.008915633894503117,
+              0.8136472105979919,
+              0.5812905430793762,
+              0.3526085615158081
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              257.37738037109375,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              257.37738037109375,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.2821819484233856,
+            0.11198031902313232,
+            0.011028075590729713,
+            0.8651012778282166,
+            0.0,
+            0.0,
+            0.5015972256660461
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.4882538616657257,
+            0.3016042411327362,
+            0.3526085615158081,
+            0.46420520544052124,
+            0.2642107605934143,
+            0.15286938846111298,
+            -0.831466794013977
+          ]
+        ]
+      },
+      "state_fingerprint": "50804be1661d362b3f39459bfd98f1283ebb012bf7f23e5e73891ff1c536dbb1",
+      "task_state_fingerprint": "de047c5a16f34a251cc044c2ff50930c21bf8f2f6dac6db96430d3c2dfd0d093",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/SO100GraspCube-v1/eval_generalization/001/base_camera.png",
+          "sha256": "6cec66e8340282bad7813d5923394598e41025da0fc58f56d7deb6684d90029f"
+        }
+      ],
+      "actual_action_dim": 6,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

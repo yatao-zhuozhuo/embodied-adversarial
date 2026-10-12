@@ -27,7 +27,7 @@ function filtered() {
     && (!$('group').value || r.group === $('group').value)
     && (!$('model').value || r.model === $('model').value)
     && (!$('result').value || (r.success == null ? 'unknown' : String(r.success)) === $('result').value)
-    && (source !== 'expert' || !$('annotation').value || ($('annotation').value === 'some' ? r.annotated_turns > 0 : !r.annotated_turns))
+    && (!source.startsWith('expert') || !$('annotation').value || ($('annotation').value === 'some' ? r.annotated_turns > 0 : !r.annotated_turns))
     && (!query || [r.label,r.task,r.model,r.group,r.status].join(' ').toLowerCase().includes(query)));
 }
 function drawList() {
@@ -180,7 +180,7 @@ document.querySelectorAll('[data-source]').forEach(button=>button.onclick=()=>{
   turn=requestedTurn=0; $('slider').value=0; $('slider').max=0; $('position').textContent='';
   $('images').replaceChildren(); cameras.clear(); frameCache.clear(); $('detail').textContent='选择左侧记录查看。'; $('audit').textContent=''; $('title').textContent='选择一条轨迹'; $('meta').textContent=''; $('status').textContent=''; $('error').textContent='';
   $('legacy').style.display=source==='sft'?'block':'none';
-  $('annotation').style.display=source==='expert'?'block':'none';
+  $('annotation').style.display=source.startsWith('expert')?'block':'none';
   for(const id of ['bench','group','model','result','search','annotation'])$(id).value='';
   if(source==='expert')$('annotation').value='some';
   document.querySelectorAll('[data-source]').forEach(b=>b.classList.toggle('active',b===button));
@@ -189,4 +189,7 @@ document.querySelectorAll('[data-source]').forEach(button=>button.onclick=()=>{
 document.onkeydown=e=>{ if(['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName))return; if(e.key==='ArrowRight'){e.preventDefault();seek(requestedTurn+1);} if(e.key==='ArrowLeft'){e.preventDefault();seek(requestedTurn-1);} if(e.key===' '){e.preventDefault();$('play').click();} };
 setInterval(()=>{ if($('auto').checked && !document.hidden)refresh(); },30000);
 fetchJson('api/context').then(c=>{$('context').textContent=`当前分支：${c.branch} · baseline：${c.baseline_branch}`;}).catch(e=>{$('error').textContent=e.message;});
-drawChart(); refresh();
+drawChart();
+const initialSource = new URLSearchParams(location.search).get('source');
+const initialButton = [...document.querySelectorAll('[data-source]')].find(button => button.dataset.source === initialSource);
+if(initialButton && initialSource !== source)initialButton.click(); else refresh();

@@ -590,6 +590,8 @@ def _reset_with_robocasa_reference_demo(env, *, seed: int | None, handle: str, e
         "episode_index": episode_index,
         "dataset": str(dataset),
         "language": str(ep_meta.get("lang") or ""),
+        "initial_success": bool(raw._check_success()),
+        "restored_state_max_abs_error": float(np.max(np.abs(raw.sim.get_state().flatten()[1:] - states[0][1:]))),
     }
     return result
 
@@ -651,6 +653,8 @@ def _reset_with_libero_reference_demo(env, *, seed: int | None, handle: str, epi
         "source": "libero.official_human_demonstration",
         "episode_index": episode_index,
         "dataset": str(dataset),
+        "initial_success": bool(raw.check_success()),
+        "restored_state_max_abs_error": float(np.max(np.abs(raw.sim.get_state().flatten()[1:] - initial_state[1:]))),
     }
     return result
 
@@ -704,6 +708,7 @@ def _reset_with_maniskill_reference_demo(env, *, seed: int | None, handle: str, 
         "episode_index": episode_index,
         "episode_seed": episode["episode_seed"],
         "dataset": str(dataset),
+        "initial_success": bool(raw.get_info()["success"].reshape(-1)[0].item()),
     }
     return result
 

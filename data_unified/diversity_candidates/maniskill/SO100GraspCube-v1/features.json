@@ -1,0 +1,425 @@
+{
+  "task_key": "maniskill/SO100GraspCube-v1",
+  "records": [
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/000",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 836224729,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.2951151132583618,
+            -0.013883542269468307,
+            0.011028075590729713,
+            0.9515829682350159,
+            0.0,
+            0.0,
+            0.30739206075668335
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.49249401688575745,
+            0.3117804527282715,
+            0.35108527541160583,
+            0.4677203297615051,
+            0.25606220960617065,
+            0.14514023065567017,
+            -0.8334290981292725
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "df354ad3ef0741a05cd50de54c80a2c4c37abdd2467e394e1ce3c7047aeeb3fc",
+      "task_state_fingerprint": "afe9734d909040c9554edefa16e6305a3ffe62cf5ebd26f68ac56d9faf6bb083",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/000/base_camera.png",
+          "sha256": "b1f7e79e2fadf7894313ca846c3094aea2a14736d90932efbd0d9247259a94cf"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/001",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 1132123886,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.2821819484233856,
+            0.11198031902313232,
+            0.011028075590729713,
+            0.8651012778282166,
+            0.0,
+            0.0,
+            0.5015972256660461
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.4882538616657257,
+            0.3016042411327362,
+            0.3526085615158081,
+            0.46420520544052124,
+            0.2642107605934143,
+            0.15286938846111298,
+            -0.831466794013977
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "50804be1661d362b3f39459bfd98f1283ebb012bf7f23e5e73891ff1c536dbb1",
+      "task_state_fingerprint": "de047c5a16f34a251cc044c2ff50930c21bf8f2f6dac6db96430d3c2dfd0d093",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/001/base_camera.png",
+          "sha256": "6cec66e8340282bad7813d5923394598e41025da0fc58f56d7deb6684d90029f"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/002",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 171699805,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.2686097323894501,
+            0.09546883404254913,
+            0.011028075590729713,
+            0.015014366246759892,
+            0.0,
+            0.0,
+            -0.9998872876167297
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.5067273378372192,
+            0.307234525680542,
+            0.34616348147392273,
+            0.4507381319999695,
+            0.25486549735069275,
+            0.1344975233078003,
+            -0.8448604345321655
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f908ae9e7909c41429c4e27fe60946286bacf862614948e1e8be22577a606677",
+      "task_state_fingerprint": "4cfe631d640e7cb65a86fd2ae5fa388b20b28a63f6493837539fe3543b9b9b47",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/002/base_camera.png",
+          "sha256": "3cd68da6338dcee62edcba37c62933bb2979e830b135ef09203ded3102365fc9"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/006",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 1280902472,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.21675387024879456,
+            -0.03443397209048271,
+            0.011028075590729713,
+            0.9099194407463074,
+            0.0,
+            0.0,
+            -0.41478508710861206
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.5074074268341064,
+            0.29389429092407227,
+            0.3484692871570587,
+            0.44170552492141724,
+            0.2630816102027893,
+            0.1410258710384369,
+            -0.8460472822189331
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "abb36c0cbf01ca1d651e69de55e153209f367cf2d7642f5df1c9421f1927ccb0",
+      "task_state_fingerprint": "dbc46116430f31fc24eb1d6ed95817c0cf58fb2ff6cdc6affc807b01b202e89a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/006/base_camera.png",
+          "sha256": "bd79958986ed8ce39ad9210a882190b957e906f0f65f3b7e7c2629a99fe7c62b"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/010",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 1679852058,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.35134899616241455,
+            0.14325439929962158,
+            0.011028075590729713,
+            0.7641635537147522,
+            0.0,
+            0.0,
+            0.6450225710868835
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.5093931555747986,
+            0.30189621448516846,
+            0.34681567549705505,
+            0.445004940032959,
+            0.2577597498893738,
+            0.1390756070613861,
+            -0.8462792634963989
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "78111341ffd41f84361c1b379d2c4566aa373df95b758fa9259b34faee7314a2",
+      "task_state_fingerprint": "f184b3cc83979a31c062c9d8b35f280039cf89fe2bd56cddcf8dfbf3974cb3f9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/010/base_camera.png",
+          "sha256": "912806416615a0ee6507d118d50fe906ed9919caab9c1bdaec993f25bd878989"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/014",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 620796632,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.39124011993408203,
+            -0.036620404571294785,
+            0.011028075590729713,
+            0.12823797762393951,
+            0.0,
+            0.0,
+            0.9917434453964233
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.5070858001708984,
+            0.3091700077056885,
+            0.35633140802383423,
+            0.45238226652145386,
+            0.26163575053215027,
+            0.14197199046611786,
+            -0.840678870677948
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9091ebc76149b12dc8799d1832f7f724d65478bac1fc8441760785e3763781a3",
+      "task_state_fingerprint": "468ede7839e3eadab50e89b3704159b75149ed53cc5d25db4183ae798c1a57df",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/014/base_camera.png",
+          "sha256": "2c0f5641972e9c9cbd4e11dd91181ea43ddc1c859a46def29fab844eed635747"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    },
+    {
+      "case_id": "maniskill/SO100GraspCube-v1/eval_generalization/019",
+      "task_key": "maniskill/SO100GraspCube-v1",
+      "seed": 401709498,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            0.6169999837875366,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube-0": [
+          [
+            0.39894071221351624,
+            0.07232263684272766,
+            0.011028075590729713,
+            0.6788164973258972,
+            0.0,
+            0.0,
+            -0.7343079447746277
+          ]
+        ],
+        "actor/camera_mount": [
+          [
+            0.5098491907119751,
+            0.2900169789791107,
+            0.356967031955719,
+            0.433188259601593,
+            0.2730920910835266,
+            0.1402563750743866,
+            -0.8474059700965881
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "227e41daace1666a9301e6e4d2ac0c3e95d1eaa794dc588d8d6daf61e9bd4e43",
+      "task_state_fingerprint": "9599e91d45b488893219a2030e6cca0b3686907de6d4dd2c1d16f1f3060732e5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/SO100GraspCube-v1/eval_generalization/019/base_camera.png",
+          "sha256": "062e49fde2cc997fff16f2c1b6fd034018a6f77de1b42b2cae2e530f8ba66cb3"
+        }
+      ],
+      "actual_robot": "so100",
+      "actual_action_dim": 6
+    }
+  ]
+}

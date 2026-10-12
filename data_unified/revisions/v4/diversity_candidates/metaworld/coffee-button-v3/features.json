@@ -1,0 +1,299 @@
+{
+  "task_key": "metaworld/coffee-button-v3",
+  "records": [
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/000",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 1127558963,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.05285637332416604,
+          0.855128119672707,
+          -0.0008121291277672618
+        ],
+        "/object_position": [
+          0.05285637332416604,
+          0.635128119672707,
+          0.29918787087223275
+        ],
+        "/goal_position": [
+          0.05285637332416604,
+          0.665128119672707,
+          0.29918787087223275
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "446d3f9ccf008c13b03d39a52848092371f6374649da4931f9b22ba197e1f017",
+      "task_state_fingerprint": "9b7278635726a25fea8a3411eb416a6b62383bd5fcd7e539fe03b915ad90608a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/000/native_camera_2.png",
+          "sha256": "8311f2e1b9e86a742c1a53f9faa0809330c358f36f640aaee6a87a0810d31ee3"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/001",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 276648050,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.057270877841747385,
+          0.8121935848429008,
+          -0.0007073757433156253
+        ],
+        "/object_position": [
+          -0.057270877841747385,
+          0.5921935848429009,
+          0.29929262425668435
+        ],
+        "/goal_position": [
+          -0.057270877841747385,
+          0.6221935848429009,
+          0.29929262425668435
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3b95250bca9575ce359ffdd27f8660bdc7bce04b5cd5584e6bfb9c448c960e23",
+      "task_state_fingerprint": "c5247c042249db9f652e092304a8126b4e2d7aadf1030ba5c127ef50ccc0b39a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/001/native_camera_2.png",
+          "sha256": "6b48ba9734f2ab7d7ac2d82510c0dfbe336e53c9095f7f0de9ce968002416160"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/002",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 547986020,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.024276381392388774,
+          0.8783596567600882,
+          0.00027129833786738175
+        ],
+        "/object_position": [
+          0.024276381392388774,
+          0.6583596567600882,
+          0.30027129833786737
+        ],
+        "/goal_position": [
+          0.024276381392388774,
+          0.6883596567600883,
+          0.30027129833786737
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dce15058a7e4760d523c43f37a83bb6fed0c704d12180f16a4e3247ba4ef5d91",
+      "task_state_fingerprint": "8e8e9aee9fee46670f4b07b03ec705f83b8383f0fe0dcce1fdc18b1d687f6f7d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/002/native_camera_2.png",
+          "sha256": "5d26bebcefd28315da0a6aafe0e5a7add88020ef951f37ab55c85b7124d308cb"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/006",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 1446149687,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06464970034269386,
+          0.8817913600362451,
+          0.0006065304083878258
+        ],
+        "/object_position": [
+          -0.06464970034269386,
+          0.6617913600362452,
+          0.3006065304083878
+        ],
+        "/goal_position": [
+          -0.06464970034269386,
+          0.6917913600362452,
+          0.3006065304083878
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "24e069301fef72fae2b7a9bc24535a1c990a5d7b258ba4bad13b2b1db9f63c9b",
+      "task_state_fingerprint": "0fb360475f79638177a6958f8fc070c7f2f4232991159650fc28cc01ad9b88e5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/006/native_camera_2.png",
+          "sha256": "de946869a676bb24f454f7e8a6cdd14b2f9cc3103d74755bb033c940cd84d93f"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/010",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 1253318402,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.013089449113584367,
+          0.8387907566091756,
+          -0.0008792672187289418
+        ],
+        "/object_position": [
+          -0.013089449113584367,
+          0.6187907566091756,
+          0.29912073278127105
+        ],
+        "/goal_position": [
+          -0.013089449113584367,
+          0.6487907566091756,
+          0.29912073278127105
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "82b7a7d7a146929040db83c21a4c28009fffcc4945ba3f18bd04ba124dd5490a",
+      "task_state_fingerprint": "66e858fa7d17485a55682501bbcb10fb2a88667828f5b355e9fab361e3b002b6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/010/native_camera_2.png",
+          "sha256": "a72cd3b214f11eb75ac63ca6f6e0b83a2c04a2e004f9a6a1fd14a9d04f357989"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/014",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 2021000474,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.08644538098052695,
+          0.8204968440936709,
+          -8.701351306703237e-05
+        ],
+        "/object_position": [
+          -0.08644538098052695,
+          0.6004968440936709,
+          0.29991298648693293
+        ],
+        "/goal_position": [
+          -0.08644538098052695,
+          0.6304968440936709,
+          0.29991298648693293
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f997c2289de1114f3d2c4ec5f83b6148b57ab69064e1c009013d32ccf66dc9e7",
+      "task_state_fingerprint": "767167e8e93c8e5cfb7c64538157af0eb0a3c59d8b9f62fec95065a90c3aceb6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/014/native_camera_2.png",
+          "sha256": "4b80fc4d4fa2da091fa2c89fb195fe81b156e0987a8944c40e13143d94ed6399"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/019",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 492172313,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02256435510792884,
+          0.8981984272318765,
+          0.0004233465969260767
+        ],
+        "/object_position": [
+          -0.02256435510792884,
+          0.6781984272318765,
+          0.30042334659692604
+        ],
+        "/goal_position": [
+          -0.02256435510792884,
+          0.7081984272318765,
+          0.30042334659692604
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5608beb7e594dd383d0195936674a7ea59dd1d1134526b3b89284698d0b8be77",
+      "task_state_fingerprint": "936fbb261a67d64de54ac1337bf32e62cf795c6785512c8665638b03850759d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/coffee-button-v3/eval_generalization/019/native_camera_2.png",
+          "sha256": "59bfb0f8fbb48046b69148eecfb748b35b4c495aa28aa7fdeb71c2ac90297173"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

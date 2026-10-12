@@ -1,0 +1,220 @@
+{
+  "task": {
+    "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+    "bench": "maniskill",
+    "task_id": "RotateSingleObjectInHandLevel3-v1",
+    "env_id": "openeta/maniskill_RotateSingleObjectInHandLevel3-v1-v0",
+    "role": "generalization",
+    "horizon": 300,
+    "expected_action_dim": 16,
+    "environment_config": {
+      "robot": "allegro_hand_right_touch",
+      "control_mode": "pd_joint_pos",
+      "obs_mode": "rgbd",
+      "sim_backend": "physx_cuda",
+      "pass_robot_uids": false
+    }
+  },
+  "cases": [
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 995600467,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1899361693,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/002",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 98187857,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/003",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1951607252,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/004",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 117516541,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/005",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1628344656,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/006",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 287047465,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/007",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1674963343,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/008",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 478091525,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/009",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1931905665,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/010",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1830840697,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/011",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 253378449,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/012",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1930077950,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/013",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 372448279,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/014",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 184541427,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/015",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 28721714,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/016",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 611740320,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/017",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1244794135,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/018",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 1429840341,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/019",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "phase": "eval_generalization",
+      "seed": 172612742,
+      "initial_state": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      }
+    }
+  ]
+}

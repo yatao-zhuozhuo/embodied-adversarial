@@ -1,0 +1,237 @@
+{
+  "task_key": "metaworld/coffee-button-v3",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/000",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 1127558963,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1127558963,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          0.05285637332416604,
+          0.635128119672707,
+          -0.0008121291277672618,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.05285637332416604,
+          0.855128119672707,
+          -0.0008121291277672618
+        ],
+        "/object_position": [
+          0.05285637332416604,
+          0.635128119672707,
+          0.29918787087223275
+        ],
+        "/goal_position": [
+          0.05285637332416604,
+          0.665128119672707,
+          0.29918787087223275
+        ]
+      },
+      "state_fingerprint": "446d3f9ccf008c13b03d39a52848092371f6374649da4931f9b22ba197e1f017",
+      "task_state_fingerprint": "9b7278635726a25fea8a3411eb416a6b62383bd5fcd7e539fe03b915ad90608a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-button-v3/eval_generalization/000/native_camera_2.png",
+          "sha256": "8311f2e1b9e86a742c1a53f9faa0809330c358f36f640aaee6a87a0810d31ee3"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-button-v3/eval_generalization/001",
+      "task_key": "metaworld/coffee-button-v3",
+      "seed": 276648050,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 276648050,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          -0.057270877841747385,
+          0.5921935848429009,
+          -0.0007073757433156253,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.057270877841747385,
+          0.8121935848429008,
+          -0.0007073757433156253
+        ],
+        "/object_position": [
+          -0.057270877841747385,
+          0.5921935848429009,
+          0.29929262425668435
+        ],
+        "/goal_position": [
+          -0.057270877841747385,
+          0.6221935848429009,
+          0.29929262425668435
+        ]
+      },
+      "state_fingerprint": "3b95250bca9575ce359ffdd27f8660bdc7bce04b5cd5584e6bfb9c448c960e23",
+      "task_state_fingerprint": "c5247c042249db9f652e092304a8126b4e2d7aadf1030ba5c127ef50ccc0b39a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-button-v3/eval_generalization/001/native_camera_2.png",
+          "sha256": "6b48ba9734f2ab7d7ac2d82510c0dfbe336e53c9095f7f0de9ce968002416160"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

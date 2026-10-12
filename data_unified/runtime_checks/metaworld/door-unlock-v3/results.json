@@ -1,0 +1,721 @@
+{
+  "task_key": "metaworld/door-unlock-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/sft_train/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 1240592967,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1240592967,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882813,
+          -0.5757689048995809,
+          -0.9766593169577558,
+          1.6419914193500214,
+          0.9428595829327355,
+          1.0436962570085024,
+          2.2928333628291533,
+          -0.00017190619515694536,
+          0.00017174542246342235,
+          1.5708
+        ],
+        "/qvel": [
+          0.261002146929764,
+          0.4289125568331454,
+          -0.48577052759702183,
+          0.24403765089617074,
+          0.829109782496034,
+          0.09876223225413792,
+          1.5894718270526678,
+          5.84279937672981e-07,
+          5.910160482095524e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.07363077645901636,
+          0.8099932671632621,
+          0.15
+        ],
+        "/object_position": [
+          0.06363044587062452,
+          0.6519932671632621,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17363077645901637,
+          0.6519932671632621,
+          0.211
+        ]
+      },
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "857ca543b73734d64c7954167dcdd7f3cadc68c5541909562a9956bf5eb6c5a5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/sft_train/000/native_camera_2.png",
+          "sha256": "1e6eb08269e5798f3570eac309df8a301fafaa7cbe1feef4eb230179bb6467dd"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/sft_train/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 367446798,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 367446798,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.92063516381111,
+          -0.5970649501598179,
+          -0.9785513278727453,
+          1.6801390719422633,
+          0.9421819361882068,
+          1.0214950306216257,
+          2.295895576168336,
+          -0.00017192596189556176,
+          0.0001453810773904371,
+          1.5708
+        ],
+        "/qvel": [
+          0.09147590494878201,
+          0.6131144742222896,
+          -0.5141495873376167,
+          0.09615583338792909,
+          1.0333806805362686,
+          0.18238650630469938,
+          1.9488258137271994,
+          -1.018000835217059e-06,
+          7.563276682656485e-05,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03601721749740619,
+          0.8050945377183627,
+          0.15
+        ],
+        "/object_position": [
+          -0.04601754808579803,
+          0.6470945377183627,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.06398278250259382,
+          0.6470945377183627,
+          0.211
+        ]
+      },
+      "state_fingerprint": "ea2d3a24b480698652b62091da450be8049c6faf82b4b4fe9cd77a16288bdd46",
+      "task_state_fingerprint": "68cf0320276c13998b71e74fc54135ad2dccf276322dc6223a8e4f20a97afbf4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/sft_train/001/native_camera_2.png",
+          "sha256": "b8b8f305c7b4b030f969e2d3c781c4add8d67420f8ecb87fcae8b1917c2a2b92"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/rl_train/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 86023763,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 86023763,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8976971955612667,
+          -0.5816584966316503,
+          -0.9770191492671413,
+          1.6551300857598064,
+          0.9460964641522376,
+          1.034046787626266,
+          2.294795391090938,
+          -0.0001719394807843914,
+          0.00016643239004910916,
+          1.5708
+        ],
+        "/qvel": [
+          0.10209626459758463,
+          0.5359893023036258,
+          -0.4652451912818112,
+          0.0946450646421777,
+          0.8890239760200691,
+          0.20362550700593973,
+          1.7298724917219923,
+          1.255056979545273e-06,
+          0.00012973948492784948,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.07168952950897463,
+          0.8142801084265141,
+          0.15
+        ],
+        "/object_position": [
+          -0.08168986009736645,
+          0.6562801084265141,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.02831047049102539,
+          0.6562801084265141,
+          0.211
+        ]
+      },
+      "state_fingerprint": "1b993612e94fd18193c182b35a949f5ecae64f8f8f8ec4b9e6121da4358313b8",
+      "task_state_fingerprint": "abbe19462377023ff721edcc9a02f8756c71bc030c6eb42148f40b2a04172cb6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/rl_train/000/native_camera_2.png",
+          "sha256": "a7258cc344c974c545183ee331997c57bec7a7a3adde966a75077150b92d4835"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/rl_train/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 2011792483,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2011792483,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882813,
+          -0.5757689048995809,
+          -0.9766593169577558,
+          1.6419914193500214,
+          0.9428595829327355,
+          1.0436962570085024,
+          2.2928333628291533,
+          -0.00017190619515694536,
+          0.00017174542246342235,
+          1.5708
+        ],
+        "/qvel": [
+          0.261002146929764,
+          0.4289125568331454,
+          -0.48577052759702183,
+          0.24403765089617074,
+          0.829109782496034,
+          0.09876223225413792,
+          1.5894718270526678,
+          5.84279937672981e-07,
+          5.910160482095524e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.04024132160376395,
+          0.831727261871898,
+          0.15
+        ],
+        "/object_position": [
+          -0.05024165219215579,
+          0.673727261871898,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.059758678396236053,
+          0.673727261871898,
+          0.211
+        ]
+      },
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "e9af2447f765929c58c956cfa90636e7a8b9d067c7b2f86a4015cb210f0307e2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/rl_train/001/native_camera_2.png",
+          "sha256": "46b98b9a7e345ff18ba891eba239e7538bbabe1211fb7e8344e63a9b2c51b6e7"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/validation/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 43335380,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 43335380,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882813,
+          -0.5757689048995809,
+          -0.9766593169577558,
+          1.6419914193500214,
+          0.9428595829327355,
+          1.0436962570085024,
+          2.2928333628291533,
+          -0.00017190619515694536,
+          0.00017174542246342235,
+          1.5708
+        ],
+        "/qvel": [
+          0.261002146929764,
+          0.4289125568331454,
+          -0.48577052759702183,
+          0.24403765089617074,
+          0.829109782496034,
+          0.09876223225413792,
+          1.5894718270526678,
+          5.84279937672981e-07,
+          5.910160482095524e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.06928801648071069,
+          0.834599484049504,
+          0.15
+        ],
+        "/object_position": [
+          -0.07928834706910254,
+          0.676599484049504,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.030711983519289304,
+          0.676599484049504,
+          0.211
+        ]
+      },
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "51d1658cf46d438074ff34e65294935ec40d0bf7dbfa826e2120cd30b04972a4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/validation/000/native_camera_2.png",
+          "sha256": "fefff01bd6e3a5aee43eb4b9df01971fbbcb5fdb8e8a6a3e6c832a606304ad04"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/eval_seen/000",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 170337546,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 170337546,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.931712158952855,
+          -0.60556642109734,
+          -0.9767059030179822,
+          1.6898586584988944,
+          0.9367606200375496,
+          1.015559624321074,
+          2.2943000367306916,
+          -0.00017188174580724504,
+          0.0001374942706998911,
+          1.5708
+        ],
+        "/qvel": [
+          0.1497670821807362,
+          0.6757745634600083,
+          -0.6372657057093437,
+          0.1644306150701971,
+          1.141868012072844,
+          0.15124859321149925,
+          2.11851733596049,
+          -8.942044933970158e-07,
+          1.9542769807681213e-05,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05018432485631419,
+          0.8003751632168047,
+          0.15
+        ],
+        "/object_position": [
+          -0.060184655444706026,
+          0.6423751632168047,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.04981567514368582,
+          0.6423751632168047,
+          0.211
+        ]
+      },
+      "state_fingerprint": "451b251d63748fc7b6c441149adad5938cdfc438b970325f66e16ca73d5a340b",
+      "task_state_fingerprint": "6788c33e73281bd1dd52af375e729654d073e624468a258242aca490d73eb40e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "78ada88d2911de05bed8c0189c5f106968249e0985bec69a7586d206639e15e2"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/door-unlock-v3/eval_seen/001",
+      "task_key": "metaworld/door-unlock-v3",
+      "seed": 698560726,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 698560726,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882813,
+          -0.5757689048995809,
+          -0.9766593169577558,
+          1.6419914193500214,
+          0.9428595829327355,
+          1.0436962570085024,
+          2.2928333628291533,
+          -0.00017190619515694536,
+          0.00017174542246342235,
+          1.5708
+        ],
+        "/qvel": [
+          0.261002146929764,
+          0.4289125568331454,
+          -0.48577052759702183,
+          0.24403765089617074,
+          0.829109782496034,
+          0.09876223225413792,
+          1.5894718270526678,
+          5.84279937672981e-07,
+          5.910160482095524e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.07726990466347283,
+          0.8069542058007008,
+          0.15
+        ],
+        "/object_position": [
+          0.067269574075081,
+          0.6489542058007007,
+          0.1210000367326582
+        ],
+        "/goal_position": [
+          0.17726990466347284,
+          0.6489542058007007,
+          0.211
+        ]
+      },
+      "state_fingerprint": "ee3774762a0c39c231a8c6eaf2825d72aef1a10c5e4671a57cea070f778f46f2",
+      "task_state_fingerprint": "c451fd451ae61a8560be2d10f0ca98c7bfe4f868e0564e98578c4e41d5fb422e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/door-unlock-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "04285f5e87b0f0ac5879a4d57d189d1c153569259966c531830f0410653f7aa7"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

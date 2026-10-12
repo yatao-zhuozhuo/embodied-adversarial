@@ -1,0 +1,1385 @@
+{
+  "task_key": "maniskill/PickCube-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/000",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1981270821,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0720033124089241,
+            -0.07169292122125626,
+            0.019999999552965164,
+            0.7512879967689514,
+            0.0,
+            0.0,
+            0.6599745154380798
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.08290267735719681,
+            -0.06606057286262512,
+            0.27078351378440857,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1c793afdb2ddd9c8e801d5e55d9abaa5ab421c96a84caf2d28547736273901bf",
+      "task_state_fingerprint": "5e77264f21b3cd9237d7fadf26d244884d65c2591192ad505293801fc3e6a8c5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/000/base_camera.png",
+          "sha256": "10bd623d7a426d8e40709f8f2829ed7fe92aa5048ceadeef163083423d238658"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/001",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 908121213,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.019611075520515442,
+            0.00627598911523819,
+            0.019999999552965164,
+            0.5650373697280884,
+            0.0,
+            0.0,
+            -0.8250653147697449
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.0361676886677742,
+            0.031596727669239044,
+            0.07729111611843109,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "282b97b808e23ce3f59f0e7be9c04fe2829a99f629257311f41908ccb57b345c",
+      "task_state_fingerprint": "41f1d3203212db10e3291fa2eecdb4230fd8565e9ce0bcccc27f42b4a6bc9ab4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/001/base_camera.png",
+          "sha256": "61d99963bcdcda5c9f29c5739b479fa7f65d62c7e04689e886e3eab8d872dea8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/002",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1646691779,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.0660623088479042,
+            -0.05265728756785393,
+            0.019999999552965164,
+            0.9181995391845703,
+            0.0,
+            0.0,
+            -0.39611801505088806
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.05846792086958885,
+            0.030709750950336456,
+            0.023883476853370667,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "71c39ad7e82928e08ed05946b85b3576204379903c0a293d1f553ffab309c038",
+      "task_state_fingerprint": "30ce842b6ef3526e61383127aba754e75032f5b7309a550d489e396750a31c1c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/002/base_camera.png",
+          "sha256": "5f04e71ed62d14041cb326654404b7ff6f00da7ec61ab71c1ea45a83981f0d41"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/005",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 504067562,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0053041428327560425,
+            0.03823942691087723,
+            0.019999999552965164,
+            0.7131238579750061,
+            0.0,
+            0.0,
+            -0.7010380029678345
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.058922506868839264,
+            0.04047136753797531,
+            0.2667578458786011,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "44dcf921d465b9fd30d6eb8dfd28cc7271a419468107fbe3165c1b87ae5461d1",
+      "task_state_fingerprint": "4c5693352dced28822831978235801c120641fe835e2b38ef37529e7a7d5de56",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/005/base_camera.png",
+          "sha256": "934d02fc896be3dd6b49378baa2c21b8bf09b9bf4d0ac73ab40a2da98413576c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/008",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1472597504,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.08631414920091629,
+            0.014973260462284088,
+            0.019999999552965164,
+            0.765761137008667,
+            0.0,
+            0.0,
+            0.643125057220459
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.09463956952095032,
+            0.06199199706315994,
+            0.16466085612773895,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b23689764c46d9b804ca382deff506cbdbf5a711fe0b1b0f65f6f83f14781fe9",
+      "task_state_fingerprint": "f5303b18a61ca84b76b0697b67c4c3928e1f4e2b7b9fc74b8a5c4444c0c1e9ec",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/008/base_camera.png",
+          "sha256": "2ff1b4c24831d60db2d291e8b9f9045eb74a0405a7b19d90bc90c8a24f75a66a"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/011",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1024104348,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.0796223133802414,
+            0.017657123506069183,
+            0.019999999552965164,
+            0.39003342390060425,
+            0.0,
+            0.0,
+            0.9208006858825684
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.04572460055351257,
+            0.005013510584831238,
+            0.02295093983411789,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4947230682179fa3893adfb438389f812ec0970640d3747b69241d94d67465b5",
+      "task_state_fingerprint": "ff9ba5548cb857e5bd08a82d2d59867a928ef676ac6d9e1894d02f1ef8e0896c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/011/base_camera.png",
+          "sha256": "39af7ca69a6956243b8549b6fc320724873a7103e450b5852ad67ec4e0088621"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/sft_train/014",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 345075996,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.04590379446744919,
+            0.012094758450984955,
+            0.019999999552965164,
+            0.7134045958518982,
+            0.0,
+            0.0,
+            -0.700752317905426
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.056004755198955536,
+            0.0011068135499954224,
+            0.2583293914794922,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "796f57e92fa861a41653e4d1a71f1839beb6307a0cbeb6dcd81644255c964211",
+      "task_state_fingerprint": "d0e9a45cbd597b138e6f86bcb71495c4e32e33f73f816bee4e60d12417dbedbe",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/sft_train/014/base_camera.png",
+          "sha256": "2f1c5160cb2b10dea07e822abdba43195220cd6eb271357007b0c4ce9e72050f"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/000",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 159943232,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.06434477120637894,
+            0.029323555529117584,
+            0.019999999552965164,
+            0.11238784343004227,
+            0.0,
+            0.0,
+            0.9936643838882446
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.058444030582904816,
+            0.07531190663576126,
+            0.04844619333744049,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0e438b789e36fc96f3c942653822c28854500ba594590be8d2e32b47282e22f4",
+      "task_state_fingerprint": "720c724a7dba2bd0a269db7814925af98f9d23d4fe015b636472d7f28fcf664d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/000/base_camera.png",
+          "sha256": "3c9150aa466c3200ccda2c5375058c6fad187161a17ed657f000d54df39ebcac"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/001",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 2016030370,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.08312075585126877,
+            -0.047526706010103226,
+            0.019999999552965164,
+            0.6353784799575806,
+            0.0,
+            0.0,
+            0.772200882434845
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.060128506273031235,
+            0.04372058063745499,
+            0.1898452192544937,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b2492ec8f8eb2265cbc9bf3aa7ceb8a040444949856b54a5ab3fd4f7c4d6a507",
+      "task_state_fingerprint": "1ba23e96a584ec47cc443df6c017c68a5b208e8b71970d6430de8c72f7720787",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/001/base_camera.png",
+          "sha256": "3783afea30daffd598005d051dbc10e28573ce26309e063ba3c1a1df470d2139"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/002",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1166107725,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.05048292502760887,
+            0.008963488042354584,
+            0.019999999552965164,
+            0.22769787907600403,
+            0.0,
+            0.0,
+            0.9737318158149719
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.05464356765151024,
+            0.04436696320772171,
+            0.18002866208553314,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "aa92120dd081f5e08a67a0a641251f7d27e54f857b55290681a356bdb19a131e",
+      "task_state_fingerprint": "a3e8e0e927ff7d97b50ea1cdc426594566d98784852fb7c4b6c1bdabd2bb083a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/002/base_camera.png",
+          "sha256": "1a6ef008779003dc4d0075cdb4c6fa42ddfd9bb9099f049c18548a97f7205e5d"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/005",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 932192012,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.034834884107112885,
+            -0.028746478259563446,
+            0.019999999552965164,
+            0.15868613123893738,
+            0.0,
+            0.0,
+            0.9873290657997131
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.09981431812047958,
+            0.03564587980508804,
+            0.2724047005176544,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8d7afabfc2103fdf9d9c93a906fc5b4340bbab9d667a4d6262d562d3120732df",
+      "task_state_fingerprint": "bff1df305e917aa1ee9961cc9fdb0551bf2e55130f06b0452391b2e03a0a6646",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/005/base_camera.png",
+          "sha256": "f07ab8b1def5d9e1c6245c3d1f962f69c3996fc26a1f0a36677f2afea554c598"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/008",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 790064615,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.09961355477571487,
+            -0.024091407656669617,
+            0.019999999552965164,
+            0.874864935874939,
+            0.0,
+            0.0,
+            -0.4843670129776001
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.04419000819325447,
+            0.034506045281887054,
+            0.028088245540857315,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "6665daefc7e100defa4e0a42cf27a496efb78b1fd0d3aaaadf2ba6aa8592146a",
+      "task_state_fingerprint": "e210c12542b7f0f105c9675b86fd5c907f1afaebb0110b8ad47eebdaafca6d40",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/008/base_camera.png",
+          "sha256": "433dc8b944946d874f81830bb466db04cb2f3765a90a76f1a5615123cfdce000"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/011",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 90412289,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.025401920080184937,
+            -0.0052046626806259155,
+            0.019999999552965164,
+            0.9555068612098694,
+            0.0,
+            0.0,
+            -0.2949690520763397
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.04897487908601761,
+            0.06996113806962967,
+            0.28425875306129456,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ed325def7e3ab35efb09a636609fef3c7f38917041aedc7fa38dce3a478f1139",
+      "task_state_fingerprint": "8f0884664ac33df386cd5d5364c88f2ae605046580c29013f122f389500d0a3f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/011/base_camera.png",
+          "sha256": "5a83bdb4fb8f87620d8b10c655d5a160b5c121b5099bba29036f9d714f6bebca"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/rl_train/014",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1085132630,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.06752476841211319,
+            -0.04550866037607193,
+            0.019999999552965164,
+            0.03822877258062363,
+            0.0,
+            0.0,
+            -0.9992690086364746
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.03895344212651253,
+            0.006431259214878082,
+            0.16502755880355835,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "210e3a357fa97ec9ba7f2aae7fe89df694cf071db3f470ec1759c5949e2feb26",
+      "task_state_fingerprint": "2cd51bae63bd7ff56b0fc2f62b852438d223522f7c9f5bdd1cd7b4b33434d65c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/rl_train/014/base_camera.png",
+          "sha256": "92c72e4884a5492f39ab43f7838e9a6b9b7726a90720efbaa88f796804628f43"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/validation/000",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1805688634,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.09091287106275558,
+            0.029576756060123444,
+            0.019999999552965164,
+            0.8135667443275452,
+            0.0,
+            0.0,
+            -0.5814715623855591
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.0808822438120842,
+            0.06444088369607925,
+            0.11460034549236298,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "8ac8d3a8b3d8a5012a813390e09ec112555c9267cca48c99bc205bd3a8b0106d",
+      "task_state_fingerprint": "16c24e37c33490f0a7a290525324665f5a5ea10e6d93f250ebca4023edfe563d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/validation/000/base_camera.png",
+          "sha256": "0e5d74362111b8c8ab8284ab2bec1635afff21fd57988882487136ba42793433"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/000",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1168313036,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.06552188843488693,
+            0.08202225714921951,
+            0.019999999552965164,
+            0.27726829051971436,
+            0.0,
+            0.0,
+            -0.9607925415039062
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.06822046637535095,
+            -0.014345251023769379,
+            0.08227279782295227,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7bd2d43c079af9734e106aab58e02776c0768ae3e487d4714e6d3585d38c8db4",
+      "task_state_fingerprint": "f219396a74471b1f555aaf972e693f1abcdeb82bf4bfbd6a8b742c30570013cf",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/000/base_camera.png",
+          "sha256": "870306edd6648f81085cb56d66fc4ab2c9d34b22b9a968ef8a382244cd56163c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/001",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 678363270,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.024394728243350983,
+            -0.04920605570077896,
+            0.019999999552965164,
+            0.9963526725769043,
+            0.0,
+            0.0,
+            -0.08533093333244324
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.035457268357276917,
+            0.09829355031251907,
+            0.16525429487228394,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d44ab987fbe37d3ff3ea72daf6c18f55d4a07aa69fec360b83e7ea877a5714c6",
+      "task_state_fingerprint": "8f46fb0d0a80bceeca0cece71d6161c92c523c77895ef24c1a12c52789eea782",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/001/base_camera.png",
+          "sha256": "15db6c1244fa7154269f3b376ac699842e88ac291cd2ae4f2ceb930bfbf959a6"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/002",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1294191749,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.006907083094120026,
+            0.026245303452014923,
+            0.019999999552965164,
+            0.7401846051216125,
+            0.0,
+            0.0,
+            0.6724036931991577
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.02532072365283966,
+            -0.03984617814421654,
+            0.14456447958946228,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "dc8399b9884457a7fab8885935109080bf7f67ea79a080d1b72454ec89635e37",
+      "task_state_fingerprint": "98b53a059e8efe9ea3acdd51526e534e652d67ab0ec5ff14875e2f013c7f06ed",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/002/base_camera.png",
+          "sha256": "9ecaf627764534f9733e484ade3b6a93251008f1442745b0b7b40cf579820354"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/006",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1661459375,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.05614618957042694,
+            -0.09228551387786865,
+            0.019999999552965164,
+            0.995414674282074,
+            0.0,
+            0.0,
+            -0.09565407782793045
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.012550979852676392,
+            0.0039052963256835938,
+            0.18596720695495605,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bef0650f4a5fc683295e22cf3f59118359b8256297327e321d85e2fa77e6c190",
+      "task_state_fingerprint": "f99ca23668509f57652e8d202770ba3fecb95c463f389ae24506b5512a5c210c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/006/base_camera.png",
+          "sha256": "f76480f3c081445f94bc8e881296de2b395f5bedbcfac0f1af52e9d0dbfa5d42"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/010",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1022867507,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.05362493544816971,
+            -0.0613870769739151,
+            0.019999999552965164,
+            0.6745018362998962,
+            0.0,
+            0.0,
+            0.7382732033729553
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            -0.005403980612754822,
+            0.08106059581041336,
+            0.26783978939056396,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3038139d5aaf35402c192d7741c2546ee9514944f94430fcac01139464a62938",
+      "task_state_fingerprint": "c17f011815a0aff00d16dd4af00deea770b6ba00f393d7a449d3531f3b5558cd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/010/base_camera.png",
+          "sha256": "3e975e9f5bdae062064bf5f6be891c13e54a3fe49e7c4cc466e3b1f7554e319b"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/014",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1714356437,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.0009310394525527954,
+            0.00031776726245880127,
+            0.019999999552965164,
+            0.7375465631484985,
+            0.0,
+            0.0,
+            -0.6752962470054626
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.09593268483877182,
+            -0.08423379063606262,
+            0.15886549651622772,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3e32bcc91368676b796200603441a45440f8b5769810d7ffe7a16ff347737551",
+      "task_state_fingerprint": "881ddf37c295feed35d8f0b48dfeecda8c9deb3c47c970677d2c96ab935f5e6b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/014/base_camera.png",
+          "sha256": "01a136db796c3fcccc01bf416a0bf7259e883febecc145d1ef778cf9c0ad27a7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/eval_seen/019",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 86113615,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.07158362120389938,
+            -0.08368317782878876,
+            0.019999999552965164,
+            0.8563858866691589,
+            0.0,
+            0.0,
+            -0.5163363814353943
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.0012075155973434448,
+            -0.08599765598773956,
+            0.2740194797515869,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b2cf2addc97000bf89aef9306ce8ab703b416c8bc730b44ae82df59cac652199",
+      "task_state_fingerprint": "be76a5d75aaa89caf9560db81045a8d556234fbe1b8569588752ff6f1e9d611b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/eval_seen/019/base_camera.png",
+          "sha256": "8ed1334d99f1bfa4b536571f975d59660d3393f4262bd33c11296dd24f23eae5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PickCube-v1/validation/001",
+      "task_key": "maniskill/PickCube-v1",
+      "seed": 1577718009,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            -0.05095350369811058,
+            -0.014428995549678802,
+            0.019999999552965164,
+            0.6140726208686829,
+            0.0,
+            0.0,
+            -0.7892495393753052
+          ]
+        ],
+        "actor/goal_site": [
+          [
+            0.06627274304628372,
+            -0.0005675628781318665,
+            0.09074261784553528,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f4e128aad8f41e1dc0884a6cc5cf89fcef4872d360fcf37ab329d1ec0f921f7b",
+      "task_state_fingerprint": "1f7cdd6f917e22031288403cafa2ab9d6a2f231c0b753b6ca1790a64e5224027",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PickCube-v1/validation/001/base_camera.png",
+          "sha256": "a1d4051cccc2ab127d9d7912dd4a08ec61983ddc5e770fe29d9bf6d1b207d2ef"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    }
+  ]
+}

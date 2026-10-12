@@ -1,0 +1,320 @@
+{
+  "task_key": "metaworld/pick-out-of-hole-v3",
+  "records": [
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/000",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 1763996267,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          0.06852562492041456,
+          0.5691383604664205,
+          0.23666353534588075
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          0.06852562492041456,
+          0.5691383604664205,
+          0.23666353534588075
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "59e0a1bb7e4a9e00bd63768cb107aae71c9a1716e54ed1cbd1418325e93f104c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/000/native_camera_2.png",
+          "sha256": "9565ac9448d4f09e125bbce09e250c9d5e5fb2a01f0737655144ea64d08dcb1c"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/001",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 736386128,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          -0.05877149537648743,
+          0.5216578972166516,
+          0.20579617276700501
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          -0.05877149537648743,
+          0.5216578972166516,
+          0.20579617276700501
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "d9972c29066da825fa9d71b0e9af47dccc93df6d614470b39fe07d85e8cbbeff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/001/native_camera_2.png",
+          "sha256": "41905c478be51c2276cce47757a14df008fb99b3fd8e02c171a034598ab0b8e9"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/002",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 1453016596,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          -0.09593537644005497,
+          0.5196216128438442,
+          0.20104997429295862
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          -0.09593537644005497,
+          0.5196216128438442,
+          0.20104997429295862
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "f1d2c8b57f9ac8e97342063e8f73df85844db8f30922d6e4895bf516d1d57739",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/002/native_camera_2.png",
+          "sha256": "762f12446d5500909ac9fca94304a9f72f468ed7483c9c244032b0e714076824"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/006",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 144151752,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          0.006981936189368862,
+          0.5574778484955484,
+          0.1870852351404945
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          0.006981936189368862,
+          0.5574778484955484,
+          0.1870852351404945
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "20b25b4734b489ca269be909fa4855d669c00cefe2a703ea139f633a7d04f7d4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/006/native_camera_2.png",
+          "sha256": "ae446e65fc35c617afaaee4d7f588938ed93266f72f501fe9cfe835a11a86841"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/010",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 207132306,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          0.08391942232898447,
+          0.5273101535643222,
+          0.2220457638952899
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          0.08391942232898447,
+          0.5273101535643222,
+          0.2220457638952899
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "a5831b20187765cd662f72484d9908e8f805a58511c6037df3adb42810d84637",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/010/native_camera_2.png",
+          "sha256": "a6a867367d1fea837a3993b7b0d7101ff617dceecba0c238551555ae148a5430"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/014",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 398977617,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          0.007650949531670892,
+          0.5139807736723798,
+          0.18262487505523184
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          0.007650949531670892,
+          0.5139807736723798,
+          0.18262487505523184
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "9ce51650e3cdff6afff90d5fa17046831a8faccf01626679f18e08a1ff5a1e02",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/014/native_camera_2.png",
+          "sha256": "7deba0523b0e3d705fee97c4a52fbdee1142900cc16c53bde2b5e1e2878cb223"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    },
+    {
+      "case_id": "metaworld/pick-out-of-hole-v3/eval_generalization/019",
+      "task_key": "metaworld/pick-out-of-hole-v3",
+      "seed": 429288285,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "/task_random_parameters": [
+          0.0,
+          0.75,
+          0.02,
+          -0.033517963228377884,
+          0.5047323838757806,
+          0.2542674286230904
+        ],
+        "/object_position": [
+          0.0,
+          0.75,
+          0.02
+        ],
+        "/goal_position": [
+          -0.033517963228377884,
+          0.5047323838757806,
+          0.2542674286230904
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "bd7bd5e33e4fe5a206d7e09e1c67c3e0cab1af8d1edceaec396f82a2f3200024",
+      "task_state_fingerprint": "2ca3a6be539e96b9e0a8e021f3bbf196a36e87dd2d1a12269417cea581291918",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "diversity_candidates/metaworld/pick-out-of-hole-v3/eval_generalization/019/native_camera_2.png",
+          "sha256": "a908fe1fc6a51dfc617c35fd2c1d9310c00553e0e4a4389eb0ba5013a76f4d5e"
+        }
+      ],
+      "actual_robot": "sawyer",
+      "actual_action_dim": 4
+    }
+  ]
+}

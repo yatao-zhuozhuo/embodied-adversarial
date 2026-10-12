@@ -1,0 +1,12 @@
+{
+  "split_revision": 6,
+  "previous_revision": "revisions/v5",
+  "active_benches": [
+    "libero",
+    "metaworld",
+    "maniskill"
+  ],
+  "preserved_case_count": 970,
+  "preserved_source_ref_count": 392,
+  "policy": "Filter only; no task reselection, seed changes, phase changes or source rebinding."
+}

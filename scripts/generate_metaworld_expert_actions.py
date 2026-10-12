@@ -22,6 +22,26 @@ POLICIES = {
     "assembly-v3": "SawyerAssemblyV3Policy",
     "lever-pull-v3": "SawyerLeverPullV3Policy",
     "disassemble-v3": "SawyerDisassembleV3Policy",
+    "window-open-v3": "SawyerWindowOpenV3Policy",
+    "coffee-push-v3": "SawyerCoffeePushV3Policy",
+    "dial-turn-v3": "SawyerDialTurnV3Policy",
+    "faucet-open-v3": "SawyerFaucetOpenV3Policy",
+    "hammer-v3": "SawyerHammerV3Policy",
+    "peg-insert-side-v3": "SawyerPegInsertionSideV3Policy",
+    "shelf-place-v3": "SawyerShelfPlaceV3Policy",
+    "sweep-v3": "SawyerSweepV3Policy",
+    "box-close-v3": "SawyerBoxCloseV3Policy",
+    "door-unlock-v3": "SawyerDoorUnlockV3Policy",
+    "button-press-topdown-wall-v3": "SawyerButtonPressTopdownWallV3Policy",
+    "door-open-v3": "SawyerDoorOpenV3Policy",
+    "drawer-close-v3": "SawyerDrawerCloseV3Policy",
+    "handle-press-side-v3": "SawyerHandlePressSideV3Policy",
+    "handle-pull-v3": "SawyerHandlePullV3Policy",
+    "pick-place-wall-v3": "SawyerPickPlaceWallV3Policy",
+    "push-back-v3": "SawyerPushBackV3Policy",
+    "plate-slide-side-v3": "SawyerPlateSlideSideV3Policy",
+    "peg-unplug-side-v3": "SawyerPegUnplugSideV3Policy",
+    "stick-pull-v3": "SawyerStickPullV3Policy",
 }
 
 
@@ -31,7 +51,7 @@ def collect(task: dict, seed: int, max_steps: int) -> dict:
 
     task_id = task["task_id"]
     policy_name = POLICIES[task_id]
-    env = _make_metaworld_direct(task_id, image_width=256, image_height=256)
+    env = _make_metaworld_direct(task_id, image_width=256, image_height=256, seed=seed)
     policy = getattr(policies, policy_name)()
     actions: list[list[float]] = []
     clipped_actions = 0
@@ -60,6 +80,7 @@ def collect(task: dict, seed: int, max_steps: int) -> dict:
             "source_kind": "official_metaworld_scripted_policy",
             "source_dataset": "Farama-Foundation/Metaworld",
             "source_version": getattr(metaworld, "__version__", "unreported"),
+            "environment_seed_protocol": env._openeta_seed_protocol,
             "policy": policy_name,
             "bench": "metaworld",
             "task_id": task_id,

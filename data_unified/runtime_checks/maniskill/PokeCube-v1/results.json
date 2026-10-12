@@ -1,0 +1,3773 @@
+{
+  "task_key": "maniskill/PokeCube-v1",
+  "candidate_count": 14,
+  "requested_sample_count": 14,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/sft_train/000",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1119618300,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 16,
+        "source_ref_id": "maniskill/PokeCube-v1/sft_train/000",
+        "state_fingerprint": "56baadfad34fc8253537fda05aa3b9abe8b5d43d49581935fc63662ddc076d21"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.26652413606643677,
+            0.087188720703125,
+            0.019999999552965164,
+            0.9752991199493408,
+            0.0,
+            0.0,
+            0.22088836133480072,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.04652414470911026,
+            -0.051788330078125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3665241301059723,
+            0.087188720703125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150000095367432,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.008752473630011082,
+            0.38272666931152344,
+            -0.011502010747790337,
+            -1.9741634130477905,
+            0.02756243199110031,
+            2.341825246810913,
+            0.8062827587127686,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.26652413606643677,
+            0.087188720703125,
+            0.019999999552965164,
+            0.9752991199493408,
+            0.0,
+            0.0,
+            0.22088836133480072
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.04652414470911026,
+            -0.051788330078125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3665241301059723,
+            0.087188720703125,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "205a6d0950a313292aa1fcdaba9baea8ce66600c7a7b1ec98fdf01a9264a05ab",
+      "task_state_fingerprint": "7adcd155f65a639967f790baf154781f47f1af676818721fb955dac8d207771c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/sft_train/000/base_camera.png",
+          "sha256": "61c2ef5dddf1f0da973588204d26bfcf83b7840959e7c35a4643a01fb15425bb"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/sft_train/004",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 115493170,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 5,
+        "source_ref_id": "maniskill/PokeCube-v1/sft_train/004",
+        "state_fingerprint": "b131474e8b1ce86256de6370d6419110ae372440633e54b41908744fe7f5e32e"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.31108856201171875,
+            -0.0216217041015625,
+            0.019999999552965164,
+            0.9707435965538025,
+            0.0,
+            0.0,
+            -0.24011845886707306,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.09109115600585938,
+            -0.061676025390625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.4110908508300781,
+            -0.0216217041015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.005779299419373274,
+            0.42877206206321716,
+            -0.01586448773741722,
+            -1.9544651508331299,
+            0.011045332998037338,
+            2.3354129791259766,
+            0.7904938459396362,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.31108856201171875,
+            -0.0216217041015625,
+            0.019999999552965164,
+            0.9707435965538025,
+            0.0,
+            0.0,
+            -0.24011845886707306
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.09109115600585938,
+            -0.061676025390625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.4110908508300781,
+            -0.0216217041015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1d4f6d6e56c9591278b66e84b6f2dec9ef998b6cf3aefbe9266219d95f83ff8f",
+      "task_state_fingerprint": "0552a236144948436a0dcd74b84ad7b69908cd273063ac16b543c39e858e6d1e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/sft_train/004/base_camera.png",
+          "sha256": "7238e8dc9a5389a0ab5aa2f494d12d367f5c2157069b87921e88ccd79c959209"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/sft_train/007",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1174468824,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 53,
+        "source_ref_id": "maniskill/PokeCube-v1/sft_train/007",
+        "state_fingerprint": "d8fd085d5eb965d62605bf6bf27cc24649dc9298e3fe963f757d9fa51646a858"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.17413711547851562,
+            -0.0540618896484375,
+            0.019999999552965164,
+            0.9998652338981628,
+            0.0,
+            0.0,
+            0.016416022554039955,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.04586219787597656,
+            0.0445709228515625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.2741374969482422,
+            -0.0540618896484375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.03970007598400116,
+            0.41875192523002625,
+            0.010703882202506065,
+            -1.9680829048156738,
+            -0.01790704019367695,
+            2.3241658210754395,
+            0.8088030815124512,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.17413711547851562,
+            -0.0540618896484375,
+            0.019999999552965164,
+            0.9998652338981628,
+            0.0,
+            0.0,
+            0.016416022554039955
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.04586219787597656,
+            0.0445709228515625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.2741374969482422,
+            -0.0540618896484375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3586f80c5bd84fe368df956d52c293975bf115230bfff4416439abe808531fe5",
+      "task_state_fingerprint": "436e0a0d44799732b47e4dff6fbb6901632de5732d982e3987eebbef6a8f14bd",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/sft_train/007/base_camera.png",
+          "sha256": "1ec100310ed559509c4f2923f25c6b80a5d6e5d5e3cb166161a65ee898bbfbcd"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/sft_train/008",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 271566041,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 58,
+        "source_ref_id": "maniskill/PokeCube-v1/sft_train/008",
+        "state_fingerprint": "5b97d497c11251ead2b87b6cf968a75048e9de0c629b6f53fd4fcec078841375"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.2940177917480469,
+            -0.0853729248046875,
+            0.019999999552965164,
+            0.9996700882911682,
+            0.0,
+            0.0,
+            -0.025685584172606468,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.07401657104492188,
+            0.05567169189453125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3940162658691406,
+            -0.0853729248046875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.01940692588686943,
+            0.367796927690506,
+            0.0012964025372639298,
+            -1.936002492904663,
+            0.0020913141779601574,
+            2.3842098712921143,
+            0.8051712512969971,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.2940177917480469,
+            -0.0853729248046875,
+            0.019999999552965164,
+            0.9996700882911682,
+            0.0,
+            0.0,
+            -0.025685584172606468
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.07401657104492188,
+            0.05567169189453125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3940162658691406,
+            -0.0853729248046875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "584940277b8405ead88f9d6bf88a6aea65439612a5079a93e11f0cbe9b82ef8e",
+      "task_state_fingerprint": "8d7222684f2e8cc271c098ea3553f966ec9c2ae8589f41d3b95b1456a868616d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/sft_train/008/base_camera.png",
+          "sha256": "41070acc8ad0b6e9f54998bef8a3671b5d9acf0eaaadc2b0e5c77b4b9beb5052"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/rl_train/001",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 742830941,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 9,
+        "source_ref_id": "maniskill/PokeCube-v1/rl_train/001",
+        "state_fingerprint": "254a542708539f53165cdf156cfc718d40a0fb4fa5410e0a1f55d50802f01768"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.24731826782226562,
+            -0.0462646484375,
+            0.019999999552965164,
+            0.97359699010849,
+            0.0,
+            0.0,
+            -0.2282736599445343,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.027317047119140625,
+            0.02332305908203125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3473167419433594,
+            -0.0462646484375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.013477027416229248,
+            0.3570384979248047,
+            -0.03460855782032013,
+            -1.9840011596679688,
+            0.026290839537978172,
+            2.362520217895508,
+            0.7517528533935547,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.24731826782226562,
+            -0.0462646484375,
+            0.019999999552965164,
+            0.97359699010849,
+            0.0,
+            0.0,
+            -0.2282736599445343
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.027317047119140625,
+            0.02332305908203125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3473167419433594,
+            -0.0462646484375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "aae01e2016470b6ee1969790f40ebda4e2656777ca2f73a04455d8fab9f12054",
+      "task_state_fingerprint": "679c3bcaf3077d21da19f14ba8864455b769c1d6476c9178d9e0a00059bac1aa",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/rl_train/001/base_camera.png",
+          "sha256": "813e5c575c6412c639c85cedd85d30d60d7ebe7dde4e1c130ef96e42488d9be5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/rl_train/002",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1889750317,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 23,
+        "source_ref_id": "maniskill/PokeCube-v1/rl_train/002",
+        "state_fingerprint": "4a62cf3dcd5179b6cf6e888ec5fe990c23dc0d802896db42116e90952b8aa55e"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.2960777282714844,
+            -0.0435638427734375,
+            0.019999999552965164,
+            0.9988710880279541,
+            0.0,
+            0.0,
+            -0.04750244319438934,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.076080322265625,
+            -0.0873260498046875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.39608001708984375,
+            -0.0435638427734375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.009891628287732601,
+            0.3865394592285156,
+            0.03692227602005005,
+            -1.9702967405319214,
+            0.03798685222864151,
+            2.344512462615967,
+            0.7733498215675354,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.2960777282714844,
+            -0.0435638427734375,
+            0.019999999552965164,
+            0.9988710880279541,
+            0.0,
+            0.0,
+            -0.04750244319438934
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.076080322265625,
+            -0.0873260498046875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.39608001708984375,
+            -0.0435638427734375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "db3bcbde1107dd798fd0674e33270cb3b7a0f95e5788feb143ab43cdc9925dac",
+      "task_state_fingerprint": "fbb60e32ef980981de4722cdb77a1c562290324e3e5ebf64087b594ba9abb028",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/rl_train/002/base_camera.png",
+          "sha256": "61681d49b99ce7d20657911461ed2ea16d19f65afdfa167fb3d5d72ad9cf1c4c"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/rl_train/007",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1627601269,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 7,
+        "source_ref_id": "maniskill/PokeCube-v1/rl_train/007",
+        "state_fingerprint": "cc8cf4ef4fe3cdcb4f5616933c014219c5ec50a3a031e0a651e20725ce344e3d"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.23195648193359375,
+            0.0778656005859375,
+            0.019999999552965164,
+            0.9962701797485352,
+            0.0,
+            0.0,
+            0.08628819137811661,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.01195526123046875,
+            -0.05496978759765625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3319549560546875,
+            0.0778656005859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.020917817950248718,
+            0.4107668995857239,
+            -0.012116379104554653,
+            -1.9734748601913452,
+            0.000775810971390456,
+            2.3576126098632812,
+            0.7562041282653809,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.23195648193359375,
+            0.0778656005859375,
+            0.019999999552965164,
+            0.9962701797485352,
+            0.0,
+            0.0,
+            0.08628819137811661
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.01195526123046875,
+            -0.05496978759765625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3319549560546875,
+            0.0778656005859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b431447dc8fb651c447e51a332b6d92ce8d533e368c27031118ae916d637398d",
+      "task_state_fingerprint": "8ef028b43acfcd09ec9786b580b298d72a7106115ac6d299fad51de61d01face",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/rl_train/007/base_camera.png",
+          "sha256": "fa4ccf3d5e524738b39266a6b7dc241c9d9407b34509d024c97dd7e0db498c03"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/rl_train/012",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 2013615324,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 43,
+        "source_ref_id": "maniskill/PokeCube-v1/rl_train/012",
+        "state_fingerprint": "9392d13867cc04405fab84199ffffd69a28cde66b97c9d10e244b074ed1d0e57"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.24803733825683594,
+            0.04998779296875,
+            0.019999999552965164,
+            0.9985653162002563,
+            0.0,
+            0.0,
+            -0.053547345101833344,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.028036117553710938,
+            0.06841278076171875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3480377197265625,
+            0.04998779296875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0113705825060606,
+            0.36736026406288147,
+            0.019186409190297127,
+            -1.9837435483932495,
+            0.03260235860943794,
+            2.3330087661743164,
+            0.7754204869270325,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.24803733825683594,
+            0.04998779296875,
+            0.019999999552965164,
+            0.9985653162002563,
+            0.0,
+            0.0,
+            -0.053547345101833344
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.028036117553710938,
+            0.06841278076171875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3480377197265625,
+            0.04998779296875,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9ed19ee75515fb568fbe52eea8e682afc3036ca98d70ce684ebc8d98a3095717",
+      "task_state_fingerprint": "aad6a7e9d8d8cff4754a78cba2c2045d7f028878aecab2c203b6df79e1741bae",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/rl_train/012/base_camera.png",
+          "sha256": "aafbb777dfffc2022a555b8de5c31bce1403ed0b36adc14a1b55c8aa8f602def"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/validation/cache-028",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1888204107,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 28,
+        "source_ref_id": "maniskill/PokeCube-v1/validation/cache-028",
+        "state_fingerprint": "f09abc3810b844f2584435d76487a317027660a052eac412120235081f01091f"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.18326187133789062,
+            -0.0046234130859375,
+            0.019999999552965164,
+            0.9719170331954956,
+            0.0,
+            0.0,
+            0.23532378673553467,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.036739349365234375,
+            0.0529937744140625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.2832603454589844,
+            -0.0046234130859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.002416070317849517,
+            0.4265422224998474,
+            -0.00585321756079793,
+            -1.9673879146575928,
+            0.0035559292882680893,
+            2.34389066696167,
+            0.7989645600318909,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.18326187133789062,
+            -0.0046234130859375,
+            0.019999999552965164,
+            0.9719170331954956,
+            0.0,
+            0.0,
+            0.23532378673553467
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.036739349365234375,
+            0.0529937744140625,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.2832603454589844,
+            -0.0046234130859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1bf05ac9717c96fb97b20eb1f3e6f43b95453928ac012ef9bd12f059ffadbefd",
+      "task_state_fingerprint": "04d832442c55297e83f0c1605f7e9f12dc702da7ece12d1e24772521a7bd07f6",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/validation/cache-028/base_camera.png",
+          "sha256": "74261a9b75bdd3b3b98059344415f2f1060444ce25859055779bdf039f74abc9"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/validation/cache-044",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1057196370,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 44,
+        "source_ref_id": "maniskill/PokeCube-v1/validation/cache-044",
+        "state_fingerprint": "1072df6884a5d816a8e2707832cbb2f3d9e9b059d314c54b045b5fabc5388d75"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.12488174438476562,
+            -0.0944671630859375,
+            0.019999999552965164,
+            0.9795832633972168,
+            0.0,
+            0.0,
+            0.20103876292705536,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.09511756896972656,
+            -0.00524139404296875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.2248821258544922,
+            -0.0944671630859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149997711181641,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.026859011501073837,
+            0.41300711035728455,
+            -0.01830689236521721,
+            -1.9683985710144043,
+            -0.02448277547955513,
+            2.372312545776367,
+            0.7973006367683411,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.12000083923339844,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.12488174438476562,
+            -0.0944671630859375,
+            0.019999999552965164,
+            0.9795832633972168,
+            0.0,
+            0.0,
+            0.20103876292705536
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.09511756896972656,
+            -0.00524139404296875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.2248821258544922,
+            -0.0944671630859375,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "2c13f3acf56efe276bbdbdf955f79d44edd6f57c7d6cdf6416f679f60e172546",
+      "task_state_fingerprint": "6a09d8cdbce4a298819025aae631c002763925f62aa4ffbf2f13ce091f32ce9e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/validation/cache-044/base_camera.png",
+          "sha256": "9215d4b701ed4137b3124ae35ef7864fb1f894f56dc161dc7bfe98b4bbd78c07"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/eval_seen/004",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1527848899,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 72,
+        "source_ref_id": "maniskill/PokeCube-v1/eval_seen/004",
+        "state_fingerprint": "7c68a5a21b267b662fb9ed796b0bff821d27679b7dad818a00e409270d40758c"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.3070068359375,
+            0.0228424072265625,
+            0.019999999552965164,
+            0.9750499725341797,
+            0.0,
+            0.0,
+            0.22198541462421417,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.087005615234375,
+            0.04039764404296875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.40700531005859375,
+            0.0228424072265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.01741367019712925,
+            0.39618119597435,
+            -0.01902635209262371,
+            -1.9443103075027466,
+            -0.03869283199310303,
+            2.3723855018615723,
+            0.818162739276886,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.3070068359375,
+            0.0228424072265625,
+            0.019999999552965164,
+            0.9750499725341797,
+            0.0,
+            0.0,
+            0.22198541462421417
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.087005615234375,
+            0.04039764404296875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.40700531005859375,
+            0.0228424072265625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4aa36f927e1159fdd85757f8cfa6f3654395e28391de89de78455b1ba51210ab",
+      "task_state_fingerprint": "8b404b035fbd16f5f49f9b19d8a382e356bc0f7e0726aa0d56bd7f250b2a701d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/eval_seen/004/base_camera.png",
+          "sha256": "dd68a6b5d3bd0eb841bbc8a6ba2919ec93d0f46a1e441ff558f0ee2e7c46d1e1"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/eval_seen/006",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 351862833,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 57,
+        "source_ref_id": "maniskill/PokeCube-v1/eval_seen/006",
+        "state_fingerprint": "1ecb1433f8760235b3848af93ed74a9cd4f7a5ff71c7d1294d36be12c0ff65f5"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.18285751342773438,
+            0.0158843994140625,
+            0.019999999552965164,
+            0.9982364773750305,
+            0.0,
+            0.0,
+            -0.05936248227953911,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.037139892578125,
+            -0.0906524658203125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.28285980224609375,
+            0.0158843994140625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.016119450330734253,
+            0.4478328824043274,
+            -0.016271408647298813,
+            -1.9313337802886963,
+            -0.005052017048001289,
+            2.337958574295044,
+            0.8018876910209656,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.18285751342773438,
+            0.0158843994140625,
+            0.019999999552965164,
+            0.9982364773750305,
+            0.0,
+            0.0,
+            -0.05936248227953911
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.037139892578125,
+            -0.0906524658203125,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.28285980224609375,
+            0.0158843994140625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5f3f9723d6a5dc821a0fb1cc8fbbf90edc12ea622005f2dfbbeba208e873edd1",
+      "task_state_fingerprint": "6a93f98e0977a3b6e5be809a7cfb12a67341eef7bb326fe6d09b9540d9a93ed1",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/eval_seen/006/base_camera.png",
+          "sha256": "e1003c6ee70585728287ef4bc7cd1aa40422c1fe5a85d35e9148b437ad91b9c7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/eval_seen/014",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1536698637,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 87,
+        "source_ref_id": "maniskill/PokeCube-v1/eval_seen/014",
+        "state_fingerprint": "1e5ebf322b1d5c8354ccb1bd5f2fe0545197764f671af96180266517d1420af7"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.20551681518554688,
+            0.0977935791015625,
+            0.019999999552965164,
+            0.9871218800544739,
+            0.0,
+            0.0,
+            -0.1599699854850769,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            -0.014484405517578125,
+            0.040008544921875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3055152893066406,
+            0.0977935791015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6150016784667969,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.01720580644905567,
+            0.39241790771484375,
+            -0.02160990610718727,
+            -1.925498366355896,
+            0.006354521028697491,
+            2.3494720458984375,
+            0.7674447298049927,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999893188476562,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.20551681518554688,
+            0.0977935791015625,
+            0.019999999552965164,
+            0.9871218800544739,
+            0.0,
+            0.0,
+            -0.1599699854850769
+          ]
+        ],
+        "actor/peg": [
+          [
+            -0.014484405517578125,
+            0.040008544921875,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3055152893066406,
+            0.0977935791015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "239108b9b2a797147fcd7fc1730cd4aedf01f75b622d3f9ccefd991f6a4cd2ab",
+      "task_state_fingerprint": "34e7b51e9fe467f1de9875395910ee9d9684bd8ddeab62d9abbe12c44ec63b73",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/eval_seen/014/base_camera.png",
+          "sha256": "c23fe758053802766baa024c2b89a9c567328f92c08df73fa8f77ada3bb2cbe7"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PokeCube-v1/eval_seen/017",
+      "task_key": "maniskill/PokeCube-v1",
+      "seed": 1445926073,
+      "initial_state_selector": {
+        "kind": "reference_demo",
+        "reference_demo_index": 146,
+        "source_ref_id": "maniskill/PokeCube-v1/eval_seen/017",
+        "state_fingerprint": "236f931c957c9df3c935bd046477de769776e660e6b854d12676879e7380dbe2"
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "pass_robot_uids": true,
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "frozen_cached_episode_scene",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/cube": [
+          [
+            0.22791385650634766,
+            -0.03116607666015625,
+            0.019999999552965164,
+            0.9889581799507141,
+            0.0,
+            0.0,
+            0.1481947898864746,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/peg": [
+          [
+            0.007914543151855469,
+            -0.053218841552734375,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/goal_region": [
+          [
+            0.3279142379760742,
+            -0.03116607666015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda": [
+          [
+            -0.6149988174438477,
+            2.473825588822365e-10,
+            -4.0978193283081055e-08,
+            1.000000238418579,
+            2.722068126459476e-10,
+            -3.3057123705049207e-09,
+            -1.7675326480226516e-11,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.02225811779499054,
+            0.4300421178340912,
+            0.0012276371708139777,
+            -1.9836695194244385,
+            -0.007580319419503212,
+            2.385420560836792,
+            0.7834654450416565,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999988555908203,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.22791385650634766,
+            -0.03116607666015625,
+            0.019999999552965164,
+            0.9889581799507141,
+            0.0,
+            0.0,
+            0.1481947898864746
+          ]
+        ],
+        "actor/peg": [
+          [
+            0.007914543151855469,
+            -0.053218841552734375,
+            0.02500000037252903,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actor/goal_region": [
+          [
+            0.3279142379760742,
+            -0.03116607666015625,
+            0.0010000000474974513,
+            0.7071067690849304,
+            0.0,
+            0.7071067690849304,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "be21544e17b10b1c319138ce921fd65c9a6b2b73f43a13c0e83c74c08df6a733",
+      "task_state_fingerprint": "c70944ecde6836e2dc6e4ca77371d5d32811cf3e67d05531ce7dd440da3a7e92",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PokeCube-v1/eval_seen/017/base_camera.png",
+          "sha256": "58ac578478a0c218748e2e1b2add22cb6faa3bb121026b2bf22df8d82eb57dc5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": 1.1920928955078125e-07,
+      "restoration_passed": true,
+      "controller_history_restored": false,
+      "action_dim_matches": true
+    }
+  ]
+}

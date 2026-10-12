@@ -1,0 +1,469 @@
+{
+  "task_key": "maniskill/InsertFlower-v1",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/000",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 1950543901,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "floating_ability_hand_right",
+        "control_mode": "pd_joint_pos",
+        "obs_mode": "rgbd",
+        "sim_backend": "physx_cuda",
+        "pass_robot_uids": true
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/flower": [
+          [
+            -0.26558953523635864,
+            -0.029664820060133934,
+            -0.008170870132744312,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/floating_ability_hand_right": [
+          [
+            0.0,
+            0.0,
+            0.25,
+            0.0,
+            0.7070000171661377,
+            0.0,
+            -0.7070000171661377,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.6246950030326843,
+              0.0,
+              -0.7808688282966614,
+              0.25768670439720154
+            ],
+            [
+              -0.7808687686920166,
+              0.0,
+              -0.6246950030326843,
+              0.39824312925338745
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.6246950030326843,
+              0.7808687686920166,
+              0.15000000596046448
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.7808687686920166,
+              0.6246950626373291,
+              0.44999998807907104
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.26558953523635864,
+            -0.029664820060133934,
+            -0.008170870132744312,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ]
+      },
+      "state_fingerprint": "7f8a94455833e9e0434a6827decf5490a2076dd0a002d341d21d10ec065b8322",
+      "task_state_fingerprint": "f579f5c8d88a6e49ced8f3c859816a7d75646c56dcb53353470283c3d7056e8e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/InsertFlower-v1/eval_generalization/000/base_camera.png",
+          "sha256": "eea2f575a5aa9bd12868637bf92a005f7e2cee951dc7e7bfd3c1da2b06d829a2"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/InsertFlower-v1/eval_generalization/001",
+      "task_key": "maniskill/InsertFlower-v1",
+      "seed": 2055112073,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "floating_ability_hand_right",
+        "control_mode": "pd_joint_pos",
+        "obs_mode": "rgbd",
+        "sim_backend": "physx_cuda",
+        "pass_robot_uids": true
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/flower": [
+          [
+            -0.21123574674129486,
+            -0.007625812664628029,
+            0.01263368595391512,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/floating_ability_hand_right": [
+          [
+            0.0,
+            0.0,
+            0.25,
+            0.0,
+            0.7070000171661377,
+            0.0,
+            -0.7070000171661377,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.6246950030326843,
+              0.0,
+              -0.7808688282966614,
+              0.25768670439720154
+            ],
+            [
+              -0.7808687686920166,
+              0.0,
+              -0.6246950030326843,
+              0.39824312925338745
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.6246950030326843,
+              0.7808687686920166,
+              0.15000000596046448
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.7808687686920166,
+              0.6246950626373291,
+              0.44999998807907104
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/vase": [
+          [
+            -0.250900000333786,
+            -0.20270000398159027,
+            0.10300000011920929,
+            0.8712000250816345,
+            0.006899999920278788,
+            0.008200000040233135,
+            0.49079999327659607
+          ]
+        ],
+        "actor/flower": [
+          [
+            -0.21123574674129486,
+            -0.007625812664628029,
+            0.01263368595391512,
+            -0.35241296887397766,
+            -0.2581450641155243,
+            -0.6350739598274231,
+            0.6370620727539062
+          ]
+        ]
+      },
+      "state_fingerprint": "4dcefd1579c3f5a7916dc17bce0a0350da5ebc6fda01ed56cc6391e6f2f01c9d",
+      "task_state_fingerprint": "50138b515792bb102f7fbd28b77e059ddab39b44ed42e9c887ad69661bc82513",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/InsertFlower-v1/eval_generalization/001/base_camera.png",
+          "sha256": "19b63cad93824367b0ba909330533d2af702bbc9b65239720ee46c2675de3f50"
+        }
+      ],
+      "actual_robot": "floating_ability_hand_right",
+      "actual_action_dim": 12,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

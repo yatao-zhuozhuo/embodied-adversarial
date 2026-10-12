@@ -1,0 +1,627 @@
+{
+  "task_key": "maniskill/PlugCharger-v1",
+  "candidate_count": 20,
+  "requested_sample_count": 2,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/000",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 2077873560,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/charger": [
+          [
+            -0.08736199885606766,
+            -0.15475043654441833,
+            0.012000000104308128,
+            0.9928960204124451,
+            0.0,
+            0.0,
+            -0.11898549646139145,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/receptacle": [
+          [
+            0.07625030726194382,
+            -0.04390832781791687,
+            0.10000000149011612,
+            0.18479023873806,
+            0.0,
+            0.0,
+            -0.9827779531478882,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda_wristcam": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.003932584542781115,
+            0.3753257691860199,
+            0.016845382750034332,
+            -1.9485961198806763,
+            -0.026919947937130928,
+            2.347797393798828,
+            0.8111812472343445,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/hand_camera/extrinsic_cv": [
+          [
+            [
+              0.012329386547207832,
+              -0.9998414516448975,
+              0.012847600504755974,
+              0.028243979439139366
+            ],
+            [
+              -0.9996299743652344,
+              -0.012636376544833183,
+              -0.0240938663482666,
+              0.05821440368890762
+            ],
+            [
+              0.02425241470336914,
+              -0.012545781210064888,
+              -0.9996272325515747,
+              0.25342097878456116
+            ]
+          ]
+        ],
+        "camera/hand_camera/cam2world_gl": [
+          [
+            [
+              0.01232922077178955,
+              0.9996299147605896,
+              -0.024252479895949364,
+              0.05169853940606117
+            ],
+            [
+              -0.9998415112495422,
+              0.012636184692382812,
+              0.012545780278742313,
+              0.03215448558330536
+            ],
+            [
+              0.012847598642110825,
+              0.024093952029943466,
+              0.9996271133422852,
+              0.2543662488460541
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/hand_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.08736199885606766,
+            -0.15475043654441833,
+            0.012000000104308128,
+            0.9928960204124451,
+            0.0,
+            0.0,
+            -0.11898549646139145
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.07625030726194382,
+            -0.04390832781791687,
+            0.10000000149011612,
+            0.18479023873806,
+            0.0,
+            0.0,
+            -0.9827779531478882
+          ]
+        ]
+      },
+      "state_fingerprint": "56de651919248fedf6890362f8ca1282ae1a700bc040582e11a54a05c3047b92",
+      "task_state_fingerprint": "057b28021dbed27949fab4a4fee6a8ac291844f511e1f366f16fd2963ea01fff",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlugCharger-v1/eval_generalization/000/base_camera.png",
+          "sha256": "300f7bb7b9424f507ac83081b19017360a78907e00f5a16e6cd6cacc2fe0a4cb"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "runtime_checks/maniskill/PlugCharger-v1/eval_generalization/000/hand_camera.png",
+          "sha256": "15e8401cb5aa5f7667e3ac5467440d1433eeb9b8df48aa6c0362391db1efb3fc"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "maniskill/PlugCharger-v1/eval_generalization/001",
+      "task_key": "maniskill/PlugCharger-v1",
+      "seed": 1486187168,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "maniskill-native-or-saved-state.v1",
+      "creation_seed": null,
+      "environment_config": {
+        "robot": "panda_wristcam",
+        "control_mode": "pd_ee_delta_pose",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "physx_cuda"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/actors/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/charger": [
+          [
+            -0.034005001187324524,
+            0.06018845736980438,
+            0.012000000104308128,
+            0.959593653678894,
+            0.0,
+            0.0,
+            -0.28138935565948486,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/actors/receptacle": [
+          [
+            0.08972667157649994,
+            -0.04362582042813301,
+            0.10000000149011612,
+            0.14911046624183655,
+            0.0,
+            0.0,
+            -0.9888205528259277,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "/articulations/panda_wristcam": [
+          [
+            -0.6150000095367432,
+            4.3655745685100555e-11,
+            -1.862645149230957e-08,
+            1.0000001192092896,
+            2.720872971373467e-10,
+            -3.2895179913339234e-09,
+            -3.588018770983581e-12,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.029670998454093933,
+            0.37933358550071716,
+            0.004435044247657061,
+            -1.9938201904296875,
+            0.015295885503292084,
+            2.368295907974243,
+            0.8013253808021545,
+            0.03999999910593033,
+            0.03999999910593033,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "camera/base_camera/extrinsic_cv": [
+          [
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.7808687686920166,
+              0.0,
+              -0.6246950626373291,
+              0.1405564546585083
+            ],
+            [
+              -0.6246950626373291,
+              0.0,
+              -0.7808687686920166,
+              0.6559298038482666
+            ]
+          ]
+        ],
+        "camera/base_camera/cam2world_gl": [
+          [
+            [
+              0.0,
+              -0.7808687686920166,
+              0.6246950626373291,
+              0.30000001192092896
+            ],
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.6246950626373291,
+              0.7808687686920166,
+              0.6000000238418579
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/base_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/hand_camera/extrinsic_cv": [
+          [
+            [
+              -0.05235692113637924,
+              -0.998553991317749,
+              -0.012193175032734871,
+              0.007664770819246769
+            ],
+            [
+              -0.998617947101593,
+              0.05229652673006058,
+              0.0052204132080078125,
+              0.03804464638233185
+            ],
+            [
+              -0.004575252532958984,
+              0.012449648231267929,
+              -0.9999120831489563,
+              0.23394106328487396
+            ]
+          ]
+        ],
+        "camera/hand_camera/cam2world_gl": [
+          [
+            [
+              -0.052356839179992676,
+              0.9986180067062378,
+              0.004575181286782026,
+              0.039463721215724945
+            ],
+            [
+              -0.998553991317749,
+              -0.05229651927947998,
+              -0.012449613772332668,
+              0.002751599997282028
+            ],
+            [
+              -0.01219314243644476,
+              -0.005220388527959585,
+              0.9999120235443115,
+              0.23381535708904266
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ],
+        "camera/hand_camera/intrinsic_cv": [
+          [
+            [
+              128.0,
+              0.0,
+              128.0
+            ],
+            [
+              0.0,
+              128.0,
+              128.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        ]
+      },
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/charger": [
+          [
+            -0.034005001187324524,
+            0.06018845736980438,
+            0.012000000104308128,
+            0.959593653678894,
+            0.0,
+            0.0,
+            -0.28138935565948486
+          ]
+        ],
+        "actor/receptacle": [
+          [
+            0.08972667157649994,
+            -0.04362582042813301,
+            0.10000000149011612,
+            0.14911046624183655,
+            0.0,
+            0.0,
+            -0.9888205528259277
+          ]
+        ]
+      },
+      "state_fingerprint": "0e90157865f21b87e5aa030d8c072a13dddc1d861559089536b999d18cf3d7be",
+      "task_state_fingerprint": "321ff2b3bc124ea3872ece1590957ef6223d905a744d47e451ad0b51ef5ee3a9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "runtime_checks/maniskill/PlugCharger-v1/eval_generalization/001/base_camera.png",
+          "sha256": "3e1bed2f6dd066315936af6eae2e0a96b57fb14d8fe5929a8d9bc8b1386779b0"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "runtime_checks/maniskill/PlugCharger-v1/eval_generalization/001/hand_camera.png",
+          "sha256": "64cfb5dc43442975a78c3a05f91bc1e1a4533b5c11b1030a43de7981e7dc7b33"
+        }
+      ],
+      "actual_action_dim": 7,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

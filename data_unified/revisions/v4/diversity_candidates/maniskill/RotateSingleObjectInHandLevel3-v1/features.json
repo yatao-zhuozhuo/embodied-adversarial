@@ -1,0 +1,397 @@
+{
+  "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+  "records": [
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 995600467,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/029_plate-0": [
+          [
+            -0.020320843905210495,
+            0.004021661356091499,
+            0.2980886697769165,
+            1.0000001192092896,
+            -1.9067161044494796e-11,
+            -1.7863745205293213e-11,
+            -1.2853769160159345e-09
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Y axis without dropping it.",
+      "state_fingerprint": "ab85b10d80b0da9cfc811f8ca4832fcb9bf6ce5b7dee59d8b33f406996f5f3a7",
+      "task_state_fingerprint": "76033856d78b7659a97aad3c975f052322c931719809b5114386168cdc4aa0ba",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/000/base_camera.png",
+          "sha256": "98ecd34c9a66596e7aa9094dc164afe6e9113a08182073502577aa4fd7856ce3"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 1899361693,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/062_dice-0": [
+          [
+            -0.02056015655398369,
+            0.012791178189218044,
+            0.2742610573768616,
+            1.0000001192092896,
+            3.634545997499572e-10,
+            -9.994677308000632e-11,
+            1.588004450159275e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Z axis without dropping it.",
+      "state_fingerprint": "173bd8fa3d7c788f1f76ef43c87acb5b66a2b7712ff20dceb0ef25f81b70da7e",
+      "task_state_fingerprint": "dfae5ee25821da7aa14e13ca9be53a755de7220a57cbc19bfaea5fe8771dd72a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/001/base_camera.png",
+          "sha256": "9c9262f9f8151e9212edddc390ce45c2c9b902a302a9e59a66998c902efe441a"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/002",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 98187857,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/065-j_cups-0": [
+          [
+            0.05049073323607445,
+            -0.00817228201776743,
+            0.30235517024993896,
+            1.0,
+            2.699354351154426e-10,
+            2.954991806802809e-11,
+            -6.010284492319329e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the X axis without dropping it.",
+      "state_fingerprint": "6536881fa96e3aea9623ce46032e32002a468eabb24960ce4981596528519f53",
+      "task_state_fingerprint": "21c699168daf19a6369eb0cc51437b4eecd7ad6148285c7188a0d8275ebf2f8a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/002/base_camera.png",
+          "sha256": "aef5e18aaf57b8dd6e7e43c37150fa5d43e663d6cbc25f75c12aff40dc831dfd"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/006",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 287047465,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/035_power_drill-0": [
+          [
+            -0.011206874623894691,
+            -0.026612743735313416,
+            0.3006848692893982,
+            0.9999999403953552,
+            2.008639921058375e-10,
+            -5.894111587689821e-11,
+            2.6283681897609767e-09
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Y axis without dropping it.",
+      "state_fingerprint": "4a2c37e7cbc29e14a45916cc0b40b3892cb80fe8392224d67f5aeb7ac580fd3f",
+      "task_state_fingerprint": "a3a728cd8a34d24bfa8e8ee8bc7cf8bd86d85f3cec4605f7df83150847221847",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/006/base_camera.png",
+          "sha256": "97fd9e436ccd25534142fa794f82fa6add93d0e59ffdc89c3ca834c030813d47"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/010",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 1830840697,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/022_windex_bottle-0": [
+          [
+            -0.020631687715649605,
+            0.015726767480373383,
+            0.3978722393512726,
+            1.0000001192092896,
+            -1.2500368795631545e-10,
+            2.8558252984645094e-11,
+            5.726562557484272e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Y axis without dropping it.",
+      "state_fingerprint": "1ae8cd1965ab323b10a56a1b2f5615498d89d96a837c33e900721da408a80c31",
+      "task_state_fingerprint": "453d9e755612c601accfdd196834e6b6d384373a15a79bc59a8d4cd7d3961f9d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/010/base_camera.png",
+          "sha256": "28f7e1a6990a912ed721fa24003d5a7dbc35ca86552b3c32e6f0e2a668ef1aa6"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/014",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 184541427,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/054_softball-0": [
+          [
+            -0.010418574325740337,
+            -0.002055443124845624,
+            0.29126477241516113,
+            1.0,
+            -3.495561839983452e-09,
+            2.1639556813113359e-10,
+            -5.960429927398536e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the Z axis without dropping it.",
+      "state_fingerprint": "96dd5865cf2ac19fbd740781ce28eb85a47541988f17ade09523add672aed004",
+      "task_state_fingerprint": "b8a4aa6ee409c71d3a1f28a0dddc6df7f87108c5d603a743e36e0e7ac198b79b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/014/base_camera.png",
+          "sha256": "0ed95364b68c4c4c263d40ee5e015e8b4302bc3b2bbebc51df2169679f89a831"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    },
+    {
+      "case_id": "maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/019",
+      "task_key": "maniskill/RotateSingleObjectInHandLevel3-v1",
+      "seed": 172612742,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/022_windex_bottle-0": [
+          [
+            0.006018523126840591,
+            0.0034843720495700836,
+            0.3977178633213043,
+            1.0000001192092896,
+            -1.2500368795631545e-10,
+            2.8558252984645094e-11,
+            5.726562557484272e-10
+          ]
+        ],
+        "task/rot_dir": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "task_instruction": "Rotate the held object through more than two full turns about the X axis without dropping it.",
+      "state_fingerprint": "e5603cc43e889ab45f4028d5aa1a652f5543238ac466bccd24161469b473372e",
+      "task_state_fingerprint": "d81ea7cf2d4e956c2f25e67e3532eab8a610cbfde8d89c281aae0390b4f415b8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/RotateSingleObjectInHandLevel3-v1/eval_generalization/019/base_camera.png",
+          "sha256": "b3371fed2dc6e8738e1e3eaf45ecbaa0493f52a92d2dac561ad04db29f756577"
+        }
+      ],
+      "actual_robot": "allegro_hand_right_touch",
+      "actual_action_dim": 16
+    }
+  ]
+}

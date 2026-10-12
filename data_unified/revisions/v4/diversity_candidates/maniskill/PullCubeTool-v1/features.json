@@ -1,0 +1,1385 @@
+{
+  "task_key": "maniskill/PullCubeTool-v1",
+  "records": [
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/000",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 292709039,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.08434593677520752,
+            0.036322951316833496,
+            0.02500000037252903,
+            0.9676117897033691,
+            0.0,
+            0.0,
+            0.2524428963661194
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.2516316771507263,
+            -0.10713410377502441,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0d2de76c7ddb9bd2d15fa11befa2eb6956727e18ff9ff5341caeb9c13c6ba772",
+      "task_state_fingerprint": "dc68b1f4916408c066bd821fe48d035844716e3506e41b24b761684e6034903a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/000/base_camera.png",
+          "sha256": "4a92bd02c968bbdd3019ac9eba2102a9fa387c197733bf8410ff10f8cf01b4c8"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/001",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 568132474,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.051626235246658325,
+            0.003294706344604492,
+            0.02500000037252903,
+            0.9848655462265015,
+            0.0,
+            0.0,
+            -0.17332030832767487
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.21856112778186798,
+            -0.163339301943779,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ffd6dd2b981c08d54732aab568bbec45cd8b78433b41f722fd2038f28ff18287",
+      "task_state_fingerprint": "93f32baabc047860ae2e68acc08e09e5abd9098d834b119ecb6d15517b343375",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/001/base_camera.png",
+          "sha256": "6f1caf8c36cc8aff9b7b95bd34f5dcc798a3e4f5bdb7c1eaffdfc95dfe848c63"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/002",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1370671808,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.15520459413528442,
+            0.03116774559020996,
+            0.02500000037252903,
+            0.9839555621147156,
+            0.0,
+            0.0,
+            -0.1784137636423111
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.24200014770030975,
+            -0.24362774193286896,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7b866a2b20a576f8f0546ebbce86747efd465f57f3dcb771964a315d37c6ea46",
+      "task_state_fingerprint": "5290cd61cb658e55a731858fe610d804bda7e0ccbf61848b587b784e1b309de3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/002/base_camera.png",
+          "sha256": "226556d8fba0985017f8bb95b907a91ea1fc7ed59c0200b4529515adb2cdf1fa"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/005",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 522782401,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.21780508756637573,
+            -0.157035231590271,
+            0.02500000037252903,
+            0.9889575839042664,
+            0.0,
+            0.0,
+            -0.1481986790895462
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.14714324474334717,
+            -0.20969516038894653,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "954e7b3d47c11c70620816ba96230980d8f33b02cda4a5088d372e63a32467e4",
+      "task_state_fingerprint": "0193f5206c6920056109dbabe7aecaff712849c14ba1a3d50fcdedd110860332",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/005/base_camera.png",
+          "sha256": "2f5fab48ae16a867f4d777e847e8ea4164f24baf2d9bc2d21cb1e7390e1636ff"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/008",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1927595662,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.16442498564720154,
+            -0.1444769948720932,
+            0.02500000037252903,
+            0.9666257500648499,
+            0.0,
+            0.0,
+            -0.25619250535964966
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.29373979568481445,
+            -0.27301183342933655,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "9d0eb45cccdbcaa3a6e7965f82d277379e920912dd9b16230332e3037aafc2b1",
+      "task_state_fingerprint": "35d3aafefe23aee04e6634afcd6b168bf974d71f2d73c03e2097c6a9a139c498",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/008/base_camera.png",
+          "sha256": "8782b2b2bc05ee0a4d3185a800df251b07e52c1b5b21d01d0339dbbe49857d75"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/011",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 468183552,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.08029687404632568,
+            0.035004258155822754,
+            0.02500000037252903,
+            0.9945985674858093,
+            0.0,
+            0.0,
+            0.10379641503095627
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.20342771708965302,
+            -0.2903587222099304,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a305f387bce7e922bf6652b3f7d604c5287415585c35d49fa6aa136e75ec9802",
+      "task_state_fingerprint": "a7ea7239955bc8a998022e293f47a58d9e92e51bb1cb38b6e65f19d6933c664e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/011/base_camera.png",
+          "sha256": "4985e452c2574205ba24f2a77481490d235dddb6ba2bb9617e8c62ebb5f636ca"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/sft_train/014",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 2040422147,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.09316784143447876,
+            -0.09219035506248474,
+            0.02500000037252903,
+            0.9953469038009644,
+            0.0,
+            0.0,
+            0.09635618329048157
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.11795420944690704,
+            -0.2242382913827896,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ca000aba1e1f7e191fd89a92bb31ca6be18a77050ac57fa499b5987dd0544bad",
+      "task_state_fingerprint": "7fdeb20919a1d3d9c1d33c183fc9ac90e9ce0e31fa255b218fa8b8b7b3e8e0f2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/sft_train/014/base_camera.png",
+          "sha256": "8c580fa245744f51813d003404cbb49a0df323fea5b7e6d04d1223df229fd0d2"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/000",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 595924118,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.1831902265548706,
+            -0.13752369582653046,
+            0.02500000037252903,
+            0.975839376449585,
+            0.0,
+            0.0,
+            -0.21848933398723602
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.11781250685453415,
+            -0.1764885038137436,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3b1ab9bc679b819d417c7b5bb8971610cd90f7522541b82e3bfa0de6212be369",
+      "task_state_fingerprint": "584fab5eb4f0bb967aaf2b6867b8ff9ae5e24a2578b9ad7ed34fd7e9e1b983ee",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/000/base_camera.png",
+          "sha256": "7ee05768b508bb746d8e88bdd388376b4e0f91bcd4fa231e186f9a5cdaef2b7e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/001",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1152255156,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.2048969864845276,
+            -0.23473870754241943,
+            0.02500000037252903,
+            0.9897369146347046,
+            0.0,
+            0.0,
+            -0.142901211977005
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.16192282736301422,
+            -0.24656112492084503,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d9f1f501f24d4d3594ec67982b2665a57d86815506acbf5cecf14915985a3fc7",
+      "task_state_fingerprint": "676553f7e35d757f6f658442081f31360fc868b3ba8075dad1a9b308fc7f37c9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/001/base_camera.png",
+          "sha256": "0c323334906bad8b6ead28b469d8299973fe339b74dd77e0d2a3edf86ce49e81"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/002",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 387836930,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.06507563591003418,
+            -0.0633351057767868,
+            0.02500000037252903,
+            0.998279869556427,
+            0.0,
+            0.0,
+            -0.058627959340810776
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.2458055466413498,
+            -0.2725328207015991,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "516f9dee2f7b2599aa8306385142708e33d625a79ed5452538549227395b5007",
+      "task_state_fingerprint": "ce950c127321ba9016712c8b257b2cde4093dd5ae32d3b480210aa831afe995f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/002/base_camera.png",
+          "sha256": "e93f3dd29fbbede2718227d2a6aee04927573d28941d68f56736c78b2c767a8b"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/005",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1146176574,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.13355961441993713,
+            -0.17124906182289124,
+            0.02500000037252903,
+            0.9803044199943542,
+            0.0,
+            0.0,
+            0.19749228656291962
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.13040804862976074,
+            -0.2700583040714264,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e80139ee9f9cc5c474d2251aa70b7ec8f0a0a15276b7393381e19206ea7b84d5",
+      "task_state_fingerprint": "3ce2a9efbfd0b799dd475ecb16cd66314d055b6541c534d9f8b8e5c1141f0f6d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/005/base_camera.png",
+          "sha256": "f41c88b22fcd6e7ab5bbf61422344d0c1f3ba15e58d03793512f54587cdf6536"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/008",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 2089096868,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.21933317184448242,
+            -0.020746663212776184,
+            0.02500000037252903,
+            0.9953731894493103,
+            0.0,
+            0.0,
+            0.0960841029882431
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.222984179854393,
+            -0.2517993748188019,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "adf35d3eb337ad5cfe923f0ec7d0f49a54e8ad229b3ae82f66a39d6943c9f7f8",
+      "task_state_fingerprint": "ce037d40943571384136074449f060c8b54f2a844d0787bd238a27af6ea44271",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/008/base_camera.png",
+          "sha256": "24d50d73e95fe0d1f5e2170e12669106257ce967b62e3836488c639d48336943"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/011",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1419663022,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.19569608569145203,
+            0.04394501447677612,
+            0.02500000037252903,
+            0.9828117489814758,
+            0.0,
+            0.0,
+            -0.1846105009317398
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.27017080783843994,
+            -0.15404905378818512,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "ade3c8d26d70c703431ba8ec5cd66dfdbdf21198953f4055e20c1bb2d4ab7fa0",
+      "task_state_fingerprint": "003179d7b9221a379480c23bfc28325d09be47750560b9ab384de63f5dab2966",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/011/base_camera.png",
+          "sha256": "2b7b7a55f726d11f2b2eaeeaa21e53ed94de3f0fb85d8c954bd324cc3206da9e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/rl_train/014",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 234393324,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.18483135104179382,
+            -0.20616498589515686,
+            0.02500000037252903,
+            0.999501645565033,
+            0.0,
+            0.0,
+            0.031567394733428955
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.1705821305513382,
+            -0.18025697767734528,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "0800a58430895f49df60c67ef22a16697fa9719ce507e1aa93fd535750535c16",
+      "task_state_fingerprint": "995c5e657d658844bab5abf5b769fbb702205425703b55b282abed8cb1d9a764",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/rl_train/014/base_camera.png",
+          "sha256": "7528a3a0fda947791b2c0e62387ace185baa35f0c465e32c5eff8ab50ecb644b"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/validation/000",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1692578866,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.22312963008880615,
+            -0.0969030112028122,
+            0.02500000037252903,
+            0.9992331862449646,
+            0.0,
+            0.0,
+            0.03915480151772499
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.20394723117351532,
+            -0.23125113546848297,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f1073ff343b48f2c42d2015f0e1ea562de38abd1407c9cab9d6ef113c6d280f6",
+      "task_state_fingerprint": "e8aa041d2e9e25a6beb6c2c357e8dd719b0c1ccce043c803c937d401968ac08d",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/validation/000/base_camera.png",
+          "sha256": "587b69e889b0710534fb5fc9961c73c41c4e523d42b31b8a4470f63aa14962dd"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/000",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 648342994,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.23481935262680054,
+            -0.06768789887428284,
+            0.02500000037252903,
+            0.9856336116790771,
+            0.0,
+            0.0,
+            -0.16889755427837372
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.1979193538427353,
+            -0.26078444719314575,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "1793070b442c5887ce02a8558d18c54d5a4e41644a06c576c0eb4b748962d13e",
+      "task_state_fingerprint": "0d43c4e26ca777af408c2436de336778ca9b74daf90ebbb34b0cfe790c2ceec7",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/000/base_camera.png",
+          "sha256": "360f6591fe67fbb799bc6ee6a8cd556d1a211b67a9fca1dad161ae95fca43f69"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/001",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 63887075,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.21269726753234863,
+            0.03840714693069458,
+            0.02500000037252903,
+            0.9703214764595032,
+            0.0,
+            0.0,
+            -0.2418186068534851
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.2943253517150879,
+            -0.19588924944400787,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "25a9aeb727397c36e8757f3987206484544c8c5e6283fd5198a95524d0ad3f55",
+      "task_state_fingerprint": "30e22f4981ba6e1fc725967330ecf292201152e77c3ededc1fe2175442332f12",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/001/base_camera.png",
+          "sha256": "50014e7c02c42e6ac31681eebed8e099be106275bef989711ddd3bb12e736a13"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/002",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1760555500,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.0764540433883667,
+            -0.10571019351482391,
+            0.02500000037252903,
+            0.9991436004638672,
+            0.0,
+            0.0,
+            0.041377559304237366
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.24072302877902985,
+            -0.23175860941410065,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "07d5d887e7568a70b7b7411836b7146e66829b2373e2c1412f2afc41d25771a8",
+      "task_state_fingerprint": "4750a0c2b5cab35276f4ea5724f5a41330025ce4617d4c3598aa438c936da846",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/002/base_camera.png",
+          "sha256": "b1f25fd3584e03f7d37a3f5d280d8cfc8a9bd1c005bbd8bd5af9b9c7679390f3"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/006",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 910304402,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.22696298360824585,
+            -0.14406320452690125,
+            0.02500000037252903,
+            0.9999156594276428,
+            0.0,
+            0.0,
+            0.012985342182219028
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.12018381804227829,
+            -0.29385247826576233,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "30d908ae21d35d42183394ec3955f744161702b759cc2ef97c34f7b81692e6cc",
+      "task_state_fingerprint": "1f6097847736f365f0a65e61228d6589197deadb590587f834e0b9f0145f8c9b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/006/base_camera.png",
+          "sha256": "e0aaf5441a0db07da4f188296c99ad5e971d7a5bef7ae4eb8a67c0ad6a10b754"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/010",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 1738453843,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.06699669361114502,
+            -0.01573646068572998,
+            0.02500000037252903,
+            0.9720391035079956,
+            0.0,
+            0.0,
+            0.23481915891170502
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.1943548321723938,
+            -0.15301333367824554,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "5a86ccbdb3fe7e3cfc3aee81f168ab58e1d7c9bb8ae410ce777c2210e6b99e9b",
+      "task_state_fingerprint": "1ba35e1c58f820109f729cabd20ab67c2b33fe1f76a0c6439ac6c3ea08780a95",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/010/base_camera.png",
+          "sha256": "1a51731284752579998252046abc4d7ef4c1a81ee01120898b059a9b057e140e"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/014",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 283964050,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.2101922631263733,
+            -0.13759513199329376,
+            0.02500000037252903,
+            0.9869871735572815,
+            0.0,
+            0.0,
+            -0.1607990264892578
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.22799377143383026,
+            -0.14258591830730438,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f657466c6bde1a4a6f914d928b3315717187c2af412620f4370b472b9b912852",
+      "task_state_fingerprint": "28ed2ec7722325e92a1b1fb367fb07ee2fe04b6e568ea9e40a248b5e410042f0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/014/base_camera.png",
+          "sha256": "f55d4ddc037abe83e0ce4ed05e03dab8dc355bfdb2a90b023c9cd4a60f55ce33"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/eval_seen/019",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 735059093,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.10133421421051025,
+            0.015462309122085571,
+            0.02500000037252903,
+            0.9910513758659363,
+            0.0,
+            0.0,
+            -0.13348111510276794
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.1775510460138321,
+            -0.24740056693553925,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "93548e0da99da42152a94541af62f0aca308b663e86cae78dc4b0ddebb2182fe",
+      "task_state_fingerprint": "19880d8357161a99d43a3d4a5748d732e07c08c1ca68a1724e6b158f6ea0e3b3",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/eval_seen/019/base_camera.png",
+          "sha256": "a52ae1289162d4f1cb96ca813edb6f85ed34e7f361306113b55342ee77e7f519"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/PullCubeTool-v1/validation/001",
+      "task_key": "maniskill/PullCubeTool-v1",
+      "seed": 482764953,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cube": [
+          [
+            0.21553027629852295,
+            -0.19223245978355408,
+            0.02500000037252903,
+            0.9893995523452759,
+            0.0,
+            0.0,
+            0.14521898329257965
+          ]
+        ],
+        "actor/l_shape_tool": [
+          [
+            -0.20475947856903076,
+            -0.2541557252407074,
+            0.02500000037252903,
+            0.9999999403953552,
+            0.0,
+            0.0,
+            5.5630637874060085e-09
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7e145a464ff4cf3900a847bb3d280982d082084b728c65e4db5b17c77d8c624a",
+      "task_state_fingerprint": "ea8e30a10fe77481f53c655a89a9d95b1d56ca3c2847e8374d03f5b4c4f4c764",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/PullCubeTool-v1/validation/001/base_camera.png",
+          "sha256": "8fab7e484f21d37261a61614af771266c62558f683daa0265fa842a014e4c4b5"
+        }
+      ],
+      "actual_robot": "panda",
+      "actual_action_dim": 7
+    }
+  ]
+}

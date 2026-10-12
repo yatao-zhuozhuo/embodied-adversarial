@@ -18,3 +18,9 @@ def test_explicit_wrong_gripper_state_is_rejected():
     with pytest.raises(ValueError, match="opening"):
         _reasoning_from_response(response("The robot opens the gripper to release the object."),
                                  gripper_state="close")
+
+
+def test_data_construction_language_is_rejected():
+    with pytest.raises(ValueError, match="data construction"):
+        _reasoning_from_response(response("The official expert policy moves the gripper toward the object."),
+                                 gripper_state="neutral")

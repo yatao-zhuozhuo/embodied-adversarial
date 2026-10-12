@@ -54,7 +54,8 @@ def baseline_default():
 class Catalog:
     def __init__(self, baseline, sft, training):
         self.roots = {'baseline': Path(baseline).resolve(), 'sft': Path(sft).resolve(),
-                      'training': Path(training).resolve(), 'expert': Path(sft).resolve()}
+                      'training': Path(training).resolve(), 'expert': Path(sft).resolve(),
+                      'expert100': Path(sft).resolve()}
         self.baseline_roots = [self.roots['baseline']]
         v2 = self.roots['baseline'].parent / 'v2/campaigns'
         if self.roots['baseline'].name == 'results' and v2.is_dir():
@@ -118,8 +119,8 @@ class Catalog:
                 if f:
                     result.append(f)
             return result
-        if source == 'expert':
-            return self.normalize_expert(path, data)
+        if source in {'expert', 'expert100'}:
+            return self.normalize_expert(path, data, source)
         if source == 'baseline':
             ep = data['episode']
             raw_steps = data.get('turns', [])
@@ -200,16 +201,20 @@ class Catalog:
         root = self.roots['expert']
         rel = path.relative_to(root)
         suffix = '/'.join(rel.parts[-4:-1])
+        if rel.parts[0].startswith('expert_replay_unified_'):
+            return [root / name / 'episodes' / suffix for name in (
+                'expert_replay_unified_v6_compressed_reasoning_purpose_v2_20261011',
+                'expert_replay_unified_v6_compressed_reasoning_20261011')]
         if rel.parts[0] == 'expert_replay_compressed_v1':
             return [root / 'expert_replay_compressed_reasoning_v1' / 'episodes' / suffix]
         return list((root / 'expert_replay_v1').glob('reasoning*/episodes/' + suffix))
 
-    def normalize_expert(self, path, data):
+    def normalize_expert(self, path, data, source='expert'):
         """Show replay evidence and separately attributed, action-preserving annotations."""
         import xml.etree.ElementTree as ET
         root = self.roots['expert']
         rel = path.relative_to(root)
-        key = hashlib.sha256(('expert/' + str(rel)).encode()).hexdigest()[:24]
+        key = hashlib.sha256((source + '/' + str(rel)).encode()).hexdigest()[:24]
         frame_groups = {}
         for frame_path in sorted((path.parent / 'frames').glob('*.png')):
             number = frame_path.stem.split('-', 1)[0]
@@ -275,7 +280,7 @@ class Catalog:
                           'reward': event.get('reward'), 'success': event.get('official_success'),
                           'text': original, 'annotated_xml': annotated_xml,
                           'reasoning_annotation': clean(annotation), 'raw': clean(event)})
-        return {'id': key, 'source': 'expert', 'bench': data.get('bench', 'unknown'),
+        return {'id': key, 'source': source, 'bench': data.get('bench', 'unknown'),
                 'task': data.get('task') or data.get('task_id'), 'model': 'artificial',
                 'group': rel.parts[0], 'label': '/'.join(rel.parts[-4:-1]),
                 'success': data.get('success'), 'status': data.get('stop_reason', 'unknown'),
@@ -302,6 +307,21 @@ class Catalog:
                             paths.update(directory.glob('**/attempt-*/result.json'))
                             paths.update(p for p in directory.glob('**/attempt-*/progress.json')
                                          if not p.with_name('result.json').exists())
+            elif source == 'expert100':
+                dataset = root / 'expert_replay_unified_v6_compressed_20261011'
+                manifest = json.loads((dataset / 'snapshot/sft_train.json').read_text())
+                paths = []
+                for case in manifest['cases']:
+                    outcome = dataset / 'results' / (case['case_id'] + '.json')
+                    if not outcome.is_file():
+                        continue
+                    result = json.loads(outcome.read_text())
+                    if result.get('success') is not True or not 0 < result.get('compressed_turns', 101) <= 100:
+                        continue
+                    path = dataset / 'episodes' / case['bench'] / case['task_id'] / f"seed-{case['seed']}" / 'episode.json'
+                    data = json.loads(path.read_text())
+                    if data.get('success') is True and data.get('unified_case') == case and len(data.get('turns', [])) <= 100:
+                        paths.append(path)
             elif source == 'expert':
                 selected = {}
                 for dataset in ('expert_replay_v1', 'expert_replay_compressed_v1'):
@@ -336,7 +356,7 @@ class Catalog:
                 try:
                     stat = p.stat()
                     signature = (stat.st_mtime_ns, stat.st_size)
-                    if source == 'expert':
+                    if source in {'expert', 'expert100'}:
                         companions = [p.parent / 'samples.jsonl']
                         for directory in self.expert_annotation_dirs(p):
                             companions.extend(directory.glob('annotations/turn-*.json'))
@@ -365,7 +385,12 @@ class Catalog:
             return [{k: v for k, v in r.items() if k not in {'steps', 'initial_frames', 'metadata'}} for r in records], errors
 
 
-def create_app(catalog, legacy=True):
+def create_app(catalog, legacy=True, unified_root=None):
+    try:
+        from visual.unified import UnifiedTasks
+    except ModuleNotFoundError:
+        from unified import UnifiedTasks
+    unified = UnifiedTasks(unified_root or REPO / 'data_unified', catalog.roots['sft'], REPO, catalog.roots['baseline'])
     def listing(request):
         source = request.query_params.get('source', 'baseline')
         if source not in catalog.roots:
@@ -397,6 +422,7 @@ def create_app(catalog, legacy=True):
               Route('/api/context', lambda _: JSONResponse({'branch': branch(REPO),
                     'baseline_branch': branch(catalog.roots['baseline']),
                     'roots': {k: str(v) for k, v in catalog.roots.items()}}))]
+    routes.extend(unified.routes())
     if legacy:
         directory = REPO / 'SFT_data/fronted'
         sys.path.insert(0, str(directory))
@@ -420,9 +446,10 @@ def main():
     parser.add_argument('--baseline-root', type=Path, default=baseline_default())
     parser.add_argument('--sft-root', type=Path, default=REPO / 'SFT_data')
     parser.add_argument('--training-root', type=Path, default=REPO / 'runs/formal_experiment2')
+    parser.add_argument('--unified-root', type=Path, default=REPO / 'data_unified')
     args = parser.parse_args()
     import uvicorn
-    uvicorn.run(create_app(Catalog(args.baseline_root, args.sft_root, args.training_root)),
+    uvicorn.run(create_app(Catalog(args.baseline_root, args.sft_root, args.training_root), unified_root=args.unified_root),
                 host=args.host, port=args.port)
 
 

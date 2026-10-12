@@ -1,0 +1,819 @@
+{
+  "task_key": "metaworld/shelf-place-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/sft_train/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 56769760,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 56769760,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          -0.018735482696603592,
+          0.5111015316664946,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.018735482696603592,
+          0.5111015316664946,
+          0.0194946179081205,
+          -0.05823504642709765,
+          0.8681663138223151,
+          0.30034753986319546
+        ],
+        "/object_position": [
+          -0.018735482696603592,
+          0.5111015316664946,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.05823504642709765,
+          0.8681663138223151,
+          0.30034753986319546
+        ]
+      },
+      "state_fingerprint": "21c6a7beddb253ecf83db2ad53104c9149849ec34edd705dcccb9a0522bb1ff3",
+      "task_state_fingerprint": "bf2cce80c692d68780d3c0ee13db4a94c6fbe28d1281aceccafabfc925bc1666",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/sft_train/000/native_camera_2.png",
+          "sha256": "3fb13f301f07da9009a1b3c5dcd1cf1b86031e70f42915bb127d427c6431d435"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/sft_train/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 813334215,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 813334215,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          0.05098676776345937,
+          0.5427040289794824,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.05098676776345937,
+          0.5427040289794824,
+          0.01987829760152697,
+          -0.08650331115338834,
+          0.8892593469498112,
+          0.29998276588168504
+        ],
+        "/object_position": [
+          0.05098676776345937,
+          0.5427040289794824,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.08650331115338834,
+          0.8892593469498112,
+          0.29998276588168504
+        ]
+      },
+      "state_fingerprint": "bb9a4ab1db73b23316daa440c65884a4da2e03d5781cd14e57e13c21b6b4484e",
+      "task_state_fingerprint": "f47ffd6597e3b989d59b98a56757c6d8d99bc8cdf735ff72d185d70f1a9c1c2e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/sft_train/001/native_camera_2.png",
+          "sha256": "8c886cb9c7ec685691c0b6b954ae8c96c6af6cba760119bf352ee3cc9b051a97"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/rl_train/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1680865903,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1680865903,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          -0.052404666498108626,
+          0.599659043291837,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.052404666498108626,
+          0.599659043291837,
+          0.019617093622723094,
+          -0.09410893603807342,
+          0.8715512651386249,
+          0.2997621400201724
+        ],
+        "/object_position": [
+          -0.052404666498108626,
+          0.599659043291837,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.09410893603807342,
+          0.8715512651386249,
+          0.2997621400201724
+        ]
+      },
+      "state_fingerprint": "af5d8834c5a132ac8fde59fdfafd538d77fa494c26d2aeed5c4b45b3733dfe79",
+      "task_state_fingerprint": "e5d1e1dd93a942dab522c46030e24e909675e939829b038c5b8e5674f0d82051",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/rl_train/000/native_camera_2.png",
+          "sha256": "50ea4b243b4a7e34ee27363ce771ac97f85a505b2a17ff09f8a672890dc644cc"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/rl_train/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2037456226,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2037456226,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          0.019706615679761216,
+          0.5391745168519384,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.019706615679761216,
+          0.5391745168519384,
+          0.020268538001435184,
+          0.07675132284280287,
+          0.8209754998107495,
+          0.29946553943697285
+        ],
+        "/object_position": [
+          0.019706615679761216,
+          0.5391745168519384,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.07675132284280287,
+          0.8209754998107495,
+          0.29946553943697285
+        ]
+      },
+      "state_fingerprint": "bea41fb50d1614ce68613d98a60af17d0fa018d3d578b0ab74083ca0f7cac494",
+      "task_state_fingerprint": "3ddf9b6ca961ca22e92dbc8da2b5d85adffcf173b97d6f160fed7e7c7a78b55a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/rl_train/001/native_camera_2.png",
+          "sha256": "7b183a2bd3fea161cd978174f4e32998c31d763239371be690a9f7a1c4df1341"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/validation/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 1236751998,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1236751998,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          -0.09000330982339758,
+          0.5609028527093576,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09000330982339758,
+          0.5609028527093576,
+          0.020407047380833376,
+          0.08424576067530995,
+          0.8093902103247527,
+          0.3005537944679601
+        ],
+        "/object_position": [
+          -0.09000330982339758,
+          0.5609028527093576,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          0.08424576067530995,
+          0.8093902103247527,
+          0.3005537944679601
+        ]
+      },
+      "state_fingerprint": "31bdfd9df6df29be59aab50380b0c3c462a4729aeaf9d8453e01ca3bc2a6160f",
+      "task_state_fingerprint": "1922f72653f85d9281841f689cd975c5e0a9f84f178362087aa2ef411554f099",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/validation/000/native_camera_2.png",
+          "sha256": "8602ae1cc59e564cb922f90afb177e687d5d57a821b73ff78fa7112fc570b14e"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/eval_seen/000",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 2040658001,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2040658001,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          0.03237043679496429,
+          0.5298696154913088,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.03237043679496429,
+          0.5298696154913088,
+          0.020075546564571133,
+          -0.0050303697556851185,
+          0.8586987313813105,
+          0.3006650823027257
+        ],
+        "/object_position": [
+          0.03237043679496429,
+          0.5298696154913088,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.0050303697556851185,
+          0.8586987313813105,
+          0.3006650823027257
+        ]
+      },
+      "state_fingerprint": "b343302a9f00de8e938517883a5a25e287e0366029191560069285c98f44a284",
+      "task_state_fingerprint": "f43176b967c1f4b3df0a64064ea566e4bd492232d3cc30c0cdc3770aa0a7b654",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "05943d80b3b3305be795a18ab2bed7bca2f2ddbcb7e1bf308e62af0afb23784e"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/shelf-place-v3/eval_seen/001",
+      "task_key": "metaworld/shelf-place-v3",
+      "seed": 630352862,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 630352862,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          1.8892881451882808,
+          -0.5757689048995815,
+          -0.9766593169577551,
+          1.6419914193500214,
+          0.9428595829327348,
+          1.0436962570085022,
+          2.292833362829153,
+          -0.00017190619515694536,
+          0.00017174542246342232,
+          0.07466191382986259,
+          0.5501635764566818,
+          0.01993604692327165,
+          1.0,
+          1.8110813571258914e-39,
+          0.0,
+          0.0
+        ],
+        "/qvel": [
+          0.26100214692976476,
+          0.4289125568331473,
+          -0.4857705275970237,
+          0.24403765089617216,
+          0.8291097824960355,
+          0.09876223225413784,
+          1.5894718270526838,
+          5.842799376720096e-07,
+          5.910160482090557e-07,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.6000000238418579,
+            0.20000000298023224
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.07466191382986259,
+          0.5501635764566818,
+          0.019031916802914974,
+          -0.09516616828818013,
+          0.8502084598235577,
+          0.30040795769578993
+        ],
+        "/object_position": [
+          0.07466191382986259,
+          0.5501635764566818,
+          0.01993604692327165
+        ],
+        "/goal_position": [
+          -0.09516616828818013,
+          0.8502084598235577,
+          0.30040795769578993
+        ]
+      },
+      "state_fingerprint": "fad3d0e8c2683f854e939295de896969d456860f5ee66675bfeffbfa96a0662b",
+      "task_state_fingerprint": "c7fd7fd577f9b49464cd6c9d9ee5bd9af7d8bb3b7c0abe143a7054b235a81f48",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/shelf-place-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "89cefefa51f4d17d3cba838bdb71c3526d14fe3a2acffe51b4704f3388638d22"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "restoration_passed": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

@@ -43,7 +43,7 @@ def replay_one(source_path: Path, output_root: Path, task: str,
         raise ValueError("Invalid compressed control-step budget")
     directory = output_root / "episodes" / "metaworld" / task_id / f"seed-{seed}"
     directory.mkdir(parents=True, exist_ok=True)
-    raw = _make_metaworld_direct(task_id, image_width=256, image_height=256)
+    raw = _make_metaworld_direct(task_id, image_width=256, image_height=256, seed=seed)
     env = UnifiedEnv(raw, render_mode="rgb_array")
     if adaptive_expert:
         from metaworld import policies
@@ -54,6 +54,7 @@ def replay_one(source_path: Path, output_root: Path, task: str,
     profile = inputs.make_profile("metaworld", task_id, created, contract)
     source_hash = hashlib.sha256(source_path.read_bytes()).hexdigest()
     record = {"schema_version": SCHEMA, "model": "artificial", "teacher_model": "artificial",
+              "environment_seed_protocol": raw._openeta_seed_protocol, "creation_seed": seed,
               "provider": "artificial", "action_source": (
                   "official_scripted_policy_live_compressed" if adaptive_expert else "expert_replay"),
               "output_source": "constructed_expert_xml", "reasoning_source": "empty",

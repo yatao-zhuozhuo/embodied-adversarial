@@ -84,3 +84,7 @@ SFT_data/gemini_input_v1_*/
 SFT_data/gemini_flash_expanded_*/
 SFT_data/codingrouter_input_v1_*/
 SFT_data/expert_replay*/
+
+# Machine-local baseline checkout and unified collection process state
+/baseline/
+/SFT_data/runtime/

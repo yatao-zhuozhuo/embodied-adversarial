@@ -1,0 +1,826 @@
+{
+  "task_key": "metaworld/coffee-push-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/sft_train/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 2063415395,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2063415395,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          -0.03588787550199675,
+          0.5720496939698446,
+          -0.0005122859135071958,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03588787550199675,
+          0.5720496939698446,
+          -0.0005122859135071958,
+          -0.01745615182403233,
+          0.7259584545711099,
+          -0.000467078559078377
+        ],
+        "/object_position": [
+          -0.03588787550199675,
+          0.5720496939698446,
+          -0.0005122859135071958
+        ],
+        "/goal_position": [
+          -0.01745615182403233,
+          0.7259584545711099,
+          -0.000467078559078377
+        ]
+      },
+      "state_fingerprint": "730f5a4d115b6ae911c21a86fbdd05a1ea55ddffedf6d119e87c0fda1a22ad01",
+      "task_state_fingerprint": "b4f0285b955d6f15ede7e41f9937f4b3f78bf3d64f8a9a698aeb7c6fdcf7201b",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/sft_train/000/native_camera_2.png",
+          "sha256": "78e7128a2e89f65230abe7b19bcf2f324527d452b6c132f5f147d0d6e4de1fbd"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/sft_train/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 647060248,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 647060248,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          0.0975384536151023,
+          0.5549861788400722,
+          0.0007550714489496777,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.0975384536151023,
+          0.5549861788400722,
+          0.0007550714489496777,
+          0.0013317759967046774,
+          0.7016140040415415,
+          -0.00040325169883382813
+        ],
+        "/object_position": [
+          0.0975384536151023,
+          0.5549861788400722,
+          0.0007550714489496777
+        ],
+        "/goal_position": [
+          0.0013317759967046774,
+          0.7016140040415415,
+          -0.00040325169883382813
+        ]
+      },
+      "state_fingerprint": "90a8fb40fb608d011100a285b8e3a8064e493e1587ce177cb25e444703eb0ab9",
+      "task_state_fingerprint": "b2420752987aed09cdb00dbdd314a53444b3f0b5ab3aa3898404303f6efa7c66",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/sft_train/001/native_camera_2.png",
+          "sha256": "c792fa5cc1cec4a486374a1a4fff5513686eb7ac6678cc461ede7fbc68203b94"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/rl_train/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 1368927695,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1368927695,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          -0.09696038688853362,
+          0.6132458273402364,
+          -0.0007717824403020943,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.09696038688853362,
+          0.6132458273402364,
+          -0.0007717824403020943,
+          0.005761880478105996,
+          0.7415116015135061,
+          -0.0005239504489645348
+        ],
+        "/object_position": [
+          -0.09696038688853362,
+          0.6132458273402364,
+          -0.0007717824403020943
+        ],
+        "/goal_position": [
+          0.005761880478105996,
+          0.7415116015135061,
+          -0.0005239504489645348
+        ]
+      },
+      "state_fingerprint": "f31f9e0db8a1f9ddb9f27648678fab7347b13933c825097ef6b2c355f0854c34",
+      "task_state_fingerprint": "10d6fc281cd7c842d9e0deecfb830be6ec05b45aade1395876fcfc5b6ebb0178",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/rl_train/000/native_camera_2.png",
+          "sha256": "d50d0098303ab494422f1ac544ea984200cc187183502971d8b65b58e00fb32b"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/rl_train/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 333105765,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 333105765,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          -0.05885562004249008,
+          0.5531315114457458,
+          7.739696403676337e-05,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.05885562004249008,
+          0.5531315114457458,
+          7.739696403676337e-05,
+          0.02522847575352616,
+          0.7229347284700705,
+          -0.0001489659648887618
+        ],
+        "/object_position": [
+          -0.05885562004249008,
+          0.5531315114457458,
+          7.739696403676337e-05
+        ],
+        "/goal_position": [
+          0.02522847575352616,
+          0.7229347284700705,
+          -0.0001489659648887618
+        ]
+      },
+      "state_fingerprint": "fbd5e2ae5abe9bfd2a72c6f8ee35c0c22815014d8060dae04ff428b5d3fc2422",
+      "task_state_fingerprint": "f4c73edc01799201f6d08e9310c08170305084f863c362cf38c5afb85ff6af62",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/rl_train/001/native_camera_2.png",
+          "sha256": "c7d5b7baeefd3fc6a8862663e3b0d505854618c80199bb7995c9be639eeb9a12"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/validation/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 8301972,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 8301972,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          0.09211765257898083,
+          0.5880814007682416,
+          0.0005060007593005189,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.09211765257898083,
+          0.5880814007682416,
+          0.0005060007593005189,
+          -0.015707311074130703,
+          0.7364826777278254,
+          -0.0008622503123523746
+        ],
+        "/object_position": [
+          0.09211765257898083,
+          0.5880814007682416,
+          0.0005060007593005189
+        ],
+        "/goal_position": [
+          -0.015707311074130703,
+          0.7364826777278254,
+          -0.0008622503123523746
+        ]
+      },
+      "state_fingerprint": "1671774b12a842b3131e146cd4c4934d4178d6caf0609cbca88624e748f3fa31",
+      "task_state_fingerprint": "566e86bed485944f81f4685de23c29a79f50518ab2fcedfabec445dfa284b082",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/validation/000/native_camera_2.png",
+          "sha256": "db7fed3382228f6f758a6bad7f1336b4cf7d2af0ae8386d6736e7d04777cc902"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/eval_seen/000",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 2049147057,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 2049147057,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          0.08327292014098375,
+          0.578232136872293,
+          -0.00016553406141880586,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.08327292014098375,
+          0.578232136872293,
+          -0.00016553406141880586,
+          -0.04434273363307341,
+          0.7192176851243592,
+          0.0008105929591354657
+        ],
+        "/object_position": [
+          0.08327292014098375,
+          0.578232136872293,
+          -0.00016553406141880586
+        ],
+        "/goal_position": [
+          -0.04434273363307341,
+          0.7192176851243592,
+          0.0008105929591354657
+        ]
+      },
+      "state_fingerprint": "94154a268a9f6d2347e7f15d06e9748ccec9df3b0998503aa06ee54503b2cf06",
+      "task_state_fingerprint": "8cb0db1df20b461fde11da809e182ec935b7bd89d925a7d0a040dd59869d708a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "7521d4466fa606f2e3d1748fd8e8a1f76e75d5643b555f911a7b32be8ae1e282"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/coffee-push-v3/eval_seen/001",
+      "task_key": "metaworld/coffee-push-v3",
+      "seed": 376374778,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 376374778,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          -0.02384631049274974,
+          0.5679294958619309,
+          9.286804383542234e-05,
+          0.9995402723535234,
+          0.004707695435790778,
+          -0.0026129012331199963,
+          -0.02983712945766556,
+          2.167490592351463,
+          -0.5459568445219266,
+          -1.2347217844128335,
+          2.1711108857948966,
+          1.2478093863779822,
+          1.0194763242802702,
+          1.9011960040107527,
+          -0.00017186077949544703,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.00479550449406244,
+          -0.003406437638330954,
+          -0.004463097546077298,
+          -0.7702239523488843,
+          -1.124267322191906,
+          -0.08030129028242225,
+          0.08512034931634307,
+          0.6327525851808928,
+          -0.2159614742310869,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02384631049274974,
+          0.5679294958619309,
+          9.286804383542234e-05,
+          -0.013340460612355498,
+          0.7465934589581998,
+          -0.0007954134849960784
+        ],
+        "/object_position": [
+          -0.02384631049274974,
+          0.5679294958619309,
+          9.286804383542234e-05
+        ],
+        "/goal_position": [
+          -0.013340460612355498,
+          0.7465934589581998,
+          -0.0007954134849960784
+        ]
+      },
+      "state_fingerprint": "4ebc4579f7ca23afbe2f449fb05c910afe2e85bfc9189ac02fa9aee53cc70ce3",
+      "task_state_fingerprint": "28c7117d68a016bd41b82a3e0cd497dca1993d73ce97bf46083d5650c7220226",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/coffee-push-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "ba7a0c040c779c286fc193205661d40e231bef3b451b8e1b7f636be92a03afb5"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

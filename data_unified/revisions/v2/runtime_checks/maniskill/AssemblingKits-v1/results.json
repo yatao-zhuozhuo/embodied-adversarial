@@ -1,0 +1,16 @@
+{
+  "task_key": "maniskill/AssemblingKits-v1",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "case_id": "maniskill/AssemblingKits-v1/sft_train/000",
+      "task_key": "maniskill/AssemblingKits-v1",
+      "capture_success": false,
+      "error": "FileNotFoundError: The objects/kits are not found.Please download (ManiSkill) AssemblingKits assets:`python -m mani_skill.utils.download_asset assembling_kits`.",
+      "traceback": "Traceback (most recent call last):\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 233, in worker\n    record = one_case(task, case, reference, index == 0)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 183, in one_case\n    env = create(task, case)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 93, in create\n    return gym.make(task['task_id'], robot_uids=config['robot'],\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/gymnasium/envs/registration.py\", line 735, in make\n    env = env_creator(**env_spec_kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/utils/registration.py\", line 79, in make\n    return self.cls(**_kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/envs/tasks/tabletop/assembling_kits.py\", line 57, in __init__\n    raise FileNotFoundError(\nFileNotFoundError: The objects/kits are not found.Please download (ManiSkill) AssemblingKits assets:`python -m mani_skill.utils.download_asset assembling_kits`.\n",
+      "error_category": "missing_assets",
+      "asset_diagnostic": "FileNotFoundError: The objects/kits are not found.Please download (ManiSkill) AssemblingKits assets:`python -m mani_skill.utils.download_asset assembling_kits`."
+    }
+  ]
+}

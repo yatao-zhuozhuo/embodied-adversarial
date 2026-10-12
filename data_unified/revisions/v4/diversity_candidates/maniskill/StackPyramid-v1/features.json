@@ -1,0 +1,1753 @@
+{
+  "task_key": "maniskill/StackPyramid-v1",
+  "records": [
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/000",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 398205136,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.04600129649043083,
+            -0.14527451992034912,
+            0.019999999552965164,
+            0.7888311743736267,
+            0.0,
+            0.0,
+            -0.6146098971366882
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.07659372687339783,
+            -0.06658616662025452,
+            0.019999999552965164,
+            0.2262694090604782,
+            0.0,
+            0.0,
+            0.9740647673606873
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.016796015202999115,
+            -0.19432245194911957,
+            0.019999999552965164,
+            0.7565187215805054,
+            0.0,
+            0.0,
+            0.6539719700813293
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "f308db364e11cb59d2838fa61a87690ac970cfd8d6ec5ae73b242997441644f9",
+      "task_state_fingerprint": "4eb113f461f8800c7e6e3516b1bde0808ea43ae4619107fb7ec0851aed4c1629",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/000/base_camera.png",
+          "sha256": "fc40f4df631645eab5c0e283b2a075e4ef1d466d347b802ceae1ceb2b38e72c6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/000/hand_camera.png",
+          "sha256": "f6ef04fa771418128bba2ff3153b5e4cfc7e5eebed18fc7037e9ddbd57e6da41"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/001",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 496397034,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.0409170463681221,
+            0.09092773497104645,
+            0.019999999552965164,
+            0.9998149275779724,
+            0.0,
+            0.0,
+            0.019239068031311035
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.009244367480278015,
+            -0.031968459486961365,
+            0.019999999552965164,
+            0.9917563199996948,
+            0.0,
+            0.0,
+            -0.12813803553581238
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.009151801466941833,
+            0.18472392857074738,
+            0.019999999552965164,
+            0.47892284393310547,
+            0.0,
+            0.0,
+            -0.8778570294380188
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "57a4df796d919a939190d97ff5f74d0b968dd146c947b22ceccb3310b5c21452",
+      "task_state_fingerprint": "9ff67668e588e8f6d77a269e6a3c2ba3a3bc357b5ac53a06d1a8c26277eba9c8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/001/base_camera.png",
+          "sha256": "268e7c1ba286a0943b79f73f4872b8008eec726566e2200e01439bae30a48aa9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/001/hand_camera.png",
+          "sha256": "5aaf91882965ecf34a5bf56aac7b7370b1d84effa7d41986c09aba7840d6a8fa"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/002",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 633903189,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.08875484019517899,
+            0.03373435139656067,
+            0.019999999552965164,
+            0.9881574511528015,
+            0.0,
+            0.0,
+            0.1534436047077179
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.059922777116298676,
+            0.10372166335582733,
+            0.019999999552965164,
+            0.2729898989200592,
+            0.0,
+            0.0,
+            0.9620169401168823
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.08284623175859451,
+            0.183259978890419,
+            0.019999999552965164,
+            0.888055682182312,
+            0.0,
+            0.0,
+            0.4597359299659729
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "067074b795b0780a54d11fc8c0e5121f3100a61a474bd80b1d2c393b43f54669",
+      "task_state_fingerprint": "59938beb760b1cdfa4114ada6bec24389fbad49d7bb6120ebb42d9a53a1918c0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/002/base_camera.png",
+          "sha256": "f67b2f6d70754218e5179d8f5ad8d539ceea399a0ec00df4678743e02d06c4c9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/002/hand_camera.png",
+          "sha256": "07ae15e774fb8414bdc7610769e648888043056fc4e2bc180c127561745fb772"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/005",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1115405842,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.07345101237297058,
+            -0.12026603519916534,
+            0.019999999552965164,
+            0.9037451148033142,
+            0.0,
+            0.0,
+            -0.428070992231369
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.07544580101966858,
+            -0.022846728563308716,
+            0.019999999552965164,
+            0.9989380836486816,
+            0.0,
+            0.0,
+            -0.04607372358441353
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.073926642537117,
+            0.1602715104818344,
+            0.019999999552965164,
+            0.9916048049926758,
+            0.0,
+            0.0,
+            0.12930548191070557
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e4c350fe07d672b93abf03dda6c522c032a62794f9246629bec1ef7e6ac7ccc7",
+      "task_state_fingerprint": "b20ceedbaad4949f4e8242b6cdd5cfd4553514326aba9756f3ee5cb9c4187da5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/005/base_camera.png",
+          "sha256": "d4ef18751273b80c0d533565a428fc883f5dd118f199d22e815c45b515b07ae9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/005/hand_camera.png",
+          "sha256": "534c8b5ceeaeaab8c34138b2023cc7b2e9b7a6c9a11c443bcdb61a236d99e736"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/008",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 326972728,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.08095934242010117,
+            -0.030296847224235535,
+            0.019999999552965164,
+            0.959805428981781,
+            0.0,
+            0.0,
+            0.28066614270210266
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.03359900414943695,
+            0.038689061999320984,
+            0.019999999552965164,
+            0.823474109172821,
+            0.0,
+            0.0,
+            0.5673537850379944
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.02210760861635208,
+            0.19103361666202545,
+            0.019999999552965164,
+            0.7179872393608093,
+            0.0,
+            0.0,
+            -0.6960563063621521
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d3e9e4924c2c2be20a1603f0f92b5172fa30dab01afa12f6bb6ae7b5aa0a819f",
+      "task_state_fingerprint": "19eb7ad169e1b0a080488c9289dcc5ab37a47fa457fb48c0fb7cf3986bfb9959",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/008/base_camera.png",
+          "sha256": "91d4ac474ee3bceb2eabfcc6fc1c8d18863a13f87a5f8cd8e05ffcbab063a507"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/008/hand_camera.png",
+          "sha256": "c09a3c5f59be3600ac34e03675c302dc994282a42ad2de69348f98d30e62333c"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/011",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 813246963,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.058146703988313675,
+            0.021181628108024597,
+            0.019999999552965164,
+            0.9922611117362976,
+            0.0,
+            0.0,
+            -0.12416886538267136
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.04162558168172836,
+            0.03792639076709747,
+            0.019999999552965164,
+            0.3749582767486572,
+            0.0,
+            0.0,
+            -0.9270417094230652
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.09981068968772888,
+            -0.1469106674194336,
+            0.019999999552965164,
+            0.9663712382316589,
+            0.0,
+            0.0,
+            0.25715091824531555
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4c3e83be38f6ce49170f2082945206048310a87faf053554e962b192c7e19661",
+      "task_state_fingerprint": "24debdd33f003ddec73a6bcb6f76a207e845dc2028297297c6e112b07cfb2e8e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/011/base_camera.png",
+          "sha256": "f63ad15e8644da755ad8d1c20e0554e7b0fd026610ad64fa0f491734b52bfdae"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/011/hand_camera.png",
+          "sha256": "a2cdc187061102bf26e55e75f51d5de8b66671dd61b5a86fbf9a6fc6f2e98144"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/sft_train/014",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 69541076,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.04532710835337639,
+            0.1425279825925827,
+            0.019999999552965164,
+            0.9844678044319153,
+            0.0,
+            0.0,
+            0.17556513845920563
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.08473508805036545,
+            0.12123875319957733,
+            0.019999999552965164,
+            0.013410956598818302,
+            0.0,
+            0.0,
+            0.9999100565910339
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.08441770076751709,
+            -0.07050375640392303,
+            0.019999999552965164,
+            0.9735042452812195,
+            0.0,
+            0.0,
+            -0.2286689430475235
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "998962330562a9ecc7e50a392204ce22c01350778ade057c7af3d61a540a851d",
+      "task_state_fingerprint": "d0665b72aac144999e342a77d210225cb9946dc3f289f7ccc9e73b954ef4b3ce",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/014/base_camera.png",
+          "sha256": "d6c0dcdec192c5e415deed7606713b203463a9f2e3cb67235ef45325cff057a5"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/sft_train/014/hand_camera.png",
+          "sha256": "2a496e6a465060957731b60b943b96973916e14bff4e9968eb327847b6ec7905"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/000",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 284531557,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.08930311352014542,
+            0.1785285621881485,
+            0.019999999552965164,
+            0.1558021456003189,
+            0.0,
+            0.0,
+            -0.9877882599830627
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.03057258576154709,
+            -0.011690467596054077,
+            0.019999999552965164,
+            0.8651374578475952,
+            0.0,
+            0.0,
+            0.5015348196029663
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.03341580182313919,
+            -0.17816683650016785,
+            0.019999999552965164,
+            0.03210902959108353,
+            0.0,
+            0.0,
+            -0.9994843602180481
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "da2bc13104eb609ad5a8792167a7b03ca95d64b3d064c7a6044b471bbb113779",
+      "task_state_fingerprint": "5f45a84de4fd83c98b4a1fb6c06aae2af66b88f55d2478503d3081bb7076a72e",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/000/base_camera.png",
+          "sha256": "2ea88f2cd072a0d31e6f8c184831fe69502899f262cd5676e194c3d84352303a"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/000/hand_camera.png",
+          "sha256": "57583b6ba120a4452579512f00ad4dc496ac8fb805df1edc38823cee9da56a20"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/001",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1679888481,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.004861213266849518,
+            -0.13218292593955994,
+            0.019999999552965164,
+            0.9659622311592102,
+            0.0,
+            0.0,
+            -0.25868305563926697
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.05741965398192406,
+            -0.046000391244888306,
+            0.019999999552965164,
+            0.6409861445426941,
+            0.0,
+            0.0,
+            0.7675524353981018
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.08543659001588821,
+            0.18684615194797516,
+            0.019999999552965164,
+            0.8110042214393616,
+            0.0,
+            0.0,
+            0.5850403308868408
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "13343238890493b4bc04609cfb5acc12e8eb5feb6f2350c7819e3bac07ec04fa",
+      "task_state_fingerprint": "d11edfeed75d570472ad7c09f2d6196f5906199dafbd323d8b67e2be2219d882",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/001/base_camera.png",
+          "sha256": "95b09b110300c65901af2e2f924d7dfee02d20b84755ecede8742ac9f6a42d5d"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/001/hand_camera.png",
+          "sha256": "af494839111a9e4380cb1e57627a2bb1326290eaceb1ab54c78dd79660c66956"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/002",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 236478577,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.09530555456876755,
+            0.05690367519855499,
+            0.019999999552965164,
+            0.9942729473114014,
+            0.0,
+            0.0,
+            -0.106870636343956
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.06051958352327347,
+            -0.048918187618255615,
+            0.019999999552965164,
+            0.9802847504615784,
+            0.0,
+            0.0,
+            0.19759006798267365
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.007285550236701965,
+            0.13265492022037506,
+            0.019999999552965164,
+            0.8582493662834167,
+            0.0,
+            0.0,
+            -0.513232946395874
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "b36c467324ffef7d1a4668fc66ce3cfb403fad49b5b6f95e98e707aabbf37ed5",
+      "task_state_fingerprint": "64fcc78f47f38c2f4b8e3c2de320c3706e4b677a5b9a9bdbd41b22938aa8f8ea",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/002/base_camera.png",
+          "sha256": "1f465cc8d5da3e7b781427395d9d7ae3b216f77ca2a12f08400c24f7cf505bef"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/002/hand_camera.png",
+          "sha256": "e74b975691df186b8f597139f13ee1112f7341075696236fee2ed603b10ba0f8"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/005",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1273324935,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.04558347910642624,
+            0.01624801754951477,
+            0.019999999552965164,
+            0.9709885120391846,
+            0.0,
+            0.0,
+            0.23912616074085236
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.05644362419843674,
+            -0.18559250235557556,
+            0.019999999552965164,
+            0.8819726705551147,
+            0.0,
+            0.0,
+            -0.47130054235458374
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.051751069724559784,
+            -0.04768766462802887,
+            0.019999999552965164,
+            0.6846750974655151,
+            0.0,
+            0.0,
+            0.7288483381271362
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e74dfe3749cc135e1bcc5cd468cc3c06e18afe8787a69afe7c7a5b27fa07d824",
+      "task_state_fingerprint": "6e37c9dd856f01cca2cecf1f6e72720e58df55c5ba1c165fa3d535074c7f4cc5",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/005/base_camera.png",
+          "sha256": "0b5fe8d7add3ab5b20cd0675f51a80d70554724ee6fc01f8c560e4781b4b7fc9"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/005/hand_camera.png",
+          "sha256": "a28f721af2d7765da53997b25b743ba8f6f6b83a0b1259532b10d9a6b4e7340a"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/008",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 203728095,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.06733014434576035,
+            0.14905942976474762,
+            0.019999999552965164,
+            0.28802478313446045,
+            0.0,
+            0.0,
+            0.9576229453086853
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.03610170632600784,
+            -0.056022435426712036,
+            0.019999999552965164,
+            0.9353432059288025,
+            0.0,
+            0.0,
+            0.3537415862083435
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.05747898668050766,
+            -0.08831831067800522,
+            0.019999999552965164,
+            0.6048749089241028,
+            0.0,
+            0.0,
+            0.7963205575942993
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e13a14d755b0a83eec37f31fa8bd7074b9ded230c234abb54310b37578412c83",
+      "task_state_fingerprint": "6a48a202b3f7d9bc758a3961eff63a176c1323ac85fed02658b03c7e9d89d295",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/008/base_camera.png",
+          "sha256": "a5a0d618a37499e56ac731063e376885447c4ba6350ce6600efce519d57aa7f1"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/008/hand_camera.png",
+          "sha256": "cf6fec7140285ad7d041ca07eb0ef6800002ace80360d5238f83bce25ab702c6"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/011",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1717428731,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.09111248701810837,
+            -0.027982503175735474,
+            0.019999999552965164,
+            0.8326156139373779,
+            0.0,
+            0.0,
+            0.553851306438446
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.0734986960887909,
+            -0.12405597418546677,
+            0.019999999552965164,
+            0.7755126357078552,
+            0.0,
+            0.0,
+            -0.6313320398330688
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.036583371460437775,
+            0.10125817358493805,
+            0.019999999552965164,
+            0.5392972826957703,
+            0.0,
+            0.0,
+            -0.8421155214309692
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "3f75a0097cb04dd642a49d9f0a4c4fa10feb73c46149fa7df43d7957a46ca378",
+      "task_state_fingerprint": "b1d055d201678dccd2b2d13ed2e2ff33694135bfdb7c8c245910bbf6f76de5d9",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/011/base_camera.png",
+          "sha256": "ef18700375a038aeb2596c7e5b3d107c852f1d2963d5b1d949621c4fa0f68b47"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/011/hand_camera.png",
+          "sha256": "971fcbe4631f1c427b674aa197239df042b7754ebccfe7e8e56bb220c06da0b7"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/rl_train/014",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1816750856,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.003076992928981781,
+            -0.1967618465423584,
+            0.019999999552965164,
+            0.4704807996749878,
+            0.0,
+            0.0,
+            0.8824102878570557
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.05568840354681015,
+            -0.13280439376831055,
+            0.019999999552965164,
+            0.8835526704788208,
+            0.0,
+            0.0,
+            -0.46833187341690063
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.09299851208925247,
+            0.07667328417301178,
+            0.019999999552965164,
+            0.9321291446685791,
+            0.0,
+            0.0,
+            -0.3621259927749634
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4a63e16bedd4624000ed0c7fac8eb6b7b8a315946d4b0e99c2756c09c316c9e2",
+      "task_state_fingerprint": "06ef2531c43427eed2df3206a8ecc02e9c6f131f9a6825c71ffdbaddb8b23c5c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/014/base_camera.png",
+          "sha256": "47520ec553fb557f0afd24effaacc10497a7ac814c8a28605133b3bfe253f6e6"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/rl_train/014/hand_camera.png",
+          "sha256": "10853bfe971668e53c4c9282ce87af4872403b291ee2f1d9d40598f0d5375d5c"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/validation/000",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1333847385,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.040270932018756866,
+            -0.09329936653375626,
+            0.019999999552965164,
+            0.9438653588294983,
+            0.0,
+            0.0,
+            0.33033040165901184
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.077730193734169,
+            -0.11044567823410034,
+            0.019999999552965164,
+            0.8006762266159058,
+            0.0,
+            0.0,
+            0.5990973114967346
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.052483636885881424,
+            0.10146237909793854,
+            0.019999999552965164,
+            0.9978079795837402,
+            0.0,
+            0.0,
+            -0.06617584824562073
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "90c703fd43c01e97974c491d96e0b1848722b5e7a19a687e6a10f791e8a7edd7",
+      "task_state_fingerprint": "ecd6977fc089feb889b034f2e4af36718aff7f194a82dbb646141d2eae7eb93f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/validation/000/base_camera.png",
+          "sha256": "0fc3f2ea70580ebc2a651afed00b0d0f579dbc77fb602b7c424efec93f6f493c"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/validation/000/hand_camera.png",
+          "sha256": "67c0f3ce49aaae579a5742bd0f8b4c34e627bee018ed434dbbc9048c7aee899f"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/000",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1461194626,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.07436225563287735,
+            0.00799115002155304,
+            0.019999999552965164,
+            0.220953106880188,
+            0.0,
+            0.0,
+            0.9752843976020813
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.04552873224020004,
+            -0.17709745466709137,
+            0.019999999552965164,
+            0.9407760500907898,
+            0.0,
+            0.0,
+            0.33902865648269653
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.09202157706022263,
+            -0.07484352588653564,
+            0.019999999552965164,
+            0.902267575263977,
+            0.0,
+            0.0,
+            0.4311765432357788
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "94efe8cdd6ab93facf8ee42b9399aae15eaf602108da0bc7eea9f5ef324202c1",
+      "task_state_fingerprint": "d19730f9d966653f7c5bae3de0689458595702004b84a9a3427ccb467a5435c2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/000/base_camera.png",
+          "sha256": "33574296206fd005fd6398b6fa9a51e87041d8153608236d7aef6c5186c46ee1"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/000/hand_camera.png",
+          "sha256": "0dd7d50f0b2ac923d996fbf2f198d04b89d76a516db4bea9b819ac1457e5b131"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/001",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1949857032,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.021457210183143616,
+            -0.16396038234233856,
+            0.019999999552965164,
+            0.6074957251548767,
+            0.0,
+            0.0,
+            0.7943229675292969
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.04421296715736389,
+            0.00275285542011261,
+            0.019999999552965164,
+            0.5216035842895508,
+            0.0,
+            0.0,
+            0.8531879782676697
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.06164472550153732,
+            0.08365510404109955,
+            0.019999999552965164,
+            0.4166494309902191,
+            0.0,
+            0.0,
+            0.9090672731399536
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "4c3ee96e2b6257f93c61abf5da605a2663ef766d11827f360f54b32199a6d280",
+      "task_state_fingerprint": "fb17e6c9a2122c629cd5b4cd0272e4cc4b8878176c2876a52d0f63f384ed7b3c",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/001/base_camera.png",
+          "sha256": "1af39e73442b41bf7b32c68a1654533e071cb4ea64a68c4c3f8d7a1b5e131d56"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/001/hand_camera.png",
+          "sha256": "06c94a9f14f76568b13724a007de5243b5fb9acdbb89ba6f5f6ee77af7cac187"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/002",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1513825342,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.08293961733579636,
+            -0.0028562992811203003,
+            0.019999999552965164,
+            0.9975221753120422,
+            0.0,
+            0.0,
+            -0.0703527107834816
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.09447431564331055,
+            0.06019626557826996,
+            0.019999999552965164,
+            0.9735634922981262,
+            0.0,
+            0.0,
+            -0.22841663658618927
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.025691084563732147,
+            -0.03332626819610596,
+            0.019999999552965164,
+            0.781592607498169,
+            0.0,
+            0.0,
+            0.6237891912460327
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "59bdd0bf5bde642c1f960528500cd3371ae2857c5815bc89f6280b7e33dcbbe6",
+      "task_state_fingerprint": "b56bc80575d4ee0ac5512b5c8c683c5a1569a722dc342ede214406aebc895b8f",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/002/base_camera.png",
+          "sha256": "b72f529ca123d24759f2c896975bcabfb9bc1193aa4accbd65d244f7970d4216"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/002/hand_camera.png",
+          "sha256": "e2bcce6cc9d186d86116e4cf627284f8b1e3fc61ab45e3b733e20df623cd7f97"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/006",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1428901818,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.003030039370059967,
+            -0.11866413801908493,
+            0.019999999552965164,
+            0.2975800931453705,
+            0.0,
+            0.0,
+            0.9546968340873718
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.07805320620536804,
+            0.13821722567081451,
+            0.019999999552965164,
+            0.4498303234577179,
+            0.0,
+            0.0,
+            -0.8931140303611755
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.07899580150842667,
+            0.0736636072397232,
+            0.019999999552965164,
+            0.4916127026081085,
+            0.0,
+            0.0,
+            0.8708139061927795
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "7f67f5610b34e300b10afbd61b593b3f4beb429b9978d97b11e0be1135e589f7",
+      "task_state_fingerprint": "48841d0e08a82b866a25b21c6edb2bdad7fe5bda38e21b55927070c443c7fc49",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/006/base_camera.png",
+          "sha256": "21c34fe04248d33da5d2015a4ab3ae96c7f398ba1604362d387621fc4761d4f7"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/006/hand_camera.png",
+          "sha256": "10e22fcfba98f20c52013ea24e7673f5294026f27f7b02ae18eee042fb2bb942"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/010",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 757790885,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.08830588310956955,
+            0.13884879648685455,
+            0.019999999552965164,
+            0.971331000328064,
+            0.0,
+            0.0,
+            0.23773106932640076
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.0747608095407486,
+            0.18289943039417267,
+            0.019999999552965164,
+            0.9896838665008545,
+            0.0,
+            0.0,
+            0.14326846599578857
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.07768137007951736,
+            -0.08463072031736374,
+            0.019999999552965164,
+            0.07693757861852646,
+            0.0,
+            0.0,
+            0.9970359206199646
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "669978646426795e41b252f8c6a6af61517999ec8b256cead631fa3bea9b028d",
+      "task_state_fingerprint": "7b22f5764ec127a37aeb8ec769036d2de7a8ced02b1a5a75e7afbf1cfca89ff2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/010/base_camera.png",
+          "sha256": "b045580c29a142d77ed8df2eed4a738702272fc8027142516e8d2b86dcdbed54"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/010/hand_camera.png",
+          "sha256": "3fcff5fa5d9f994b133d2d8cf9580ed8e6c7861849956e3a9b2e1b889d630cd0"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/014",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 552931068,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            0.007190525531768799,
+            0.12054841220378876,
+            0.019999999552965164,
+            0.9492878913879395,
+            0.0,
+            0.0,
+            -0.31440821290016174
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            -0.0012591257691383362,
+            -0.10106365382671356,
+            0.019999999552965164,
+            0.9716014862060547,
+            0.0,
+            0.0,
+            0.23662318289279938
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            0.04162592440843582,
+            0.17540745437145233,
+            0.019999999552965164,
+            0.7048720121383667,
+            0.0,
+            0.0,
+            0.7093344926834106
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "a27b48b2a039f96f13f86fddd757389cb055798a08672eafa31940ddc9c3107f",
+      "task_state_fingerprint": "2879c6a779d26f865235ca9f46369e96a6fa73c43d08bbdc7772ab5b18b1d4f8",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/014/base_camera.png",
+          "sha256": "79fd34d739a90a918754510f3124e847e51a809fe586e6c8ad6057302937b794"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/014/hand_camera.png",
+          "sha256": "19e24e3576a363e662884f1a4f9b886845c1c0dcb00919275c0d533c14a92752"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/eval_seen/019",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 57266761,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.04981599375605583,
+            -0.10427328199148178,
+            0.019999999552965164,
+            0.7380096912384033,
+            0.0,
+            0.0,
+            -0.6747902035713196
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.08138804882764816,
+            0.02626970410346985,
+            0.019999999552965164,
+            0.94766765832901,
+            0.0,
+            0.0,
+            -0.31925857067108154
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.03665546327829361,
+            0.08501549065113068,
+            0.019999999552965164,
+            0.8070114850997925,
+            0.0,
+            0.0,
+            -0.5905358195304871
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "e3353ea02fac1cae00ba89805bc450d3c563805bfa9c280f10ef91c7472c4e3c",
+      "task_state_fingerprint": "80120ad83e6f341d3ce6a3dee47fd84c34ab675edb4abc5de1cfd88366cfaa43",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/019/base_camera.png",
+          "sha256": "b6ff42fe2dbcf6f2953a1b2ce7bb79cffa5d4771080cf57f762289c338af132f"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/eval_seen/019/hand_camera.png",
+          "sha256": "994e11b9a74e2299c14288ee4666c9812ab285f7daea3026e35487d996e2c507"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    },
+    {
+      "case_id": "maniskill/StackPyramid-v1/validation/001",
+      "task_key": "maniskill/StackPyramid-v1",
+      "seed": 1324121780,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "capture_success": true,
+      "same_instance_reproducible": false,
+      "diversity_capture_only": true,
+      "task_state": {
+        "actor/table-workspace": [
+          [
+            -0.11999999731779099,
+            0.0,
+            -0.9196429252624512,
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ]
+        ],
+        "actor/cubeA": [
+          [
+            -0.009626686573028564,
+            -0.040992289781570435,
+            0.019999999552965164,
+            0.42315536737442017,
+            0.0,
+            0.0,
+            0.9060571193695068
+          ]
+        ],
+        "actor/cubeB": [
+          [
+            0.06704903393983841,
+            -0.17744088172912598,
+            0.019999999552965164,
+            0.6719604730606079,
+            0.0,
+            0.0,
+            0.740587055683136
+          ]
+        ],
+        "actor/cubeC": [
+          [
+            -0.08769702911376953,
+            -0.022854119539260864,
+            0.019999999552965164,
+            0.27901819348335266,
+            0.0,
+            0.0,
+            0.9602857828140259
+          ]
+        ]
+      },
+      "task_instruction": null,
+      "state_fingerprint": "d09a14adfe2d2958ff875f6b1c34797df17b9dda0a2b63a1c59a68f7aae277d9",
+      "task_state_fingerprint": "69138ad1c8c1e3f18339466f8a259090a874880278b66da53f7093da33bea29a",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "base_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/validation/001/base_camera.png",
+          "sha256": "1c5928e44e987bb1580e3a81eb3d2435a1a56c6c98a787218441cf7a70f9232a"
+        },
+        {
+          "camera": "hand_camera",
+          "path": "diversity_candidates/maniskill/StackPyramid-v1/validation/001/hand_camera.png",
+          "sha256": "9c0b8714ad39668fd2486a1a447f8524658c8bb3042fd5575c1f498b1a01ab84"
+        }
+      ],
+      "actual_robot": "panda_wristcam",
+      "actual_action_dim": 7
+    }
+  ]
+}

@@ -1,0 +1,714 @@
+{
+  "task_key": "metaworld/faucet-open-v3",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/sft_train/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1868641201,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1868641201,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.008704865689033371,
+          0.8385554293712619,
+          0.0
+        ],
+        "/object_position": [
+          -0.02370486568903337,
+          0.663555429371262,
+          0.114
+        ],
+        "/goal_position": [
+          0.16629513431096662,
+          0.8385554293712619,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "8b9d77c5ba06fb0c208609cdbbd6403604c367fce953f9ec5e329da4cd151bd0",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/sft_train/000/native_camera_2.png",
+          "sha256": "a476d2ec6a775dd14a6b730bc090821bc4f494b3ae145febf1024e4165e0b27a"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": true,
+      "fresh_instance_reproducible": true,
+      "fresh_max_difference": 0.0,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/sft_train/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 481100996,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 481100996,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.016609153327399845,
+          0.8464323811746656,
+          0.0
+        ],
+        "/object_position": [
+          0.0016091533273998454,
+          0.6714323811746656,
+          0.114
+        ],
+        "/goal_position": [
+          0.19160915332739983,
+          0.8464323811746656,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "aa17a545db609927b650fce7a70a32f23ef0bb4a2a0c075483c0d34a6484dfd2",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/sft_train/001/native_camera_2.png",
+          "sha256": "f87f6aa0386caf0760b8590c314e38b4ea46c292ad80c3be8d37fe28861847b6"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/rl_train/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1552659157,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1552659157,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.030452056873712465,
+          0.8482763898721744,
+          0.0
+        ],
+        "/object_position": [
+          -0.04545205687371247,
+          0.6732763898721743,
+          0.114
+        ],
+        "/goal_position": [
+          0.14454794312628752,
+          0.8482763898721744,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "17cfa4cd4b90f7035b9026b72d724c6913a5623990d8778d459d06693f4a9f68",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/rl_train/000/native_camera_2.png",
+          "sha256": "037fc15e80600b7dd8b4b5f4c7e263c2cb1cb6ef9912940dd9c1c4d9d1c4ee01"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/rl_train/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 575847997,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 575847997,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.006313489695409513,
+          0.8085812154723796,
+          0.0
+        ],
+        "/object_position": [
+          -0.021313489695409513,
+          0.6335812154723797,
+          0.114
+        ],
+        "/goal_position": [
+          0.16868651030459048,
+          0.8085812154723796,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "50670c9dd25b99dbe2962ecb89c201ce5bd2156fffcf63353ac1ede5c81934cb",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/rl_train/001/native_camera_2.png",
+          "sha256": "a349e8603bf97fdb822ca2c02f186d9990b3b7153b414ed58d215a3921f05c1d"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/validation/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 1840624396,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 1840624396,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.02397672658820467,
+          0.8118229570080153,
+          0.0
+        ],
+        "/object_position": [
+          -0.03897672658820467,
+          0.6368229570080153,
+          0.114
+        ],
+        "/goal_position": [
+          0.15102327341179533,
+          0.8118229570080153,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "22b151fb66c4d4c9953f81ab85134bfb88de4a60ae1c9d493e6c5afe0e7b49d4",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/validation/000/native_camera_2.png",
+          "sha256": "2663fc74209409b0d2043e99baaebbcf855023f687be03cf774703ef305c1c09"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/eval_seen/000",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 921170159,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 921170159,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          -0.03913929944897281,
+          0.810076150670588,
+          0.0
+        ],
+        "/object_position": [
+          -0.05413929944897281,
+          0.635076150670588,
+          0.114
+        ],
+        "/goal_position": [
+          0.13586070055102717,
+          0.810076150670588,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "e4714d697fd7cc1756b458e9f60e9271621da2d18baca7d4481b4ba71ea9d444",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/eval_seen/000/native_camera_2.png",
+          "sha256": "0262e99905fed55d5029d6d553f7bb5f7156a8c96041eb58d0ae6a36260f6e3c"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    },
+    {
+      "schema_version": "openeta.initial_state_probe.v1",
+      "case_id": "metaworld/faucet-open-v3/eval_seen/001",
+      "task_key": "metaworld/faucet-open-v3",
+      "seed": 857089703,
+      "initial_state_selector": {
+        "kind": "native_seed",
+        "state_fingerprint": null
+      },
+      "reset_protocol": "metaworld-create-and-preselect-seed.v1",
+      "creation_seed": 857089703,
+      "environment_config": {
+        "robot": "sawyer",
+        "control_mode": "benchmark_native",
+        "obs_mode": "rgbd",
+        "image_width": 256,
+        "image_height": 256,
+        "model_scope": "native_task_distribution",
+        "robocasa_split": null,
+        "sim_backend": "mujoco"
+      },
+      "capture_success": true,
+      "physical_state": {
+        "/qpos": [
+          2.167490592351463,
+          -0.545956844521926,
+          -1.2347217844128338,
+          2.1711108857948966,
+          1.2478093863779829,
+          1.0194763242802707,
+          1.901196004010752,
+          -0.000171860779495447,
+          0.00017178965409449292,
+          0.0
+        ],
+        "/qvel": [
+          0.08512034931634486,
+          0.6327525851808912,
+          -0.21596147423108744,
+          0.17411747904879105,
+          0.7585235072920605,
+          0.401060692008037,
+          1.019200478267534,
+          2.0543032310494104e-07,
+          2.009659304198112e-07,
+          0.0
+        ],
+        "/mocap_pos": [
+          [
+            0.0,
+            0.4,
+            0.2
+          ]
+        ],
+        "/mocap_quat": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "task_state": {
+        "/task_random_parameters": [
+          0.011957847268494373,
+          0.8467821545197547,
+          0.0
+        ],
+        "/object_position": [
+          -0.0030421527315056263,
+          0.6717821545197546,
+          0.114
+        ],
+        "/goal_position": [
+          0.18695784726849435,
+          0.8467821545197547,
+          0.125
+        ]
+      },
+      "state_fingerprint": "2025e89662daad5afd74f712be2f9c1f78a9c59d5ce1f5481824f61bb0d4758f",
+      "task_state_fingerprint": "96610e411955aba5da8c73f624c8afd2399cce9850c3b3b99347b46f393a41dc",
+      "initial_success": false,
+      "frames": [
+        {
+          "camera": "native_camera_2",
+          "path": "runtime_checks/metaworld/faucet-open-v3/eval_seen/001/native_camera_2.png",
+          "sha256": "a36607cb7a27683eb6b2c2b18e6b847be47971cf9802112289715fbcf9bca0b1"
+        }
+      ],
+      "actual_action_dim": 4,
+      "same_instance_reproducible": true,
+      "repeat_max_difference": 0.0,
+      "repeat_task_max_difference": 0.0,
+      "fresh_instance_checked": false,
+      "fresh_instance_reproducible": null,
+      "fresh_max_difference": null,
+      "restoration_max_difference": null,
+      "controller_history_restored": null,
+      "action_dim_matches": true
+    }
+  ]
+}

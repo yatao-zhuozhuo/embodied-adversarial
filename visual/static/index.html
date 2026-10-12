@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenETA · 轨迹浏览器</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header><b>OpenETA · 轨迹浏览器</b><nav aria-label="数据来源"><button data-source="baseline" class="active">Baseline 跑分</button><button data-source="sft">SFT 构造</button><button data-source="expert">Artificial 专家轨迹</button><button data-source="training">训练 Rollout</button></nav><span id="context" class="muted"></span></header>
+<header><b>OpenETA · 轨迹浏览器</b><nav aria-label="数据来源"><button data-source="baseline" class="active">Baseline 跑分</button><button data-source="sft">SFT 构造</button><button data-source="expert100">v6 SFT ≤100轮</button><button data-source="expert">旧版专家轨迹</button><button data-source="training">训练 Rollout</button><a class="view-link" href="unified.html">统一题单</a></nav><span id="context" class="muted"></span></header>
 <main><aside>
 <div class="toolbar"><button id="refresh">刷新轨迹</button><label><input id="auto" type="checkbox" style="width:auto"> 30 秒自动刷新</label></div>
 <a id="legacy" href="sft-history/" target="_blank" rel="noopener">打开旧版 ManiSkill SFT 构造轨迹 ↗</a>
@@ -19,4 +19,4 @@
 <input type="range" id="slider" aria-label="轨迹步骤" min="0" max="0" value="0"><canvas id="chart" class="chart" width="1000" height="85" aria-label="环境奖励曲线"></canvas><div id="status" role="status"></div>
 <div class="content"><div class="images" id="images"></div><div class="details" id="detail">选择左侧记录查看。</div></div>
 <details><summary>轨迹结果与原始元数据</summary><pre id="audit"></pre></details>
-</section></main><script src="app.js?v=20261008-compressed-reasoning"></script></body></html>
+</section></main><script src="app.js?v=20261011-v6-under100"></script></body></html>

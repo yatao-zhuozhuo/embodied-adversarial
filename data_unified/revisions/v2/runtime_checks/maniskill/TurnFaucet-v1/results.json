@@ -1,0 +1,16 @@
+{
+  "task_key": "maniskill/TurnFaucet-v1",
+  "candidate_count": 51,
+  "requested_sample_count": 7,
+  "records": [
+    {
+      "case_id": "maniskill/TurnFaucet-v1/sft_train/000",
+      "task_key": "maniskill/TurnFaucet-v1",
+      "capture_success": false,
+      "error": "MissingAssetError: Environment required unavailable assets; its interactive download prompt failed in the non-interactive probe.",
+      "traceback": "Traceback (most recent call last):\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 237, in worker\n    record = one_case(task, case, reference, index == 0)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 186, in one_case\n    env = create(task, case)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/data_unified/probe_initial_states.py\", line 94, in create\n    return gym.make(task['task_id'], robot_uids=config['robot'],\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/gymnasium/envs/registration.py\", line 735, in make\n    env = env_creator(**env_spec_kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/utils/registration.py\", line 182, in make\n    env = env_spec.make(**kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/utils/registration.py\", line 70, in make\n    response = download_asset.prompt_yes_no(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/inspire/qb-ilm/project/exploration-topic/ky26060/OpenETA/sim/venvs/maniskill312/lib/python3.12/site-packages/mani_skill/utils/download_asset.py\", line 28, in prompt_yes_no\n    answer = input(\"(y|n): \")\n             ^^^^^^^^^^^^^^^^\nEOFError: EOF when reading a line\n",
+      "error_category": "missing_assets",
+      "asset_diagnostic": "Environment TurnFaucet-v1 requires a set of assets in group partnet_mobility_faucet. At least 1 of those assets could not be found\nEnvironment TurnFaucet-v1 requires asset(s) ['partnet_mobility/5011', 'partnet_mobility/5075', 'partnet_mobility/5073', 'partnet_mobility/5006', 'partnet_mobility/5067'] (and 44 more) which could not be found. Would you like to download them now?"
+    }
+  ]
+}

@@ -36,6 +36,21 @@ node --check visual/static/app.js
 
 如果使用后台启动，可把日志和 PID 放在已忽略的 `visual/.runtime/` 内。
 
+## 统一题单
+
+顶部“统一题单”打开 `/unified.html`（Notebook：`/proxy/8780/unified.html`）。读取 `data_unified` 当前划分，按当前 active_benches 展示题单；v5 为 LIBERO、MetaWorld 各 25 个共同题，ManiSkill、RoboCasa 各 15 个共同题；每个 bench 各 5 个泛化题，支持搜索、benchmark / 用途筛选，以及 SFT、RL、验证、同任务测试和泛化测试的 case 切换。每道共同题 SFT 4 个、RL 4 个、验证 2 个、同任务测试 4 个初态；泛化题每题 4 个初态。任务说明、seed 含义、示范编号、状态指纹、机器人与动作契约可直接查看，Fetch/SO100 的任务与机器人泛化会单独标注。
+
+LIBERO 与 RoboCasa 缓存 case 按选定示范编号读取保存的首帧，不启动仿真器、不使用 GPU；预览 PNG 放在 `visual/.runtime/unified-previews/`，原缓存和清单保持只读。所选初态没有截图时，主预览区域明确显示“尚未生成真实截图”，不能据此判断不同 seed 是否产生不同物理初态。历史同题 SFT / baseline 图片只放在独立、默认折叠的“同题历史参考图”区域，与所选 seed 无关，不用于比较初态；RoboCasa 历史 baseline 的 pretrain/target 差异保存在参考记录中。所有首帧预览均不表示真实 reset 已验收，也不会把缓存专家动作暴露给模型。
+
+服务使用已有 LIBERO Python 提取 HDF5 图像、系统 ffmpeg 提取 RoboCasa 视频首帧。缺少数据或媒体依赖会标注图片不可用，仍可查看题目和划分。其他统一数据根目录可通过 `--unified-root /path/to/data_unified` 指定。
+
+实际 reset 核查生成的 `data_unified/runtime_checks/index.json` 作为只读结果叠加：有真实采集记录的 case 优先显示本 case 的 PNG，并显示状态指纹、重复重置差异及是否做过跨环境复现。截图与 case ID、seed / 示范编号绑定，历史参考图不会覆盖它。抽样通过不表示全部候选初态都已验收；未检查的 case 和缺资产任务仍明确显示未完成状态。
+
+```bash
+.venv/bin/python -m unittest visual.test_unified visual.test_server -v
+node --check visual/static/unified.js
+```
+
 ## Artificial 专家合成轨迹
 
 “Artificial 专家轨迹”入口扫描 `SFT_data/expert_replay_v1/episodes/*/*/seed-*/episode.json`。展示官方成功判定、专家构造 XML、逐步相机图和 `samples.jsonl` 中的实际训练输入。独立 `reasoning*/episodes/.../annotations/turn-*.json` 的补写会核对源样本 hash 后显示，并注明模型和事后补写来源；刷新会更新逐轮补写进度。原始 XML 保持可查看。专家回放目前未保存某些最终动作后的图像，页面按缺帧显示。
